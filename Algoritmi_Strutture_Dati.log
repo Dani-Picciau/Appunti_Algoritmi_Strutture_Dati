@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.3.9)  26 NOV 2025 02:00
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.3.9)  26 NOV 2025 19:29
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**c:/Users/dany2/OneDrive/Desktop/UniSassari/Appunti_latex/Appunti_Algoritmi_Strutture_Dati/Algoritmi_Strutture_Dati.tex
-(c:/Users/dany2/OneDrive/Desktop/UniSassari/Appunti_latex/Appunti_Algoritmi_Strutture_Dati/Algoritmi_Strutture_Dati.tex
+**c:/Users/dany2/OneDrive/Desktop/UniSassari/Appunti_latex/Appunti_Algoritmi_Strutture_Dati/Appunti_Algoritmi_Strutture_Dati/Algoritmi_Strutture_Dati.tex
+(c:/Users/dany2/OneDrive/Desktop/UniSassari/Appunti_latex/Appunti_Algoritmi_Strutture_Dati/Appunti_Algoritmi_Strutture_Dati/Algoritmi_Strutture_Dati.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
 (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
@@ -1566,12 +1566,12 @@ Package rerunfilecheck Info: File `Algoritmi_Strutture_Dati.out' has not changed
  ) 
 Here is how much of TeX's memory you used:
  35250 strings out of 474486
- 701588 string characters out of 5743756
+ 701918 string characters out of 5743756
  2208542 words of memory out of 5000000
  55638 multiletter control sequences out of 15000+600000
  669359 words of font info for 417 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 86i,11n,98p,1111b,2061s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 86i,11n,98p,1144b,2061s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\dany2\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchb8a.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchbi8a.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchr8a.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchri8a.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi6.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtk10.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt12.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrb8a.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrro8a.pfb>
 Output written on Algoritmi_Strutture_Dati.pdf (70 pages, 2945247 bytes).
 PDF statistics:
