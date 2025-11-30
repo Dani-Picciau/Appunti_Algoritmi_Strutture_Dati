@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.3.9)  26 NOV 2025 19:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.3.9)  1 DEC 2025 00:08
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -911,12 +911,12 @@ LaTeX Font Info:    Trying to load font information for TS1+bch on input line 15
  (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1bch.fd
 File: ts1bch.fd 2004/10/18 font definitions for TS1/bch.
 ) [4{C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc}] [5]
-<figures/1_introduzione/img1.png, id=408, 458.9145pt x 254.75175pt>
+<figures/1_introduzione/img1.png, id=413, 458.9145pt x 254.75175pt>
 File: figures/1_introduzione/img1.png Graphic file (type png)
 <use figures/1_introduzione/img1.png>
 Package pdftex.def Info: figures/1_introduzione/img1.png  used on input line 271.
 (pdftex.def)             Requested size: 386.95897pt x 214.8102pt.
-<figures/1_introduzione/img2.png, id=410, 458.9145pt x 239.6955pt>
+<figures/1_introduzione/img2.png, id=415, 458.9145pt x 239.6955pt>
 File: figures/1_introduzione/img2.png Graphic file (type png)
 <use figures/1_introduzione/img2.png>
 Package pdftex.def Info: figures/1_introduzione/img2.png  used on input line 277.
@@ -936,13 +936,13 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `pcr' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-<figures/1_introduzione/img3.png, id=417, 462.528pt x 278.84175pt>
+<figures/1_introduzione/img3.png, id=422, 462.528pt x 278.84175pt>
 File: figures/1_introduzione/img3.png Graphic file (type png)
 <use figures/1_introduzione/img3.png>
 Package pdftex.def Info: figures/1_introduzione/img3.png  used on input line 325.
 (pdftex.def)             Requested size: 386.95897pt x 233.29366pt.
  [7 <./figures/1_introduzione/img2.png>]
-<figures/1_introduzione/img4.png, id=434, 458.31226pt x 170.43675pt>
+<figures/1_introduzione/img4.png, id=439, 458.31226pt x 170.43675pt>
 File: figures/1_introduzione/img4.png Graphic file (type png)
 <use figures/1_introduzione/img4.png>
 Package pdftex.def Info: figures/1_introduzione/img4.png  used on input line 363.
@@ -958,7 +958,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <10.95> not available
 (Font)              Font shape `T1/pcr/m/sl' tried instead on input line 383.
-<figures/1_introduzione/img7.png, id=451, 114.4275pt x 93.34875pt>
+<figures/1_introduzione/img7.png, id=456, 114.4275pt x 93.34875pt>
 File: figures/1_introduzione/img7.png Graphic file (type png)
 <use figures/1_introduzione/img7.png>
 Package pdftex.def Info: figures/1_introduzione/img7.png  used on input line 431.
@@ -969,12 +969,12 @@ Overfull \hbox (10.33653pt too wide) in paragraph at lines 403--432
  []
 
 [9 <./figures/1_introduzione/img7.png>]
-<figures/1_introduzione/img8.png, id=479, 269.20575pt x 115.02975pt>
+<figures/1_introduzione/img8.png, id=484, 269.20575pt x 115.02975pt>
 File: figures/1_introduzione/img8.png Graphic file (type png)
 <use figures/1_introduzione/img8.png>
 Package pdftex.def Info: figures/1_introduzione/img8.png  used on input line 467.
 (pdftex.def)             Requested size: 226.37125pt x 96.72612pt.
-<figures/1_introduzione/img9.png, id=480, 210.7875pt x 96.36pt>
+<figures/1_introduzione/img9.png, id=485, 210.7875pt x 96.36pt>
 File: figures/1_introduzione/img9.png Graphic file (type png)
 <use figures/1_introduzione/img9.png>
 Package pdftex.def Info: figures/1_introduzione/img9.png  used on input line 509.
@@ -985,13 +985,13 @@ Underfull \hbox (badness 1205) in paragraph at lines 509--509
  []
 
 [10 <./figures/1_introduzione/img8.png> <./figures/1_introduzione/img9.png>]
-<figures/4_iterazione_ricorsione_induzione/img1.png, id=516, 601.4972pt x 104.64093pt>
+<figures/4_iterazione_ricorsione_induzione/img1.png, id=521, 601.4972pt x 104.64093pt>
 File: figures/4_iterazione_ricorsione_induzione/img1.png Graphic file (type png)
 <use figures/4_iterazione_ricorsione_induzione/img1.png>
 Package pdftex.def Info: figures/4_iterazione_ricorsione_induzione/img1.png  used on input line 574.
 (pdftex.def)             Requested size: 411.14528pt x 71.5285pt.
  [11]
-<figures/4_iterazione_ricorsione_induzione/img2.png, id=521, 417.35925pt x 160.80075pt>
+<figures/4_iterazione_ricorsione_induzione/img2.png, id=526, 417.35925pt x 160.80075pt>
 File: figures/4_iterazione_ricorsione_induzione/img2.png Graphic file (type png)
 <use figures/4_iterazione_ricorsione_induzione/img2.png>
 Package pdftex.def Info: figures/4_iterazione_ricorsione_induzione/img2.png  used on input line 621.
@@ -1007,7 +1007,7 @@ Overfull \hbox (0.66052pt too wide) in paragraph at lines 723--739
  []
 
 [14]
-<figures/4_iterazione_ricorsione_induzione/img6.png, id=567, 215.00325pt x 167.4255pt>
+<figures/4_iterazione_ricorsione_induzione/img6.png, id=572, 215.00325pt x 167.4255pt>
 File: figures/4_iterazione_ricorsione_induzione/img6.png Graphic file (type png)
 <use figures/4_iterazione_ricorsione_induzione/img6.png>
 Package pdftex.def Info: figures/4_iterazione_ricorsione_induzione/img6.png  used on input line 789.
@@ -1017,7 +1017,7 @@ Overfull \hbox (3.07399pt too wide) in paragraph at lines 787--807
 []  []
  []
 
-<figures/4_iterazione_ricorsione_induzione/img7.png, id=568, 169.23225pt x 303.534pt>
+<figures/4_iterazione_ricorsione_induzione/img7.png, id=573, 169.23225pt x 303.534pt>
 File: figures/4_iterazione_ricorsione_induzione/img7.png Graphic file (type png)
 <use figures/4_iterazione_ricorsione_induzione/img7.png>
 Package pdftex.def Info: figures/4_iterazione_ricorsione_induzione/img7.png  used on input line 820.
@@ -1028,23 +1028,23 @@ Overfull \hbox (1.14026pt too wide) in paragraph at lines 818--851
  []
 
 [15 <./figures/4_iterazione_ricorsione_induzione/img6.png> <./figures/4_iterazione_ricorsione_induzione/img7.png>]
-<figures/4_iterazione_ricorsione_induzione/img5.png, id=576, 459.51675pt x 233.07076pt>
+<figures/4_iterazione_ricorsione_induzione/img5.png, id=581, 459.51675pt x 233.07076pt>
 File: figures/4_iterazione_ricorsione_induzione/img5.png Graphic file (type png)
 <use figures/4_iterazione_ricorsione_induzione/img5.png>
 Package pdftex.def Info: figures/4_iterazione_ricorsione_induzione/img5.png  used on input line 878.
 (pdftex.def)             Requested size: 338.58632pt x 171.73703pt.
-<figures/4_iterazione_ricorsione_induzione/img3.png, id=578, 194.52675pt x 260.77425pt>
+<figures/4_iterazione_ricorsione_induzione/img3.png, id=583, 194.52675pt x 260.77425pt>
 File: figures/4_iterazione_ricorsione_induzione/img3.png Graphic file (type png)
 <use figures/4_iterazione_ricorsione_induzione/img3.png>
 Package pdftex.def Info: figures/4_iterazione_ricorsione_induzione/img3.png  used on input line 902.
 (pdftex.def)             Requested size: 193.47578pt x 259.37694pt.
-<figures/4_iterazione_ricorsione_induzione/img4.png, id=579, 148.75575pt x 268.00125pt>
+<figures/4_iterazione_ricorsione_induzione/img4.png, id=584, 148.75575pt x 268.00125pt>
 File: figures/4_iterazione_ricorsione_induzione/img4.png Graphic file (type png)
 <use figures/4_iterazione_ricorsione_induzione/img4.png>
 Package pdftex.def Info: figures/4_iterazione_ricorsione_induzione/img4.png  used on input line 906.
 (pdftex.def)             Requested size: 145.11053pt x 261.44124pt.
  [16 <./figures/4_iterazione_ricorsione_induzione/img5.png>] [17 <./figures/4_iterazione_ricorsione_induzione/img3.png> <./figures/4_iterazione_ricorsione_induzione/img4.png>] [18]
-<figures/1_introduzione/img10.png, id=609, 450.483pt x 308.95425pt>
+<figures/1_introduzione/img10.png, id=614, 450.483pt x 308.95425pt>
 File: figures/1_introduzione/img10.png Graphic file (type png)
 <use figures/1_introduzione/img10.png>
 Package pdftex.def Info: figures/1_introduzione/img10.png  used on input line 1033.
@@ -1072,30 +1072,30 @@ Overfull \hbox (2.11452pt too wide) in paragraph at lines 1031--1046
 [19 <./figures/1_introduzione/img10.png>]
 LaTeX Font Info:    Font shape `TS1/pcr/m/it' in size <10.95> not available
 (Font)              Font shape `TS1/pcr/m/sl' tried instead on input line 1076.
-<figures/1_introduzione/img11.png, id=620, 345.08925pt x 92.7465pt>
+<figures/1_introduzione/img11.png, id=625, 345.08925pt x 92.7465pt>
 File: figures/1_introduzione/img11.png Graphic file (type png)
 <use figures/1_introduzione/img11.png>
 Package pdftex.def Info: figures/1_introduzione/img11.png  used on input line 1090.
 (pdftex.def)             Requested size: 294.08852pt x 79.04434pt.
-<figures/1_introduzione/img12.png, id=621, 686.565pt x 137.51375pt>
+<figures/1_introduzione/img12.png, id=626, 686.565pt x 137.51375pt>
 File: figures/1_introduzione/img12.png Graphic file (type png)
 <use figures/1_introduzione/img12.png>
 Package pdftex.def Info: figures/1_introduzione/img12.png  used on input line 1125.
 (pdftex.def)             Requested size: 386.95897pt x 77.50446pt.
  [20 <./figures/1_introduzione/img11.png> <./figures/1_introduzione/img12.png>] [21]
-<figures/1_introduzione/img13.png, id=679, 904.37875pt x 323.2075pt>
+<figures/1_introduzione/img13.png, id=684, 904.37875pt x 323.2075pt>
 File: figures/1_introduzione/img13.png Graphic file (type png)
 <use figures/1_introduzione/img13.png>
 Package pdftex.def Info: figures/1_introduzione/img13.png  used on input line 1185.
 (pdftex.def)             Requested size: 435.32422pt x 155.57182pt.
  [22 <./figures/1_introduzione/img13.png>]
-<figures/1_introduzione/img14.png, id=692, 344.487pt x 81.906pt>
+<figures/1_introduzione/img14.png, id=697, 344.487pt x 81.906pt>
 File: figures/1_introduzione/img14.png Graphic file (type png)
 <use figures/1_introduzione/img14.png>
 Package pdftex.def Info: figures/1_introduzione/img14.png  used on input line 1264.
 (pdftex.def)             Requested size: 362.77264pt x 86.25752pt.
  [23 <./figures/1_introduzione/img14.png>] [24] [25] [26] [27]
-<figures/3_alberi/img1.png, id=838, 495.0495pt x 333.04425pt>
+<figures/3_alberi/img1.png, id=843, 495.0495pt x 333.04425pt>
 File: figures/3_alberi/img1.png Graphic file (type png)
 <use figures/3_alberi/img1.png>
 Package pdftex.def Info: figures/3_alberi/img1.png  used on input line 1452.
@@ -1110,7 +1110,7 @@ Underfull \hbox (badness 1132) in paragraph at lines 1463--1463
 \T1/bch/m/n/12 (+20) grande (come in questo cao il
  []
 
-<figures/3_alberi/img2.png, id=840, 545.03625pt x 102.98476pt>
+<figures/3_alberi/img2.png, id=845, 545.03625pt x 102.98476pt>
 File: figures/3_alberi/img2.png Graphic file (type png)
 <use figures/3_alberi/img2.png>
 Package pdftex.def Info: figures/3_alberi/img2.png  used on input line 1469.
@@ -1121,7 +1121,7 @@ Overfull \hbox (2.59424pt too wide) in paragraph at lines 1450--1473
  []
 
 [28 <./figures/3_alberi/img1.png> <./figures/3_alberi/img2.png>]
-<figures/3_alberi/img3.png, id=848, 292.09125pt x 134.904pt>
+<figures/3_alberi/img3.png, id=853, 292.09125pt x 134.904pt>
 File: figures/3_alberi/img3.png Graphic file (type png)
 <use figures/3_alberi/img3.png>
 Package pdftex.def Info: figures/3_alberi/img3.png  used on input line 1491.
@@ -1141,7 +1141,7 @@ Overfull \hbox (2.59424pt too wide) in paragraph at lines 1489--1503
 []  []
  []
 
-<figures/3_alberi/img4.png, id=849, 291.489pt x 143.3355pt>
+<figures/3_alberi/img4.png, id=854, 291.489pt x 143.3355pt>
 File: figures/3_alberi/img4.png Graphic file (type png)
 <use figures/3_alberi/img4.png>
 Package pdftex.def Info: figures/3_alberi/img4.png  used on input line 1518.
@@ -1152,7 +1152,7 @@ Overfull \hbox (2.60164pt too wide) in paragraph at lines 1516--1529
  []
 
 [29 <./figures/3_alberi/img3.png> <./figures/3_alberi/img4.png>] [30]
-<figures/3_alberi/img5.png, id=889, 128.27925pt x 142.73325pt>
+<figures/3_alberi/img5.png, id=894, 128.27925pt x 142.73325pt>
 File: figures/3_alberi/img5.png Graphic file (type png)
 <use figures/3_alberi/img5.png>
 Package pdftex.def Info: figures/3_alberi/img5.png  used on input line 1615.
@@ -1163,12 +1163,12 @@ Overfull \hbox (3.07399pt too wide) in paragraph at lines 1613--1635
  []
 
 [31 <./figures/3_alberi/img5.png>]
-<figures/3_alberi/img6.png, id=900, 202.356pt x 149.358pt>
+<figures/3_alberi/img6.png, id=905, 202.356pt x 149.358pt>
 File: figures/3_alberi/img6.png Graphic file (type png)
 <use figures/3_alberi/img6.png>
 Package pdftex.def Info: figures/3_alberi/img6.png  used on input line 1692.
 (pdftex.def)             Requested size: 203.1518pt x 149.95244pt.
-<figures/3_alberi/img7.png, id=901, 215.6055pt x 188.50426pt>
+<figures/3_alberi/img7.png, id=906, 215.6055pt x 188.50426pt>
 File: figures/3_alberi/img7.png Graphic file (type png)
 <use figures/3_alberi/img7.png>
 Package pdftex.def Info: figures/3_alberi/img7.png  used on input line 1696.
@@ -1179,7 +1179,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{subfigure.24.1
                    \relax 
 l.1773         \subfloat
                         [albero attraversato in postorder]{%
-<figures/3_alberi/img8.png, id=915, 205.36725pt x 149.358pt>
+<figures/3_alberi/img8.png, id=920, 205.36725pt x 149.358pt>
 File: figures/3_alberi/img8.png Graphic file (type png)
 <use figures/3_alberi/img8.png>
 Package pdftex.def Info: figures/3_alberi/img8.png  used on input line 1775.
@@ -1190,7 +1190,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{subfigure.24.2
                    \relax 
 l.1777         \subfloat
                         [Pseudocodice visita in postorder]{%
-<figures/3_alberi/img9.png, id=916, 213.79875pt x 188.50426pt>
+<figures/3_alberi/img9.png, id=921, 213.79875pt x 188.50426pt>
 File: figures/3_alberi/img9.png Graphic file (type png)
 <use figures/3_alberi/img9.png>
 Package pdftex.def Info: figures/3_alberi/img9.png  used on input line 1779.
@@ -1201,7 +1201,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{subfigure.24.1
                    \relax 
 l.1855         \subfloat
                         [albero attraversato inorder]{%
-<figures/3_alberi/img10.png, id=929, 205.9695pt x 144.54pt>
+<figures/3_alberi/img10.png, id=934, 205.9695pt x 144.54pt>
 File: figures/3_alberi/img10.png Graphic file (type png)
 <use figures/3_alberi/img10.png>
 Package pdftex.def Info: figures/3_alberi/img10.png  used on input line 1857.
@@ -1212,13 +1212,13 @@ pdfTeX warning (ext4): destination with the same identifier (name{subfigure.24.2
                    \relax 
 l.1859         \subfloat
                         [Pseudocodice visita inorder]{%
-<figures/3_alberi/img11.png, id=930, 213.1965pt x 187.902pt>
+<figures/3_alberi/img11.png, id=935, 213.1965pt x 187.902pt>
 File: figures/3_alberi/img11.png Graphic file (type png)
 <use figures/3_alberi/img11.png>
 Package pdftex.def Info: figures/3_alberi/img11.png  used on input line 1861.
 (pdftex.def)             Requested size: 169.29684pt x 149.21507pt.
  [34] [35 <./figures/3_alberi/img10.png> <./figures/3_alberi/img11.png>] [36] [37] [38]
-<figures/3_alberi/img12.png, id=1034, 352.31625pt x 79.497pt>
+<figures/3_alberi/img12.png, id=1039, 352.31625pt x 79.497pt>
 File: figures/3_alberi/img12.png Graphic file (type png)
 <use figures/3_alberi/img12.png>
 Package pdftex.def Info: figures/3_alberi/img12.png  used on input line 2057.
@@ -1234,7 +1234,7 @@ Overfull \hbox (2.59424pt too wide) in paragraph at lines 2055--2067
  []
 
 [39 <./figures/3_alberi/img12.png>]
-<figures/3_alberi/img13.png, id=1040, 157.18726pt x 139.11975pt>
+<figures/3_alberi/img13.png, id=1045, 157.18726pt x 139.11975pt>
 File: figures/3_alberi/img13.png Graphic file (type png)
 <use figures/3_alberi/img13.png>
 Package pdftex.def Info: figures/3_alberi/img13.png  used on input line 2126.
@@ -1245,7 +1245,7 @@ Overfull \hbox (3.08138pt too wide) in paragraph at lines 2124--2141
  []
 
 [40 <./figures/3_alberi/img13.png>]
-<figures/3_alberi/img14.png, id=1060, 174.6525pt x 258.36525pt>
+<figures/3_alberi/img14.png, id=1065, 174.6525pt x 258.36525pt>
 File: figures/3_alberi/img14.png Graphic file (type png)
 <use figures/3_alberi/img14.png>
 Package pdftex.def Info: figures/3_alberi/img14.png  used on input line 2194.
@@ -1256,7 +1256,7 @@ Overfull \hbox (2.98453pt too wide) in paragraph at lines 2183--2206
  []
 
 [41 <./figures/3_alberi/img14.png>] [42]
-<figures/3_alberi/img15.png, id=1115, 169.23225pt x 258.9675pt>
+<figures/3_alberi/img15.png, id=1120, 169.23225pt x 258.9675pt>
 File: figures/3_alberi/img15.png Graphic file (type png)
 <use figures/3_alberi/img15.png>
 Package pdftex.def Info: figures/3_alberi/img15.png  used on input line 2334.
@@ -1267,7 +1267,7 @@ Overfull \hbox (2.98453pt too wide) in paragraph at lines 2322--2346
  []
 
 [43] [44 <./figures/3_alberi/img15.png>]
-<figures/3_alberi/img16.png, id=1157, 167.4255pt x 258.36525pt>
+<figures/3_alberi/img16.png, id=1162, 167.4255pt x 258.36525pt>
 File: figures/3_alberi/img16.png Graphic file (type png)
 <use figures/3_alberi/img16.png>
 Package pdftex.def Info: figures/3_alberi/img16.png  used on input line 2427.
@@ -1283,7 +1283,7 @@ Overfull \hbox (3.08138pt too wide) in paragraph at lines 2424--2443
  []
 
 [45] [46 <./figures/3_alberi/img16.png>] [47]
-<figures/3_alberi/img17.png, id=1227, 190.311pt x 259.56975pt>
+<figures/3_alberi/img17.png, id=1232, 190.311pt x 259.56975pt>
 File: figures/3_alberi/img17.png Graphic file (type png)
 <use figures/3_alberi/img17.png>
 Package pdftex.def Info: figures/3_alberi/img17.png  used on input line 2551.
@@ -1294,17 +1294,17 @@ Overfull \hbox (3.08138pt too wide) in paragraph at lines 2539--2566
  []
 
 [48 <./figures/3_alberi/img17.png>] [49] [50]
-<figures/3_alberi/img18.png, id=1296, 414.79968pt x 259.7203pt>
+<figures/3_alberi/img18.png, id=1301, 414.79968pt x 259.7203pt>
 File: figures/3_alberi/img18.png Graphic file (type png)
 <use figures/3_alberi/img18.png>
 Package pdftex.def Info: figures/3_alberi/img18.png  used on input line 2693.
 (pdftex.def)             Requested size: 222.5038pt x 139.31557pt.
-<figures/3_alberi/img19.png, id=1297, 435.12563pt x 258.9675pt>
+<figures/3_alberi/img19.png, id=1302, 435.12563pt x 258.9675pt>
 File: figures/3_alberi/img19.png Graphic file (type png)
 <use figures/3_alberi/img19.png>
 Package pdftex.def Info: figures/3_alberi/img19.png  used on input line 2697.
 (pdftex.def)             Requested size: 224.91727pt x 133.8617pt.
-<figures/3_alberi/img20.png, id=1299, 476.53032pt x 262.73157pt>
+<figures/3_alberi/img20.png, id=1304, 476.53032pt x 262.73157pt>
 File: figures/3_alberi/img20.png Graphic file (type png)
 <use figures/3_alberi/img20.png>
 Package pdftex.def Info: figures/3_alberi/img20.png  used on input line 2713.
@@ -1315,7 +1315,7 @@ Overfull \hbox (3.46426pt too wide) in paragraph at lines 2702--2722
  []
 
 [51 <./figures/3_alberi/img18.png> <./figures/3_alberi/img19.png> <./figures/3_alberi/img20.png>] [52] [53]
-<figures/3_alberi/img21.png, id=1352, 142.28156pt x 201.00093pt>
+<figures/3_alberi/img21.png, id=1357, 142.28156pt x 201.00093pt>
 File: figures/3_alberi/img21.png Graphic file (type png)
 <use figures/3_alberi/img21.png>
 Package pdftex.def Info: figures/3_alberi/img21.png  used on input line 2840.
@@ -1325,7 +1325,7 @@ Overfull \hbox (3.08136pt too wide) in paragraph at lines 2838--2850
 []  []
  []
 
-<figures/3_alberi/img22.png, id=1353, 175.40532pt x 121.20282pt>
+<figures/3_alberi/img22.png, id=1358, 175.40532pt x 121.20282pt>
 File: figures/3_alberi/img22.png Graphic file (type png)
 <use figures/3_alberi/img22.png>
 Package pdftex.def Info: figures/3_alberi/img22.png  used on input line 2864.
@@ -1336,7 +1336,7 @@ Overfull \hbox (3.08138pt too wide) in paragraph at lines 2862--2873
  []
 
 [54 <./figures/3_alberi/img21.png>]
-<figures/3_alberi/img23.png, id=1371, 321.45094pt x 103.88812pt>
+<figures/3_alberi/img23.png, id=1376, 321.45094pt x 103.88812pt>
 File: figures/3_alberi/img23.png Graphic file (type png)
 <use figures/3_alberi/img23.png>
 Package pdftex.def Info: figures/3_alberi/img23.png  used on input line 2918.
@@ -1346,7 +1346,7 @@ Overfull \hbox (3.47165pt too wide) in paragraph at lines 2916--2926
 [][]  [] 
  []
 
-<figures/3_alberi/img24.png, id=1372, 317.68687pt x 106.89937pt>
+<figures/3_alberi/img24.png, id=1377, 317.68687pt x 106.89937pt>
 File: figures/3_alberi/img24.png Graphic file (type png)
 <use figures/3_alberi/img24.png>
 Package pdftex.def Info: figures/3_alberi/img24.png  used on input line 2933.
@@ -1357,12 +1357,12 @@ Overfull \hbox (3.47165pt too wide) in paragraph at lines 2931--2941
  []
 
 [55 <./figures/3_alberi/img22.png> <./figures/3_alberi/img23.png>]
-<figures/3_alberi/img25.png, id=1380, 477.28313pt x 103.88812pt>
+<figures/3_alberi/img25.png, id=1385, 477.28313pt x 103.88812pt>
 File: figures/3_alberi/img25.png Graphic file (type png)
 <use figures/3_alberi/img25.png>
 Package pdftex.def Info: figures/3_alberi/img25.png  used on input line 2947.
 (pdftex.def)             Requested size: 435.32422pt x 94.75392pt.
-<figures/3_alberi/img26.png, id=1381, 474.27188pt x 106.89937pt>
+<figures/3_alberi/img26.png, id=1386, 474.27188pt x 106.89937pt>
 File: figures/3_alberi/img26.png Graphic file (type png)
 <use figures/3_alberi/img26.png>
 Package pdftex.def Info: figures/3_alberi/img26.png  used on input line 2962.
@@ -1373,25 +1373,25 @@ Underfull \hbox (badness 10000) in paragraph at lines 2979--3003
  []
 
 [56 <./figures/3_alberi/img24.png> <./figures/3_alberi/img25.png> <./figures/3_alberi/img26.png>]
-<figures/3_alberi/img27.png, id=1411, 662.475pt x 904.37875pt>
+<figures/3_alberi/img27.png, id=1416, 662.475pt x 904.37875pt>
 File: figures/3_alberi/img27.png Graphic file (type png)
 <use figures/3_alberi/img27.png>
 Package pdftex.def Info: figures/3_alberi/img27.png  used on input line 3018.
 (pdftex.def)             Requested size: 386.95897pt x 528.25217pt.
  [57 <./figures/3_alberi/img27.png>] [58] [59]
-<figures/tempo_e_modello_calcolo/img1.png, id=1427, 498.06075pt x 136.1085pt>
+<figures/tempo_e_modello_calcolo/img1.png, id=1432, 498.06075pt x 136.1085pt>
 File: figures/tempo_e_modello_calcolo/img1.png Graphic file (type png)
 <use figures/tempo_e_modello_calcolo/img1.png>
 Package pdftex.def Info: figures/tempo_e_modello_calcolo/img1.png  used on input line 3163.
 (pdftex.def)             Requested size: 483.69687pt x 132.18913pt.
  [60 <./figures/tempo_e_modello_calcolo/img1.png>]
-<figures/tempo_e_modello_calcolo/img2.png, id=1435, 766.062pt x 321.6015pt>
+<figures/tempo_e_modello_calcolo/img2.png, id=1440, 766.062pt x 321.6015pt>
 File: figures/tempo_e_modello_calcolo/img2.png Graphic file (type png)
 <use figures/tempo_e_modello_calcolo/img2.png>
 Package pdftex.def Info: figures/tempo_e_modello_calcolo/img2.png  used on input line 3197.
 (pdftex.def)             Requested size: 483.69687pt x 203.06638pt.
  [61 <./figures/tempo_e_modello_calcolo/img2.png>]
-<figures/tempo_e_modello_calcolo/img3.png, id=1444, 317.988pt x 62.634pt>
+<figures/tempo_e_modello_calcolo/img3.png, id=1449, 317.988pt x 62.634pt>
 File: figures/tempo_e_modello_calcolo/img3.png Graphic file (type png)
 <use figures/tempo_e_modello_calcolo/img3.png>
 Package pdftex.def Info: figures/tempo_e_modello_calcolo/img3.png  used on input line 3212.
@@ -1401,7 +1401,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 3219--3219
 
  []
 
-<figures/tempo_e_modello_calcolo/img4.png, id=1445, 319.79475pt x 164.41425pt>
+<figures/tempo_e_modello_calcolo/img4.png, id=1450, 319.79475pt x 164.41425pt>
 File: figures/tempo_e_modello_calcolo/img4.png Graphic file (type png)
 <use figures/tempo_e_modello_calcolo/img4.png>
 Package pdftex.def Info: figures/tempo_e_modello_calcolo/img4.png  used on input line 3222.
@@ -1422,12 +1422,12 @@ Overfull \hbox (3.47165pt too wide) in paragraph at lines 3236--3255
  []
 
 [62 <./figures/tempo_e_modello_calcolo/img3.png> <./figures/tempo_e_modello_calcolo/img4.png>]
-<figures/tempo_e_modello_calcolo/img5.png, id=1455, 454.0965pt x 195.73125pt>
+<figures/tempo_e_modello_calcolo/img5.png, id=1460, 454.0965pt x 195.73125pt>
 File: figures/tempo_e_modello_calcolo/img5.png Graphic file (type png)
 <use figures/tempo_e_modello_calcolo/img5.png>
 Package pdftex.def Info: figures/tempo_e_modello_calcolo/img5.png  used on input line 3303.
 (pdftex.def)             Requested size: 280.54506pt x 120.92203pt.
-<figures/tempo_e_modello_calcolo/img9.png, id=1456, 350.5095pt x 237.88875pt>
+<figures/tempo_e_modello_calcolo/img9.png, id=1461, 350.5095pt x 237.88875pt>
 File: figures/tempo_e_modello_calcolo/img9.png Graphic file (type png)
 <use figures/tempo_e_modello_calcolo/img9.png>
 Package pdftex.def Info: figures/tempo_e_modello_calcolo/img9.png  used on input line 3307.
@@ -1438,7 +1438,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{subfigure.40.1
                    \relax 
 l.3373         \subfloat
                         [Notazione $O$ grande]{%
-<figures/tempo_e_modello_calcolo/img6.png, id=1466, 240.29774pt x 237.2865pt>
+<figures/tempo_e_modello_calcolo/img6.png, id=1471, 240.29774pt x 237.2865pt>
 File: figures/tempo_e_modello_calcolo/img6.png Graphic file (type png)
 <use figures/tempo_e_modello_calcolo/img6.png>
 Package pdftex.def Info: figures/tempo_e_modello_calcolo/img6.png  used on input line 3375.
@@ -1455,12 +1455,12 @@ pdfTeX warning (ext4): destination with the same identifier (name{subfigure.40.2
                    \relax 
 l.3377         \subfloat
                         [Notazione $\Omega$ grande]{%
-<figures/tempo_e_modello_calcolo/img7.png, id=1467, 239.6955pt x 236.68425pt>
+<figures/tempo_e_modello_calcolo/img7.png, id=1472, 239.6955pt x 236.68425pt>
 File: figures/tempo_e_modello_calcolo/img7.png Graphic file (type png)
 <use figures/tempo_e_modello_calcolo/img7.png>
 Package pdftex.def Info: figures/tempo_e_modello_calcolo/img7.png  used on input line 3379.
 (pdftex.def)             Requested size: 149.94484pt x 148.06453pt.
-<figures/tempo_e_modello_calcolo/img8.png, id=1468, 242.70676pt x 236.68425pt>
+<figures/tempo_e_modello_calcolo/img8.png, id=1473, 242.70676pt x 236.68425pt>
 File: figures/tempo_e_modello_calcolo/img8.png Graphic file (type png)
 <use figures/tempo_e_modello_calcolo/img8.png>
 Package pdftex.def Info: figures/tempo_e_modello_calcolo/img8.png  used on input line 3383.
@@ -1471,7 +1471,7 @@ Overfull \hbox (11.80435pt too wide) detected at line 3478
  []
 
 [65]
-<figures/tempo_e_modello_calcolo/img10.png, id=1487, 367.97475pt x 292.09125pt>
+<figures/tempo_e_modello_calcolo/img10.png, id=1492, 367.97475pt x 292.09125pt>
 File: figures/tempo_e_modello_calcolo/img10.png Graphic file (type png)
 <use figures/tempo_e_modello_calcolo/img10.png>
 Package pdftex.def Info: figures/tempo_e_modello_calcolo/img10.png  used on input line 3530.
@@ -1494,26 +1494,26 @@ LaTeX Info: Symbol \textrightarrow not provided by
 pdfTeX warning (ext4): destination with the same identifier (name{subfigure.40.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.3640         \subfloat
+l.3641         \subfloat
                         []{%
-<figures/tempo_e_modello_calcolo/img11.png, id=1499, 305.943pt x 319.79475pt>
+<figures/tempo_e_modello_calcolo/img11.png, id=1504, 305.943pt x 319.79475pt>
 File: figures/tempo_e_modello_calcolo/img11.png Graphic file (type png)
 <use figures/tempo_e_modello_calcolo/img11.png>
-Package pdftex.def Info: figures/tempo_e_modello_calcolo/img11.png  used on input line 3642.
+Package pdftex.def Info: figures/tempo_e_modello_calcolo/img11.png  used on input line 3643.
 (pdftex.def)             Requested size: 239.42758pt x 250.26843pt.
 
 pdfTeX warning (ext4): destination with the same identifier (name{subfigure.40.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.3644         \subfloat
+l.3645         \subfloat
                         []{%
-<figures/tempo_e_modello_calcolo/img12.png, id=1500, 202.356pt x 262.581pt>
+<figures/tempo_e_modello_calcolo/img12.png, id=1505, 202.356pt x 262.581pt>
 File: figures/tempo_e_modello_calcolo/img12.png Graphic file (type png)
 <use figures/tempo_e_modello_calcolo/img12.png>
-Package pdftex.def Info: figures/tempo_e_modello_calcolo/img12.png  used on input line 3646.
+Package pdftex.def Info: figures/tempo_e_modello_calcolo/img12.png  used on input line 3647.
 (pdftex.def)             Requested size: 193.47578pt x 251.0692pt.
  [68 <./figures/tempo_e_modello_calcolo/img11.png> <./figures/tempo_e_modello_calcolo/img12.png>]
-<figures/tempo_e_modello_calcolo/img16.png, id=1508, 301.72725pt x 214.401pt>
+<figures/tempo_e_modello_calcolo/img16.png, id=1513, 301.72725pt x 214.401pt>
 File: figures/tempo_e_modello_calcolo/img16.png Graphic file (type png)
 <use figures/tempo_e_modello_calcolo/img16.png>
 Package pdftex.def Info: figures/tempo_e_modello_calcolo/img16.png  used on input line 3691.
@@ -1529,7 +1529,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{subfigure.40.1
                    \relax 
 l.3711         \subfloat
                         []{%
-<figures/tempo_e_modello_calcolo/img13.png, id=1514, 280.04625pt x 222.23026pt>
+<figures/tempo_e_modello_calcolo/img13.png, id=1519, 280.04625pt x 222.23026pt>
 File: figures/tempo_e_modello_calcolo/img13.png Graphic file (type png)
 <use figures/tempo_e_modello_calcolo/img13.png>
 Package pdftex.def Info: figures/tempo_e_modello_calcolo/img13.png  used on input line 3713.
@@ -1540,7 +1540,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{subfigure.40.2
                    \relax 
 l.3715         \subfloat
                         []{%
-<figures/tempo_e_modello_calcolo/img14.png, id=1515, 278.2395pt x 222.23026pt>
+<figures/tempo_e_modello_calcolo/img14.png, id=1520, 278.2395pt x 222.23026pt>
 File: figures/tempo_e_modello_calcolo/img14.png Graphic file (type png)
 <use figures/tempo_e_modello_calcolo/img14.png>
 Package pdftex.def Info: figures/tempo_e_modello_calcolo/img14.png  used on input line 3717.
@@ -1551,31 +1551,57 @@ pdfTeX warning (ext4): destination with the same identifier (name{subfigure.40.3
                    \relax 
 l.3719         \subfloat
                         []{%
-<figures/tempo_e_modello_calcolo/img15.png, id=1516, 278.2395pt x 222.23026pt>
+<figures/tempo_e_modello_calcolo/img15.png, id=1521, 278.2395pt x 222.23026pt>
 File: figures/tempo_e_modello_calcolo/img15.png Graphic file (type png)
 <use figures/tempo_e_modello_calcolo/img15.png>
 Package pdftex.def Info: figures/tempo_e_modello_calcolo/img15.png  used on input line 3721.
 (pdftex.def)             Requested size: 198.31747pt x 158.39835pt.
- [70 <./figures/tempo_e_modello_calcolo/img13.png> <./figures/tempo_e_modello_calcolo/img14.png> <./figures/tempo_e_modello_calcolo/img15.png>] (Algoritmi_Strutture_Dati.aux)
+ [70 <./figures/tempo_e_modello_calcolo/img13.png> <./figures/tempo_e_modello_calcolo/img14.png> <./figures/tempo_e_modello_calcolo/img15.png>]
+<figures/tempo_e_modello_calcolo/img17.png, id=1532, 378.213pt x 279.444pt>
+File: figures/tempo_e_modello_calcolo/img17.png Graphic file (type png)
+<use figures/tempo_e_modello_calcolo/img17.png>
+Package pdftex.def Info: figures/tempo_e_modello_calcolo/img17.png  used on input line 3771.
+(pdftex.def)             Requested size: 227.3381pt x 167.97043pt.
+<figures/tempo_e_modello_calcolo/img18.png, id=1533, 378.213pt x 211.992pt>
+File: figures/tempo_e_modello_calcolo/img18.png Graphic file (type png)
+<use figures/tempo_e_modello_calcolo/img18.png>
+Package pdftex.def Info: figures/tempo_e_modello_calcolo/img18.png  used on input line 3775.
+(pdftex.def)             Requested size: 227.3381pt x 127.42583pt.
+<figures/tempo_e_modello_calcolo/img20.png, id=1534, 357.13425pt x 151.767pt>
+File: figures/tempo_e_modello_calcolo/img20.png Graphic file (type png)
+<use figures/tempo_e_modello_calcolo/img20.png>
+Package pdftex.def Info: figures/tempo_e_modello_calcolo/img20.png  used on input line 3782.
+(pdftex.def)             Requested size: 237.01411pt x 100.7223pt.
+<figures/tempo_e_modello_calcolo/img19.png, id=1535, 489.62926pt x 319.1925pt>
+File: figures/tempo_e_modello_calcolo/img19.png Graphic file (type png)
+<use figures/tempo_e_modello_calcolo/img19.png>
+Package pdftex.def Info: figures/tempo_e_modello_calcolo/img19.png  used on input line 3791.
+(pdftex.def)             Requested size: 338.58632pt x 220.72523pt.
+
+Overfull \hbox (3.08138pt too wide) in paragraph at lines 3780--3799
+[]  []
+ []
+
+[71 <./figures/tempo_e_modello_calcolo/img17.png> <./figures/tempo_e_modello_calcolo/img18.png> <./figures/tempo_e_modello_calcolo/img20.png> <./figures/tempo_e_modello_calcolo/img19.png>] (Algoritmi_Strutture_Dati.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
  ***********
 Package rerunfilecheck Info: File `Algoritmi_Strutture_Dati.out' has not changed.
-(rerunfilecheck)             Checksum: C0F3DB7592E9F9B4623130B4F6858164;13409.
+(rerunfilecheck)             Checksum: A883AB0A2756757BBC2DC40AD7763928;13530.
  ) 
 Here is how much of TeX's memory you used:
- 35250 strings out of 474486
- 701918 string characters out of 5743756
+ 35286 strings out of 474486
+ 703386 string characters out of 5743756
  2208542 words of memory out of 5000000
- 55638 multiletter control sequences out of 15000+600000
+ 55669 multiletter control sequences out of 15000+600000
  669359 words of font info for 417 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  86i,11n,98p,1144b,2061s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\dany2\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchb8a.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchbi8a.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchr8a.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchri8a.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi6.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtk10.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt12.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrb8a.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrro8a.pfb>
-Output written on Algoritmi_Strutture_Dati.pdf (70 pages, 2945247 bytes).
+Output written on Algoritmi_Strutture_Dati.pdf (71 pages, 3121723 bytes).
 PDF statistics:
- 1788 PDF objects out of 2073 (max. 8388607)
- 805 named destinations out of 1000 (max. 500000)
- 62435 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 1810 PDF objects out of 2073 (max. 8388607)
+ 810 named destinations out of 1000 (max. 500000)
+ 62463 words of extra memory for PDF output out of 74296 (max. 10000000)
 

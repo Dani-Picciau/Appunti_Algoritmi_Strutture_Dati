@@ -3622,6 +3622,7 @@ bstree * rotateright(bstree *x) {
     Dunque, procedendo il questo modo si avrebbe una complessità $O(n\cdot n!)$, ovvero una \textbf{complessità superpolinomiale}. Per evitare ciò, l'approccio migliore è quello di utilizzare degli \textbf{algoritmi di ordinamento}, decisamente più adatti a questa tipologia di problema.
 
     \subsubsection{Selection Sort}
+    \label{par:Selection Sort}
     Il selection sort è un semplice algoritmo polinomiale che è basato sulla proprietà che in una sequenza ordinata, il primo elemento ha valore minimo.
     \begin{tcolorbox}[
         colback=yellow!20, 
@@ -3682,8 +3683,7 @@ bstree * rotateright(bstree *x) {
         colframe=darkgray, 
         title=Algoritmo insertion sort
         ]
-        Per seguire l'analogia, si considerino le carte una per volta, ad esempio da sinistra verso destra: ogni volta che viene considerata una nuova carta, si inserisce nella posizione giusta rispetto alle altre carte gia considerate e ordinate, traslando di una posizione verso destra tutte le carte maggiori.
-        \
+        Per seguire l'analogia, si considerino le carte una per volta, ad esempio, da sinistra verso destra: ogni volta che viene considerata una nuova carta, si inserisce nella posizione giusta rispetto alle altre carte gia considerate e ordinate, traslando di una posizione verso destra tutte le carte maggiori.
     \end{tcolorbox}
 
     \noindent
@@ -3721,5 +3721,80 @@ bstree * rotateright(bstree *x) {
         }
     \end{figure}
     \FloatBarrier
+
+    \vspace{-10pt}
+    \noindent
+    Per la logica che sta dietro al \texttt{selection sort()}, anche se l'input iniziale è già ordinato, l'algoritmo andrà a cercare comunque il valore minimo e lo sovrascriverà nella prima posizione della parte non ordinata dell'array, quindi, come detto al capitolo (capitolo \ref{par:Selection Sort}), la complessità dell'algoritmo non dipende dall'input di ingresso.
+
+    \vspace{8pt}
+    \noindent
+    Invece, a differenza del \texttt{selection sort()}, la \textbf{complessità} dell'\texttt{insertion sort()} dipende dalla \textbf{disposizione iniziale dei dati in ingresso} poiché, per come è strutturato l'algoritmo, man mano che si scorre l'array si andranno a posizionare i nuovi elementi nella posizione corretta rispetto a tutti gli altri.\\
+    Proprio per questa caratteristica, la complessità dell'\texttt{insertion sort()} cambia a seconda del caso di studio (capitolo \ref{par:Valutazione del caso pessimo, medio e ottimo}):
+    \begin{itemize}[leftmargin=1em]
+        \item \textit{Complessità nel caso \textbf{pessimo}}: il caso peggiore si ha quando l'input $A$ è \textbf{ordinato alla rovescia}, ad esempio: $A = \{8, 7, 6, 5, 4, 3, 2, 1\}$.\\
+        In questo caso ad ogni iterazione del ciclo \texttt{for}, si entrerebbe anche nel ciclo \texttt{while} più interno poiché la variabile \texttt{temp} andrebbe spostata in prima posizione, e ciò richiederebbe un numero di spostamenti pari a 
+        \[
+            \sum_{i=1}^{n-1} (n-i)
+        \]
+        \textbf{\textit{Complessità?}} Dunque la complessità sarebbe uguale a quella del \texttt{selection sort()} per la presenza dell'annidamento dei  due cicli $\rightarrow$ $O(n^2)$.
+
+        \vspace{8pt}
+        \item \textit{Complessità nel caso \textbf{ottimo}}: il caso migliore si ha quando l'input $A$ è una sequenza già ordinata, quindi $A = {1, 2, 3, 4, 5, 6, 7, 8}$\\
+        In questo caso, non avverà mai che \texttt{A[j-1]} $[1]$ sia maggiore di \texttt{temp} $[2]$ e cosi via..., non permettendo al ciclo \texttt{while} di verificarsi.
+        Rimane solo il ciclo esterno, che esegue operazioni di costo \textbf{costante}. \\
+        \textbf{\textit{Complessità?}} In questo caso, la complessità per delle istruzioni costanti vale $O(n)$.
+    \end{itemize}
+
+    \subsubsection{Merge sort}
+    L'algoritmo \texttt{MergeSort()} è basato sulla tecnica \textbf{divide et impera}.
+
+    \vspace{-5pt}
+    \begin{tcolorbox}[
+        colback=yellow!20, 
+        colframe=darkgray, 
+        title=Algoritmo merge sort
+        ]
+        \begin{itemize}[leftmargin=1em]
+            \item \textbf{Divide}: spezza il vettore di $n$ elementi in due sottovettori di $n/2$ elementi;
+            \item \textbf{Impera}: chiama \texttt{MergeSort()} ricorsivamente sui due sottovettori;
+            \item \textbf{Combina}: una volta ottenuti singoli valori, questi vengono riuniti (merge) in modo ordinato, fino a riottenere i due sottovettori iniziali ordinati.
+        \end{itemize}
+    \end{tcolorbox}
+
+    \vspace{-48pt} 
+    \FloatBarrier
+    \begin{figure}[H]
+        \centering
+        \vspace{-5pt}  % Riduce lo spazio sopra
+        \subfloat[Partizionamento dei dati]{%
+            \includegraphics[width=0.47\linewidth]{figures/tempo_e_modello_calcolo/img17.png}
+        } 
+        \hspace{0.1cm}
+        \subfloat[Fusione dei dati]{%
+            \includegraphics[width=0.47\linewidth]{figures/tempo_e_modello_calcolo/img18.png}
+        }
+    \end{figure}
+    \FloatBarrier
+
+    \vspace{-12pt}
+    \noindent
+    \begin{minipage}[t]{0.490\textwidth} 
+        \includegraphics[width=\linewidth]{figures/tempo_e_modello_calcolo/img20.png}
+    \end{minipage}%
+    \hspace{5pt} % Spazio tra immagine e testo
+    \raisebox{95pt}{  
+        \begin{minipage}[t]{0.487\textwidth}
+            najwjnsanj
+        \end{minipage} 
+    }
+    \begin{minipage}[t]{0.700\textwidth} 
+        \includegraphics[width=\linewidth]{figures/tempo_e_modello_calcolo/img19.png}
+    \end{minipage}%
+    \hspace{5pt} % Spazio tra immagine e testo
+    \raisebox{105pt}{  
+        \begin{minipage}[t]{0.277\textwidth}
+
+        \end{minipage} 
+    }
 
 \end{document}
