@@ -3747,8 +3747,6 @@ bstree * rotateright(bstree *x) {
 
     \subsubsection{Merge sort}
     L'algoritmo \texttt{MergeSort()} è basato sulla tecnica \textbf{divide et impera}.
-
-    \vspace{-5pt}
     \begin{tcolorbox}[
         colback=yellow!20, 
         colframe=darkgray, 
@@ -3761,8 +3759,7 @@ bstree * rotateright(bstree *x) {
         \end{itemize}
     \end{tcolorbox}
 
-    \vspace{-48pt} 
-    \FloatBarrier
+    \vspace{-45pt} 
     \begin{figure}[H]
         \centering
         \vspace{-5pt}  % Riduce lo spazio sopra
@@ -3776,25 +3773,130 @@ bstree * rotateright(bstree *x) {
     \end{figure}
     \FloatBarrier
 
-    \vspace{-12pt}
+    \vspace{-10pt}
     \noindent
-    \begin{minipage}[t]{0.490\textwidth} 
+    \begin{minipage}[t]{0.500\textwidth} 
         \includegraphics[width=\linewidth]{figures/tempo_e_modello_calcolo/img20.png}
     \end{minipage}%
     \hspace{5pt} % Spazio tra immagine e testo
     \raisebox{95pt}{  
-        \begin{minipage}[t]{0.487\textwidth}
-            najwjnsanj
+        \begin{minipage}[t]{0.497\textwidth}
+            La prima parte dell'algoritmo \texttt{mergeSort()} si occupa di effettuare le chiamate ricorsive per la suddivisione del vettore non ordinato fino ai singoli valori (come in figura \textit{d}).
+            Prendiamo in considerazione il vettore: $A = [4, 3, 2, 1]$.\\
+            Nella \textit{riga 2} viene calcolata la metà del vettore (se il vettore è dispari si andrà per eccesso).
         \end{minipage} 
     }
-    \begin{minipage}[t]{0.700\textwidth} 
-        \includegraphics[width=\linewidth]{figures/tempo_e_modello_calcolo/img19.png}
+    In questo caso, il vettore viene diviso in parte sinistra $[4, 3]$ e parte destra $[2, 1]$.
+
+    \vspace{8pt}
+    \noindent
+    \textbf{\textit{Prima ricorsione (riga 2)}}\\
+    Una volta che il vettore è stato diviso in due parti, la prima istruzione ricorsiva (\textit{riga 3}) richiama la funzione \texttt{mergeSort(A, first, mid)} per poter lavorare sulla parte sinistra, ossia $[4,3]$.
+    Dunque, la \textit{riga 2} viene rieseguita e il sottovettore viene ulteriormente suddiviso in:
+    \begin{itemize}[leftmargin=1em]
+        \item parte sinistra $[4]$;
+        \item parte destra $[3]$.
+    \end{itemize}
+    Subito dopo, le istruzioni ricorsive vengono tentate nuovamente, ma:
+    \begin{itemize}[leftmargin=1em]
+        \item \texttt{mergeSort(A, first, mid)} non prosegue poiché il sottovettore ha un solo elemento $[4]$;
+        \item anche, \texttt{mergeSort(A, mid+1, last)} non prosegue perché anche $[3]$ è un singolo elemento.
+    \end{itemize}
+    Raggiunto il caso base per entrambi i sottovettori, è possibile richiamare \texttt{merge()} per combinarli e ottenere il vettore ordinato $[3,4]$.
+
+    \vspace{8pt}
+    \noindent
+    \textbf{\textit{Seconda ricorsione (riga 3)}}\\
+    Terminata la ricorsione sulla parte sinistra del vettore iniziale, il controllo ritorna alla chiamata precedente, che ora può eseguire l’istruzione ricorsiva successiva (\textit{riga 4}) sulla parte destra, utilizzando \texttt{mergeSort(A, mid+1, last)}.\\
+    Il procedimento è analogo al precedente: la \textit{riga 2} suddivide il sottovettore destro in $[2]$ e $[1]$, mentre le istruzioni ricorsive (\textit{righe 3} e \textit{4}) non proseguono perché entrambi i vettori hanno un solo elemento.
+    Infine viene richiamata \texttt{merge()} per ordinare i due elementi e ottenere $[1,2]$.
+
+    \vspace{8pt}
+    \noindent
+    \textbf{\textit{Merge finale (riga 4)}}\\
+    Terminate entrambe le ricorsioni, significa che i due sottovettori originari sono ora ordinati. L’ultima istruzione rimasta della chiamata principale è dunque la \texttt{merge()} finale, che combina i due sottovettori ordinati per ottenere un unico vettore ordinato (come illustrato in figura \textit{e}). 
+
+    \vspace{8pt}
+    \noindent
+    Nello specifico, una generica operazione di \texttt{merge()} funziona in questo modo:\\
+    \begin{minipage}[t]{0.560\textwidth} 
+        \includegraphics[width=\linewidth]{figures/tempo_e_modello_calcolo/img23.png}
+        \includegraphics[width=\linewidth]{figures/tempo_e_modello_calcolo/img21.png}
+        \includegraphics[width=\linewidth]{figures/tempo_e_modello_calcolo/img22.png}
     \end{minipage}%
     \hspace{5pt} % Spazio tra immagine e testo
-    \raisebox{105pt}{  
-        \begin{minipage}[t]{0.277\textwidth}
+    \raisebox{18pt}{  
+        \begin{minipage}[t]{0.417\textwidth}
+            \textit{\textbf{N.B}}: \textit{first, last e mid} sono tali che $1 \leqslant first \leqslant mid \leqslant last \leqslant n$.
 
+            \vspace{8pt}
+            Bisogna specificare che il merge agisce su dei sottovettori già ordinati: infatti il primo \texttt{merge()} viene effettuato sui singoli elementi, e da quì, ogni volta che si effettua un \texttt{merge()} si avranno sempre dei sottovettori ordinati, $A[first...mid]$ e $A[id+1...last]$.
+
+            \vspace{8pt}
+            Per fondere le due metà ordinate, la procedura \texttt{merge()} si avvale di un vettore di appoggio $B$, utilizzato come parametro globale.\\
+            Vengono qundi utilizzati tre indici $i, j$ e $k$ per scandire, rispettivamente, $A[first..mid]$, $A[mid+1...last]$ e $B[start...end]$. Ad ogni passo, sono
         \end{minipage} 
     }
+
+    \vspace{3pt}
+    \noindent
+    confrontati gli elementi $A[i]$ e $A[j]$, il minore viene copiato in $B[k]$, e vengono incrementati di una posizione $k$ e l'indice dell'elemento che risulta minore. 
+
+    \vspace{8pt}
+    \noindent
+    Il procedimento viene iterato fino a che una delle due metà è esaurita ($A[first..mid]$ oppure $A[mid+1...last]$). Non appena una delle due metà si svuota per prima, è possibile proseguire l'ordinamento in modi differenti:
+    \begin{itemize}[leftmargin=1em]
+        \item Se la \textbf{prima metà è stata esaurita per prima} ($i>mid$) gli eventuali elementi $A[j..end]$ della metà non scandita si trovano già nella posizione corretta per l'ordinamento.\\
+        Dunque, non è necessario spostare gli elementi non scanditi in $A$ nel vettore di appoggio $B$, ma piuttosto, spostare tutti gli elementi già ordinati da $B$ ad $A$;
+        \item Se invece \textbf{si svuota prima la seconda parte}, gli elementi non scanditi $A[i...mid]$ della prima metà vengono subito spostati nelle ultime posizioni $A[k...last]$ che competono loro nell'ordinamento finale. Infine, la posizione $B[first...k-1]$ è ricopiata in $A[first...k-1]$, ottenendo così $A[first...last]$.
+    \end{itemize}
+    
+    \vspace{8pt}
+    \noindent
+    Il codice per il funzionamento del \texttt{merge()} è il seguente, illustrato in figura \ref{fig:figure67}.
+    \begin{figure}[H]
+        \centering
+        \addtocounter{figure}{27}
+        \caption{Pseudocodice della funzione \texttt{merge()}}
+        \label{fig:figure67}
+        \vspace{-10pt}  % Riduce lo spazio sopra
+        \includegraphics[width=0.9\textwidth]{figures/tempo_e_modello_calcolo/img19.png}
+        \vspace{-5pt}  % Riduce lo spazio sopra 
+    \end{figure}
+    \noindent
+    Per capire quale sia la complessità di \texttt{mergeSort()} dobbiamo trovare separatamente la complessità di \texttt{merge()}.\\
+    Nel \textbf{caso pessimo} ogni valore in $A$ deve essere trasferito in $B$, e questo accade quando rimangono tutti tranne un solo elemento della sottoparte destra di $A$. Quindi come illustrato
+
+    \vspace{2pt}
+    \noindent 
+    \begin{minipage}[t]{0.560\textwidth} 
+         \includegraphics[width=\textwidth]{figures/tempo_e_modello_calcolo/img24.png}
+    \end{minipage}%
+    \hspace{5pt} % Spazio tra immagine e testo
+    \raisebox{66pt}{  
+        \begin{minipage}[t]{0.417\textwidth}
+            nell'immagine, in $A$ è rimasto un singolo valore che è già nella sua posizione corretta, gli altri $n-1$ valori sono stati trasferiti in $B$. A questo punto andranno tutti riportati in $A$, e  anche in 
+        \end{minipage} 
+    }
+
+    \vspace{-2pt}
+    \noindent
+    questo caso l'operazione ha costo $n-1$. Possiamo quindi dire che la complessità di \texttt{merge()} è $O(n)$ perché il \textbf{numero di operazioni cresce in modo lineare} rispetto al \textbf{numero totale di elementi} nei due sottovettori.
+    \begin{tcolorbox}
+        [
+            colback=green!10,  % Sfondo verde chiaro
+            colframe=green!60!black,  % Bordo verde più acceso
+            coltitle=black,  % Colore del testo del titolo
+            fonttitle=\bfseries,  % Testo del titolo in grassetto
+            title={\centering \textbf{Osservazione sulla complessità di \texttt{merge()}}},  % Titolo centrato 
+            enhanced,  % Miglioramenti grafici
+            attach boxed title to top center={yshift=-2mm},  % Posiziona il titolo centrato in alto
+            boxed title style={colback=white, colframe=green!60!black, rounded corners},
+            breakable
+        ]
+        Il fatto che la complessità di \texttt{merge()} sia $O(n)$ è anche intuibile dal momento che la funzione non contiene cicli annidati: il ciclo principale viene eseguito al massimo $n-1$ volte e ogni iterazione ha costo costante. Ne deriva quindi un costo complessivo lineare. 
+    \end{tcolorbox}
+    \noindent
+    L'intero algoritmo è un programma che richiama ricorsivamente se stesso e usa la funzione \texttt{merge()} per unire i risultati
 
 \end{document}
