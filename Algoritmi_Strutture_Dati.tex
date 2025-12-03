@@ -3510,6 +3510,7 @@ bstree * rotateright(bstree *x) {
     Quindi $\alpha<\beta \Rightarrow T(n)=\Theta(n^\beta)=\Theta(n)$
 
     \subsubsection{Metodo dell'albero di ricorsione (analisi per livelli)}
+    \label{par:Metodo dell'albero di ricorsione (analisi per livelli)}
     \begin{tcolorbox}[
         colback=yellow!20, 
         colframe=darkgray, 
@@ -3520,7 +3521,7 @@ bstree * rotateright(bstree *x) {
     \noindent
     Quindi, si calcola il \textbf{costo di ogni livello} (somma dei costi dei singoli nodi per quel livello), e poi \textbf{si sommano tutti i livelli}. Possiamo immaginarlo come un processo di questo tipo:
     \begin{itemize}[leftmargin=1em]
-        \item \textbf{\textit{Livello 0}}: abbiamo lespressione originale;
+        \item \textbf{\textit{Livello 0}}: abbiamo l'espressione originale;
         \item \textbf{\textit{Livello 1}}: espressione a cui è stata applicata un'espansione;
         \item \textbf{\textit{Livello 2}}: vengono applicate due espansioni;
         \item ... si continua fino al caso base.
@@ -3864,7 +3865,7 @@ bstree * rotateright(bstree *x) {
         \vspace{-5pt}  % Riduce lo spazio sopra 
     \end{figure}
     \noindent
-    Per capire quale sia la complessità di \texttt{mergeSort()} dobbiamo trovare separatamente la complessità di \texttt{merge()}.\\
+    Per capire quale sia la complessità di \texttt{mergeSort()} dobbiamo prima trovare separatamente la complessità di \texttt{merge()}.\\
     Nel \textbf{caso pessimo} ogni valore in $A$ deve essere trasferito in $B$, e questo accade quando rimangono tutti tranne un solo elemento della sottoparte destra di $A$. Quindi come illustrato
 
     \vspace{2pt}
@@ -3896,7 +3897,39 @@ bstree * rotateright(bstree *x) {
         ]
         Il fatto che la complessità di \texttt{merge()} sia $O(n)$ è anche intuibile dal momento che la funzione non contiene cicli annidati: il ciclo principale viene eseguito al massimo $n-1$ volte e ogni iterazione ha costo costante. Ne deriva quindi un costo complessivo lineare. 
     \end{tcolorbox}
-    \noindent
-    L'intero algoritmo è un programma che richiama ricorsivamente se stesso e usa la funzione \texttt{merge()} per unire i risultati
 
+    \vspace{8pt}
+    \noindent
+    A questo punto l'analisi della complessità si sposta sul capire quale sia la complessità dell'\textbf{intero algoritmo}.
+    Quando analizziamo il \texttt{mergeSort()} vengono effettuate le seguenti operazioni:
+    \begin{enumerate}[leftmargin=1.3em]
+        \item Viene preso un array di dimensione $n$;
+        \item Viene diviso in \textbf{due metà}: una di dimensione $n/2$ e l'altra di dimensione $n/2$;
+        \item Si applica ricorsivamente il \texttt{mergeSort()} su entrambe le metà.
+    \end{enumerate}
+    Quindi per ordinare l'array completo:
+    \begin{itemize}[leftmargin=1em]
+        \item Per ordinare la prima metà $\rightarrow$ costo $T(n/2)$;
+        \item Per ordinare la seconda metà $\rightarrow$ costo $T(n/2)$.
+    \end{itemize}
+    Sommando i termini si ottiene: $T(n)= T(n/2) + T(n/2) +$ \textit{costo del merge} $= T(n)= 2T(n/2) + O(n)$, dove:
+    \begin{itemize}[leftmargin=1em]
+        \item $2T(n/2)$ è il tempo per ordinare le due metà;
+        \item $O(n)$ è il tempo per fonderle con \texttt{merge()}.
+    \end{itemize}
+
+    \vspace{8pt}
+    \noindent
+    Dopo aver ottenuto l'equazione del costo dell'algoritmo, per trovare la complessità possiamo approfittare del fatto che \texttt{mergeSort()} sia un algoritmo ricorsivo e utilizzare il \textbf{metodo dell'albero di ricorsione} visto al capitolo \ref{par:Metodo dell'albero di ricorsione (analisi per livelli)}.
+    \begin{figure}[H]
+        \centering
+        \vspace{-10pt}  % Riduce lo spazio sopra
+        \includegraphics[width=0.9\textwidth]{figures/tempo_e_modello_calcolo/img25.png}
+        \vspace{-5pt}  % Riduce lo spazio sopra 
+    \end{figure}
+    \noindent
+    Dunque, il \textbf{costo complessivo} di ciascun livello dell'albero è sempre $n$, perché il costo del \texttt{merge()} rimane costante per qualsiasi coppia di sottovettori.\\
+    Invece, $2T(n/2)$ è il costo per la chiamata ricorsiva che genera $2$ sottovettori di dimensione $n/2$ ogni volta che viene richiamata fino ad ottenere i singoli valori.\\
+    \textbf{Il numero di sottovettori cresce esponenzialmente} ($2^i$), ma allo stesso momento la loro dimensione cala esponenzialmente ($n/2^i$) e il costo totale di ogni \texttt{merge()} costante ($n$).
+    Dunque, la ricorrenza ha complessità $O(n\;log\;n)$.
 \end{document}

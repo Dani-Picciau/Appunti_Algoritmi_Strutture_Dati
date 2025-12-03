@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.3.9)  2 DEC 2025 23:05
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.3.9)  3 DEC 2025 02:19
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1474,52 +1474,52 @@ Overfull \hbox (11.80435pt too wide) detected at line 3478
 <figures/tempo_e_modello_calcolo/img10.png, id=1492, 367.97475pt x 292.09125pt>
 File: figures/tempo_e_modello_calcolo/img10.png Graphic file (type png)
 <use figures/tempo_e_modello_calcolo/img10.png>
-Package pdftex.def Info: figures/tempo_e_modello_calcolo/img10.png  used on input line 3530.
+Package pdftex.def Info: figures/tempo_e_modello_calcolo/img10.png  used on input line 3531.
 (pdftex.def)             Requested size: 266.03474pt x 211.17462pt.
 
-Overfull \hbox (11.02536pt too wide) detected at line 3549
+Overfull \hbox (11.02536pt too wide) detected at line 3550
 \OML/lmm/m/it/12 T\OT1/lmr/m/n/12 (\OML/lmm/m/it/12 n\OT1/lmr/m/n/12 ) = []
  []
 
 
-Overfull \hbox (3.08138pt too wide) in paragraph at lines 3528--3550
+Overfull \hbox (3.08138pt too wide) in paragraph at lines 3529--3551
 []  [] 
  []
 
 [66 <./figures/tempo_e_modello_calcolo/img10.png>]
 LaTeX Info: Symbol \textrightarrow not provided by
             font family bch in TS1 encoding.
-            Default family used instead on input line 3564.
+            Default family used instead on input line 3565.
  [67]
 pdfTeX warning (ext4): destination with the same identifier (name{subfigure.40.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.3641         \subfloat
+l.3642         \subfloat
                         []{%
 <figures/tempo_e_modello_calcolo/img11.png, id=1504, 305.943pt x 319.79475pt>
 File: figures/tempo_e_modello_calcolo/img11.png Graphic file (type png)
 <use figures/tempo_e_modello_calcolo/img11.png>
-Package pdftex.def Info: figures/tempo_e_modello_calcolo/img11.png  used on input line 3643.
+Package pdftex.def Info: figures/tempo_e_modello_calcolo/img11.png  used on input line 3644.
 (pdftex.def)             Requested size: 239.42758pt x 250.26843pt.
 
 pdfTeX warning (ext4): destination with the same identifier (name{subfigure.40.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.3645         \subfloat
+l.3646         \subfloat
                         []{%
 <figures/tempo_e_modello_calcolo/img12.png, id=1505, 202.356pt x 262.581pt>
 File: figures/tempo_e_modello_calcolo/img12.png Graphic file (type png)
 <use figures/tempo_e_modello_calcolo/img12.png>
-Package pdftex.def Info: figures/tempo_e_modello_calcolo/img12.png  used on input line 3647.
+Package pdftex.def Info: figures/tempo_e_modello_calcolo/img12.png  used on input line 3648.
 (pdftex.def)             Requested size: 193.47578pt x 251.0692pt.
  [68 <./figures/tempo_e_modello_calcolo/img11.png> <./figures/tempo_e_modello_calcolo/img12.png>]
 <figures/tempo_e_modello_calcolo/img16.png, id=1513, 301.72725pt x 214.401pt>
 File: figures/tempo_e_modello_calcolo/img16.png Graphic file (type png)
 <use figures/tempo_e_modello_calcolo/img16.png>
-Package pdftex.def Info: figures/tempo_e_modello_calcolo/img16.png  used on input line 3691.
+Package pdftex.def Info: figures/tempo_e_modello_calcolo/img16.png  used on input line 3692.
 (pdftex.def)             Requested size: 261.19305pt x 185.60152pt.
 
-Overfull \hbox (3.07399pt too wide) in paragraph at lines 3689--3701
+Overfull \hbox (3.07399pt too wide) in paragraph at lines 3690--3702
 []  [] 
  []
 
@@ -1527,53 +1527,53 @@ Overfull \hbox (3.07399pt too wide) in paragraph at lines 3689--3701
 pdfTeX warning (ext4): destination with the same identifier (name{subfigure.40.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.3711         \subfloat
+l.3712         \subfloat
                         []{%
 <figures/tempo_e_modello_calcolo/img13.png, id=1519, 280.04625pt x 222.23026pt>
 File: figures/tempo_e_modello_calcolo/img13.png Graphic file (type png)
 <use figures/tempo_e_modello_calcolo/img13.png>
-Package pdftex.def Info: figures/tempo_e_modello_calcolo/img13.png  used on input line 3713.
+Package pdftex.def Info: figures/tempo_e_modello_calcolo/img13.png  used on input line 3714.
 (pdftex.def)             Requested size: 198.31747pt x 157.38106pt.
 
 pdfTeX warning (ext4): destination with the same identifier (name{subfigure.40.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.3715         \subfloat
+l.3716         \subfloat
                         []{%
 <figures/tempo_e_modello_calcolo/img14.png, id=1520, 278.2395pt x 222.23026pt>
 File: figures/tempo_e_modello_calcolo/img14.png Graphic file (type png)
 <use figures/tempo_e_modello_calcolo/img14.png>
-Package pdftex.def Info: figures/tempo_e_modello_calcolo/img14.png  used on input line 3717.
+Package pdftex.def Info: figures/tempo_e_modello_calcolo/img14.png  used on input line 3718.
 (pdftex.def)             Requested size: 198.31747pt x 158.39835pt.
 
 pdfTeX warning (ext4): destination with the same identifier (name{subfigure.40.3}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.3719         \subfloat
+l.3720         \subfloat
                         []{%
 <figures/tempo_e_modello_calcolo/img15.png, id=1521, 278.2395pt x 222.23026pt>
 File: figures/tempo_e_modello_calcolo/img15.png Graphic file (type png)
 <use figures/tempo_e_modello_calcolo/img15.png>
-Package pdftex.def Info: figures/tempo_e_modello_calcolo/img15.png  used on input line 3721.
+Package pdftex.def Info: figures/tempo_e_modello_calcolo/img15.png  used on input line 3722.
 (pdftex.def)             Requested size: 198.31747pt x 158.39835pt.
  [70 <./figures/tempo_e_modello_calcolo/img13.png> <./figures/tempo_e_modello_calcolo/img14.png> <./figures/tempo_e_modello_calcolo/img15.png>]
 <figures/tempo_e_modello_calcolo/img17.png, id=1532, 378.213pt x 279.444pt>
 File: figures/tempo_e_modello_calcolo/img17.png Graphic file (type png)
 <use figures/tempo_e_modello_calcolo/img17.png>
-Package pdftex.def Info: figures/tempo_e_modello_calcolo/img17.png  used on input line 3768.
+Package pdftex.def Info: figures/tempo_e_modello_calcolo/img17.png  used on input line 3769.
 (pdftex.def)             Requested size: 227.3381pt x 167.97043pt.
 <figures/tempo_e_modello_calcolo/img18.png, id=1533, 378.213pt x 211.992pt>
 File: figures/tempo_e_modello_calcolo/img18.png Graphic file (type png)
 <use figures/tempo_e_modello_calcolo/img18.png>
-Package pdftex.def Info: figures/tempo_e_modello_calcolo/img18.png  used on input line 3772.
+Package pdftex.def Info: figures/tempo_e_modello_calcolo/img18.png  used on input line 3773.
 (pdftex.def)             Requested size: 227.3381pt x 127.42583pt.
 <figures/tempo_e_modello_calcolo/img20.png, id=1534, 357.13425pt x 151.767pt>
 File: figures/tempo_e_modello_calcolo/img20.png Graphic file (type png)
 <use figures/tempo_e_modello_calcolo/img20.png>
-Package pdftex.def Info: figures/tempo_e_modello_calcolo/img20.png  used on input line 3779.
+Package pdftex.def Info: figures/tempo_e_modello_calcolo/img20.png  used on input line 3780.
 (pdftex.def)             Requested size: 241.84843pt x 102.7764pt.
 
-Overfull \hbox (12.75pt too wide) in paragraph at lines 3777--3790
+Overfull \hbox (12.75pt too wide) in paragraph at lines 3778--3791
 []  []
  []
 
@@ -1581,50 +1581,56 @@ Overfull \hbox (12.75pt too wide) in paragraph at lines 3777--3790
 <figures/tempo_e_modello_calcolo/img23.png, id=1545, 451.6875pt x 52.195pt>
 File: figures/tempo_e_modello_calcolo/img23.png Graphic file (type png)
 <use figures/tempo_e_modello_calcolo/img23.png>
-Package pdftex.def Info: figures/tempo_e_modello_calcolo/img23.png  used on input line 3823.
+Package pdftex.def Info: figures/tempo_e_modello_calcolo/img23.png  used on input line 3824.
 (pdftex.def)             Requested size: 270.86906pt x 31.3021pt.
 <figures/tempo_e_modello_calcolo/img21.png, id=1546, 572.1375pt x 294.09875pt>
 File: figures/tempo_e_modello_calcolo/img21.png Graphic file (type png)
 <use figures/tempo_e_modello_calcolo/img21.png>
-Package pdftex.def Info: figures/tempo_e_modello_calcolo/img21.png  used on input line 3824.
+Package pdftex.def Info: figures/tempo_e_modello_calcolo/img21.png  used on input line 3825.
 (pdftex.def)             Requested size: 270.86906pt x 139.23613pt.
 <figures/tempo_e_modello_calcolo/img22.png, id=1547, 567.11874pt x 237.88875pt>
 File: figures/tempo_e_modello_calcolo/img22.png Graphic file (type png)
 <use figures/tempo_e_modello_calcolo/img22.png>
-Package pdftex.def Info: figures/tempo_e_modello_calcolo/img22.png  used on input line 3825.
+Package pdftex.def Info: figures/tempo_e_modello_calcolo/img22.png  used on input line 3826.
 (pdftex.def)             Requested size: 270.86906pt x 113.62265pt.
 
-Underfull \hbox (badness 1789) in paragraph at lines 3839--3839
+Underfull \hbox (badness 1789) in paragraph at lines 3840--3840
 \T1/bch/m/n/12 (+20) Vengono qundi uti-liz-zati tre in-dici
  []
 
 
-Underfull \hbox (badness 5787) in paragraph at lines 3839--3839
+Underfull \hbox (badness 5787) in paragraph at lines 3840--3840
 \OML/lmm/m/it/12 i; j$ \T1/bch/m/n/12 (+20) e $\OML/lmm/m/it/12 k$ \T1/bch/m/n/12 (+20) per scan-dire, rispet-ti-va-
  []
 
 
-Overfull \hbox (3.08138pt too wide) in paragraph at lines 3820--3840
+Overfull \hbox (3.08138pt too wide) in paragraph at lines 3821--3841
 []  [] 
  []
 
 <figures/tempo_e_modello_calcolo/img19.png, id=1549, 489.62926pt x 319.1925pt>
 File: figures/tempo_e_modello_calcolo/img19.png Graphic file (type png)
 <use figures/tempo_e_modello_calcolo/img19.png>
-Package pdftex.def Info: figures/tempo_e_modello_calcolo/img19.png  used on input line 3863.
+Package pdftex.def Info: figures/tempo_e_modello_calcolo/img19.png  used on input line 3864.
 (pdftex.def)             Requested size: 435.32422pt x 283.7882pt.
 [72 <./figures/tempo_e_modello_calcolo/img23.png> <./figures/tempo_e_modello_calcolo/img21.png> <./figures/tempo_e_modello_calcolo/img22.png>]
 <figures/tempo_e_modello_calcolo/img24.png, id=1558, 903.375pt x 255.95625pt>
 File: figures/tempo_e_modello_calcolo/img24.png Graphic file (type png)
 <use figures/tempo_e_modello_calcolo/img24.png>
-Package pdftex.def Info: figures/tempo_e_modello_calcolo/img24.png  used on input line 3873.
+Package pdftex.def Info: figures/tempo_e_modello_calcolo/img24.png  used on input line 3874.
 (pdftex.def)             Requested size: 270.86906pt x 76.7484pt.
 
-Overfull \hbox (3.08138pt too wide) in paragraph at lines 3871--3881
+Overfull \hbox (3.08138pt too wide) in paragraph at lines 3872--3882
 []  [] 
  []
 
-[73 <./figures/tempo_e_modello_calcolo/img19.png> <./figures/tempo_e_modello_calcolo/img24.png>] (Algoritmi_Strutture_Dati.aux)
+[73 <./figures/tempo_e_modello_calcolo/img19.png> <./figures/tempo_e_modello_calcolo/img24.png>]
+<figures/tempo_e_modello_calcolo/img25.png, id=1569, 505.28775pt x 225.2415pt>
+File: figures/tempo_e_modello_calcolo/img25.png Graphic file (type png)
+<use figures/tempo_e_modello_calcolo/img25.png>
+Package pdftex.def Info: figures/tempo_e_modello_calcolo/img25.png  used on input line 3927.
+(pdftex.def)             Requested size: 435.32422pt x 194.05446pt.
+ [74 <./figures/tempo_e_modello_calcolo/img25.png>] (Algoritmi_Strutture_Dati.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
@@ -1633,17 +1639,17 @@ Package rerunfilecheck Info: File `Algoritmi_Strutture_Dati.out' has not changed
 (rerunfilecheck)             Checksum: A883AB0A2756757BBC2DC40AD7763928;13530.
  ) 
 Here is how much of TeX's memory you used:
- 35320 strings out of 474486
- 704803 string characters out of 5743756
+ 35333 strings out of 474486
+ 705243 string characters out of 5743756
  2208542 words of memory out of 5000000
- 55700 multiletter control sequences out of 15000+600000
+ 55708 multiletter control sequences out of 15000+600000
  669359 words of font info for 417 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  86i,11n,98p,1144b,2061s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\dany2\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchb8a.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchbi8a.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchr8a.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchri8a.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi6.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtk10.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt12.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrb8a.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrro8a.pfb>
-Output written on Algoritmi_Strutture_Dati.pdf (73 pages, 3342239 bytes).
+Output written on Algoritmi_Strutture_Dati.pdf (74 pages, 3409543 bytes).
 PDF statistics:
- 1830 PDF objects out of 2073 (max. 8388607)
- 813 named destinations out of 1000 (max. 500000)
- 62483 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 1842 PDF objects out of 2073 (max. 8388607)
+ 818 named destinations out of 1000 (max. 500000)
+ 62488 words of extra memory for PDF output out of 74296 (max. 10000000)
 

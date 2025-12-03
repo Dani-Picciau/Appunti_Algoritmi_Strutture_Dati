@@ -1,9 +1,9 @@
 # Fdb version 4
-["pdflatex"] 1764713122.78844 "c:/Users/dany2/OneDrive/Desktop/UniSassari/Appunti_latex/Appunti_Algoritmi_Strutture_Dati/Appunti_Algoritmi_Strutture_Dati/Algoritmi_Strutture_Dati.tex" "Algoritmi_Strutture_Dati.pdf" "Algoritmi_Strutture_Dati" 1764713156.67721 0
-  "Algoritmi_Strutture_Dati.aux" 1764713154 16340 cc92319fb0cf7db4e57d6255aec81734 "pdflatex"
-  "Algoritmi_Strutture_Dati.out" 1764713154 13530 a883ab0a2756757bbc2dc40ad7763928 "pdflatex"
-  "Algoritmi_Strutture_Dati.tex" 1764713055 247234 5843122b7c66d4e72559b059533b30a8 ""
-  "Algoritmi_Strutture_Dati.toc" 1764713154 6654 7f69045125e724bede0e1e2532a4aeab "pdflatex"
+["pdflatex"] 1764724760.32478 "c:/Users/dany2/OneDrive/Desktop/UniSassari/Appunti_latex/Appunti_Algoritmi_Strutture_Dati/Appunti_Algoritmi_Strutture_Dati/Algoritmi_Strutture_Dati.tex" "Algoritmi_Strutture_Dati.pdf" "Algoritmi_Strutture_Dati" 1764724770.80579 0
+  "Algoritmi_Strutture_Dati.aux" 1764724770 16502 a63a31ec99b783372ba245ebdee765ff "pdflatex"
+  "Algoritmi_Strutture_Dati.out" 1764724770 13530 a883ab0a2756757bbc2dc40ad7763928 "pdflatex"
+  "Algoritmi_Strutture_Dati.tex" 1764724758 249523 8a724a3cf046d39648c76d1182dfb98c ""
+  "Algoritmi_Strutture_Dati.toc" 1764724770 6654 7f69045125e724bede0e1e2532a4aeab "pdflatex"
   "C:/Users/dany2/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1764353933 355098 b32ffb69abb1e38c6f26f993098ff5db ""
   "C:/Users/dany2/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1200.pk" 1746957877 14064 d501a728a59d2a2a724636a74772b6c1 ""
   "C:/Users/dany2/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1741519788 24225045 964e74cfa987bc36ee9014198c93c4ea ""
@@ -277,7 +277,7 @@
   "C:/Users/dany2/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/dany2/AppData/Local/Programs/MiKTeX/tex/latex/wrapfig/wrapfig.sty" 1044403200 26220 3701aebf80ccdef248c0c20dd062fea9 ""
   "C:/Users/dany2/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1700127522 55487 80a65caedd3722f4c20a14a69e785d8f ""
-  "c:/Users/dany2/OneDrive/Desktop/UniSassari/Appunti_latex/Appunti_Algoritmi_Strutture_Dati/Appunti_Algoritmi_Strutture_Dati/Algoritmi_Strutture_Dati.tex" 1764713055 247234 5843122b7c66d4e72559b059533b30a8 ""
+  "c:/Users/dany2/OneDrive/Desktop/UniSassari/Appunti_latex/Appunti_Algoritmi_Strutture_Dati/Appunti_Algoritmi_Strutture_Dati/Algoritmi_Strutture_Dati.tex" 1764724758 249523 8a724a3cf046d39648c76d1182dfb98c ""
   "figures/1_introduzione/img1.png" 1760604952 93493 46fc1652775bcddb9653b24b9df8eed5 ""
   "figures/1_introduzione/img10.png" 1760724594 79847 a24331bf8689ce6f4cf1a3b52a4aac4c ""
   "figures/1_introduzione/img11.png" 1760744672 8744 e8f229fcc08e316f904faeab9d0abacc ""
@@ -341,6 +341,7 @@
   "figures/tempo_e_modello_calcolo/img22.png" 1764712882 106040 cc60b823c8ca61da88b384d31979a6c6 ""
   "figures/tempo_e_modello_calcolo/img23.png" 1764712882 21917 ca9d480fb98d5bae2ba48fd46b1b2271 ""
   "figures/tempo_e_modello_calcolo/img24.png" 1764712882 35348 1eff8cb40b7f99d82c6df2e6ac9dd1c8 ""
+  "figures/tempo_e_modello_calcolo/img25.png" 1764723354 85677 49eb47df6541b2642a93f9105b501edb ""
   "figures/tempo_e_modello_calcolo/img3.png" 1763203996 9350 62b5bbb6b3f5bdc08e760c40914da5a6 ""
   "figures/tempo_e_modello_calcolo/img4.png" 1763205437 20578 d9e358b97f2df70b5652849cc125009a ""
   "figures/tempo_e_modello_calcolo/img5.png" 1763468707 42356 3dd557e660b77c8c80c2c74c35eeaa9d ""
