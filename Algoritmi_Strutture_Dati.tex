@@ -27,6 +27,14 @@
 \usepackage{amssymb}
 \usepackage{changepage}
 
+%Diego package
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\renewcommand{\thealgorithm}{}
+\floatname{algorithm}{}
+\usepackage{amsmath}
+\usepackage{mathtools}
+
 \usepackage[most]{tcolorbox}
 \usepackage{listings}
 \usepackage{xcolor}
@@ -62,7 +70,7 @@
     \begin{center}
         {\LARGE{Appunti Algoritmi e Strutture Di Dati}}\\
         \vspace{8pt}
-        \textit{\large{by Picciau Daniele}}
+        \textit{\large{by Manai Monica, Perazzona Diego, Picciau Daniele, Fiori Andrea}}
     \end{center}
 
     \section*{\hspace{15cm}Indice}
@@ -268,13 +276,13 @@
     \begin{figure}[H]
         \centering
         \vspace{-8pt}  % Riduce lo spazio sopra
-        \includegraphics[width=0.8\textwidth]{figures/1_introduzione/img1.png}    
+        \includegraphics[width=0.8\textwidth]{figures/introduzione/img1.png}    
         \vspace{-5pt}     
     \end{figure}
     \begin{figure}[H]
         \centering
         \vspace{-8pt}  % Riduce lo spazio sopra
-        \includegraphics[width=0.8\textwidth]{figures/1_introduzione/img2.png}    
+        \includegraphics[width=0.8\textwidth]{figures/introduzione/img2.png}    
         \vspace{-5pt}     
     \end{figure}
 
@@ -322,7 +330,7 @@ Result: [1, 2, 3]
         \addtocounter{figure}{1}
         \centering
         \vspace{-8pt}  % Riduce lo spazio sopra
-        \includegraphics[width=0.8\textwidth]{figures/1_introduzione/img3.png}    
+        \includegraphics[width=0.8\textwidth]{figures/introduzione/img3.png}    
         \vspace{-5pt}     
     \end{figure}
     \noindent
@@ -360,7 +368,7 @@ Result: ["banane", "pere"]
     \begin{figure}[H]
         \centering
         \vspace{-8pt}  % Riduce lo spazio sopra
-        \includegraphics[width=0.78\textwidth]{figures/1_introduzione/img4.png}    
+        \includegraphics[width=0.78\textwidth]{figures/introduzione/img4.png}    
         \vspace{-5pt}     
     \end{figure}
 
@@ -421,7 +429,7 @@ int main() {
     \raisebox{21pt}{  
         \begin{minipage}[t]{0.427\textwidth}
             \begin{figure}[H]
-                \includegraphics[width=0.65\linewidth]{figures/1_introduzione/img7.png}          
+                \includegraphics[width=0.65\linewidth]{figures/introduzione/img7.png}          
             \end{figure}
             L'output del programma è il seguente:\\
             $12$\\
@@ -461,7 +469,7 @@ int main() {
     \raisebox{20pt}{  
         \begin{minipage}[t]{0.468\textwidth}
             \begin{figure}[H]
-                \includegraphics[width=\linewidth]{figures/1_introduzione/img8.png}          
+                \includegraphics[width=\linewidth]{figures/introduzione/img8.png}          
             \end{figure}
         \end{minipage}   
     }
@@ -500,7 +508,7 @@ int main() {
     \raisebox{19pt}{  
         \begin{minipage}[t]{0.468\textwidth}
             \begin{figure}[H]
-                \includegraphics[width=\linewidth]{figures/1_introduzione/img9.png}          
+                \includegraphics[width=\linewidth]{figures/introduzione/img9.png}          
             \end{figure}
 
             \vspace{-12pt}
@@ -571,7 +579,7 @@ int main() {
     \begin{figure}[H]
         \centering
         \vspace{-15pt}  % Riduce lo spazio sopra
-        \includegraphics[width=0.85\textwidth]{figures/4_iterazione_ricorsione_induzione/img1.png}        
+        \includegraphics[width=0.85\textwidth]{figures/iterazione_induzione_ricorsione/img1.png}        
         \vspace{-15pt}  % Riduce lo spazio sopra
     \end{figure}
     In una dimostrazione induttiva, \textbf{ogni istanza dell'asserto $S(n)$ dipende solo dall'asserto sul valore che precede $n$}. Se l'induzione parte da $0$, per ogni intero $n$ si deve dimostrare un asserto $S(n)$:
@@ -618,7 +626,7 @@ int main() {
     \begin{figure}[H]
         \centering
         \vspace{-18pt}  % Riduce lo spazio sopra
-        \includegraphics[width=0.8\textwidth]{figures/4_iterazione_ricorsione_induzione/img2.png}        
+        \includegraphics[width=0.8\textwidth]{figures/iterazione_induzione_ricorsione/img2.png}        
         \vspace{-15pt}  % Riduce lo spazio sopra
     \end{figure}
 
@@ -786,7 +794,7 @@ x = f(x);   // f potrebbe non diminuire x!
     \vspace{-3pt}
     \noindent
     \begin{minipage}[t]{0.357\textwidth}  
-        \includegraphics[width=\linewidth]{figures/4_iterazione_ricorsione_induzione/img6.png}
+        \includegraphics[width=\linewidth]{figures/iterazione_induzione_ricorsione/img6.png}
     \end{minipage}%
     \hspace{5pt} % Spazio tra immagine e testo
     \raisebox{127pt}{  
@@ -817,7 +825,7 @@ x = f(x);   // f potrebbe non diminuire x!
     \vspace{5pt}
     \noindent
     \begin{minipage}[t]{0.275\textwidth}  
-        \includegraphics[width=\linewidth]{figures/4_iterazione_ricorsione_induzione/img7.png}
+        \includegraphics[width=\linewidth]{figures/iterazione_induzione_ricorsione/img7.png}
     \end{minipage}%
     \hspace{5pt} % Spazio tra immagine e testo
     \raisebox{230pt}{  
@@ -875,7 +883,7 @@ x = f(x);   // f potrebbe non diminuire x!
     \begin{figure}[H]
         \centering
         \vspace{-10pt}  % Riduce lo spazio sopra
-        \includegraphics[width=0.7\textwidth]{figures/4_iterazione_ricorsione_induzione/img5.png}        
+        \includegraphics[width=0.7\textwidth]{figures/iterazione_induzione_ricorsione/img5.png}        
         \vspace{-15pt}  % Riduce lo spazio sopra
     \end{figure}
 
@@ -898,11 +906,11 @@ x = f(x);   // f potrebbe non diminuire x!
         \centering
         \vspace{-5pt}  % Riduce lo spazio sopra
         \subfloat[]{%
-            \includegraphics[width=0.4\linewidth]{figures/4_iterazione_ricorsione_induzione/img3.png}
+            \includegraphics[width=0.4\linewidth]{figures/iterazione_induzione_ricorsione/img3.png}
         } 
         \hspace{1cm}
         \subfloat[]{%
-            \includegraphics[width=0.3\linewidth]{figures/4_iterazione_ricorsione_induzione/img4.png}
+            \includegraphics[width=0.3\linewidth]{figures/iterazione_induzione_ricorsione/img4.png}
         }
         \vspace{-15pt}  % Riduce lo spazio sotto
     \end{figure}
@@ -1030,7 +1038,7 @@ x = f(x);   // f potrebbe non diminuire x!
     \vspace{10pt}
     \noindent
     \begin{minipage}[t]{0.660\textwidth}  
-        \includegraphics[width=\linewidth]{figures/1_introduzione/img10.png}
+        \includegraphics[width=\linewidth]{figures/introduzione/img10.png}
     \end{minipage}%
     \hspace{5pt} % Spazio tra immagine e testo
     \raisebox{210pt}{  
@@ -1081,7 +1089,7 @@ struct slist *root = NULL;
     \raisebox{19pt}{  
         \begin{minipage}[t]{0.608\textwidth}
             \begin{figure}[H]
-                \includegraphics[width=\linewidth]{figures/1_introduzione/img11.png}          
+                \includegraphics[width=\linewidth]{figures/introduzione/img11.png}          
             \end{figure}
 
             \vspace{-12pt}
@@ -1122,7 +1130,7 @@ slist *insert(slist *p, int elem) {
     \begin{figure}[H]
         \centering
         \vspace{-5pt}  % Riduce lo spazio sopra
-        \includegraphics[width=0.8\textwidth]{figures/1_introduzione/img12.png}        
+        \includegraphics[width=0.8\textwidth]{figures/introduzione/img12.png}        
         \vspace{-15pt}  % Riduce lo spazio sopra
     \end{figure}
     \begin{itemize}[leftmargin=1em]
@@ -1182,7 +1190,7 @@ slist *insert2(slist *p, slist *q, int elem) {
     \begin{figure}[H]
         \centering
         \vspace{-5pt}  % Riduce lo spazio sopra
-        \includegraphics[width=0.9\textwidth]{figures/1_introduzione/img13.png}        
+        \includegraphics[width=0.9\textwidth]{figures/introduzione/img13.png}        
         \vspace{-15pt}  % Riduce lo spazio sopra
     \end{figure}
     \begin{itemize}[leftmargin=1em]
@@ -1261,7 +1269,7 @@ slist *delete(slist *p, slist *q) {
     \begin{figure}[H]
         \centering
         \vspace{-10pt}  % Riduce lo spazio sopra
-        \includegraphics[width=0.75\textwidth]{figures/1_introduzione/img14.png}        
+        \includegraphics[width=0.75\textwidth]{figures/introduzione/img14.png}        
         \vspace{-15pt}  % Riduce lo spazio sopra
     \end{figure}
     \begin{itemize}[leftmargin=1em]
@@ -1449,7 +1457,7 @@ return 0;
     \end{tcolorbox}
     \noindent    
     \begin{minipage}[t]{0.603\textwidth}  
-        \includegraphics[width=\linewidth]{figures/3_alberi/img1.png}
+        \includegraphics[width=\linewidth]{figures/alberi/img1.png}
     \end{minipage}%
     \hspace{5pt} % Spazio tra immagine e testo
     \raisebox{185pt}{  
@@ -1466,7 +1474,7 @@ return 0;
         \centering
         \addtocounter{figure}{15}
         \vspace{-10pt}  % Riduce lo spazio sopra
-        \includegraphics[width=\textwidth]{figures/3_alberi/img2.png}
+        \includegraphics[width=\textwidth]{figures/alberi/img2.png}
         \vspace{-20pt}  % Riduce lo spazio sopra
         \caption{Albero del file system linux}
         \label{fig:figura23}
@@ -1488,7 +1496,7 @@ return 0;
     \vspace{-2pt}
     \noindent
     \begin{minipage}[t]{0.603\textwidth}  
-        \includegraphics[width=\linewidth]{figures/3_alberi/img3.png}
+        \includegraphics[width=\linewidth]{figures/alberi/img3.png}
     \end{minipage}%
     \hspace{5pt} % Spazio tra immagine e testo
     \raisebox{127pt}{  
@@ -1515,7 +1523,7 @@ return 0;
     \end{tcolorbox}
     \noindent
     \begin{minipage}[t]{0.600\textwidth}  
-        \includegraphics[width=\linewidth]{figures/3_alberi/img4.png}
+        \includegraphics[width=\linewidth]{figures/alberi/img4.png}
     \end{minipage}%
     \hspace{5pt} % Spazio tra immagine e testo
     \raisebox{134pt}{  
@@ -1612,7 +1620,7 @@ int main(int argc, char *argv[]) {
     \end{lstlisting}
     \noindent
     \begin{minipage}[t]{0.327\textwidth}  
-        \includegraphics[width=\linewidth]{figures/3_alberi/img5.png}
+        \includegraphics[width=\linewidth]{figures/alberi/img5.png}
     \end{minipage}%
     \hspace{5pt} % Spazio tra immagine e testo
     \raisebox{165pt}{  
@@ -1688,11 +1696,11 @@ int main(int argc, char *argv[]) {
         \centering
         \vspace{-18pt}  % Riduce lo spazio sopra
         \subfloat[albero attraversato in preorder]{%
-            \includegraphics[width=0.42\textwidth]{figures/3_alberi/img6.png}%
+            \includegraphics[width=0.42\textwidth]{figures/alberi/img6.png}%
         }
         \hspace{2cm}
         \subfloat[Pseudocodice visita in preorder]{%
-            \includegraphics[width=0.35\textwidth]{figures/3_alberi/img7.png}%
+            \includegraphics[width=0.35\textwidth]{figures/alberi/img7.png}%
         }
         \vspace{-10pt}  % Riduce lo spazio sotto
     \end{figure}
@@ -1771,11 +1779,11 @@ int main(int argc, char *argv[]) {
         \centering
         \vspace{-18pt}  % Riduce lo spazio sopra
         \subfloat[albero attraversato in postorder]{%
-            \includegraphics[width=0.43\textwidth]{figures/3_alberi/img8.png}%
+            \includegraphics[width=0.43\textwidth]{figures/alberi/img8.png}%
         }
         \hspace{2cm}
         \subfloat[Pseudocodice visita in postorder]{%
-            \includegraphics[width=0.35\textwidth]{figures/3_alberi/img9.png}%
+            \includegraphics[width=0.35\textwidth]{figures/alberi/img9.png}%
         } 
         \vspace{-10pt}  % Riduce lo spazio sotto
     \end{figure}
@@ -1853,11 +1861,11 @@ int main(int argc, char *argv[]) {
         \centering
         \vspace{-18pt}  % Riduce lo spazio sopra
         \subfloat[albero attraversato inorder]{%
-            \includegraphics[width=0.44\textwidth]{figures/3_alberi/img10.png}%
+            \includegraphics[width=0.44\textwidth]{figures/alberi/img10.png}%
         }
         \hspace{2cm}
         \subfloat[Pseudocodice visita inorder]{%
-            \includegraphics[width=0.35\textwidth]{figures/3_alberi/img11.png}%
+            \includegraphics[width=0.35\textwidth]{figures/alberi/img11.png}%
         } 
         \vspace{-10pt}  % Riduce lo spazio sotto
     \end{figure}
@@ -2054,7 +2062,7 @@ int main(int argc, char *argv[]) {
     \vspace{2pt}
     \noindent
     \begin{minipage}[t]{0.700\textwidth}  
-        \includegraphics[width=\linewidth]{figures/3_alberi/img12.png}
+        \includegraphics[width=\linewidth]{figures/alberi/img12.png}
         *=Si assume che l'elemento sia già stato trovato, altrimenti $O(n)$
     \end{minipage}%
     \hspace{5pt} % Spazio tra immagine e testo
@@ -2123,7 +2131,7 @@ int main(int argc, char *argv[]) {
     \end{tcolorbox}
     \noindent
     \begin{minipage}[t]{0.315\textwidth}  
-        \includegraphics[width=\linewidth]{figures/3_alberi/img13.png}
+        \includegraphics[width=\linewidth]{figures/alberi/img13.png}
     \end{minipage}%
     \hspace{5pt} % Spazio tra immagine e testo
     \raisebox{125pt}{  
@@ -2191,7 +2199,7 @@ bstree *search(bstree *p, int x) {
             \end{figure}
 
             \vspace{-19pt}
-            \includegraphics[width=\linewidth]{figures/3_alberi/img14.png}
+            \includegraphics[width=\linewidth]{figures/alberi/img14.png}
         \end{minipage}%
         \hspace{5pt} % Spazio tra immagine e testo
         \raisebox{-15pt}{  
@@ -2331,7 +2339,7 @@ bstree *insert(bstree *p, int x){
             \end{figure}
 
             \vspace{-19pt}
-            \includegraphics[width=\linewidth]{figures/3_alberi/img15.png}
+            \includegraphics[width=\linewidth]{figures/alberi/img15.png}
         \end{minipage}%
         \hspace{5pt} % Spazio tra immagine e testo
         \raisebox{0pt}{  
@@ -2424,7 +2432,7 @@ int main(int argc, char *argv[]) {
     Ancora una volta la logica dicotomica con la quale vengono creati gli alberi binari torna utile per la ricerca del nodo dell'albero con valore di chiave massimo o minimo.\\
     Partendo dalla radice, per trovare il \textbf{nodo minimo} va ispezionato sempre il \textbf{lato sinistro dell'albero binario}, mentre per trovare il \textbf{nodo massimo} va ispezionato \textbf{lato destro} dell'albero.\\
     \begin{minipage}[t]{0.300\textwidth}  
-        \includegraphics[width=\linewidth]{figures/3_alberi/img16.png}
+        \includegraphics[width=\linewidth]{figures/alberi/img16.png}
     \end{minipage}%
     \hspace{5pt} % Spazio tra immagine e testo
     \raisebox{215pt}{  
@@ -2548,7 +2556,7 @@ int main(int argc, char *argv[]) {
         \end{figure}
 
         \vspace{-20pt}
-        \includegraphics[width=\linewidth]{figures/3_alberi/img17.png}
+        \includegraphics[width=\linewidth]{figures/alberi/img17.png}
     \end{minipage}%
     \hspace{5pt} % Spazio tra immagine e testo
     \raisebox{0pt}{  
@@ -2689,11 +2697,11 @@ int main(int argc, char *argv[]) {
         \centering
         \vspace{-12pt}  % Riduce lo spazio sopra
         \subfloat[\textit{Caso 1 - nessun figlio}]{%
-            \includegraphics[width=0.46\textwidth]{figures/3_alberi/img18.png}%
+            \includegraphics[width=0.46\textwidth]{figures/alberi/img18.png}%
         }
         \hspace{1cm}
         \subfloat[\textit{Caso 2 - un solo figlio}]{%
-            \includegraphics[width=0.465\textwidth]{figures/3_alberi/img19.png}%
+            \includegraphics[width=0.465\textwidth]{figures/alberi/img19.png}%
         } 
         \vspace{-10pt}  % Riduce lo spazio sotto
     \end{figure}
@@ -2710,7 +2718,7 @@ int main(int argc, char *argv[]) {
             \end{figure}
 
             \vspace{-20pt}
-            \includegraphics[width=\linewidth]{figures/3_alberi/img20.png}
+            \includegraphics[width=\linewidth]{figures/alberi/img20.png}
         \end{minipage}%
         \hspace{5pt} % Spazio tra immagine e testo
         \raisebox{0pt}{  
@@ -2837,7 +2845,7 @@ int main(int argc, char *argv[]) {
     \end{tcolorbox}
     \noindent
     \begin{minipage}[t]{0.195\textwidth}  
-        \includegraphics[width=\linewidth]{figures/3_alberi/img21.png}
+        \includegraphics[width=\linewidth]{figures/alberi/img21.png}
     \end{minipage}%
     \hspace{5pt} % Spazio tra immagine e testo
     \raisebox{127pt}{  
@@ -2861,7 +2869,7 @@ int main(int argc, char *argv[]) {
     \end{tcolorbox}
     \noindent
     \begin{minipage}[t]{0.257\textwidth}  
-        \includegraphics[width=\linewidth]{figures/3_alberi/img22.png}
+        \includegraphics[width=\linewidth]{figures/alberi/img22.png}
     \end{minipage}%
     \hspace{5pt} % Spazio tra immagine e testo
     \raisebox{79pt}{  
@@ -2915,7 +2923,7 @@ int main(int argc, char *argv[]) {
         \vspace{-8pt}
         \begin{minipage}[t]{0.550\textwidth} 
             \vspace{2pt}
-            \includegraphics[width=\linewidth]{figures/3_alberi/img23.png}
+            \includegraphics[width=\linewidth]{figures/alberi/img23.png}
         \end{minipage}%
         \hspace{5pt} % Spazio tra immagine e testo
         \raisebox{-8pt}{  
@@ -2930,7 +2938,7 @@ int main(int argc, char *argv[]) {
         \vspace{-10pt}
         \begin{minipage}[t]{0.550\textwidth} 
             \vspace{2pt}
-            \includegraphics[width=\linewidth]{figures/3_alberi/img24.png}
+            \includegraphics[width=\linewidth]{figures/alberi/img24.png}
         \end{minipage}%
         \hspace{5pt} % Spazio tra immagine e testo
         \raisebox{-10pt}{  
@@ -2944,7 +2952,7 @@ int main(int argc, char *argv[]) {
         \begin{figure}[H]
             \centering
             \vspace{-10pt}  % Riduce lo spazio sopra
-            \includegraphics[width=0.9\textwidth]{figures/3_alberi/img25.png}
+            \includegraphics[width=0.9\textwidth]{figures/alberi/img25.png}
             \vspace{-16pt}  % Riduce lo spazio sopra
         \end{figure}
         Il fattore di bilanciamento in questo caso è $ > 1$. In questo caso il sottoalbero presenta una \textbf{forma a "zig-zag"} che, per essere bilanciata, necessita di una \textbf{doppia rotazione}: 
@@ -2959,7 +2967,7 @@ int main(int argc, char *argv[]) {
         \begin{figure}[H]
             \centering
             \vspace{-10pt}  % Riduce lo spazio sopra
-            \includegraphics[width=0.9\textwidth]{figures/3_alberi/img26.png}
+            \includegraphics[width=0.9\textwidth]{figures/alberi/img26.png}
             \vspace{-16pt}  % Riduce lo spazio sopra
         \end{figure}
         Presenta fattore di bilanciamento $ < -1$, e una forma a "zig-zag" che necessita di una doppia rotazione, in questo caso in senso inverso rispetto alla precedente: 
@@ -3015,7 +3023,7 @@ bstree * rotateright(bstree *x) {
     \begin{figure}[H]
         \centering
         \vspace{-10pt}  % Riduce lo spazio sopra
-        \includegraphics[width=0.8\textwidth]{figures/3_alberi/img27.png}
+        \includegraphics[width=0.8\textwidth]{figures/alberi/img27.png}
         \vspace{-16pt}  % Riduce lo spazio sopra
     \end{figure}
 
@@ -3160,7 +3168,7 @@ bstree * rotateright(bstree *x) {
     \begin{figure}[H]
         \centering
         \vspace{-10pt}  % Riduce lo spazio sopra
-        \includegraphics[width=\textwidth]{figures/tempo_e_modello_calcolo/img1.png}
+        \includegraphics[width=\textwidth]{figures/complessita_algoritmi/img1.png}
         \vspace{-30pt}  % Riduce lo spazio sopra 
     \end{figure}
     \textbf{\textit{N.B}}: per quanto riguarda il ciclo for, è giusto scrivere che viene eseguito $n$ volte, poiché anche la $n-1$esima volta la riga viene eseguita prima di capire che la condizione non è rispettata. Infatti come si può notare, le istruzioni al suo interno vengono eseguite $n-1$ volte.
@@ -3194,7 +3202,7 @@ bstree * rotateright(bstree *x) {
     \begin{figure}[H]
         \centering
         \vspace{-10pt}  % Riduce lo spazio sopra
-        \includegraphics[width=\textwidth]{figures/tempo_e_modello_calcolo/img2.png}
+        \includegraphics[width=\textwidth]{figures/complessita_algoritmi/img2.png}
         \vspace{-30pt}  % Riduce lo spazio sopra 
     \end{figure}
     \noindent
@@ -3209,7 +3217,7 @@ bstree * rotateright(bstree *x) {
         \vspace{-10pt}
         \begin{minipage}[t]{0.550\textwidth} 
             \vspace{2pt}
-            \includegraphics[width=\linewidth]{figures/tempo_e_modello_calcolo/img3.png}
+            \includegraphics[width=\linewidth]{figures/complessita_algoritmi/img3.png}
         \end{minipage}%
         \hspace{5pt} % Spazio tra immagine e testo
         \raisebox{-10pt}{  
@@ -3219,7 +3227,7 @@ bstree * rotateright(bstree *x) {
         }
         \begin{minipage}[t]{0.550\textwidth} 
             \vspace{2pt}
-            \includegraphics[width=\linewidth]{figures/tempo_e_modello_calcolo/img4.png}
+            \includegraphics[width=\linewidth]{figures/complessita_algoritmi/img4.png}
         \end{minipage}%
         \hspace{5pt} % Spazio tra immagine e testo
         \raisebox{-10pt}{  
@@ -3299,11 +3307,11 @@ bstree * rotateright(bstree *x) {
         \centering
         \vspace{-5pt}  % Riduce lo spazio sopra
         \subfloat[]{%
-            \includegraphics[width=0.58\linewidth]{figures/tempo_e_modello_calcolo/img5.png}
+            \includegraphics[width=0.58\linewidth]{figures/complessita_algoritmi/img5.png}
         } 
         \hspace{0.1cm}
         \subfloat[]{%
-            \includegraphics[width=0.38\linewidth]{figures/tempo_e_modello_calcolo/img9.png}
+            \includegraphics[width=0.38\linewidth]{figures/complessita_algoritmi/img9.png}
         }
     \end{figure}
     \FloatBarrier
@@ -3371,15 +3379,15 @@ bstree * rotateright(bstree *x) {
         \centering
         \vspace{-5pt}  % Riduce lo spazio sopra
         \subfloat[Notazione $O$ grande]{%
-            \includegraphics[width=0.31\linewidth]{figures/tempo_e_modello_calcolo/img6.png}
+            \includegraphics[width=0.31\linewidth]{figures/complessita_algoritmi/img6.png}
         } 
         \hspace{0.1cm}
         \subfloat[Notazione $\Omega$ grande]{%
-            \includegraphics[width=0.31\linewidth]{figures/tempo_e_modello_calcolo/img7.png}
+            \includegraphics[width=0.31\linewidth]{figures/complessita_algoritmi/img7.png}
         }
         \hspace{0.1cm}
         \subfloat[Notazione $\Theta$ grande]{%
-            \includegraphics[width=0.31\linewidth]{figures/tempo_e_modello_calcolo/img8.png}
+            \includegraphics[width=0.31\linewidth]{figures/complessita_algoritmi/img8.png}
         }
         \vspace{-15pt}  % Riduce lo spazio sotto
     \end{figure}
@@ -3442,6 +3450,7 @@ bstree * rotateright(bstree *x) {
     \end{tcolorbox}
     
     \subsubsection{Metodo dell'esperto}
+    \label{par:Metodo dell'esperto}
     \begin{tcolorbox}[
         colback=yellow!20, 
         colframe=darkgray, 
@@ -3528,7 +3537,7 @@ bstree * rotateright(bstree *x) {
     \end{itemize}
     \begin{minipage}[t]{0.550\textwidth} 
         \vspace{2pt}
-        \includegraphics[width=\linewidth]{figures/tempo_e_modello_calcolo/img10.png}
+        \includegraphics[width=\linewidth]{figures/complessita_algoritmi/img10.png}
     \end{minipage}%
     \hspace{5pt} % Spazio tra immagine e testo
     \raisebox{-10pt}{  
@@ -3640,11 +3649,11 @@ bstree * rotateright(bstree *x) {
         \centering
         \vspace{-5pt}  % Riduce lo spazio sopra
         \subfloat[]{%
-            \includegraphics[width=0.495\linewidth]{figures/tempo_e_modello_calcolo/img11.png}
+            \includegraphics[width=0.495\linewidth]{figures/complessita_algoritmi/img11.png}
         } 
         \hspace{0.1cm}
         \subfloat[]{%
-            \includegraphics[width=0.40\linewidth]{figures/tempo_e_modello_calcolo/img12.png}
+            \includegraphics[width=0.40\linewidth]{figures/complessita_algoritmi/img12.png}
         }
     \end{figure}
     \FloatBarrier
@@ -3689,7 +3698,7 @@ bstree * rotateright(bstree *x) {
 
     \noindent
     \begin{minipage}[t]{0.540\textwidth} 
-        \includegraphics[width=\linewidth]{figures/tempo_e_modello_calcolo/img16.png}
+        \includegraphics[width=\linewidth]{figures/complessita_algoritmi/img16.png}
     \end{minipage}%
     \hspace{5pt} % Spazio tra immagine e testo
     \raisebox{177pt}{  
@@ -3710,15 +3719,15 @@ bstree * rotateright(bstree *x) {
         \centering
         \vspace{-5pt}  % Riduce lo spazio sopra
         \subfloat[]{%
-            \includegraphics[width=0.41\linewidth]{figures/tempo_e_modello_calcolo/img13.png}
+            \includegraphics[width=0.41\linewidth]{figures/complessita_algoritmi/img13.png}
         } 
         \hspace{1cm}
         \subfloat[]{%
-            \includegraphics[width=0.41\linewidth]{figures/tempo_e_modello_calcolo/img14.png}
+            \includegraphics[width=0.41\linewidth]{figures/complessita_algoritmi/img14.png}
         }
         \hspace{1cm}
         \subfloat[]{%
-            \includegraphics[width=0.41\linewidth]{figures/tempo_e_modello_calcolo/img15.png}
+            \includegraphics[width=0.41\linewidth]{figures/complessita_algoritmi/img15.png}
         }
     \end{figure}
     \FloatBarrier
@@ -3765,11 +3774,11 @@ bstree * rotateright(bstree *x) {
         \centering
         \vspace{-5pt}  % Riduce lo spazio sopra
         \subfloat[Partizionamento dei dati]{%
-            \includegraphics[width=0.47\linewidth]{figures/tempo_e_modello_calcolo/img17.png}
+            \includegraphics[width=0.47\linewidth]{figures/complessita_algoritmi/img17.png}
         } 
         \hspace{0.1cm}
         \subfloat[Fusione dei dati]{%
-            \includegraphics[width=0.47\linewidth]{figures/tempo_e_modello_calcolo/img18.png}
+            \includegraphics[width=0.47\linewidth]{figures/complessita_algoritmi/img18.png}
         }
     \end{figure}
     \FloatBarrier
@@ -3777,7 +3786,7 @@ bstree * rotateright(bstree *x) {
     \vspace{-10pt}
     \noindent
     \begin{minipage}[t]{0.500\textwidth} 
-        \includegraphics[width=\linewidth]{figures/tempo_e_modello_calcolo/img20.png}
+        \includegraphics[width=\linewidth]{figures/complessita_algoritmi/img20.png}
     \end{minipage}%
     \hspace{5pt} % Spazio tra immagine e testo
     \raisebox{95pt}{  
@@ -3821,9 +3830,9 @@ bstree * rotateright(bstree *x) {
     \noindent
     Nello specifico, una generica operazione di \texttt{merge()} funziona in questo modo:\\
     \begin{minipage}[t]{0.560\textwidth} 
-        \includegraphics[width=\linewidth]{figures/tempo_e_modello_calcolo/img23.png}
-        \includegraphics[width=\linewidth]{figures/tempo_e_modello_calcolo/img21.png}
-        \includegraphics[width=\linewidth]{figures/tempo_e_modello_calcolo/img22.png}
+        \includegraphics[width=\linewidth]{figures/complessita_algoritmi/img23.png}
+        \includegraphics[width=\linewidth]{figures/complessita_algoritmi/img21.png}
+        \includegraphics[width=\linewidth]{figures/complessita_algoritmi/img22.png}
     \end{minipage}%
     \hspace{5pt} % Spazio tra immagine e testo
     \raisebox{18pt}{  
@@ -3861,7 +3870,7 @@ bstree * rotateright(bstree *x) {
         \caption{Pseudocodice della funzione \texttt{merge()}}
         \label{fig:figure67}
         \vspace{-10pt}  % Riduce lo spazio sopra
-        \includegraphics[width=0.9\textwidth]{figures/tempo_e_modello_calcolo/img19.png}
+        \includegraphics[width=0.9\textwidth]{figures/complessita_algoritmi/img19.png}
         \vspace{-5pt}  % Riduce lo spazio sopra 
     \end{figure}
     \noindent
@@ -3871,7 +3880,7 @@ bstree * rotateright(bstree *x) {
     \vspace{2pt}
     \noindent 
     \begin{minipage}[t]{0.560\textwidth} 
-         \includegraphics[width=\textwidth]{figures/tempo_e_modello_calcolo/img24.png}
+         \includegraphics[width=\textwidth]{figures/complessita_algoritmi/img24.png}
     \end{minipage}%
     \hspace{5pt} % Spazio tra immagine e testo
     \raisebox{66pt}{  
@@ -3920,16 +3929,475 @@ bstree * rotateright(bstree *x) {
 
     \vspace{8pt}
     \noindent
-    Dopo aver ottenuto l'equazione del costo dell'algoritmo, per trovare la complessità possiamo approfittare del fatto che \texttt{mergeSort()} sia un algoritmo ricorsivo e utilizzare il \textbf{metodo dell'albero di ricorsione} visto al capitolo \ref{par:Metodo dell'albero di ricorsione (analisi per livelli)}.
+    Dopo aver ottenuto l'equazione del costo dell'algoritmo, per \textbf{trovare la complessità}, possiamo approfittare del fatto che \texttt{mergeSort()} sia un algoritmo ricorsivo e utilizzare il \textbf{metodo dell'albero di ricorsione} visto al capitolo \ref{par:Metodo dell'albero di ricorsione (analisi per livelli)}.
     \begin{figure}[H]
         \centering
         \vspace{-10pt}  % Riduce lo spazio sopra
-        \includegraphics[width=0.9\textwidth]{figures/tempo_e_modello_calcolo/img25.png}
-        \vspace{-5pt}  % Riduce lo spazio sopra 
+        \includegraphics[width=0.9\textwidth]{figures/complessita_algoritmi/img25.png}
+        \vspace{-15pt}  % Riduce lo spazio sopra 
     \end{figure}
     \noindent
     Dunque, il \textbf{costo complessivo} di ciascun livello dell'albero è sempre $n$, perché il costo del \texttt{merge()} rimane costante per qualsiasi coppia di sottovettori.\\
     Invece, $2T(n/2)$ è il costo per la chiamata ricorsiva che genera $2$ sottovettori di dimensione $n/2$ ogni volta che viene richiamata fino ad ottenere i singoli valori.\\
-    \textbf{Il numero di sottovettori cresce esponenzialmente} ($2^i$), ma allo stesso momento la loro dimensione cala esponenzialmente ($n/2^i$) e il costo totale di ogni \texttt{merge()} costante ($n$).
+    \textbf{Il numero di sottovettori cresce esponenzialmente} ($2^i$), ma allo stesso momento la loro dimensione cala esponenzialmente ($n/2^i$) e il costo totale di ogni \texttt{merge()} è costante $O(n)$.
     Dunque, la ricorrenza ha complessità $O(n\;log\;n)$.
+
+    \vspace{8pt}
+    \noindent
+    Se invece si volesse utilizzare il \textbf{metodo dell'esperto} visto al capitolo \ref{par:Metodo dell'esperto}, ricordando la formula generale $T(n)= aT(n/b) + cn^\beta$, applicata a $T(n) = 2T(n/2) + O(n)$, si avrà:
+    \begin{itemize}[leftmargin=1em]
+        \item $a=2$, $b=2$
+        \item $\alpha=log\;2/log\;2=1$
+        \item $\beta=1$
+    \end{itemize}
+    Quindi $\alpha=\beta$ e si ricade nel caso $2$: $T(n)=\Theta(n^\alpha\cdot log\;n)=\Theta(n\cdot log\;n)$
+
+
+
+    
+    \newpage
+    \section{Divide-et-impera}
+
+    \subsection{Risoluzione problemi}
+    Dato un problema, non si hanno metodi generali per risolverlo in modo efficiente, tuttavia è possibile evidenziare 4 fasi:
+    \begin{enumerate}[leftmargin=1em]
+        \item Classificazione del problema;
+        \item Caratterizzazione della soluzione;
+        \item Tecnica di progetto;
+        \item Utilizzo di strutture dati.
+    \end{enumerate}
+    \noindent Queste fasi non sono necessariamente sequenziali.
+
+    \subsubsection{Classificazione dei problemi}
+    \paragraph{Problemi decisionali}
+    Il dato in ingresso soddisfa una certa proprietà? \textbf{Soluzione}: risposta si/no. Un problema di esempio può essere stabilire se un grafo è connesso.
+
+    \subsubsection*{Problemi di ricerca}
+    Problemi in cui si ha:
+    \begin{itemize}[leftmargin=1em]
+        \item \textbf{Spazio di ricerca:} insieme di "soluzioni" possibili;
+        \item \textbf{Soluzione ammissibile:} soluzione che rispetta certi vincoli;
+    \end{itemize}
+    Ad esempio la posizione di una sotto-stringa in una stringa.
+
+    \subsubsection*{Problemi di ottimizzazione}
+    Problemi in cui ogni soluzione è associata ad una funzione di costo e si vuole la soluzione di costo minimo. ad esempio il cammino più breve tra due nodi (grafi pesati).
+
+    \subsubsection{Definizione matematica del problema}
+    Una cosa fondamentale da fare è definire bene il problema in modo formale. Spesso la formulazione è banale, ma può suggerire una prima idea di soluzione. Ad esempio, data una sequenza di \textit{n} elementi, una permutazione ordinata è data dal minimo seguito da una permutazione ordinata degli \textit{n - 1} elementi (Selection Sort).
+    La definizione matematica del problema può suggerire una possibile tecnica di soluzione.\\
+    \textbf{Sottostruttura ottima} $\rightarrow$ Programmazione dinamica;\\
+    \textbf{Proprietà greedy} $\rightarrow$ Tecnica greedy;
+
+    \subsubsection{Tecnica di soluzione dei problemi}
+    \begin{tcolorbox}[
+        colback=yellow!20, 
+        colframe=darkgray, 
+        title=Divide-et-impera
+        ]
+        Un problema viene suddiviso in sotto-problemi indipendenti, che vengono risolti ricorsivamente (top-down).\\
+        Ambito: problemi di decisione, ricerca.
+    \end{tcolorbox}
+    \begin{tcolorbox}
+        [
+            colback=green!10,  % Sfondo verde chiaro
+            colframe=green!60!black,  % Bordo verde più acceso
+            coltitle=black,  % Colore del testo del titolo
+            fonttitle=\bfseries,  % Testo del titolo in grassetto
+            title={\centering \textbf{Top-down}},  % Titolo centrato 
+            enhanced,  % Miglioramenti grafici
+            attach boxed title to top center={yshift=-2mm},  % Posiziona il titolo centrato in alto
+            boxed title style={colback=white, colframe=green!60!black, rounded corners}
+        ]
+        La strategia top-down è una strategia in cui un problema viene diviso in parti sempre più piccole fino a che non si ottengono componenti semplici da implementare.\\
+        Top-down è diverso da divide-et-impera, dato che quest'ultimo fa uso di top-down, che è una strategia di progettazione, mentre divide-et-impera è una tecnica algoritmica specifica con una struttura ben definita.
+    \end{tcolorbox}
+    \begin{tcolorbox}[
+        colback=yellow!20, 
+        colframe=darkgray, 
+        title=Programmazione dinamica
+        ]
+        La soluzione viene costituita (bottom-up) a partire da un insieme di sotto-problemi potenzialmente ripetuti.\\
+        Ambito: problemi di ottimizzazione.
+    \end{tcolorbox}
+    \begin{tcolorbox}
+        [
+            colback=green!10,  % Sfondo verde chiaro
+            colframe=green!60!black,  % Bordo verde più acceso
+            coltitle=black,  % Colore del testo del titolo
+            fonttitle=\bfseries,  % Testo del titolo in grassetto
+            title={\centering \textbf{Bottom-up}},  % Titolo centrato 
+            enhanced,  % Miglioramenti grafici
+            attach boxed title to top center={yshift=-2mm},  % Posiziona il titolo centrato in alto
+            boxed title style={colback=white, colframe=green!60!black, rounded corners}
+        ]
+        Bottom-up, al contrario di top-down, parte da componenti più piccole e riutilizzabili e le combina per ottenere funzionalità più complesse fino ad ottenere un intero sistema.\\
+        Come funziona:
+        \begin{enumerate}
+            \item Si implementano piccole parti indipendenti;
+            \item Le si mettono insieme per formare parti più grandi;
+            \item Si continuano a comporre finché non si ottiene l'algoritmo/programma completo.
+        \end{enumerate}
+    \end{tcolorbox}
+    \begin{tcolorbox}[
+        colback=yellow!20, 
+        colframe=darkgray, 
+        title=Memoization (o annotazione)
+        ]
+        Versione top-down della programmazione dinamica.
+    \end{tcolorbox}
+    \begin{tcolorbox}[
+        colback=yellow!20, 
+        colframe=darkgray, 
+        title=Memoization (o annotazione)
+        ]
+        Versione top-down della programmazione dinamica.
+    \end{tcolorbox}
+    \begin{tcolorbox}[
+        colback=yellow!20, 
+        colframe=darkgray, 
+        title=Tecnica greedy
+        ]
+        Approccio "ingordo": si fa sempre la scelta localmente ottima.
+    \end{tcolorbox}
+    \begin{tcolorbox}[
+        colback=yellow!20, 
+        colframe=darkgray, 
+        title=Backtrack
+        ]
+        Si procede per "tentativi" e si torna di tanto in tanto sui propri passi.
+    \end{tcolorbox}
+    \begin{tcolorbox}[
+        colback=yellow!20, 
+        colframe=darkgray, 
+        title=Ricerca locale
+        ]
+        La soluzione ottima viene trovata "migliorando" via via soluzioni esistenti.
+    \end{tcolorbox}
+    \begin{tcolorbox}[
+        colback=yellow!20, 
+        colframe=darkgray, 
+        title=Algoritmi probabilistici
+        ]
+        Meglio scegliere con giudizio (in maniera costosa) o scegliere a caso "gratuitamente".
+    \end{tcolorbox}
+
+    \subsection{Divide-et-impera}
+    Questa tecnica, applicata alla risoluzione di un problema computazionale, consiste nel partizionare il problema in sotto-problemi più piccoli dello stesso tipo e indipendenti, risolverli ricorsivamente, e successivamente ricombinare, con poco sforzo, le soluzioni parziali per ottenere la soluzione del problema originale.\\
+    Lo "schema" di una procedura ricorsiva \texttt{divideEtImpera()} per risolvere un problema di \textit{P} di dimensione \textit{n} è il seguente, dove \textit{k} è una costante intera prefissata:
+
+
+    \begin{algorithm}
+    \caption{divideEtImpera(\textit{P}, \textbf{integer} \textit{n})}
+    \begin{algorithmic}
+        \If{$n \le k$}
+            \State risolvi $P$ direttamente
+        \Else
+            \State dividi $P$ in $h$ sottoproblemi $P_1,...,P_h$ di dimensione $n_1,...,n_h$
+            \State \textbf{for} i $\leftarrow$ 1 \textbf{to} $h$ \textbf{do} divideEtImpera($P_i$,$n_i$)
+            \State combina i risultati di $P_1,...,P_h$ per ottenere quello di $P$
+        \EndIf
+    \end{algorithmic}
+    \end{algorithm}
+
+    \noindent La tecnica \textit{divide-et-impera} permette di provare agevolmente la correttezza dell'algoritmo usando il principio di induzione e di impostarne facilmente le relazioni ricorrenti della funzione \textit{T(n)} di complessità:
+    
+    \[
+        T(n)=
+        \begin{aligned}
+        \begin{cases}
+        c, \qquad n\le k\\
+        D(n)+C(n)+\sum_{i=1}^{h}T(n_i),\quad n>k
+        \end{cases}
+        \end{aligned}
+        \]
+        
+    \noindent dove c è una costante, \textit{D(n)} è il numero di operazioni per dividere il problema e \textit{C(n)} è il numero di operazioni per combinare i risultati.
+        \begin{tcolorbox}[
+            colback=yellow!20, 
+            colframe=darkgray, 
+            title=Nota
+            ]
+            Se i dati sono partizionati in maniera bilanciata, cioè tutti gli $n_i$ sono all'incirca uguali, allora l'algoritmo può risultare molto efficiente.
+        \end{tcolorbox}
+    
+    \subsection{Minimo: Divide-et-impera}
+    Si applichi ora il metodo divide-et-impera a un problema di ricerca del valore minimo in un array \textit{A}:
+    \begin{algorithm}
+    \caption{\textbf{int} minrec(\textbf{int}[] A, \textbf{int} i, \textbf{int} j)}
+    \begin{algorithmic}
+        \If{$i  == j$}
+            \State \textbf{return} A[i]
+        \Else
+            \State m=$\lfloor(i+j)/2\rfloor$
+            \State \textbf{return} min(minrec(A,i,m), minrec(A, m+1, j)
+        \EndIf
+    \end{algorithmic}
+    \end{algorithm}
+
+    \begin{tcolorbox}
+        [
+            colback=green!10,  % Sfondo verde chiaro
+            colframe=green!60!black,  % Bordo verde più acceso
+            coltitle=black,  % Colore del testo del titolo
+            fonttitle=\bfseries,  % Testo del titolo in grassetto
+            title={parte intera inferiore e parte intera superiore},  % Titolo centrato 
+            enhanced,  % Miglioramenti grafici
+            attach boxed title to top center={yshift=-2mm},  % Posiziona il titolo centrato in alto
+            boxed title style={colback=white, colframe=green!60!black, rounded corners}
+        ]
+            $\lfloor{x}\rfloor$ rappresenta la parte intera inferiore, spesso chiamata "floor", ovvero se si ha un numero reale esso, se seguito da virgola, viene approssimato per difetto, ad esempio: $\lfloor{3,9}\rfloor=3$.\\
+            Mentre, al contrario $\lceil{x}\rceil$ rappresenta la parte intera superiore, detta "ceiling", e si approssima per eccesso, ad esempio: $\lfloor{3,1}\rfloor=4$.
+    \end{tcolorbox}
+
+    \noindent Nell'algoritmo avviene che viene preso un valore medio della posizione dell'array \textit{A}, con \textit{i} che indica l'inizio di \textit{A} e \textit{j} che ne indica la fine, \textit{m} è quindi l'indice che indica la metà dell'array.
+    Ogni volta viene richiamata la funzione fino a quando non si arriva ad avere un singolo elemento nell'array, ovvero la condizione dell'"if".\\
+    L'array viene quindi diviso in tanti piccoli pezzi per trovare il minimo avendo una complessità:
+    \[
+        T(n)=
+        \begin{aligned}
+        \begin{cases}
+        2T(n/2)+1, \quad n>1\\
+        1,\quad n=1
+        \end{cases}
+        \end{aligned}
+        \]
+
+    \noindent Analizzando la complessità dell'algoritmo, quindi, si ha un caso base, quando l'array contiene un solo elemento e quindi il costo risulta costante, perché basta restituire quell'elemento, ma nel caso ricorsivo con \textit{n} elementi il costo è dato da $2T(n/2)$, ovvero due chiamate ricorsive, ciascuna su metà dell'input $(n/2)$ e $+1$ che rappresenta il costo costante delle operazioni di divisione (ovvero il calcolo di \textit{m}) e di combinazione (confronto finale tra i due minimi).\\
+    Risulta che l'algoritmo divide-et-impera non è conveniente.
+    
+    \newpage
+    
+    \subsection{Esempio binary search}
+    \begin{algorithm}
+    \caption{\textbf{int} binarySearch(\textbf{int}[] $S$, \textbf{int} $v$, \textbf{int} $i$, \textbf{int} $j$)}
+    \begin{algorithmic}
+        \If{$i > j$}
+            \State \textbf{return} 0
+        \Else
+            \State $m = \lfloor(i+j)/2\rfloor$
+            \If{$S[m] == v$}
+                \State \textbf{return} $m$
+            \ElsIf{$S[m] < v$}  % Nota l'uso di \ElsIf per allineare correttamente
+                \State \textbf{return} binarySearch($S, v, m+1, j$)
+            \Else
+                \State \textbf{return} binarySearch($S, v, i, m-1$)
+            \EndIf
+        \EndIf
+    \end{algorithmic}
+    \end{algorithm}
+
+    \noindent La procedura binary search è un particolare tipo di divide-et-impera. Il problema viene suddiviso in 2 sottoproblemi (h=2) approssimativamente uguali, mentre i costi $C(n)$ e $D(n)$ sono costanti. La particolarità sta nel fatto che la chiamata ricorsiva avviene in solo uno dei due sottoproblemi, invece che su entrambi.\\
+    Si può considerare un esempio "semplificato" di divide-et-impera, ma permette di enunciare una regola importante in questi casi: \textbf{se non tutti i sottoproblemi devono essere analizzati, è buona norma affrontare ricorsivamente i problemi più piccoli possibili}.\\
+    La complessità della ricerca può essere ulteriormente abbassata tenendo conto dei valori delle chiavi memorizzate nel vettore e della loro \textbf{distribuzione di probabilità}.
+
+    \subsubsection*{Esempio di ricerca: Dizionario}
+    Se si vuole cercare la parola "casa" nel dizionario, non lo si apre a metà ma a circa $\frac{1}{4}$ del numero di pagine.\\
+    Si consideri una rappresentazione a vettore, con $n$ chiavi numeriche e distribuite uniformemente nell'intervallo [$k_{min}$, $k_{max}$]. Dovendo cercare le chiavi $k$ in $S[1...n]$, si tenta la ricerca in una posizione "ragionevolmente" vicina (non al centro), data da: $n*\frac{k-k_{min}}{k_{max}-k_{min}}$.\\
+    Il numeratore fornisce lo scarto tra i valori della chiave da cercare e quella più piccola, mentre il denominatore fornisce lo scarto tra i valori della chiave più grande e quella più piccola. Il loro rapporto indica quanto $k$ si discosta dagli estremi.\\
+    Se $k=k_{min}$, allora il rapporto è 0 e conviene quindi cercare nella prima posizione del vettore, se $k=k_{max}$, il rapporto è 1 e allora conviene cercare nell'ultima posizione del vettore. La ricerca binaria "ignora" k, assume che il rapporto sia pari a $\frac{1}{2}$ e tenta in posizione centrale. Il metodo di ricerca risultante è detto di \textbf{interpolazione}.\\
+    La procedura di ricerca binaria \texttt{binarySearch()} può essere trasformata in una di interpolazione semplicemente sostituendo l'istruzione:
+    \begin{itemize}[leftmargin=1em]
+        \item $m \quad \leftarrow \quad \lfloor(i+j)/2\rfloor$\\
+        con
+        \item $m \quad \leftarrow \quad i+\lfloor(k-A[i])*(j-i)/(A[j]-A[i])\rfloor$
+    \end{itemize}
+
+    \noindent Infatti la ricerca viene effettuata in generale sulla porzione $A[i...j]$ del vettore, che contiene la più piccola chiave in $A[i]$ e la più grande in $A[j]$. La formula per $m$ si ricava da quella ricerca binaria, che era $i+\lfloor(j-i)/2\rfloor$, sostituendo $(k-A[i])*(j-i)/(A[j]-A[i])$ ad $\frac{1}{2}$.\\
+
+    \begin{tcolorbox}[
+            colback=yellow!20, 
+            colframe=darkgray, 
+            title=Complessità
+            ]
+            Con distribuzione uniforme delle chiavi, è possibile dimostrare che la complessità è $O(log\,log\,n)$. La funzione $log\,log\,n$ cresce molto lentamente, ma è paragonabile a $log\,n$ per $n$ piccolo. Pertanto, se ci sono poche chiavi, oppure se le chiavi non sono uniformemente distribuite, è più conveniente usare la ricerca binaria. Al contrario, conviene usare l'interpolazione se ci sono tante chiavi oppure se sono uniformemente distribuite.
+        \end{tcolorbox}
+
+    \subsection{Quicksort (Hoare, 1961)}
+    L'algoritmo di QuickSort è l'algoritmo praticamente più efficiente per ordinare gli elementi di un vettore.\\
+    Questo è basato sulla tecnica \textit{divide-et-impera}, ma differisce dal "MergeSort" nel modo in cui divide il problema e combina i risultati. \\
+    Questo algoritmo ha un caso medio: $O(n\,log\,n)$ e un caso pessimo: $O(n^2)$ che però viene evitato grazie a tecniche "euristiche" (ovvero, in generale, tecniche che non garantiscono di trovare la soluzione ottimale o perfetta, ma progettate per trovare una soluzione soddisfacente in un tempo ragionevole) e spesso è preferito ad altri algoritmi a causa di costanti moltiplicative più basse. Nella scelta, spesso si valuta anche la "stabilità" dell'ordinamento.\\
+    Si consideri un vettore $A[1,\,...,\,n]$ con indici $lo$, $hi$ tali che $1\le lo \le hi \le n$:\\
+    \vspace{6pt}
+    \noindent
+    \hspace{5pt}
+    \begin{minipage}[t]{0.6\textwidth}  
+        \includegraphics[width=\linewidth]{figures/divide-et-impera/VettoreEsempio.pdf}
+    \end{minipage}
+    \hspace{5pt}\\
+    \noindent
+    La parte evidenziata in blu rappresenta la parte del vettore che si vuole ordinare.\\
+    Essendo un algoritmo di "divide-et-impera" si deve prima dividere, che è la parte più complessa, quindi si identifica un valore $p\in A[lo,\, ...,\,hi]$ detto perno (\textit{pivot}).\\
+    L'operazione di "divide" sposta tutti gli elementi del sottovettore a cui si fa riferimento in modo che il valore del perno sia poi posizionato in un certo punto del vettore e questo punto si indica con "j".\\
+    \vspace{6pt}
+    \noindent
+    \hspace{5pt}
+    \begin{minipage}[t]{0.7\textwidth}  
+        \includegraphics[width=\linewidth]{figures/divide-et-impera/QS1.pdf}
+    \end{minipage}
+    \hspace{5pt}\\
+    \noindent
+    Tutti gli elementi più piccoli del valore del perno devono essere collocati prima del perno stesso e tutti gli elementi più grandi devono essere collocati dopo. I valori collocati prima e dopo non devono essere interamente ordinati perché si è ancora nella fase di "divide", ovvero si porta il perno al centro in cui appunto la parte prima contiene solo valori minori di esso.\\
+    A questo punto "impera" ordina i due sottovettori $A[lo,\,...,\,j-1]$ e $A[j+1,\,...,\,hi]$, richiamando ricorsivamente il \textit{QuickSort}. Queste due parti potrebbero avere dimensione 0 nel caso "j-1" sia più piccolo di "lo".\\
+    La parte del "combina" non fa nulla, questo perché:\\
+    \vspace{1pt}
+    \noindent
+    \begin{minipage}[t]{0.60\textwidth}  
+        \includegraphics[width=\linewidth]{figures/divide-et-impera/Pivot.pdf}
+    \end{minipage}%
+    \hspace{5pt} % Spazio tra immagine e testo
+    \raisebox{135pt}{  
+        \begin{minipage}[t]{0.37\textwidth}
+            Tutti gli elementi più piccoli del perno stanno prima dello stesso, mentre tutti gli elementi più grandi stanno dopo ed entrambe le parti vengono riordinate tramite chiamate ricorsive sulle stesse parti. Alla fine tutti gli elementi sono ordinati nei sottovettori.
+        \end{minipage} 
+    }
+    \subsection{Pivot}
+    \begin{algorithm}
+    \caption{\textbf{int} pivot(\textbf{ITEM}[] A, \textbf{int} lo, \textbf{int} hi)}
+    \begin{algorithmic}
+        \State ITEM pivot = A[lo]
+        \textbf{int} j=lo
+        \For i=lo+1 \textbf{to} hi \textbf{do}
+        \qquad \If{$A[i]<pivot$}
+        j=j+1
+        \textbf{swap}(A, i, j)
+        \EndIf
+        \EndFor
+        \State A[lo]=A[j]
+        \State A[j]=pivot
+        \State \textbf{return} j
+    \end{algorithmic}
+    \end{algorithm}
+
+    \begin{algorithm}
+    \caption{\textbf{swap}(\textbf{ITEM}[] A, \textbf{int} i, \textbf{int} j)}
+    \begin{algorithmic}
+        \State ITEM temp = A[i]
+        \State A[i] = A[j]
+        \State A[j] = temp
+    \end{algorithmic}
+    \end{algorithm}
+    \noindent Questa versione del \textit{pivot} sceglie come valore del pivot, appunto, quello che si trova in prima posizione.
+    Il ciclo va dalla seconda casella fino ad arrivare all'ultima per poi uscire e cerca di capire cosa fare del valore in $i$.
+    La parte del ciclo sposta i valori in modo che tutti quelli più grandi si trovano dopo e quelli piccoli prima, confrontando ogni valore A[i] col pivot. Se trova un valore più piccolo del pivot esso va prima del perno.\\
+    La parte dopo il ciclo mette il perno al centro.\\
+    \vspace{8pt}
+    \noindent
+    \begin{minipage}[t]{0.50\textwidth}  
+        \includegraphics[width=\linewidth]{figures/divide-et-impera/pivot1.pdf}
+    \end{minipage}%
+    \hspace{5pt} % Spazio tra immagine e testo
+    \begin{minipage}[t]{0.50\textwidth}
+        \includegraphics[width=\linewidth]{figures/divide-et-impera/pivot2.pdf}
+    \end{minipage} 
+    
+    Il costo di \textit{pivot()} è: $\theta(n)$.
+
+    \subsection{Quicksort: procedura principale}
+    \begin{algorithm}
+    \caption{QuickSort(\textbf{ITEM}[] A, \textbf{int} lo, \textbf{int} hi)}
+    \begin{algorithmic}
+        \If{lo<hi}
+        \State \textbf{int} j=pivot(A, lo, hi)
+        \State QuickSort(A, lo, j-1)
+        \State QuickSort(A, j+1, hi)
+        \EndIf
+    \end{algorithmic}
+    \end{algorithm}
+
+    Svolgimento ricorsione:\\
+    \vspace{6pt}
+    \noindent
+    \hspace{5pt}
+    \begin{minipage}[t]{0.5\textwidth}  
+        \includegraphics[width=\linewidth]{figures/divide-et-impera/SvolgimentoRicorsione.pdf}
+    \end{minipage}
+    \hspace{5pt}
+
+    \subsubsection{Caso pessimo}
+    Nel caso pessimo il vettore è già ordinato, o in maniera crescente o in maniera decrescente, e si ottiene un costo pari a:
+    $T(n)=T(n-1)+T(0)+\theta(n)=T(n-1)+\theta(n)=\theta(n^2)$
+
+    \subsubsection{caso ottimo}
+    Se il perno è sempre i valore mediano, ovvero quello che ha un numero di valori più piccoli e più grandi pari, allora la scelta del perno permette di dividere il vettore in due sottoparti più o meno uguali. In questo caso, il vettore con n elementi, viene sempre diviso in due sottoproblemi di dimensione $n/2\rightarrow T(n)=2T(n/2)+\theta(n)=\theta(n\,log\,n)$.
+    \\
+    Il problema è che il vettore non è sempre ben diviso in due parti. Il partizionamento nel caso medio di \textit{QuickSort} è molto più vicino al caso ottimo che al caso peggiore (perché non ha senso ordinare un vettore già ordinato, quindi se si vuole effettuare un ordinamento ci saranno degli elementi sparsi nel vettore).\\
+    Nella realtà il caso medio dipende dall'ordine degli elementi e non dai loro valori, si devono considerare tutte le possibili permutazioni e può risultare difficile dal punto di vista analitico, ma si può arrivare a un'intuizione ovvero che alcuni partizionamenti saranno parzialmente bilanciati, mentre altri saranno pessimi e in media questi si alternano nella sequenza di partizionamento. I partizionamenti parzialmente bilanciati dominano quelli pessimi, ovvero dividono man mano il vettore in parti sempre più piccole.\\
+    Se si fa un'analisi probabilistica su tutte le possibili permutazioni si vede che, nel caso medio, il costo è $\theta(n\,log\,n)$, quindi nel caso medio l'algoritmo ha lo stesso costo computazionale del \textit{MergeSort}.\\
+    I fattori moltiplicativi, anche considerando le partizioni più sfavorevli, sono comunque in favore del \textit{QuickSort}.
+
+    \subsection{Moltiplicazione di matrici}
+    Siano A e B due matrici rispettivamente di dimensione $n_i*n_k$ e $n_k*n_j$, con $n_k$ comune, e sia C il prodotto tra A e B, per calcolare $c_{i,j}=\sum_{k=1}^{n_k}a_{i,k}*b_{k,j}$:
+    \begin{algorithm}
+    \caption{matrixProduct(\textbf{ITEM}[][] A, B, C, \textbf{int} $n_i$, $n_k$, $n_j$)}
+    \begin{algorithmic}
+        \For i=1 \textbf{to} $n_i$ \textbf{do}
+            \For j=1 \textbf{to} $n_j$ \textbf{do}
+                \State C[i,j]=0
+                \For k=1 \textbf{to} $n_k$ \textbf{do}
+                \State C[i,j]= C[i,j]+A[i,k]*B[k,j]
+                \EndFor
+            \EndFor
+        \EndFor
+    \end{algorithmic}
+    \end{algorithm}
+    Per ogni $i\in [1,\,...\,n_i]$ e per ogni $j\in [1,\,...\,n_j]$ si deve tradurre la sommatoria in codice e diventa un ulteriore ciclo che va da 1 a $n_k$ in cui si va ad accumulare la sommatoria.\\
+    Avendo un ciclo su $n_i$, un ciclo su $n_j$ e un ciclo su $n_k$, la complessità sarà: $T(n)=\theta(n_i*n_k*n_j)$ e se le matrici hanno tutte le stesse dimensioni viene fuori una complessità pari a $\theta(n^3)$.
+
+    \subsubsection{Algoritmo di Strassen}
+    Le matrici $n*n$ (quindi quadrate, ma si può fare anche con matrici rettangolari, aggiungendo degli zeri per renderle delle stesse dimensioni) vengono suddivise in quattro matrici $n/2*n/2$.
+    \[
+    A = \begin{bmatrix}
+        A_{1,1} & A_{1,2} \\
+        A_{2,1} & A_{2,2}
+    \end{bmatrix}
+    \qquad
+    B=\begin{bmatrix}
+        B_{1,1} & B_{1,2} \\
+        B_{2,1} & B_{2,2}
+    \end{bmatrix}
+    \]
+     \noindent Si può calcolare la matrice come:
+     \[
+    C = \begin{bmatrix}
+        A_{1,1}B_{1,1}+A_{1,2}B_{2,1} & A_{1,1}B_{1,2}+A_{1,2}B_{2,2} \\
+        A_{2,1}B_{1,1}+A_{2,2}B_{2,1} & A_{2,1}B_{1,2}+A_{2,2}B_{2,2}
+    \end{bmatrix}
+    \]
+    Ma ci sono 8 moltiplicazioni matriciali, avendo come equazione di ricorrenza: $8T(n/2)+n^2$ con $n>1$ e si ha sempre una complessità pari a $\theta(n^3)$.\\
+    Strassen ha trovato un modo per ridurre la complessità dividendo in ulteriori 7 sottomatrici:
+    \[
+    \begin{cases}
+    X_1=(A_{11}+A_{22})*(B_{11}+B_{22})\\
+    X_2=(A_{21}+A_{22})*B_{11}\\
+    X_3=A_{11}*(B_{12}-B_{22})\\
+    X_4=A_{22}*(B_{21}-B_{11})\\
+    X_5=(A_{11}+A_{12})*B_{22}\\
+    X_6=(A_{21}-A_{1})*(B_{11}+B_{12})\\
+    X_7=(A_{12}-A_{22})*(B_{21}+B_{22})
+    \end{cases}
+    \]
+    Si trova un'equazione di ricorrenza:
+    \begin{align}
+        T(n)=
+        \begin{cases}
+            7T(n/2)+n^2,\quad n>1\\
+            1, \quad n=1
+        \end{cases}
+        \rightarrow T(n)=\theta(n^{log_27})\approx \theta(n^{2.81})
+    \end{align}
+    riducendo la complessità e avendo come calcolo finale:
+    \[
+    C=\begin{bmatrix}
+        X_1+X_4-X_5+X_7 & X_3+X_5\\
+        X_2+X_4 & X_1+X_3-X_2+X_6
+    \end{bmatrix}
+    \]
+    Strassen è stato il primo a scoprire che era possibile moltiplicare in meno di $n^3$ moltiplicazioni scalari.
+
+    \subsection{Conclusioni}
+    \subsubsection*{Quando applicare \textit{divide-et-impera}?}
+    Quando i costi risultano essere migliori del corrispondente algoritmo iterativo.
+    \subsubsection*{Ulteriori vantaggi}
+    È facile parallelizzare e c'è un utilizzo ottimale della cache.
 \end{document}
