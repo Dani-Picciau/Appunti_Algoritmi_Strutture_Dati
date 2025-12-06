@@ -65,20 +65,33 @@
 \contentsline {subsubsection}{\numberline {5.6.1}Selection Sort}{69}{subsubsection.5.6.1}%
 \contentsline {subsubsection}{\numberline {5.6.2}Insertion sort}{70}{subsubsection.5.6.2}%
 \contentsline {subsubsection}{\numberline {5.6.3}Merge sort}{72}{subsubsection.5.6.3}%
-\contentsline {section}{\numberline {6}Divide-et-impera}{76}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Risoluzione problemi}{76}{subsection.6.1}%
-\contentsline {subsubsection}{\numberline {6.1.1}Classificazione dei problemi}{76}{subsubsection.6.1.1}%
-\contentsline {paragraph}{Problemi decisionali}{76}{section*.41}%
-\contentsline {subsubsection}{\numberline {6.1.2}Definizione matematica del problema}{76}{subsubsection.6.1.2}%
-\contentsline {subsubsection}{\numberline {6.1.3}Tecnica di soluzione dei problemi}{76}{subsubsection.6.1.3}%
-\contentsline {subsection}{\numberline {6.2}Divide-et-impera}{78}{subsection.6.2}%
-\contentsline {subsection}{\numberline {6.3}Minimo: Divide-et-impera}{78}{subsection.6.3}%
-\contentsline {subsection}{\numberline {6.4}Esempio binary search}{80}{subsection.6.4}%
-\contentsline {subsection}{\numberline {6.5}Quicksort (Hoare, 1961)}{81}{subsection.6.5}%
-\contentsline {subsection}{\numberline {6.6}Pivot}{82}{subsection.6.6}%
-\contentsline {subsection}{\numberline {6.7}Quicksort: procedura principale}{83}{subsection.6.7}%
-\contentsline {subsubsection}{\numberline {6.7.1}Caso pessimo}{83}{subsubsection.6.7.1}%
-\contentsline {subsubsection}{\numberline {6.7.2}caso ottimo}{84}{subsubsection.6.7.2}%
-\contentsline {subsection}{\numberline {6.8}Moltiplicazione di matrici}{84}{subsection.6.8}%
-\contentsline {subsubsection}{\numberline {6.8.1}Algoritmo di Strassen}{85}{subsubsection.6.8.1}%
-\contentsline {subsection}{\numberline {6.9}Conclusioni}{85}{subsection.6.9}%
+\contentsline {section}{\numberline {6}Standard Template Library (STL)}{76}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Container}{77}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Sequence container (Contenitori Sequenziali)}{77}{subsection.6.2}%
+\contentsline {subsubsection}{\numberline {6.2.1}Vector}{77}{subsubsection.6.2.1}%
+\contentsline {subsubsection}{\numberline {6.2.2}List}{80}{subsubsection.6.2.2}%
+\contentsline {subsubsection}{\numberline {6.2.3}Deque}{81}{subsubsection.6.2.3}%
+\contentsline {subsubsection}{\numberline {6.2.4}Altri container}{82}{subsubsection.6.2.4}%
+\contentsline {subsubsection}{\numberline {6.2.5}Associative container}{82}{subsubsection.6.2.5}%
+\contentsline {subsection}{\numberline {6.3}Iteratori}{83}{subsection.6.3}%
+\contentsline {subsection}{\numberline {6.4}Algoritmi della STL}{88}{subsection.6.4}%
+\contentsline {subsubsection}{\numberline {6.4.1}Intervalli}{89}{subsubsection.6.4.1}%
+\contentsline {subsubsection}{\numberline {6.4.2}Predicati}{90}{subsubsection.6.4.2}%
+\contentsline {section}{\numberline {7}Divide-et-impera}{92}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Risoluzione problemi}{92}{subsection.7.1}%
+\contentsline {subsubsection}{\numberline {7.1.1}Classificazione dei problemi}{92}{subsubsection.7.1.1}%
+\contentsline {paragraph}{Problemi decisionali}{92}{section*.44}%
+\contentsline {subsubsection}{\numberline {7.1.2}Definizione matematica del problema}{92}{subsubsection.7.1.2}%
+\contentsline {subsubsection}{\numberline {7.1.3}Tecnica di soluzione dei problemi}{92}{subsubsection.7.1.3}%
+\contentsline {subsection}{\numberline {7.2}Divide-et-impera}{94}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Minimo: Divide-et-impera}{94}{subsection.7.3}%
+\contentsline {subsection}{\numberline {7.4}Esempio binary search}{96}{subsection.7.4}%
+\contentsline {subsection}{\numberline {7.5}Quicksort (Hoare, 1961)}{97}{subsection.7.5}%
+\contentsline {subsection}{\numberline {7.6}Pivot}{98}{subsection.7.6}%
+\contentsline {subsection}{\numberline {7.7}Quicksort: procedura principale}{99}{subsection.7.7}%
+\contentsline {subsubsection}{\numberline {7.7.1}Caso pessimo}{99}{subsubsection.7.7.1}%
+\contentsline {subsubsection}{\numberline {7.7.2}caso ottimo}{100}{subsubsection.7.7.2}%
+\contentsline {subsection}{\numberline {7.8}Moltiplicazione di matrici}{100}{subsection.7.8}%
+\contentsline {subsubsection}{\numberline {7.8.1}Algoritmo di Strassen}{101}{subsubsection.7.8.1}%
+\contentsline {subsection}{\numberline {7.9}Conclusioni}{101}{subsection.7.9}%
+\contentsline {section}{\numberline {8}Tabelle Hash}{102}{section.8}%

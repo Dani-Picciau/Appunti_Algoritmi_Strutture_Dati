@@ -3952,9 +3952,639 @@ bstree * rotateright(bstree *x) {
     \end{itemize}
     Quindi $\alpha=\beta$ e si ricade nel caso $2$: $T(n)=\Theta(n^\alpha\cdot log\;n)=\Theta(n\cdot log\;n)$
 
+    \newpage
+    \section{Standard Template Library (STL)}
+La Standard Template Library (STL) è il cuore della libreria standard del C++, permette ai programmatori l'utilizzo di algoritmi e strutture dati allo stato dell'arte, senza preoccuparsi della loro implementazione. Tutti i componenti della STL sono generici, possono quindi essere utilizzati come elementi di tipo arbitrario.
+\\La STL porta alcuni vantaggi, tra cui:
+    \noindent
+    \begin{itemize}[leftmargin=1em]
+        \item \textbf{Disponibilità di componenti generali}: Non offre soluzioni per un solo problema specifico, ma componenti generici che vanno bene per tutto.
+        \item \textbf{Alto livello di astrazione}: Concentrarsi sul "cosa" vuoi fare, ignorando il "come" il computer lo gestisce.
+        \item \textbf{Portabilità del codice}: Poiché la STL è uno standard internazionale del C++, il codice che scrivi usando queste librerie funzionerà ovunque ci sia un compilatore C++.
+        \item \textbf{Non dover re-implementare ogni cosa from scratch}: Significa applicare il principio del riutilizzo del codice. Invece di scrivere manualmente le funzionalità di base, il programmatore utilizza i componenti già pronti della libreria.
+    \end{itemize}
 
+    \begin{tcolorbox}[
+            colback=green!10,  % Sfondo verde chiaro
+            colframe=green!60!black,  % Bordo verde più acceso
+            coltitle=black,  % Colore del testo del titolo
+            fonttitle=\bfseries,  % Testo del titolo in grassetto
+            title={\centering \textbf{Lo stato dell' arte}},  % Titolo centrato 
+            enhanced,  % Miglioramenti grafici (richiede tcbuselibrary{skins})
+            attach boxed title to top center={yshift=-2mm},  % Posiziona il titolo centrato in alto
+            boxed title style={colback=white, colframe=green!60!black, rounded corners}
+        ]
+        Con l'espressione "Stato dell'arte" si intende l'insieme degli algoritmi, delle tecnologie e delle metodologie che, ad oggi, offrono le prestazioni migliori in termini di efficienza, sicurezza e affidabilità.
+    \end{tcolorbox} 
+
+\vspace{8pt}
+   \noindent Inoltre mette a disposizione:
+    \noindent
+    \begin{itemize}[leftmargin=1em]
+        \item \textbf{Varie strutture dati}: array dinamici, liste, alberi binari, ecc.
+        \item \textbf{Vari algoritmi}: per ricerca, ordinamento, ecc.
+        \item \textbf{Il tipo stringa}.
+        \item \textbf{Classi per la gestione dell’I/O}.
+        \item \textbf{Classi numeriche}.
+    \end{itemize}
 
     
+\vspace{24pt}
+   \noindent La STL è basata sulla cooperazione di diversi componenti:
+\noindent
+    \begin{itemize}[leftmargin=1em]
+        \item \textbf{Contenitori (Container)}: sono usati per la gestione di oggetti di un dato tipo. Possono essere implementati come array, liste, etc.
+        \item \textbf{Iteratori (Iterator)}: sono usati per visitare gli elementi di collezioni di oggetti (container o sottoinsiemi di essi).
+        \item \textbf{Algoritmi (Algorithm)}: sono usati per processare elementi di collezioni (ricerca, ordinamento, modifica, etc.).
+    \end{itemize}
+    \newpage
+
+    \subsection{Container}
+La progettazione della STL è basata sulla separazione tra dati e operazioni. I dati sono gestiti dalle \textbf{classi container}, mentre le operazioni sono definite da \textbf{algoritmi}. Gli iteratori sono il “collante” tra container e algoritmi.
+
+\begin{figure}[H]
+    \centering
+    % NOTA: Ho commentato l'immagine per permettere la compilazione se il file non esiste.
+    % De-commenta la riga sotto se hai il file nella cartella corretta.
+    % \includegraphics[width=0.65\linewidth]{figures/strutture_dati_astratti/img1.png}
+    \textbf{[Qui andrebbe l'immagine img1.png]}
+    \label{fig:placeholder}
+\end{figure}
+
+\vspace{16pt}
+   \noindent
+STL fornisce diversi tipi di container per venire incontro a diverse necessità da parte del programmatore. Ognuno di essi ha vantaggi e svantaggi, la scelta deve essere effettuata a seconda delle operazioni che si vogliono effettuare.
+Esistono due tipi di container:
+\noindent
+    \begin{itemize}[leftmargin=1em]
+        \item \textbf{Sequenziali (Sequence container)}: vector, deque e list.
+        \item \textbf{Associativi (Associative container)}: set, multiset, map e multimap.
+    \end{itemize}
+
+\vspace{24pt}
+   \noindent
+\subsection{Sequence container (Contenitori Sequenziali)}
+ I Sequence container, contengono una collezione ordinata di elementi di un unico tipo. I principali sono:
+\noindent
+    \begin{itemize}[leftmargin=1em]
+        \item \textbf{vector}: archivia gli elementi in una disposizione lineare e consente l’accesso casuale a qualsiasi elemento.
+        \item \textbf{list}: viene archiviata come elenco collegato bidirezionale di elementi in
+        disposizione lineare. Consente inserimenti ed eliminazioni efficienti in qualsiasi posizione all’interno della sequenza.
+        \item \textbf{deque}: si comporta come un vector ma è preferibile nelle implementazioni delle code.
+    \end{itemize}
+\vspace{16pt}
+\subsubsection{Vector}
+Il vector è considerato il container di "default" del C++. Gli elementi al suo interno sono gestiti come in un \textbf{array dinamico}, ovvero un array la cui dimensione può cambiare durante l'esecuzione del programma.
+Le sue caratteristiche principali sono:
+
+\begin{itemize}[leftmargin=1em]
+    \item[\textcolor{green!60!black}{\scalebox{1.2}{$\mathbf{+}$}}] \textbf{Accesso casuale (Random Access)}: È possibile accedere direttamente a qualsiasi elemento tramite il suo indice, senza dover scorrere gli elementi precedenti.
+    \item[\textcolor{green!60!black}{\scalebox{1.2}{$\mathbf{+}$}}] \textbf{Inserimento/Rimozione in coda}: L'aggiunta o la rimozione di elementi alla fine del vettore è un'operazione molto veloce.
+    \item[\textcolor{green!60!black}{\scalebox{1.2}{$\mathbf{+}$}}] \textbf{Inserimento nel mezzo}: L'inserimento o la rimozione in posizioni diverse dalla coda è meno efficiente, in quanto richiede lo spostamento (shift) di tutti gli elementi successivi per fare spazio a quello nuovo o per riempire il vuoto.
+    \item[\textcolor{red!80!black}{\scalebox{1.2}{$\mathbf{-}$}}] \textbf{Lentezza posizionale}: Potenzialmente lento se le operazioni di inserimento/cancellazione avvengono spesso in testa (inizio) o in posizioni casuali.
+    \item[\textcolor{red!80!black}{\scalebox{1.2}{$\mathbf{-}$}}] \textbf{Costo di copia}: Se il tipo di dato contenuto è complesso, riordinare gli elementi (spostarli) può essere costoso.
+    \item[\textcolor{red!80!black}{\scalebox{1.2}{$\mathbf{-}$}}] \textbf{Invalidazione di puntatori e iteratori}: Ogni operazione che modifica la capacità del vettore (es. un inserimento che fa scattare un ridimensionamento automatico) può far sì che il vettore venga spostato in un nuovo blocco di memoria. Di conseguenza, tutti i puntatori o iteratori che puntavano ai vecchi elementi diventano non validi (dangling pointers) e usarli causa errori nel programma.
+\end{itemize}
+\vspace{24pt}
+
+\noindent \textbf{Metodi principali:}
+\vspace{10pt}
+\\
+\noindent \textbf{ Modificatori (Modifiers):}
+\begin{itemize}[leftmargin=1em]
+    \item \texttt{assign()}: Assegna nuovi valori al vettore, sostituendo completamente quelli vecchi.
+    \item \texttt{push\_back()}: Aggiunge un nuovo elemento alla fine del vettore.
+    \item \texttt{pop\_back()}: Rimuove l'ultimo elemento del vettore (riducendo la dimensione di 1).
+    \item \texttt{insert()}: Inserisce nuovi elementi prima di una posizione specifica (indicata tramite un iteratore).
+    \item \texttt{erase()}: Rimuove elementi da una specifica posizione o da un intervallo.
+    \item \texttt{swap()}: Scambia il contenuto di due vettori dello stesso tipo. È un'operazione molto efficiente anche se le dimensioni sono diverse.
+    \item \texttt{clear()}: Rimuove \textbf{tutti} gli elementi dal vettore.
+\end{itemize}
+
+
+    \vspace{10pt}
+\noindent \textbf{Iteratori (Iterators):}
+\begin{itemize}[leftmargin=1em]
+    \item \texttt{begin()}: Restituisce un iteratore che punta al \textbf{primo} elemento del vettore.
+    \item \texttt{end()}: Restituisce un iteratore che punta all'elemento teorico \textbf{successivo all'ultimo} (past-the-end). Non punta all'ultimo dato valido, ma segna la fine del container.
+\end{itemize}
+
+\vspace{10pt}
+\noindent \textbf{Gestione della Capacità (Capacity):}
+\begin{itemize}[leftmargin=1em]
+    \item \texttt{size()}: Restituisce il numero effettivo di elementi attualmente presenti nel vettore.
+    \item \texttt{max\_size()}: Restituisce il numero massimo teorico di elementi che il vettore può contenere.
+    \item \texttt{capacity()}: Restituisce la dimensione dello spazio di memoria attualmente \textbf{allocato}. Indica il numero  elementi il vettore può contenere prima di dover chiedere altra memoria al sistema.
+    \item \texttt{resize(n)}: Ridimensiona il contenitore affinché contenga esattamente 'n' elementi. Se 'n' è minore dell'attuale size, gli elementi in eccesso vengono distrutti.
+    \item \texttt{empty()}: Restituisce \texttt{true} se il container è vuoto (ovvero se la size è 0).
+    \item \texttt{shrink\_to\_fit()}: Riduce la capacità (memoria allocata) per farla coincidere con la size (elementi effettivi), liberando la memoria inutilizzata.
+\end{itemize}
+
+\newpage
+\noindent
+\begin{lstlisting}[style=mystyle, language=C++, caption={Esempio di utilizzo dei metodi di Capacità}, label={lst:vector_example}]
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+    // Dichiarazione di un vettore di interi vuoto.
+    vector<int> g1; 
+
+    // Ciclo di riempimento: aggiunge gli interi da 1 a 5.
+    for (int i = 1; i <= 5; i++)
+        // push_back(): Metodo per l'inserimento efficiente in coda.
+        g1.push_back(i);
+
+    // Accesso casuale O(1): usa l'operatore [] per accedere al terzo elemento (valore 3).
+    cout << "\nReference operator [g] : g1[2] = " << g1[2];
+
+    cout << "Output of begin and end: ";
+    // Iterazione: usa gli iteratori begin() e end() per stampare il contenuto (1 2 3 4 5).
+    for (auto i = g1.begin(); i != g1.end(); ++i)
+        cout << *i << " ";
+
+    // size(): Numero attuale di elementi (5).
+    cout << "\nSize : " << g1.size();
+    
+    // capacity(): Memoria allocata, sara >= size().
+    cout << "\nCapacity : " << g1.capacity(); 
+    
+    // max_size(): Dimensione massima teorica.
+    cout << "\nMax_Size : " << g1.max_size();
+
+    // resize(4): Ridimensiona il vettore a 4 elementi. L'ultimo (5) viene eliminato.
+    g1.resize(4); 
+    
+    cout << "\nSize : " << g1.size(); // Nuova dimensione (4)
+
+    // empty(): Controllo se il vettore e' vuoto (restituisce false).
+    if (g1.empty() == false)
+        cout << "\nVector is not empty";
+    else
+        cout << "\nVector is empty";
+
+    return 0;
+}
+\end{lstlisting}
+
+\newpage
+\noindent
+\subsubsection{List}
+Una lista è implementata come una lista di elementi doppiamente
+collegata, quindi ogni elemento ha il suo segmento di memoria e puntatori sia al predecessore che al successore.
+La lista non ha random access per cui per accedere ad un ipotetico decimo
+elemento, bisogna scorrere i primi nove elementi della catena.
+
+\subsection*{Confronto con Vector}
+\begin{itemize}[leftmargin=1em]
+    \item[\textcolor{green!60!black}{\scalebox{1.2}{$\mathbf{+}$}}] \textbf{Inserimento e cancellazione in $O(1)$:} Una volta trovata la posizione, l'operazione è rapidissima, in quanto si modificano solo i puntatori (link), senza spostare i dati.
+    \item[\textcolor{green!60!black}{\scalebox{1.2}{$\mathbf{+}$}}] \textbf{Ideale per oggetti pesanti:} Non essendoci costi di copia o spostamento degli elementi in memoria, è la scelta migliore per memorizzare oggetti di grandi dimensioni.
+    \item[\textcolor{red!80!black}{\scalebox{1.2}{$\mathbf{-}$}}] \textbf{Accesso casuale in $O(N)$:} Per accedere all'elemento $N$, è necessario scorrere $N$ nodi a partire dalla testa o dalla coda. Non supporta l'operatore \texttt{[]}.
+    \item[\textcolor{red!80!black}{\scalebox{1.2}{$\mathbf{-}$}}] \textbf{Traversamento lento (Bad Memory Locality):} I nodi sono sparsi in memoria. La CPU non riesce a sfruttare la cache, rendendo lo scorrimento sequenziale meno efficiente rispetto al \texttt{vector}.
+    \item[\textcolor{red!80!black}{\scalebox{1.2}{$\mathbf{-}$}}] \textbf{Maggiore consumo di memoria (Overhead):} Ogni nodo richiede memoria aggiuntiva per memorizzare i due puntatori (prev e next).
+\end{itemize}
+
+\vspace{24pt}
+
+\noindent \textbf{Metodi principali:}
+\vspace{10pt}
+\begin{itemize}[leftmargin=1em]
+    \item \texttt{front()}: Ritorna il valore del primo elemento della lista.
+    \item \texttt{back()}: Ritorna il valore dell' ultimo elemento della lista.
+    \item \texttt{push\_front()}: Aggiunge un nuovo elemento all' inizio della lista.
+    \item \texttt{push\_back()}: Aggiunge un nuovo elemento alla fine della lista.
+    \item \texttt{pop\_front()}: Rimuove il primo elemento della lista e riduce la grandezza di 1.
+    \item \texttt{pop\_back()}: Rimuove l'ultimo elemento della lista e riduce la grandezza di 1.
+    \item \texttt{insert()}: Aggiunge un nuovo elemento prima di quello nella posizione specificata.
+    \item \texttt{size()}: Ritorna il numero di elementi nella lista.
+    \item \texttt{begin()}: Ritorna un iteratore che punta al primo elemento della lista.
+    \item \texttt{begin()}: Ritorna un iteratore che punta al teorico ultimo elemento della lista.
+\end{itemize}
+
+\vspace{10pt}
+\begin{lstlisting}[style=mystyle, language=C++, caption={Esempio di utilizzo dei metodi delle list}, label={lst:list_example}]
+#include <iostream>
+#include <list> 
+
+using namespace std;
+
+int main() {
+    list<int> gqlist{12, 45, 8, 6};
+
+    // push_front(33): Inserisce l'elemento 33 all'inizio della lista (testa).
+    gqlist.push_front(33); 
+    
+    // push_back(55): Inserisce l'elemento 55 alla fine della lista (coda).
+    gqlist.push_back(55); 
+
+    // Output finale: 33 12 45 8 6 55 
+    for (auto i : gqlist) {
+        cout << i << " ";
+    }
+    return 0;
+}
+\end{lstlisting}
+
+\vspace{24pt}
+\subsubsection{Deque}
+Il termine deque è un’abbreviazione per “double-ended queue”. E un array dinamico implementato in maniera tale da rendere veloci inserimento e cancellazione sia in testa che in coda.
+
+\subsection*{Confronto con Vector e List}
+\begin{itemize}[leftmargin=1.5em]
+    \item[\textcolor{green!60!black}{\scalebox{1.2}{$\mathbf{+}$}}] \textbf{Accesso casuale in $O(1)$:} Accesso diretto ad ogni elemento tramite indice (come il \texttt{vector}), sebbene con un minimo overhead.
+    \item[\textcolor{green!60!black}{\scalebox{1.2}{$\mathbf{+}$}}] \textbf{Inserimento e cancellazione su entrambe le estremità ($O(1)$):} A differenza del \texttt{vector}, supporta \texttt{push\_front()} e \texttt{pop\_front()} in tempo costante.
+    \item[\textcolor{green!60!black}{\scalebox{1.2}{$\mathbf{+}$}}] \textbf{Non invalida puntatori in coda/testa:} Le operazioni di inserimento sui bordi non invalidano i riferimenti agli elementi esistenti.
+    \item[\textcolor{red!80!black}{\scalebox{1.2}{$\mathbf{-}$}}] \textbf{Lentezza negli inserimenti/rimozioni centrali ($O(N)$):} Come il \texttt{vector}, le operazioni che richiedono lo spostamento dei dati sono costose.
+    \item[\textcolor{red!80!black}{\scalebox{1.2}{$\mathbf{-}$}}] \textbf{Costo di copia:} Potenziale lentezza se il tipo di dato ha un elevato costo di copia durante il riordino degli elementi.
+    \item[\textcolor{red!80!black}{\scalebox{1.2}{$\mathbf{-}$}}] \textbf{Non completamente cache-friendly:} Non essendo totalmente contiguo in memoria, è meno efficiente del \texttt{vector} nel sfruttare la cache della CPU.
+\end{itemize}
+
+\vspace{10pt}
+\begin{lstlisting}[style=mystyle, language=C++, caption={Esempio di utilizzo dei metodi della deque}, label={lst:deque_example}]
+#include <deque>
+#include <iostream>
+using namespace std;
+
+// Funzione helper per stampare il contenuto del deque.
+void showdq(deque<int> g)
+{
+    deque<int>::iterator it;
+    // Scorrimento sequenziale tramite iteratore begin() ed end().
+    for (it = g.begin(); it != g.end(); ++it)
+        cout << '\t' << *it;
+    cout << '\n';
+}
+
+int main()
+{
+    deque<int> gquiz; // Dichiarazione di un deque vuoto.
+
+    // Operazioni di Inserimento in testa e coda (O(1)).
+    gquiz.push_back(10);  // Deque: {..., 10}
+    gquiz.push_front(20); // Deque: {20, 10, ...}
+    gquiz.push_back(30);  // Deque: {20, 10, 30}
+    gquiz.push_front(15); // Deque: {15, 20, 10, 30} 
+    // 
+    cout << "The deque gquiz is : ";
+    showdq(gquiz); 
+
+    // size(): Stampa la dimensione attuale (4)
+    cout << "\ngquiz.size() : " << gquiz.size(); 
+    // max_size(): Stampa la dimensione massima teorica.
+    cout << "\ngquiz.max_size() : " << gquiz.max_size(); 
+    
+    // at(2): Accesso casuale all'elemento in indice 2 (valore 10).
+    cout << "\ngquiz.at(2) : " << gquiz.at(2); 
+    // front(): Elemento in testa (15).
+    cout << "\ngquiz.front() : " << gquiz.front(); 
+    // back(): Elemento in coda (30).
+    cout << "\ngquiz.back() : " << gquiz.back(); 
+
+    return 0;
+}
+\end{lstlisting}
+\vspace{24pt}
+\subsubsection{Altri container}
+Dati i container fondamentali, STL offre anche supporto specifico per le
+seguenti strutture:
+\noindent \textbf{Metodi principali:}
+\vspace{10pt}
+\begin{itemize}[leftmargin=1.5em]
+    \item \texttt{Stack}: container in cui gli elementi sono gestiti con politica LIFO.
+    \item \texttt{Queue}: container in cui gli elementi sono gestiti con politica FIFO.
+    \item \texttt{Priority Queue}: la coda con priorità.
+    \item \texttt{Associative container (Contenitori Associativi)}: supportano efficientemente interrogazioni circa la presenza e richiese di estrazione di un elemento. I principali sono:
+set, multiset, map e multimap.
+\end{itemize}
+
+
+\subsubsection{Associative container}
+Sono collezioni raggruppate nelle quali la posizione corrente di un elemento dipende dal suo valore e da un dato criterio di ordinamento. L’ordine di inserimento non è tenuto in conto.
+Il criterio di ordinamento ha la forma di una funzione che compara un valore od una determinata chiave. Sono tipicamente implementati come alberi binari.
+\\
+Nella STL, sono predefiniti i seguenti associative container:
+\begin{itemize}[leftmargin=1.5em]
+    \item \texttt{Set}: collezione nella quale gli elementi sono ordinati per valore. Ogni elemento può occorrere una sola volta, non sono ammessi duplicati.
+    \item \texttt{Multiset}: come il Set, ma con la differenza che i duplicati sono ammessi.
+    \item \texttt{Map}: contiene elementi che sono coppie chiave/valore. Ogni elemento ha quindi una chiave (sulla base della quale è effettuato l’ordinamento) ed un valore. Non sono ammessi duplicati nelle chiavi.
+    \item \texttt{Multimap}: come le map, ma sono ammesse chiavi duplicate. 
+\end{itemize}
+\vspace{24pt}
+\subsection{Iteratori}
+Un iteratore è un oggetto che può iterare tra gli elementi di un
+container (o parte di esso). Fornisce un metodo generale per accedere in successione a ciascun elemento di un container. Un iteratore rappresenta una certa posizione all’interno del container, ad esempio, se iter è un iteratore di un container, allora con
+++iter fa avanzare l’iteratore avanti in modo che punti al successivo
+elemento del container, mentre con *iter restituisce il valore dell’elemento puntato.
+
+\vspace{6pt}
+\noindent \textbf{Operazioni Fondamentali:}
+\begin{itemize}[leftmargin=1.5em]
+    \item \textbf{\texttt{*}}: \textbf{Dereferenziazione}. Restituisce l'elemento (\textit{il valore}) puntato dalla posizione corrente dell'iteratore.
+    \item \textbf{\texttt{->}}: \textbf{Accesso a Membri}. Permette di accedere ai membri di una struttura o classe puntata dall'iteratore, senza dover dereferenziare esplicitamente.
+    \item \textbf{\texttt{++} / \texttt{--}}: \textbf{Avanzamento/Arretramento}. Muove l'iteratore all'elemento successivo (\texttt{++}) o precedente (\texttt{--}). \textit{(Attenzione: non tutti gli iteratori supportano \texttt{--})}.
+    \item \textbf{\texttt{==} / \texttt{!=}}: \textbf{Confronto}. Controlla se due iteratori puntano alla \textbf{stessa posizione} all'interno del container.
+    \item \textbf{\texttt{=}}: \textbf{Assegnazione}. Assegna la posizione di un iteratore a un altro.
+\end{itemize}
+\vspace{8pt}
+\noindent
+Ogni classe container nella Standard Template Library (STL) del C++ fornisce le stesse funzioni membro di base per l'utilizzo degli iteratori, definendo così un'interfaccia uniforme per l'accesso ai dati. Queste funzioni sono essenziali per permettere a tutti gli algoritmi STL di lavorare con qualsiasi tipo di container, indipendentemente dalla sua implementazione interna
+
+\begin{tcolorbox}[
+     colback=yellow!20, 
+     colframe=darkgray, 
+     title= cosa sono e funzioni membro di base?
+     ]
+     Le funzioni membro di base sono i metodi standard che ogni classe container deve implementare per garantire la compatibilità con gli algoritmi della Standard Template Library (STL).
+     
+    Queste funzioni definiscono l'interfaccia minima per l'utilizzo degli iteratori, permettendo così agli algoritmi di lavorare con qualsiasi container senza conoscerne i dettagli implementativi interni.
+\end{tcolorbox} 
+\noindent
+Le due funzioni membro fondamentali sono begin() ed end(), che definiscono il range di elementi su cui un algoritmo può operare:
+
+\begin{itemize}[leftmargin=1.5em] 
+    \item \textbf{begin()}: Restituisce un iteratore che punta all'inizio degli elementi validi del container, ovvero alla posizione del primo elemento (se esiste).
+    \item  \textbf{end()}: Restituisce l'iteratore alla fine logica degli elementi, noto come past-the-end iterator. Questo iteratore punta alla posizione teorica immediatamente successiva all'ultimo elemento; non rappresenta un elemento valido e non deve mai essere dereferenziato.
+\end{itemize}
+\vspace{8pt}
+\noindent
+Questo modello standardizzato offre due vantaggi cruciali per la programmazione generica in C++:
+
+\begin{itemize}[leftmargin=1.5em] 
+    \item \textbf{Semplice Criterio di Terminazione}: Il modello [begin(), end()) offre un criterio di terminazione universale e semplice per tutti i cicli di visita. Si può continuare a scorrere gli elementi finché l'iteratore corrente non raggiunge (non è uguale a) end().
+    \item  \textbf{Gestione dei Contenitori Vuoti}: I contenitori vuoti non richiedono trattamenti particolari o controlli espliciti. Quando un container è vuoto, begin() è direttamente uguale a end(). Di conseguenza, il ciclo di visita non viene eseguito nemmeno una volta, garantendo che il codice non tenti mai di accedere a dati inesistenti.
+\end{itemize}
+
+\begin{lstlisting}[style=mystyle, language=C++, caption={Inserzione di elementi in un set e stampa usando gli iteratori}, label={lst:set_example}]
+#include <iostream>
+#include <set> 
+
+using namespace std;
+
+int main() {
+    // Definizione: crea un container 'set' che memorizza valori di tipo int.
+    // Un set mantiene gli elementi unici e ordinati automaticamente.
+    set<int> coll; 
+
+    // coll.insert(): Metodo usato per aggiungere nuovi elementi.
+    coll.insert(3);
+    coll.insert(1);
+    coll.insert(5);
+    coll.insert(4);
+    
+    // Tentativo di inserire il valore 1 una seconda volta.
+    // In un set, l'inserimento non avviene perche' gli elementi devono essere unici.
+    coll.insert(1); 
+    coll.insert(6);
+    coll.insert(2);
+
+    // Stampa di tutti gli elementi usando gli iteratori.
+    // L'iterazione avviene in ordine crescente (1, 2, 3, 4, 5, 6) grazie alla natura del set.
+    for (auto pos = coll.begin(); pos != coll.end(); ++pos) {
+        cout << *pos << " "; 
+    }
+
+    cout << endl;
+    return 0;
+}
+\end{lstlisting}
+\vspace{8pt}
+\noindent
+Il set è composto da interi: gli elementi saranno in ordine ascendente
+(usa <). È possibile anche ordinarli in maniera diversa, ad esempio in ordine 
+discendente, con una struttura del tipo: \textbf{$set<int,greater<int> >$ coll}
+\\
+NB: lo spazio è volutamente lasciato altrimenti >> viene interpretato
+come operatore shift!\\
+Il nuovo elemento è inserito col metodo insert automaticamente,
+push back o push front non sono ammessi.
+
+\newpage
+\begin{lstlisting}[style=mystyle, language=C++, caption={Esempio di utilizzo di std::multimap con chiavi duplicate}, label={lst:multimap_example}]
+#include <iostream>
+#include <map> // Necessario per multimap
+#include <string>
+using namespace std;
+
+// Alias per semplificare il tipo: multimap<chiave: int, valore: string>
+typedef multimap<int,string> IntStringMap;
+
+int main() {
+    IntStringMap coll; // Dichiarazione del container multimap.
+
+    // Inserimento di elementi: si usano coppie (chiave, valore).
+    coll.insert(make_pair(5, "tagged"));
+    coll.insert(make_pair(1, "this"));
+    coll.insert(make_pair(4, "of"));
+    coll.insert(make_pair(6, "strings"));
+    
+    // Inserimento con chiave duplicata (4): questo e' permesso in multimap.
+    coll.insert(make_pair(4, "of")); 
+    
+    coll.insert(make_pair(3, "multimap"));
+
+    // Iterazione e stampa dei soli valori.
+    // Il multimap garantisce l'ordinamento automatico in base alla chiave.
+    for(IntStringMap::iterator pos = coll.begin(); pos != coll.end(); ++pos) {
+        // pos->second: L'iteratore accede alla coppia; '.second' e' il valore (stringa).
+        // L'output finale riflettera' l'ordine delle chiavi: 1, 3, 4, 4, 5, 6.
+        cout << pos->second << " "; 
+    }
+
+    cout << endl;
+    return 0;
+}
+\end{lstlisting}
+\newpage
+\begin{lstlisting}[style=mystyle, language=C++, caption={Map come array associativo}, label={lst:map_array}]
+#include <iostream>
+#include <map>
+#include <string>
+using namespace std;
+
+
+
+int main() {
+
+    // Definisce un alias: chiave=stringa, valore=float.
+    typedef map<string,float> StringFloatMap;
+
+    StringFloatMap coll;
+
+    // Inserimento tramite l'operatore di array associativo [].
+    // Se la chiave non esiste, la crea; altrimenti, ne aggiorna il valore.
+    coll["VAT"] = 0.15;
+    coll["Pi"] = 3.1415;
+    coll["an arbitrary number"] = 4983.223;
+    coll["Null"] = 0; 
+
+    // Iterazione su tutti gli elementi (in ordine alfabetico di chiave).
+    for (StringFloatMap::iterator pos = coll.begin(); pos != coll.end(); ++pos) {
+        // pos->first e' la chiave (stringa); pos->second e' il valore (float).
+        cout << "key: " << pos->first << " \\ "
+             << "value: " << pos->second << endl; 
+    }
+    return 0;
+}
+\end{lstlisting}
+\newpage
+\noindent
+Gli iteratori possono avere altre funzionalità, oltre quelle di base.
+Le funzionalità addizionali dipendono dal tipo di container.
+Gli iteratori si dividono in due categorie:
+\begin{itemize}[leftmargin=1.5em] 
+    \item \textbf{Iteratori bidirezionali}: Possono agire in due direzioni, in avanti, con l’operatore di incremento o, indietro con l’operatore di decremento. In questa tipologia ricadono gli iteratori per le classi dei container list, set, multiset, map, multimap.
+
+    \item  \textbf{Iteratori ad accesso casuale}: Hanno gli operatori necessari a poter definire una “aritmetica degli iteratori” (analoga a quella dei puntatori). In questa tipologia ricadono gli iteratori per le classi dei container vector e deque.
+\end{itemize}
+\noindent
+\\
+NB: se si vuole scrivere codice generico (indipendente dal container)
+meglio usare solo gli operatori degli iteratori bidirezionali
+\vspace{10pt}
+\subsection{Algoritmi della STL}
+La STL fornisce una serie di algoritmi per processare elementi in collezioni che offrono servizi di base quali ricerca, ordinamento, copia, ecc...\\
+Gli algoritmi non sono funzioni membro delle classi container, ma funzioni globali che operano tramite iteratori.
+Il vantaggio è che sono implementati una volta per tutte indipendentemente
+dal container utilizzato.
+
+\begin{lstlisting}[style=mystyle, language=C++, caption={Esempio di utilizzo degli algoritmi STL}, label={lst:algorithms_example}]
+#include <iostream>
+#include <vector>
+#include <algorithm> // Necessario per tutti gli algoritmi STL
+using namespace std;
+
+int main() {
+    vector<int> coll; 
+    // Inserimento elementi in ordine arbitrario nel vettore.
+    coll.push_back(2);
+    coll.push_back(5);
+    coll.push_back(1);
+    coll.push_back(6);
+    coll.push_back(4);
+    coll.push_back(3);
+
+    // 1. Ricerca del Minimo e Massimo:
+    // min_element e max_element restituiscono un iteratore all'elemento trovato.
+    auto pos_min = min_element(coll.begin(), coll.end());
+    cout << "min: " << *pos_min << endl; // Stampa il valore minimo (1)
+
+    auto pos_max = max_element(coll.begin(), coll.end());
+    cout << "max: " << *pos_max << endl; // Stampa il valore massimo (6)
+
+    // 2. Ordinamento (Sort):
+    // L'algoritmo sort riordina gli elementi nell'intervallo [begin(), end()).
+    sort(coll.begin(), coll.end()); // Risultato in coll: 1 2 3 4 5 6
+
+    // 3. Ricerca specifica (Find):
+    // Trova la prima occorrenza del valore 3 e restituisce l'iteratore alla posizione.
+    auto pos = find(coll.begin(), coll.end(), 3); 
+
+    // 4. Inversione (Reverse):
+    // Inverte l'ordine degli elementi dall'elemento trovato (pos) fino alla fine.
+    reverse(pos, coll.end()); // Risultato in coll: 1 2 3 6 5 4
+
+    // Stampa tutti gli elementi del vettore dopo le modifiche.
+    for (pos = coll.begin(); pos != coll.end(); ++pos)
+        cout << *pos << " ";
+        
+    cout << endl;
+    return 0;
+}
+\end{lstlisting}
+\vspace{24pt}
+\subsubsection{Intervalli}
+\noindent
+Tutti gli algoritmi lavorano con uno o più intervalli (range) di
+elementi. Bisogna passare come argomento l’inizio e la fine di un intervallo, anziché l’intera collezione come un unico elemento.
+E compito dell’utente assicurarsi che l’intervallo sia valido. Ogni algoritmo processa intervalli chiusi a sinistra (come quelli usati dagli iteratori).
+
+\begin{lstlisting}[style=mystyle, language=C++, caption={Algoritmo for\_each()}, label={lst:foreach_example}]
+#include <iostream>
+#include <vector>
+#include <algorithm> // Necessario per for_each
+using namespace std;
+
+// Funzione predicato: definita per stampare ogni elemento ricevuto in input.
+void print (int elem) {
+    cout << elem << ' '; 
+}
+
+int main() {
+    vector<int> coll; 
+    // Inserimento elementi da 1 a 9 nel vettore.
+    for (int i=1; i<=9; ++i) {
+        coll.push_back(i);
+    }
+    
+    // for_each: Applica la funzione 'print' a tutti gli elementi nel range [begin, end).
+    // range: coll.begin(), coll.end()
+    // operation: print
+    for_each (coll.begin(), coll.end(), print); 
+
+    cout << endl;
+    return 0;
+}
+\end{lstlisting}
+
+\vspace{16pt}
+\subsubsection{Predicati}
+Un predicato è un tipo speciale di funzione ausiliaria per gli algoritmi, restituiscono un valore booleano.
+Sono spesso usati come criteri di discriminazione nelle procedure di
+ordinamento e di ricerca e possono essere di due tipi: \textbf{unari} o \textbf{binari}. Inoltre devono restituire sempre lo stesso risultato dato lo stesso input.
+
+
+\begin{itemize}[leftmargin=1em]
+    \item \textbf{Predicati unari}: Controllano specifiche proprietà di un singolo argomento. Esempio: funzione isPrime.
+    \item \textbf{Predicati binari}: Usati per confrontare specifiche proprietà di due argomenti. 
+\end{itemize}
+
+\noindent
+Necessario quando, ad esempio, voglio ordinare una collezione di
+elementi per cui non è definito l’operatore \textbf{<}.
+
+\begin{lstlisting}[style=mystyle, language=C++, caption={Algoritmo find\_if(): uso di un predicato per la ricerca}, label={lst:findif_example}]
+#include <iostream>
+#include <list>
+#include <algorithm> // Necessario per find_if
+#include <cstdlib> // Necessario per la funzione abs()
+using namespace std;
+
+// PREDICATO: Funzione che definisce il criterio di ricerca.
+// Deve restituire un valore booleano (true o false).
+bool isPrime (int number) {
+    int num = abs(number); // Considera solo il segno positivo
+    if (num <= 1) return false; // 0 e 1 non sono primi
+    
+    // Controlla l'esistenza di un divisore > 1.
+    for (int divisor = num/2; divisor > 1; --divisor) {
+        if (num % divisor == 0) return false;
+    }
+    // Se il ciclo finisce senza trovare divisori, il numero e' primo.
+    return true;
+}
+
+int main() {
+    list<int> coll; 
+    // Inserisce elementi da 24 a 30.
+    for (int i=24; i<=30; ++i)
+        coll.push_back(i); 
+
+    // find_if: Cerca il primo elemento nel range [begin, end) per cui la funzione predicato (isPrime) restituisce true.
+    list<int>::iterator pos = 
+        find_if(coll.begin(), coll.end(), isPrime); 
+
+    // Il valore trovato e' 29.
+    if (pos != coll.end()) {
+        cout << *pos << " is first prime number found" << endl; 
+    } else {
+        cout << "no prime number found" << endl;
+    }
+    return 0;
+}
+\end{lstlisting}
+
+
     \newpage
     \section{Divide-et-impera}
 
@@ -4400,4 +5030,8 @@ bstree * rotateright(bstree *x) {
     Quando i costi risultano essere migliori del corrispondente algoritmo iterativo.
     \subsubsection*{Ulteriori vantaggi}
     È facile parallelizzare e c'è un utilizzo ottimale della cache.
+
+
+    \newpage
+    \section{Tabelle Hash}
 \end{document}
