@@ -94,4 +94,4 @@
 \contentsline {subsection}{\numberline {7.8}Moltiplicazione di matrici}{100}{subsection.7.8}%
 \contentsline {subsubsection}{\numberline {7.8.1}Algoritmo di Strassen}{101}{subsubsection.7.8.1}%
 \contentsline {subsection}{\numberline {7.9}Conclusioni}{101}{subsection.7.9}%
-\contentsline {section}{\numberline {8}Tabelle Hash}{102}{section.8}%
+\contentsline {section}{\numberline {8}Hashing}{102}{section.8}%
