@@ -1,0 +1,436 @@
+\section{Introduzione}
+La parola \textit{\textbf{algoritmo}}, un tempo utilizzata quasi esclusivamente da matematici e informatici, è oggi sempre più diffusa anche nel linguaggio comune.
+
+\vspace{8pt}
+\noindent
+Spesso viene impiegata in modo \textbf{vago o impreciso} per riferirsi a qualunque forma di automazione, decisione informatica o comportamento opaco dei \textbf{sistemi digitali}.\\
+Oltre a definire genericamente sistemi informatici, capita spesso che il termine algoritmo venga \textbf{usato per qualunque descrizione} di un procedimento che \textbf{risolva un problema}.
+Dunque, diamo delle definizioni che colleghino i concetti di algoritmo e problema computazionale.
+
+\subsection{Problemi computazionali e algoritmi}
+\begin{tcolorbox}[
+    colback=yellow!20, 
+    colframe=darkgray, 
+    title=Cos'è un problema computazionale?
+    ]
+    Dati un dominio di input e un dominio di output, un \textbf{problema computazionale} è rappresentato dalla \textbf{relazione matematica} che associa ogni elemento del dominio in input ad uno o piu elementi del dominio di output.
+\end{tcolorbox} 
+\noindent
+\textbf{\textit{Esempio:}} Immaginiamo di dover seguire una ricetta. L'input è dato dagli ingredienti, l'output è dato dal piatto cucinato, mentre il sistema formale di calcolo è dato dal cuoco.
+
+\begin{tcolorbox}[
+    colback=yellow!20, 
+    colframe=darkgray, 
+    title=Cos'è un algoritmo?
+    ]
+    Dato un problema computazionale, un algoritmo è un procedimento \textbf{effettivo} (di calcolo), espresso tramite un insieme di \textbf{passi elementari ben specificati} in un sistema formale di calcolo, che risolve il problema in un \textbf{tempo finito}.
+\end{tcolorbox}
+\noindent
+L'espressione \textbf{\textit{"in un tempo finito"}} implica che l'algoritmo deve terminare dopo un numero definito di passi, mentre \textbf{\textit{"passi elementari ben specificati"}}  si riferisce a operazioni descritte con precisione, realizzabili da un esecutore automatico.
+
+\subsubsection{Esempi di problemi computazionali e algoritmi}
+Per comprendere al meglio la differenza tra problema computazionale e algoritmo si considerino i seguenti problemi:
+\begin{tcolorbox}
+    [
+        colback=green!10,  % Sfondo verde chiaro
+        colframe=green!60!black,  % Bordo verde più acceso
+        coltitle=black,  % Colore del testo del titolo
+        fonttitle=\bfseries,  % Testo del titolo in grassetto
+        title={\centering \textbf{Problema del \textit{minimo}}},  % Titolo centrato 
+        enhanced,  % Miglioramenti grafici
+        attach boxed title to top center={yshift=-2mm},  % Posiziona il titolo centrato in alto
+        boxed title style={colback=white, colframe=green!60!black, rounded corners},
+        breakable
+    ]
+    Il minimo di un insieme $S$ è l'elemento di $S$ che è minore o uguale ad ogni elemento di $S$.
+    \[
+        min(S) = a \Leftrightarrow \exists a \in S: \forall b \in S : a \leqslant b
+    \]
+
+\end{tcolorbox}
+\begin{tcolorbox}
+    [
+        colback=green!10,  % Sfondo verde chiaro
+        colframe=green!60!black,  % Bordo verde più acceso
+        coltitle=black,  % Colore del testo del titolo
+        fonttitle=\bfseries,  % Testo del titolo in grassetto
+        title={\centering \textbf{Problema di \textit{ricerca}}},  % Titolo centrato 
+        enhanced,  % Miglioramenti grafici
+        attach boxed title to top center={yshift=-2mm},  % Posiziona il titolo centrato in alto
+        boxed title style={colback=white, colframe=green!60!black, rounded corners},
+        breakable
+    ]
+    Sia $S = S_1, S_2, ..., S_n$ una sequenza di dati ordinati e distinti, dove $S_1 \leqslant  S_2 \leqslant ... \leqslant S_n$.
+    Eseguire una ricerca dalla posizione di un dato $v$ in $S$ consiste nel restituire l'indice corrispondente, se $v$ è presente, oppure $-1$ se $v$ non è presente.
+    \vspace{-10pt}
+    \[
+        lookup(S,v)=
+        \begin{cases}
+            i \quad \exists i \in {0,..., n-1}: S_i=v\\
+            -1 \quad altrimenti
+        \end{cases}
+    \]
+\end{tcolorbox}
+\noindent
+Dunque, esiste una distinzione ben precisa fra \textit{il problema computazionale} che si vuole risolvere e gli \textit{algoritmi} che lo risolvono.\\
+Mentre un problema computazionale specifica quale relazione si desideri tra l'ingresso e l'uscita (cioè il risultato), l'algoritmo descrive la sequenza di azioni da eseguire per ottenere l'uscita desiderata a partire dall'ingresso.
+
+\vspace{8pt}
+\noindent
+In questo caso, dei possibili algoritmi che risolvono i problemi, sono i seguenti:
+\begin{itemize}[leftmargin=1em]
+    \item \textbf{Problema del \textit{minimo}}: Per trovare il minimo di un insieme, confronta ogni elemento con tutti gli altri; l'elemento che e minore di tutti è il minimo.
+    \item \textbf{Problema di \textit{ricerca}}: Per trovare un valore $v$ nella sequenza $S$, confronta $v$ con tutti gli elementi di $S$, in sequenza, e restituisci la posizione corrispondente; restituisci $-1$ se nessuno degli elementi corrisponde.
+\end{itemize}
+
+\vspace{8pt}
+\noindent
+Gli algoritmi che vengono scelti per la risoluzione di un problema computazionale devono presentare \textbf{passi non ambigui} ed \textbf{eseguibili}, proprio per questo un generico algoritmo è caratterizzato dalle seguenti \textbf{proprietà}:
+\begin{itemize}[leftmargin=1em]
+    \item \textbf{Atomicità}: l'algoritmo deve essere composto da passi elementari non scomponibili;
+    \item \textbf{Non ambiguità}: l'algoritmo non deve generare errori;
+    \item \textbf{Attualità}: l'algoritmo deve essere eseguibile;
+    \item \textbf{Finitezza}: si intende che l'algoritmo deve terminare in un tempo finito;
+    \item \textbf{Effettività}: l'algoritmo deve portare ad un risultato univoco.
+\end{itemize}
+
+\subsubsection{Come valutare l'algoritmo scelto}
+\begin{tcolorbox}[
+    colback=yellow!20, 
+    colframe=darkgray, 
+    title=Valutazione di un algoritmo
+    ]
+    La valutazione di un algoritmo consiste nello stabilire se quest'ultimo risolve il problema in modo \textbf{efficiente} e \textbf{corretto}.
+\end{tcolorbox}
+\noindent
+Per quanto riguarda il grado di \textbf{efficienza}:
+\begin{itemize}[leftmargin=1em]
+    \item Alcuni problemi \textbf{non possono} essere risolti in modo \textbf{efficiente}, quindi non esistono algoritmi noti che risolvano il problema.
+    \item Allo stesso modo, esistono soluzioni "ottime" che non possono essere portate ad un grado di efficienza maggiore proprio perché non è possibile essere più efficienti;
+    \item Altri problemi presentano, banalmente, delle soluzioni che funzionano ma non sono particolarmente efficienti;
+\end{itemize}
+Invece, la \textbf{correttezza di un algoritmo} viene dimostrata tramite:
+\begin{itemize}[leftmargin=1em]
+    \item Per quanto possibile, con una descrizione matematica;
+    \item Oppure utilizzando una descrizione "informale".
+\end{itemize}
+\textbf{\textit{N.B}}: alcuni problemi non possono essere risolti. Proprio perché alcuni problemi non possono essere risolti in maniera efficiente e corretta, vengono risolti in maniera approssimata.
+
+\subsubsection{Complessità di un algoritmo}
+\label{par:Complessità di un algoritmo}
+La ricerca di un algoritmo efficiente e corretto, porta alla definizione di un ulteriore concetto, quello della \textit{"complessità di un algoritmo"}.
+\begin{tcolorbox}[
+    colback=yellow!20, 
+    colframe=darkgray, 
+    title=Complessità di un algoritmo
+    ]
+    La \textbf{complessità di un algoritmo} è data dall'analisi delle risorse da esso impiegate per risolvere un problema, in funzione della dimensione e della tipologia dell'input.
+\end{tcolorbox}
+\noindent
+Quando si parla di \textit{risorse impiegate da un algoritmo}, ci si riferisce a:
+\begin{itemize}[leftmargin=1em]
+    \item \textbf{\textit{Tempo}}: ovvero il tempo impiegato per completare l'algoritmo.\\
+    Misurare il tempo di esecuzione di un algoritmo considerando il tempo di calcolo in senso assoluto (secondi, minuti, ecc.) rappresenta un \textbf{approccio errato} perché dipende da troppi parametri a seconda della piattaforma utilizzata per la misura:
+    \begin{itemize}[leftmargin=1em, label=\raisebox{0.4ex}{\phantom{1}\rule{0.6ex}{0.6ex}}]
+        \item Frequenza del processore;
+        \item Linguaggio di programmazione utilizzato;
+        \item Ottimizzazione del compilatore utilizzato;
+        \item Interazione tra memoria primaria (anche memorie cache) e secondaria;
+        \item Velocità di trasmissione dati del bus;
+        \item Processi attualmente in esecuzione;
+        \item ecc \dots
+    \end{itemize} 
+    Proprio per questo motivo quando si parla di \textit{tempo impiegato dall'algoritmo} ci si riferisce al \textbf{numero di operazioni rilevanti}, ovvero il numero di operazioni che caratterizzano lo scopo dell'algoritmo, come ad esempio, contare operazioni elementari come i confronti, che rappresentano una misura più stabile e indipendente dalla piattaforma (capitolo \ref{par:Definizione di tempo e modello di calcolo}).
+    \item \textbf{\textit{Spazio}}: Quantità di memoria utilizzata;
+    \item \textbf{\textit{Banda}}: quantità di bit spediti.
+\end{itemize}
+
+\vspace{8pt}
+\noindent
+
+\subsection{Strutture dati}
+In un linguaggio di programmazione, un \textbf{dato} è un \textbf{valore che una variabile può assumere}.
+\begin{tcolorbox}[
+    colback=yellow!20, 
+    colframe=darkgray, 
+    title=Cos'è una struttura dati?
+    ]
+    
+    Una \textbf{struttura dati} è un modo per organizzare e memorizzare i dati sui supporti fisici.
+\end{tcolorbox} 
+\noindent
+Le strutture dati offrono il \textbf{vantaggio} di permettere una \textbf{buona organizzazione} dei dati permettendo così di \textbf{semplificare} l'\textbf{accesso} e la \textbf{modifica} degli stessi, influendo in modo diretto sull'efficienza dell'algoritmo.\\
+Dunque, la caratteristica principale non è tanto il \textit{tipo dei dati}, contenuti all'interno della struttura, ma \textbf{il modo in cui viene organizzata la collezione}.\\
+Possiamo definire una struttura dati utilizzando \textbf{due elementi}:
+\begin{itemize}[leftmargin=1em]
+    \item \textbf{\textit{Insieme di operatori}}: ovvero l'insieme di operatori che permettono di manipolare la struttura (inserimenti, eliminazioni, ricerca, ordinamento, ecc\dots) ;
+    \item \textbf{\textit{Modo sistematico di organizzare i dati}}: indica il modo in cui i dati sono memorizzati e collegati tra loro (ad esempio, in modo sequenziale, a grafo o ad albero).
+\end{itemize}
+È importante notare che \textbf{non esiste una struttura dati adatta a qualsiasi compito}, quindi risulta utile considerare e conoscere i \textbf{vantaggi e svantaggi} di diverse strutture.
+
+\subsubsection{Tipologie di strutture dati}
+Le strutture dati possono essere classificate in base a diversi criteri:
+\begin{itemize}[leftmargin=1em]
+    \item \textbf{Lineari} e \textbf{non lineari}: nelle strutture lineari gli elementi sono \textbf{disposti in sequenza} (ad esempio, array o liste), mentre nelle strutture non lineari ogni elemento \textbf{può collegarsi a più elementi} (ad esempio alberi o grafi);
+    \item \textbf{Statiche} e \textbf{dinamiche}: nelle strutture statiche la \textbf{dimensione è fissa} (come ad esempio negli array), mentre nelle  strutture dinamiche la dimensione \textbf{può variare nel tempo} (ad esempio liste collegate);
+    \item \textbf{Omogenee} e \textbf{disomogenee}: le strutture omogenee presentano una collezione di \textbf{dati dello stesso tipo} (come ad esempio un array di interi), invece, le strutture disomogenee presentano collezioni di \textbf{dati di tipologie differenti}.
+\end{itemize}
+
+\subsubsection{Le sequenze}
+\begin{tcolorbox}[
+    colback=yellow!20, 
+    colframe=darkgray, 
+    title=Cos'è una sequenza?
+    ]
+    
+    Una \textbf{sequenza}, è una struttura dati \textbf{dinamica} e \textbf{lineare} che rappresenta una sequenza ordinata di valori, all'interno della quale uno stesso valore può \textbf{comparire} anche \textbf{più di una volta}. 
+\end{tcolorbox} 
+\noindent
+L'\textbf{ordine} della collezione di dati all'interno della sequenza è \textbf{importante}, di tipo \textbf{posizionale}.\\
+Data una generica sequenza $S = S_1, S_2, ..., S_n$ è possibile aggiungere o togliere elementi, mantenendo la struttura ordinata della sequenza: per indicare un generico elemento $S_i$ della sequenza si utilizza il parametro $pos_i$, che rappresenta una \textbf{posizione logica} nella sequenza; dunque, è possibile accedere direttamente alla testa con $pos_0$ e alla coda con $pos_n$.
+
+\vspace{8pt}
+\noindent
+\textbf{\textit{Alcuni esempi}}: di seguito verranno illustrate alcune operazioni effettuate sulle sequenze.
+\begin{figure}[H]
+    \centering
+    \vspace{-8pt}  % Riduce lo spazio sopra
+    \includegraphics[width=0.8\textwidth]{introduzione/img1.png}    
+    \vspace{-5pt}     
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \vspace{-8pt}  % Riduce lo spazio sopra
+    \includegraphics[width=0.8\textwidth]{introduzione/img2.png}    
+    \vspace{-5pt}     
+\end{figure}
+
+\noindent
+Esempio di creazione di una sequenza il linguaggio \textit{C++}
+\begin{lstlisting}[style=mystyle, language=C++]
+std::list<int> lista;
+lista.push_front(2);
+lista.push_front(1);
+lista.push_back(3);
+
+Result: [1, 2, 3]
+\end{lstlisting}
+
+\subsubsection{Gli Insiemi}
+\begin{tcolorbox}[
+    colback=yellow!20, 
+    colframe=darkgray, 
+    title=Cos'è un insieme?
+    ]
+    Un \textbf{insieme} è una struttura dati \textbf{dinamica} e \textbf{non lineare} che memorizza una collezione \textbf{non ordinata} di elementi senza valori ripetuti.
+\end{tcolorbox}
+\noindent
+A differenza delle sequenze, per ordinare un insieme, bisogna introdurre il concetto di \textbf{relazione d'ordine}.
+Infatti, nelle sequenze (come array o liste), l'ordine degli elementi non dipende \textbf{dal loro valore}, ma dalla \textbf{posizione che occupano}.   
+Quindi non serve definire una “relazione d'ordine” tra gli elementi: la struttura stessa impone un ordine.
+
+\vspace{8pt}
+\noindent
+Gli insiemi, invece, sono per definizione una collezione di elementi unici ma senza un ordine posizionale.
+Quindi, in un \textbf{insieme}, l'ordinamento fra elementi è dato dall'\textbf{\textit{eventuale relazione d'ordine definita sul tipo degli elementi stessi}}. Per questo motivo, se vogliamo ordinare gli elementi, è necessario specificare in che modo come avviene il confronto.\\
+\textbf{\textit{Esempio:}} nel caso degli \textbf{interi}, il confronto è immediato, poiché esiste un ordine naturale tra i valori numerici ($1 < 2 < 3 < \dots$).  
+Per le \textbf{stringhe}, invece, l'ordinamento si basa sull'\textbf{ordine lessicografico}, ossia sul confronto dei caratteri secondo la sequenza alfabetica (ad esempio, \textit{"cane"} precede \textit{"gatto"} perché la lettera \textit{"c"} viene prima della \textit{"g"} nell'alfabeto).
+
+\vspace{8pt}
+\noindent
+Lavorando con gli insiemi, le operazioni ammesse sulle collezioni di dati sono le seguenti:
+\begin{itemize}[leftmargin=1em]
+    \item \textbf{Operazioni base}: inserimento, cancellazione, verifica contenimento;
+    \item \textbf{Operazioni di ordinamento}: massimo e minimo;
+    \item \textbf{Operazioni di insiemistiche}: unione, intersezione, differenza;
+    \item \textbf{Iteratori}: \textit{foreach} $x \in S \; do$
+\end{itemize}
+\begin{figure}[H]
+    \addtocounter{figure}{1}
+    \centering
+    \vspace{-8pt}  % Riduce lo spazio sopra
+    \includegraphics[width=0.8\textwidth]{introduzione/img3.png}    
+    \vspace{-5pt}     
+\end{figure}
+\noindent
+Esempio di creazione di un insieme il linguaggio \textit{C++}
+\begin{lstlisting}[style=mystyle, language=C++]
+std::set<std::string> frutta;
+frutta.insert("mele");
+frutta.insert("pere");
+frutta.insert("banane");
+frutta.insert("mele");
+frutta.remove("mele");
+Result: ["banane", "pere"]
+\end{lstlisting}
+
+\subsubsection{I dizionari}
+\label{par:I dizionari}
+\begin{tcolorbox}[
+    colback=yellow!20, 
+    colframe=darkgray, 
+    title=Cos'è un dizionario?
+    ]
+    Un \textbf{dizionario} è una struttura dati che rappresenta il concetto matematico di relazione univoca $R: D \rightarrow C$, o associazione chiave valore, dove:
+    \begin{itemize}[leftmargin=1em]
+        \item L'insieme $D$ è il dominio (elementi detti chiavi);
+        \item L'insieme $C$ è il codominio (elementi detti valori)
+    \end{itemize}
+\end{tcolorbox}
+\noindent
+Con questa tipologia di struttura dati, sono ammesse le seguenti operazioni:
+\begin{itemize}[leftmargin=1em]
+    \item Ottenere il valore associato ad una particolare chiave (se presente), o \textbf{\textit{nil} (null)} se assente;
+    \item Inserire una nuova associazione chiave-valore, cancellando eventuali associazioni precedenti per la stessa chiave;
+    \item Rimuovere unassociazione chiave-valore esistente;
+\end{itemize}
+\begin{figure}[H]
+    \centering
+    \vspace{-8pt}  % Riduce lo spazio sopra
+    \includegraphics[width=0.78\textwidth]{introduzione/img4.png}    
+    \vspace{-5pt}     
+\end{figure}
+
+\subsection{I puntatori}
+\begin{tcolorbox}[
+    colback=yellow!20, 
+    colframe=darkgray, 
+    title=Cos'è un puntatore?
+    ]
+    Un \textbf{puntatore} è una variabile che contiene un \textbf{indirizzo di memoria}. Spesso, l'indirizzo è la locazione di memoria di un'altra variabile.
+\end{tcolorbox}
+\noindent
+\textbf{\textit{N.B}}: un puntatore non può contenere un valore che non sia un indirizzo.\\
+Gli usi tipici dei puntatori sono la creazione di strutture dati collegate come alberi e liste, la gestione di oggetti allocati dinamicamente e come parametri di funzioni.
+
+\vspace{8pt}
+\noindent
+Ogni puntatore ha un tipo associato. La differenza non sta nella rappresentazione dei puntatori, ma nel tipo dell'oggetto puntato. Le variabili dei puntatori devono essere dichiarate come tali:
+\begin{lstlisting}[style=mystyle, language=C++]
+int *p; //Puntatore a intero
+float *p; //Puntatore a float
+\end{lstlisting}
+Gli operatori speciali che vengono utilizzati con i puntatori sono $\ast$ e \&:
+\begin{itemize}[leftmargin=1em]
+    \item \& $\rightarrow$ è un operatore \textbf{unario} che restituisce l'\textbf{indirizzo di memoria} del suo operando;
+    \begin{lstlisting}[style=mystyle, language=C++]
+balptr = &balance //mette in balptr l'indirizzo di memoria di balace.
+    \end{lstlisting}
+    \item $\ast \rightarrow$ è un operatore \textbf{unario} che restituisce \textbf{il valore} della variabile allocata all'indirizzo specificato dal suo operando.
+    \begin{lstlisting}[style=mystyle, language=C++]
+value = *balptr //se balptr contiene l'indirzzo di balance, il  valore della variabile balance viene messo in value.
+    \end{lstlisting}
+\end{itemize}
+
+\vspace{8pt}
+\noindent
+\textbf{\textit{Esempio}}: esercizio con puntatori
+
+\vspace{-15pt}
+\noindent
+\begin{minipage}[t]{0.565\textwidth}  
+    \begin{lstlisting}[style=mystyle, language=C++]
+#include <iostream>
+int main() {
+    int j = 12;
+    int *ptr = &j;
+
+    cout << *ptr << endl;
+
+    j = 24;
+    cout << *ptr << endl;
+    cout << ptr << endl;
+    return 0;
+}
+    \end{lstlisting}   
+\end{minipage}%
+\hspace{5pt} % Spazio tra immagine e testo
+\raisebox{21pt}{  
+    \begin{minipage}[t]{0.427\textwidth}
+        \begin{figure}[H]
+            \includegraphics[width=0.65\linewidth]{introduzione/img7.png}          
+        \end{figure}
+        L'output del programma è il seguente:\\
+        $12$\\
+        $24$\\
+        $0x7b03a928$ (indirizzo di memoria)
+    \end{minipage}   
+}
+
+\subsubsection{Puntatori nulli}
+\begin{tcolorbox}[
+    colback=yellow!20, 
+    colframe=darkgray, 
+    title=Cos'è un puntatore?
+    ]
+    Un puntatore può contenere il valore $0$ a indicare che non punta ad alcun oggetto.\\
+    In questo caso viene detto \textbf{puntatore nullo}.
+\end{tcolorbox}
+
+\newpage
+\noindent
+In questo caso, provando a stampare un puntatore nullo, si ottiene un errore.
+
+\vspace{-12pt}
+\noindent
+\begin{minipage}[t]{0.5\textwidth}  
+    \begin{lstlisting}[style=mystyle, language=C++]
+#include <iostream>
+int main() {
+int j = 12;
+int *ptr = 0;
+cout << *ptr << endl; // crash !
+return 0;
+}
+    \end{lstlisting}   
+\end{minipage}%
+\hspace{5pt} % Spazio tra immagine e testo
+\raisebox{20pt}{  
+    \begin{minipage}[t]{0.468\textwidth}
+        \begin{figure}[H]
+            \includegraphics[width=\linewidth]{introduzione/img8.png}          
+        \end{figure}
+    \end{minipage}   
+}
+
+\vspace{8pt}
+\noindent
+\textbf{\textit{Esempio}}: come i puntatori vengono utilizzati con gli array
+
+\begin{lstlisting}[style=mystyle, language=C++]
+//Alcune implementazioni di array in c++
+int x[] = { 1, 2, 3, 4 };
+char[] t = { 'C', 'i', 'a', 'o','\0'};
+char[] s = "Ciao";
+int m[2][3] = { {11, 12, 13}, {21, 22, 23} };
+\end{lstlisting}
+
+\vspace{-15pt}
+\noindent
+\begin{minipage}[t]{0.5\textwidth}  
+    \begin{lstlisting}[style=mystyle, language=C++]
+int main() {
+    float x[5];
+    int j;
+
+    for (j = 0; j < 5; j++){
+        x[j] = 0;
+    }
+    float *ptr = x;
+    *ptr = 1.5; // x[0] = 1.5
+    *(ptr+1) = 2.5; // x[1] = 2.5
+    *(ptr+3) = 3.5; // x[3] = 3.5
+}
+    \end{lstlisting}   
+\end{minipage}%
+\hspace{5pt} % Spazio tra immagine e testo
+\raisebox{19pt}{  
+    \begin{minipage}[t]{0.468\textwidth}
+        \begin{figure}[H]
+            \includegraphics[width=\linewidth]{introduzione/img9.png}          
+        \end{figure}
+
+        \vspace{-12pt}
+        Utilizzando gli array, non è necessario specificare che \texttt{ptr} punti ad un indirizzo, come fatto precedentemente (\texttt{*ptr = \&j}), proprio perché \texttt{x} rappresenta di per sé l'indirizzo della prima posizione dell'array. 
+    \end{minipage}   
+}

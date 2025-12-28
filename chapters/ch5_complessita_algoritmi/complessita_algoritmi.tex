@@ -1,0 +1,922 @@
+\section{Analisi della complessità degli algoritmi}
+\begin{tcolorbox}[
+    colback=yellow!20, 
+    colframe=darkgray, 
+    title=Obbiettivo
+    ]
+    L'obiettivo dell'\textbf{analisi} degli algoritmi è quello di \textbf{stimare la loro complessità} in termini di \textbf{tempo di calcolo}.
+\end{tcolorbox}
+\noindent
+Dunque, l'analisi della complessità degli algoritmi torna \textbf{utile} per \textbf{svariati motivi}:
+\begin{itemize}[leftmargin=1em]
+    \item Stimare il tempo impiegato per un dato in input;
+    \item Stimare il più grande input gestibile in tempi ragionevoli;
+    \item Confrontare l'efficienza di algoritmi diversi;
+    \item Ottimizzare le parti più importanti.
+\end{itemize}
+
+\subsection{Complessità e dimensione dell'input}
+\begin{tcolorbox}[
+    colback=yellow!20, 
+    colframe=darkgray, 
+    title=Cos'è la complessità?
+    ]
+    
+    Possiamo definire la \textbf{complessità} come una funzione matematica che descrive l'andamento del tempo di calcolo in relazione alla \textit{\textbf{dimensione dell'input}}.\\
+    $T: "Dimensione\;dell'input" \rightarrow "Tempo\;di\;calcolo"$
+\end{tcolorbox}
+\noindent
+Dunque, maggiore è la dimensione dell'input, maggiore è il tempo di calcolo, con una \textbf{conseguente crescita} delle \textbf{risorse impiegate} dall'algoritmo per risolvere il problema.\\
+Le due principali tipologie di risorse impiegate sono:
+\begin{itemize}[leftmargin=1em]
+    \item \textit{Risorse di \textbf{complessità temporale}}: cioè la quantità di tempo richiesta dall'algoritmo;
+    \item \textit{Risorse di \textbf{complessità spaziale}}: la quantità di memoria necessaria durante l'esecuzione.
+\end{itemize}
+In realtà, \textit{complessità spaziale} diventa un problema secondario, che si andrà ad analizzare solo nel caso in cui, confrontando due algoritmi per determinarne il \textit{"migliore"}, abbiano la stessa complessità in termini di tempo.
+
+\vspace{-3pt}
+\begin{tcolorbox}
+    [
+        colback=green!10,  % Sfondo verde chiaro
+        colframe=green!60!black,  % Bordo verde più acceso
+        coltitle=black,  % Colore del testo del titolo
+        fonttitle=\bfseries,  % Testo del titolo in grassetto
+        title={\centering \textbf{\textit{Dimensione dell'input}}},  % Titolo centrato 
+        enhanced,  % Miglioramenti grafici
+        attach boxed title to top center={yshift=-2mm},  % Posiziona il titolo centrato in alto
+        boxed title style={colback=white, colframe=green!60!black, rounded corners},
+        breakable
+    ]
+    Con dimensione dell'input intendiamo la sua \textbf{taglia}, e abbiamo due possibili casi:
+
+    \vspace{4pt}
+    \begin{itemize}[leftmargin=1em]
+        \item \textit{Criterio di \textbf{costo uniforme}}: la taglia dell'input è il \textbf{numero di elementi di cui è costituito}. In altre parole, ogni elemento dell'input costa $1$ unità, \textbf{indipendentemente} da quanti \textbf{bit servono per rappresentarlo}.\\
+        \textbf{\textit{Esempio}}: per la ricerca del minimo in un vettore di $n$ elementi, l'algoritmo che lo elabora avrà un costo \textbf{proporzionale a $n$}.
+
+        \vspace{4pt}
+        \item \textit{Criterio di \textbf{costo logaritmico}}: la taglia dell'input è il \textbf{numero di bit necessari per rappresentarlo}. In questo caso, il costo dell'elaborazione dipende direttamente dalla \textbf{lunghezza in bit} dei dati in ingresso, e non dal numero di elementi di cui è composto.\\
+        \textbf{\textit{Esempio}}: avendo in ingresso un numero intero molto grande, si può considerare il numero di bit necessari per rappresentarli.
+    \end{itemize}
+\end{tcolorbox}
+\noindent
+Nella pratica, se ogni elemento dell'input occupa un numero costante di bit, allora i due criteri (uniforme e logaritmico) forniscono risultati equivalenti, \textbf{a meno} di una \textbf{costante moltiplicativa} applicata alla dimensione dell'\textbf{input}.
+Ad esempio, un input costituito da $n$ byte (criterio di costo uniforme) corrisponde a $8n$ bit (criterio di costo logaritmico).
+
+\subsection{Definizione di tempo e modello di calcolo} 
+\label{par:Definizione di tempo e modello di calcolo}
+Tuttavia, come introdotto al capitolo \ref{par:Complessità di un algoritmo}, l'approccio più immediato per valutare il \textbf{tempo di esecuzione/calcolo} di un algoritmo, non è quello di misurare i secondi impiegati dal calcolatore poiché entrerebbero in gioco dei fattori esterni, non dipendenti dall'algoritmo stesso. Quindi misurando solo \textit{"quanti secondi impiega un'algoritmo"}, non si possono confrontare gli algoritmi in modo universale, ma solo \textit{"sul computer in quel determinato momento"}.
+
+\vspace{8pt}
+\noindent
+L'\textbf{analisi della complessità} vuole invece essere \textbf{indipendente dal calcolatore}, proprio per questo, un \textbf{approccio} sicuramente \textbf{migliore} è quello di considerare come \textit{"tempo di calcolo"} il numero di istruzioni elementari eseguite.
+\begin{tcolorbox}[
+    colback=yellow!20, 
+    colframe=darkgray, 
+    title=Tempo $\equiv$ numero istruzioni elementari
+    ]
+    Un'\textbf{istruzione} viene considerata \textbf{elementare} se può essere eseguita in tempo \textit{"costante"} dal processore (Il tempo di esecuzione \textit{\textbf{corrisponde}} al numero di istruzioni elementari).
+\end{tcolorbox}
+\begin{tcolorbox}[
+    colback=yellow!20, 
+    colframe=darkgray, 
+    title=Cos'è il tempo di calcolo?
+    ]
+    Poiché i problemi da risolvere hanno una dimensione che dipende dalla grandezza dei dati di ingresso, viene spontaneo esprimere il \textbf{tempo di calcolo} come: \textit{il \textbf{costo complessivo} delle \textbf{operazioni elementari} in funzione della \textbf{dimensione $n$ dei dati} in ingresso}.
+\end{tcolorbox}
+\noindent
+Per poter capire quali istruzioni debbano essere considerate elementari, si utilizza il concetto di \textbf{modello di calcolo}, ovvero una rappresentazione semplificata ma rigorosa di un calcolatore, che definisce \textbf{quali operazioni} sono \textbf{ammesse} e \textbf{quanto costano}, tutto ciò in modo \textbf{indipendente} dalle caratteristiche \textbf{dell'hardware}.\\
+Un buon modello di calcolo \textbf{soddisfa tre requisiti} fondamentali:
+\begin{itemize}[leftmargin=1em]
+    \item \textit{\textbf{Astrazione}}: deve permettere di \textbf{ignorare} i \textbf{dettagli irrilevanti} del calcolatore (ad esempio, non interessa conoscere la tipologia di processore e di quanta memoria disponga);
+    \item \textit{\textbf{Realismo}}: deve riflettere una situazione reale;
+    \item \textit{\textbf{Potenza matematica}}: deve consentire di trarre conclusioni matematiche (formali) sul costo computazionale.
+\end{itemize}
+
+\subsubsection{Random Access Machine (RAM)}
+Il modello di calcolo che normalmente viene utilizzato è detto \textbf{Random Access Machine (RAM)} ed è caratterizzato da:
+\begin{itemize}[leftmargin=1em]
+    \item \textit{\textbf{Memoria}}: si assume che la memoria presenti una quantità infinita di celle di dimensione finita, poiché si vuole capire il funzionamento dell'algoritmo al crescere della dimensione dell'input, ciascuna delle quali è accessibile in tempo costante;
+    \item \textit{\textbf{Processore (singolo)}}: ha un processore singolo che esegue un insieme limitato di \textbf{istruzioni elementari} (come somma, sottrazione, moltiplicazione, operazioni logiche, salti condizionati, ecc\dots);
+    \item  \textit{\textbf{Costo delle istruzioni elementari}}: ad ogni istruzione elementare viene assegnato, un \textbf{costo costante}, che rappresenta il tempo richiesto per eseguirla.
+\end{itemize}
+\noindent
+Lo scopo finale non è confrontare le prestazioni dei processori (compito dei benchmark), ma determinare se un algoritmo è più efficiente di un altro.
+
+\subsection{Valutazione del caso pessimo, medio e ottimo}
+\label{par:Valutazione del caso pessimo, medio e ottimo}
+Principalmente, il costo delle singole operazioni è valutato nel \textbf{caso pessimo}, ovvero sul dato di ingresso più sfavorevole tra tutti quelli di dimensione $n$.\\
+In alternativa, si può considerare anche il \textbf{caso medio}, calcolando la media dei costi su tutti i possibili input di dimensione $n$, pesata in base alla probabilità con cui ciascun dato può verificarsi. Mentre, talvolta si introduce anche il \textbf{caso ottimo} che rappresenta il costo minimo dell'algoritmo su un input di diemnsione $n$.
+
+\vspace{8pt}
+\noindent
+Il caso ottimo è \textbf{raramente utile}: infatti un buon comportamento nel caso ottimo \textbf{non garantisce prestazioni accettabili negli altri casi} e può dare un'\textbf{illusione di efficienza} non rappresentativa del comportamento complessivo dell'algoritmo.
+\begin{tcolorbox}
+    [
+        colback=green!10,  % Sfondo verde chiaro
+        colframe=green!60!black,  % Bordo verde più acceso
+        coltitle=black,  % Colore del testo del titolo
+        fonttitle=\bfseries,  % Testo del titolo in grassetto
+        title={\centering \textbf{Perché valutiamo il caso pessimo se può verificarsi molto raramente?}},  % Titolo centrato 
+        enhanced,  % Miglioramenti grafici
+        attach boxed title to top center={yshift=-2mm},  % Posiziona il titolo centrato in alto
+        boxed title style={colback=white, colframe=green!60!black, rounded corners},
+        breakable
+    ]
+    Il vantaggio del caso pessimo è dato dal fatto che questo tipo di valutazione non richiederà mai, per nessun dato di dimensione $n$, un tempo maggiore.\\
+    Invece, la valutazione nel caso medio sembra più realistica, ma è ignota la distribuzione di probabilità: spesso viene utilizzata una distribuzione uniforme che per molti problemi è irrealistica 
+\end{tcolorbox}
+
+\subsubsection{Tempo di calcolo della funzione \texttt{min()} (iterativa)}
+\label{par:Tempo_calcolo_min_iterativa}
+In questo caso si vuole stimare il tempo di calcolo della funzione \texttt{min()} che si occupa di trovare l'elemento più piccolo all'interno di un vettore. Per prima cosa si controlla il numero delle operazioni elementari dalla quale è costituita la funzione in esame.\\ A questo punto possiamo: 
+\begin{itemize}[leftmargin=1em]
+    \item Indicare con $C_h$ il costo richiesto per l'esecuzione dell'istruzione $h-$esima, perché non so esattamente quante operazioni macchina servano per eseguire l'istruzione (colonna "costo");
+    \item Inoltre, effettuando una valutazione nel \textbf{caso pessimo}, per ogni $h-$esima istruzione si specifica il \textbf{massimo numero di volte} che questa viene eseguita (colonna "\# Volte").
+\end{itemize}
+\begin{figure}[H]
+    \centering
+    \vspace{-10pt}  % Riduce lo spazio sopra
+    \includegraphics[width=\textwidth]{complessita_algoritmi/img1.png}
+    \vspace{-30pt}  % Riduce lo spazio sopra 
+\end{figure}
+\textbf{\textit{N.B}}: per quanto riguarda il ciclo for, è giusto scrivere che viene eseguito $n$ volte, poiché anche la $n-1$esima volta la riga viene eseguita prima di capire che la condizione non è rispettata. Infatti come si può notare, le istruzioni al suo interno vengono eseguite $n-1$ volte.
+
+\vspace{8pt}
+\noindent
+Dunque, il tempo di calcolo $T(n)$ di \texttt{min()} si ottiene sommando il prodotto del costo di ciascuna istruzione per il numero di volte che e stata eseguita:\\
+$T(n) = c_1 + c_2(n) + c_3(n-1) + c_4(n-1) + c_5 = (c_2 + c_3 + c_4)n + (c_1 + c_5 - c_3 - c_4) = an + b$\\
+(Posso scrivere $an + b$ perché non si conosce il valore dei costi da $c_1...c_5$).
+\begin{tcolorbox}
+    [
+        colback=green!10,  % Sfondo verde chiaro
+        colframe=green!60!black,  % Bordo verde più acceso
+        coltitle=black,  % Colore del testo del titolo
+        fonttitle=\bfseries,  % Testo del titolo in grassetto
+        title={\centering \textbf{Osservazioni sull'identificazione del caso}},  % Titolo centrato 
+        enhanced,  % Miglioramenti grafici
+        attach boxed title to top center={yshift=-2mm},  % Posiziona il titolo centrato in alto
+        boxed title style={colback=white, colframe=green!60!black, rounded corners},
+        breakable
+    ]
+    Per distinguere caso ottimo, medio e pessimo, occorre capire come varia il numero di operazioni dell'algoritmo al variare dell'input.\\
+    Nel caso della funzione \texttt{min()}, il numero di iterazioni del ciclo e il numero di confronti eseguiti sono \textbf{indipendenti dai valori dell'input}: il \texttt{for} viene sempre eseguito $n$ volte e il confronto viene sempre effettuato $n-1$ volte. \\
+    Di conseguenza, la funzione presenta un tempo di esecuzione $T(n)$ lineare sia nel caso pessimo sia nel caso medio.
+\end{tcolorbox}
+
+\subsubsection{Tempo di calcolo della funzione \texttt{binarySearch()} (ricorsiva)}
+\label{par:Tempo_calcolo_binary_search}
+In quest'altro caso si considera la funzione \texttt{binarySearch()} che si occupa di ricercare \textbf{la posizione} di un elemento all'interno di una sequenza ordinata, memorizzata in un vettore $A$.\\
+La logica che sta dietro la \textbf{ricerca binaria}, è la stessa che viene utilizzata per la ricerca di un nodo negli alberi binari: ogni volta che viene richiamata la funzione in modo ricorsivo, si elimina metà del vettore (\textbf{ricerca dicotomica} - capitolo \ref{par:Alberi binari di ricerca (BST)}).
+\begin{figure}[H]
+    \centering
+    \vspace{-10pt}  % Riduce lo spazio sopra
+    \includegraphics[width=\textwidth]{complessita_algoritmi/img2.png}
+    \vspace{-30pt}  % Riduce lo spazio sopra 
+\end{figure}
+\noindent
+A differenza del caso precedente (capitolo \ref{par:Tempo_calcolo_min_iterativa}), l'algoritmo esegue porzioni di codice differenti a seconda dei valori di input (\textit{i} e \textit{j}), che sono rispettivamente, l'\textbf{indice iniziale} del vettore e l'\textbf{indice finale} del vettore.
+Per avere una valutazione del tempo di calcolo si andrà a valutare il \textbf{caso pessimo} di \textbf{entrambe le porzioni} di codice, inserendo due colonne etichettate con "\#", che indicano quante volte ciascuna riga viene eseguita :
+\begin{itemize}[leftmargin=1em]
+    \item \textit{i $>$ j}: questa porzione di codice esegue direttamente la condizione di chiusura poiché se \textit{i} è maggiore di \textit{j} si sta indicando un insieme di elementi nullo in cui la posizione dell'elemento non può esistere.\\
+    In questo caso si può vedere come, nella colonna \#($i > j$), vengono eseguite solo le righe con costo $c_1$ e $c_2$, poiché subito dopo la ricorsione termina, di conseguenza tutte le altre righe vengono eseguite $0$ volte. Dunque il tempo di calcolo sarà dato da: $T(n) = c_1 + c_2 = c$, dove $n$ è zero perché non esiste una grandezza ($n$) specifica per il vettore.
+    \item \textit{i $<$ j}: in quest'altra porzione di codice il vettore viene suddiviso in due parti \textbf{sinistra} e \textbf{destra}. La parte sinistra ha grandezza $[(n-1)/2]$, mentre la parte destra $[n/2]$.\\
+    Il caso pessimo prevede la ricerca di un elemento \textbf{maggiore del massimo contenuto} nel
+
+    \vspace{-10pt}
+    \begin{minipage}[t]{0.550\textwidth} 
+        \vspace{2pt}
+        \includegraphics[width=\linewidth]{complessita_algoritmi/img3.png}
+    \end{minipage}%
+    \hspace{5pt} % Spazio tra immagine e testo
+    \raisebox{-10pt}{  
+        \begin{minipage}[t]{0.403\textwidth}
+            vettore, dunque $v$ sarà sempre maggiore di $A[m]$ e l'algoritmo sceglierà sempre la parte di vettore più grande ($[n/2]$).\\
+        \end{minipage} 
+    }
+    \begin{minipage}[t]{0.550\textwidth} 
+        \vspace{2pt}
+        \includegraphics[width=\linewidth]{complessita_algoritmi/img4.png}
+    \end{minipage}%
+    \hspace{5pt} % Spazio tra immagine e testo
+    \raisebox{-10pt}{  
+        \begin{minipage}[t]{0.403\textwidth}
+            La ricerca di un elemento non presente all'interno del vettore, causa l'esecuzione ricorsiva delle istruzioni con costo: $c_3, c_4, c_6, c_7+T(n/2)$.\\
+            Inoltre, ad ogni ricorsione viene esplorata la metà destra, scartatando metà degli elementi rimanenti, aggiornando gli indici di inizio ($i$), fine ($j$) e dell'elemento mediano del vettore 
+        \end{minipage} 
+    }
+
+    \vspace{5pt}
+    ($m$), fino ad esaurire tutti gli elementi. Il costo della funzione è quindi: $T(n) = c_1 + c_2 + c_4 + c_6 + c_7 + T(\frac{n}{2}) = d + T(\frac{n}{2})$ dove $d$ rappresenta la somma da $c_1...c_7$.
+
+    \vspace{8pt}
+    Questo significa che l'equazione non è definita in modo semplice da un solo valore, ma da una \textbf{relazione di ricorrenza} (capitolo \ref{par:Le ricorrenze}). Una tecnica che viene utilizzata per risolvere le\\
+    \begin{minipage}[t]{0.353\textwidth}  
+        \vspace{-23pt}
+        \[
+            T(n) =
+            \begin{cases}
+                c \quad  \quad  \quad \quad \; se \; n=0\\
+                T(\frac{n}{2}) + d \quad se \; n\geqslant 1
+            \end{cases}
+        \]
+    \end{minipage}% 
+    \hspace{5pt} % Spazio tra immagine e testo
+    \raisebox{0pt}{  
+        \begin{minipage}[t]{0.600\textwidth}
+            relazioni di ricorrenza consiste nel \textbf{produrre una catena di uguaglianze} ottenute per
+            sostituzioni successive.\\
+            Infatti possiamo scrivere che $T(n) = T(n/2)+d =$
+        \end{minipage}  
+    } 
+
+    \vspace{2pt}
+    $T(n/4)+2d = ... = T(n/2^k)+kd$, da cui possiamo ricavare che $\frac{n}{2^k} \Rightarrow k = log \; n$.\\
+    Andando avanti con la ricorrenza si arriverà ad un punto in cui $T(n/2^k)+kd = T(1) +kd = [T(0) + d] + kd = T(0) + d(k+1) = c + kd + d = d\; log\;n + (c+d)$.
+
+\end{itemize}
+
+\subsection{Ordini di complessità}
+Dopo aver analizzato gli algoritmi al capitolo \ref{par:Valutazione del caso pessimo, medio e ottimo} sono state ottenute due \textbf{funzioni di complessità}, con una \textbf{serie di parametri} che \textbf{non si è in grado di determinare}.\\
+Questa difficoltà viene aggirata utilizzando il concetto di \textbf{crescita asintotica}.
+\begin{tcolorbox}[
+    colback=yellow!20, 
+    colframe=darkgray, 
+    title=Concetto di crescita asintotica
+    ]
+    Quando analizziamo un algoritmo, non ci interessa tanto il tempo preciso di esecuzione, ma \textbf{come cresce questo tempo} quando la dimensione dell'input $n$ diventa molto grande.
+    \begin{itemize}[leftmargin=1em]
+        \item \textit{\textbf{Crescita lineare}}: \texttt{min}: $an + b \Rightarrow O(n)$ 
+        \item \textit{\textbf{Crescita logaritmica}}: \texttt{BinarySearch()}: $d\; log\;n + (c+d) \Rightarrow O(log \;n)$ 
+    \end{itemize}
+\end{tcolorbox}
+\noindent
+Questo concetto è utile perché permette di \textbf{confrontare algoritmi diversi} senza \textbf{preoccuparsi} delle costanti (che dipendono dall'hardware o dall'implementazione).\\
+Permette di capire \textbf{quale algoritmo sarà più efficiente} su input grandi, anche se su input piccoli può sembrare più lento.
+
+\vspace{8pt}
+\noindent
+\textbf{\textit{Esempio intuitivo}}: Supponiamo di avere due algoritmi.
+\begin{itemize}[leftmargin=1em]
+    \item \textbf{\textit{Algoritmo A}}: richiede $100n$ operazioni $\rightarrow$ complessità $O(n)$;
+    \item \textbf{\textit{Algoritmo B}}: richiede $n^2$ operazioni $\rightarrow$ complessità $O(n^2)$
+\end{itemize}
+\begin{itemize}[leftmargin=1em]
+    \item  [$\rightarrow$] Per $n=10$, \textit{A} fa $1000$ operazioni, mentre \textit{B} ne fa $100$;
+    \item [$\rightarrow$] Per $n=100$, \textit{A} fa $100.000$ operazioni, mentre \textit{B} ne fa $1.000.000$;
+\end{itemize}
+Quindi asintoticamente \textit{A} è il migliore, anche se su input piccolo \textit{B} sembrava il migliore.
+
+\subsubsection{Principali classi di efficienza asintotiche}
+\label{par:Principali classi di efficienza asintotiche}
+Nella seguente tabella vengono mostrati il numero di passi necessari per compleatre l'algoritmo in base alla complessità e alla dimensione dell'input.
+
+\vspace{-10pt} 
+\begin{figure}[h]
+    \centering
+    \vspace{-5pt}  % Riduce lo spazio sopra
+    \subfloat[]{%
+        \includegraphics[width=0.58\linewidth]{complessita_algoritmi/img5.png}
+    } 
+    \hspace{0.1cm}
+    \subfloat[]{%
+        \includegraphics[width=0.38\linewidth]{complessita_algoritmi/img9.png}
+    }
+\end{figure}
+\FloatBarrier
+
+\vspace{-12pt}
+\begin{itemize}[leftmargin=1em]
+    \item \textbf{Complessità \textit{logaritmica}}: Tipicamente, il risultato di ridurre le dimensioni del problema di un fattore costante ad ogni iterazione. \textbf{N.B}: un algoritmo in questa classe di effcienza non può tenere conto di tutto il suo input, altrimenti avrebbe effcienza lineare;
+    \item \textbf{Complessità \textit{lineare}}:  Algoritmi che e ettuano un numero costante di iterazioni sull input (ad esempio una ricerca sequenziale);
+    \item \textbf{Complessità \textit{loglineare} (o superlineare)}: Algoritmi che necessitano di effettuare almeno una scansione completa dell'input, ma che riducono di un fattore costante le iterazioni intermedie (ad esempio gli algoritmi divide-et-impera);
+    \item \textbf{Complessità \textit{quadratica}}: Tipica degli algoritmi che sono basati su due iterazioni annidate. Ad esempio, alcuni algoritmi di ordinamento che effettuano operazioni su matrici $n \cdot n$;
+    \item \textbf{Complessità \textit{cubica}}: Tipica degli algoritmi che sono basati su tre iterazioni annidate, diversi algoritmi di algebra lineare ricadono in questa classe;
+    \item \textbf{Complessità \textit{esponenziale}}: Algoritmi che e ettuano ricerca sui sottoinsiemi di un insieme di $n$ elementi;
+    \item \textbf{Complessità \textit{fattoriale}}: Algoritmi che e effettuano ricerca su permutazioni di un insieme di $n$ elementi.
+\end{itemize}
+
+
+\subsubsection{Notazioni asintotiche}
+Per \textbf{descrivere la crescita asintotica} di un algoritmo, quindi come cresce il tempo di esecuzione dell'algoritmo al crescere dell'input $n$, vengomo utilizzate delle \textbf{notazioni}.
+\begin{tcolorbox}[
+    colback=yellow!20, 
+    colframe=darkgray, 
+    title=Notazione Big-O ($O$ grande)
+    ]
+    Descrive il \textbf{limite superiore} della crescita di un algoritmo.
+    \begin{itemize}[leftmargin=1em]
+        \item Garantisce che il tempo di calcolo non esploderà oltre una certa funzione;
+        \item Di conseguenza, viene utilizzata per \textbf{descrivere il caso peggiore}.
+    \end{itemize}
+\end{tcolorbox}
+\noindent
+\textbf{\textit{Esempio}}: se un algoritmo è $O(n)$, significa che al crescere dell'input non farà mai più di un numero di operazioni proporzionale a $n$.
+
+\vspace{8pt}
+\begin{tcolorbox}[
+    colback=yellow!20, 
+    colframe=darkgray, 
+    title=Notazione Omega ($\Omega$ grande)
+    ]
+    Descrive il \textbf{limite inferiore} della crescita di un algoritmo.
+    \begin{itemize}[leftmargin=1em]
+        \item Indica il lavoro minimo che l'algoritmo deve svolgere, anche nel caso migliore;
+        \item Serve a capire che \textbf{sotto una certa soglia di complessità non si può scendere}.
+    \end{itemize}
+\end{tcolorbox}
+\noindent
+\textbf{\textit{Esempio}}: se un algoritmo è $\Omega(n)$, significa che anche nel caso più favorevole deve comunque guardare almeno $n$ elementi.
+
+\vspace{8pt}
+\begin{tcolorbox}[
+    colback=yellow!20, 
+    colframe=darkgray, 
+    title=Notazione Theta ($\Theta$ grande)
+    ]
+    Descrive i due \textbf{limiti} (\textbf{inferiore e superiore}) della crescita di un algoritmo.
+    \begin{itemize}[leftmargin=1em]
+        \item Indica la \textbf{crescita reale} dell'algoritmo;
+        \item Torna utile quando sappiamo che un algoritmo cresce esattamente come una certa funzione, permettendo di \textbf{classificarlo con precisione}.
+    \end{itemize}
+\end{tcolorbox}
+\noindent
+\textbf{\textit{Esempio}}: se un algoritmo è $\Theta(nlogn)$, significa che cresce proprio in quel modo: non più veloce, non più lento.
+
+\vspace{-10pt} 
+\begin{figure}[h]
+    \centering
+    \vspace{-5pt}  % Riduce lo spazio sopra
+    \subfloat[Notazione $O$ grande]{%
+        \includegraphics[width=0.31\linewidth]{complessita_algoritmi/img6.png}
+    } 
+    \hspace{0.1cm}
+    \subfloat[Notazione $\Omega$ grande]{%
+        \includegraphics[width=0.31\linewidth]{complessita_algoritmi/img7.png}
+    }
+    \hspace{0.1cm}
+    \subfloat[Notazione $\Theta$ grande]{%
+        \includegraphics[width=0.31\linewidth]{complessita_algoritmi/img8.png}
+    }
+    \vspace{-15pt}  % Riduce lo spazio sotto
+\end{figure}
+\FloatBarrier
+
+\subsection{Le ricorrenze}
+\label{par:Le ricorrenze}
+Quando un algoritmo contiene una \textbf{chiamata ricorsiva a se stesso} il suo tempo di esecuzione spesso può essere descritto attraverso \textbf{una ricorrenza}.
+\begin{tcolorbox}[
+    colback=yellow!20, 
+    colframe=darkgray, 
+    title=Cos'è una ricorrenza?
+    ]
+    Una \textbf{ricorrenza} è un'equazione che descrive una funzione (tipicamente il tempo di esecuzione $T(n)$) in termini del suo stesso valore calcolato su input più piccoli.
+\end{tcolorbox}
+\noindent
+Le ricorrenze nascono quando un algoritmo ricorsivo \textbf{divide il problema in sottoproblemi} più piccoli e \textbf{richiama se stesso}.\\
+Infatti, come è stato visto al capitolo \ref{par:Tempo_calcolo_binary_search}, l'algoritmo \texttt{binarySearch()} dimezza il problema ad ogni passo tramite la seguente ricorrenza: $T(n) = T(\frac{n}{2})+d$, che abbiamo visto avere complessità logaritmica $O(log\;n)$.\\
+Quindi, è possibile esprimere il tempo di esecuzione viene espresso come \textbf{la somma di}:
+\begin{itemize}[leftmargin=1em]
+    \item Il \textbf{costo} per \textbf{dividere o combinare} il problema (nel caso precedente $d$);
+    \item Il \textbf{costo} per le \textbf{chiamate ricorsive} su sottoproblemi più piccoli (nel caso precdente $T(\frac{n}{2})$).
+\end{itemize}
+
+
+\vspace{8pt}
+\noindent
+Per risolvere le ricorrenze è possibile \textbf{utilizzare tre metodi} differenti: metodo di \textbf{sostituzione}, metodo dell'\textbf{esperto} o metodo dell'\textbf{albero di ricorsione}.
+
+\subsubsection{Metodo di sostituzione (o per tentativi)}
+\begin{tcolorbox}[
+    colback=yellow!20, 
+    colframe=darkgray, 
+    title=Idea di base
+    ]
+    Il metodo della sostituzione consiste nell'\textbf{ipotizzare la forma della soluzione} per poi utilizzare l'\textbf{induzione} matematica per \textbf{dimostrare che la soluzione ipotizzata} funziona.
+\end{tcolorbox}
+\noindent
+Il metodo di sostituzione puo essere usato per determinare il limite inferiore o superiore di una ricorrenza, e \textbf{la sua applicazione ha senso} solo nei casi in cui è \textbf{"facile" immaginare} la \textbf{forma} della soluzione.\\
+Ad esempio, una prima ipotesi può essere effettuata nei casi in cui l'algoritmo \textbf{rispecchia una delle descrizioni} di complessità (logaritmica, lineare, loglineare, ecc...) - Capitolo \ref{par:Principali classi di efficienza asintotiche}.
+
+\vspace{8pt}
+\noindent
+Una volta fatta l'ipotesi, si procede a produrre una \textbf{catena di uglianze} ottenute per \textbf{sostituzioni successive} (come già fatto al capitolo \ref{par:Tempo_calcolo_binary_search}) cercando di arrivare all'ipotesi effettuata in precedenza.
+
+\vspace{-8pt}
+\begin{tcolorbox}
+    [
+        colback=green!10,  % Sfondo verde chiaro
+        colframe=green!60!black,  % Bordo verde più acceso
+        coltitle=black,  % Colore del testo del titolo
+        fonttitle=\bfseries,  % Testo del titolo in grassetto
+        title={\centering \textbf{Osservazioni}},  % Titolo centrato 
+        enhanced,  % Miglioramenti grafici
+        attach boxed title to top center={yshift=-2mm},  % Posiziona il titolo centrato in alto
+        boxed title style={colback=white, colframe=green!60!black, rounded corners},
+        breakable
+    ]
+    È importante notare che non esiste un metodo generale per formulare l'ipotesi della soluzione corretta di una ricorrenza, infatti se quest'ultima è simile ad una già vista, \textbf{ha senso provare una soluzione analoga}.
+\end{tcolorbox}
+
+\subsubsection{Metodo dell'esperto}
+\label{par:Metodo dell'esperto}
+\begin{tcolorbox}[
+    colback=yellow!20, 
+    colframe=darkgray, 
+    title=Idea di base
+    ]
+    Il metodo dell'esperto (Master Theorem) è una \textbf{\textit{"formula pronta}}" per un'\textbf{intera famiglia di ricorrenze} tipiche, che dividono un problema di dimensione $n$ in $a$ sottoproblemi di dimensione $n/b$.
+\end{tcolorbox}
+\noindent
+La seguente formula $T(n) = aT(n/b)+f(n)$ dove $a\geqslant1$ e $b>1$ fornisce subito il risultato:
+\begin{itemize}[leftmargin=1em]
+    \item Ogni $a-$esimo sottoproblema viene risolto nel tempo $T(n/b)$;
+    \item Il costo per dividere il problema e combinare i risultati dei sottoproblemi è descritto da $f(n)$
+\end{itemize}
+Dunque, questa metodologia di soluzione per le ricorrenze \textbf{risulta perfetta solo per algoritmi classici} come mergesort, binary search, quicksort, ecc...
+
+\vspace{8pt}
+\noindent
+Proprio perché viene utilizzata per una famiglia di algoritmi tipici di cui si conosce l'andamento reale del caso pessimo $\Theta(...)$, è possibile \textbf{individuare tre casi} in cui l'andamento dell'algoritmo può ricadere:\\
+Date le costanti intere $a\geqslant 1$ e $b\geqslant 2$ e le costanti reali $c>0$ e $\beta\geqslant 0$. Sia $T(n)$ data dalla relazione di ricorrenza:
+\vspace{-15pt}
+\[
+    T(n) =
+    \begin{cases}
+        c \quad  \quad  \quad \quad \quad \quad \quad se\;n\leqslant 1\\
+        aT(n/b) + cn^\beta \quad \; se\;n>1
+    \end{cases}
+    con \;\alpha=\frac{log\;a}{log\;b}=log_ba:\;\quad
+    T(n) =
+    \begin{cases}
+        \Theta(n^\alpha) \quad \quad \quad \alpha>\beta\\
+        \Theta(n^\alpha log n) \quad \alpha=\beta\\
+        \Theta(n^\beta) \quad \quad \quad \alpha<\beta\\
+    \end{cases}
+\]
+
+\noindent
+\textbf{Esempio del \textit{Caso 1}}\\
+Immaginiamo di avere la ricorrenza $T(n) = 9T(n/3)+n$, si ha dunque:
+\begin{itemize}[leftmargin=1em]
+    \item $a=9, b=3$
+    \item $\alpha=log_39=2$
+    \item $\beta=1$
+\end{itemize}
+Quindi $\alpha>\beta \Rightarrow T(n)=\Theta(n^\alpha)=\Theta(n^2)$
+
+\vspace{8pt}
+\noindent
+\textbf{Esempio del \textit{Caso 2}}\\
+Immaginiamo di avere la ricorrenza $T(n) = T(n/3)+1$, si ha dunque:
+\begin{itemize}[leftmargin=1em]
+    \item $a=1, b=3$
+    \item $\alpha=\frac{log 1}{log 3}=0$
+    \item $\beta=0$
+\end{itemize}
+Quindi $\alpha=\beta \Rightarrow T(n)=\Theta(n^\alpha log\;n)=\Theta(log\;n)$
+
+\vspace{8pt}
+\noindent
+\textbf{Esempio del \textit{Caso 3}}\\
+Immaginiamo di avere la ricorrenza $T(n) = 3T(n/4)+n$, si ha dunque:
+\begin{itemize}[leftmargin=1em]
+    \item $a=3, b=4$
+    \item $\alpha=\frac{log 4}{log 3}=0.793$
+    \item $\beta=1$
+\end{itemize}
+Quindi $\alpha<\beta \Rightarrow T(n)=\Theta(n^\beta)=\Theta(n)$
+
+\subsubsection{Metodo dell'albero di ricorsione (analisi per livelli)}
+\label{par:Metodo dell'albero di ricorsione (analisi per livelli)}
+\begin{tcolorbox}[
+    colback=yellow!20, 
+    colframe=darkgray, 
+    title=Idea di base
+    ]
+    La \textbf{ricorsione} viene immaginata \textbf{come un albero}: ogni \textbf{nodo è un sottoproblema} con un determinato costo, e \textbf{ogni livello} dell'albero rappresenta \textbf{un passo} della ricorsione.
+\end{tcolorbox}
+\noindent
+Quindi, si calcola il \textbf{costo di ogni livello} (somma dei costi dei singoli nodi per quel livello), e poi \textbf{si sommano tutti i livelli}. Possiamo immaginarlo come un processo di questo tipo:
+\begin{itemize}[leftmargin=1em]
+    \item \textbf{\textit{Livello 0}}: abbiamo l'espressione originale;
+    \item \textbf{\textit{Livello 1}}: espressione a cui è stata applicata un'espansione;
+    \item \textbf{\textit{Livello 2}}: vengono applicate due espansioni;
+    \item ... si continua fino al caso base.
+\end{itemize}
+\begin{minipage}[t]{0.550\textwidth} 
+    \vspace{2pt}
+    \includegraphics[width=\linewidth]{complessita_algoritmi/img10.png}
+\end{minipage}%
+\hspace{5pt} % Spazio tra immagine e testo
+\raisebox{-10pt}{  
+    \begin{minipage}[t]{0.427\textwidth}
+        Per comprendere meglio il concetto si consideri la ricorrenza:
+
+        \vspace{-15pt}
+        \[
+            T(n) =
+            \begin{cases}
+                1 \quad \quad \quad \quad \quad \quad \;\;se\;n=1\\
+                4T(n/2) + n^2 \quad \;n=2^h,\;h>0
+            \end{cases}
+        \]
+
+        Dunque, il \textbf{costo complessivo} di ciascun livello dell'albero (escluso l'ultimo che è il caso base) è sempre $n^2$: i sottoproblemi sono più piccoli ma più numerosi.
+        Invece, $4T(n/2)$ è il costo per la chiamata ricorsiva che genera $4$ sottoproblemi di dimensione $n/2$.
+    \end{minipage} 
+}
+\begin{itemize}[leftmargin=1em]
+    \item \textbf{\textit{Livello 0} (radice)}
+    \begin{itemize}[leftmargin=1em, label=\raisebox{0.4ex}{\phantom{32}\rule{0.6ex}{0.6ex}}]
+        \item Si ha un solo problema di dimensione $n$.
+    \end{itemize}
+    \item \textbf{\textit{Livello 1}}
+    \begin{itemize}[leftmargin=1em, label=\raisebox{0.4ex}{\phantom{33}\rule{0.6ex}{0.6ex}}]
+        \item Il problema si divide in 4 sottoproblemi (coefficiente 4);
+        \item Il costo di ciascuno è $n^2/4$;
+        \item Ognuno ha dimensione $n/2$;
+        \item Costo totale del livello $4\cdot(n^2/4) = n^2$
+    \end{itemize}
+    \item \textbf{\textit{Livello 2}}
+    \begin{itemize}[leftmargin=1em, label=\raisebox{0.4ex}{\phantom{33}\rule{0.6ex}{0.6ex}}]
+        \item Ogni sottoproblema del livello $1$ si divide di nuovo in $4$ → in totale $4^2=16$ sottoproblemi;
+        \item Il costo di ciascuno è $n^2/16$;
+        \item Ognuno ha dimensione $n/4$;
+        \item Costo totale del livello $16\cdot(n^2/16) = n^2$
+    \end{itemize}
+\end{itemize}
+Quindi, seguendo il pattern, il numero di sottoproblemi cresce ad ogni livello di $4^i$ e la dimensione di ognuno diminuisce di $n/2^i$.
+
+\vspace{8pt}
+\noindent
+In questo caso specifico è facile capire la complessità della ricorrenza, poiché \textbf{il numero di sottoproblemi cresce esponenzialmente} ($4^i$), ma allo stesso momento la loro dimensione cala esponenzialmente ($n/2^i$) e questo permette al costo totale di ogni livello di rimanere costante ($n^2$), ma ripetuto per tutti i livelli.
+Dunque, la ricorrenza ha complessità $O(n^2\;log\;n)$.
+\begin{tcolorbox}
+    [
+        colback=green!10,  % Sfondo verde chiaro
+        colframe=green!60!black,  % Bordo verde più acceso
+        coltitle=black,  % Colore del testo del titolo
+        fonttitle=\bfseries,  % Testo del titolo in grassetto
+        title={\centering \textbf{Osservazioni}},  % Titolo centrato 
+        enhanced,  % Miglioramenti grafici
+        attach boxed title to top center={yshift=-2mm},  % Posiziona il titolo centrato in alto
+        boxed title style={colback=white, colframe=green!60!black, rounded corners},
+        breakable
+    ]
+    Grazie al fatto che la ricorsione viene suddivisa il livelli, questo approccio risulta molto utile per capire intuitivamente dove si concentra il costo (in alto, in basso o se è distribuito su tutti i livelli) 
+\end{tcolorbox}
+
+\subsection{Ordinamento}
+Dato un generico problema, è possibile progettare un gran numero di \textbf{algoritmi differenti} per la sua risoluzione, ognuno caratterizzato dal proprio tempo di calcolo: alcuni molto lenti, altri molto veloci.
+\begin{itemize}[leftmargin=1em]
+    \item Gli algoritmi con \textbf{complessità esponenziale} (tipo $2^n$) \textbf{non sono accettabili} come soluzione nel momento in cui si lavora con \textbf{input grandi}, a meno che non sia possibile dimostrare che il problema posto sia inerentemente difficile;
+    \item Invece, realizzando un'algoritmo di \textbf{complessità polinomiale} (tipo $n^2$ o $n\cdot logn$), si ha già fatto un buon lavoro, ma si cerca comunque di \textit{"abbassarne la complessità"}.
+\end{itemize}
+\begin{tcolorbox}[
+    colback=yellow!20, 
+    colframe=darkgray, 
+    title=Obbiettivo
+    ]
+    In questi casi l'\textbf{obbiettivo} principale è quello di valutare gli algoritmi in base alla \textbf{tipologia dell'input}. Ovviamente gli algoritmi \textit{"migliori"} sono quelli che garantiscono tempi di esecuzione accettabili anche su input molto grandi. 
+\end{tcolorbox}
+Infatti, in alcuni casi, gli \textbf{algoritmi} si \textbf{comportano diversamente} in base alle \textbf{caratteristiche dell'input} e conoscere in anticipo tali caratteristiche permette di scegliere il miglior algoritmo per quella determinata situazione.
+
+\newpage
+\noindent
+Il \textbf{problema dell'ordinamento} è un buon esempio per mostrare questi concetti, proprio perché \textbf{comparendo in tanti contesti} e avendo \textbf{soluzioni diverse} è perfetto per scegliere l'implementazione migliore in base all'input.
+\begin{tcolorbox}[
+    colback=yellow!20, 
+    colframe=darkgray, 
+    title=Problema dell'ordinamento (sorting)
+    ]
+    Dato un vettore di $n$ elementi, il problema dell'ordinamento prevede la \textbf{permutazione del vettore} per fare in modo che i suoi elementi compaiano in \textbf{ordine non decresente}.
+\end{tcolorbox}
+\noindent
+Se si volesse utilizzare un \textbf{approccio \textit{"demente"}}, si potrebbero generare tutte le possibili permutazioni fino a che non se ne trova una già ordinata, in questo caso:
+\begin{itemize}[leftmargin=1em]
+    \item Per verificare che un vettore $A$ sia ordinato, basta un ciclo \texttt{for}, quindi richiede $O(n)$ tempo;
+    \item Il numero di permutazioni possibili è $n!$.
+\end{itemize}
+Dunque, procedendo il questo modo si avrebbe una complessità $O(n\cdot n!)$, ovvero una \textbf{complessità superpolinomiale}. Per evitare ciò, l'approccio migliore è quello di utilizzare degli \textbf{algoritmi di ordinamento}, decisamente più adatti a questa tipologia di problema.
+
+\subsubsection{Selection Sort}
+\label{par:Selection Sort}
+Il selection sort è un semplice algoritmo polinomiale che è basato sulla proprietà che in una sequenza ordinata, il primo elemento ha valore minimo.
+\begin{tcolorbox}[
+    colback=yellow!20, 
+    colframe=darkgray, 
+    title=Algoritmo selection sort
+    ]
+    In un \textbf{algoritmo selection sort} si cerca il minimo e si scambia tale elemento con quello nella prima posizione della \textbf{parte non ordinata del vettore}, riducendo il problema agli $n-1$ restanti valori. 
+\end{tcolorbox}
+\noindent
+Dato un input del tipo $A = \{7, 4, 2, 1, 8, 3, 5\}$ con $n=7$, l'algoritmo \texttt{selectionSort()} si comporta nel seguente modo:
+
+\vspace{-15pt} 
+\begin{figure}[h]
+    \centering
+    \vspace{-5pt}  % Riduce lo spazio sopra
+    \subfloat[]{%
+        \includegraphics[width=0.495\linewidth]{complessita_algoritmi/img11.png}
+    } 
+    \hspace{0.1cm}
+    \subfloat[]{%
+        \includegraphics[width=0.40\linewidth]{complessita_algoritmi/img12.png}
+    }
+\end{figure}
+\FloatBarrier
+
+\begin{tcolorbox}
+    [
+        colback=green!10,  % Sfondo verde chiaro
+        colframe=green!60!black,  % Bordo verde più acceso
+        coltitle=black,  % Colore del testo del titolo
+        fonttitle=\bfseries,  % Testo del titolo in grassetto
+        title={\centering \textbf{Complessità del \texttt{selectionSort()}}},  % Titolo centrato 
+        enhanced,  % Miglioramenti grafici
+        attach boxed title to top center={yshift=-2mm},  % Posiziona il titolo centrato in alto
+        boxed title style={colback=white, colframe=green!60!black, rounded corners},
+        breakable
+    ]
+    In questo particolare algoritmo \textbf{non importa quale sia l'ordine iniziale dell'input} dato. Questo perché lo \textbf{spostamento di un valore} ha sempre \textbf{costo costante}.
+
+    \vspace{8pt}
+    L'algoritmo \texttt{selectionSort()} esegue un ciclo esterno che va da $i=1$ a $n-1$, e ad ogni iterazione, chiama la funzione \texttt{min()} su un sottoarray da $i$ a $n$.\\
+    La funzione \texttt{min()} esegue un ciclo interno che fa $n-i$ confronti, quindi sempre meno confronti man mano che il vettore si riordina.\\
+    Sapendo che la somma dei primi $k$ numeri naturali è $1+2+...+k=\frac{k(k+1)}{2}$ possiamo dire che: 
+
+    \vspace{-20pt}
+    \[
+        \sum_{k=1}^{n-1} k = \sum_{i=1}^{n-1} (n-i) = \frac{n(n-1)}{2} = \frac{n^2}{2} - \frac{n}{2}
+    \]
+    Questo cresce come $n^2$, quindi la complessità è quadratica $O(n^2)$, anche se l'array è già ordinato, perché deve \textbf{comunque cercare il minimo} nel sottoarray, anche se è già al posto giusto.
+\end{tcolorbox}
+
+\subsubsection{Insertion sort}
+L'algoritmo \texttt{insertionSort()} è un'algoritmo efficiente per ordinare piccoli insiemi di elementi. Si basa sul principio di ordinamento di una mano di carte da gioco.
+
+\vspace{-2pt}
+\begin{tcolorbox}[
+    colback=yellow!20, 
+    colframe=darkgray, 
+    title=Algoritmo insertion sort
+    ]
+    Per seguire l'analogia, si considerino le carte una per volta, ad esempio, da sinistra verso destra: ogni volta che viene considerata una nuova carta, si inserisce nella posizione giusta rispetto alle altre carte gia considerate e ordinate, traslando di una posizione verso destra tutte le carte maggiori.
+\end{tcolorbox}
+
+\noindent
+\begin{minipage}[t]{0.540\textwidth} 
+    \includegraphics[width=\linewidth]{complessita_algoritmi/img16.png}
+\end{minipage}%
+\hspace{5pt} % Spazio tra immagine e testo
+\raisebox{177pt}{  
+    \begin{minipage}[t]{0.437\textwidth}
+        Immaginiamo di avere un input del tipo $A=\{2, 3, 1, 4, 7, 3\}$.\\
+        L'\textbf{idea di base} è la seguente: se si prende solo il primo elemento $[2]$, in se per se è già ordinato, potrebbe anche non essere la sua posizione giusta, ma preso come sottovettore è ordinato.\\
+        Vado poi a vedere il valore successivo $[3]$ e lo confronto con il valore $[2]$ (che è l'ultimo del vettore ordinato): $[3]>[2]$ quindi la parte iniziale del vettore è ordinata \{2, 3, ...\}.
+    \end{minipage} 
+}
+
+\noindent
+Andando avanti si troverà $[1]$, più piccolo sia di $[2]$ che di $[3]$.
+L'elemento minore viene messo in una variabile temporantea (\texttt{temp}), mentre gli elementi della parte già ordinata del vettore vengono traslati (partendo dal più grande) uno ad uno verso destra di una posizione, sovrascrivendo l'elemento alla propria destra. A questo punto all'inizio del vettore si è creato uno spazio vuoto $[...]$ (dovuto alla traslazione della parte ordinata del vettore) su cui andrà inserita la variabile \texttt{temp} contenente l'elemento precedentemente sovrascritto, nonché il più piccolo elemento del vettore esplorato fino a quel momento.\\
+Ovviamente, nel caso in cui l'elemento da inserire vada posizionato nel mezzo del vettore ordinato, durante la traslazione dei singoli elementi ci si fermerebbe nel punto in cui \texttt{temp} sia maggiore dell'elemento \texttt{A[i]}. Ad esempio, si consideri un input del tipo $A=\{7, 4, 2, 1, 8, 3, 5\}$. 
+
+\vspace{-10pt}
+\begin{figure}[H]
+    \centering
+    \vspace{-5pt}  % Riduce lo spazio sopra
+    \subfloat[]{%
+        \includegraphics[width=0.41\linewidth]{complessita_algoritmi/img13.png}
+    } 
+    \hspace{1cm}
+    \subfloat[]{%
+        \includegraphics[width=0.41\linewidth]{complessita_algoritmi/img14.png}
+    }
+    \hspace{1cm}
+    \subfloat[]{%
+        \includegraphics[width=0.41\linewidth]{complessita_algoritmi/img15.png}
+    }
+\end{figure}
+\FloatBarrier
+
+\vspace{-10pt}
+\noindent
+Per la logica che sta dietro al \texttt{selection sort()}, anche se l'input iniziale è già ordinato, l'algoritmo andrà a cercare comunque il valore minimo e lo sovrascriverà nella prima posizione della parte non ordinata dell'array, quindi, come detto al capitolo (capitolo \ref{par:Selection Sort}), la complessità dell'algoritmo non dipende dall'input di ingresso.
+
+\vspace{8pt}
+\noindent
+Invece, a differenza del \texttt{selection sort()}, la \textbf{complessità} dell'\texttt{insertion sort()} dipende dalla \textbf{disposizione iniziale dei dati in ingresso} poiché, per come è strutturato l'algoritmo, man mano che si scorre l'array si andranno a posizionare i nuovi elementi nella posizione corretta rispetto a tutti gli altri.\\
+Proprio per questa caratteristica, la complessità dell'\texttt{insertion sort()} cambia a seconda del caso di studio (capitolo \ref{par:Valutazione del caso pessimo, medio e ottimo}):
+\begin{itemize}[leftmargin=1em]
+    \item \textit{Complessità nel caso \textbf{pessimo}}: il caso peggiore si ha quando l'input $A$ è \textbf{ordinato alla rovescia}, ad esempio: $A = \{8, 7, 6, 5, 4, 3, 2, 1\}$.\\
+    In questo caso ad ogni iterazione del ciclo \texttt{for}, si entrerebbe anche nel ciclo \texttt{while} più interno poiché la variabile \texttt{temp} andrebbe spostata in prima posizione, e ciò richiederebbe un numero di spostamenti pari a 
+    \[
+        \sum_{i=1}^{n-1} (n-i)
+    \]
+    \textbf{\textit{Complessità?}} Dunque la complessità sarebbe uguale a quella del \texttt{selection sort()} per la presenza dell'annidamento dei  due cicli $\rightarrow$ $O(n^2)$.
+
+    \vspace{8pt}
+    \item \textit{Complessità nel caso \textbf{ottimo}}: il caso migliore si ha quando l'input $A$ è una sequenza già ordinata, quindi $A = {1, 2, 3, 4, 5, 6, 7, 8}$\\
+    In questo caso, non avverà mai che \texttt{A[j-1]} $[1]$ sia maggiore di \texttt{temp} $[2]$ e cosi via..., non permettendo al ciclo \texttt{while} di verificarsi.
+    Rimane solo il ciclo esterno, che esegue operazioni di costo \textbf{costante}. \\
+    \textbf{\textit{Complessità?}} In questo caso, la complessità per delle istruzioni costanti vale $O(n)$.
+\end{itemize}
+
+\subsubsection{Merge sort}
+L'algoritmo \texttt{MergeSort()} è basato sulla tecnica \textbf{divide et impera}.
+\begin{tcolorbox}[
+    colback=yellow!20, 
+    colframe=darkgray, 
+    title=Algoritmo merge sort
+    ]
+    \begin{itemize}[leftmargin=1em]
+        \item \textbf{Divide}: spezza il vettore di $n$ elementi in due sottovettori di $n/2$ elementi;
+        \item \textbf{Impera}: chiama \texttt{MergeSort()} ricorsivamente sui due sottovettori;
+        \item \textbf{Combina}: una volta ottenuti singoli valori, questi vengono riuniti (merge) in modo ordinato, fino a riottenere i due sottovettori iniziali ordinati.
+    \end{itemize}
+\end{tcolorbox}
+
+\vspace{-45pt} 
+\begin{figure}[H]
+    \centering
+    \vspace{-5pt}  % Riduce lo spazio sopra
+    \subfloat[Partizionamento dei dati]{%
+        \includegraphics[width=0.47\linewidth]{complessita_algoritmi/img17.png}
+    } 
+    \hspace{0.1cm}
+    \subfloat[Fusione dei dati]{%
+        \includegraphics[width=0.47\linewidth]{complessita_algoritmi/img18.png}
+    }
+\end{figure}
+\FloatBarrier
+
+\vspace{-10pt}
+\noindent
+\begin{minipage}[t]{0.500\textwidth} 
+    \includegraphics[width=\linewidth]{complessita_algoritmi/img20.png}
+\end{minipage}%
+\hspace{5pt} % Spazio tra immagine e testo
+\raisebox{95pt}{  
+    \begin{minipage}[t]{0.497\textwidth}
+        La prima parte dell'algoritmo \texttt{mergeSort()} si occupa di effettuare le chiamate ricorsive per la suddivisione del vettore non ordinato fino ai singoli valori (come in figura \textit{d}).
+        Prendiamo in considerazione il vettore: $A = [4, 3, 2, 1]$.\\
+        Nella \textit{riga 2} viene calcolata la metà del vettore (se il vettore è dispari si andrà per eccesso).
+    \end{minipage} 
+}
+In questo caso, il vettore viene diviso in parte sinistra $[4, 3]$ e parte destra $[2, 1]$.
+
+\vspace{8pt}
+\noindent
+\textbf{\textit{Prima ricorsione (riga 2)}}\\
+Una volta che il vettore è stato diviso in due parti, la prima istruzione ricorsiva (\textit{riga 3}) richiama la funzione \texttt{mergeSort(A, first, mid)} per poter lavorare sulla parte sinistra, ossia $[4,3]$.
+Dunque, la \textit{riga 2} viene rieseguita e il sottovettore viene ulteriormente suddiviso in:
+\begin{itemize}[leftmargin=1em]
+    \item parte sinistra $[4]$;
+    \item parte destra $[3]$.
+\end{itemize}
+Subito dopo, le istruzioni ricorsive vengono tentate nuovamente, ma:
+\begin{itemize}[leftmargin=1em]
+    \item \texttt{mergeSort(A, first, mid)} non prosegue poiché il sottovettore ha un solo elemento $[4]$;
+    \item anche, \texttt{mergeSort(A, mid+1, last)} non prosegue perché anche $[3]$ è un singolo elemento.
+\end{itemize}
+Raggiunto il caso base per entrambi i sottovettori, è possibile richiamare \texttt{merge()} per combinarli e ottenere il vettore ordinato $[3,4]$.
+
+\vspace{8pt}
+\noindent
+\textbf{\textit{Seconda ricorsione (riga 3)}}\\
+Terminata la ricorsione sulla parte sinistra del vettore iniziale, il controllo ritorna alla chiamata precedente, che ora può eseguire l’istruzione ricorsiva successiva (\textit{riga 4}) sulla parte destra, utilizzando \texttt{mergeSort(A, mid+1, last)}.\\
+Il procedimento è analogo al precedente: la \textit{riga 2} suddivide il sottovettore destro in $[2]$ e $[1]$, mentre le istruzioni ricorsive (\textit{righe 3} e \textit{4}) non proseguono perché entrambi i vettori hanno un solo elemento.
+Infine viene richiamata \texttt{merge()} per ordinare i due elementi e ottenere $[1,2]$.
+
+\vspace{8pt}
+\noindent
+\textbf{\textit{Merge finale (riga 4)}}\\
+Terminate entrambe le ricorsioni, significa che i due sottovettori originari sono ora ordinati. L’ultima istruzione rimasta della chiamata principale è dunque la \texttt{merge()} finale, che combina i due sottovettori ordinati per ottenere un unico vettore ordinato (come illustrato in figura \textit{e}). 
+
+\vspace{8pt}
+\noindent
+Nello specifico, una generica operazione di \texttt{merge()} funziona in questo modo:\\
+\begin{minipage}[t]{0.560\textwidth} 
+    \includegraphics[width=\linewidth]{complessita_algoritmi/img23.png}
+    \includegraphics[width=\linewidth]{complessita_algoritmi/img21.png}
+    \includegraphics[width=\linewidth]{complessita_algoritmi/img22.png}
+\end{minipage}%
+\hspace{5pt} % Spazio tra immagine e testo
+\raisebox{18pt}{  
+    \begin{minipage}[t]{0.417\textwidth}
+        \textit{\textbf{N.B}}: \textit{first, last e mid} sono tali che $1 \leqslant first \leqslant mid \leqslant last \leqslant n$.
+
+        \vspace{8pt}
+        Bisogna specificare che il merge agisce su dei sottovettori già ordinati: infatti il primo \texttt{merge()} viene effettuato sui singoli elementi, e da quì, ogni volta che si effettua un \texttt{merge()} si avranno sempre dei sottovettori ordinati, $A[first...mid]$ e $A[id+1...last]$.
+
+        \vspace{8pt}
+        Per fondere le due metà ordinate, la procedura \texttt{merge()} si avvale di un vettore di appoggio $B$, utilizzato come parametro globale.\\
+        Vengono qundi utilizzati tre indici $i, j$ e $k$ per scandire, rispettivamente, $A[first..mid]$, $A[mid+1...last]$ e $B[start...end]$. Ad ogni passo, sono
+    \end{minipage} 
+}
+
+\vspace{3pt}
+\noindent
+confrontati gli elementi $A[i]$ e $A[j]$, il minore viene copiato in $B[k]$, e vengono incrementati di una posizione $k$ e l'indice dell'elemento che risulta minore. 
+
+\vspace{8pt}
+\noindent
+Il procedimento viene iterato fino a che una delle due metà è esaurita ($A[first..mid]$ oppure $A[mid+1...last]$). Non appena una delle due metà si svuota per prima, è possibile proseguire l'ordinamento in modi differenti:
+\begin{itemize}[leftmargin=1em]
+    \item Se la \textbf{prima metà è stata esaurita per prima} ($i>mid$) gli eventuali elementi $A[j..end]$ della metà non scandita si trovano già nella posizione corretta per l'ordinamento.\\
+    Dunque, non è necessario spostare gli elementi non scanditi in $A$ nel vettore di appoggio $B$, ma piuttosto, spostare tutti gli elementi già ordinati da $B$ ad $A$;
+    \item Se invece \textbf{si svuota prima la seconda parte}, gli elementi non scanditi $A[i...mid]$ della prima metà vengono subito spostati nelle ultime posizioni $A[k...last]$ che competono loro nell'ordinamento finale. Infine, la posizione $B[first...k-1]$ è ricopiata in $A[first...k-1]$, ottenendo così $A[first...last]$.
+\end{itemize}
+
+\vspace{8pt}
+\noindent
+Il codice per il funzionamento del \texttt{merge()} è il seguente, illustrato in figura \ref{fig:figure67}.
+\begin{figure}[H]
+    \centering
+    \addtocounter{figure}{27}
+    \caption{Pseudocodice della funzione \texttt{merge()}}
+    \label{fig:figure67}
+    \vspace{-10pt}  % Riduce lo spazio sopra
+    \includegraphics[width=0.9\textwidth]{complessita_algoritmi/img19.png}
+    \vspace{-5pt}  % Riduce lo spazio sopra 
+\end{figure}
+\noindent
+Per capire quale sia la complessità di \texttt{mergeSort()} dobbiamo prima trovare separatamente la complessità di \texttt{merge()}.\\
+Nel \textbf{caso pessimo} ogni valore in $A$ deve essere trasferito in $B$, e questo accade quando rimangono tutti tranne un solo elemento della sottoparte destra di $A$. Quindi come illustrato
+
+\vspace{2pt}
+\noindent 
+\begin{minipage}[t]{0.560\textwidth} 
+        \includegraphics[width=\textwidth]{complessita_algoritmi/img24.png}
+\end{minipage}%
+\hspace{5pt} % Spazio tra immagine e testo
+\raisebox{66pt}{  
+    \begin{minipage}[t]{0.417\textwidth}
+        nell'immagine, in $A$ è rimasto un singolo valore che è già nella sua posizione corretta, gli altri $n-1$ valori sono stati trasferiti in $B$. A questo punto andranno tutti riportati in $A$, e  anche in 
+    \end{minipage} 
+}
+
+\vspace{-2pt}
+\noindent
+questo caso l'operazione ha costo $n-1$. Possiamo quindi dire che la complessità di \texttt{merge()} è $O(n)$ perché il \textbf{numero di operazioni cresce in modo lineare} rispetto al \textbf{numero totale di elementi} nei due sottovettori.
+\begin{tcolorbox}
+    [
+        colback=green!10,  % Sfondo verde chiaro
+        colframe=green!60!black,  % Bordo verde più acceso
+        coltitle=black,  % Colore del testo del titolo
+        fonttitle=\bfseries,  % Testo del titolo in grassetto
+        title={\centering \textbf{Osservazione sulla complessità di \texttt{merge()}}},  % Titolo centrato 
+        enhanced,  % Miglioramenti grafici
+        attach boxed title to top center={yshift=-2mm},  % Posiziona il titolo centrato in alto
+        boxed title style={colback=white, colframe=green!60!black, rounded corners},
+        breakable
+    ]
+    Il fatto che la complessità di \texttt{merge()} sia $O(n)$ è anche intuibile dal momento che la funzione non contiene cicli annidati: il ciclo principale viene eseguito al massimo $n-1$ volte e ogni iterazione ha costo costante. Ne deriva quindi un costo complessivo lineare. 
+\end{tcolorbox}
+
+\vspace{8pt}
+\noindent
+A questo punto l'analisi della complessità si sposta sul capire quale sia la complessità dell'\textbf{intero algoritmo}.
+Quando analizziamo il \texttt{mergeSort()} vengono effettuate le seguenti operazioni:
+\begin{enumerate}[leftmargin=1.3em]
+    \item Viene preso un array di dimensione $n$;
+    \item Viene diviso in \textbf{due metà}: una di dimensione $n/2$ e l'altra di dimensione $n/2$;
+    \item Si applica ricorsivamente il \texttt{mergeSort()} su entrambe le metà.
+\end{enumerate}
+Quindi per ordinare l'array completo:
+\begin{itemize}[leftmargin=1em]
+    \item Per ordinare la prima metà $\rightarrow$ costo $T(n/2)$;
+    \item Per ordinare la seconda metà $\rightarrow$ costo $T(n/2)$.
+\end{itemize}
+Sommando i termini si ottiene: $T(n)= T(n/2) + T(n/2) +$ \textit{costo del merge} $= T(n)= 2T(n/2) + O(n)$, dove:
+\begin{itemize}[leftmargin=1em]
+    \item $2T(n/2)$ è il tempo per ordinare le due metà;
+    \item $O(n)$ è il tempo per fonderle con \texttt{merge()}.
+\end{itemize}
+
+\vspace{8pt}
+\noindent
+Dopo aver ottenuto l'equazione del costo dell'algoritmo, per \textbf{trovare la complessità}, possiamo approfittare del fatto che \texttt{mergeSort()} sia un algoritmo ricorsivo e utilizzare il \textbf{metodo dell'albero di ricorsione} visto al capitolo \ref{par:Metodo dell'albero di ricorsione (analisi per livelli)}.
+\begin{figure}[H]
+    \centering
+    \vspace{-10pt}  % Riduce lo spazio sopra
+    \includegraphics[width=0.9\textwidth]{complessita_algoritmi/img25.png}
+    \vspace{-15pt}  % Riduce lo spazio sopra 
+\end{figure}
+\noindent
+Dunque, il \textbf{costo complessivo} di ciascun livello dell'albero è sempre $n$, perché il costo del \texttt{merge()} rimane costante per qualsiasi coppia di sottovettori.\\
+Invece, $2T(n/2)$ è il costo per la chiamata ricorsiva che genera $2$ sottovettori di dimensione $n/2$ ogni volta che viene richiamata fino ad ottenere i singoli valori.\\
+\textbf{Il numero di sottovettori cresce esponenzialmente} ($2^i$), ma allo stesso momento la loro dimensione cala esponenzialmente ($n/2^i$) e il costo totale di ogni \texttt{merge()} è costante $O(n)$.
+Dunque, la ricorrenza ha complessità $O(n\;log\;n)$.
+
+\vspace{8pt}
+\noindent
+Se invece si volesse utilizzare il \textbf{metodo dell'esperto} visto al capitolo \ref{par:Metodo dell'esperto}, ricordando la formula generale $T(n)= aT(n/b) + cn^\beta$, applicata a $T(n) = 2T(n/2) + O(n)$, si avrà:
+\begin{itemize}[leftmargin=1em]
+    \item $a=2$, $b=2$
+    \item $\alpha=log\;2/log\;2=1$
+    \item $\beta=1$
+\end{itemize}
+Quindi $\alpha=\beta$ e si ricade nel caso $2$: $T(n)=\Theta(n^\alpha\cdot log\;n)=\Theta(n\cdot log\;n)$
