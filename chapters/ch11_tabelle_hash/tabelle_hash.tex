@@ -7,7 +7,8 @@
 
     \vspace{8pt}
     \noindent
-    A differenza dell'implementazione tramite alberi, nel quale si riusciva a mantenere la stessa complessità nei casi di \texttt{insert()}, \texttt{lookup()} e \texttt{remove()}, idealmente, la cosa migliore sarebbe \textbf{mantenere una complessità costante} per tutte le operazioni, avendo però una \textbf{complessità inferiore}. Questa implementazione ideale prende il nome di \textbf{tabelle di hash}.
+    A differenza dell'implementazione tramite alberi, nella quale si riusciva a mantenere la stessa complessità nei casi di \texttt{insert()}, \texttt{lookup()} e \texttt{remove()}, nel caso ideale, la cosa migliore sarebbe quella di \textbf{mantenere una complessità costante} per tutti i tipi di operazioni, che sia inoltre \textbf{inferiore} a quella delle strutture ad albero.\\
+    Questa implementazione ideale prende il nome di \textbf{tabelle di hash}.
     \begin{figure}[H]
         \centering
         \vspace{-10pt}  % Riduce lo spazio sopra
@@ -21,16 +22,56 @@
         colframe=darkgray, 
         title=Idea di base
         ]
-        Quello che si vuole fare è memorizzare tutti i dati dell'insieme \textbf{\textit{U}} in un vettore di dimensione ($m$) finita $T[0...m-1]$, ed avere un meccanismo per cui, data una chiave, si trovi rapidamente la posizione in cui è memorizzata.
+        Quello che si vuole fare è memorizzare tutti i dati dell'insieme \textbf{\textit{U}} in un vettore di dimensione ($m$) finita $T[0...m-1]$, ed avere un meccanismo per cui, data una chiave, trovare rapidamente la posizione in cui è memorizzata.
     \end{tcolorbox}
     \noindent
-    Le chiavi possono essere delle stringhe, degli oggetti o dei numeri, e il compito delle tabelle hash è quello di trasformarli in un indice all'interno delle tabelle hash. 
+    Le chiavi possono essere delle stringhe, degli oggetti o dei numeri, e il compito delle tabelle hash è quello di trasformarle in un indice all'interno di esse. 
     Per fare ciò viengono utilizzate le \textbf{funzioni hash}.
     \begin{tcolorbox}[
         colback=yellow!20, 
         colframe=darkgray, 
         title=Cos'è una funzione hash?
         ]
-        Quello che si vuole fare è memorizzare tutti i dati dell'insieme \textbf{\textit{U}} in un vettore di dimensione ($m$) finita $T[0...m-1]$, ed avere un meccanismo per cui, data una chiave, si trovi rapidamente la posizione in cui è memorizzata.
+        Una \textbf{funzione hash} è una funzione $H$ che mappa ciascuna chiave $k$ appartenente all'insieme universo $U$ ($k \in U$) nell'indice $H(k)$ di un vettore $A$, destinato a contenere la coppia $(k,v)$. Viene definita come $H: U \rightarrow \{0,1,...,m-1\}$.
     \end{tcolorbox}
+    \noindent 
+    \begin{minipage}[t]{0.600\textwidth} 
+            \includegraphics[width=\textwidth]{hashing/img2.png}
+    \end{minipage}%
+    \hspace{5pt} % Spazio tra immagine e testo
+    \raisebox{167pt}{  
+        \begin{minipage}[t]{0.377\textwidth}
+            Come si può vedere dall'immagine, viene presa una chiave (in questo caso una stringa) che verrà poi trasformata in qualche modo, tramite la funzione hash (che può essere anche una black box), in un indice.
+
+            \vspace{8pt}
+            A questo punto sorge un \textbf{problema}: l'insieme delle chiavi è potenzialmente infinito, ma non si vuole che sia lo stesso anche per la tabella
+        \end{minipage} 
+    }
+    hash, dal momento in cui si potrebbe non disporre dello spazio in memoria necessario per qualunque coppia chiave-valore. Dunque, quello che succede è che avvengono delle \textbf{collisioni}.\\
+    Per evitare inutili sprechi di memoria, la dimensione $m$ del vettore non deve essere determinata sulla base dell'intero universo $U$, ma piuttosto in funzione del \textbf{numero di chiavi attese}, ovvero la \textbf{quantità $k$ di elementi} che si prevede saranno \textbf{effettivamente presenti nel dizionario} in un determinato momento.
+    \begin{tcolorbox}[
+        colback=yellow!20, 
+        colframe=darkgray, 
+        title=Quando si verifica una collisione?
+        ]
+        Si verifica una \textbf{collisione} quando due chiavi distinte $k_1 \neq k_2$ vengono mappate dalla funzione hash sulla stessa posizione del vettore, ovvero quando $H(k_1)=H(k_2)$.
+    \end{tcolorbox}
+    \noindent 
+    \begin{minipage}[t]{0.610\textwidth} 
+            \includegraphics[width=\textwidth]{hashing/img3.png}
+    \end{minipage}%
+    \hspace{5pt} % Spazio tra immagine e testo
+    \raisebox{169pt}{  
+        \begin{minipage}[t]{0.367\textwidth}
+            Le collisioni mettono quindi in luce due \textbf{aspetti fondamentali} nella progettazione di una tabella hash:
+
+            \vspace{8pt}
+            \begin{itemize}[leftmargin=1em]
+                \item La \textbf{scelta della funzione hash} è cruciale, infatti una funzione mal progettata può distribuire le chiavi in modo sbilanciato, causando una concentrazione eccessiva in alcune posizioni del vettore, lasciando quasi del tutto inutilizzate altre.
+            \end{itemize}
+        \end{minipage} 
+    }
+    \begin{itemize}[leftmargin=1em]
+        \item È essenziale progettare dei \textbf{meccanismi} efficienti per la \textbf{gestione delle collisioni}, poiché anche scegliendo una buona funzione di hash, quando il numero di chiavi possibili supera il numero di posizioni disponibili nella tabella, le collisioni sono inevitabili. Questi meccanismi permettono quindi di \textbf{garantire il corretto funzionamento} delle operazioni di inserimento, ricerca e cancellazione.
+    \end{itemize}
 \end{document}

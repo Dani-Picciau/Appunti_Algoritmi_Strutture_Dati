@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.3.9)  28 DEC 2025 15:56
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.3.9)  29 DEC 2025 01:16
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -927,46 +927,76 @@ Package microtype Info: Loading generic protrusion settings for font family
 <../figures/hashing/img1.png, id=47, 626.34pt x 139.52126pt>
 File: ../figures/hashing/img1.png Graphic file (type png)
 <use ../figures/hashing/img1.png>
-Package pdftex.def Info: ../figures/hashing/img1.png  used on input line 14.
+Package pdftex.def Info: ../figures/hashing/img1.png  used on input line 15.
 (pdftex.def)             Requested size: 459.51054pt x 102.36273pt.
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 24.
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 25.
  (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-cmr.cfg
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman (RS)
 )
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 24.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 25.
  (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 24.
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 25.
  (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/lm\omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 24.
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 25.
  (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/lm\omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 24.
+(Font)              <12> on input line 25.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 24.
+(Font)              <8> on input line 25.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 24.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 24.
+(Font)              <6> on input line 25.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 25.
  (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 ) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 24.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 25.
  (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
-) [1
+)
+<../figures/hashing/img2.png, id=49, 502.87875pt x 306.14375pt>
+File: ../figures/hashing/img2.png Graphic file (type png)
+<use ../figures/hashing/img2.png>
+Package pdftex.def Info: ../figures/hashing/img2.png  used on input line 39.
+(pdftex.def)             Requested size: 290.22107pt x 176.6806pt.
 
-{C:/Users/dany2/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}{C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc} <../figures/hashing/img1.png>] (c:/Users\dany2\OneDrive\Desktop\UniSassari\Appunti_latex\Appunti_Algoritmi_Strutture_Dati\Chapters\ch11_tabelle_hash\tabelle_hash.aux)
+Underfull \hbox (badness 10000) in paragraph at lines 49--49
+\T1/bch/m/n/12 (+20) trasfor-mata in qualche modo,
+ []
+
+
+Overfull \hbox (3.08138pt too wide) in paragraph at lines 37--58
+[]  []
+ []
+
+[1
+
+{C:/Users/dany2/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}{C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc} <../figures/hashing/img1.png> <../figures/hashing/img2.png>]
+<../figures/hashing/img3.png, id=66, 405.01312pt x 243.91125pt>
+File: ../figures/hashing/img3.png Graphic file (type png)
+<use ../figures/hashing/img3.png>
+Package pdftex.def Info: ../figures/hashing/img3.png  used on input line 61.
+(pdftex.def)             Requested size: 295.05537pt x 177.69643pt.
+LaTeX Font Info:    Trying to load font information for TS1+bch on input line 73.
+ (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1bch.fd
+File: ts1bch.fd 2004/10/18 font definitions for TS1/bch.
+)
+Overfull \hbox (3.08138pt too wide) in paragraph at lines 59--74
+[]  [] 
+ []
+
+[2 <../figures/hashing/img3.png>] (c:/Users\dany2\OneDrive\Desktop\UniSassari\Appunti_latex\Appunti_Algoritmi_Strutture_Dati\Chapters\ch11_tabelle_hash\tabelle_hash.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
@@ -975,20 +1005,20 @@ Package rerunfilecheck Info: File `tabelle_hash.out' has not changed.
 (rerunfilecheck)             Checksum: 270AB0F7DFC72D5290D499C154E1B942;78.
  ) 
 Here is how much of TeX's memory you used:
- 33960 strings out of 474486
- 681348 string characters out of 5743756
- 1934542 words of memory out of 5000000
- 55571 multiletter control sequences out of 15000+600000
- 591217 words of font info for 104 fonts, out of 8000000 for 9000
+ 34036 strings out of 474486
+ 682814 string characters out of 5743756
+ 1938542 words of memory out of 5000000
+ 55623 multiletter control sequences out of 15000+600000
+ 592906 words of font info for 117 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 109i,7n,120p,1126b,475s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 109i,7n,120p,1126b,596s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 pdfTeX warning (dest): name{subsection.4.4} has been referenced but does not exist, replaced by a fixed one
 
-<C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchb8a.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchbi8a.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchr8a.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt12.pfb>
-Output written on c:/Users\dany2\OneDrive\Desktop\UniSassari\Appunti_latex\Appunti_Algoritmi_Strutture_Dati\Chapters\ch11_tabelle_hash\tabelle_hash.pdf (1 page, 187043 bytes).
+<C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchb8a.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchbi8a.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchr8a.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt12.pfb>
+Output written on c:/Users\dany2\OneDrive\Desktop\UniSassari\Appunti_latex\Appunti_Algoritmi_Strutture_Dati\Chapters\ch11_tabelle_hash\tabelle_hash.pdf (2 pages, 283477 bytes).
 PDF statistics:
- 101 PDF objects out of 1000 (max. 8388607)
- 5 named destinations out of 1000 (max. 500000)
- 20650 words of extra memory for PDF output out of 20736 (max. 10000000)
+ 114 PDF objects out of 1000 (max. 8388607)
+ 6 named destinations out of 1000 (max. 500000)
+ 22708 words of extra memory for PDF output out of 24883 (max. 10000000)
 
