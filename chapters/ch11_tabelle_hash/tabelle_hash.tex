@@ -35,19 +35,29 @@
         Una \textbf{funzione hash} è una funzione $H$ che mappa ciascuna chiave $k$ appartenente all'insieme universo $U$ ($k \in U$) nell'indice $H(k)$ di un vettore $A$, destinato a contenere la coppia $(k,v)$. Viene definita come $H: U \rightarrow \{0,1,...,m-1\}$.
     \end{tcolorbox}
     \noindent 
-    \begin{minipage}[t]{0.600\textwidth} 
-            \includegraphics[width=\textwidth]{hashing/img2.png}
+    \begin{minipage}[t]{0.560\textwidth}
+        \vspace{-25pt}
+        \begin{figure}[H]
+            \centering
+            \addtocounter{figure}{10}
+            \caption{Esempio di funzione hash}
+            \label{fig:78}
+        \end{figure}
+
+        \vspace{-20pt}
+        \includegraphics[width=\textwidth]{hashing/img2.png} 
     \end{minipage}%
     \hspace{5pt} % Spazio tra immagine e testo
-    \raisebox{167pt}{  
-        \begin{minipage}[t]{0.377\textwidth}
+    \raisebox{2pt}{  
+        \begin{minipage}[t]{0.417\textwidth}
             Come si può vedere dall'immagine, viene presa una chiave (in questo caso una stringa) che verrà poi trasformata in qualche modo, tramite la funzione hash (che può essere anche una black box), in un indice.
 
             \vspace{8pt}
-            A questo punto sorge un \textbf{problema}: l'insieme delle chiavi è potenzialmente infinito, ma non si vuole che sia lo stesso anche per la tabella
+            A questo punto sorge un \textbf{problema}: l'insieme delle chiavi è potenzialmente infinito, ma non si vuole che sia lo stesso anche per la tabella hash, dal momento in cui si potrebbe non disporre
         \end{minipage} 
     }
-    hash, dal momento in cui si potrebbe non disporre dello spazio in memoria necessario per qualunque coppia chiave-valore. Dunque, quello che succede è che avvengono delle \textbf{collisioni}.\\
+    \noindent
+    dello spazio in memoria necessario per qualunque coppia chiave-valore. Dunque, quello che succede è che avvengono delle \textbf{collisioni}.\\
     Per evitare inutili sprechi di memoria, la dimensione $m$ del vettore non deve essere determinata sulla base dell'intero universo $U$, ma piuttosto in funzione del \textbf{numero di chiavi attese}, ovvero la \textbf{quantità $k$ di elementi} che si prevede saranno \textbf{effettivamente presenti nel dizionario} in un determinato momento.
     \begin{tcolorbox}[
         colback=yellow!20, 
@@ -74,4 +84,22 @@
     \begin{itemize}[leftmargin=1em]
         \item È essenziale progettare dei \textbf{meccanismi} efficienti per la \textbf{gestione delle collisioni}, poiché anche scegliendo una buona funzione di hash, quando il numero di chiavi possibili supera il numero di posizioni disponibili nella tabella, le collisioni sono inevitabili. Questi meccanismi permettono quindi di \textbf{garantire il corretto funzionamento} delle operazioni di inserimento, ricerca e cancellazione.
     \end{itemize}
+
+    \subsection{Tabelle ad accesso diretto}
+    Prima di affrontare il problema delle collisioni, è utile analizzare un caso particolare in cui esse possono essere completamente evitate: le \textbf{tabelle ad accesso diretto}.
+
+    \vspace{8pt} 
+    \noindent 
+    Questo approccio è applicabile solo quando l'insieme universo $U$ delle chiavi è limitato e di dimensione ridotta, tale da poter essere rappresentato direttamente in memoria senza \textbf{sprechi} eccessivi. Utilizzando un approccio del genere è possibile utilizzare un vettore $A$ della stessa dimensione dell'insieme $U$, quindi $m=|U|$, nel quale ogni chiave $k$ che appartiene all'insieme $U$ viene memorizzata direttamente nella posizione $A[k]$.\\ 
+    La funzione hash utilizzata è quindi la \textbf{funzione identità} $ h(k) = k$, in questo caso una \textbf{funzione hash perfetta}, come quella illustrata in figura \ref{fig:78}, che garantisce l'esecuzione delle operazioni di \texttt{insert()}, \texttt{lookup()} e \texttt{remove()} in tempo $O(1)$ nel caso peggiore.\\ 
+    In questo modo ogni chiave verrebbe memorizzata in una posizione distinta della tabella.
+    
+    \vspace{8pt}
+    \noindent
+    Tuttavia, questo metodo presenta un \textbf{limite fondamentale}:\\
+    oltre al fatto che se l'insieme universo $U$ è molto grande, l'approccio non è praticabile, nel caso in cui il numero di chiavi memorizzate nel dizionario sia molto inferiore al massimo disponibile, quindi $m=|U|$, si incorrerebbe in uno \textbf{spreco di meoria} poiché molte posizioni del vettore verrebbero lasciate inutilizzate.\\
+    Per questo motivo, le tabelle ad accesso diretto sono utilizzabili solo in contesti specifici e rappresentano principalmente un modello teorico di riferimento per le tabelle hash.
+
+    \subsubsection{Funzioni hash perfette}
+
 \end{document}

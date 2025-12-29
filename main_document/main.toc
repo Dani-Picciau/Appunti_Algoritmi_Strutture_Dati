@@ -95,3 +95,4 @@
 \contentsline {subsubsection}{\numberline {7.8.1}Algoritmo di Strassen}{101}{subsubsection.7.8.1}%
 \contentsline {subsection}{\numberline {7.9}Conclusioni}{101}{subsection.7.9}%
 \contentsline {section}{\numberline {8}Hashing}{102}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Tabelle ad accesso diretto}{103}{subsection.8.1}%
