@@ -2,104 +2,175 @@
 \externaldocument{../../main_document/main}
 
 \begin{document}
-    \section{Hashing}
-    L'\textbf{hashing} è una \textbf{tecnica alternativa} agli alberi binari di ricerca (capitolo \ref{par:Alberi binari di ricerca (BST)}) o agli array associativi, utilizzata per realizzare i dizionari.
+\section{Hashing}
+L'\textbf{hashing} è una \textbf{tecnica alternativa} agli alberi binari di ricerca (capitolo \ref{par:Alberi binari di ricerca (BST)}) o agli array associativi, utilizzata per realizzare i dizionari.
 
-    \vspace{8pt}
-    \noindent
-    A differenza dell'implementazione tramite alberi, nella quale si riusciva a mantenere la stessa complessità nei casi di \texttt{insert()}, \texttt{lookup()} e \texttt{remove()}, nel caso ideale, la cosa migliore sarebbe quella di \textbf{mantenere una complessità costante} per tutti i tipi di operazioni, che sia inoltre \textbf{inferiore} a quella delle strutture ad albero.\\
-    Questa implementazione ideale prende il nome di \textbf{tabelle di hash}.
+\vspace{8pt}
+\noindent
+A differenza dell'implementazione tramite alberi, nella quale si riusciva a mantenere la stessa complessità nei casi di \texttt{insert()}, \texttt{lookup()} e \texttt{remove()}, nel caso ideale, la cosa migliore sarebbe quella di \textbf{mantenere una complessità costante} per tutti i tipi di operazioni, che sia inoltre \textbf{inferiore} a quella delle strutture ad albero.\\
+Questa implementazione ideale prende il nome di \textbf{tabelle di hash}.
+\begin{figure}[H]
+    \centering
+    \vspace{-10pt}  % Riduce lo spazio sopra
+    \includegraphics[width=0.95\textwidth]{hashing/img1.png}
+    \vspace{-5pt}  % Riduce lo spazio sopra 
+\end{figure}
+\noindent
+Per comprendere il funzionamento delle tabelle hash dobbiamo prendere in considerazione il concetto di \textbf{insieme universo \textit{U}}, ovvero un insieme di tutte le possibili chiavi, la cui grandezza dell'insieme varia arbitrariamente in base ai dati che si vogliono contenere.
+\begin{tcolorbox}[
+        colback=yellow!20,
+        colframe=darkgray,
+        title=Idea di base
+    ]
+    Quello che si vuole fare è memorizzare tutti i dati dell'insieme \textbf{\textit{U}} in un vettore di dimensione ($m$) finita $T[0...m-1]$, ed avere un meccanismo per cui, data una chiave, trovare rapidamente la posizione in cui è memorizzata.
+\end{tcolorbox}
+\noindent
+Le chiavi possono essere delle stringhe, degli oggetti o dei numeri, e il compito delle tabelle hash è quello di trasformarle in un indice all'interno di esse.
+Per fare ciò viengono utilizzate le \textbf{funzioni hash}.
+\begin{tcolorbox}[
+        colback=yellow!20,
+        colframe=darkgray,
+        title=Cos'è una funzione hash?
+    ]
+    Una \textbf{funzione hash} è una funzione $H$ che mappa ciascuna chiave $k$ appartenente all'insieme universo $U$ ($k \in U$) nell'indice $H(k)$ di un vettore $A$, destinato a contenere la coppia $(k,v)$. Viene definita come $H: U \rightarrow \{0,1,...,m-1\}$.
+\end{tcolorbox}
+\noindent
+\begin{minipage}[t]{0.560\textwidth}
+    \vspace{-25pt}
     \begin{figure}[H]
         \centering
-        \vspace{-10pt}  % Riduce lo spazio sopra
-        \includegraphics[width=0.95\textwidth]{hashing/img1.png}
-        \vspace{-5pt}  % Riduce lo spazio sopra 
+        \addtocounter{figure}{10}
+        \caption{Esempio di funzione hash}
+        \label{fig:hash_example}
     \end{figure}
-    \noindent
-    Per comprendere il funzionamento delle tabelle hash dobbiamo prendere in considerazione il concetto di \textbf{insieme universo \textit{U}}, ovvero un insieme di tutte le possibili chiavi, la cui grandezza dell'insieme varia arbitrariamente in base ai dati che si vogliono contenere.
-    \begin{tcolorbox}[
-        colback=yellow!20, 
-        colframe=darkgray, 
-        title=Idea di base
-        ]
-        Quello che si vuole fare è memorizzare tutti i dati dell'insieme \textbf{\textit{U}} in un vettore di dimensione ($m$) finita $T[0...m-1]$, ed avere un meccanismo per cui, data una chiave, trovare rapidamente la posizione in cui è memorizzata.
-    \end{tcolorbox}
-    \noindent
-    Le chiavi possono essere delle stringhe, degli oggetti o dei numeri, e il compito delle tabelle hash è quello di trasformarle in un indice all'interno di esse. 
-    Per fare ciò viengono utilizzate le \textbf{funzioni hash}.
-    \begin{tcolorbox}[
-        colback=yellow!20, 
-        colframe=darkgray, 
-        title=Cos'è una funzione hash?
-        ]
-        Una \textbf{funzione hash} è una funzione $H$ che mappa ciascuna chiave $k$ appartenente all'insieme universo $U$ ($k \in U$) nell'indice $H(k)$ di un vettore $A$, destinato a contenere la coppia $(k,v)$. Viene definita come $H: U \rightarrow \{0,1,...,m-1\}$.
-    \end{tcolorbox}
-    \noindent 
-    \begin{minipage}[t]{0.560\textwidth}
-        \vspace{-25pt}
-        \begin{figure}[H]
-            \centering
-            \addtocounter{figure}{10}
-            \caption{Esempio di funzione hash}
-            \label{fig:78}
-        \end{figure}
 
-        \vspace{-20pt}
-        \includegraphics[width=\textwidth]{hashing/img2.png} 
-    \end{minipage}%
-    \hspace{5pt} % Spazio tra immagine e testo
-    \raisebox{2pt}{  
-        \begin{minipage}[t]{0.417\textwidth}
-            Come si può vedere dall'immagine, viene presa una chiave (in questo caso una stringa) che verrà poi trasformata in qualche modo, tramite la funzione hash (che può essere anche una black box), in un indice.
+    \vspace{-20pt}
+    \includegraphics[width=\textwidth]{hashing/img2.png}
+\end{minipage}%
+\hspace{5pt} % Spazio tra immagine e testo
+\raisebox{2pt}{
+    \begin{minipage}[t]{0.417\textwidth}
+        Come si può vedere dall'immagine, viene presa una chiave (in questo caso una stringa) che verrà poi trasformata in qualche modo, tramite la funzione hash (che può essere anche una black box), in un indice.
 
-            \vspace{8pt}
-            A questo punto sorge un \textbf{problema}: l'insieme delle chiavi è potenzialmente infinito, ma non si vuole che sia lo stesso anche per la tabella hash, dal momento in cui si potrebbe non disporre
-        \end{minipage} 
-    }
-    \noindent
-    dello spazio in memoria necessario per qualunque coppia chiave-valore. Dunque, quello che succede è che avvengono delle \textbf{collisioni}.\\
-    Per evitare inutili sprechi di memoria, la dimensione $m$ del vettore non deve essere determinata sulla base dell'intero universo $U$, ma piuttosto in funzione del \textbf{numero di chiavi attese}, ovvero la \textbf{quantità $k$ di elementi} che si prevede saranno \textbf{effettivamente presenti nel dizionario} in un determinato momento.
-    \begin{tcolorbox}[
-        colback=yellow!20, 
-        colframe=darkgray, 
+        \vspace{8pt}
+        A questo punto sorge un \textbf{problema}: l'insieme delle chiavi è potenzialmente infinito, ma non si vuole che sia lo stesso anche per la tabella hash, dal momento in cui si potrebbe non disporre
+    \end{minipage}
+}
+\noindent
+dello spazio in memoria necessario per qualunque coppia chiave-valore. Dunque, quello che succede è che avvengono delle \textbf{collisioni}.
+
+\subsection{Tabelle ad accesso diretto}
+Prima di affrontare il problema delle collisioni, è utile analizzare un \textbf{caso particolare} in cui esse possono essere \textbf{completamente evitate}: le \textbf{tabelle ad accesso diretto}.
+
+\vspace{8pt}
+\noindent
+Questo approccio è applicabile solo quando l'insieme universo $U$ delle chiavi è limitato e di dimensione ridotta, tale da poter essere rappresentato direttamente in memoria senza \textbf{sprechi} eccessivi. Utilizzando un approccio del genere è possibile utilizzare un vettore $A$ della stessa dimensione dell'insieme $U$, quindi $m=|U|$, nel quale ogni chiave $k$ che appartiene all'insieme $U$ viene memorizzata direttamente nella posizione $A[k]$.\\
+La funzione hash utilizzata è quindi la \textbf{funzione identità} $ h(k) = k$, in questo caso una \textbf{funzione hash perfetta}, come quella illustrata in figura \ref{fig:hash_example}, che garantisce l'esecuzione delle operazioni di \texttt{insert()}, \texttt{lookup()} e \texttt{remove()} in tempo $O(1)$ nel caso peggiore.\\
+In questo modo ogni chiave verrebbe memorizzata in una posizione distinta della tabella.
+
+\subsubsection{Funzioni hash perfette}
+\begin{tcolorbox}[
+        colback=yellow!20,
+        colframe=darkgray,
+        title=Funzioni hash perfette
+    ]
+    Una funzione hash $h$ si dice \textbf{perfetta} se è \textbf{iniettiva}, ovvero se non da origine a collisioni:
+
+    \vspace{-15pt}
+    \[
+        \forall k_1, k_2 \in U: k_1\neq k_2 \Rightarrow H(k_1) \neq H(k_2)
+    \]
+\end{tcolorbox}
+\noindent
+Tuttavia, questo metodo presenta un \textbf{limite fondamentale}:\\
+oltre al fatto che se l'insieme universo $U$ è molto grande, l'approccio non è praticabile, nel caso in cui il numero di chiavi memorizzate nel dizionario sia molto inferiore al massimo disponibile, quindi $m=|U|$, si incorrerebbe in uno \textbf{spreco di meoria} poiché molte posizioni del vettore verrebbero lasciate inutilizzate.\\
+Per questo motivo, le \textbf{tabelle ad accesso diretto} sono utilizzabili solo in \textbf{contesti specifici} e rappresentano principalmente un modello teorico di riferimento per le tabelle hash.
+
+\vspace{8pt}
+\noindent
+Per evitare inutili sprechi di memoria, la dimensione $m$ del vettore non deve essere determinata sulla base dell'intero universo $U$, ma piuttosto in funzione del \textbf{numero di chiavi attese}, ovvero la \textbf{quantità $k$ di elementi} che si prevede saranno \textbf{effettivamente presenti nel dizionario} in un determinato momento.
+\begin{tcolorbox}[
+        colback=yellow!20,
+        colframe=darkgray,
         title=Quando si verifica una collisione?
-        ]
-        Si verifica una \textbf{collisione} quando due chiavi distinte $k_1 \neq k_2$ vengono mappate dalla funzione hash sulla stessa posizione del vettore, ovvero quando $H(k_1)=H(k_2)$.
-    \end{tcolorbox}
-    \noindent 
-    \begin{minipage}[t]{0.610\textwidth} 
-            \includegraphics[width=\textwidth]{hashing/img3.png}
-    \end{minipage}%
-    \hspace{5pt} % Spazio tra immagine e testo
-    \raisebox{169pt}{  
-        \begin{minipage}[t]{0.367\textwidth}
-            Le collisioni mettono quindi in luce due \textbf{aspetti fondamentali} nella progettazione di una tabella hash:
+    ]
+    Si verifica una \textbf{collisione} quando due chiavi distinte $k_1 \neq k_2$ vengono mappate dalla funzione hash sulla stessa posizione del vettore, ovvero quando $H(k_1)=H(k_2)$.
+\end{tcolorbox}
+\noindent
+Le collisioni mettono quindi in luce due \textbf{aspetti fondamentali} nella progettazione di una tabella hash:
+\begin{itemize}[leftmargin=1em]
+    \item La \textbf{scelta della funzione hash} è cruciale, infatti una funzione mal progettata può distribuire le chiavi in modo sbilanciato, causando una concentrazione eccessiva in alcune posizioni del vettore, lasciando quasi del tutto inutilizzate altre.
+    \item È essenziale progettare dei \textbf{meccanismi} efficienti per la \textbf{gestione delle collisioni}, poiché
+\end{itemize}
 
-            \vspace{8pt}
-            \begin{itemize}[leftmargin=1em]
-                \item La \textbf{scelta della funzione hash} è cruciale, infatti una funzione mal progettata può distribuire le chiavi in modo sbilanciato, causando una concentrazione eccessiva in alcune posizioni del vettore, lasciando quasi del tutto inutilizzate altre.
-            \end{itemize}
-        \end{minipage} 
-    }
+\vspace{3pt}
+\noindent
+\begin{minipage}[t]{0.610\textwidth}
+    \includegraphics[width=\textwidth]{hashing/img3.png}
+\end{minipage}%
+\hspace{5pt} % Spazio tra immagine e testo
+\raisebox{170pt}{
+    \begin{minipage}[t]{0.367\textwidth}
+        anche scegliendo una buona funzione di hash, quando il numero di chiavi possibili supera il numero di posizioni disponibili nella tabella, le collisioni sono inevitabili.\\
+        Questi meccanismi permettono quindi di \textbf{garantire il corretto funzionamento} delle operazioni di inserimento, ricerca e cancellazione.
+    \end{minipage}
+}
+
+\subsection{Funzioni hash}
+Se \textbf{non è possibile evitare} le collisioni, si cerca di \textbf{minimizzarne il numero}.\\
+La \textbf{qualità di una funzione hash} dipende in modo cruciale dalla \textbf{sua capacità} di distribuire le chiavi dell'universo $U$ negli indici $[0...m-1]$ della tabella hash \textbf{in modo uniforme}.\\
+Una distribuzione sbilanciata porta a un aumento del numero di collisioni in alcune celle, con conseguente peggioramento delle prestazioni del dizionario.
+
+\vspace{8pt}
+\noindent
+Uno dei criteri più diffusi per valutare la qualità di una funzione hash è l'\textbf{uniformità semplice}:
+\begin{itemize}[leftmargin=1em]
+    \item Sia $P(k)$ la probabilità che una qualunque chiave $k$ sia inserita nel dizionario;
+    \item Sia $Q(i)$ la probabilità che una qualunque chiave finisca nella cella $i$-esima della tabella.
+\end{itemize}
+\begin{tcolorbox}[
+        colback=yellow!20,
+        colframe=darkgray,
+        title=Uniformità semplice
+    ]
+    Una funzione hash $h$ gode di \textbf{uniformità semplice} se, per ogni posizione $i$ della tabella, la probabilità che una chiave $k$ venga mappata in $i$ è uguale a $1/m$, quindi $Q(i)=1/m$.
+\end{tcolorbox}
+Quindi, l'evento che interessa è: \textit{"la chiave $k_n$ scelta finisce nella cella i"}, e ciò accade se la funzione hash, per qualche motivo, mappa una determinata chiave per quella cella: $h(k_1)=i$, oppure $h(k_2)=i$, e così via... definendo eventi tra loro mutualmente esclusivi.
+
+\vspace{-10pt}
+\[
+    Q(i) = \sum_{\substack{k \in U: h(k) = i}} P(k)
+\]
+Quando un evento può accadere tramite alternative mutualmente esclusive, la probabilità totale è la somma delle probabilità alternative.\\
+Proprio per questo motivo ottengo $Q(i)$ sommando le probabilità che le chiavi $k_n$ hanno di finire in $i$: se questa poi risulta uguale a $1/m$ la funzione hash gode di uniformità semplice.
+\begin{tcolorbox}
+    [
+        colback=green!10,  % Sfondo verde chiaro
+        colframe=green!60!black,  % Bordo verde più acceso
+        coltitle=black,  % Colore del testo del titolo
+        fonttitle=\bfseries,  % Testo del titolo in grassetto
+        title={\centering \textbf{\textit{Problema fondamentale}}},  % Titolo centrato 
+        enhanced,  % Miglioramenti grafici
+        attach boxed title to top center={yshift=-2mm},  % Posiziona il titolo centrato in alto
+        boxed title style={colback=white, colframe=green!60!black, rounded corners},
+        breakable
+    ]
+    Per poter ottenere una \textbf{funzione hash con uniformità semplice}, la \textbf{distribuzione delle probabilità} $P$ deve essere \textbf{nota}.\\
+    Ad esempio, si supponga di avere $m=10$ celle nella tabella.
     \begin{itemize}[leftmargin=1em]
-        \item È essenziale progettare dei \textbf{meccanismi} efficienti per la \textbf{gestione delle collisioni}, poiché anche scegliendo una buona funzione di hash, quando il numero di chiavi possibili supera il numero di posizioni disponibili nella tabella, le collisioni sono inevitabili. Questi meccanismi permettono quindi di \textbf{garantire il corretto funzionamento} delle operazioni di inserimento, ricerca e cancellazione.
+        \item $90\%$ delle chiavi che iniziano con \textit{"A"};
+        \item $10\%$ delle chiavi che iniziano con \textit{"Z"}.
     \end{itemize}
+    Per costruire una funzione hash con uniformità semplice bisognerebbe fare in modo che le celle che iniziano con \textit{"A"} occupino il $90\%$ delle celle ($0...8$), mentre le chiavi che iniziano con \textit{"Z"} occupino il $10\%$ delle celle (cella $9$) in modo che la probabilità che una chiave cada nelle celle $0...8$ sia dello $0.9$ e la probabilità che cada nella cella $9$ sia dello $0.1$.
 
-    \subsection{Tabelle ad accesso diretto}
-    Prima di affrontare il problema delle collisioni, è utile analizzare un caso particolare in cui esse possono essere completamente evitate: le \textbf{tabelle ad accesso diretto}.
-
-    \vspace{8pt} 
-    \noindent 
-    Questo approccio è applicabile solo quando l'insieme universo $U$ delle chiavi è limitato e di dimensione ridotta, tale da poter essere rappresentato direttamente in memoria senza \textbf{sprechi} eccessivi. Utilizzando un approccio del genere è possibile utilizzare un vettore $A$ della stessa dimensione dell'insieme $U$, quindi $m=|U|$, nel quale ogni chiave $k$ che appartiene all'insieme $U$ viene memorizzata direttamente nella posizione $A[k]$.\\ 
-    La funzione hash utilizzata è quindi la \textbf{funzione identità} $ h(k) = k$, in questo caso una \textbf{funzione hash perfetta}, come quella illustrata in figura \ref{fig:78}, che garantisce l'esecuzione delle operazioni di \texttt{insert()}, \texttt{lookup()} e \texttt{remove()} in tempo $O(1)$ nel caso peggiore.\\ 
-    In questo modo ogni chiave verrebbe memorizzata in una posizione distinta della tabella.
-    
     \vspace{8pt}
     \noindent
-    Tuttavia, questo metodo presenta un \textbf{limite fondamentale}:\\
-    oltre al fatto che se l'insieme universo $U$ è molto grande, l'approccio non è praticabile, nel caso in cui il numero di chiavi memorizzate nel dizionario sia molto inferiore al massimo disponibile, quindi $m=|U|$, si incorrerebbe in uno \textbf{spreco di meoria} poiché molte posizioni del vettore verrebbero lasciate inutilizzate.\\
-    Per questo motivo, le tabelle ad accesso diretto sono utilizzabili solo in contesti specifici e rappresentano principalmente un modello teorico di riferimento per le tabelle hash.
+    Nella realtà però non sappiamo quali chiavi verranno inserite né con quale frequenza compariranno, quindi \textbf{non è possibile costruire una funzione hash perfettamente uniforme}.
+    In sostanza la distribuzione esatta $P(k)$ non può essere nota e si va ad utilizzare tecniche \textbf{euristiche}.
+\end{tcolorbox}
+\noindent
+Le tecniche euristiche sono delle funzioni hash che tendono a distribuire bene le chiavi anche se non si conosce $P(k)$, sperando che nella pratica funzionino bene.
 
-    \subsubsection{Funzioni hash perfette}
+\subsubsection{Come realizzare una funzione hash}
 
 \end{document}
