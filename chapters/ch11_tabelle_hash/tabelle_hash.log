@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.3.9)  31 DEC 2025 01:20
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.3.9)  31 DEC 2025 01:25
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1003,7 +1003,7 @@ LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
  ***********
 Package rerunfilecheck Info: File `tabelle_hash.out' has not changed.
-(rerunfilecheck)             Checksum: 992B8D1D13CCFEC9F51CD296A0A706B9;826.
+(rerunfilecheck)             Checksum: 61634939ADF28F22E5DD96222A8A1949;884.
  ) 
 Here is how much of TeX's memory you used:
  34178 strings out of 474486
@@ -1017,7 +1017,7 @@ Here is how much of TeX's memory you used:
 pdfTeX warning (dest): name{subsection.4.4} has been referenced but does not exist, replaced by a fixed one
 
 <C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchb8a.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchbi8a.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchr8a.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchri8a.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt12.pfb>
-Output written on c:/Users\dany2\OneDrive\Desktop\UniSassari\Appunti_latex\Appunti_Algoritmi_Strutture_Dati\Chapters\ch11_tabelle_hash\tabelle_hash.pdf (4 pages, 326624 bytes).
+Output written on c:/Users\dany2\OneDrive\Desktop\UniSassari\Appunti_latex\Appunti_Algoritmi_Strutture_Dati\Chapters\ch11_tabelle_hash\tabelle_hash.pdf (4 pages, 326822 bytes).
 PDF statistics:
  164 PDF objects out of 1000 (max. 8388607)
  13 named destinations out of 1000 (max. 500000)
