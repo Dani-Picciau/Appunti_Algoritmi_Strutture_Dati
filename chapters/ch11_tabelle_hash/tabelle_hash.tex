@@ -117,6 +117,7 @@ Le collisioni mettono quindi in luce due \textbf{aspetti fondamentali} nella pro
 }
 
 \subsection{Minimizzare le collisoni}
+\label{par:Minimizzare le collisioni}
 Se \textbf{non è possibile evitare} le collisioni, si cerca di \textbf{minimizzarne il numero}.\\
 La \textbf{qualità di una funzione hash} dipende in modo cruciale dalla \textbf{sua capacità} di distribuire le chiavi dell'universo $U$ negli indici $[0...m-1]$ della tabella hash \textbf{in modo uniforme}.\\
 Una distribuzione sbilanciata porta a un aumento del numero di collisioni in alcune celle, con conseguente peggioramento delle prestazioni del dizionario.
@@ -169,8 +170,52 @@ Proprio per questo motivo ottengo $Q(i)$ sommando le probabilità che le chiavi 
     In sostanza la distribuzione esatta $P(k)$ non può essere nota e si va ad utilizzare tecniche \textbf{euristiche}.
 \end{tcolorbox}
 \noindent
-Le tecniche euristiche sono delle funzioni hash che tendono a distribuire bene le chiavi anche se non si conosce $P(k)$, sperando che nella pratica funzionino bene.
+Le tecniche euristiche sono delle funzioni hash che usano \textbf{formule matematiche} per distribuire bene le chiavi anche se non si conosce $P(k)$, sperando che nella pratica funzionino bene.
 
-\subsubsection{Come realizzare una funzione hash}
+\subsection{Come realizzare una funzione hash}
+Dal momento che per utilizzare le tecniche euristiche \textbf{si ha bisogno di numeri}, si presenta la necessità di \textbf{codificare le chiavi} in numeri naturali. Dunque, se la chiave non è un numero (ad esempio una stringa "ciao") bisogna prima convertirla.
+\begin{tcolorbox}[
+        colback=yellow!20,
+        colframe=darkgray,
+        title=Assunzione
+    ]
+    Si assume che le chiavi possano essere tradotte in valori \textbf{numerici non negativi}, eventualmente interpretando la loro rappresentazione in memoria come un numero.
+\end{tcolorbox}
+\noindent
+\textbf{\textit{Esempio: trasformazione di stringhe}}\\
+Consideriamo una chiave $k$ costituita da una stringa di caratteri, la trasformazione in intero avviene seguendo dei passaggi logici:
+\begin{enumerate}[leftmargin=1.3em]
+    \item $ord(c) \rightarrow$ \textbf{Codifica dei caratteri}: Si prende il valore ordinale binario del carattere $c$ secondo una codifica standard (ad esempio ASCII);
+    \item $bin(k) \rightarrow$ \textbf{Rappresentazione binaria}: si concatenano i valori binari dei singoli caratteri che compongono la chiave $k$.
+    \item $int(b) \rightarrow$ \textbf{Interpretazione intera}: la sequenza di bit risultante viene interpretata come un unico grande numero intero.
+\end{enumerate}
+\begin{lstlisting}[style=mystyle, language=C, , escapeinside={(*@}{@*)}]
+Utilizzando una codifica ASCII a 8 bit, e concatenando i risultati di
+ogni lettera, si ottiene un numero a 24 bit
+bin("DOG") = ord("D")  ord("O")  ord("G")
+           = 01000100  01001111  01000111
+int("DOG") =  (*@$68\cdot256$@*)  +  (*@$79\cdot256^2$@*) +   (*@$71$@*)    = (*@$ 4.476.743$@*) 
+\end{lstlisting}
+Come detto alla fine del capitolo \ref{par:Minimizzare le collisioni}, le chiavi vanno ben distribuite proprio perché si ha il problema che il numero ottenuto è solitamente molto grande (nell'esempio precedente $> 4$ milioni), e la tabella hash non ha 4 milioni di righe, magari solo $m=100$.
+
+\vspace{8pt}
+\noindent
+I metodi che seguiranno sono esattamente quelle tecniche euristiche che utilizzano formule matematiche progettate per \textbf{distribuire} (o \textit{"sparpagliare"}) uniformemente questi grandi numeri all'interno delle poche celle disponibili.
+
+\subsubsection{Metodo dell'estrazione}
+Il metodo dell’estrazione è uno dei più semplici per definire una funzione hash su chiavi binarie.
+\begin{tcolorbox}[
+        colback=yellow!20,
+        colframe=darkgray,
+        title=Come funziona?
+    ]
+    \begin{itemize}[leftmargin=1em]
+        \item Si assume che la \textbf{dimensione della tabella} sia una \textbf{potenza di due}, ovvero $m=2^p$;
+        \item Si seleziona un \textbf{blocco di $p$ bit} dalla rappresentazione binaria della chiave;
+        \item L'indice hash è ottenuto \textbf{convertendo questi bit in un numero} intero.
+    \end{itemize}
+\end{tcolorbox}
+\noindent
+\textbf{\textit{Esempio di utilizzo}}
 
 \end{document}
