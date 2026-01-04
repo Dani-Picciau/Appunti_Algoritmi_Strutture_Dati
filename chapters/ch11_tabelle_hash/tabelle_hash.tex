@@ -69,6 +69,7 @@ La funzione hash utilizzata è quindi la \textbf{funzione identità} $ h(k) = k$
 In questo modo ogni chiave verrebbe memorizzata in una posizione distinta della tabella.
 
 \subsubsection{Funzioni hash perfette}
+\label{par:Funzioni hash perfette}
 \begin{tcolorbox}[
         colback=yellow!20,
         colframe=darkgray,
@@ -194,7 +195,7 @@ Utilizzando una codifica ASCII a 8 bit, e concatenando i risultati di
 ogni lettera, si ottiene un numero a 24 bit
 bin("DOG") = ord("D")  ord("O")  ord("G")
            = 01000100  01001111  01000111
-int("DOG") =  (*@$68\cdot256$@*)  +  (*@$79\cdot256^2$@*) +   (*@$71$@*)    = (*@$ 4.476.743$@*) 
+int("DOG") =  (*@$68\cdot256^2$@*)  +  (*@$79\cdot256$@*) +   (*@$71$@*)    = (*@$ 4.476.743$@*) 
 \end{lstlisting}
 Come detto alla fine del capitolo \ref{par:Minimizzare le collisioni}, le chiavi vanno ben distribuite proprio perché si ha il problema che il numero ottenuto è solitamente molto grande (nell'esempio precedente $> 4$ milioni), e la tabella hash non ha 4 milioni di righe, magari solo $m=100$.
 
@@ -203,7 +204,8 @@ Come detto alla fine del capitolo \ref{par:Minimizzare le collisioni}, le chiavi
 I metodi che seguiranno sono esattamente quelle tecniche euristiche che utilizzano formule matematiche progettate per \textbf{distribuire} (o \textit{"sparpagliare"}) uniformemente questi grandi numeri all'interno delle poche celle disponibili.
 
 \subsubsection{Metodo dell'estrazione}
-Il metodo dell’estrazione è uno dei più semplici per definire una funzione hash su chiavi binarie.
+\label{par:Metodo dell'estrazione}
+Il metodo dell'estrazione è uno dei più semplici ed efficienti per definire una funzione hash su chiavi binarie.
 \begin{tcolorbox}[
         colback=yellow!20,
         colframe=darkgray,
@@ -216,6 +218,292 @@ Il metodo dell’estrazione è uno dei più semplici per definire una funzione h
     \end{itemize}
 \end{tcolorbox}
 \noindent
-\textbf{\textit{Esempio di utilizzo}}
+\textbf{\textit{Esempi di utilizzo}}\\
+Si sceglie una tabella con $m=2^p=2^{16}=65536$ celle.\\ Per indirizzarle tutte, \textbf{necessiteranno} di $p=16$ bit estratti dalla chiave, ad esempio:
+\begin{itemize}[leftmargin=1em]
+    \item Si può scegliere il \textbf{blocco dei $16$ meno significatvi}
+\end{itemize}
+\begin{lstlisting}[style=mystyle, language=C, , escapeinside={(*@}{@*)}]
+bin("Alberto") =  01000001 01101100 01100010 01100101 01110010 (*@\textcolor{red}{01110100}@*)
+                  (*@\textcolor{red}{01101111}@*)
+bin("Roberto") =  01010010 01101111 01100010 01100101 01110010 (*@\textcolor{red}{01110100}@*)
+                  (*@\textcolor{red}{01101111}@*)
+H("Alberto") = int(01110100 01101111) = 29.807
+H("Roberto") = int(01110100 01101111) = 29.807
+\end{lstlisting}
+\begin{itemize}[leftmargin=1em]
+    \item Oppure si prendono $16$ bit partendo da una \textbf{posizione casuale interna}
+\end{itemize}
+\begin{lstlisting}[style=mystyle, language=C, , escapeinside={(*@}{@*)}]
+bin("Alberto") =  0100(*@\textcolor{red}{0001 01101100 0110}@*)0010 01100101 01110010 01110100
+                  01101111
+bin("Alessio") =  0100(*@\textcolor{red}{0001 01101100 0110}@*)0101 01110011 01110011 01101001
+                  01101111
+H("Alberto") = int(00010110 11000110) = 5.830
+H("Alessio") = int(00010110 11000110) = 5.830
+\end{lstlisting}
+
+\vspace{8pt}
+\noindent
+Come si può vedere dagli esempi, nonostante questa metodologia sia semplice ed efficiente, è \textbf{estremamente sensibile} alla scelta dei \textbf{bit selezionati per la chiave}, infatti, variazioni minime delle chiavi come anagrammi o suffissi simili produrranno \textbf{collisioni frequenti}.\\
+Anche selezionare bit da altre parti della chiave può risultare inefficace, specialmente se le chiavi condividono prefissi o segmenti centrali comuni.\\
+Proprio per questo motivo, \textbf{se non si conosce la distribuzione dei dati, questo approccio è sconsigliato}, in quanto scarta completamente l'informazione contenuta nei bit non selezionati.
+
+\subsubsection{Metodo dello XOR}
+\label{par:Metodo dello XOR}
+Il metodo dello XOR nasce per risolvere il difetto del metodo dell'estrazione, nel quale, se prendi solo alcuni bit, \textbf{ignori completamente i primi}.\\
+Quindi, se cambia un bit all'inzio della chiave, l'hash non cambia, mentre con lo XOR si vuole che \textbf{tutti i bit partecipino al calcolo dell'indice}.
+\begin{tcolorbox}[
+        colback=yellow!20,
+        colframe=darkgray,
+        title=Come funziona?
+    ]
+    \begin{itemize}[leftmargin=1em]
+        \item Anche in questo caso si assume che la \textbf{dimensione della tabella} sia una \textbf{potenza di due}, ovvero $m=2^p$;
+        \item Si suddivide la rappresentazione binaria della chiave $k$ in $q$ sotto-blocchi, ciascuno di lunghezza pari a $p$ bit (la dimensione dell'indirizzo della tabella);
+        \item L'indice hash $h(k)$ è ottenuto effettuando lo XOR progressivo tra tutti i blocchi e \textbf{convertendo la somma finale in un numero} intero.
+    \end{itemize}
+\end{tcolorbox}
+\noindent
+\textbf{\textit{Esempio}}: si immagini che la chiave sia una striscia di carta lunga (tanti bit) e che la si voglia ridurre a un quadratino piccolo (l'indice $p$).
+Invece di tagliare un pezzo e buttare il resto (estrazione), si piega la striscia su se stessa sovrapponendo i bit.
+
+
+\vspace{8pt}
+\noindent
+\textbf{\textit{Esempio di utilizzo}}\\
+Utilizziamo sempre una tabella con $m=2^p=2^{16}=65536$ celle, $16$ bit di indirizzamento.\\
+In questo caso, dovendo dividere la chiave in sotto-blocchi da $16$ bit, risultano 5 gruppi, uno dei quali viene riempito con $8$ zeri di \textit{"padding"}. Utilizzando il metodo XOR è come se facessimo tante addizioni in colonna per le quali non si considera il riporto.
+
+\vspace{-5pt}
+\noindent
+\begin{minipage}[t]{0.487\textwidth}
+    \begin{lstlisting}[style=mystyle, language=C]
+bin("montresor") =
+01101101 01101111 (*@$\bigoplus$@*)
+01101110 01110100 (*@$\bigoplus$@*)
+01110010 01100101 (*@$\bigoplus$@*)
+01110011 01101111 (*@$\bigoplus$@*)
+01110010 (*@\textcolor{blue}{00000000}@*)
+
+H("montresor") =
+int(01110000 00010001) = 28.689
+    \end{lstlisting}
+\end{minipage}%
+\hspace{6pt} % Spazio tra immagine e testo
+\begin{minipage}[t]{0.487\textwidth}
+    \begin{lstlisting}[style=mystyle, language=C]
+bin("sontremor") =
+01110011 01101111 (*@$\bigoplus$@*)
+01101110 01110100 (*@$\bigoplus$@*)
+01110010 01100101 (*@$\bigoplus$@*)
+01101101 01101111 (*@$\bigoplus$@*)
+01110010 (*@\textcolor{blue}{00000000}@*)
+
+H("sontremor") =
+int(01110000 00010001) = 28.689
+    \end{lstlisting}
+\end{minipage}
+
+\vspace{8pt}
+\noindent
+Nonostante questo approccio permetta di utilizzare ogni singolo bit della chiave per influenzare il risultato finale, presenta alcune problematiche:
+\begin{itemize}[leftmargin=1em]
+    \item \textbf{Vulnerabilità agli anagrammi}: due chiavi composte dagli stessi caratteri in ordine diverso (come nell'esempio sopra illustrato) possono generare lo stesso indice hash, e di conseguenza collisioni;
+    \item L'\textbf{efficacia} dipende fortemente dalla suddivisione in blocchi e dall'eventuale padding applicato.
+\end{itemize}
+
+\subsubsection{Metodo della divisione}
+\label{par:Metodo della divisione}
+I metodi basati sulla manipolazione dei bit visti ai capitoli \ref{par:Metodo dell'estrazione} e \ref{par:Metodo dello XOR} soffrono di problemi legati alla regolarità dei dati (ad esempio, suffissi identici) o alla commutatività (anagrammi).\\
+Questo perché, caratteri uguali in chiavi differenti, vengono rappresentati con la stessa codifica ASCII a $8$ bit.\\
+Il \textbf{metodo della divisione} cambia approccio, utilizzando una \textbf{logica aritmetica} al posto di una logica basata sui bit. Viene infatti utilizzato un sistema posizionale (come le unità, decine e centinaia), dove i caratteri più a sinistra valgono di più, ad esempio:
+\begin{lstlisting}[style=mystyle, language=C, , escapeinside={(*@}{@*)}]
+"AB"=ord("A")(*@$\cdot256^1$@*) + ord("B")(*@$\cdot256^0$@*)
+"BA"=ord("B")(*@$\cdot256^1$@*) + ord("A")(*@$\cdot256^0$@*)
+
+\end{lstlisting}
+\begin{tcolorbox}[
+        colback=yellow!20,
+        colframe=darkgray,
+        title=Come funziona?
+    ]
+    Utilizzando la logica aritmetica si converte quindi la chiave in un \textbf{intero}, che grazie al sistema posizionale è \textbf{sempre diverso} (evitando così anagrammi), di cui si calcola il \textbf{resto della divisione per $m$}: il resto della divisione per $m$ è \textbf{sempre un numero compreso tra $0$ e $m-1$}.\\
+    In questo modo è possibile indirizzare correttamente tutte le celle della tabella hash senza \textbf{\textit{"uscire dai bordi"}}.
+\end{tcolorbox}
+\begin{tcolorbox}
+    [
+        colback=green!10,  % Sfondo verde chiaro
+        colframe=green!60!black,  % Bordo verde più acceso
+        coltitle=black,  % Colore del testo del titolo
+        fonttitle=\bfseries,  % Testo del titolo in grassetto
+        title={\centering \textbf{\textit{La scelta del numero di celle (m)}}},  % Titolo centrato 
+        enhanced,  % Miglioramenti grafici
+        attach boxed title to top center={yshift=-2mm},  % Posiziona il titolo centrato in alto
+        boxed title style={colback=white, colframe=green!60!black, rounded corners},
+        breakable
+    ]
+    La scelta di $m$ determina la \textbf{qualità della distribuzione}: è necessario che sia \textbf{un numero dispari}, preferibilmente un \textbf{numero primo} non troppo vicino a una potenza di due.
+
+    \vspace{8pt}
+    \noindent
+    Le chiavi reali spesso presentano dei pattern o regolarità (ad esempio, indirizzi di memoria che sono multipli di 4 o 8).
+    Se $m$ avesse un divisore in comune con il "passo" o il pattern delle chiavi, la funzione hash mapperebbe le chiavi solo su un sottoinsieme delle celle disponibili, lasciandone molte vuote e causando collisioni.
+    Un numero primo non possiede divisori (a parte 1 e se stesso), minimizzando la probabilità di interazione con i pattern dei dati e garantendo una distribuzione più uniforme ("sparpagliamento") su tutta la tabella.
+\end{tcolorbox}
+\noindent
+\textbf{\textit{Esempio di utilizzo}}\\
+Si sceglie un numero di celle secondo le specifiche descritte prima, ad esempio $m=383$
+\begin{lstlisting}[style=mystyle, language=C, , escapeinside={(*@}{@*)}]
+H("Alberto")  = 18.415.043.350.787.183    mod 383 = 221
+H("Alessio")  = 18.415.056.470.632.815    mod 383 = 77
+H("Cristian") = 4.860.062.892.481.405.294 mod 383 = 130
+\end{lstlisting}
+Dunque, il metodo della divisione è facile da imlementare ed efficace \textbf{solo se $m$ viene scelto con cura}, altrimenti possono verificarsi le seguenti problematiche:
+\begin{itemize}[leftmargin=1em]
+    \item Se si sceglie un numero di celle per la tabella hash pari a $m=2^p$, l'operazione modulo della chiave considera solo gli ultimi $p$ bit per la creazione dell'indice.\\
+          In questo modo viene buttata via parte dell'informazione della chiave che poteva essere utilizzata per la creazione del suo indice all'interno della tabella hash, "regredendo" così al metodo dell'estrazione (capitolo \ref{par:Metodo dell'estrazione});
+    \item Se invece si sceglie un numero di celle pari a $m=2^p-1$, bisogna fare attenzione che la \textbf{base di rappresentazione dei dati} (es. $256$) divisa per $m$ \textbf{non dia resto 1}. Questo perché verrebbe a mancare il peso conferito a ciascun carattere tramite il sistema posizionale, facendo diventare la funzione hash una semplice somma, incapace di distinguere gli anagrammi.
+
+          \vspace{8pt}
+          \noindent
+          \textbf{\textit{Esempio pratico (in base 10)}}\\
+          Immaginamo che $m = 9$, con due numeri anagrammi: 12 e 21.\\
+          Calcoliamo l'indice della tabella hash (il resto della divisione per 9):
+          \begin{itemize}[leftmargin=1em, label=\raisebox{0.4ex}{\phantom{1}\rule{0.6ex}{0.6ex}}]
+              \item $H(12)$: Normalmente è $1 \cdot 10 + 2$, ma col modulo $9$, il $10$ diventa un $1$.
+                    Dunque: $1 \cdot 1 + 2 = 3$.
+              \item $H(21)$: Normalmente è $2 \cdot 10 + 1$, ma col modulo $9$, il $10$ diventa un $1$.
+                    Dunque: $2 \cdot 1 + 1 = 3$.
+          \end{itemize}
+          Come si può vedere, entrambe le chiavi vengono mappate con indice $3$, creando collisione.
+\end{itemize}
+
+\subsubsection{Metodo della moltiplicazione (Knuth)}
+A differenza del metodo della divisione (capitolo \ref{par:Metodo della divisione}), nel quale ci si affidava alla scelta di un $m$ primo per "rompere" i pattern delle chiavi, \textbf{il metodo della moltiplicazione} utilizza una costante $C$ per mescolare i bit. Questo permette di ottenere indici ben distribuiti pur scegliendo un valore di $m$ comodo per il calcolatore (ad esempio una potenza di $2$).
+\begin{tcolorbox}[
+        colback=yellow!20,
+        colframe=darkgray,
+        title=Come funziona?
+    ]
+    Il processo avviene in \textbf{due passaggi}:
+    \begin{itemize}[leftmargin=1em]
+        \item \textbf{\textit{Mescolamento}}: si moltiplica il valore numerico associato alla chiave $k$ per una costante $C$ (spesso \textbf{irrazionale}) compresa tra $0$ e $1$, e si estrae la parte frazionaria (decimale) del risultato. Questa operazione "distrugge" i pattern della chiave originale;
+        \item \textbf{\textit{Mappatura}}: Si moltiplica questa parte frazionaria per $m$ (il numero di celle) così da ottenere un indice valido tra $0$ ed $m-1$.
+    \end{itemize}
+\end{tcolorbox}
+\noindent
+La formula che esprime questi passaggi è la seguente: $ h(k) = \lfloor m (k C \mod 1) \rfloor $
+\begin{tcolorbox}
+    [
+        colback=green!10,  % Sfondo verde chiaro
+        colframe=green!60!black,  % Bordo verde più acceso
+        coltitle=black,  % Colore del testo del titolo
+        fonttitle=\bfseries,  % Testo del titolo in grassetto
+        title={\centering \textbf{\textit{Perché conviene che $C$ sia irrazionale?}}},  % Titolo centrato 
+        enhanced,  % Miglioramenti grafici
+        attach boxed title to top center={yshift=-2mm},  % Posiziona il titolo centrato in alto
+        boxed title style={colback=white, colframe=green!60!black, rounded corners},
+        breakable
+    ]
+    Un numero razionale semplice (come ad esempio $0.5 = 1/2$) ha una rappresentazione binaria finita e regolare. Moltiplicare per esso equivale spesso a un semplice scorrimento di bit (shift), con il rischio di estrarre nuovamente pattern prevedibili.\\
+    Dunque è preferibile che $C$ sia un \textbf{numero irrazionale}, cioè un numero non esprimibile tramite un rapporto di due numeri interi che ha una \textbf{rappresentazione decimale illimitata} (dopo la virgola le cifre continuano all'infinito) e \textbf{non periodica} (non formano una sequenza ripetitiva).
+
+    \vspace{8pt}
+    \noindent
+    Nello specifico \textit{Knuth} suggerì il valore $C = (\sqrt{5}-1)/2$, poiché presenta delle caratteristiche matematiche interessanti che permettono una distribuzione più uniforme ("spapagliata"), minimizzando le collisioni.
+\end{tcolorbox}
+\noindent
+\textbf{\textit{Esempio di utilizzo}}\\
+Sia $m= 2^{16}=65536$ celle e $C = (\sqrt{5}-1)/2 \thickapprox 0.6180339887$.\\
+Se moltiplico $C\cdot k$, dove $k$ è il valore numerico associato a ciascuna chiave dopo la codifica ASCII e la trasformazione in intero utilizzando il sistema posizionale, e estraggo la parte decimale, ottengo una parte decimale che risulterà distribuita in modo \textbf{pseudo-casuale}.\\
+Dopodiché moltiplico la parte decimale per $m$ ottenendo un indice valido tra $0$ e $m-1$.
+\begin{lstlisting}[style=mystyle, language=C, , escapeinside={(*@}{@*)}]
+H("Alberto")  = 65.536 (*@$\cdot$@*) 0.78732161432 = 51.598
+H("Alessio")  = 65.536 (*@$\cdot$@*) 0.51516739168 = 33.762
+H("Cristian") = 65.536 (*@$\cdot$@*) 0.72143641000 = 47.280
+\end{lstlisting}
+A questo punto è possibile effettuare alcune osservazioni:
+\begin{itemize}[leftmargin=1em]
+    \item il metodo della moltiplicazione funziona per qualsiasi valore di $m$, ma è \textbf{particolarmente efficiente} se $m=2^p$;
+    \item Il \textbf{risultato dipende fortemente dal valore di $C$}, infatti come detto prima valori irrazionali sono preferibili per garantire una buona distribuzione;
+    \item È \textbf{indipendente da particolarità delle chiavi} (prefisi, suffissi).
+\end{itemize}
+
+\vspace{16pt}
+\noindent
+A differenza di come è stato spiegato a livello teorico, a \textbf{livello pratico} per un computer fare calcoli con la virgola rappresenta un \textbf{problema} che causa \textbf{lentezza} e \textbf{minor precisione}.\\
+Dunque, per utilizzare questo metodo, un calcolatore ha la necessità di eseguire lo stesso calcolo utilizzando \textbf{solo aritmetica intera}, e per farlo in modo performante sfrutta la \textbf{dimensione delle parole del processore}.
+
+\vspace{8pt}
+\noindent
+Una CPU ha dei contenitori fissi (i registri) la cui dimensione può essere espressa con $w$, che solitamente nei calcolatori moderni equivale a $64$ bit. Usando un $w$ più piccolo ($<64$) spreche-\\
+\begin{minipage}[t]{0.613\textwidth}
+    \includegraphics[width=\textwidth]{hashing/img4.png}
+\end{minipage}%
+\hspace{5pt} % Spazio tra immagine e testo
+\raisebox{106pt}{
+    \begin{minipage}[t]{0.364\textwidth}
+        remmo spazio nei contenitori (bit inutilizzati), mentre utilizzando un $w$ più grande ($>64$) avremmo bisogno di due contenitori e di calcoli più complessi.
+
+        \vspace{8pt}
+        Lavorando in questo modo, l'idea è quella di sostituire la costante
+    \end{minipage}
+}
+
+\vspace{-3pt}
+\noindent
+reale $C$ con una \textbf{costante intera} $S$, che contiene la moltiplicazione tra $C$ ($0.618..$) e $2^{64}$ in modo tale da spostare la virgola di $64$ posizioni verso destra, ma siccome il registro del computer ha solo 64 posti tutto quello che "avanza" ancora dopo la virgola cade nel vuoto e viene perso. In questo modo la parte decimale (dopo la virgola) sparisce e all'interno di $S$ rimane solo un numero intero gigantesco che "riempie" perfettamente la parola in memoria.
+
+\vspace{8pt}
+\noindent
+Come fatto prima a livello teorico, ora è necessario moltiplicare la costante $S$ (intero) per $k$ (anch'esso un intero rappresentativo del valore della chiave di grandezza $w=64$ bit) in modo da ottenere il numero con la parte \textbf{decimale pseudo-casuale}.\\
+Quando la CPU moltiplica due numeri interi a $w$ bit viene prodotto un risultato \textbf{sempre grande il doppio} ($2w$ bit), e il processore salva il risultato in due registri separati automaticamente:
+\begin{itemize}[leftmargin=1em]
+    \item Registro Alto ($r_1$): che contiene i primi $w$ bit, che rappresentano la parte intera;
+    \item Registro Basso ($r_0$): che contiene gli ultimi $w$ bit, che rappresentano la parte frazionaria.
+\end{itemize}
+
+\vspace{8pt}
+\noindent
+Di queste due parti ci interessa solo il registro basso ($r_0$), che rappresenta la \textbf{parte frazionaria pseudo-casuale}. Per ottenere l'indice finale tra $0$ e $m-1$ (assumendo $m=2^p$), non serve eseguire un'altra moltiplicazione: è sufficiente estrarre i $p$ bit più significativi di $r_0$. Questo equivale matematicamente a moltiplicare per $m$ e troncare, ma a livello hardware è un semplice spostamento di bit (shift), istantaneo per la CPU.
+
+\subsection{Gestione delle collisioni}
+Come abbiamo gia detto al capitolo \ref{par:Funzioni hash perfette}, quando due chiavi vengono mappate dalla funzione hash nella stessa posizione della tabella, si verifica una \textbf{collisione}.
+\begin{tcolorbox}[
+        colback=yellow!20,
+        colframe=darkgray,
+        title=Idea generale per la gestione delle collisioni
+    ]
+    \begin{itemize}[leftmargin=1em]
+        \item \textbf{\textit{Inserimento}}: se la posizione calcolata tramite la funzione hash risulta già occupata, è necessario trovare una \textbf{posizione alternativa} in cui memorizzare la chiave.
+        \item \textbf{\textit{Ricerca}}: se durante la ricerca di una chiave, essa non si trova nella posizione attesa, bisogna \textbf{cercarla nelle posizoni alternative}, secondo la \textbf{strategia adottata} in fase di \textbf{inserimento}.
+    \end{itemize}
+\end{tcolorbox}
+\noindent
+\textbf{\textit{Esempio con analogia}}
+\begin{itemize}[leftmargin=1em]
+    \item \textbf{Inserimento}: ho il biglietto per il posto auto numero $5$, ma arrivo ed è occupato. Seguendo la regola del parcheggio, provo il posto successivo finché non ne trovo uno libero, ad esempio, $6$ occupato e $7$ libero;
+    \item \textbf{Ricerca}: quando torno a riprendere l'auto il biglietto dice ancora $5$, ma a quel parcheggio non c'è la mia auto. Allora devo agire \textbf{analogamente} all'inserimento, quindi se so che il $5$ era occupato controllo prima il $6$ e poi il $7$.
+\end{itemize}
+
+\vspace{8pt}
+\noindent
+Dato che le collisioni sono inevitabili, soprattutto quando l'universo delle chiavi è molto più ampio della dimensione della tabella, è fondamentale disporre di un \textbf{meccanismo per gestirle in modo efficiente}.\\
+Le posizioni alternative possono essere trovate all'\textbf{interno della tabella} o all'\textbf{esterno della tabella}, ciò evidenzia \textbf{due possibili approcci} per la gestione delle collisoni:
+\begin{itemize}[leftmargin=1em]
+    \item Le posizioni alternative \textbf{esterne} alla tabella prendono il nome di \textbf{liste di trabocco};
+    \item Le posizioni alternative \textbf{interne} alla tabella prendono il nome di \textbf{indirizzamento aperto};
+\end{itemize}
+
+\vspace{8pt}
+\noindent
+Dal punto di vista computazionale, nel caso peggiore, ad esempio in presenza di molte collisioni o di una funzione hash mal progettata il tempo può degradare fino a $O(n)$.
+
+%*TODO: Ascoltare video e collegare ciò che dice sulla complessità co l'esempio della ricerca a queste due righe sopra
+
+
+
+
 
 \end{document}
