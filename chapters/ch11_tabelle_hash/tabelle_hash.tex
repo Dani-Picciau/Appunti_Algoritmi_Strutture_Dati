@@ -469,7 +469,7 @@ Quando la CPU moltiplica due numeri interi a $w$ bit viene prodotto un risultato
 Di queste due parti ci interessa solo il registro basso ($r_0$), che rappresenta la \textbf{parte frazionaria pseudo-casuale}. Per ottenere l'indice finale tra $0$ e $m-1$ (assumendo $m=2^p$), non serve eseguire un'altra moltiplicazione: è sufficiente estrarre i $p$ bit più significativi di $r_0$. Questo equivale matematicamente a moltiplicare per $m$ e troncare, ma a livello hardware è un semplice spostamento di bit (shift), istantaneo per la CPU.
 
 \subsection{Gestione delle collisioni}
-Come abbiamo gia detto al capitolo \ref{par:Funzioni hash perfette}, quando due chiavi vengono mappate dalla funzione hash nella stessa posizione della tabella, si verifica una \textbf{collisione}.
+Come abbiamo già detto al capitolo \ref{par:Funzioni hash perfette}, quando due chiavi vengono mappate dalla funzione hash nella stessa posizione della tabella, si verifica una \textbf{collisione}.
 \begin{tcolorbox}[
         colback=yellow!20,
         colframe=darkgray,
@@ -498,12 +498,57 @@ Le posizioni alternative possono essere trovate all'\textbf{interno della tabell
 
 \vspace{8pt}
 \noindent
-Dal punto di vista computazionale, nel caso peggiore, ad esempio in presenza di molte collisioni o di una funzione hash mal progettata il tempo può degradare fino a $O(n)$.
+A volte può succedere che quando si va a cercare una chiave la quale non si trova nel posto giusto, poi la si va a cercare in posti alternativi, e se non si trova, la si cerca ancora in altri posti alternativi finché:
+\begin{itemize}[leftmargin=1em]
+    \item Si trova la chiave;
+    \item Si trova una \textbf{cella vuota}. Se si trova un buco significa che la chiave non c'é (perché se ci fosse stata sarebbe dovuta essere li o dopo).
+\end{itemize}
+In una tabella hash ben progettata, dove le chiavi sono ben "sparpagliate", si calcola l'hash, si va alla cella e si trova il dato. Ci si trova quindi nel caso medio, dove il costo è rappresentato da $O(1)$ e non importa se gli elementi sono $10$ o $10$ milioni, proprio perché l'accesso al dato è immediato.\\
+Invece, in alcuni casi, ad esempio in presenza di molte collisioni o di una funzione hash mal progettata, nel caso medio il tempo può degradare fino a $O(n)$.
 
-%*TODO: Ascoltare video e collegare ciò che dice sulla complessità co l'esempio della ricerca a queste due righe sopra
+\subsubsection{Liste di trabocco (concatenamento o chaining)}
+Le \textbf{liste di trabocco} rappresentano un approccio per la gestione delle collisioni che si basa sull'utilizzo di \textbf{liste monodirezionali}.
+\begin{tcolorbox}[
+        colback=yellow!20,
+        colframe=darkgray,
+        title=Idea generale
+    ]
+    Ogni indice (slot) della tabella hash non contiene direttamente una chiave, ma un \textbf{puntatore alla testa di una struttura dinamica} (lista monodirezionale-vettore dinamico), in cui vengono memorizzate tutte le chiavi che \textbf{condividono lo stesso indice hash}.
+\end{tcolorbox}
+\noindent
+Come struttura dinamica da utilizzare sono sufficienti le liste monodirezionali poiché o si trova o non si trova la chiave durante le operazioni di \texttt{insert()}, \texttt{lookup()}, \texttt{remove()}.\\ Facendo riferimento alla figura \ref{fig:chaining}, nel momento in cui vengono inserite due chiavi nell'indice $2$, tre nell'indice $5$, e altre due nell'indice $7$, esse sono aggiunte ad una lista (in corrispondenza dell'indice) che cresce in modo arbitrario.\\
+Dunque, le operazioni effettuate sulle liste utilizzano la seguente logica:\\
+\begin{minipage}[H]{0.463\textwidth}
 
+    \vspace{-10pt}
+    \begin{figure}[H]
+        \centering
+        \addtocounter{figure}{2}
+        \caption{liste di trabocco}
+        \label{fig:chaining}
+    \end{figure}
 
+    \vspace{-20pt}
+    \includegraphics[width=\textwidth]{hashing/img5.png}
+\end{minipage}%
+\hspace{5pt} % Spazio tra immagine e testo
+\raisebox{104pt}{
+    \begin{minipage}[t]{0.514\textwidth}
+        \begin{itemize}[leftmargin=1em]
+            \item \textbf{\texttt{insert()} in coda}: viene utilizzato se devo inserire una chiave e verificare che questa non sia già stata inserita, devo scorrere tutta la lista. Se la chiave che sto inserendo è già presente mi fermo e sovrascrivo il valore, altrimenti arrivo in fondo, aggiungo l'elemento alla lista e lo memorizzo;
 
+                  \vspace{3pt}
+            \item \textbf{\texttt{insert()} in testa}: viene utilizzato quando la lista è vuota per inserire una chiave senza preoccuparsi che questa sia già presente;
+
+                  \vspace{3pt}
+            \item \textbf{\texttt{lookup()}, \texttt{remove()}}: in entrambi i casi bisogna scorrere tutta la lista per cercare la chiave e restituire il valore corrispondente/rimuovere la coppia chiave-valore nella lista.
+        \end{itemize}
+    \end{minipage}
+}
+
+\vspace{8pt}
+\noindent
+dknsksnskmskmskmskmsksm
 
 
 \end{document}
