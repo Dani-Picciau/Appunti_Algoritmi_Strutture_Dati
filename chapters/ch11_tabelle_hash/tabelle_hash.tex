@@ -507,6 +507,7 @@ In una tabella hash ben progettata, dove le chiavi sono ben "sparpagliate", si c
 Invece, in alcuni casi, ad esempio in presenza di molte collisioni o di una funzione hash mal progettata, nel caso medio il tempo può degradare fino a $O(n)$.
 
 \subsubsection{Liste di trabocco (concatenamento o chaining)}
+\label{par:liste_trabocco}
 Le \textbf{liste di trabocco} rappresentano un approccio per la gestione delle collisioni che si basa sull'utilizzo di \textbf{liste monodirezionali}.
 \begin{tcolorbox}[
         colback=yellow!20,
@@ -548,7 +549,77 @@ Dunque, le operazioni effettuate sulle liste utilizzano la seguente logica:\\
 
 \vspace{8pt}
 \noindent
-dknsksnskmskmskmskmsksm
+\subsubsection{Liste di trabocco: analisi della complessità}
+A questo punto si vuole fare un'\textbf{analisi della complessità} di questo meccanismo in particolare, e per fare ciò bisogna definire alcuni parametri:
+\begin{itemize}[leftmargin=1em]
+    \item $n$ $\rightarrow$ numero di chiavi memorizzate in tabella hash;
+    \item $m$ $\rightarrow$ capacità della tabella hash;
+    \item $\alpha=n/m$ $\rightarrow$ si riferisce al \textbf{fattore di carico} che nel caso delle liste di trabocco può essere:
+    \begin{itemize}[leftmargin=1em, label=\raisebox{0.4ex}{\phantom{2}\rule{0.6ex}{0.6ex}}]
+        \item $\alpha=0$ se la tabella è vuota;
+        \item $0<\alpha<1$ se la tabella non è completamente occupata;
+        \item $\alpha>1$ se la tabella contiene tanti elementi, non esiste un limite superiore.
+    \end{itemize}
+\end{itemize}
+Partendo da questi parametri, si ottengono poi due informazioni importanti:
+\begin{itemize}[leftmargin=1em]
+    \item $I(\alpha) \rightarrow$ numero medio di accessi alla tabella per la ricerca di una chiave non presente all'interno di essa (\textbf{ricerca con insuccesso});
+    \item $S(\alpha) \rightarrow$ numero medio di accessi alla tabella per la ricerca di una chiave presente all'interno di essa (\textbf{ricerca con successo}).
+\end{itemize} 
+
+\vspace{8pt}
+\noindent
+\textbf{\textit{Analisi del caso pessimo}}\\
+Il caso peggiore, si presenta nel momento in cui ci si ritrova ad avere dei \textbf{costi} che sono i \textbf{più elevati possibili}: questo avviene quando tutte le chiavi hanno lo \textbf{stesso hash}, ovvero tutte le chiavi vengono \textbf{collocate nella stessa lista}.
+Possiamo quindi dire che una struttura dati efficiente come le tabelle hash \textbf{si trasformano in una lista non ordinata}.
+\begin{itemize}[leftmargin=1em]
+    \item \texttt{insert()} ha costo $\theta(1)$ se non si controlla (inserimento in testa), mentre ha costo $\theta(n)$ nel caso in cui si debba controllare che la chiave sia già stata inserita.
+    \item \texttt{lookup()} e \texttt{remove()} hanno entrambi costo $\theta(n)$ poiché in entrambi i casi bisognerà scorrere la lista.
+\end{itemize}
+
+\vspace{8pt}
+\noindent
+\textbf{\textit{Analisi del caso medio}}\\
+Per quanto riguarda il caso medio, è necessario fare prima alcune assunzioni:
+\begin{itemize}[leftmargin=1em]
+    \item Dipende da come le chiavi vengono distribuite;
+    \item Si assume che la funzione hash implementata abbia un hashing uniforme semplice, e che sia possibile calcolarla in $\theta(1)$.
+\end{itemize}
+
+\vspace{8pt}
+\noindent
+\begin{minipage}[H]{0.465\textwidth}
+    \includegraphics[width=\textwidth]{hashing/img6.png}
+\end{minipage}%
+\hspace{5pt} % Spazio tra immagine e testo
+\raisebox{44pt}{
+    \begin{minipage}[t]{0.512\textwidth}
+        Dopodiché, per lo studio del caso medio, bisogna \textbf{prendere in considerazione} la \textbf{lunghezza delle liste/vettori}. L'idea generale è la seguente:\\
+        Se ho $n=1000$ chiavi e $100$ celle nel vettore avrò un {fattore carico} di $\alpha=n/m=1000/100=10$, ciò significa che il numero atteso di elementi in una lista (se come detto prima la distribuzione è
+    \end{minipage}
+}
+
+\vspace{4pt}
+\noindent
+uniforme) è $10$. In sostanza, se il fattore di carico è tenuto abbastanza piccolo ($2,3$ oppure $4$), allora le \textbf{operazioni avranno un costo che deriva da $\alpha$}, ad esempio:
+\begin{itemize}[leftmargin=1em]
+    \item \textbf{Ricerca senza successo}: se sto effettuando un tipo di ricerca \textbf{senza succeso} dovrò guardare tutta la lista di lunghezza $\alpha$, qundi pago il costo della funzione hash $\theta(1)$ + il costo di analizzare in media l'intera lista di lunghezza $\alpha$;
+    \item \textbf{Ricerca con successo}: se invece effettuo una ricerca con successo dove potrei trovare la chiave al primo elemento oppure all'ultimo, \textbf{in media la troverò a metà} e quindi il costo atteso risulta la somma tra il costo della funzione hash $\theta(1)$ + la metà della lunghezza della lista $\alpha/2$.
+\end{itemize}
+
+\vspace{8pt}
+\noindent
+Dunque, mantenendo un valore di $\alpha$ abbastanza \textbf{piccolo} si garantisce il fatto che i \textbf{costi rimarranno costanti}, propriò perché il fattore di carico ($\alpha$) \textbf{influenza il costo computazionale delle operazioni sulle tabelle hash}.
+
+\subsubsection{Indirizzamento aperto (memorizzazione interna)}
+Utilizzando un approccio a \textbf{indirizzamento aperto} viene evitato l'utilizzo strutture dati complesse per le quali si utilizzano liste e puntatori (capitolo \ref{par:liste_trabocco}), ma ci si limita a memorizzare tutte le chiavi direttamente nel vettore che costituisce la tabella hash.
+\begin{tcolorbox}[
+        colback=yellow!20,
+        colframe=darkgray,
+        title=Idea generale
+    ]
+    In questo caso l'idea generale è molto semplice: ogni indice (slot) della tabella hash conterrà o una chiave, o un puntatore \texttt{null}.
+\end{tcolorbox}
 
 
 \end{document}

@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.3.9)  6 JAN 2026 01:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.3.9)  10 JAN 2026 15:46
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**c:/Users/dany2/OneDrive/Desktop/UniSassari/Appunti_latex/Appunti_Algoritmi_Strutture_Dati/chapters/ch11_tabelle_hash/tabelle_hash.tex
-(c:/Users/dany2/OneDrive/Desktop/UniSassari/Appunti_latex/Appunti_Algoritmi_Strutture_Dati/chapters/ch11_tabelle_hash/tabelle_hash.tex
+**c:/Users/dany2/OneDrive/Desktop/UniSassari/Appunti_latex/Appunti_Algoritmi_Strutture_Dati/Chapters/ch11_tabelle_hash/tabelle_hash.tex
+(c:/Users/dany2/OneDrive/Desktop/UniSassari/Appunti_latex/Appunti_Algoritmi_Strutture_Dati/Chapters/ch11_tabelle_hash/tabelle_hash.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
 (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/subfiles\subfiles.cls
@@ -808,7 +808,7 @@ File: t1bch.fd 2004/10/18 font definitions for T1/bch.
 File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count361
 \l__pdf_internal_box=\box87
-) (c:/Users\dany2\OneDrive\Desktop\UniSassari\Appunti_latex\Appunti_Algoritmi_Strutture_Dati\chapters\ch11_tabelle_hash\tabelle_hash.aux
+) (c:/Users\dany2\OneDrive\Desktop\UniSassari\Appunti_latex\Appunti_Algoritmi_Strutture_Dati\Chapters\ch11_tabelle_hash\tabelle_hash.aux
 
 LaTeX Warning: Label `fig:hash_example' multiply defined.
 
@@ -927,7 +927,7 @@ Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
 Package hyperref Info: Link coloring OFF on input line 4.
-(c:/Users\dany2\OneDrive\Desktop\UniSassari\Appunti_latex\Appunti_Algoritmi_Strutture_Dati\chapters\ch11_tabelle_hash\tabelle_hash.out) (c:/Users\dany2\OneDrive\Desktop\UniSassari\Appunti_latex\Appunti_Algoritmi_Strutture_Dati\chapters\ch11_tabelle_hash\tabelle_hash.out)
+(c:/Users\dany2\OneDrive\Desktop\UniSassari\Appunti_latex\Appunti_Algoritmi_Strutture_Dati\Chapters\ch11_tabelle_hash\tabelle_hash.out) (c:/Users\dany2\OneDrive\Desktop\UniSassari\Appunti_latex\Appunti_Algoritmi_Strutture_Dati\Chapters\ch11_tabelle_hash\tabelle_hash.out)
 \@outlinefile=\write4
 \openout4 = `tabelle_hash.out'.
 
@@ -940,7 +940,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-<../figures/hashing/img1.png, id=87, 626.34pt x 139.52126pt>
+<../figures/hashing/img1.png, id=95, 626.34pt x 139.52126pt>
 File: ../figures/hashing/img1.png Graphic file (type png)
 <use ../figures/hashing/img1.png>
 Package pdftex.def Info: ../figures/hashing/img1.png  used on input line 15.
@@ -981,7 +981,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
-<../figures/hashing/img2.png, id=89, 502.87875pt x 306.14375pt>
+<../figures/hashing/img2.png, id=97, 502.87875pt x 306.14375pt>
 File: ../figures/hashing/img2.png Graphic file (type png)
 <use ../figures/hashing/img2.png>
 Package pdftex.def Info: ../figures/hashing/img2.png  used on input line 48.
@@ -998,7 +998,7 @@ LaTeX Font Info:    Trying to load font information for TS1+bch on input line 10
  (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1bch.fd
 File: ts1bch.fd 2004/10/18 font definitions for TS1/bch.
 ) [2]
-<../figures/hashing/img3.png, id=113, 405.01312pt x 243.91125pt>
+<../figures/hashing/img3.png, id=121, 405.01312pt x 243.91125pt>
 File: ../figures/hashing/img3.png Graphic file (type png)
 <use ../figures/hashing/img3.png>
 Package pdftex.def Info: ../figures/hashing/img3.png  used on input line 110.
@@ -1029,7 +1029,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <10.95> on input line 198.
  [4] [5] [6] [7] [8]
-<../figures/hashing/img4.png, id=208, 359.09157pt x 143.78719pt>
+<../figures/hashing/img4.png, id=216, 359.09157pt x 143.78719pt>
 File: ../figures/hashing/img4.png Graphic file (type png)
 <use ../figures/hashing/img4.png>
 Package pdftex.def Info: ../figures/hashing/img4.png  used on input line 442.
@@ -1040,22 +1040,33 @@ Overfull \hbox (3.08138pt too wide) in paragraph at lines 439--453
  []
 
 [9 <../figures/hashing/img4.png>]
-<../figures/hashing/img5.png, id=216, 230.36063pt x 212.29312pt>
+<../figures/hashing/img5.png, id=224, 230.36063pt x 212.29312pt>
 File: ../figures/hashing/img5.png Graphic file (type png)
 <use ../figures/hashing/img5.png>
-Package pdftex.def Info: ../figures/hashing/img5.png  used on input line 532.
+Package pdftex.def Info: ../figures/hashing/img5.png  used on input line 533.
 (pdftex.def)             Requested size: 223.95041pt x 206.38406pt.
 
-Underfull \hbox (badness 1163) in paragraph at lines 547--547
+Underfull \hbox (badness 1163) in paragraph at lines 548--548
 []\T1/lmtt/b/n/12 lookup()\T1/bch/b/n/12 (+20) , \T1/lmtt/b/n/12 remove()\T1/bch/m/n/12 (+20) : in en-trambi i casi
  []
 
 
-Overfull \hbox (3.08138pt too wide) in paragraph at lines 518--548
+Overfull \hbox (3.08138pt too wide) in paragraph at lines 519--549
 []$  [] 
  []
 
-[10] [11 <../figures/hashing/img5.png>] (c:/Users\dany2\OneDrive\Desktop\UniSassari\Appunti_latex\Appunti_Algoritmi_Strutture_Dati\chapters\ch11_tabelle_hash\tabelle_hash.aux)
+[10]
+<../figures/hashing/img6.png, id=230, 303.534pt x 133.6995pt>
+File: ../figures/hashing/img6.png Graphic file (type png)
+<use ../figures/hashing/img6.png>
+Package pdftex.def Info: ../figures/hashing/img6.png  used on input line 592.
+(pdftex.def)             Requested size: 224.91727pt x 99.07071pt.
+
+Overfull \hbox (3.07399pt too wide) in paragraph at lines 590--601
+$[]$  [] 
+ []
+
+[11 <../figures/hashing/img5.png>] [12 <../figures/hashing/img6.png>] (c:/Users\dany2\OneDrive\Desktop\UniSassari\Appunti_latex\Appunti_Algoritmi_Strutture_Dati\Chapters\ch11_tabelle_hash\tabelle_hash.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
@@ -1065,23 +1076,23 @@ L3 programming layer <2024-01-04>
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `tabelle_hash.out' has not changed.
-(rerunfilecheck)             Checksum: 7F12FE1EAF8ECFBE6DFCD24A27805AC6;2155.
+(rerunfilecheck)             Checksum: 26B4405FC5F2BBED61C32AC7BD8E6B81;2774.
  ) 
 Here is how much of TeX's memory you used:
- 34856 strings out of 474486
- 692825 string characters out of 5743756
+ 34881 strings out of 474486
+ 693304 string characters out of 5743756
  2038542 words of memory out of 5000000
- 56198 multiletter control sequences out of 15000+600000
- 619905 words of font info for 231 fonts, out of 8000000 for 9000
+ 56211 multiletter control sequences out of 15000+600000
+ 620690 words of font info for 237 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  109i,8n,120p,1126b,1350s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 pdfTeX warning (dest): name{subsection.4.4} has been referenced but does not exist, replaced by a fixed one
 
 <C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchb8a.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchbi8a.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchr8a.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchri8a.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtk10.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt12.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrb8a.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb>
-Output written on c:/Users\dany2\OneDrive\Desktop\UniSassari\Appunti_latex\Appunti_Algoritmi_Strutture_Dati\chapters\ch11_tabelle_hash\tabelle_hash.pdf (11 pages, 496163 bytes).
+Output written on c:/Users\dany2\OneDrive\Desktop\UniSassari\Appunti_latex\Appunti_Algoritmi_Strutture_Dati\Chapters\ch11_tabelle_hash\tabelle_hash.pdf (12 pages, 517566 bytes).
 PDF statistics:
- 328 PDF objects out of 1000 (max. 8388607)
- 81 named destinations out of 1000 (max. 500000)
- 35598 words of extra memory for PDF output out of 35830 (max. 10000000)
+ 343 PDF objects out of 1000 (max. 8388607)
+ 84 named destinations out of 1000 (max. 500000)
+ 35619 words of extra memory for PDF output out of 35830 (max. 10000000)
 
