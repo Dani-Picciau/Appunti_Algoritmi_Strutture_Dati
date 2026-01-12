@@ -620,6 +620,67 @@ Utilizzando un approccio a \textbf{indirizzamento aperto} viene evitato l'utiliz
     ]
     In questo caso l'idea generale è molto semplice: ogni indice (slot) della tabella hash conterrà o una chiave, o un puntatore \texttt{null}.
 \end{tcolorbox}
+\noindent
+\begin{itemize}[leftmargin=1em]
+    \item \textbf{Inserimento}: Se durante l'inserimento lo slot prescelto dalla funzione hash $H$ è già occupato, cerco uno slot alternativo;
+    \item \textbf{Ricerca}: dopo l'inserimento, vado a ricercare nello slot prescelto, ma, se anch'esso è occupato  da una chiave che non è quella che sto cercando, cerco negli slot alternativi, uno dopo l'altro, fino a quando non trovo la chiave che sto cercando oppure trovo \texttt{null} a significare che ho trovato una casella veramente vuota e che quindi non posso più andare avanti.
+\end{itemize}
 
+\vspace{8pt}
+\noindent
+Per verificare che all'interno di uno slot sia presente una chiave oppure \texttt{null} ci si basa sul concetto di \textbf{ispezione}, ovvero l'\textbf{esame di uno slot} durante la ricerca.\\
+Per descrivere questa strategia, la funzione hash viene estesa aggiungendo un secondo parametro, quindi non prende più in ingresso solo l'insieme universo $U$ delle chiavi, ma anche un indice (\textbf{indice di sipezione}) compreso fra $0$ e $(m-1)$.
 
+{\large
+\[
+    H : \mathcal{U} \times \overbrace{[0 \dots m-1]}^{\text{Numero ispezione}} \to \overbrace{[0 \dots m-1]}^{\text{Indice vettore}}
+\]
+}
+\noindent
+La funzione $H(k,i)$ rappresenta la posizione esaminata quando si cerca nella tabella hash la chiave $k$ (una di quelle dell'insieme $U$) alla $i$-esima ispezione, cioè dopo $i$ tentativi falliti:
+\begin{itemize}[leftmargin=1em]
+    \item Durante un inserimento, $i$ conta quante volte si è trovata una cella occupata;
+    \item Durante una ricerca, quante volte si è trovata una cella occupata da una chiave diversa da k.
+\end{itemize}
+Ad esempio, si prenda in considerazione la seguente \textbf{sequenza di ispezione} generata.
+\begin{figure}[H]
+    \centering
+    \vspace{-10pt}  % Riduce lo spazio sopra
+    \addtocounter{figure}{1}
+    \includegraphics[width=0.75\textwidth]{hashing/img7.png}
+    \vspace{-8pt}
+    \caption{esempio di una sequenza di ispezione composta da $6$ passi}
+    \label{fig:sequenza_ispezione}
+    \vspace{-5pt}  % Riduce lo spazio sopra 
+\end{figure}
+\begin{tcolorbox}
+    [
+        colback=green!10,  % Sfondo verde chiaro
+        colframe=green!60!black,  % Bordo verde più acceso
+        coltitle=black,  % Colore del testo del titolo
+        fonttitle=\bfseries,  % Testo del titolo in grassetto
+        title={\centering \textbf{\textit{Sequenza di ispezione}}},  % Titolo centrato 
+        enhanced,  % Miglioramenti grafici
+        attach boxed title to top center={yshift=-2mm},  % Posiziona il titolo centrato in alto
+        boxed title style={colback=white, colframe=green!60!black, rounded corners},
+        breakable
+    ]
+    Una \textbf{sequenza di ispezione} $[H(k,0), H(k,1), ..., H(k,m-1)]$ è una permutazione degli indici $[0, ..., m-1]$, corrispondente all'ordine in cui vengono esaminati gli slot.
+    \begin{itemize}[leftmargin=1em]
+        \item Non si vuole esaminare lo stesso slot più di una volta;
+        \item Potrebbe essere necessario esaminare tutti gli slot nella tabella.
+    \end{itemize}
+\end{tcolorbox}
+\noindent
+In figura \ref{fig:sequenza_ispezione} si vede come cercando $k_6$ al crescere dell'indice di ispezione si viene portati in posizioni differenti della tabella hash, poiché ad un determinato indice corrisponde una chiave.
+All'\textbf{ultima operazione} della sequenza di ispezione, se la \textbf{cella è vuota}:
+\begin{itemize}[leftmargin=1em]
+    \item \textbf{Inserimento}: la chiave viene inserita;
+    \item \textbf{Ricerca}: posso dire che $k_n$ cercato non c'è.
+\end{itemize}
+Se invece la \textbf{cella è piena}:
+\begin{itemize}[leftmargin=1em]
+    \item \textbf{Inserimento}: domanda per gemini: (cosa succede se sequenza di ispezione finisce e non ci sono spazi vuoti?)
+    \item \textbf{Ricerca}: significa che ho trovato la chiave che stavo cercando poiché la sequenza di ispezione non va oltre
+\end{itemize}
 \end{document}
