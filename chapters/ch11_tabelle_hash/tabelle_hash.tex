@@ -550,6 +550,7 @@ Dunque, le operazioni effettuate sulle liste utilizzano la seguente logica:\\
 \vspace{8pt}
 \noindent
 \subsubsection{Liste di trabocco: analisi della complessità}
+\label{par:trabocco_analisi_comp}
 A questo punto si vuole fare un'\textbf{analisi della complessità} di questo meccanismo in particolare, e per fare ciò bisogna definire alcuni parametri:
 \begin{itemize}[leftmargin=1em]
     \item $n$ $\rightarrow$ numero di chiavi memorizzate in tabella hash;
@@ -680,7 +681,16 @@ All'\textbf{ultima operazione} della sequenza di ispezione, se la \textbf{cella 
 \end{itemize}
 Se invece la \textbf{cella è piena}:
 \begin{itemize}[leftmargin=1em]
-    \item \textbf{Inserimento}: domanda per gemini: (cosa succede se sequenza di ispezione finisce e non ci sono spazi vuoti?)
-    \item \textbf{Ricerca}: significa che ho trovato la chiave che stavo cercando poiché la sequenza di ispezione non va oltre
+    \item \textbf{Inserimento}: se la chiave nella cella è uguale a quella da inserire, decido se aggiornarla o dare errore (duplicato). Se è diversa (considerando che stimao parlando dell'ultima operazione della sequenza) la tabella è piena (Overflow/Errore).
+    \item \textbf{Ricerca}: si deve controllare se la chiave in quella cella è quella che si cerca: se sì la chiava è stata trovata, altrimenti la chiave non esiste nella tabella.
 \end{itemize}
+
+\subsubsection{Indirizzamento aperto: analisi della complessità}
+In un approccio ad indirizzamento aperto, il \textbf{fattore di carico} è un valore per tutta la tabella che varia da $0$ a $1$, il quale \textbf{indica quanto è satura}, ovvero la percentuale di \textbf{riempimento globale} della tabella hash.
+A differenza di come è stato visto al capitolo \ref{par:trabocco_analisi_comp} il significato di $\alpha$ cambia, perché cambia la capienza fisica delle celle:
+\begin{itemize}[leftmargin=1em]
+    \item \textbf{Liste di trabocco}: ogni cella è un puntatore ad una lista che può allungarsi all'infinito, quindi se $m=10$, $n=20$, avrò $\alpha=2$ a significare che \textbf{\textit{in media, ogni lista contiene 2 elementi}}.
+    \item \textbf{Indirizzamento aperto}: come è stato visto, in questo caso ogni cella può contenere al massimo 1 elemento, quindi $n$ (elementi) non potrà mai superare $m$ celle, di conseguenza $0<\alpha<1$.
+\end{itemize}
+
 \end{document}
