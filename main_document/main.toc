@@ -104,3 +104,12 @@
 \contentsline {subsubsection}{\numberline {8.3.3}Metodo della divisione}{107}{subsubsection.8.3.3}%
 \contentsline {subsubsection}{\numberline {8.3.4}Metodo della moltiplicazione (Knuth)}{109}{subsubsection.8.3.4}%
 \contentsline {subsection}{\numberline {8.4}Gestione delle collisioni}{110}{subsection.8.4}%
+\contentsline {subsubsection}{\numberline {8.4.1}Liste di trabocco (concatenamento o chaining)}{111}{subsubsection.8.4.1}%
+\contentsline {subsubsection}{\numberline {8.4.2}Liste di trabocco: analisi della complessità}{112}{subsubsection.8.4.2}%
+\contentsline {subsubsection}{\numberline {8.4.3}Indirizzamento aperto (memorizzazione interna)}{113}{subsubsection.8.4.3}%
+\contentsline {subsubsection}{\numberline {8.4.4}Indirizzamento aperto: analisi della complessità}{114}{subsubsection.8.4.4}%
+\contentsline {subsubsection}{\numberline {8.4.5}Indirizzamento aperto: ispezione lineare}{116}{subsubsection.8.4.5}%
+\contentsline {subsubsection}{\numberline {8.4.6}Indirizzamento aperto: ispezione quadratica}{116}{subsubsection.8.4.6}%
+\contentsline {subsubsection}{\numberline {8.4.7}Indirizzamento aperto: doppio hashing}{117}{subsubsection.8.4.7}%
+\contentsline {subsubsection}{\numberline {8.4.8}Indirizzamento aperto: cancellazione}{117}{subsubsection.8.4.8}%
+\contentsline {subsection}{\numberline {8.5}Implementazione dell'hashing doppio}{118}{subsection.8.5}%

@@ -118,7 +118,7 @@ Le collisioni mettono quindi in luce due \textbf{aspetti fondamentali} nella pro
 }
 
 \subsection{Minimizzare le collisoni}
-\label{par:Minimizzare le collisioni}
+\label{par:ch_1.2}
 Se \textbf{non è possibile evitare} le collisioni, si cerca di \textbf{minimizzarne il numero}.\\
 La \textbf{qualità di una funzione hash} dipende in modo cruciale dalla \textbf{sua capacità} di distribuire le chiavi dell'universo $U$ negli indici $[0...m-1]$ della tabella hash \textbf{in modo uniforme}.\\
 Una distribuzione sbilanciata porta a un aumento del numero di collisioni in alcune celle, con conseguente peggioramento delle prestazioni del dizionario.
@@ -197,7 +197,7 @@ bin("DOG") = ord("D")  ord("O")  ord("G")
            = 01000100  01001111  01000111
 int("DOG") =  (*@$68\cdot256^2$@*)  +  (*@$79\cdot256$@*) +   (*@$71$@*)    = (*@$ 4.476.743$@*) 
 \end{lstlisting}
-Come detto alla fine del capitolo \ref{par:Minimizzare le collisioni}, le chiavi vanno ben distribuite proprio perché si ha il problema che il numero ottenuto è solitamente molto grande (nell'esempio precedente $> 4$ milioni), e la tabella hash non ha 4 milioni di righe, magari solo $m=100$.
+Come detto alla fine del capitolo \ref{par:ch_1.2}, le chiavi vanno ben distribuite proprio perché si ha il problema che il numero ottenuto è solitamente molto grande (nell'esempio precedente $> 4$ milioni), e la tabella hash non ha 4 milioni di righe, magari solo $m=100$.
 
 \vspace{8pt}
 \noindent
@@ -613,6 +613,7 @@ uniforme) è $10$. In sostanza, se il fattore di carico è tenuto abbastanza pic
 Dunque, mantenendo un valore di $\alpha$ abbastanza \textbf{piccolo} si garantisce il fatto che i \textbf{costi rimarranno costanti}, propriò perché il fattore di carico ($\alpha$) \textbf{influenza il costo computazionale delle operazioni sulle tabelle hash}.
 
 \subsubsection{Indirizzamento aperto (memorizzazione interna)}
+\label{par:ch_1.4.3}
 Utilizzando un approccio a \textbf{indirizzamento aperto} viene evitato l'utilizzo strutture dati complesse per le quali si utilizzano liste e puntatori (capitolo \ref{par:liste_trabocco}), ma ci si limita a memorizzare tutte le chiavi direttamente nel vettore che costituisce la tabella hash.
 \begin{tcolorbox}[
         colback=yellow!20,
@@ -673,7 +674,7 @@ Ad esempio, si prenda in considerazione la seguente \textbf{sequenza di ispezion
     \end{itemize}
 \end{tcolorbox}
 \noindent
-In figura \ref{fig:sequenza_ispezione} si vede come cercando $k_6$ al crescere dell'indice di ispezione si viene portati in posizioni differenti della tabella hash, poiché ad un determinato indice corrisponde una chiave.
+In figura \ref{fig:sequenza_ispezione} si vede come, cercando $k_6$, al crescere dell'indice di ispezione si viene portati in posizioni differenti della tabella hash, poiché ad un determinato indice corrisponde una chiave.
 All'\textbf{ultima operazione} della sequenza di ispezione, se la \textbf{cella è vuota}:
 \begin{itemize}[leftmargin=1em]
     \item \textbf{Inserimento}: la chiave viene inserita;
@@ -690,7 +691,292 @@ In un approccio ad indirizzamento aperto, il \textbf{fattore di carico} è un va
 A differenza di come è stato visto al capitolo \ref{par:trabocco_analisi_comp} il significato di $\alpha$ cambia, perché cambia la capienza fisica delle celle:
 \begin{itemize}[leftmargin=1em]
     \item \textbf{Liste di trabocco}: ogni cella è un puntatore ad una lista che può allungarsi all'infinito, quindi se $m=10$, $n=20$, avrò $\alpha=2$ a significare che \textbf{\textit{in media, ogni lista contiene 2 elementi}}.
-    \item \textbf{Indirizzamento aperto}: come è stato visto, in questo caso ogni cella può contenere al massimo 1 elemento, quindi $n$ (elementi) non potrà mai superare $m$ celle, di conseguenza $0<\alpha<1$.
+    \item \textbf{Indirizzamento aperto}: invece, in questo caso, ogni cella può contenere al massimo 1 elemento, quindi $n$ (elementi) non potrà mai superare $m$ celle, di conseguenza $0\leqslant\alpha\leqslant1$. Se $\alpha=1$ la tabella è totalmente piena e si entra in \textbf{overflow}, facendo schizzare il costo delle operazioni a $O(n)$.
+    
+    \vspace{8pt}
+    \noindent
+    \textbf{\textit{Esempio pratico}}: ipotizziamo dover trovare posto auto all'interno di un parcheggio.
+    \begin{itemize}[leftmargin=1em, label=\raisebox{0.4ex}{\phantom{3}\rule{0.6ex}{0.6ex}}]
+        \item \textbf{Scenario A} ($\alpha=0.1$): il parcheggio ha $100$ posti e solo $10$ macchine al suo interno. La probabilità che il posto assegnato con la funzione hash $h(k)$ sia occupato è bassissima ($10\%$). Dunque, quasi sicuramente si troverà il posto auto al primo colpo, indicando ciò con $O(1)$.
+        \item \textbf{Scenario B} ($\alpha=0.9$): il parcheggio ha sempre $100$ posti ma questa volta $90$ macchine al suo interno. La funzione hash $h(k)$, molto probabilmente, calcolerà una posizione già occupata, per più volte, prima di trovare un posto auto libero all'interno del parcheggio. Ciò significa che bisogna girare tanto prima di trovare il $10\%$ dei posti rimanenti.
+    \end{itemize}
+
+    In modo analogo all'esempio, il costo tende a $O(n)$ (cioè bisogna scorrere tutta la tabella) quando $\alpha$ si avvicina ad 1. Le collisioni diventano la norma, non l'eccezione, e le sequenze di ispezione si allungano a dismisura.
 \end{itemize}
 
+\vspace{8pt}
+\noindent
+In un \textbf{contesto ideale}, per fare in modo che non si debba scorrere tutta la tabella e che quindi il costo non salga a $O(n)$, quello che si ricerca è una situazione di \textbf{hashing uniforme}.
+\begin{tcolorbox}[
+        colback=yellow!20,
+        colframe=darkgray,
+        title=Hashing uniforme ideale
+    ]
+    Utilizando un \textbf{hashing uniforme} ogni chiave ($k_n$) dell'insieme $U$ ha la stessa probabilità di avere come sequenza di ispezione $H(k_n, 0), H(k_n, 1), ...,H(k_n, m-1)$ una qualsiasi delle $m!$ permutazioni di [0,...,m-1].\\
+    Dunque la funzione hash non dà solo il punto di partenza, ma consegna l'intera lista delle celle da visitare, in ordine secondo una qualsiasi permutazione.
+\end{tcolorbox} 
+\noindent
+\textbf{\textit{Esempio pratico}}\\
+Prendiamo in considerazione due chiavi $A$ e $B$, le quali per casualità, su una tabella da $5$ posizioni partono dalla cella $2$.
+\begin{itemize}[leftmargin=1em]
+    \item Se si utilizzasse una regola fissa, ad esempio \textbf{\textit{"vai al successivo finché non trovi una cella vuota"}}, si creerebbe un "muro" (clustering) prima di poter inserire la chiave nell'indice:
+    \begin{itemize}[leftmargin=1em, label=\raisebox{0.4ex}{\phantom{4}\rule{0.6ex}{0.6ex}}]
+        \item $A$: $2 \rightarrow 3 \rightarrow 4 \rightarrow ...$
+        \item $B$: $2 \rightarrow 3 \rightarrow 4 \rightarrow ...$
+    \end{itemize}
+    Questo fino a che una delle due trova per prima la cella vuota e subito dopo la rimanente va $+1$ avanti per essere inserita (\textbf{primary clustering - capitolo} \ref{par:ch_1.4.5}).
+    \item Se usiamo l'\textbf{Hashing uniforme}, il sistema assegna due itinerari completi totalmente diversi, pescati a caso tra tutte le combinazioni possibili ($m!$), in modo tale da non creare dei "muri".\\
+    In questo modo ogni chiave può essere inserita il prima possibile.
+    \begin{itemize}[leftmargin=1em, label=\raisebox{0.4ex}{\phantom{5}\rule{0.6ex}{0.6ex}}]
+        \item $A$: $2 \rightarrow 0 \rightarrow 4 \rightarrow 1 \rightarrow 3$
+        \item $B$: $2 \rightarrow 3 \rightarrow 1 \rightarrow 0 \rightarrow 4$
+    \end{itemize}
+\end{itemize}
+Nella pratica, implementare un vero hashing uniforme è difficile.\\
+Non possiamo garantire che il percorso di ricerca sia perfettamente casuale per ogni chiave (troppo costoso per il processore), ma \textbf{bisogna obbligatoriamente garantire} che il percorso non entri in un "ciclo vizioso". La funzione di ispezione deve essere progettata matematicamente affinché, al variare di $i$ da $0$ a $m-1$, vengano generati tutti gli indici della tabella esattamente una volta: dunque viene utilizzata \textbf{una singola permutazione}.\\
+Per fare ciò vengono utilizzate tre tecniche principali:
+\begin{itemize}[leftmargin=1em]
+    \item Ispezione lineare;
+    \item Ispezione quadratica;
+    \item Doppio hashing
+\end{itemize}
+
+\subsubsection{Indirizzamento aperto: ispezione lineare}
+\label{par:ch_1.4.5}
+\begin{tcolorbox}[
+        colback=yellow!20,
+        colframe=darkgray,
+        title=Metodologia utilizzata 
+    ]
+    In questo metodo, si utilizza un parametro $\delta$ che rappresenta la distanza tra due posizioni successive
+    esaminate durante l’ispezione: $H(k,i) = (H_1(k)+\delta\cdot i)\; mod \; m$
+\end{tcolorbox} 
+\noindent
+Dunque, si prende la posizione di partenza e poi si va avanti per un numero fisso di caselle $\delta$.\\
+Quindi, quando vado a fare l'ispezione \textit{"zeresima"}, con $i=0$, vado a guardare nella funzione $H_1(k)$, con $i=1$ vado a guardare nella funzione $H_1(k) + \delta$, con $i=2$ nella funzione $H_1(k) + 2 \cdot \delta$, e così via.\\ Dividere per il modulo di $m$ garantisce di ottenere sempre un indice interno alla tabella, in modo tale che quando si supera l'ultima posizione della tabella, l’ispezione riprenda dall’inizio, rendendo il processo circolare.
+
+\vspace{8pt}
+\noindent
+Questo metodo è semplice, ma presenta un limite importante, quello dell'\textbf{agglomerazione primaria} (primary clustering): quando si vuole inserire una chiave all'interno di un determinato\\
+\begin{minipage}[H]{0.455\textwidth}
+    \includegraphics[width=\textwidth]{hashing/img8.png}
+\end{minipage}%
+\hspace{5pt} % Spazio tra immagine e testo
+\raisebox{97pt}{
+    \begin{minipage}[t]{0.523\textwidth}
+        indice all'interno della tabella hash, essa collide con l'elemento già presente, e prosegue la sua ricerca fino a trovare la prima cella libera.\\
+        Dato che si sta utilizzando una metodologia a \textbf{\textit{"ispezione lineare"}} (quindi si va avanti di una dimensione fissa), se la posizione iniziale della chiave cade all'interno di una sequenza di celle occupate, tutte queste verranno trovate già piene e la chiave finirà inevitabilmente per essere inserita immediatamente dopo la sequenza, allungando ulteriormente la
+        quest'ultima.
+
+        \vspace{8pt}
+        Questo fenomeno porta alla formazione di sequenze sempre più lunghe di posizioni a distanza 
+    \end{minipage}
+}
+
+\vspace{4pt}
+\noindent
+$\delta$ l'una dall'altra, il che rallenta le operazioni e i \textbf{tempi medi} di inserimento e cancellazione crescono. Dunque,  uno slot vuoto che si trova dopo i slot
+già occupati nella stessa sequenza viene riempito
+con probabilità $(i+1)/m$. L'ispezione lineare è quella "colpevole" dei muri, e il doppio hashing, come si vedrà al capitolo \ref{par:ch_1.4.7}, è la "soluzione reale" al problema.
+
+\subsubsection{Indirizzamento aperto: ispezione quadratica}
+\begin{tcolorbox}[
+        colback=yellow!20,
+        colframe=darkgray,
+        title=Metodologia utilizzata 
+    ]
+    L'unica differenza rispetto all'utilizzo di un ispezione lineare è che  \textbf{la distanza} (offset) tra due posizioni successive nella sequenza di ispezione non è costante, ma \textbf{cresce quadraticamente} con $i$: $H(k,i) = (H_1(k)+\delta\cdot i^2)\; mod \; m$.
+\end{tcolorbox} 
+\noindent
+\begin{itemize}[leftmargin=1em]
+    \item con $\delta=1$ e $i=0$ si esamina prima la posizione $(H_1(k)+0)$;
+    \item con $\delta=1$ e $i=1$ si esamina la posizione $(H_1(k)+\delta\cdot)$;
+    \item con $\delta=1$ e $i=2$ si esamina la posizone $(H_1(k)+\delta\cdot4)$;
+    \item con $\delta=1$ e $i=3$ si esamina la posizone $(H_1(k)+\delta\cdot9)$, e così via;
+\end{itemize}
+Questa variazione di indice riduce l'effetto dell'\textbf{agglomerazione primaria}, tipico dell'ispezione lineare, poiché due chiavi con indirizzi iniziali differenti ($H_1(k) \neq H_1(k')$) tendono a generare sequenze di
+ispezione che divergono più rapidamente.\\
+Tuttavia, se due chiavi condividono lo stesso indirizzo iniziale ($H_1(k) = H_1(k')$) le sequenze di ispezione coincidono completamente, e il problema si ripresenta in questo caso prendendo il nome di \textbf{agglomerazione secondaria}.\\
+Un ulteriore limite, è che \textbf{la sequenza di ispezione} generata \textbf{non è una permutazione} dell'insieme $\{0,...,m-1\}$: può quindi accadere che alcune posizioni libere non vengano mai raggiunte, impedendo l’inserimento di nuove chiavi anche se la tabella non è piena.
+
+
+\subsubsection{Indirizzamento aperto: doppio hashing}
+\label{par:ch_1.4.7}
+Il \textbf{doppio hashing} è il metodo che viene utilizzato maggiormente per risovere il problema dell'agglomerazione.
+\begin{tcolorbox}[
+        colback=yellow!20,
+        colframe=darkgray,
+        title=Metodologia utilizzata 
+    ]
+    Vengono utilizzate \textbf{due funzioni hash}, la prima indica la posizione iniziale e la seconda indica l'offset, che quindi cambia per ogni chiave: $H(k,i) = (H_1(k)+i\cdot H_2(k))\; mod \; m$.
+\end{tcolorbox} 
+\noindent
+In questo modo, anche se due chiavi $k$ e $k'$ hanno lo stesso indirizzo iniziale $H_1(k) = H_1(k')$, non è detto che abbiano lo stesso valore in $H_2$ (anzi, la probabilità è relativamente bassa), dunque tendono ad essere sparse in maniera più \textit{"uniforme"} riducendo drasticamente la formazione di \textbf{agglomerati primari} e \textbf{secondari}.
+
+\vspace{8pt}
+\noindent
+Utilizzando questa metodologia si hanno al massimo $m^2$ sequenze di ispezione distinte:
+\begin{itemize}[leftmargin=1em]
+    \item $m$ scelte possibili per decidere da dove partire (cella $0,1,...,m-1$);
+    \item $m$ scelte possibili per decidere quanto lunghi fare i passi (offset di $1$, $2$, $3$, ...)
+\end{itemize}
+Il numero totale di combinazioni unice (coppie partenza-passo) è quindi $m\cdot m=m^2$.\\
+Però non basta avere tanti percorsi diversi ($m^2$), bisogna essere sicuri che \textbf{ogni percorso sia valido}, ovvero che continuando a saltare, \textbf{si debbano toccare tutte le celle della tabella} prima di ritornare al \textbf{punto di partenza}. Per garantire ciò si usano principalmente due metodi:
+\begin{enumerate}[leftmargin=1.3em]
+    \item \textbf{\textit{Metodo della potenza di $2$}}
+    \begin{itemize}[leftmargin=1em]
+        \item Si sceglie $m=2^p$ (ad esempio, $16$, $32$, $64$, ...), in modo tale che l'unico divisore di $m$ sia $2$;
+        \item Ci si assicura che $H_2(k)$ dia sempre un \textbf{numero dispari}.
+    \end{itemize}
+    Funziona perché un numero dispari non è mai diivisibile per $2$, quindi sono per forza primi tra loro.
+    \item \textbf{\textit{Metodo del numero primo}}:
+    \begin{itemize}[leftmargin=1em]
+        \item Si sceglie $m$ come numero primo ($11$, $13$, $17$, ...);
+        \item Ci si assicura che $H_2(k)$, dia un numero positivo minore di $m$ ($0<H_2<m$);
+    \end{itemize}
+    Funziona perché un numero primo non  divisibile per nulla tranne che per se stesso.
+\end{enumerate} 
+
+\subsubsection{Indirizzamento aperto: cancellazione}
+\label{par:ch_1.4.8}
+Durante la gestione delle collisioni, utlizzando un approccio ad indirizzamento aperto, se si vuole cancellare un elemento dalla tabella hash \textbf{non è possibile} semplicemente sostituire la chiave che si vuole cancellare con un valore \texttt{null}.\\
+Questo perché si potrebbe \textbf{\textit{"rompere"} una sequenza di ispezione}: infatti, come si può vedere in figura \ref{fig:rottura_sequenza_ispezione}, durante la ricerca di una chiave $k_n$, il raggiungimento di una cella \texttt{"null"} non garantisce che $k_n$ non sia presente altrove nella tabella hash, poiché potrebbe essere semplicemente in una posizione differente sempre all'interno della stessa. Contrassegnare la cella come \texttt{"null"} \textbf{arresterebbe l'algoritmo} di ricerca, \textbf{spezzando il collegamento verso le chiavi successive} nella sequenza di ispezione.
+\begin{figure}[H]
+    \centering
+    \addtocounter{figure}{1}
+    \vspace{-8pt}
+    \includegraphics[width=0.70\textwidth]{hashing/img9.png}
+    \vspace{-5pt}
+    \caption{interruzione sequenza di ispezione}
+    \label{fig:rottura_sequenza_ispezione} 
+\end{figure}
+
+\vspace{-10pt}
+\noindent
+Proprio per questo motivo è necessario introdurre un \textbf{marcatore speciale} che indichi esplicitamente che la cella era occupata in passato ma è stata svuotata. L'elemento in questione è \textbf{\textit{deleted (del)}} che permette di continuare l'ispezione fino a raggiungere la chiave ricercata (nel caso in cui sia effettivamente presente all'interno della tabella hash):
+\begin{itemize} [leftmargin=1em]
+    \item Durante una \textbf{ricerca} il \textit{deleted} viene trattato come uno slot pieno.
+    \item Durante un \textbf{inserimento} il \textit{deleted} viene trattato come uno slot vuoto, perché non ci interessa che sia stato cancellato in precedenza.
+\end{itemize}
+
+\vspace{8pt}
+\noindent
+Tuttavia, aggiungere il marcatore \textit{deleted} comporta lo svantaggio di aumentare i tempi di ricerca, che non dipendono più solamente dal fattore di carico $\alpha$ ($I(\alpha), S(\alpha)$ - capitolo \ref{par:trabocco_analisi_comp}), ma anche da quanti elementi sono stati cancellati.
+
+\subsection{Implementazione dell'hashing doppio}
+L'hashing doppo è indubbiamente la \textbf{tecnica migliore} da implementare \textbf{utilizzando} una gestione delle collisioni ad \textbf{indirizzamento aperto}, poiché permette di ridurre drasticamente clustering primari e secondari.
+
+\subsubsection{Definizione delle variabili}
+La tabella hash viene \textbf{memorizzata mediante due vettori paralleli}, a cui in seguito verrà assegnata la dimensione $m$ (valore che detta la dimensione della tabella):
+\begin{itemize}[leftmargin=1em]
+    \item $key$ il quale memorizza le chiavi;
+    \item $values$ che memorizza i valori ad esse associati.
+\end{itemize}
+\begin{figure}[H]
+    \centering
+    \vspace{-8pt}
+    \addtocounter{figure}{1}
+    \includegraphics[width=\textwidth]{hashing/img10.png}
+\end{figure}
+\noindent
+Ovviamente, come spiegato al capitolo \ref{par:ch_1.4.3} e \ref{par:ch_1.4.8}, l'implementazione dell'indirizzamento aperto prevede che ogni cella di del vettore $key$ contenga una chiave valida oppure uno dei due valori speciali \textit{null} o \textit{deleted}, che indicano rispettivamente una posizione mai utilizzata e una posizione occupata in passato ma che è stata cancellata. 
+
+\subsubsection{La funzione \texttt{hash}}
+Questa funzione prende in ingresso un parametro \texttt{"dim"} ad indicare la dimensione della tabella hash. Inizialmente viene definita la dimensione della tabella, dando un valore alla variabile \texttt{"m"} tramite il parametro \texttt{"dim"} che la funzione prende in ingresso.\\
+Successivamente ci si occupa di inizializzare tutte le chiavi e i valori (in particolare solo le chiavi poiché i valori al momento non interessano) con il valore \texttt{null}.
+\begin{figure}[H]
+    \addtocounter{figure}{1}
+    \vspace{-12pt}
+    \includegraphics[width=0.95\textwidth]{hashing/img11.png}
+\end{figure}
+
+\subsubsection{La funzione \texttt{scan}}
+La funzione \texttt{scan} non fa parte dell'API della tabella hash, infatti non è un operazione del dizionario come \texttt{lookup(), insert()} e \texttt{remove}, ma serve solo per essere richiamata all'interno di esse.
+La funzione \texttt{scan} prende in input la chiave $k$ che si vuole ricercare all'interno della tabella hash, e un valore booleano $insert$ che indica se si tratta di un operazione di inserimento oppure no, mentre \textbf{ritorna un indice intero} che \textbf{indica la posizione della chiave}, e non il valore associato ad essa.
+\begin{figure}[H]
+    \addtocounter{figure}{1} 
+    \vspace{-6pt}
+    \includegraphics[width=0.95\textwidth]{hashing/img12.png}
+    \vspace{-15pt}
+\end{figure}
+\begin{itemize}[leftmargin=1em]
+    \item La variabile \textit{fistDeleted} è un "trucco" molto intelligente per \textbf{ottimizzare le prestazioni} della tabella hash durante l'inserimento. Viene utilizzata per ricordare \textbf{la posizione della prima cella} \textbf{\textit{deleted}}.
+    
+    \vspace{8pt}
+    \noindent
+    Durante una scansione per inserimento, dobbiamo obbligatoriamente arrivare fino in fondo (al \texttt{null}) per assicurarci che la chiave non esista già. Tuttavia, se lungo il percorso incontriamo delle celle \textit{deleted}, la variabile \textit{firstDeleted}, che inizialmente viene inizializzata a $-1$ (ad indicare \textit{"per ora non ho visto celle cancellate"}), memorizza l'indice della prima di queste celle.
+    Se alla fine della scansione la chiave non è stata trovata, l'algoritmo preferisce inserire il nuovo elemento nella posizione \textit{firstDeleted} (riciclando lo spazio) piuttosto che in fondo alla sequenza (\texttt{null}). Questo mantiene la \textbf{tabella compatta} e \textbf{riduce i tempi di ricerca futuri}.
+    \item La variabile $i$ è l'indice del numero di ispezione (ispezione zeresima, ispezione uno, ispezione due, e così via...);
+    \item  La variabile $j$ indica la posizione attualmente analizzata: viene inizializzata con il valore $H(k)$ dove $H$ è la funzione hash di base, quella che ci dice il punto di partenza dove andare a cercare e $k$ ovviamente è la chiave che stiamo cercando.
+\end{itemize}
+
+\vspace{8pt}
+\noindent
+A questo punto inizia un ciclo che terminerà qualora:
+\begin{itemize}[leftmargin=1em]
+    \item trovo la chiave che sto cercando;
+    \item trovo una posizione \texttt{null} a significare che non è più possibile andare avanti, perché la chiave cercata non è stata trovata;
+    \item Oppure, nessuna delle due condizioni precedenti si è verificata e il numero di ispezioni raggiunge $m$ ($i=m$) a significare sostanzialmente che ho ispezionato tutta la tabella senza trovare quello che si stava cercando.
+\end{itemize}
+Invece, le due righe all'interno del ciclo while sono quelle che permettono di andare avanti:
+\begin{itemize}[leftmargin=1em]
+    \item $i=i+1$ somma $+1$ all'indice delle ispezioni;
+    \item Per calcolare la prossima cella si utilizza una seconda funzione $H'(k)$ che è l'offest che si va a sommare alla posizione che si stava cercando, come prevede il doppio hashing (capitolo \ref{par:ch_1.4.7}).
+\end{itemize}
+
+\vspace{8pt}
+\noindent
+Terminato il ciclo while si presentano due possibilità:
+\begin{itemize}[leftmargin=1em]
+    \item Se sono in \textbf{condizione di inserimento} e non ho trovato una chiave da sovrascrivere e \textbf{\textit{firstDeleted}} non è più inizializzato con il valore iniziale (-1), a significare che ho riempito la prima cella \textit{deleted}, allora restituisco proprio \textbf{\textit{firstDeleted}}, poiché l'inserimento è avvenuto lì dentro;
+    \item Altrimenti, sono in \textbf{condizione di ricerca} e restituisco $j$, che rappresenta l'ultimo indice guardato e se la chiave non è stata trovata, può essere un valore fittizzio.
+\end{itemize}
+
+\subsubsection{Le funzioni \texttt{lookup} e  \texttt{insert}}
+Nel caso della funzione \texttt{lookup} viene richiamata la funzione \texttt{scan} passando il valore \textit{false} ad indicare che non si tratta di un operazione di inserimento ma solo di ricerca.\\
+Nel caso della funzione \texttt{insert} viene richiamata la funzione \texttt{scan} passando il valore \textit{true} ad indicare che si tratta di un operazione di inserimento.
+\begin{figure}[h]
+    \centering
+    \vspace{-18pt}  % Riduce lo spazio sopra
+    \subfloat[]{%
+        \includegraphics[width=0.31\textwidth]{hashing/img13}%
+    }
+    \hspace{2cm}
+    \subfloat[]{%
+        \includegraphics[width=0.53\textwidth]{hashing/img14}%
+    } 
+    \vspace{-10pt}  % Riduce lo spazio sotto 
+\end{figure}
+\\
+\\
+In entrambi i casi ottengo un indice che viene restituito dalla funzione \texttt{scan}:
+\begin{itemize}[leftmargin=1em]
+    \item Nel caso della \texttt{lookup} (a) si hanno due possibilità:
+    \begin{itemize}[leftmargin=1em, label=\raisebox{0.4ex}{\phantom{6}\rule{0.6ex}{0.6ex}}]
+        \item si ha trovato quello che si cercava e questo è rappresnetato dal fatto che la chiave nell'indice $i$ è uguale alla chiave $k$ che si sta cercando, e allora viene restituito il valore associato a quella chiave;
+        \item Altrimenti ritorno \texttt{null} a significare che l'oggetto non è stato trovato.
+    \end{itemize}
+
+    \vspace{8pt}
+    \item Allo stesso modo, nel caso dell'\texttt{insert} (b), le possibilità sono:
+    \begin{itemize}[leftmargin=1em, label=\raisebox{0.4ex}{\phantom{6}\rule{0.6ex}{0.6ex}}]
+        \item se si ha trovato una \textbf{casella vuota} oppure una casella \textbf{\textit{deleted}} oppure una casella che \textbf{già contiene la chiave $k$}, in tutti questi casi si va a sovrascrivere il valore $k$ e il valore $v$ sulle rispettive posizioni $i$-esime; 
+        \item Altrimenti, la tabella hash è piena poiché non si sono trovate caselle a disposizione dove andare a scrivere il  valore $k$  e quindi bisognerà ritornare un qualche tipo di errore.\\
+        Questo potrebbe essere anche verificato prima di fare una ricerca del genere se si mantenessero informazioni riguardanti il numero di chiavi effettivamente registrate nella tabella, allora a quel punto se il numero di chiavi ha raggiunto $m$ si può subito ritornare che è impossibile effettuare un inseriemnto.
+    \end{itemize}
+\end{itemize}
+
+\subsubsection{La funzione \texttt{remove}}
+Nuovamente la funzione \texttt{scan} viene passata con il valore \textit{false}, poiché non si tratta di un operazione di inserimento.\\
+In questo caso la condizione è ancora più semplice:
+\begin{itemize}[leftmargin=1em]
+    \item Trovo l'elemento e lo cancello, segnando la chiave come \textbf{\textit{deleted}} (per non rompere la sequenza di ispezione) mentre il valore associato a quella determinata chiave; viene impostato a \textbf{\textit{null}};
+    \item Non trovo l'elemento e non devo fare assolutamente nulla;
+\end{itemize}
+\begin{figure}[H]
+    \addtocounter{figure}{1} 
+    \vspace{-10pt}
+    \includegraphics[width=0.95\textwidth]{hashing/img15.png}
+    \vspace{-15pt}
+\end{figure} 
 \end{document}
