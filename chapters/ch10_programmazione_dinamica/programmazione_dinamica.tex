@@ -1,0 +1,614 @@
+\documentclass[../../main_document/main.tex]{subfiles}
+\externaldocument{../../main_document/main}
+
+\begin{document}
+\section{Programmazione Dinamica}
+La programmazione dinamica è una tecnica che si ispira al \textit{divide-et-impera} e infatti anche qui un problema più grande viene preso e diviso in più sottoproblemi, ma si aggiunge una caratteristica. Normalmente nel \textit{divide-et-impera} i problemi sono ben separati, mentre nella programmazione dinamica i sottoproblemi si ripetono. Per questo motivo si utilizza una tabella delle soluzioni, cioè si memorizzano le soluzioni dei problemi che sono già stati risolti.\\
+Per fare una cosa del genere si deve capire come definire il sottoproblema e che informazioni memorizzare, dato che non si ha una memoria infinita e non si può memorizzare tutto, la memorizzazione deve essere efficiente. Nel caso in cui un sottoproblema debba nuovamente essere affrontato, si ottiene la sua soluzione dalla tabella, la quale è facilmente indirizzabile (il costo della procedura di lookup è $O(1)$).
+
+\subsection{Idea generale}
+Se non si sa con esattezza quale problema risolvere, si può provare a risolverli tutti e conservare i risultati ottenuti per poterli usare successivamente.\\
+Rispetto al \textit{divide-et-impera}, la programmazione dinamica presenta 3 differenze:
+\begin{itemize}
+    \item È iterativa e non ricorsiva;
+    \item Affronta i sottoproblemi dal "basso verso l'alto" (bottom-up) e non "dall'ato verso il basso" (top-down);
+    \item Memorizza i risultati dei sottoproblemi in una tabella DP.
+\end{itemize}
+Procedendo dal basso verso l'alto, la programmazione dinamica risolve un sottoproblema comune una sola volta, mentre il \textit{divide-et-impera} lo risolverebbe più volte.
+
+\subsubsection{Fasi della risoluzione del problema}
+\begin{tcolorbox}[
+        colback=yellow!20,
+        colframe=darkgray,
+        title= Fasi principali
+    ]
+    \begin{itemize}[leftmargin=1em]
+        \item Caratterizzare la struttura di una soluzione ottima;
+        \item Definire iterativamente il valore di una soluzione ottima;
+        \item Calcolare il \textbf{valore} di una soluzione ottima "bottom-up";
+        \item Ricostruzione di una soluzione ottima.
+    \end{itemize}
+\end{tcolorbox}
+
+\subsection{Esempio - Coefficiente binomiale}
+$C(n,k)=\frac{n!}{k!(n-k)!}$ rappresenta il numero di modi di scegliere $k$ oggetti da un insieme di $n$ oggetti, con $0 \le k \le n$, ed è definibile ricprsivamente come segue:
+\[
+    C(n,k)=
+    \begin{aligned}
+        \begin{cases}
+            1\quad se\;k=0 \; \lor \; n=k \\
+            C(n-1,k-1)+C(n-1,k) \quad altrimenti
+        \end{cases}
+    \end{aligned}
+\]
+
+\begin{algorithm}
+    \caption{\textbf{int} C(\textbf{int} n, \textbf{int} k)}
+    \begin{algorithmic}[1]
+        \If{n=k \textbf{or} k=0}
+        \State \textbf{return} 1
+        \EndIf
+        \State \textbf{return} C(n-1,k-1)+C(n-1,k)
+    \end{algorithmic}
+\end{algorithm}
+\noindent
+Purtroppo, la complessità dell'algoritmo \textit{divide-et-impera} cresce come il numero di chiamate ricorsive, che è proprio uguale a $C(n, k)$. Ciò è dovuto all'elevato numero di sottoproblemi identici che vengono risolti più volte. Ad esempio $C(n-2, k-1)$ è richiamato due volte: per calcolare $C(n-1, k)$ e $C(n-1, k-1)$.\\
+Un algoritmo di programmazione dinamica invece risolve i sottoproblemi per valori crescenti degli argomenti seguendo lo schema "\textbf{Triangolo di Tartaglia}", che memorizza i risultati una volta per tutte in una matrice DP di dimensione $n$x$n$ in $\theta(n^2)$.\\
+\vspace{6pt}
+\noindent
+\hspace{5pt}
+\begin{minipage}[t]{0.60\textwidth}
+    \includegraphics[width=\linewidth]{Programmazione_Dinamica/TriangoloTartaglia.pdf}
+\end{minipage}
+\hspace{5pt}
+
+\begin{algorithm}
+    \caption{Tartaglia(\textbf{int} n, \textbf{int}[][] DP)}
+    \begin{algorithmic}[1]
+        \For i=0 \textbf{to} n \textbf{do}
+        \State DP[i, 0] = 1
+        \State DP[i, i] = 1
+        \EndFor
+        \For i=2 \textbf{to} n \textbf{do}
+        \For j=1 \textbf{to} i-1 \textbf{do}
+        \State DP[i, j]=DP[i-1, j-1]+DP[i-1, j]
+        \EndFor
+        \EndFor
+    \end{algorithmic}
+\end{algorithm}
+\noindent
+In questo, il valore di $DP(m,k)$, per ogni coppia di interi "m, k" tali che $0 \le k \le m \le n$ può essere successivamente letto direttamente in tempo $O(1)$.
+
+\subsection{Quando usare la programmazione dinamica}
+Perché la programmazione dinamica sia applicabile, occorre che:
+\begin{enumerate}[leftmargin=1em]
+    \item sia possibile combinare le soluzioni dei sottoproblemi per trovare la soluzione del problema più grande;
+    \item le decisioni prese per risolvere in modo ottimo un sottoproblema rimangano valide quando il problema diviene un pezzo di un problema;
+    \item una tecnica \textit{divide-et-impera} sia inutilizzabile dal punto di vista computazionale.\\
+
+          Le prime due proprietà definiscono una \textbf{sottostruttura ottima}. Ma non sono sufficienti. Infatti, affinché un algoritmo basato sulla programmazione dinamica abbia complessità polinomiale, occorre anche che:\\
+
+    \item ci sia un numero polinomiale di problemi da risolvere;
+    \item per evitare di risolvere più di una volta lo stesso problema, si utilizzi una tabella in cui si memorizzano le soluzioni di tutti i sottoproblemi, senza preoccuparsi se la soluzione di un particolare sottoproblema verrà poi utilizzata oppure no;
+    \item il tempo per combinare le soluzioni dei sottoproblemi e trovare la soluzione del problema più grande sia polinomiale.
+\end{enumerate}
+
+\subsection{String Match Approssimato}
+Date:
+\begin{itemize}[leftmargin=1em]
+    \item una stringa $P=p_1 \dots p_m$, detta \textbf{pattern},
+    \item una stringa $T=t_1 \dots t_n$, detta \textbf{testo}, con $m \le n$,
+\end{itemize}
+un'occorrenza $k-approssimata$ di $P$ in $T$, con $0 \le k \le m$, è una copia della stringa di $P$ in $T$ in cui sono ammessi $k$ "errori" tra caratteri di P e caratteri di $T$, del seguente tipo:
+\begin{enumerate}[leftmargin=1em]
+    \item  corrispondenti caratteri $P$, $T$ sono diversi (\textbf{sostituzione})
+    \item un carattere in $P$ non è incluso in $T$ (\textbf{inserimento})
+    \item un carattere in $T$ non è incluso in $P$ (\textbf{cancellazione})
+\end{enumerate}
+\begin{tcolorbox}[
+        colback=yellow!20,
+        colframe=darkgray,
+        title= Problema - Approximated string matching
+    ]
+    trovare un'occorrenza $k-approssimata$ di $P$ in $T$ con $k$ minimo ($0 \le k \le m).$
+\end{tcolorbox}
+
+\subsubsection{Esempio}
+T = questoèun\textcolor{red}{o}s\textcolor{red}{c}empio (dove $n=17$)\\
+P = \qquad \, \quad un\textcolor{red}{e}sempio (dove $m=9$).\\
+Un'occorrenza $2-approssimata$ di P parte dalla posizione 8 di T: questoè\textit{unoscempio}. Infatti, la prima $e$ di P corrisponde ad una $o$ di T (errore di tipo (1), \textbf{sostituzione}), mentre la $c$ di T è un carattere non presente in P (errore di tipo (3), \textbf{cancellazione}).\\
+Per applicare la programmazione dinamica, si deve trovare una formulazione ricorsiva che abbia la proprietà di sottostruttura ottima.
+\begin{tcolorbox}[
+        colback=yellow!20,
+        colframe=darkgray,
+        title= Definizione
+    ]
+    Sia $DP[0 \dots m][0 \dots n]$ una tabella di programmazione dinamica tale che $DP[i][j]$ sia il minimo valore $k$ per cui esiste un'occorrenza $k-approssimata$ di $P(i)$ in $T(j)$ che \textbf{termina nella posizione} $j$
+\end{tcolorbox}
+
+\subsubsection{4 possibilità:}
+\begin{itemize}[leftmargin=1em]
+    \item Se $P[i]=T[j]$, quel carattere è uguale, ci si sta chiedendo qual è la più corta occorrenza k-approssimata che termina in quel carattere. Ciò che si va a fare è dire: se il carattere è uguale non c'è errore, quindi non si somma un qualcosa qua e si va a vedere il carattere precedente. Il punto è che ci si sta limitando a considerare le sequenze che terminano in quella posizione. $DP[i-1][j-1]\textcolor{red}{+0}$.
+    \item Se $P[i] \neq T[j]$, allora si può fare una \textbf{sostituzione}, cioè si cambia un carattere nell'altro e quindi si somma 1: $DP[i-1][j-1]\textcolor{red}{+1}$.
+\end{itemize}
+Queste due possibilità si escludono, perché non possono valere contemporaneamente, mentre le prossime due possono coesistere.
+\begin{itemize}[leftmargin=1em]
+    \item $DP[i-1][j]\textcolor{red}{+1}$
+    \item $DP[i][j-1]\textcolor{red}{+1}$
+\end{itemize}
+Si somma 1 perché si contano gli errori, non si sta massimizzando l'uguaglianza, ma si stanno minimizzando le differenze.\\
+\vspace{6pt}
+\noindent
+\hspace{5pt}
+\begin{minipage}[t]{0.90\textwidth}
+    \includegraphics[width=\linewidth]{Programmazione_Dinamica/Casi.pdf}
+\end{minipage}
+\hspace{5pt}
+
+\noindent
+Quello che succede è che la formula avrà la forma evidenziata da \textbf{\textcolor{commentcolor}{\Large *}}, cioè il minimo di \textcolor{red}{{\Large *}1} dove $\delta$ è uguale a 0 o 1 a seconda che i caratteri siano uguali oppure diversi e poi \textcolor{red}{{\Large *}2} e \textcolor{red}{{\Large *}3}, questo è il caso ricorsivo.\\
+\vspace{6pt}
+\noindent
+\hspace{5pt}
+\begin{minipage}[t]{0.70\textwidth}
+    \includegraphics[width=\linewidth]{Programmazione_Dinamica/PassaggioPunti.pdf}
+\end{minipage}
+\hspace{5pt}
+
+\noindent
+Nei primi due casi si nota la simmetria tra il testo e il pattern perché la $i$ è per il pattern e la $j$ per il testo. Se si cerca un pattern vuoto in un testo, qualunque sia la lunghezza del testo, il numero di cambiamenti che si devono fare è 0, perché in qualunque punto termina una stringa vuota di un testo. Invece se si cerca una parola in un testo vuoto, bisogna inserire tutti i caratteri di quella parola, quindi l'intera lunghezza del pattern, perciò si mette la lettera $i$.\\
+\vspace{6pt}
+\noindent
+\hspace{5pt}
+\begin{minipage}[t]{0.70\textwidth}
+    \includegraphics[width=\linewidth]{Programmazione_Dinamica/Tab1.pdf}
+\end{minipage}
+\hspace{5pt}
+
+\noindent
+Le frecce indicano come prendere il "punteggio" da aggiungere.
+
+\subsubsection{Esempio 1}
+\vspace{6pt}
+\noindent
+\hspace{5pt}
+\begin{minipage}[t]{0.70\textwidth}
+    \includegraphics[width=\linewidth]{Programmazione_Dinamica/Tab2.pdf}
+\end{minipage}
+\hspace{5pt}
+
+\vspace{6pt}
+\noindent
+\hspace{5pt}
+\begin{minipage}[t]{0.70\textwidth}
+    \includegraphics[width=\linewidth]{Programmazione_Dinamica/Tab3.pdf}
+\end{minipage}
+\hspace{5pt}
+
+\subsubsection{Esempio 2}
+\vspace{6pt}
+\noindent
+\hspace{5pt}
+\begin{minipage}[t]{0.80\textwidth}
+    \includegraphics[width=\linewidth]{Programmazione_Dinamica/Tab4.pdf}
+\end{minipage}
+\hspace{5pt}
+
+\vspace{6pt}
+\noindent
+\hspace{5pt}
+\begin{minipage}[t]{0.80\textwidth}
+    \includegraphics[width=\linewidth]{Programmazione_Dinamica/Tab5.pdf}
+\end{minipage}
+\hspace{5pt}
+
+\noindent
+Se si va a vedere la semantica, questo mi sta dicendo che esiste un'occorrenza $0-approssimata$ di B in ABAB che termina nell'ultimo carattere. Se è $0-approssimata$ significa che è perfetta, perché in effetti la B del pattern ci sta perfettamente.
+
+\subsubsection{Esempio 3}
+\vspace{6pt}
+\noindent
+\hspace{5pt}
+\begin{minipage}[t]{0.80\textwidth}
+    \includegraphics[width=\linewidth]{Programmazione_Dinamica/Tab6.pdf}
+\end{minipage}
+\hspace{5pt}
+
+
+\subsubsection{Esempio 4}
+\vspace{6pt}
+\noindent
+\hspace{5pt}
+\begin{minipage}[t]{0.60\textwidth}
+    \includegraphics[width=\linewidth]{Programmazione_Dinamica/Tab7.pdf}
+\end{minipage}
+\hspace{5pt}
+
+\noindent
+Queste sono sequenze $k-approssimate$ dell'intero pattern BAB in qualche parte del testo.
+Si deve restituire un'occorrenza della stringa BAB con $k$ minore possibile, che qua si trova dove è lo 0.\\
+Non è detto quindi che la soluzione finale si trovi nella casella in basso a destra. È possibile invece che la soluzione debba essere cercata (se esiste la mia occorrenza $k-approssimata$ e dov'è con $k$ minore possibile).
+
+\begin{tcolorbox}[
+        colback=yellow!20,
+        colframe=darkgray,
+        title= Distanza di Levenshtein o distanza di editing
+    ]
+    Date due stringhe, si vuole conoscere il numero minimo di operazioni necessario per trasformare una nell'altra (o viceversa).
+    Es. la distanza di editing tra google e yahoo è 6 (cancellare gle e inserire ya, sostituire g con h).
+    La relazione di ricorrenza è la stessa, ma $D[i,0]=i$ e $D[0,j]=j$, perché $T(j)$ ha $j$ caratteri in più di $P(0)$. Al termine, la distanza di editing sarà in $D[m,n]$.
+\end{tcolorbox}
+\newpage
+\subsubsection{Algoritmo}
+\begin{algorithm}
+    \caption{\textbf{int} stringMatching(ITEM[] P, ITEM[] T, \textbf{int} m, \textbf{int} n)}
+    \begin{algorithmic}
+        \State \textbf{int}[][] DP=\textbf{new int}[0 \dots m][0 \dots n]
+        \For j=0 \textbf{to} n \textbf{do}
+        \State DP[0][j]=0
+        \EndFor
+        \For i=0 \textbf{to} m \textbf{do}
+        \State DP[i][0]=i
+        \EndFor
+        \For i=1 \textbf{to} m \textbf{do}
+        \For j=1 \textbf{to} n \textbf{do}
+        \State DP[i][j]=min(DP[i-1][j-1]+iif(P[i]==T[j],0,1),
+        DP[i-1][j]+1,
+        DP[i][j-1]+1)
+        \EndFor
+        \EndFor
+        \State \textbf{int} pos=0
+        \For j=1 \textbf{to} n \textbf{do}
+        \If{DP[m][j]<DP[m][pos]}
+        \State pos=j
+        \EndIf
+        \EndFor
+        \State \textbf{return} pos
+    \end{algorithmic}
+\end{algorithm}
+
+\noindent
+Il primo \texttt{for} inizializza la prima riga con tutti gli zeri, il secondo \texttt{for} inizializza invece la prima colonna. Il resto è l'algoritmo che riempie la tabella e l'ultima parte serve a trovare il minimo.
+
+\subsubsection{Reality check}
+\begin{tcolorbox}[
+        colback=yellow!20,
+        colframe=darkgray,
+        title= Approximate String Matching
+    ]
+    Approximate String Matching è un esempio di string metric, si utilizza per misurare la distanza (come inverso della similarità) tra due stringhe. Può essere usato in:
+    \begin{itemize}[leftmargin=1em]
+        \item Fraud detection;
+        \item Fingerprint analysis;
+        \item Plagiarism detection;
+        \item DNA-RNA analysis.
+    \end{itemize}
+\end{tcolorbox}
+
+\subsection{Insieme indipendente di intervalli pestai}
+\begin{tcolorbox}[
+        colback=yellow!20,
+        colframe=darkgray,
+        title= Input
+    ]
+    Siano dati $n$ intervalli distinti $[a_1,b_1[,\dots,[a_n,b_n[$ della retta reale, aperti a destra, dove all'intervallo $i$ è associato un profitto $w_i,\, 1\le i\le n$
+\end{tcolorbox}
+Si hanno $n$ intervalli della retta reale aperti a destra, in modo che più intervalli possano essere compatibili.
+
+Due intervalli $i$ e $j$ si dicono disgiunti se: $b_j\le a_i$ oppure $b_i\le a_j$.
+Questa versione del problema associa ad ogni intervallo un peso.
+Il problema consiste nel trovare un sottoinsieme degli intervalli possibili, tale per cui essi siano disgiunti e la somma dei loro pesi sia il massimo possibile.\\
+
+\subsubsection{Esempio: insieme indipendente di peso massimo}
+\begin{figure}[H]
+    \centering
+    \vspace{-10pt} %riduce lo spazio sopra
+    \includegraphics[width=1\linewidth]{Programmazione_Dinamica/IntPes1.png}
+    \vspace{-5pt} %riduce lo spazio sotto
+\end{figure}
+
+\subsubsection{Pre-elaborazione}
+In alcuni problemi di programmazione dinamica, prima di operare sui dati, conviene ordinarli, ovvero fare una \textbf{pre-elaborazione}.
+In questo caso vengono ordinati gli intervalli per estremi finali non decrescenti e si ha un costo di ordinamento pari a $O(n\,log\,n)$, perché si sta riordinando per tempo di fine.\\
+\begin{figure}[H]
+    \centering
+    \vspace{-10pt} %riduce lo spazio sopra
+    \includegraphics[width=1\linewidth]{Programmazione_Dinamica/IntPes2.png}
+    \vspace{-5pt} %riduce lo spazio sotto
+\end{figure}
+
+\noindent
+Si fa anche una seconda pre-elaborazione che consiste nel definire il \textbf{predecessore} di $i$ (quindi di ogni intervallo) come $p_i=j$, con $j<i$.
+\begin{itemize}[leftmargin=1em]
+    \item $j$ è il massimo indice tale che $[a_j,\,b_j[\textbf{non\,interseca}[a_i,\,b_i[$;
+    \item se non esiste $j \rightarrow p_i=0$. Ovvero se non esiste l'indice $j$ non c'è nessun predecessore.
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \vspace{-10pt} %riduce lo spazio sopra
+    \includegraphics[width=1\linewidth]{Programmazione_Dinamica/IntPes3.png}
+    \vspace{-5pt} %riduce lo spazio sotto
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \vspace{-10pt} %riduce lo spazio sopra
+    \includegraphics[width=1\linewidth]{Programmazione_Dinamica/IntPes4.jpeg}
+    \vspace{-5pt} %riduce lo spazio sotto
+\end{figure}
+
+\subsubsection{Individuazione sottostruttura ottima (forma ricorsiva)}
+Siano $P[i]$ il sottoproblema dato dai primi $i$ intervalli ed $S[i]$ una soluzione ottima di peso $D[i]$. Si hanno due opzioni:
+\begin{itemize}[leftmargin=1em]
+    \item Se l'intervallo $i-esimo$ non fa parte della soluzione ottima $(i \notin S[i])\rightarrow D[i]=D[i-1]$ (con $D[0]=0$);
+    \item Se l'intervallo $i-esimo$ fa parte della soluzione ottima $(i \in S[i])\rightarrow D[i]=w_i+D[p_i]$
+\end{itemize}
+\textbf{N.B.} Si  dimostrano per assurdo.
+
+\begin{tcolorbox}[
+        colback=yellow!20,
+        colframe=darkgray,
+        title= Il problema ha sottostruttura ottima
+    ]
+    La relazione di programmazione dinamica che si ottiene è: $D[i]=max{D[i-1], w_i+D[p_i]}$
+\end{tcolorbox}
+\noindent
+Una volta definita la sottostruttura ottima, con una relazione ricorsiva di programmazione dinamica, la tabella di programmazione dinamica viene riempita attraverso un algoritmo iterativo.
+Si noti che $D[n]$ è il costo (guadagno) della soluzione ottima del problema iniziale. A partire da essa, si calcolano a ritroso gli intervalli che hanno portato a tale soluzione.
+
+\newpage
+\subsubsection{Algoritmo iterativo}
+\begin{algorithm}
+    \caption{SET maxInterval(\textbf{int}[] a, \textbf{int}[] b, \textbf{int}[] w)}
+    \begin{algorithmic}[1]
+        \State <ordinare gli intervalli per estremi finali crescenti>;<calcolare $p_j$>
+        \State \textbf{int}[] D=\textbf{new int}[0\dots n]; D[0]=0
+        \For{i=1 \textbf{to} n}
+        \State D[i]=max(D[i-1], w[i]+D[$p_i$])
+        \EndFor
+        \State i=n
+        \State SET S=Set()
+        \While{i>0}
+        \If{D[i-1]>w[i]+D[$p_i$]}
+        \State i=i-1
+        \Else
+        \State S.insert(i); i=$p_i$
+        \EndIf
+        \EndWhile
+        \State \textbf{return} S
+    \end{algorithmic}
+\end{algorithm}
+
+\subsubsection{Costo computazionale}
+\begin{itemize}[leftmargin=1em]
+    \item Ordinamento intervalli: $O(n\, log \, n)$;
+    \item Calcolo predecessori: $O(n\, log \, n)$;
+    \item Riempimento tabella D: $O(n)$;
+    \item Ricostruzione soluzione: $O(n)$;
+    \item Costo totale: $O(n\, log \, n)$.
+\end{itemize}
+
+Gli intervalli vano ordinati per tempo non decrescente di fine ed eventuali intervalli con lo stesso tempo di fine possono essere ordinati in qualunque modo.
+Questo perché $D[i]$ rappresenta il massimo profitto ottenibile con i primi $i$ intervalli.
+È quindi possibile escludere l'intervallo $i-esimo$ se sceglierne uno precedente $j$ (ma con lo stesso tempo di fine $b[i]=b[j]$ ha un valore $D[j]$ più alto).
+
+\newpage
+\subsection{Zaino (Knapsack)}
+Si ha un insieme di oggetti, caratterizzato da un peso e un profitto e si ha uno zaino con un limite di capacità.
+Si deve individuare un sottoinsieme di oggetti il cui peso totale sia inferiore alla capacità dello zaino e il valore totale degli oggetti sia massimale, ovvero il più alto o uguale al valore di qualunque altro sottoinsieme di oggetti.
+
+\begin{tcolorbox}[
+        colback=yellow!20,
+        colframe=darkgray,
+        title= Input
+    ]
+    \begin{itemize}[leftmargin=1em]
+        \item Vettore $w$ (weight), dove $w[i]$ è il peso dell'oggetto $i-esimo$;
+        \item Vettore $p$ (profit), dove $p[i]$ è il profitto dell'oggetto $i-esimo$;
+        \item La capacità $C$ dello zaino.
+    \end{itemize}
+\end{tcolorbox}
+
+\noindent Si vuole un sottoinsieme $S \subseteq {[1, \dots, n]}$ tale per cui il volume totale espresso come sommatoria dei pesi degli oggetti deve essere minore o uguale alla capacità: $w(S)=\sum_{i \in S}w[i] \le C$ e il profitto totale deve essere massimizzato: $argmax_s p(S)=\sum_{i \in S}p[i]$
+
+\begin{figure}[H]
+    \centering
+    \vspace{-10pt} %riduce lo spazio sopra
+    \includegraphics[width=1\linewidth]{Programmazione_Dinamica/ZainoEs.png}
+    \vspace{-5pt} %riduce lo spazio sotto
+\end{figure}
+
+\subsubsection{Definizione matematica della soluzione}
+Le tabelle di programmazione dinamica utilizzate fino ad ora erano tutte sotto forma di vettori. Siccome in questo problema si ha una realtà a 2 parametri (il numero di oggetti e la capacità), in questo particolare caso si deve usare una tabella di programmazione dinamica che è una matrice, un array bidimensionale.\\
+Si definisce quindi un sottoproblema, che si va ad identificare con due indici "$i$" e "$c$", $DP[i][c]$, come il massimo profitto che può essere ottenuto con i primi $i \le n$ oggetti contenuti in uno zaino con capacità $c \le C$.\\
+Il problema originale è: si hanno "$n$" oggetti e una capacità "$C$", $DP[n][C]$, ma si vuole sapere cosa succede se si ha una capacità leggermente più piccola, se si hanno meno oggetti, quindi si considera tutto lo spazio di tutti i possibili sottoproblemi presenti.
+
+\subsubsection{Parte ricorsiva}
+Quello che si va a fare è scegliere se prendere o non prendere un oggetto. Se un oggetto \textbf{non viene preso} è \textit{come se non fosse mai esistito} e quindi: $D[i][c]=DP[i-1][c]$, la capacità rimane sempre la stessa e non c'è un'aggiunta del profitto.\\
+Se invece l'oggetto viene preso: $DP[i][c]=DP[i-1][c-w[i]]+p[i]$, si sottrae il peso alla capacità e si aggiunge il profitto relativo.
+L'indice "$i$" è sempre "$i-1$" perché poi l'oggetto non si può più prendere, dato che ogni oggetto può essere preso solo una volta.
+
+\subsubsection{Casi base}
+\begin{tcolorbox}[
+        colback=yellow!20,
+        colframe=darkgray,
+        title= Quali sono i casi base?
+    ]
+    \begin{itemize}[leftmargin=1em]
+        \item Quando non si hanno più oggetti da scegliere, qual è il profitto massimo che si può ottenere? $\rightarrow0$;
+        \item Qual è il profitto massimo se non si ha più capacità? $\rightarrow0$;
+        \item Cosa succede se la capacità è negativa?
+    \end{itemize}
+    La capacità negativa può apparire dal fatto che "$c-w[i]$", se non si fa attenzione $w[i]$ potrebbe essere maggiore della capacità residua e quindi "$c-w[i]$" risulterebbe minore di $0$.
+    \[
+        D[i,c]=
+        \begin{aligned}
+            \begin{cases}
+                0\qquad se\;i=0 \; \lor \; c=0 \\
+                -\infty \quad se\; c<0         \\
+                max(DP[i-1][c-w[i]]+p[i],DP[i-1][c]) \quad altrimenti
+            \end{cases}
+        \end{aligned}
+    \]
+    Se il "$c-w[i]$" porta sullo spazio negativo allora si mette $-\infty$ e si farà un massimo tra $-\infty$ e un valore maggiore o uguale a $0$, a questo punto vincerà il valore, altrimenti si possono fare i casi particolari:
+    \[
+        \begin{aligned}
+            \begin{cases}
+                DP[i-1][c] \qquad se \; w[i]>c \\
+                max(DP[i-1][c-w[i]]+p[i],DP[i-1][c]) \quad se \; w[i] \le c
+            \end{cases}
+        \end{aligned}
+    \]
+\end{tcolorbox}
+
+\noindent Una volta che si ha la formula la si traduce in codice (in maniera iterativa).
+\newpage
+\subsubsection{Zaino algoritmo}
+\begin{algorithm}
+    \caption{\textbf{int} knapsack(\textbf{int}[] $w$, \textbf{int}[] $p$, \textbf{int} $n$, \textbf{int} $C$)}
+    \begin{algorithmic}[1]
+        \State $DP$ = \textbf{new int}[0 \dots $n$][0 \dots $C$]
+        \For{$i$=0 \textbf{to} $n$}
+        \State $DP$[$i$][0] = 0
+        \EndFor
+        \For{$c$=0 \textbf{to} $C$}
+        \State $DP$[0][$c$] = 0
+        \EndFor
+        \For{$i$=1 \textbf{to} $n$}
+        \For{$c$=1 \textbf{to} $C$}
+        \If{$w[i] \le c$}
+        \State $DP[i][c]$ = max($DP[i-1][c-w[i]]+p[i], DP[i-1][c])$
+        \Else
+        \State $DP[i][c] = DP[i-1][c]$
+        \EndIf
+        \EndFor
+        \EndFor
+        \State \textbf{return} $DP[n][C]$
+    \end{algorithmic}
+\end{algorithm}
+
+\noindent Nella riga \textbf{1}, la tabella ha dimensione "$(n+1)*(C+1)$" perché si ha bisogno di memorizzare anche i casi base. La complessità di questa operazione, ovvero della creazione della tabella, è: $\theta(1)$.\\
+Nella righe \textbf{2-7}, siccome il caso base è $0$ se $i=0\; o\; c=0$ si inizializza a 0. La complessità di questi cicli \texttt{for} è rispettivamente: $\theta(n)$ e $\theta(C)$.\\
+Poi si hanno due cicli \texttt{for} per riempire il resto della tabella, nell'\texttt{if}, se $w[i]\le c$ si fa il \textit{max} fra i due casi, quindi quando si prende un oggetto ($DP[i-1][c-w[i]]+p[i]$) e quando non lo si prende ($DP[i-1][c]$), altrimenti si passa al caso in cui $w[i] > c$. La complessità dei due \texttt{for} è $\theta(n*C)$, mentre quella dell'\texttt{if \dots else} è $\theta(1)$.\\
+Alla fine si ritorna la tabella $DP[n][C]$.
+
+\subsubsection{Esempio}
+\begin{figure}[H]
+    \centering
+    \vspace{-10pt} %riduce lo spazio sopra
+    \includegraphics[width=1\linewidth]{Programmazione_Dinamica/ZainoEs2.png}
+    \vspace{-5pt} %riduce lo spazio sotto
+\end{figure}
+
+\subsubsection{Complessità computazionale}
+$C$ può essere arbitrariamente grande, deve quindi essere un dato appropriato. $C$ non è la dimensione del problema, è infatti parte dell'input.\\
+La dimensione del problema è data da $n$ pesi più $n$ profitti più 1 capacità, "$n+n+1$".La dimensione del problema risulta come "$2n+1$", ma la $C$ si usa nel calcolo della complessità: $T(n)=O(nC)$.\\
+Questo è un algoritmo \textbf{pseudo-polinomiale}, perché sono necessari $k=\lceil log\,C\rceil$ bit per rappresentare $C$ e quindi la complessità risulta essere $T(n)=O(n2^k)$.
+
+\subsection{Memoization - Introduzione}
+La \textbf{Memoization} è una variante della programmazione dinamica, essa dice che "\textbf{Non è sempre necessario calcolare le soluzioni di tutti i sottoproblemi}".
+
+\subsubsection{Zaino con Memoization}
+Andando a riguardare la definizione ricorsiva del problema originale e il suo costo ($O(nC)$), non è detto che sia necessario risolvere tutti i sottoproblemi (dipende dai loro valori di volumi e capacità).\\
+La \textbf{Memoization} permette un approccio alternativo: fonde l'approccio di memorizzazione della programmazione dinamica, ma è ricorsivo e risolve il problema "dall'alto verso il basso", top-down, si parte dal caso di interesse e su calcolano i sottoproblemi se non sono già stati risolti.\\
+\textit{Gli approcci visti fin qui sono iterativi, dal basso verso l'alto e risolvono obbligatoriamente tutti i problemi}.\\
+\begin{tcolorbox}[
+        colback=yellow!20,
+        colframe=darkgray,
+        title= Idea Base
+    ]
+    È una procedura che utilizza la tabella come una cache per memorizzare le soluzioni dei problemi che viene inizializzata con un \textbf{valore speciale} che indica i sottoproblemi non ancora risolti (ad esempio un valore negativo).\\
+    Una procedura controlla se il sottoproblema è stato risolto:
+    \begin{itemize}[leftmargin=1em]
+        \item Se \textbf{si}: riutilizza il risultato;
+        \item Se \textbf{no}: lo risolve (con chiamata ricorsiva sui sottoproblemi), memorizza il risultato in tabella e lo restituisce al chiamante.
+    \end{itemize}
+\end{tcolorbox}
+
+\subsubsection{Algoritmo zaino con Memoization}
+\begin{algorithm}
+    \caption{\textbf{integer} zaino(\textbf{integer}[] $w$, \textbf{integer}[] $p$, \textbf{integer} $i$, \textbf{integer} $c$, \textbf{integer}[][] $DP$)}
+    \begin{algorithmic}[1]
+        \If{i==0 or c==0}
+        \State \textbf{return} 0
+        \EndIf
+        \If{c<0}
+        \State \textbf{return} $-\infty$
+        \EndIf
+        \If{DP[i, c]=\textbf{false}}
+        \State D[i,c] $\leftarrow$ max(zaino($w$, $p$, $i-1$, $c$, $DP$), zaino($w$, $p$, $i-1$, $c-w[i]$, $DP$)+$p[i]$)
+        \EndIf
+        \State \textbf{return} $DP[i,c]$
+    \end{algorithmic}
+\end{algorithm}
+
+\subsubsection{Complessità}
+Complessità della versione puramente ricorsiva dello Zaino Ricorsivo (senza controllo sulle operazioni già eseguite).
+
+\[
+    T(n)=
+    \begin{aligned}
+        \begin{cases}
+            1\qquad \qquad \qquad \quad \;\,n\le 1 \\
+            2T(n-1)+1 \qquad n>1
+        \end{cases}
+    \end{aligned}
+\]
+\[
+    T(n)=O(2^n)
+\]
+
+\subsubsection{Zaino Memoization: utilizzo tabella come cache}
+Non tutti gli elementi della matrice sono necessari alla risoluzione del problema.\\
+\begin{figure}[H]
+    \centering
+    \vspace{-10pt} %riduce lo spazio sopra
+    \includegraphics[width=1\linewidth]{Programmazione_Dinamica/ZainoMem1.png}
+    \vspace{-5pt} %riduce lo spazio sotto
+\end{figure}
+
+Come si ricostruisce la soluzione? Ossia, come si identificano gli oggetti che hanno portato al valore massimale $DP[n][C]$?
+
+\subsubsection{Dizionario vs Tabella}
+\begin{tcolorbox}[
+        colback=yellow!20,
+        colframe=darkgray,
+        title= Inizializzazione tabella
+    ]
+    \begin{itemize}[leftmargin=1em]
+        \item Il costo di inizializzazione è pari a $O(nC)$;
+        \item Applicata in questo modo, non c'è alcun vantaggio nell'utilizzare la tecnica di memoization;
+        \item Permette però di tradurre in fretta le espressioni ricorsive.
+    \end{itemize}
+\end{tcolorbox}
+\begin{tcolorbox}[
+        colback=yellow!20,
+        colframe=darkgray,
+        title= Utilizzo di un dizionario (hash table)
+    ]
+    \begin{itemize}[leftmargin=1em]
+        \item Invece di utilizzare una tabella, si utilizza un dizionario;
+        \item Non è necessario fare inizializzazione;
+        \item Il costo di esecuzione è pari a $O(min(2^n,\; nC))$
+    \end{itemize}
+\end{tcolorbox}
+
+\subsubsection{Approccio generale}
+\begin{figure}[H]
+    \centering
+    \vspace{-10pt} %riduce lo spazio sopra
+    \includegraphics[width=1\linewidth]{Programmazione_Dinamica/Memoization1.png}
+    \vspace{-5pt} %riduce lo spazio sotto
+\end{figure}
+
+\subsubsection{Riassunto: programmazione dinamica/memoization}
+Fasi:
+\begin{itemize}[leftmargin=1em]
+    \item Caratterizzare la \textbf{struttura} di una soluzione ottima;
+    \item Dimostrare che la soluzione gode di una \textbf{sottostruttura ottima};
+    \item Definire ricorsivamente il \textbf{valore} di una soluzione ottima;
+    \item Calcolare il \textbf{valore} di una soluzione "bottom-up" (prog. dinamica)/ "top-down" (memoization);
+    \item \textbf{Ricostruzione} di una soluzione ottima.
+\end{itemize}
+\end{document}
