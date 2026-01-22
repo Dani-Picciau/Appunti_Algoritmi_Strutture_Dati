@@ -1,155 +1,168 @@
-\contentsline {section}{\numberline {1}Introduzione}{5}{section.1}%
-\contentsline {subsection}{\numberline {1.1}Problemi computazionali e algoritmi}{5}{subsection.1.1}%
-\contentsline {subsubsection}{\numberline {1.1.1}Esempi di problemi computazionali e algoritmi}{5}{subsubsection.1.1.1}%
-\contentsline {subsubsection}{\numberline {1.1.2}Come valutare l'algoritmo scelto}{6}{subsubsection.1.1.2}%
-\contentsline {subsubsection}{\numberline {1.1.3}Complessità di un algoritmo}{7}{subsubsection.1.1.3}%
-\contentsline {subsection}{\numberline {1.2}Strutture dati}{7}{subsection.1.2}%
-\contentsline {subsubsection}{\numberline {1.2.1}Tipologie di strutture dati}{8}{subsubsection.1.2.1}%
-\contentsline {subsubsection}{\numberline {1.2.2}Le sequenze}{8}{subsubsection.1.2.2}%
-\contentsline {subsubsection}{\numberline {1.2.3}Gli Insiemi}{9}{subsubsection.1.2.3}%
-\contentsline {subsubsection}{\numberline {1.2.4}I dizionari}{10}{subsubsection.1.2.4}%
-\contentsline {subsection}{\numberline {1.3}I puntatori}{11}{subsection.1.3}%
-\contentsline {subsubsection}{\numberline {1.3.1}Puntatori nulli}{11}{subsubsection.1.3.1}%
-\contentsline {section}{\numberline {2}Iterazione, induzione e ricorsione}{13}{section.2}%
-\contentsline {subsection}{\numberline {2.1}Iterazione}{13}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.2}Induzione}{13}{subsection.2.2}%
-\contentsline {subsubsection}{\numberline {2.2.1}Induzione completa}{14}{subsubsection.2.2.1}%
-\contentsline {subsection}{\numberline {2.3}Ricorsione}{15}{subsection.2.3}%
-\contentsline {subsection}{\numberline {2.4}Invarianti dei cicli}{15}{subsection.2.4}%
-\contentsline {subsubsection}{\numberline {2.4.1}Invariante del ciclo \texttt {while} VS invariante del ciclo \texttt {for}}{16}{subsubsection.2.4.1}%
-\contentsline {subsubsection}{\numberline {2.4.2}Invarianti dei cicli - Esempio pratico con il \texttt {selectionSort()}}{18}{subsubsection.2.4.2}%
-\contentsline {section}{\numberline {3}Le liste}{21}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Liste concatenate}{22}{subsection.3.1}%
-\contentsline {subsubsection}{\numberline {3.1.1}Inserimento in testa}{22}{subsubsection.3.1.1}%
-\contentsline {subsubsection}{\numberline {3.1.2}Inserimento generico}{23}{subsubsection.3.1.2}%
-\contentsline {subsubsection}{\numberline {3.1.3}Cancellazione elemento corrente}{25}{subsubsection.3.1.3}%
-\contentsline {subsubsection}{\numberline {3.1.4}Creazione lista}{27}{subsubsection.3.1.4}%
-\contentsline {subsubsection}{\numberline {3.1.5}Cancellazione intera lista}{27}{subsubsection.3.1.5}%
-\contentsline {subsubsection}{\numberline {3.1.6}Attraversamento con funzione}{28}{subsubsection.3.1.6}%
-\contentsline {subsubsection}{\numberline {3.1.7}Ricerca elemento con funzione}{29}{subsubsection.3.1.7}%
-\contentsline {section}{\numberline {4}Alberi}{30}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Terminologia}{31}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Alberi binari}{31}{subsection.4.2}%
-\contentsline {subsubsection}{\numberline {4.2.1}Creazione di un albero binario}{32}{subsubsection.4.2.1}%
-\contentsline {subsubsection}{\numberline {4.2.2}Costruzione di un albero binario}{32}{subsubsection.4.2.2}%
-\contentsline {subsection}{\numberline {4.3}Le visite}{33}{subsection.4.3}%
-\contentsline {subsubsection}{\numberline {4.3.1}Visita in preorder (DFS)}{34}{subsubsection.4.3.1}%
-\contentsline {subsubsection}{\numberline {4.3.2}Visita in postorder (DFS)}{35}{subsubsection.4.3.2}%
-\contentsline {subsubsection}{\numberline {4.3.3}Visita inorder (DFS)}{37}{subsubsection.4.3.3}%
-\contentsline {subsubsection}{\numberline {4.3.4}Attraversamento di un albero binario in C}{38}{subsubsection.4.3.4}%
-\contentsline {subsubsection}{\numberline {4.3.5}Cancellazione di un albero}{39}{subsubsection.4.3.5}%
-\contentsline {subsection}{\numberline {4.4}Alberi binari di ricerca (BST)}{41}{subsection.4.4}%
-\contentsline {subsubsection}{\numberline {4.4.1}Implementazione della ricerca}{42}{subsubsection.4.4.1}%
-\contentsline {subsubsection}{\numberline {4.4.2}Creazione di un nuovo nodo}{44}{subsubsection.4.4.2}%
-\contentsline {subsubsection}{\numberline {4.4.3}Inserimento di un nodo}{45}{subsubsection.4.4.3}%
-\contentsline {subsubsection}{\numberline {4.4.4}Ricerca del massimo e del minimo}{47}{subsubsection.4.4.4}%
-\contentsline {subsubsection}{\numberline {4.4.5}Ricerca del successore-predecessore}{50}{subsubsection.4.4.5}%
-\contentsline {subsubsection}{\numberline {4.4.6}Cancellazione di un nodo}{53}{subsubsection.4.4.6}%
-\contentsline {subsubsection}{\numberline {4.4.7}Alberi BST: alcune osservazioni}{56}{subsubsection.4.4.7}%
-\contentsline {subsubsection}{\numberline {4.4.8}Alberi BST: Alberi Adelson-Velsky and Landis (AVL)}{57}{subsubsection.4.4.8}%
-\contentsline {section}{\numberline {5}Analisi della complessità degli algoritmi}{60}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Complessità e dimensione dell'input}{60}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}Definizione di tempo e modello di calcolo}{61}{subsection.5.2}%
-\contentsline {subsubsection}{\numberline {5.2.1}Random Access Machine (RAM)}{61}{subsubsection.5.2.1}%
-\contentsline {subsection}{\numberline {5.3}Valutazione del caso pessimo, medio e ottimo}{62}{subsection.5.3}%
-\contentsline {subsubsection}{\numberline {5.3.1}Tempo di calcolo della funzione \texttt {min()} (iterativa)}{62}{subsubsection.5.3.1}%
-\contentsline {subsubsection}{\numberline {5.3.2}Tempo di calcolo della funzione \texttt {binarySearch()} (ricorsiva)}{63}{subsubsection.5.3.2}%
-\contentsline {subsection}{\numberline {5.4}Ordini di complessità}{64}{subsection.5.4}%
-\contentsline {subsubsection}{\numberline {5.4.1}Principali classi di efficienza asintotiche}{65}{subsubsection.5.4.1}%
-\contentsline {subsubsection}{\numberline {5.4.2}Notazioni asintotiche}{65}{subsubsection.5.4.2}%
-\contentsline {subsection}{\numberline {5.5}Le ricorrenze}{66}{subsection.5.5}%
-\contentsline {subsubsection}{\numberline {5.5.1}Metodo di sostituzione (o per tentativi)}{67}{subsubsection.5.5.1}%
-\contentsline {subsubsection}{\numberline {5.5.2}Metodo dell'esperto}{67}{subsubsection.5.5.2}%
-\contentsline {subsubsection}{\numberline {5.5.3}Metodo dell'albero di ricorsione (analisi per livelli)}{68}{subsubsection.5.5.3}%
-\contentsline {subsection}{\numberline {5.6}Ordinamento}{69}{subsection.5.6}%
-\contentsline {subsubsection}{\numberline {5.6.1}Selection Sort}{70}{subsubsection.5.6.1}%
-\contentsline {subsubsection}{\numberline {5.6.2}Insertion sort}{71}{subsubsection.5.6.2}%
-\contentsline {subsubsection}{\numberline {5.6.3}Merge sort}{73}{subsubsection.5.6.3}%
-\contentsline {section}{\numberline {6}Standard Template Library (STL)}{77}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Container}{78}{subsection.6.1}%
-\contentsline {subsection}{\numberline {6.2}Sequence container (Contenitori Sequenziali)}{78}{subsection.6.2}%
-\contentsline {subsubsection}{\numberline {6.2.1}Vector}{78}{subsubsection.6.2.1}%
-\contentsline {subsubsection}{\numberline {6.2.2}List}{81}{subsubsection.6.2.2}%
-\contentsline {subsubsection}{\numberline {6.2.3}Deque}{82}{subsubsection.6.2.3}%
-\contentsline {subsubsection}{\numberline {6.2.4}Altri container}{83}{subsubsection.6.2.4}%
-\contentsline {subsubsection}{\numberline {6.2.5}Associative container}{83}{subsubsection.6.2.5}%
-\contentsline {subsection}{\numberline {6.3}Iteratori}{84}{subsection.6.3}%
-\contentsline {subsection}{\numberline {6.4}Algoritmi della STL}{89}{subsection.6.4}%
-\contentsline {subsubsection}{\numberline {6.4.1}Intervalli}{90}{subsubsection.6.4.1}%
-\contentsline {subsubsection}{\numberline {6.4.2}Predicati}{91}{subsubsection.6.4.2}%
-\contentsline {section}{\numberline {7}Divide-et-impera}{93}{section.7}%
-\contentsline {subsection}{\numberline {7.1}Risoluzione problemi}{93}{subsection.7.1}%
-\contentsline {subsubsection}{\numberline {7.1.1}Classificazione dei problemi}{93}{subsubsection.7.1.1}%
-\contentsline {paragraph}{Problemi decisionali}{93}{section*.44}%
-\contentsline {subsubsection}{\numberline {7.1.2}Definizione matematica del problema}{93}{subsubsection.7.1.2}%
-\contentsline {subsubsection}{\numberline {7.1.3}Tecnica di soluzione dei problemi}{93}{subsubsection.7.1.3}%
-\contentsline {subsection}{\numberline {7.2}Divide-et-impera}{95}{subsection.7.2}%
-\contentsline {subsection}{\numberline {7.3}Minimo: Divide-et-impera}{95}{subsection.7.3}%
-\contentsline {subsection}{\numberline {7.4}Esempio binary search}{97}{subsection.7.4}%
-\contentsline {subsection}{\numberline {7.5}Quicksort (Hoare, 1961)}{98}{subsection.7.5}%
-\contentsline {subsection}{\numberline {7.6}Pivot}{99}{subsection.7.6}%
-\contentsline {subsection}{\numberline {7.7}Quicksort: procedura principale}{100}{subsection.7.7}%
-\contentsline {subsubsection}{\numberline {7.7.1}Caso pessimo}{100}{subsubsection.7.7.1}%
-\contentsline {subsubsection}{\numberline {7.7.2}caso ottimo}{101}{subsubsection.7.7.2}%
-\contentsline {subsection}{\numberline {7.8}Moltiplicazione di matrici}{101}{subsection.7.8}%
-\contentsline {subsubsection}{\numberline {7.8.1}Algoritmo di Strassen}{102}{subsubsection.7.8.1}%
-\contentsline {subsection}{\numberline {7.9}Conclusioni}{102}{subsection.7.9}%
-\contentsline {section}{\numberline {8}Programmazione Dinamica}{103}{section.8}%
-\contentsline {subsection}{\numberline {8.1}Idea generale}{103}{subsection.8.1}%
-\contentsline {subsubsection}{\numberline {8.1.1}Fasi della risoluzione del problema}{103}{subsubsection.8.1.1}%
-\contentsline {subsection}{\numberline {8.2}Esempio - Coefficiente binomiale}{103}{subsection.8.2}%
-\contentsline {subsection}{\numberline {8.3}Quando usare la programmazione dinamica}{104}{subsection.8.3}%
-\contentsline {subsection}{\numberline {8.4}String Match Approssimato}{105}{subsection.8.4}%
-\contentsline {subsubsection}{\numberline {8.4.1}Esempio}{105}{subsubsection.8.4.1}%
-\contentsline {subsubsection}{\numberline {8.4.2}4 possibilità:}{105}{subsubsection.8.4.2}%
-\contentsline {subsubsection}{\numberline {8.4.3}Esempio 1}{107}{subsubsection.8.4.3}%
-\contentsline {subsubsection}{\numberline {8.4.4}Esempio 2}{108}{subsubsection.8.4.4}%
-\contentsline {subsubsection}{\numberline {8.4.5}Esempio 3}{109}{subsubsection.8.4.5}%
-\contentsline {subsubsection}{\numberline {8.4.6}Esempio 4}{109}{subsubsection.8.4.6}%
-\contentsline {subsubsection}{\numberline {8.4.7}Algoritmo}{110}{subsubsection.8.4.7}%
-\contentsline {subsubsection}{\numberline {8.4.8}Reality check}{110}{subsubsection.8.4.8}%
-\contentsline {subsection}{\numberline {8.5}Insieme indipendente di intervalli pestai}{110}{subsection.8.5}%
-\contentsline {subsubsection}{\numberline {8.5.1}Esempio: insieme indipendente di peso massimo}{111}{subsubsection.8.5.1}%
-\contentsline {subsubsection}{\numberline {8.5.2}Pre-elaborazione}{111}{subsubsection.8.5.2}%
-\contentsline {subsubsection}{\numberline {8.5.3}Individuazione sottostruttura ottima (forma ricorsiva)}{113}{subsubsection.8.5.3}%
-\contentsline {subsubsection}{\numberline {8.5.4}Algoritmo iterativo}{114}{subsubsection.8.5.4}%
-\contentsline {subsubsection}{\numberline {8.5.5}Costo computazionale}{114}{subsubsection.8.5.5}%
-\contentsline {subsection}{\numberline {8.6}Zaino (Knapsack)}{115}{subsection.8.6}%
-\contentsline {subsubsection}{\numberline {8.6.1}Definizione matematica della soluzione}{115}{subsubsection.8.6.1}%
-\contentsline {subsubsection}{\numberline {8.6.2}Parte ricorsiva}{115}{subsubsection.8.6.2}%
-\contentsline {subsubsection}{\numberline {8.6.3}Casi base}{116}{subsubsection.8.6.3}%
-\contentsline {subsubsection}{\numberline {8.6.4}Zaino algoritmo}{117}{subsubsection.8.6.4}%
-\contentsline {subsubsection}{\numberline {8.6.5}Esempio}{118}{subsubsection.8.6.5}%
-\contentsline {subsubsection}{\numberline {8.6.6}Complessità computazionale}{118}{subsubsection.8.6.6}%
-\contentsline {subsection}{\numberline {8.7}Memoization - Introduzione}{118}{subsection.8.7}%
-\contentsline {subsubsection}{\numberline {8.7.1}Zaino con Memoization}{118}{subsubsection.8.7.1}%
-\contentsline {subsubsection}{\numberline {8.7.2}Algoritmo zaino con Memoization}{119}{subsubsection.8.7.2}%
-\contentsline {subsubsection}{\numberline {8.7.3}Complessità}{119}{subsubsection.8.7.3}%
-\contentsline {subsubsection}{\numberline {8.7.4}Zaino Memoization: utilizzo tabella come cache}{119}{subsubsection.8.7.4}%
-\contentsline {subsubsection}{\numberline {8.7.5}Dizionario vs Tabella}{120}{subsubsection.8.7.5}%
-\contentsline {subsubsection}{\numberline {8.7.6}Approccio generale}{121}{subsubsection.8.7.6}%
-\contentsline {subsubsection}{\numberline {8.7.7}Riassunto: programmazione dinamica/memoization}{121}{subsubsection.8.7.7}%
-\contentsline {section}{\numberline {9}Hashing}{122}{section.9}%
-\contentsline {subsection}{\numberline {9.1}Tabelle ad accesso diretto}{123}{subsection.9.1}%
-\contentsline {subsubsection}{\numberline {9.1.1}Funzioni hash perfette}{123}{subsubsection.9.1.1}%
-\contentsline {subsection}{\numberline {9.2}Minimizzare le collisoni}{124}{subsection.9.2}%
-\contentsline {subsection}{\numberline {9.3}Come realizzare una funzione hash}{125}{subsection.9.3}%
-\contentsline {subsubsection}{\numberline {9.3.1}Metodo dell'estrazione}{126}{subsubsection.9.3.1}%
-\contentsline {subsubsection}{\numberline {9.3.2}Metodo dello XOR}{126}{subsubsection.9.3.2}%
-\contentsline {subsubsection}{\numberline {9.3.3}Metodo della divisione}{127}{subsubsection.9.3.3}%
-\contentsline {subsubsection}{\numberline {9.3.4}Metodo della moltiplicazione (Knuth)}{129}{subsubsection.9.3.4}%
-\contentsline {subsection}{\numberline {9.4}Gestione delle collisioni}{130}{subsection.9.4}%
-\contentsline {subsubsection}{\numberline {9.4.1}Liste di trabocco (concatenamento o chaining)}{131}{subsubsection.9.4.1}%
-\contentsline {subsubsection}{\numberline {9.4.2}Liste di trabocco: analisi della complessità}{132}{subsubsection.9.4.2}%
-\contentsline {subsubsection}{\numberline {9.4.3}Indirizzamento aperto (memorizzazione interna)}{133}{subsubsection.9.4.3}%
-\contentsline {subsubsection}{\numberline {9.4.4}Indirizzamento aperto: analisi della complessità}{134}{subsubsection.9.4.4}%
-\contentsline {subsubsection}{\numberline {9.4.5}Indirizzamento aperto: ispezione lineare}{136}{subsubsection.9.4.5}%
-\contentsline {subsubsection}{\numberline {9.4.6}Indirizzamento aperto: ispezione quadratica}{136}{subsubsection.9.4.6}%
-\contentsline {subsubsection}{\numberline {9.4.7}Indirizzamento aperto: doppio hashing}{137}{subsubsection.9.4.7}%
-\contentsline {subsubsection}{\numberline {9.4.8}Indirizzamento aperto: cancellazione}{137}{subsubsection.9.4.8}%
-\contentsline {subsection}{\numberline {9.5}Implementazione dell'hashing doppio}{138}{subsection.9.5}%
-\contentsline {subsubsection}{\numberline {9.5.1}Definizione delle variabili}{138}{subsubsection.9.5.1}%
-\contentsline {subsubsection}{\numberline {9.5.2}La funzione \texttt {hash}}{139}{subsubsection.9.5.2}%
-\contentsline {subsubsection}{\numberline {9.5.3}La funzione \texttt {scan}}{139}{subsubsection.9.5.3}%
-\contentsline {subsubsection}{\numberline {9.5.4}Le funzioni \texttt {lookup} e \texttt {insert}}{140}{subsubsection.9.5.4}%
-\contentsline {subsubsection}{\numberline {9.5.5}La funzione \texttt {remove}}{141}{subsubsection.9.5.5}%
+\contentsline {section}{\numberline {1}Introduzione}{6}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Problemi computazionali e algoritmi}{6}{subsection.1.1}%
+\contentsline {subsubsection}{\numberline {1.1.1}Esempi di problemi computazionali e algoritmi}{6}{subsubsection.1.1.1}%
+\contentsline {subsubsection}{\numberline {1.1.2}Come valutare l'algoritmo scelto}{7}{subsubsection.1.1.2}%
+\contentsline {subsubsection}{\numberline {1.1.3}Complessità di un algoritmo}{8}{subsubsection.1.1.3}%
+\contentsline {subsection}{\numberline {1.2}Strutture dati}{8}{subsection.1.2}%
+\contentsline {subsubsection}{\numberline {1.2.1}Tipologie di strutture dati}{9}{subsubsection.1.2.1}%
+\contentsline {subsubsection}{\numberline {1.2.2}Le sequenze}{9}{subsubsection.1.2.2}%
+\contentsline {subsubsection}{\numberline {1.2.3}Gli Insiemi}{10}{subsubsection.1.2.3}%
+\contentsline {subsubsection}{\numberline {1.2.4}I dizionari}{11}{subsubsection.1.2.4}%
+\contentsline {subsection}{\numberline {1.3}I puntatori}{12}{subsection.1.3}%
+\contentsline {subsubsection}{\numberline {1.3.1}Puntatori nulli}{12}{subsubsection.1.3.1}%
+\contentsline {section}{\numberline {2}Iterazione, induzione e ricorsione}{14}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Iterazione}{14}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Induzione}{14}{subsection.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.1}Induzione completa}{15}{subsubsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.3}Ricorsione}{16}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Invarianti dei cicli}{16}{subsection.2.4}%
+\contentsline {subsubsection}{\numberline {2.4.1}Invariante del ciclo \texttt {while} VS invariante del ciclo \texttt {for}}{17}{subsubsection.2.4.1}%
+\contentsline {subsubsection}{\numberline {2.4.2}Invarianti dei cicli - Esempio pratico con il \texttt {selectionSort()}}{19}{subsubsection.2.4.2}%
+\contentsline {section}{\numberline {3}Le liste}{22}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Liste concatenate}{23}{subsection.3.1}%
+\contentsline {subsubsection}{\numberline {3.1.1}Inserimento in testa}{23}{subsubsection.3.1.1}%
+\contentsline {subsubsection}{\numberline {3.1.2}Inserimento generico}{24}{subsubsection.3.1.2}%
+\contentsline {subsubsection}{\numberline {3.1.3}Cancellazione elemento corrente}{26}{subsubsection.3.1.3}%
+\contentsline {subsubsection}{\numberline {3.1.4}Creazione lista}{28}{subsubsection.3.1.4}%
+\contentsline {subsubsection}{\numberline {3.1.5}Cancellazione intera lista}{28}{subsubsection.3.1.5}%
+\contentsline {subsubsection}{\numberline {3.1.6}Attraversamento con funzione}{29}{subsubsection.3.1.6}%
+\contentsline {subsubsection}{\numberline {3.1.7}Ricerca elemento con funzione}{30}{subsubsection.3.1.7}%
+\contentsline {section}{\numberline {4}Alberi}{31}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Terminologia}{32}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Alberi binari}{32}{subsection.4.2}%
+\contentsline {subsubsection}{\numberline {4.2.1}Creazione di un albero binario}{33}{subsubsection.4.2.1}%
+\contentsline {subsubsection}{\numberline {4.2.2}Costruzione di un albero binario}{33}{subsubsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.3}Le visite}{34}{subsection.4.3}%
+\contentsline {subsubsection}{\numberline {4.3.1}Visita in preorder (DFS)}{35}{subsubsection.4.3.1}%
+\contentsline {subsubsection}{\numberline {4.3.2}Visita in postorder (DFS)}{36}{subsubsection.4.3.2}%
+\contentsline {subsubsection}{\numberline {4.3.3}Visita inorder (DFS)}{38}{subsubsection.4.3.3}%
+\contentsline {subsubsection}{\numberline {4.3.4}Attraversamento di un albero binario in C}{39}{subsubsection.4.3.4}%
+\contentsline {subsubsection}{\numberline {4.3.5}Cancellazione di un albero}{40}{subsubsection.4.3.5}%
+\contentsline {subsection}{\numberline {4.4}Alberi binari di ricerca (BST)}{42}{subsection.4.4}%
+\contentsline {subsubsection}{\numberline {4.4.1}Implementazione della ricerca}{43}{subsubsection.4.4.1}%
+\contentsline {subsubsection}{\numberline {4.4.2}Creazione di un nuovo nodo}{45}{subsubsection.4.4.2}%
+\contentsline {subsubsection}{\numberline {4.4.3}Inserimento di un nodo}{46}{subsubsection.4.4.3}%
+\contentsline {subsubsection}{\numberline {4.4.4}Ricerca del massimo e del minimo}{48}{subsubsection.4.4.4}%
+\contentsline {subsubsection}{\numberline {4.4.5}Ricerca del successore-predecessore}{51}{subsubsection.4.4.5}%
+\contentsline {subsubsection}{\numberline {4.4.6}Cancellazione di un nodo}{54}{subsubsection.4.4.6}%
+\contentsline {subsubsection}{\numberline {4.4.7}Alberi BST: alcune osservazioni}{57}{subsubsection.4.4.7}%
+\contentsline {subsubsection}{\numberline {4.4.8}Alberi BST: Alberi Adelson-Velsky and Landis (AVL)}{58}{subsubsection.4.4.8}%
+\contentsline {section}{\numberline {5}Analisi della complessità degli algoritmi}{61}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Complessità e dimensione dell'input}{61}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Definizione di tempo e modello di calcolo}{62}{subsection.5.2}%
+\contentsline {subsubsection}{\numberline {5.2.1}Random Access Machine (RAM)}{62}{subsubsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.3}Valutazione del caso pessimo, medio e ottimo}{63}{subsection.5.3}%
+\contentsline {subsubsection}{\numberline {5.3.1}Tempo di calcolo della funzione \texttt {min()} (iterativa)}{63}{subsubsection.5.3.1}%
+\contentsline {subsubsection}{\numberline {5.3.2}Tempo di calcolo della funzione \texttt {binarySearch()} (ricorsiva)}{64}{subsubsection.5.3.2}%
+\contentsline {subsection}{\numberline {5.4}Ordini di complessità}{65}{subsection.5.4}%
+\contentsline {subsubsection}{\numberline {5.4.1}Principali classi di efficienza asintotiche}{66}{subsubsection.5.4.1}%
+\contentsline {subsubsection}{\numberline {5.4.2}Notazioni asintotiche}{66}{subsubsection.5.4.2}%
+\contentsline {subsection}{\numberline {5.5}Le ricorrenze}{67}{subsection.5.5}%
+\contentsline {subsubsection}{\numberline {5.5.1}Metodo di sostituzione (o per tentativi)}{68}{subsubsection.5.5.1}%
+\contentsline {subsubsection}{\numberline {5.5.2}Metodo dell'esperto}{68}{subsubsection.5.5.2}%
+\contentsline {subsubsection}{\numberline {5.5.3}Metodo dell'albero di ricorsione (analisi per livelli)}{69}{subsubsection.5.5.3}%
+\contentsline {subsection}{\numberline {5.6}Ordinamento}{70}{subsection.5.6}%
+\contentsline {subsubsection}{\numberline {5.6.1}Selection Sort}{71}{subsubsection.5.6.1}%
+\contentsline {subsubsection}{\numberline {5.6.2}Insertion sort}{72}{subsubsection.5.6.2}%
+\contentsline {subsubsection}{\numberline {5.6.3}Merge sort}{74}{subsubsection.5.6.3}%
+\contentsline {section}{\numberline {6}Standard Template Library (STL)}{78}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Container}{79}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Sequence container (Contenitori Sequenziali)}{79}{subsection.6.2}%
+\contentsline {subsubsection}{\numberline {6.2.1}Vector}{79}{subsubsection.6.2.1}%
+\contentsline {subsubsection}{\numberline {6.2.2}List}{82}{subsubsection.6.2.2}%
+\contentsline {subsubsection}{\numberline {6.2.3}Deque}{83}{subsubsection.6.2.3}%
+\contentsline {subsubsection}{\numberline {6.2.4}Altri container}{84}{subsubsection.6.2.4}%
+\contentsline {subsubsection}{\numberline {6.2.5}Associative container}{84}{subsubsection.6.2.5}%
+\contentsline {subsection}{\numberline {6.3}Iteratori}{85}{subsection.6.3}%
+\contentsline {subsection}{\numberline {6.4}Algoritmi della STL}{90}{subsection.6.4}%
+\contentsline {subsubsection}{\numberline {6.4.1}Intervalli}{91}{subsubsection.6.4.1}%
+\contentsline {subsubsection}{\numberline {6.4.2}Predicati}{92}{subsubsection.6.4.2}%
+\contentsline {section}{\numberline {7}Divide-et-impera}{94}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Risoluzione problemi}{94}{subsection.7.1}%
+\contentsline {subsubsection}{\numberline {7.1.1}Classificazione dei problemi}{94}{subsubsection.7.1.1}%
+\contentsline {paragraph}{Problemi decisionali}{94}{section*.44}%
+\contentsline {subsubsection}{\numberline {7.1.2}Definizione matematica del problema}{94}{subsubsection.7.1.2}%
+\contentsline {subsubsection}{\numberline {7.1.3}Tecnica di soluzione dei problemi}{94}{subsubsection.7.1.3}%
+\contentsline {subsection}{\numberline {7.2}Divide-et-impera}{96}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Minimo: Divide-et-impera}{96}{subsection.7.3}%
+\contentsline {subsection}{\numberline {7.4}Esempio binary search}{98}{subsection.7.4}%
+\contentsline {subsection}{\numberline {7.5}Quicksort (Hoare, 1961)}{99}{subsection.7.5}%
+\contentsline {subsection}{\numberline {7.6}Pivot}{100}{subsection.7.6}%
+\contentsline {subsection}{\numberline {7.7}Quicksort: procedura principale}{101}{subsection.7.7}%
+\contentsline {subsubsection}{\numberline {7.7.1}Caso pessimo}{101}{subsubsection.7.7.1}%
+\contentsline {subsubsection}{\numberline {7.7.2}caso ottimo}{102}{subsubsection.7.7.2}%
+\contentsline {subsection}{\numberline {7.8}Moltiplicazione di matrici}{102}{subsection.7.8}%
+\contentsline {subsubsection}{\numberline {7.8.1}Algoritmo di Strassen}{103}{subsubsection.7.8.1}%
+\contentsline {subsection}{\numberline {7.9}Conclusioni}{103}{subsection.7.9}%
+\contentsline {section}{\numberline {8} Analisi ammortizzata }{104}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Metodi per eseguire l'analisi}{104}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}Esempio: Contatore binario}{104}{subsection.8.2}%
+\contentsline {subsection}{\numberline {8.3}Metodo dell'aggregazione}{105}{subsection.8.3}%
+\contentsline {subsection}{\numberline {8.4}Metodo degli accantonamenti}{106}{subsection.8.4}%
+\contentsline {subsection}{\numberline {8.5}Metodo del potenziale}{109}{subsection.8.5}%
+\contentsline {subsection}{\numberline {8.6}Analisi ammortizzata e strutture dati: Array VS Liste}{110}{subsection.8.6}%
+\contentsline {subsubsection}{\numberline {8.6.1}Array dinamici}{110}{subsubsection.8.6.1}%
+\contentsline {subsubsection}{\numberline {8.6.2}Array dinamici - Espansione}{111}{subsubsection.8.6.2}%
+\contentsline {subsubsection}{\numberline {8.6.3}Analisi ammortizzata - Raddoppiamento del vettore}{111}{subsubsection.8.6.3}%
+\contentsline {subsubsection}{\numberline {8.6.4}Analisi ammortizzata - Incremento del vettore}{112}{subsubsection.8.6.4}%
+\contentsline {section}{\numberline {9}Programmazione Dinamica}{114}{section.9}%
+\contentsline {subsection}{\numberline {9.1}Idea generale}{114}{subsection.9.1}%
+\contentsline {subsubsection}{\numberline {9.1.1}Fasi della risoluzione del problema}{114}{subsubsection.9.1.1}%
+\contentsline {subsection}{\numberline {9.2}Esempio - Coefficiente binomiale}{114}{subsection.9.2}%
+\contentsline {subsection}{\numberline {9.3}Quando usare la programmazione dinamica}{115}{subsection.9.3}%
+\contentsline {subsection}{\numberline {9.4}String Match Approssimato}{116}{subsection.9.4}%
+\contentsline {subsubsection}{\numberline {9.4.1}Esempio}{116}{subsubsection.9.4.1}%
+\contentsline {subsubsection}{\numberline {9.4.2}4 possibilità:}{116}{subsubsection.9.4.2}%
+\contentsline {subsubsection}{\numberline {9.4.3}Esempio 1}{118}{subsubsection.9.4.3}%
+\contentsline {subsubsection}{\numberline {9.4.4}Esempio 2}{119}{subsubsection.9.4.4}%
+\contentsline {subsubsection}{\numberline {9.4.5}Esempio 3}{120}{subsubsection.9.4.5}%
+\contentsline {subsubsection}{\numberline {9.4.6}Esempio 4}{120}{subsubsection.9.4.6}%
+\contentsline {subsubsection}{\numberline {9.4.7}Algoritmo}{121}{subsubsection.9.4.7}%
+\contentsline {subsubsection}{\numberline {9.4.8}Reality check}{121}{subsubsection.9.4.8}%
+\contentsline {subsection}{\numberline {9.5}Insieme indipendente di intervalli pestai}{121}{subsection.9.5}%
+\contentsline {subsubsection}{\numberline {9.5.1}Esempio: insieme indipendente di peso massimo}{122}{subsubsection.9.5.1}%
+\contentsline {subsubsection}{\numberline {9.5.2}Pre-elaborazione}{122}{subsubsection.9.5.2}%
+\contentsline {subsubsection}{\numberline {9.5.3}Individuazione sottostruttura ottima (forma ricorsiva)}{124}{subsubsection.9.5.3}%
+\contentsline {subsubsection}{\numberline {9.5.4}Algoritmo iterativo}{125}{subsubsection.9.5.4}%
+\contentsline {subsubsection}{\numberline {9.5.5}Costo computazionale}{125}{subsubsection.9.5.5}%
+\contentsline {subsection}{\numberline {9.6}Zaino (Knapsack)}{126}{subsection.9.6}%
+\contentsline {subsubsection}{\numberline {9.6.1}Definizione matematica della soluzione}{126}{subsubsection.9.6.1}%
+\contentsline {subsubsection}{\numberline {9.6.2}Parte ricorsiva}{126}{subsubsection.9.6.2}%
+\contentsline {subsubsection}{\numberline {9.6.3}Casi base}{127}{subsubsection.9.6.3}%
+\contentsline {subsubsection}{\numberline {9.6.4}Zaino algoritmo}{128}{subsubsection.9.6.4}%
+\contentsline {subsubsection}{\numberline {9.6.5}Esempio}{129}{subsubsection.9.6.5}%
+\contentsline {subsubsection}{\numberline {9.6.6}Complessità computazionale}{129}{subsubsection.9.6.6}%
+\contentsline {subsection}{\numberline {9.7}Memoization - Introduzione}{129}{subsection.9.7}%
+\contentsline {subsubsection}{\numberline {9.7.1}Zaino con Memoization}{129}{subsubsection.9.7.1}%
+\contentsline {subsubsection}{\numberline {9.7.2}Algoritmo zaino con Memoization}{130}{subsubsection.9.7.2}%
+\contentsline {subsubsection}{\numberline {9.7.3}Complessità}{130}{subsubsection.9.7.3}%
+\contentsline {subsubsection}{\numberline {9.7.4}Zaino Memoization: utilizzo tabella come cache}{130}{subsubsection.9.7.4}%
+\contentsline {subsubsection}{\numberline {9.7.5}Dizionario vs Tabella}{131}{subsubsection.9.7.5}%
+\contentsline {subsubsection}{\numberline {9.7.6}Approccio generale}{132}{subsubsection.9.7.6}%
+\contentsline {subsubsection}{\numberline {9.7.7}Riassunto: programmazione dinamica/memoization}{132}{subsubsection.9.7.7}%
+\contentsline {section}{\numberline {10}Hashing}{133}{section.10}%
+\contentsline {subsection}{\numberline {10.1}Tabelle ad accesso diretto}{134}{subsection.10.1}%
+\contentsline {subsubsection}{\numberline {10.1.1}Funzioni hash perfette}{134}{subsubsection.10.1.1}%
+\contentsline {subsection}{\numberline {10.2}Minimizzare le collisoni}{135}{subsection.10.2}%
+\contentsline {subsection}{\numberline {10.3}Come realizzare una funzione hash}{136}{subsection.10.3}%
+\contentsline {subsubsection}{\numberline {10.3.1}Metodo dell'estrazione}{137}{subsubsection.10.3.1}%
+\contentsline {subsubsection}{\numberline {10.3.2}Metodo dello XOR}{137}{subsubsection.10.3.2}%
+\contentsline {subsubsection}{\numberline {10.3.3}Metodo della divisione}{138}{subsubsection.10.3.3}%
+\contentsline {subsubsection}{\numberline {10.3.4}Metodo della moltiplicazione (Knuth)}{140}{subsubsection.10.3.4}%
+\contentsline {subsection}{\numberline {10.4}Gestione delle collisioni}{141}{subsection.10.4}%
+\contentsline {subsubsection}{\numberline {10.4.1}Liste di trabocco (concatenamento o chaining)}{142}{subsubsection.10.4.1}%
+\contentsline {subsubsection}{\numberline {10.4.2}Liste di trabocco: analisi della complessità}{143}{subsubsection.10.4.2}%
+\contentsline {subsubsection}{\numberline {10.4.3}Indirizzamento aperto (memorizzazione interna)}{144}{subsubsection.10.4.3}%
+\contentsline {subsubsection}{\numberline {10.4.4}Indirizzamento aperto: analisi della complessità}{145}{subsubsection.10.4.4}%
+\contentsline {subsubsection}{\numberline {10.4.5}Indirizzamento aperto: ispezione lineare}{147}{subsubsection.10.4.5}%
+\contentsline {subsubsection}{\numberline {10.4.6}Indirizzamento aperto: ispezione quadratica}{147}{subsubsection.10.4.6}%
+\contentsline {subsubsection}{\numberline {10.4.7}Indirizzamento aperto: doppio hashing}{148}{subsubsection.10.4.7}%
+\contentsline {subsubsection}{\numberline {10.4.8}Indirizzamento aperto: cancellazione}{148}{subsubsection.10.4.8}%
+\contentsline {subsection}{\numberline {10.5}Implementazione dell'hashing doppio}{149}{subsection.10.5}%
+\contentsline {subsubsection}{\numberline {10.5.1}Definizione delle variabili}{149}{subsubsection.10.5.1}%
+\contentsline {subsubsection}{\numberline {10.5.2}La funzione \texttt {hash}}{150}{subsubsection.10.5.2}%
+\contentsline {subsubsection}{\numberline {10.5.3}La funzione \texttt {scan}}{150}{subsubsection.10.5.3}%
+\contentsline {subsubsection}{\numberline {10.5.4}Le funzioni \texttt {lookup} e \texttt {insert}}{151}{subsubsection.10.5.4}%
+\contentsline {subsubsection}{\numberline {10.5.5}La funzione \texttt {remove}}{152}{subsubsection.10.5.5}%
+\contentsline {subsection}{\numberline {10.6}Complessità}{152}{subsection.10.6}%
+\contentsline {subsubsection}{\numberline {10.6.1}Ristrutturazione}{153}{subsubsection.10.6.1}%
