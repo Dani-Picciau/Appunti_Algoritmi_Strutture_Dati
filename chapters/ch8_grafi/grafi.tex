@@ -1,0 +1,1293 @@
+\documentclass[../../main_document/main.tex]{subfiles}
+\externaldocument{../../main_document/main}
+
+\begin{document}
+
+    \captionsetup[subfigure]{labelformat=empty} % Per non avere (a) sotto ogni figura
+    
+    \section{I Grafi}
+    \subsection{Introduzione}
+
+    \begin{tcolorbox}[
+        colback=yellow!20, 
+        colframe=darkgray, 
+        title= Cosa sono i grafi?
+        ]
+        Un grafo è una struttura che serve per rappresentare relazioni tra elementi.\\
+        I grafi sono considerati insiemi di entità, dette \textbf{nodi} o \textbf{vertici}, che sono collegate a coppie tra loro da delle relazioni. Queste relazioni vengono dette \textbf{lati} o \textbf{archi}, e a questi possono essere attribuiti dei \textbf{pesi}, dando origine a grafi detti \textbf{grafi pesati}.
+    \end{tcolorbox}
+
+    \vspace{4pt}
+    \noindent
+    Un \textbf{grafo orientato} $G$ è dunque una coppia $(V , E)$ dove $V$ è un insieme finito ed $E$ è una relazione binaria in $V$.\\
+    Gli elementi dell'insieme $V$ sono detti \textbf{vertici}, l'insieme $V$ è quindi chiamato \textbf{insieme dei vertici} di $G$. Allo stesso modo gli elementi dell'insieme $E$ sono detti \textbf{archi} e l'insieme $E$ è quindi chiamato \textbf{insieme degli archi} di $G$.
+
+
+    \vspace{8pt}
+    \noindent
+    \begin{tcolorbox}
+        [
+            colback=green!10,  % Sfondo verde chiaro
+            colframe=green!60!black,  % Bordo verde più acceso
+            coltitle=black,  % Colore del testo del titolo
+            fonttitle=\bfseries,  % Testo del titolo in grassetto
+            title={\centering \textbf{Grafi orientati e non orientati}},  % Titolo centrato 
+            enhanced,  % Miglioramenti grafici
+            attach boxed title to top center={yshift=-2mm},  % Posiziona il titolo centrato in alto
+            boxed title style={colback=white, colframe=green!60!black, rounded corners}
+        ]
+        In un \textbf{grafo orientato}, ogni arco ha una direzione: significa che il collegamento va da un vertice a un altro, in un verso preciso.\\
+        In un \textbf{grafo non orientato}, invece, gli archi non hanno direzione: il collegamento tra due vertici vale in entrambi i sensi.\\
+        Quindi, mentre in un \textbf{grafo orientato } $G = (V , E)$ , l'insieme degli archi $E$ è composto da coppie ordinate di vertici, in un \textbf{grafo non orientato} $G = (V , E)$ , l'insieme degli archi $E$ è composto da coppie di vertici non ordinate.
+    \end{tcolorbox} 
+
+    \subsubsection{Definizioni utili}
+    \begin{itemize}[leftmargin=1em]
+        \item In un grafo \textbf{non orientato}, quando un arco $(u,v)$ collega due vertici (in questo caso $u$ e $v$), diciamo che l'arco è \textbf{incidente} nei vertici $u$ e $v$, e che $u$ e $v$ sono \textbf{adiacenti} tra loro (cioè “collegati”). In questo caso, dato che il grafo non è orientato, l'adiacenza è bidirezionale, perchè anche l'arco è percorribile in entrambe le direzioni (da $u$ a $v$ e da $v$ a $u$).
+        
+        \vspace{4pt}
+        \item In un grafo \textbf{orientato}, l'arco $[u,v]$ rappresenta la connessione dal vertice $u$ al vertice $v$. In questo caso diciamo che l'arco è \textbf{incidente} nei vertici $u$ e $v$ ma con verso diverso, \textbf{uscente} da $u$ ed \textbf{entrante} in $v$. In questo caso l'adiacenza è monodirezionale, segue il verso dell'arco, quindi diciamo che $u$ è \textbf{adiacente} a $v$ ma non è necessariamente vero il contrario (cioè a meno che non esista anche un arco $[v,u]$).
+        
+        \vspace{4pt}
+        \item Il \textbf{grado} di un vertice in un grafo \textbf{non orientato} coincide con il numero di archi incidenti in esso. Se un vertice ha grado 0, è \textbf{isolato}.
+        
+        \vspace{4pt}
+        \item In un grafo \textbf{orientato}, per un vertice, possone essere distinti tre tipi di grado. Il \textbf{grado uscente} di un vertice, è il numero di archi uscenti da esso; mentre il \textbf{grado entrante} è il numero di archi entranti nel vertice. Il \textbf{grado} "totale" del vertice è dato dalla somma di grado entrante e grado uscente, quindi dalla somma di tutti gli archi incidenti in esso.
+        
+        \vspace{4pt}
+        \item Un \textbf{sottografo} è un grafo formato da un sottoinsieme dei vertici e degli archi di un dato grafo, che mantiene la stessa struttura di connessioni.
+        
+        \vspace{4pt}
+        \item Un arco che entra ed esce dallo stesso vertice è detto \textbf{cappio}.
+        
+    \end{itemize}
+
+     
+
+    \subsubsection{Esempi}
+
+    \noindent
+    \begin{minipage}[t]{0.37\textwidth}  
+        \includegraphics[width=\linewidth]{Grafi/img_1.png}
+    \end{minipage}%
+    \hspace{5pt} % Spazio tra immagine e testo
+    \raisebox{90pt}{  
+        \begin{minipage}[t]{0.60\textwidth}
+            In questo caso abbiamo un grafo \textbf{orientato} con 6 nodi ($V=\{1,\ 2,\ 3,\ 4,\ 5,\ 6\}$) e 8 archi \(E=\{[1,2],\; [2,2],\; [2,4],\; [2,5],\; [4,1],\; [5,4],\; [6,3] \}\).
+
+            \vspace{4pt}
+            \noindent
+            Dalle definizioni precedenti possiamo notare che l'arco $[2,2]$ è un \textbf{cappio}.
+        \end{minipage} 
+    }
+
+    \noindent
+    \begin{minipage}[t]{0.37\textwidth}  
+        \includegraphics[width=\linewidth]{Grafi/img_2.png}
+    \end{minipage}%
+    \hspace{5pt} % Spazio tra immagine e testo
+    \raisebox{90pt}{  
+        \begin{minipage}[t]{0.60\textwidth}
+            In questo caso abbiamo un grafo \textbf{non orientato} con 6 nodi ($V=\{1,\ 2,\ 3,\ 4,\ 5,\ 6\}$) e 4 archi \(E=\{(1,2),\; (1,5),\; (2,5),\; (3,6) \}\).
+
+            \vspace{4pt}
+            \noindent
+            Dalle definizioni precedenti possiamo notare che il vertice 4 è \textbf{isolato}.
+        \end{minipage} 
+    }
+
+    \noindent
+    \begin{minipage}[t]{0.37\textwidth}  
+        \includegraphics[width=\linewidth]{Grafi/img_3.png}
+    \end{minipage}%
+    \hspace{5pt} % Spazio tra immagine e testo
+    \raisebox{90pt}{  
+        \begin{minipage}[t]{0.60\textwidth}
+            In questo caso abbiamo un \textbf{sottografo} del grafo orientato del primo esempio. 
+        \end{minipage} 
+    }
+
+    \subsubsection{Cammini e raggiungibilità}
+    \begin{tcolorbox}[
+        colback=yellow!20, 
+        colframe=darkgray, 
+        title= Cosa si intende per \textit{cammino}?
+        ]
+        Un \textbf{cammino} è un modo per “muoversi” all'interno di un grafo passando da un vertice all'altro seguendo gli archi che li collegano.\\
+        Per essere più precisi, un cammino di lunghezza $k$ che va da un vertice $u$ a un vertice $u'$ (in un grafo $G=(V,E)$), è una sequenza di vertici $\langle v_0,v_1,v_2,...,v_k \rangle $ che rispetta tre condizioni: 
+        \begin{itemize}[leftmargin=1em]
+            \item Il primo vertice è il punto di partenza: $u=v_0$;
+            \item L'ultimo vertice è il punto di arrivo: $u'=v_k$; 
+            \item Ogni coppia di vertici consecutivi nella sequenza è collegata da un arco del grafo, cioè: $(v_{i-1},v_i)\in E$ per $i=1,2,...,k$
+
+        \end{itemize}
+    \end{tcolorbox} 
+
+    \vspace{4pt}
+    \noindent
+    Conoscendo la definizione di \textbf{cammino}, possiamo dare la definizione di \textbf{lunghezza del cammino}. La lunghezza di un cammino è semplicemente il numero di archi che lo compongono. Quindi, se ho $k$ archi, il cammino avrà lunghezza $k$.\\
+    Possiamo inoltre dire che \hl{un cammino è \textbf{semplice} se \textbf{tutti i vertici che attraversa sono distinti}, cioè non si passa mai due volte dallo stesso vertice}.
+
+    
+    \begin{tcolorbox}[
+        colback=yellow!20, 
+        colframe=darkgray, 
+        title= Cosa si intende per \textit{raggiungibilità}?
+        ]
+        Diciamo che un vertice $u'$ è \textbf{raggiungibile} da un altro vertice $u$ attraverso un cammino $p$, se esiste un cammino $p$ che parte dal vertice $u$ e arriva al vertice $u'$.\\
+        Se il grafo è orientato il cammino $p$ si indica \( u \xrightarrow{p} u' \) (con la freccetta ondulata) e indica quindi un cammino che rispetti la direzione degli archi. 
+
+    \end{tcolorbox} 
+
+    \vspace{8pt}
+    \noindent
+    \begin{tcolorbox}[
+        colback=yellow!20, 
+        colframe=darkgray, 
+        title= Cosa è un \textit{sottocammino}?
+        ]
+        Un \textbf{sottocammino} si un cammino $p = \langle v_0,v_1,v_2,...,v_k \rangle$, è una sottosequenza contigua dei suoi vertici. Questo vuol dire che non posso prendere ad esempio il primo e l'ultimo vertice saltando quelli in mezzo. Quindi ad esempio $\langle v_3,v_4,v_5 \rangle$ è un sottocammino di $p$, mentre $\langle v_3,v_6 \rangle$ non lo è.
+    \end{tcolorbox}
+
+    \vspace{8pt}
+    \noindent
+    \begin{tcolorbox}[
+        colback=yellow!20, 
+        colframe=darkgray, 
+        title= Cosa è un \textit{ciclo}?
+        ]
+        In un grafo orientato $G = (V,E)$, un \textbf{ciclo} $C$ di lunghezza $k > 2$ è una sequenza di nodi $u_0, \, u_1, \, ... , \, u_k $ tale che $(u_i, \, u_{i+1}) \in E$ per $0 \leq i \leq k-1$ e $u_0 = u_k$. ($k >2$ esclude cicli banali composti da coppie di archi $(u,v)$ e $(v,u)$, che sono onnipresenti nei grafi non orientati)
+    \end{tcolorbox} 
+
+
+    \vspace{8pt}
+    \noindent
+    \begin{tcolorbox}
+        [
+            colback=green!10,  % Sfondo verde chiaro
+            colframe=green!60!black,  % Bordo verde più acceso
+            coltitle=black,  % Colore del testo del titolo
+            fonttitle=\bfseries,  % Testo del titolo in grassetto
+            title={\centering \textbf{Cicli: altre definizioni}},  % Titolo centrato 
+            enhanced,  % Miglioramenti grafici
+            attach boxed title to top center={yshift=-2mm},  % Posiziona il titolo centrato in alto
+            boxed title style={colback=white, colframe=green!60!black, rounded corners}
+        ]
+        In altre parole, in un \textbf{grafo orientato}, un cammino $\langle v_0,v_1,v_2,...,v_k \rangle$ forma un \textbf{ciclo} se $v_0 = v_k$ e il cammino \textbf{contiene almeno un arco}.\\
+        Quindi il \textbf{cappio} (o loop) che abbiamo visto prima, è un ciclo di lunghezza 1.\\
+        Inoltre se il cammino che forma il ciclo è \textbf{semplice}, anche il ciclo viene detto semplice.
+
+        \vspace{6pt}
+        \noindent
+        Invece, in un \textbf{grafo non orientato}, un cammino $\langle v_0,v_1,v_2,...,v_k \rangle$ forma un \textbf{ciclo} (semplice) se:
+        $v_0 = v_k \ ,\ k \geq 3 \ ,\ v_1,...,v_k$ sono distinti.\\
+        Si dice inoltre che un \textbf{grafo orientato senza cappi} è \textbf{semplice} mentre un grafo senza cicli è \textbf{aciclico}.
+    \end{tcolorbox} 
+
+    \subsubsection{Connessione}
+    La definizione si connessione è diversa per grafo orientato (per il quale bisogna fare una distinzione in più tra connessione \textbf{debole} e \textbf{forte}) e non orientato: 
+
+    \vspace{8pt}
+    \begin{tcolorbox}[
+        colback=yellow!20, 
+        colframe=darkgray, 
+        title= Quando un grafo \textbf{non orientato} di dice \textit{connesso}?
+        ]
+        Un grafo non orientato si dice \textbf{connesso} se ogni coppia di vertici è collegata tramite un cammino (eventualmente minimo). Ovvero se, per ogni coppia di vertici distinti $u,v \in V$ esiste almeno un cammino che collega $u$ e $v$. 
+    \end{tcolorbox}
+
+    \vspace{8pt}
+    \noindent
+    \textbf{N.B.} I vertici non devono essere connessi tutti direttamente (non devono necessariamente essere \textit{adiacenti}), basta che ci sia un cammino che ti permetta di raggiungere un qualunque nodo (vertice) del grafo partendo da un qualunque altro nodo (vertice) dello stesso grafo.
+
+    \vspace{2pt}
+    \begin{tcolorbox}[ %<3
+        colback=yellow!20, 
+        colframe=darkgray, 
+        title= Quando un grafo \textbf{orientato} si dice \textit{connesso}?
+        ]
+        Un grafo orientato si dice \textbf{fortemente connesso} se due vertici qualsiasi sono raggiungibili l'uno dall'altro; quindi esiste un cammino orientato da $u$ a $v$ e viceversa.\\
+        È detto invece \textbf{debolmente connesso} se, ignorando la direzione degli archi (cioè trattandolo come se fosse non orientato), il grafo risultante è connesso.
+
+    \end{tcolorbox}
+
+    \vspace{3pt}
+    \noindent
+    Un'altra definizione importante è quella di \textbf{componente connessa}. Le \textbf{componenti connesse} di un grafo ``sono le classi di equivalenza dei vertici secondo la relazione di (mutua) raggiungibilità''; ma vediamo cosa vuol dire per grafi orientati e non.
+
+    \vspace{6pt}
+    \noindent
+    Quando un grafo non orientato \textbf{non è connesso}, può essere suddiviso in più parti isolate, dette \textbf{componenti connesse}. In pratica, all'interno di un grafo non connesso, possiamo individuare diversi sottografi massimali che, presi singolarmente, sono connessi. Diciamo sottografi \textbf{massimali} perché questo implica che l'aggiunta di un altro qualsiasi nodo del grafo non gli fa più rispettare la condizione di connessione. Facciamo un esempio:
+
+    \vspace{4pt}
+    \noindent
+    \begin{minipage}[t]{0.275\textwidth}  
+        \includegraphics[width=\linewidth]{Grafi/img_4.png}
+    \end{minipage}%
+    \hspace{5pt} % Spazio tra immagine e testo
+    \raisebox{80pt}{  
+        \begin{minipage}[t]{0.695\textwidth}
+            In questo esempio i nodi $\langle 1, 2, 5 \rangle$ formano una componente connessa. Infatti se prendiamo il sottografo formato solo da questi 3 vertici, questo risulta connesso, e non possiamo aggiungere nessun altro vertice del grafo continuando ad avere una condizione di connessione.\\
+            Se invece prendiamo come sottografo quello formato dai vertici 
+        \end{minipage} 
+    }
+    $\langle 1, 2 \rangle$ e la connessione tra i due, questo non rappresenta una componente connessa in quanto se aggiungiamo il vertice 5 e i rispettivi archi di collegamento con i vertici 1 e 2, continua a mantenere la proprietà di connessione. 
+
+    \noindent
+    In questo esempio abbiamo difatti 3 componenti connesse:
+    \begin{itemize}[leftmargin=1em]
+        \item $\langle 1, 2, 5 \rangle$
+        \item $\langle 3, 6 \rangle$
+        \item $\langle 4 \rangle$
+    \end{itemize}
+    Grazie a questa definizione possiamo dire che un grafo non orientato è \textbf{connesso} se ha \textbf{una sola componente connessa}. 
+
+    \vspace{6pt}
+    \noindent
+    Dato che un grafo orientato può essere debolmente o fortemente connesso, dobbiamo dare la definizione di \textbf{componente fortemente connessa}. Funziona esattamente come nel caso precedente, solo che adesso gli archi sono direzionali, quindi il sottografo che prendiamo in esame dev'essere fortemente connesso. Anche in questo caso, un grafo si dice \textbf{fortemente connesso} se presenta \textbf{una sola componente fortemente connessa}. Anche in questo caso facciamo un esempio:
+
+    \noindent
+    \begin{minipage}[t]{0.37\textwidth}  
+        \includegraphics[width=\linewidth]{Grafi/img_1.png}
+    \end{minipage}%
+    \hspace{5pt} % Spazio tra immagine e testo
+    \raisebox{110 pt}{  
+        \begin{minipage}[t]{0.60\textwidth}
+            Anche in questo caso abbiamo 3 componenti fortemente connesse:
+            \begin{itemize}[leftmargin=1em]
+                \item $\langle 1, 2, 4, 5 \rangle$
+                \item $\langle 3 \rangle$
+                \item $\langle 6 \rangle$
+            \end{itemize} 
+            3 e 6 non formano una componente fortemente connessa perché il nodo 3 è raggiungibile dal 6 ma non viceversa. Invece $\langle 1, 2, 4, 5 \rangle$ formano una componente fortemente
+        \end{minipage} 
+    }
+
+    \vspace{2pt}
+    \noindent
+    connessa perché ogni nodo è raggiungibile da un'altro dell'insieme. Ad esempio il nodo 1 è collegato direttamente con il nodo 2 e, passando da questo nodo si possono raggiungere sia il nodo 4 che il nodo 5. Stesso ragionamento per gli altri nodi.
+
+    \vspace{-4pt}
+    \subsubsection{Dimensioni del grafo}
+
+    \vspace{-2pt}
+    Per descrivere un grafo, sono necessarie due quantità fondamentali: il numero di nodi e di archi nel grafo. Se si considerano $n = |V|$ come il numero totale di nodi nel grafo e $m = |E|$ come il numero totale di archi del grafo, è possibile definire alcune relazioni importanti tra queste due quantità, a seconda che il grafo sia orientato o meno:
+
+    \vspace{4pt}
+    \noindent
+    \begin{tcolorbox}
+        [
+            colback=green!10,  % Sfondo verde chiaro
+            colframe=green!60!black,  % Bordo verde più acceso
+            coltitle=black,  % Colore del testo del titolo
+            fonttitle=\bfseries,  % Testo del titolo in grassetto
+            %title={\centering \textbf{ }},  % Titolo centrato 
+            enhanced,  % Miglioramenti grafici
+            attach boxed title to top center={yshift=-2mm},  % Posiziona il titolo centrato in alto
+            boxed title style={colback=white, colframe=green!60!black, rounded corners}
+        ]
+        \begin{itemize}[leftmargin=1em]
+        \item In un \textbf{grafo non orientato}, il numero di archi possibili è $m \leq \frac{n(n-1)}{2} $ perché ogni coppia di nodi può essere collegata al massimo da un arco. Quindi il numero di archi cresce, al massimo, proporzionalmente a $n^2$ ($O(n^2)$)
+        
+        \vspace{3pt}
+        \item In un \textbf{grafo orientato}, ogni coppia di nodi può avere due archi distinti (uno per ciascuna direzione), quindi il numero di archi è $m \leq n^2 - n$, che cresce anch'esso come $n^2$ ($O(n^2)$)
+    \end{itemize}
+    \end{tcolorbox} 
+
+
+    \vspace{-4pt}
+    \noindent
+    Quando si analizzano algoritmi che operano sui grafi, la loro complessità viene spesso espressa in funzione sia del numero di nodi $n$ sia del numero di archi $m$. Ad esempio, un algoritmo può avere complessità $O(m + n)$, cioè proporzionale alla somma di nodi e archi del grafo, e questo può avvenire quando l'algoritmo deve "guardare" tutti i nodi e tutti gli archi almeno una volta.
+
+    \vspace{-4pt}
+    \subsubsection{Grafi sparsi e densi}
+
+    \vspace{-2pt}
+    Possiamo "catalogare" un grafo in base alle sue caratteristiche.\\
+    Ad esempio quando un grafo ha un arco tra tutte le coppie di nodi, (cioè quando ogni nodo è collegato "direttamente" a \textbf{tutti} gli altri nodi del grafo) è detto \textbf{completo}. \\
+    Un grafo inoltre può essere \textbf{sparso} o \textbf{denso}:
+
+    \vspace{4pt}
+    \noindent
+    \begin{tcolorbox}[
+        colback=yellow!20, 
+        colframe=darkgray, 
+        title= % titolo
+        ]
+        \begin{itemize}[leftmargin=1em]
+        \item Un grafo è detto \textbf{sparso} se ha pochi archi; grafi con ad esempio \(m = O(n)\) o \(m = O(n\; log\, n)\) sono considerati sparsi. 
+        
+        \item Un grafo è detto \textbf{denso} quando ha molti archi, come ad esempio \(m = \Omega (n^2)\)
+        
+    \end{itemize} 
+    \end{tcolorbox}
+    
+    \vspace{-4pt}
+    \noindent
+    Possiamo quindi dire che un grafo \textbf{completo} è anche \textbf{denso}, perché è quello che contiene il numero massimo di archi possibili rispetto ai nodi ed ha quindi la densità più alta che un grafo può avere. Ovviamente non è vero anche il contrario, un grafo denso non necessariamente è completo. 
+
+
+    \vspace{-4pt}
+    \subsubsection{Isomorfismo}
+    
+    \vspace{-2pt}
+    Introduciamo ora questa relazione tra 2 grafi:
+    
+    \begin{tcolorbox}[
+        colback=yellow!20, 
+        colframe=darkgray, 
+        title= Quando si dice che due garfi sono \textit{isomorfi}?
+        ]
+        Due grafi $G = (V,E)$ e $G'=(V',E')$ sono \textbf{isomorfi} se esiste una funzione biiettiva (cioè una corrispondenza uno-a-uno) $ f : V \to V'$ tale che $(u,v) \in E$ e se e soltanto se $(f(u),f(v)) \in E'$.\\
+        Cioè se è possibile rietichettare i vertici di $G$ come i vertici di $G'$ mantenendo gli archi corrispondenti in $G$ e $G'$.
+    \end{tcolorbox} 
+
+    \vspace{8pt}
+    \noindent
+    In altre parole possiamo dire che due grafi sono isomorfi se:
+    \begin{itemize}[leftmargin=1em]
+        \item hanno lo stesso numero di vertici e di archi;
+        \item la connessione tra i vertici è la stessa, anche se i nomi o la disposizione dei vertici cambiano.
+    \end{itemize}
+    Quindi se due vertici sono adiacenti in un grafo lo saranno anche nell'altro. 
+
+    \vspace{4pt}
+    \noindent
+    Per fissare meglio il concetto vediamo alcuni esempi:
+
+  
+    \begin{figure}[H]
+        \centering
+        \vspace{-10pt} %riduce lo spazio sopra
+        \includegraphics[width=0.75\linewidth]{Grafi/img_5.png}
+        \vspace{-5pt} %riduce lo spazio sotto
+    \end{figure}
+
+    \noindent
+    Questi due grafi sono \textbf{isomorfi}. Innanzitutto possiamo notare che hanno lo stesso numero di nodi e di archi, oltretutto tutti e 5 i nodi di entrambi i grafi hanno valenza (o grado) 2.\\
+    Nel garfo G abbiamo il nodo $a$ adiacente ai nodi $b$ ed $e$, il nodo $c$ adiacente a $b$ e $d$ e quest'ultimo adiacente al nodo $e$; nel grafo H, se partiamo dal nodo $v$, notiamo che questo è adiacente ai nodi $w$ e $z$, il nodo $x$ adiacente a $w$ e $y$ e questultimo adiacente al nodo $z$.
+
+    \vspace{4pt}
+    \noindent
+    Possiamo quindi vedere una corrispondenza del tipo:
+    \begin{itemize}[leftmargin=1em]
+        \item $a \Longleftrightarrow v $ \quad quindi definiamo \quad $f(a) = v$
+        \item $b \Longleftrightarrow w $ \quad quindi definiamo \quad $f(b) = w$
+        \item $c \Longleftrightarrow x $ \quad quindi definiamo \quad $f(c) = x$
+        \item $d \Longleftrightarrow y $ \quad quindi definiamo \quad $f(d) = y$
+        \item $e \Longleftrightarrow z $ \quad quindi definiamo \quad $f(e) = z$
+        
+    \end{itemize}
+
+    \vspace{8pt}
+    \noindent
+    Vediamo un altro esempio:
+
+    \begin{figure}[H]
+        \centering
+        \vspace{-10pt} %riduce lo spazio sopra
+        \includegraphics[width=0.75\linewidth]{Grafi/img_6.png}
+        \vspace{-5pt} %riduce lo spazio sotto
+    \end{figure}
+
+
+    \noindent
+    In questo caso invece i due grafi \textbf{non sono isomorfi}. Infatti, nonostante abbiano entrambi 6 nodi e 9 archi, il grafo G ha 2 vertici di valenza 2 ($a$ e $c$), 2 vetici di valenza 3 ( $d$ ed $e$) e 2 vertici di valenza 4 ($b$ ed $f$), mentre il grafo H ha un vertice di valenza 2 ($w$), 4 vertici di valenza 4 ($u,\, x, \, y$ e $z$) quindi non è possibile trovare un'equivalenza come invece è stato fatto nel caso precedente. (Ricordiamo che il grado di valenza dei vertici in un grafo non orientato è il numero di archi incidenti in esso)
+    
+
+    \subsubsection{Relazioni tra alberi e grafi}
+    Esistono delle relazioni tra alberi e grafi, infatti, quando un grafo rispetta determinate caratteristiche, può essere considerato un albero.\\
+    Il primo tipo di albero che andiamo a considerare, quello con i requisiti meno stringenti, è il cosiddetto \textit{albero libero}.
+
+    \vspace{6pt}
+    \noindent
+    \begin{tcolorbox}
+        [
+            colback=green!10,  % Sfondo verde chiaro
+            colframe=green!60!black,  % Bordo verde più acceso
+            coltitle=black,  % Colore del testo del titolo
+            fonttitle=\bfseries,  % Testo del titolo in grassetto
+            title={\centering \textbf{Quando un grafo è un albero libero?}},  % Titolo centrato 
+            enhanced,  % Miglioramenti grafici
+            attach boxed title to top center={yshift=-2mm},  % Posiziona il titolo centrato in alto
+            boxed title style={colback=white, colframe=green!60!black, rounded corners}
+        ]
+        Un grafo per poter essere considerato un \textbf{albero libero} deve rispettare due requisiti fondamentali: 
+        \begin{itemize}[leftmargin=1em]
+            \item \textbf{deve essere connesso} $\to$ deve essere possibile raggiungere qualsiasi nodo partendo da un qualsiasi altro nodo, seguendo gli archi;
+            
+            \item \textbf{deve essere aciclico} $\to$ non devono esistere cicli, quindi percorsi chiusi che ti permettano, partendo da un nodo, di tornare allo stesso senza ripercorrere gli stessi archi. 
+        \end{itemize}
+
+        \noindent
+        Queste due proprietà possono essere riassunte dicendo che il numero di archi $m$ deve essere esattamente uno in meno rispetto al numero dei nodi $n$: $m=n-1$. Infatti, se ci fossero meno archi il grafo non sarebbe connesso, e se ce ne fossero di più il grafo conterrebbe almeno un ciclo. 
+    \end{tcolorbox} 
+
+    \vspace{8pt}
+    \noindent
+    Una volta che si ha in mente cosa è un albero libero, possiamo capire cosa si intende per \textit{albero radicato}. 
+
+    \vspace{3pt}
+    \noindent
+    \begin{tcolorbox}
+        [
+            colback=green!10,  % Sfondo verde chiaro
+            colframe=green!60!black,  % Bordo verde più acceso
+            coltitle=black,  % Colore del testo del titolo
+            fonttitle=\bfseries,  % Testo del titolo in grassetto
+            title={\centering \textbf{Quando invece è un albero radicato?}},  % Titolo centrato 
+            enhanced,  % Miglioramenti grafici
+            attach boxed title to top center={yshift=-2mm},  % Posiziona il titolo centrato in alto
+            boxed title style={colback=white, colframe=green!60!black, rounded corners}
+        ]
+        Un \textbf{albero radicato} infatti è un albero libero nel quale è stato scelto un nodo come radice. A questo punto possiamo immaginare i nodi come disposti su più livelli, in base alla loro distanza dalla radice. Avremo quindi la radice su un livello, i suoi figli sul livello successivo, i figli dei suoi figli in quello dopo ancora, e così via. Viene stabilito quindi un ordinamento "verticale" tra i nodi.
+    \end{tcolorbox}
+
+    \vspace{8pt}
+    \noindent
+    A partire dagli alberi radicati possiamo definire un'ulteriore tipo di grafi che possono essere visti come alberi, ossia gli \textit{alberi ordinati} (\textit{ordered tree})
+
+    \vspace{6pt}
+    \noindent
+    \begin{tcolorbox}
+        [
+            colback=green!10,  % Sfondo verde chiaro
+            colframe=green!60!black,  % Bordo verde più acceso
+            coltitle=black,  % Colore del testo del titolo
+            fonttitle=\bfseries,  % Testo del titolo in grassetto
+            title={\centering \textbf{Quando è un albero ordinato?}},  % Titolo centrato 
+            enhanced,  % Miglioramenti grafici
+            attach boxed title to top center={yshift=-2mm},  % Posiziona il titolo centrato in alto
+            boxed title style={colback=white, colframe=green!60!black, rounded corners}
+        ]
+        Un \textbf{albero ordinato} è un albero radicato nel quale viene deciso un ordine preciso tra i nodi sullo stesso livello, quindi tra i nodi figli di un certo nodo. In questo caso quindi il grafo dovrà rispettare tutte le caratteristiche elencate per i precedenti due, viene però aggiunto un ordinamento "orizzontale" tra i nodi.
+    \end{tcolorbox}
+
+    \vspace{8pt}
+    \noindent
+    Possiamo ora passare alla definizione di ciò che viene detta \textit{foresta}. 
+
+    \vspace{6pt}
+    \noindent
+    \begin{tcolorbox}
+        [
+            colback=green!10,  % Sfondo verde chiaro
+            colframe=green!60!black,  % Bordo verde più acceso
+            coltitle=black,  % Colore del testo del titolo
+            fonttitle=\bfseries,  % Testo del titolo in grassetto
+            title={\centering \textbf{Cosa è una foresta?}},  % Titolo centrato 
+            enhanced,  % Miglioramenti grafici
+            attach boxed title to top center={yshift=-2mm},  % Posiziona il titolo centrato in alto
+            boxed title style={colback=white, colframe=green!60!black, rounded corners}
+        ]
+        Una \textbf{foresta} è banalmente un insieme di alberi. È quindi un grafo non connesso, che presenta diverse componenti connesse, che rispettano le caratteristiche elencate sopra per poter essere considerati alberi. 
+    \end{tcolorbox} 
+
+    \subsection{Specifica}
+    Prima di iniziare diamo una brevissima spiegazione di ciò che intendiamo con "specifica" in questo contesto. Una specifica è una descrizione formale delle operazioni che una struttura dati deve offrire, senza dire come è implementata.\\
+    In pratica daremo una descrizione astratta delle operazioni disponibili e dei loro effetti, senza entrare nel dettaglio della loro implementazione.\\[6pt]
+    Altra piccola parentesi: poiché ogni grafo non orientato $G$ può essere visto come un grafo orientato $G'$, ottenuto da $G$, sostituendo ogni arco $[u,v]$ con i due archi $(u,v)$ e $(v,u)$, sarà fornita una specifica solo per grafi orientati, che saranno chiamati semplicemente grafi.
+
+    \subsubsection{Grafi dinamici}
+    Nella versione più generale, il grafo è una struttura dati dinamica che permette di aggiungere e rimuovere nodi e archi,per la quale non esiste uno standard universalmente adottato. Possiamo quindi vedere le principali operazioni che possono essere fatte sui grafi:
+
+\begin{lstlisting}[style=mystyle, language=C++, numbers=left]
+Graph()                     //Crea un nuovo grafo
+SET V()                     //Restituisce l'insieme di tutti i nodi
+int size()                  //Restituisce il numero dei nodi
+Set adj(NODE u)             //Restit. l'insieme dei nodi adiacenti a u 
+insertNode(NODE u)          //Aggiunge il nodo u al grafo
+insertEdge(NODE u, NODE v)  //Aggiunge l'arco (u,v) al grafo
+deleteNode(NODE u)          //Rimuove il nodo u dal grafo
+deleteEdge(NODE u, NODE v)  //Rimuove l'arco (u,v) dal grafo
+\end{lstlisting}
+
+    
+
+    \subsubsection{Specifica ridotta - senza rimozioni}
+    In alcuni casi non è necessaria una struttura dinamica completa. Spesso, infatti, si utilizza un grafo che viene caricato inizialmente e che non viene più modificato, tranne eventualmente per l'aggiunta di nuovi nodi o archi. In questi casi utilizziamo grafi non dinamici, in cui sono permessi solo inserimenti ma non rimozioni.
+
+\begin{lstlisting}[style=mystyle, language=C++, numbers=left]
+Graph()                     //Crea un nuovo grafo
+SET V()                     //Restituisce l'insieme di tutti i nodi
+int size()                  //Restituisce il numero dei nodi
+Set adj(NODE u)             //Restit. l'insieme dei nodi adiacenti a u 
+insertNode(NODE u)          //Aggiunge il nodo u al grafo
+insertEdge(NODE u, NODE v)  //Aggiunge l'arco (u,v) al grafo
+\end{lstlisting}
+    
+    \noindent
+    Questo ha conseguenze anche sull'implementazione del grafo stesso.
+
+    \subsection{Memorizzazione}
+    La memorizzazione di un grafo può avvenire tramite uno dei due possibili approcci: 
+    \begin{itemize}[leftmargin=1em]
+        \item tramite \textbf{matrici di adiacenza}
+        \item tramite \textbf{liste di adiacenza}
+    \end{itemize}
+
+    \subsubsection{Matrici di adiacenza}
+    La memorizzazione di un grafo tramite matrici di adiacenza, è uno dei modi più semplici per rappresentare un grafo.
+    \begin{tcolorbox}[
+        colback=yellow!20, 
+        colframe=darkgray, 
+        title= Matrice di adiacenza
+        ]
+        Dato un grafo $G=(V,E)$, la \textbf{matrice di adiacenza} $M=[m_{uv}]$, è una matrice $n \times n$ tale che 
+        \[
+            m_{uv}= \begin{cases}
+                        1 \quad se\  (u,v) \in E \\
+                        0 \quad se\  (u,v) \notin E
+                    \end{cases} 
+        \]
+    \end{tcolorbox}
+    
+    \subsubsection*{Grafi orientati}
+    Quando il grafo è orientato lo spazio in memoria occupato dalla matrice è $n^2$ bit
+
+    \vspace{-20pt}
+    \noindent
+    \begin{figure}[H]
+        \centering
+        \vspace{-5pt}  % Riduce lo spazio sopra
+        \subfloat[]{%
+            \includegraphics[width=0.40\linewidth]{Grafi/img_8.png}
+        } 
+        \hspace{0.1cm}
+        \subfloat[]{%
+            \includegraphics[width=0.35\linewidth]{Grafi/img_9.png}
+        }
+    \end{figure}
+    \FloatBarrier
+    
+    \vspace{-30pt}
+    \noindent
+    Come possiamo vedere dall'esempio, abbiamo un bit per ogni possibile arco, che è a 0 se l'arco tra quei nodi non esiste ed è a 1 quando l'arco esiste. In questo caso abbiamo i nodi di partenza degli archi scritti in colonna (che "numerano" quindi le righe) e i nodi di arrivo scritti in riga ( che "numerano" quindi le colonne). Possiamo quindi vedere come esiste un arco da 0 a 1 in quanto il bit nella posizione [0][1] (riga 0 e colonna 1) è a 1, ma non esiste il collegamento inverso, da 1 a 0, in quanto il bit [1][0] (riga 1 e colonna 0) è a 0. Diventa quindi intuitivo capire che, se nel grafo non sono presenti \textit{cappi} (quelli che si hanno quando un nodo punta a se stesso) la diagonale principale sarà composta da soli 0, proprio come nell'esempio. 
+
+    \subsubsection*{Grafi non orientati}
+    Quando il grafo non è orientato lo spazio in memoria occupato dalla matrice può essere di $n^2$ bit se vengono memorizzate tutte le celle della matrice come nel caso precedente, ma può essere inferiore se si nota che la matrice risultante sarebbe simmetrica rispetto alla diagonale principale, e quindi gli archi verrebbero memorizzati 2 volte: $m_{uv} = m_{vu}$.\\
+    Per poter capire di quanti bit abbiamo bisogno, dobbiamo prima sapere se i \textit{cappi} sono ammessi o meno, e quindi se dobbiamo o no memorizzare anche la diagonale.\\
+    Con $\frac{n^2}{2} $ possiamo memorizzare uno dei "triangoli" sopra o sotto la diagonale, più metà diagonale.\\
+    Se abbiamo quindi bisogno di memorizzare anche la diagonale abbiamo bisogno di altri $\frac{n}{2}$ bit e raggiungiamo un totale di $\frac{n(n+1)}{2}$ bit.\\
+    Se invece non abbiamo bisogno della diagonale, non abbiamo bisogno nemmeno di quei bit che ne memorizzavano metà, e li dobbiamo quindi sottrarre da $\frac{n^2}{2}$, ottenendo un totale di $\frac{n(n-1)}{2}$ bit necessari.
+
+    \vspace{-25pt}
+    \noindent
+    \begin{figure}[H]
+        \centering
+        \vspace{-5pt}  % Riduce lo spazio sopra
+        \subfloat[]{%
+            \includegraphics[width=0.40\linewidth]{Grafi/img_10.png}
+        } 
+        \hspace{0.1cm}
+        \subfloat[]{%
+            \includegraphics[width=0.35\linewidth]{Grafi/img_11.png}
+        }
+    \end{figure}
+    \FloatBarrier
+
+    \vspace{-50pt}
+    \subsubsection*{Grafi pesati}
+    Quando abbiamo un grafo pesato andiamo a memorizzare nella matrice il peso $p$ attribuito a quell'arco e non i precedenti 0/1 che indicavano solo l'esistenza o non esistenza dell'arco.\\
+    La definizione della matrice di adiacenza diventa quindi:
+    \[
+        m_{uv}= \begin{cases}
+                    p \quad se\  (u,v) \in E \\
+                    0 \ o \ \pm \infty \quad se\  (u,v) \notin E 
+                \end{cases} 
+    \]
+    Il valore associato ad un arco non esistente cambia in base al problema, l'importante è che non sia un valore ammesso per i pesi degli archi esistenti.
+    
+    \vspace{-10pt}
+    \noindent
+    \begin{figure}[H]
+        \centering
+        \vspace{-5pt}  % Riduce lo spazio sopra
+        \subfloat[]{%
+            \includegraphics[width=0.40\linewidth]{Grafi/img_12.png}
+        } 
+        \hspace{0.1cm}
+        \subfloat[]{%
+            \includegraphics[width=0.35\linewidth]{Grafi/img_13.png}
+        }
+    \end{figure}
+    \FloatBarrier
+
+    \vspace{-25pt}
+    \noindent
+    Lo spazio che occupano in memoria è quindi il numero di bit visti nei casi precedenti (che sarebbe il numero di celle che vado a memorizzare), moltiplicato per il numero di bit scelti per la memorizzazione dei pesi. Se quindi ho valori dei pesi ammessi solo da 0 a 15 userò 4 bit per ogni arco, e ogni cella della matrice varrà 4 bit, per questo moltiplico il numero delle celle per il numero dei bit. Prima invece ogni singola cella era da un solo bit, quindi non abbiamo moltiplicato per 1. 
+
+    \subsubsection*{Complessità}
+    Con l'implementazione tramite matrice verificare la presenza di un determinato arco richiede un tempo $O(1)$. Invece iterare su tutti gli archi richiede un tempo $O(n^2)$ sia per un grafo denso, che per uno sparso in quanto bisogna iterare in ogni caso su tutte le celle della matrice. Per questo l'utilizzo di un'implementazione tramite matrice è consigliata \textbf{solo in caso di grafi densi}. Inoltre un altro problema relativo a quest'implementazione è che, se si ha un numero elevato di nodi, $n^2$ può diventare enorme; si pensi che con soli 1000 nodi abbiamo $10^6$ bit che sono circa 125KB e con 10.000 nodi arriviamo a 12,5MB.
+
+    \subsubsection{Liste di adiacenza}
+    Un altro modo per rappresentare un grafo, è tramite le \textbf{liste di adiacenza}.\\
+    L'idea alla base è quella di registrare solo i collegamenti che esistono davvero: per ogni nodo si mantiene una lista dei suoi vicini, invece di rappresentare tutte le possibili coppie di nodi come farebbe una matrice.
+    \begin{tcolorbox}[
+        colback=yellow!20, 
+        colframe=darkgray, 
+        title= Lista di adiacenza
+        ]
+       Una \textbf{lista di adiacenza} è un modo per rappresentare un grafo associando a ogni nodo l'elenco dei nodi a cui è collegato tramite un arco.\\
+       Si usa quindi un vettore con $n$ celle, una per ciascun nodo, dove ogni cella conterrà il riferimento alla lista contenente tutti i nodi adiacenti al nodo in esame, quindi gli elementi $G.adj(u) = \{v\, | \, (u,v) \in E\}$.\\ 
+       Solitamente vengono realizzate con delle \textbf{linked list} dove ogni elemento punta al successivo, anche se questa scelta non è obbligata, infatti qualunque struttura che permetta di memorizzare i vicini del nodo è adatta.
+    \end{tcolorbox}
+    \noindent 
+    In questo modo la struttura è compatta ed efficiente, soprattutto quando il grafo è \textbf{sparso}, e permette di accedere facilmente ai nodi adiacenti e di iterare sugli archi del grafo. 
+
+    \subsubsection*{Grafi orientati}
+    \begin{tcolorbox}
+        [
+            colback=green!10,  % Sfondo verde chiaro
+            colframe=green!60!black,  % Bordo verde più acceso
+            coltitle=black,  % Colore del testo del titolo
+            fonttitle=\bfseries,  % Testo del titolo in grassetto
+            title={\centering \textbf{Cosa rappresenta $G.adj(u) = \{v\, | \, (u,v) \in E\}$ in questo caso?}},  % Titolo centrato 
+            enhanced,  % Miglioramenti grafici
+            attach boxed title to top center={yshift=-2mm},  % Posiziona il titolo centrato in alto
+            boxed title style={colback=white, colframe=green!60!black, rounded corners}
+        ] 
+        $G.adj(u)$ rappresenta l'insieme dei nodi del grafo $G$ adiacenti al nodo $u$. Cioè l'insieme dei nodi che vogliamo memorizzare per ogni nodo del grafo. La formula ci dice che questi nodi rispettano la caratteristica $\{v\, | \, (u,v) \in E\}$, cioè si trovano nell'insieme formato da tutti i nodi $v$ tali che l'arco \textbf{da} $u$ \textbf{a} $v$ esista nell'insieme degli archi di $G$.
+    \end{tcolorbox}
+
+    \noindent
+    \begin{figure}[H]
+        \centering
+        \vspace{-20pt}  % Riduce lo spazio sopra
+        \subfloat[]{%
+            \adjustbox{valign=c}{\includegraphics[width=0.40\linewidth]{Grafi/img_8.png}}
+        } 
+        \hspace{0.1cm}
+        \subfloat[]{%
+            \adjustbox{valign=c}{\includegraphics[width=0.38\linewidth]{Grafi/img_14.png}}
+        }
+    \end{figure}
+    \FloatBarrier
+
+    \vspace{-25pt}
+    \noindent 
+    Lo spazio totale è dato da una parte fissa, un puntatore per ogni nodo ($a \times n$ bit, dove $a$ è il numero di bit che occupa ogni cella, quindi ogni puntatore), e da una parte variabile, un elemento per ogni arco ($b \times m$ bit, dove $b$ è il numero di bit che occupa ogni cella della lista, quindi bit del valore + bit del puntatore). Sommando otteniamo $an + bm$ bit occupati. Siccome a e b sono costanti, questo corrisponde a uno spazio $\Theta (n + m)$, cioè proporzionale al numero di nodi e di archi del grafo.
+
+    \subsubsection*{Grafi non orientati}
+    \begin{tcolorbox}
+        [
+            colback=green!10,  % Sfondo verde chiaro
+            colframe=green!60!black,  % Bordo verde più acceso
+            coltitle=black,  % Colore del testo del titolo
+            fonttitle=\bfseries,  % Testo del titolo in grassetto
+            title={\centering \textbf{Cosa rappresenta $G.adj(u) = \{v\, | \, (u,v) \in E\}$ in questo caso?}},  % Titolo centrato 
+            enhanced,  % Miglioramenti grafici
+            attach boxed title to top center={yshift=-2mm},  % Posiziona il titolo centrato in alto
+            boxed title style={colback=white, colframe=green!60!black, rounded corners}
+        ] 
+        Vale lo stesso ragionamento visto precendentemente, però cambia leggermente l'interpretazione di $\{v\, | \, (u,v) \in E\}$, in questo caso si riferisce all'insieme formato da tutti i nodi $v$ tali che l'arco ($u$, $v$) esista nell'insieme degli archi di $G$.\\
+        Inoltre il fatto che il grafo non è orientato implica la scrittura doppia di ogni arco, una per ogni nodo coinvolto. 
+    \end{tcolorbox}
+
+    \noindent
+    \begin{figure}[H]
+        \centering
+        \vspace{-20pt}  % Riduce lo spazio sopra
+        \subfloat[]{%
+            \adjustbox{valign=c}{\includegraphics[width=0.35\linewidth]{Grafi/img_10.png}}
+        } 
+        \hspace{0.1cm}
+        \subfloat[]{%
+            \adjustbox{valign=c}{\includegraphics[width=0.48\linewidth]{Grafi/img_15.png}}
+        }
+    \end{figure}
+    \FloatBarrier
+
+    \vspace{-25pt}
+    \noindent
+    In questo caso lo spazio tortale è dato da $a\,n + 2 \cdot  b\,m$ bit, il "2" è dato dal fatto che ogni arco viene memorizzato 2 volte. In ogni caso, siccome a b e 2 sono costanti, questo corrisponde a uno spazio $\Theta (n + m)$, cioè proporzionale al numero di nodi e di archi del grafo, proprio come nel caso precedente
+    
+    \subsubsection*{Grafi pesati}
+
+    \noindent
+    \begin{figure}[H]
+        \centering
+        \vspace{-20pt}  % Riduce lo spazio sopra
+        \subfloat[]{%
+            \adjustbox{valign=c}{\includegraphics[width=0.38\linewidth]{Grafi/img_12.png}}
+        } 
+        \hspace{0.1cm}
+        \subfloat[]{%
+            \adjustbox{valign=c}{\includegraphics[width=0.48\linewidth]{Grafi/img_16.png}}
+        }
+    \end{figure}
+    \FloatBarrier
+
+    \vspace{-25pt}
+    \noindent
+    In questo caso il grafo non è orientato e quindi valgono le stesse cose dette precedentemente. L'unica differenza è che dobbiamo memorizzare anche il peso di ogni arco, quindi la costante b coltre a contenere i bit necessari per nodo + puntatore, ha anche i bit necessari per memorizzare il peso. Quindi sempre uno spazio $\Theta (n+m)$. 
+
+    \subsubsection*{Complessità}
+    Come visto prima lo spazio in memoria richiesto è $\Theta(n)$ per il vettore con i nodi e $\Theta(|G.adj(u)|)$ per ciascuna lista con un totale di $\Theta (\, n + \sum_{u \in V}\, (|\, G.adj(u)\, |)\, ) = \Theta(n + m)$, che è ottimo.\\
+    La verifica della presenza di un arco richiede tempo $O(n)$, poiché è necessario scorrere la lista dei vicini di $u$. Invece, l'iterazione su tutti gli archi del grafo richiede tempo $O(n + m)$, dato che si attraversano tutte le liste di adiacenza.\\
+    Queste complessità valgono allo stesso modo per grafi orientati, non orientati e pesati, poiché l'eventuale presenza di pesi non modifica la struttura delle liste ma solo il contenuto di ogni elemento. È ideale per i grafi \textbf{sparsi}. 
+
+
+    \subsubsection{Implementazione}
+    Mentre l'implementazione di una matrice è fissa, esistono diversi modi per implementare una \textbf{lista di adiacenza}. La tabella seguente mostra le possibili strutture dati con cui è possibile implementarle: 
+
+    \begin{figure}[H]
+        \centering
+        %\vspace{-5pt} %riduce lo spazio sopra
+        \includegraphics[width=0.8\linewidth]{Grafi/img_19.png}
+        %\vspace{-5pt} %riduce lo spazio sotto
+    \end{figure}
+    
+    
+    \noindent
+    In questo corso, se non diversamente specificato, si farà riferimento a un'implementazione basata su \textbf{vettori di adiacenza}. 
+
+    \noindent
+    \begin{figure}[H]
+        \centering
+        \vspace{-5pt}  % Riduce lo spazio sopra
+        \subfloat[]{%
+            \adjustbox{valign=c}{\includegraphics[width=0.35\linewidth]{Grafi/img_17.png}}
+        } 
+        \hspace{0.5cm}
+        \subfloat[]{%
+            \adjustbox{valign=c}{\includegraphics[width=0.40\linewidth]{Grafi/img_18.png}}
+        }
+    \end{figure}
+    \FloatBarrier
+
+    \vspace{-15pt}
+    \noindent
+    \begin{tcolorbox}[
+        colback=yellow!20, 
+        colframe=darkgray, 
+        title= Vettori di adiacenza
+        ]
+        La rappresentazione tramite \textbf{vettori di adiacenza} utilizza un vettore, statico o dinamico, \texttt{adj} di dimensione $n$, indicizzato dai nodi del grafo (cioè ogni indice del vettore corrisponde al nodo con quell'identificatore).\\
+        Ogni elemento \texttt{adj[u]} contiene un vettore di adiacenza (il riferimento al suo primo elemento), che memorizza tutti i nodi $v$ adiacenti a $u$.
+    \end{tcolorbox} 
+   
+    \newpage
+    \noindent
+    Inoltre assumeremo che:
+    \begin{itemize}[leftmargin=1em]
+        \item La classe \texttt{Node} sia uguale a \texttt{int} e che di conseguenza l'accesso alle informazioni abbia costo $O(1)$;
+        
+        \item Le operazioni per aggiungere nodi e archi abbiano costo $O(1)$ (per i vettori dinamici, anche se il costo dell'\texttt{append} non vale sempre $O(1)$, si fa riferimento all'analisi ammortizzata, dove il costo rimane $O(1)$);
+        
+        \item Dopo l'inizializzazione, il grafo sia \textbf{statico}, quindi una volta creato non cambia più (ad esempio viene mandato in input come file di testo).
+    \end{itemize}
+
+    \vspace{8pt} 
+    \noindent
+    \begin{tcolorbox}
+        [
+            colback=green!10,  % Sfondo verde chiaro
+            colframe=green!60!black,  % Bordo verde più acceso
+            coltitle=black,  % Colore del testo del titolo
+            fonttitle=\bfseries,  % Testo del titolo in grassetto
+            title={\centering \textbf{Riassumendo }},  % Titolo centrato 
+            enhanced,  % Miglioramenti grafici
+            attach boxed title to top center={yshift=-2mm},  % Posiziona il titolo centrato in alto
+            boxed title style={colback=white, colframe=green!60!black, rounded corners}
+        ]
+        Per semplicità, assumiamo che il grafo sia rappresentato con liste di adiacenza basate su vettori, che i nodi siano semplici interi, che accedere e inserire elementi costi $O(1)$, e che il grafo non cambi mentre eseguiamo gli algoritmi.
+    \end{tcolorbox}
+
+    \subsubsection{Iterazione su nodi e archi}
+    Precedentemente abbiamo discusso delle complessità per matrici e liste di adiacenza. Ora risulta quindi utile formalizzare lo schema di iterazione tipico utilizzato negli algoritmi sui grafi.\\[6pt]
+    L'iterazione su tutti i nodi del grafo, rappresentata dallo pseudocodice seguente, ha costo $O(n)$,  moltiplicato per il costo dell'operazione eseguita su ciascun nodo. Se l'operazione all'interno del ciclo ha costo $c$ allora avremo un costo $O(n \cdot c)$; bisogna tenere a mente però che, se tale costo è costante per ogni nodo ($c = O(1)$), esso può essere trascurato e si ottiene nuovamente $O(n)$.
+
+    \algrenewcommand\algorithmicforall{\textbf{foreach}}
+    \begin{algorithm}
+        \caption{}
+        \begin{algorithmic}
+            \ForAll{$u \in G.V()$}
+                \State \textcolor{commentcolor2}{/* Esegui operazioni sul nodo $u$ */}
+            \EndFor
+        \end{algorithmic}
+    \end{algorithm}
+
+    \noindent
+    Se ho invece bisogno di iterare su tutti i nodi e tutti gli archi del grafo, operazione rappresentata dal seguente pseudocodice, avrò un costo computazionale $O(n+m)$ se il grafo è implementato tramite liste di adiacenza, e $O(n^2)$ se rappresentato tramite matrici. 
+ 
+    \begin{algorithm}
+        \caption{}
+        \begin{algorithmic}
+            \ForAll{$u \in G.V()$}
+                \State \textcolor{commentcolor2}{/* Esegui operazioni sul nodo $u$ */}
+                \ForAll{$v \in G.adj(u)$}
+                    \State \textcolor{commentcolor2}{/* Esegui operazioni sull'arco $(u,v)$ */}
+                \EndFor
+            \EndFor
+        \end{algorithmic}
+    \end{algorithm}
+
+    \subsection{Visite}
+    \begin{tcolorbox}[
+        colback=yellow!20, 
+        colframe=darkgray, 
+        title= Visite: definizione generale
+        ]
+        Una \textit{visita} di un grafo è una procedura sistematica per esplorare un grafo, visitando almeno una volta ogni suo nodo ed arco.
+    \end{tcolorbox} 
+
+    \noindent
+    Noi andremo però ad esaminare un problema più specico che presenta due famiglie principali di soluzione.
+    
+    \begin{tcolorbox}[
+        colback=yellow!20, 
+        colframe=darkgray, 
+        title= Caso di studio
+        ]
+        Dato un grafo $G(V,E)$ e un vertice (radice o sorgente) $r \in V$, visitare una ed una sola volta tutti i nodi del grafo che possono essere raggiunti da $r$
+    \end{tcolorbox} 
+
+    \vspace{4pt}
+    \noindent
+    Per "risolvere" il problema abbiamo due strade percorribili: 
+    \begin{itemize}[leftmargin=1em]
+        \item \textbf{Visita in ampiezza - BFS} (Breadth-First Search);
+        \item \textbf{Visita in profondità - DFS} (Depth-first Search);
+    \end{itemize}
+    che verranno aprofondite nel corso di questo capitolo.\\[4pt]
+    Intanto rivediamo l'idea generale dietro queste famiglie di algoritmi che abbiamo già visto parlando degli alberi:
+    
+    \vspace{4pt}
+    \begin{tcolorbox}
+        [
+            colback=green!10,  % Sfondo verde chiaro
+            colframe=green!60!black,  % Bordo verde più acceso
+            coltitle=black,  % Colore del testo del titolo
+            fonttitle=\bfseries,  % Testo del titolo in grassetto
+            title={\centering \textbf{BFS}},  % Titolo centrato 
+            enhanced,  % Miglioramenti grafici
+            attach boxed title to top center={yshift=-2mm},  % Posiziona il titolo centrato in alto
+            boxed title style={colback=white, colframe=green!60!black, rounded corners}
+        ]
+        In questo genere di algoritmi la visita dei nodi avviene per livelli: prima si visita la radice, poi i nodi a distanza 1 dalla radice, poi quelli a distanza 2 ecc.\\
+        Una possibile applicazione è quella del calcolo dei cammini più brevi a partire da una singola sorgente.
+    \end{tcolorbox} 
+
+    \begin{tcolorbox}
+        [
+            colback=green!10,  % Sfondo verde chiaro
+            colframe=green!60!black,  % Bordo verde più acceso
+            coltitle=black,  % Colore del testo del titolo
+            fonttitle=\bfseries,  % Testo del titolo in grassetto
+            title={\centering \textbf{DFS}},  % Titolo centrato 
+            enhanced,  % Miglioramenti grafici
+            attach boxed title to top center={yshift=-2mm},  % Posiziona il titolo centrato in alto
+            boxed title style={colback=white, colframe=green!60!black, rounded corners}
+        ]
+        In questo tipo di algoritmi la visita dei nodi avviene in profondità: a partire da un nodo, si visita uno dei suoi nodi adiacenti e si continua l'esplorazione lungo un cammino finché possibile, prima di tornare indietro.\\
+        È tipicamente implementata in modo ricorsivo ed è utilizzata, tra le altre cose, per l'ordinamento topologico e per il calcolo delle componenti connesse e fortemente connesse.
+    \end{tcolorbox} 
+
+    \subsubsection{Visita: più complessa di quanto sembri}
+    Per visitare un grafo si potrebbe pensare di ciclare per ogni nodo e per ogni arco, come nello pseudocodice seguente. Così facendo però non si tiene in considerazione la struttura del grafo e si itera su tutte le possibili coppie di nodi, non solo le coppie adiacenti. L'ieraione avviene quindi senza un criterio preciso. 
+
+    \begin{algorithm}
+        \caption{Visit(Graph $G$)}
+        \begin{algorithmic}
+            \ForAll{$u \in G.V()$}
+                \State \textcolor{commentcolor2}{/* Visita il nodo $u$ */}
+                \ForAll{$v \in G.V()$}
+                    \State \textcolor{commentcolor2}{/* Visita l'arco $(u,v)$ */}
+                    \State \textcolor{commentcolor}{// anche se, come abbiamo detto prima, la coppia $(u,v)$ non corrisponde}
+                    \State \textcolor{commentcolor}{//necessariamente ad un arco; non è detto che $u$ e $v$ siano adiacenti}
+                \EndFor
+            \EndFor
+        \end{algorithmic}
+    \end{algorithm}
+
+    \vspace{8pt}
+    \noindent
+    Si potrebbe quindi pensare di visitare il grafo trattandolo come un albero, visitando quindi i nodi vicini al nodo in esame. Questo approccio è trattato dal codice seguente dove $r$ è il nodo di partenza scelto come radice e Q è la coda in cui andremo a memorizzare i nodi vicini
+
+    \begin{algorithm}
+        \caption{BFSTraversal(Graph $G$, int $r$)}
+        \begin{algorithmic}
+            \State QUEUE $Q = \text{Queue}()$
+            \State $Q.\text{enqueue}(r)$ \quad \textcolor{commentcolor}{// inserire $r$ in fondo alla coda}
+            \While{\textbf{not} $Q.\text{isEmpty}()$}
+                \State Node $u = Q.\text{dequeue}()$ \quad \textcolor{commentcolor}{// prendere il primo elemento in testa alla coda}
+                \State \textcolor{commentcolor2}{/* visita il nodo $u$ */}
+                \ForAll{$v \in G.\text{adj}(u)$}
+                    \State $Q.\text{enqueue}(v)$ \quad \textcolor{commentcolor}{// inserire i vicini di $u$ in fondo alla coda}
+                \EndFor
+            \EndWhile
+        \end{algorithmic}
+    \end{algorithm}
+
+    \vspace{8pt}
+    \noindent
+    Questa soluzione potrebbe sembrare corretta a primo impatto ma non tiene conto dei \textbf{nodi già visitati}. Quindi, se ad esempio avessimo un grafo che contiene un ciclo, la coda crescerebbe in maniera sconsiderata e continueremmo a \textbf{visitare i nodi all'infinito}.\\
+    Vediamo un esempio passo passo:
+
+    \noindent
+    \begin{figure}[H]
+        \centering
+        \vspace{-5pt}  % Riduce lo spazio sopra
+        \subfloat[]{%
+            \adjustbox{valign=c}{\includegraphics[width=0.40\linewidth]{Grafi/img_20.png}}
+        } 
+        \hspace{0.5cm} $\to$ \hspace{0.5cm}
+        \subfloat[]{%
+            \adjustbox{valign=c}{\includegraphics[width=0.38\linewidth]{Grafi/img_21.png}}
+        }
+    \end{figure}
+    \FloatBarrier
+
+    \vspace{-40pt}
+    \begin{center}
+        $\swarrow $
+    \end{center}
+
+    \vspace{-15pt}
+    \noindent
+    \begin{figure}[H]
+        \centering
+        \vspace{-5pt}  % Riduce lo spazio sopra
+        \subfloat[]{%
+            \adjustbox{valign=c}{\includegraphics[width=0.40\linewidth]{Grafi/img_22.png}}
+        } 
+        \hspace{0.5cm} $\to$ \hspace{0.5cm}
+        \subfloat[]{%
+            \adjustbox{valign=c}{\includegraphics[width=0.38\linewidth]{Grafi/img_23.png}}
+        }
+    \end{figure}
+    \FloatBarrier
+
+    
+    \noindent
+    Andando avanti il prossimo nodo esplorato sarebbe $e$, e si aggiungerebbero alla coda i nodi $a$ e $h$. Già da qui notiamo che molti nodi si ripetono nella coda, e ogni volta che vengono rivisitati aggiungono i propri vicini alla coda, che riaggiungeranno a loro volta anche il nodo che li ha "chiamati", andando avanti in un loop infinito. 
+
+    \subsubsection{Algoritmo generico di attraversamento}
+    Per risolvere i problemi di terminazione e ridondanza visti in precedenza, si introduce un algoritmo di attraversamento generico. La novità cruciale è l'uso di un meccanismo di marcatura (riga 3 e 10): un nodo viene aggiunto alla struttura di supporto solo se non è stato ancora visitato, garantendo che ogni vertice venga elaborato una sola volta.
+
+    \begin{algorithm}
+        \caption{visit(GRAPH $G$)}
+        \begin{algorithmic}[1]
+            \State SET $S = \text{Set}()$ \quad  \textcolor{commentcolor}{// Insieme generico}
+            \State $S.\text{insert}(r)$ \quad  \textcolor{commentcolor}{// Da specificare}
+            \State \textcolor{commentcolor2}{/* marca il nodo $r$ */}
+            \While{$S.\text{size}() > 0$}
+                \State NODE $u = S.\text{remove}()$ \quad \textcolor{commentcolor}{// Da specificare}
+                \State  \textcolor{commentcolor2}{/* visita il nodo $u$ */}
+                \ForAll{$v \in G.\text{adj}(u)$}
+                    \State \textcolor{commentcolor2}{/* visita l'arco $(u, v)$ */}
+                    \If{$v$ non è ancora stato marcato}
+                        \State \textcolor{commentcolor2}{/* marca il nodo $v$ */}
+                        \State $S.\text{insert}(v)$ \quad  \textcolor{commentcolor}{// Da specificare}
+                    \EndIf
+                \EndFor
+            \EndWhile
+        \end{algorithmic}
+    \end{algorithm}
+
+    \vspace{8pt}
+    \noindent
+    Questo algoritmo è un algoritmo generico in quanto abbiamo un insieme generico $S$ per memorizzare i nodi, e non sono state specificate le modalità di inserimento e rimozione di un nodo dal suddetto insieme. Vediamo quindi quando questo si comporta come un algoritmo \textbf{BFS} e quando come uno \textbf{DFS}:
+
+    \noindent
+    \begin{tcolorbox}
+        [
+            colback=green!10,  % Sfondo verde chiaro
+            colframe=green!60!black,  % Bordo verde più acceso
+            coltitle=black,  % Colore del testo del titolo
+            fonttitle=\bfseries,  % Testo del titolo in grassetto
+            title={\centering \textbf{BFS vs DFS}},  % Titolo centrato 
+            enhanced,  % Miglioramenti grafici
+            attach boxed title to top center={yshift=-2mm},  % Posiziona il titolo centrato in alto
+            boxed title style={colback=white, colframe=green!60!black, rounded corners}
+        ]
+        \begin{itemize}[leftmargin=1em]
+            \item \textbf{BFS}: Quando l'insieme $S$ è una \textbf{coda}, la logica di inserimento e rimozione è di tipo \textbf{FIFO} (\textit{First In First Out}), la visita diventa una \textbf{visita in ampiezza}, perché andiamo a prendere il nodo che si trova nella coda da più tempo, e visitiamo quindi la coda per livelli.
+            
+            \vspace{4pt}
+            \item \textbf{DFS}: Quando l'insieme $S$ è una \textbf{pila}, la logica di inserimento e rimozione è di tipo \textbf{LIFO} (\textit{Last In First Out}), la visita diventa una \textbf{visita in profondità}, perché andiamo a prendere l'ultimo nodo inserito e ci addentriamo quindi il più possibile nel grafo prima di tornare indietro.
+            
+        \end{itemize}
+
+    \end{tcolorbox} 
+
+    
+
+    \subsection{BFS - Breadth-First Search}
+    Abbiamo detto quindi che gli algoritmi \textbf{BFS} effettuano una \textbf{visita in ampiezza} del grafo, per memorizzare i nodi utilizzano una \textbf{coda} e di conseguenza la logica di inserimento e rimozione è di tipo \textbf{FIFO}. Vediamo adesso quali sono gli obbiettivi di questi algoritmi: 
+
+    \vspace{8pt}
+    \noindent
+    \begin{tcolorbox}
+        [
+            colback=green!10,  % Sfondo verde chiaro
+            colframe=green!60!black,  % Bordo verde più acceso
+            coltitle=black,  % Colore del testo del titolo
+            fonttitle=\bfseries,  % Testo del titolo in grassetto
+            title={\centering \textbf{Obbiettivi}},  % Titolo centrato 
+            enhanced,  % Miglioramenti grafici
+            attach boxed title to top center={yshift=-2mm},  % Posiziona il titolo centrato in alto
+            boxed title style={colback=white, colframe=green!60!black, rounded corners},
+            breakable
+        ]
+        \begin{itemize}[leftmargin=1em]
+            \item \begin{minipage}[t]{0.36\textwidth}  
+                    Visitare i nodi a distanze crescenti
+                \end{minipage}%
+                \hspace{2pt} $\to$ \hspace{2pt}
+                \begin{minipage}[t]{0.55\textwidth}
+                    visitare tutti i nodi a distanza $k$ dalla sorgente prima di quelli a distanza $k+1$ 
+                \end{minipage} 
+
+            %\vspace{8pt}
+            \item \begin{minipage}[t]{0.36\textwidth}  
+                    Calcolare il cammino più breve da $r$ a tutti gli altri nodi
+                \end{minipage}%
+                \hspace{2pt} $\to$ \hspace{2pt}
+                \begin{minipage}[t]{0.55\textwidth}
+                    Le distanze sono misurate come il numero di archi attraversati
+                \end{minipage} 
+
+            \vspace{8pt}
+            \item \begin{minipage}[t]{0.36\textwidth}  
+                    Generare un \textbf{albero breadth-first}
+                \end{minipage}%
+                \hspace{2pt} $\to$ \hspace{2pt}
+                \begin{minipage}[t]{0.55\textwidth}
+                    Generare un albero contenente tutti i nodi raggiungibili da $r$, tale per cui il cammino dalla radice $r$ al nodo $u$ nell'albero corrisponda al cammino più breve da $r$ a $u$ nel grafo.
+                \end{minipage}
+
+        \end{itemize}
+    \end{tcolorbox} 
+
+    \subsubsection{Algoritmo BFS}
+
+    \vspace{-10pt}
+    \begin{algorithm}
+        \caption{bfs(GRAPH $G$, NODE $r$)}
+        \begin{algorithmic}[1]
+            \State QUEUE $Q = \text{Queue}()$ \quad \textcolor{commentcolor}{// Coda perché è un BFS}
+            \State $Q.\text{enqueue}(r)$
+            \State \textbf{boolean}[] $visited = \text{new boolean}[G.\text{size}()]$ \quad \textcolor{commentcolor}{// Vettore per marcare i nodi}
+            \ForAll{$u \in G.V() - \{r\}$}
+                \State $visited[u] = \text{false}$
+            \EndFor
+            \State $visited[r] = \text{true}$
+            \While{\textbf{not} $Q.\text{isEmpty}()$}
+                \State NODE $u = Q.\text{dequeue}()$
+                \State \textcolor{commentcolor2}{/* visita il nodo $u$ */}
+                \ForAll{$v \in G.\text{adj}(u)$}
+                    \State \textcolor{commentcolor2}{/* visita l'arco $(u, v)$ */}
+                    \If{\textbf{not} $visited[v]$}
+                        \State $visited[v] = \text{true}$
+                        \State $Q.\text{enqueue}(v)$
+                    \EndIf
+                \EndFor
+            \EndWhile
+        \end{algorithmic}
+    \end{algorithm}
+
+    
+    \noindent
+    Come abbiamo già ripetuto varie volte, e come si può vedere dallo pseudocodice, questo algoritmo utilizza una \textbf{coda} (FIFO) come struttura dati di supporto e questo garantisce la visita a livelli (i nodi più vicini alla radice vengono aggiunti alla coda e visitati prima di quelli più lontani). Il processo si divide in tre parti principali:
+
+    \vspace{6pt}
+    \begin{itemize}[leftmargin=1em]
+        \item Si marca la sorgente come visitata e la si inserisce in coda;
+        
+        \item Si estrae un nodo dalla coda e si esplorano tutti i suoi vicini non ancora marcati;
+        
+        \item Ogni vicino scoperto viene marcato e aggiunto in fondo alla coda per essere processato successivamente.
+    \end{itemize}
+
+    \vspace{6pt}
+    \noindent
+    Questo metodo garantisce che un nodo venga scoperto solo attraverso il cammino minimo possibile (in termini di numero di archi). Se esistesse un cammino più breve per raggiungere $v$, la BFS lo avrebbe già incontrato in un livello precedente.
+
+
+    \subsubsection{Numero di Erd\H{o}s}
+    La storia della matematica è piena di personaggi eccentrici; Paul Erd\H{o}s è uno di questi. Fu un matematico estremamente prolifico, che arrivò a pubblicare circa 1500 articoli, con più di 500 collaboratori diversi.\\
+    Come tributo scherzoso alla sua estrema prolificità, è nato il concetto di “numero di Erd\H{o}s”, un coefficiente assegnato ad ogni autore scientifico per misurare la sua "distanza" da Erd\H{o}s (\url{https://en.wikipedia.org/wiki/Erdos_number}).
+    
+    \vspace{8pt}
+    \noindent
+    \begin{tcolorbox}
+        [
+            colback=green!10,  % Sfondo verde chiaro
+            colframe=green!60!black,  % Bordo verde più acceso
+            coltitle=black,  % Colore del testo del titolo
+            fonttitle=\bfseries,  % Testo del titolo in grassetto
+            title={\centering \textbf{Ragionamento dietro il numero di Erd\H{o}s}},  % Titolo centrato 
+            enhanced,  % Miglioramenti grafici
+            attach boxed title to top center={yshift=-2mm},  % Posiziona il titolo centrato in alto
+            boxed title style={colback=white, colframe=green!60!black, rounded corners}
+        ]
+        \begin{itemize}[leftmargin=1em]
+            \item Erd\H{o}s ha \texttt{distance = 0} o \texttt{erdos = 0} *
+            
+            \item I co-autori dei suoi articoli hanno \texttt{distance = 1}
+            
+            \item Chi è co-autore di un co-autore di Erd\H{o}s e non è direttamente coautore di Erd\H{o}s, avrà \texttt{distance = 2} 
+            
+            \item Chi è co-autore di qualcuno con \texttt{distance = k} e non è direttamente coautore di Erd\H{o}s, avrà \texttt{distance = k + 1}
+            
+            \item Tutti gli altri avranno \texttt{distance = $\infty$}
+            
+        \end{itemize}
+
+        \(*_{\text{Il professore chiama questa variabile \texttt{erdos} mentre il libro la chiama \texttt{distance}}} \)
+        
+    \end{tcolorbox} 
+
+    \vspace{8pt}
+    \noindent
+    Possiamo quindi riscrivere l'algoritmo sfruttando queste definizioni e otteniamo :
+    \begin{algorithm}
+        \caption{distance(GRAPH $G$, NODE $r$, \textbf{int}[] $distance$)}
+        \begin{algorithmic}[1]
+            \State QUEUE $Q = \text{Queue}()$
+            \State $Q.\text{enqueue}(r)$
+            \State \textbf{boolean}[] $visited = \text{new boolean}[G.\text{size}()]$ \quad \textcolor{commentcolor}{// Il prof la mette ma in questo caso è inutile}
+            \ForAll{$u \in G.V() - \{r\}$}
+                \State $distance[u] = \infty$
+            \EndFor
+            \State $distance[r] = 0$
+            \While{\textbf{not} $Q.\text{isEmpty}()$}
+                \State NODE $u = Q.\text{dequeue}()$
+                \ForAll{$v \in G.\text{adj}(u)$}
+                    \If{$distance[v] == \infty$} \quad \textcolor{commentcolor}{// Se il nodo $v$ non è stato scoperto}
+                        \State $distance[v] = distance[u] + 1$
+                        \State $Q.\text{enqueue}(v)$
+                    \EndIf
+                \EndFor
+            \EndWhile
+        \end{algorithmic}
+    \end{algorithm}
+    
+    \noindent
+    Come si può evincere dal commento, la riga 3, nonostante il professore la inserisca nello speudocodice, è completamente inutile in questo contesto perché \texttt{visited} non viene mai usato in questo codice in quanto, per verificare se il nodo è già stato scoperto, si controlla la sua distanza.\\
+    Se un nodo ha distanza infinita, non è mai stato inserito in coda; non appena viene scoperto, riceve un valore numerico finito ($distance[v] = distance[u] + 1$) e non verrà mai più processato. Questo garantisce che ogni nodo venga aggiornato solo la prima volta che viene raggiunto, ovvero lungo il cammino minimo dalla sorgente. 
+
+    \subsubsection*{Esempio}
+    Vediamo ora un esempio visivo di come vengono calcolate le distanze con questo genere di algoritmi:
+
+    \noindent
+    \begin{figure}[H]
+        \centering
+        \vspace{-5pt}  % Riduce lo spazio sopra
+        \subfloat[]{%
+            \adjustbox{valign=c}{\includegraphics[width=0.40\linewidth]{Grafi/img_24.png}}
+        } 
+        \hspace{0.5cm} $\to$ \hspace{0.5cm}
+        \subfloat[]{%
+            \adjustbox{valign=c}{\includegraphics[width=0.38\linewidth]{Grafi/img_25.png}}
+        }
+    \end{figure}
+    \FloatBarrier
+
+    \vspace{-40pt}
+    \begin{center}
+        $\swarrow $
+    \end{center}
+
+    \vspace{-15pt}
+    \noindent
+    \begin{figure}[H]
+        \centering
+        \vspace{-5pt}  % Riduce lo spazio sopra
+        \subfloat[]{%
+            \adjustbox{valign=c}{\includegraphics[width=0.40\linewidth]{Grafi/img_26.png}}
+        } 
+        \hspace{0.5cm} $\to$ \hspace{0.5cm}
+        \subfloat[]{%
+            \adjustbox{valign=c}{\includegraphics[width=0.38\linewidth]{Grafi/img_27.png}}
+        }
+    \end{figure}
+    \FloatBarrier
+
+    \vspace{-40pt}
+    \begin{center}
+        $\swarrow $
+    \end{center}
+
+    \vspace{-15pt}
+    \noindent
+    \begin{figure}[H]
+        \centering
+        \vspace{-5pt}  % Riduce lo spazio sopra
+        \subfloat[]{%
+            \adjustbox{valign=c}{\includegraphics[width=0.40\linewidth]{Grafi/img_28.png}}
+        } 
+        \hspace{0.5cm} $\to$ \hspace{0.5cm}
+        \subfloat[]{%
+            \adjustbox{valign=c}{\includegraphics[width=0.38\linewidth]{Grafi/img_29.png}}
+        }
+    \end{figure}
+    \FloatBarrier
+
+    \vspace{-40pt}
+    \begin{center}
+        $\swarrow $
+    \end{center}
+
+    \vspace{-15pt}
+    \noindent
+    \begin{figure}[H]
+        \centering
+        \vspace{-5pt}  % Riduce lo spazio sopra
+        \subfloat[]{%
+            \adjustbox{valign=c}{\includegraphics[width=0.40\linewidth]{Grafi/img_30.png}}
+        } 
+        \hspace{0.5cm} $\to$ \hspace{0.5cm}
+        \subfloat[]{%
+            \adjustbox{valign=c}{\includegraphics[width=0.38\linewidth]{Grafi/img_31.png}}
+        }
+    \end{figure}
+    \FloatBarrier
+
+    \vspace{-15pt}
+    \noindent
+    \begin{figure}[H]
+        \centering
+        \vspace{-5pt}  % Riduce lo spazio sopra
+        \subfloat[]{%
+            \adjustbox{valign=c}{\includegraphics[width=0.40\linewidth]{Grafi/img_32.png}}
+        } 
+        \hspace{0.5cm} $\to$ \hspace{0.5cm}
+        \subfloat[]{%
+            \adjustbox{valign=c}{\includegraphics[width=0.38\linewidth]{Grafi/img_33.png}}
+        }
+    \end{figure}
+    \FloatBarrier
+
+    \vspace{-15pt}
+    \noindent
+    \begin{figure}[H]
+        \centering
+        \vspace{-5pt}  % Riduce lo spazio sopra
+        \subfloat[]{%
+            \adjustbox{valign=c}{\includegraphics[width=0.40\linewidth]{Grafi/img_34.png}}
+        } 
+    \end{figure}
+    \FloatBarrier
+
+
+
+
+    \subsubsection{Albero BFS}
+    \subsubsection{Complessità BFS}
+
+    \newpage
+    \subsection{DFS - Depth-First Search}
+    \subsubsection{BFS vs DFS}
+    \subsubsection{Iterativa, stack esplicito, pre-order}
+    \subsubsection{DFS e componenti connesse}
+    \subsubsection{DFS e grafi non orientati aciclici}
+    \subsubsection{DFS e grafi orientati aciclici (DAG)}
+    \subsubsection{Schema}
+    \subsubsection{Classificazione degli archi}
+
+    \subsection{Ordinamento topologico}
+
+\end{document}
