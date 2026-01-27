@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1769186524.08095 "c:/Users/Casa/Desktop/UNISS/Secondo anno/Algoritmi e strutture dati/Appunti completi/Appunti_Algoritmi_Strutture_Dati/chapters/ch8_grafi/grafi.tex" "c:/Users/Casa/Desktop/UNISS/Secondo anno/Algoritmi e strutture dati/Appunti completi/Appunti_Algoritmi_Strutture_Dati/chapters/ch8_grafi/grafi.pdf" "grafi" 1769186529.6657 0
+["pdflatex"] 1769536150.05133 "c:/Users/Casa/Desktop/UNISS/Secondo anno/Algoritmi e strutture dati/Appunti completi/Appunti_Algoritmi_Strutture_Dati/chapters/ch8_grafi/grafi.tex" "c:/Users/Casa/Desktop/UNISS/Secondo anno/Algoritmi e strutture dati/Appunti completi/Appunti_Algoritmi_Strutture_Dati/chapters/ch8_grafi/grafi.pdf" "grafi" 1769536155.74511 0
   "../figures/Grafi/img_1.png" 1760629443 38713 f801974f753f04dd00621c7541566a85 ""
   "../figures/Grafi/img_10.png" 1764600387 8561 8a34dd4af109beb0fb5ae82d89aa5eee ""
   "../figures/Grafi/img_11.png" 1764600429 12054 e101df8cce9defb303507d6a85aaa19b ""
@@ -28,6 +28,7 @@
   "../figures/Grafi/img_32.png" 1768813512 45613 c398ea30515e67b19a69acb274e58067 ""
   "../figures/Grafi/img_33.png" 1768813551 44893 052602e1180571781c89127932a61beb ""
   "../figures/Grafi/img_34.png" 1768813585 38040 5873b54972b774eaa7f5aa6c86034c75 ""
+  "../figures/Grafi/img_35.png" 1769525014 49886 6991cd219a25c0994338c4ab9fcc3476 ""
   "../figures/Grafi/img_4.png" 1761584641 35665 90200a24ddad6bae03f897dd98faec5b ""
   "../figures/Grafi/img_5.png" 1761758587 64000 6346853814e7cc356a747b567c60d266 ""
   "../figures/Grafi/img_6.png" 1761760446 72150 549527a31fc12f31bd162ccc1627a46a ""
@@ -303,10 +304,10 @@
   "C:/Users/Casa/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1729265222 55384 b454dec21c2d9f45ec0b793f0995b992 ""
   "C:/Users/Casa/AppData/Local/Programs/MiKTeX/tex/latex/xkeyval/xkeyval.sty" 1656236919 4937 4ce600ce9bd4ec84d0250eb6892fcf4f ""
   "c:/Users/Casa/Desktop/UNISS/Secondo anno/Algoritmi e strutture dati/Appunti completi/Appunti_Algoritmi_Strutture_Dati/chapters/ch8_grafi/../../main_document/main.tex" 1769185418 996 91ae706e4ad17b0581c24c722383b1e9 ""
-  "c:/Users/Casa/Desktop/UNISS/Secondo anno/Algoritmi e strutture dati/Appunti completi/Appunti_Algoritmi_Strutture_Dati/chapters/ch8_grafi/grafi.aux" 1769186529 9473 e4051f95c3247ab078825c71a54e9682 "pdflatex"
-  "c:/Users/Casa/Desktop/UNISS/Secondo anno/Algoritmi e strutture dati/Appunti completi/Appunti_Algoritmi_Strutture_Dati/chapters/ch8_grafi/grafi.out" 1769186529 5938 27ed81da98568f50d97204189720d34f "pdflatex"
-  "c:/Users/Casa/Desktop/UNISS/Secondo anno/Algoritmi e strutture dati/Appunti completi/Appunti_Algoritmi_Strutture_Dati/chapters/ch8_grafi/grafi.tex" 1769186523 71496 9baf621b47529096c8d9a17c194cfcb8 ""
-  "main.aux" 1769185879 48194 04a06ddcc2a6a24ce631910f2244121e ""
+  "c:/Users/Casa/Desktop/UNISS/Secondo anno/Algoritmi e strutture dati/Appunti completi/Appunti_Algoritmi_Strutture_Dati/chapters/ch8_grafi/grafi.aux" 1769536155 9970 66d6ce4dcbfbe2f8f95419cfef521408 "pdflatex"
+  "c:/Users/Casa/Desktop/UNISS/Secondo anno/Algoritmi e strutture dati/Appunti completi/Appunti_Algoritmi_Strutture_Dati/chapters/ch8_grafi/grafi.out" 1769536155 5938 27ed81da98568f50d97204189720d34f "pdflatex"
+  "c:/Users/Casa/Desktop/UNISS/Secondo anno/Algoritmi e strutture dati/Appunti completi/Appunti_Algoritmi_Strutture_Dati/chapters/ch8_grafi/grafi.tex" 1769536149 79101 88f6bd0f24d8e2e8c195ac1123a20438 ""
+  "main.aux" 1769186557 48194 04a06ddcc2a6a24ce631910f2244121e ""
   "main.tex" 1769185418 996 91ae706e4ad17b0581c24c722383b1e9 ""
   (generated)
   "c:/Users/Casa/Desktop/UNISS/Secondo anno/Algoritmi e strutture dati/Appunti completi/Appunti_Algoritmi_Strutture_Dati/chapters/ch8_grafi/grafi.aux"

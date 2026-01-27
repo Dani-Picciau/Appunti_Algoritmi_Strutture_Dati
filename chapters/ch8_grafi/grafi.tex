@@ -1270,13 +1270,141 @@ insertEdge(NODE u, NODE v)  //Aggiunge l'arco (u,v) al grafo
             \adjustbox{valign=c}{\includegraphics[width=0.40\linewidth]{Grafi/img_34.png}}
         } 
     \end{figure}
+    \vspace{-40pt} %toglie lo spazio dopo
     \FloatBarrier
 
 
-
-
     \subsubsection{Albero BFS}
+    \begin{tcolorbox}[
+        colback=yellow!20, 
+        colframe=darkgray, 
+        title= Albero BFS
+        ]
+        L'\textbf{Albero BFS} è un albero di copertura radicato in $r$ che viene costruito dinamicamente durante la visita in ampiezza, utilizzando un vettore dei padri per tracciare il percorso più breve dalla sorgente a ogni nodo.
+    \end{tcolorbox}
+
+    \vspace{6pt}
+    \noindent
+    Infatti, oltre a visitare i nodi di un grafo, l'algoritmo BFS permette di definire una struttura ad albero, detta \textbf{Albero BFS}, che memorizza i cammini minimi (in termini di numero di archi) partendo da una radice $r$ verso tutti i nodi raggiungibili.\\
+    Ricordiamo che, in un grafo non pesato, il \textbf{cammino minimo} coincide sempre con il cammino che attraversa il \textbf{minor numero di archi}.
+
+    \vspace{-8pt}
+    \subsubsection*{Passo 1: Memorizzazione e Costruzione}
+
+    \vspace{-10pt}
+    \begin{algorithm}
+        \caption{distance(GRAPH $G$, NODE $r$, \textbf{int}[] $distance$, \textcolor{red}{NODE[] $parent$} )}
+        \begin{algorithmic}[1]
+            \State QUEUE $Q = \text{Queue}()$
+            \State $Q.\text{enqueue}(r)$
+            \State
+            \ForAll{$u \in G.V() - \{r\}$}
+                \State $distance[u] = \infty$ \quad \textcolor{commentcolor}{// Si inizializzano tutte le distanze a $\infty$}
+            \EndFor
+            \State
+            \State $distance[r] = 0$ \quad \textcolor{commentcolor}{// Si mette la distanza della radice pari a 0}
+            \State \textcolor{red}{parent[r] = nil} \quad \textcolor{commentcolor}{// Si mette il padre della radice come null}
+            \State
+            \While{\textbf{not} $Q.\text{isEmpty}()$}
+                \State NODE $u = Q.\text{dequeue}()$
+                \ForAll{$v \in G.\text{adj}(u)$}
+                    \If{$distance[v] == \infty$} \quad \textcolor{commentcolor}{// Se il nodo $v$ non è stato scoperto}
+                        \State $distance[v] = distance[u] + 1$
+                        \State \textcolor{red}{$parent[v] = u$}
+                        \State $Q.\text{enqueue}(v)$
+                    \EndIf
+                \EndFor
+            \EndWhile
+        \end{algorithmic}
+    \end{algorithm}
+
+    \noindent
+    Questo codice è come quello visto in precedenza, al quale però sono state aggiunte le parti scritte in rosso. VEdiamo la vogica che c'è dietro: \\[4pt]
+    L'albero viene memorizzato in un vettore \texttt{parent}, dove ogni cella \texttt{parent[v]} contiene il nodo $u$ che ha scoperto $v$. 
+    Durante l'esecuzione della BFS, quando esploriamo un nodo $u$ e troviamo un vicino $v$ non ancora visitato (\texttt{distance[v] = $\infty$}):
+    \begin{itemize}
+        \item Si aggiorna la distanza: \texttt{distance[v] = distance[u] + 1};
+        \item Si imposta il padre: \texttt{parent[v] = u}.
+    \end{itemize}
+
+    \subsubsection*{Passo 2: Ricostruzione del cammino}
+    Per visualizzare il percorso minimo dalla radice \texttt{r} a un nodo destinazione \texttt{s}, si utilizza la procedura ricorsiva \texttt{printPath}. Questa risale il vettore dei padri fino alla radice e stampa i nodi durante il ritorno della ricorsione, garantendo l'ordine corretto.
+
+    \begin{algorithm}
+        \caption{printPath(NODE $r$, NODE $s$, NODE[] $parent$)}
+        \begin{algorithmic}[1]
+            \If{$r == s$} \quad \textcolor{commentcolor}{// Caso base: siamo arrivati alla radice}
+                \State \textbf{print} $s$
+            \ElsIf{$parent[s] == \text{nil}$} \quad \textcolor{commentcolor}{// Il nodo s non è raggiungibile da r}
+                \State \textbf{print} "error"
+            \Else \quad \textcolor{commentcolor}{// Risalita ricorsiva verso la radice}
+                \State \text{printPath}($r, parent[s], parent$)
+                \State \textbf{print} $s$ \quad \textcolor{commentcolor}{// Stampa il nodo durante il ritorno della ricorsione}
+            \EndIf
+        \end{algorithmic}
+    \end{algorithm}
+
+    \noindent
+    L'ordine delle istruzioni nel blocco else è fondamentale. Chiamando la funzione ricorsivamente su \texttt{parent[s]} prima di stampare \texttt{s}, ci assicuriamo che la stampa avvenga in ordine "top-down" (dalla radice alla destinazione), sfruttando lo stack delle chiamate della ricorsione per invertire l'ordine di risalita dei padri.
+
+    \vspace{8pt}
+    \noindent
+    \begin{tcolorbox}
+        [
+            colback=green!10,  % Sfondo verde chiaro
+            colframe=green!60!black,  % Bordo verde più acceso
+            coltitle=black,  % Colore del testo del titolo
+            fonttitle=\bfseries,  % Testo del titolo in grassetto
+            title={\centering \textbf{Appunto di Gemini sulla complessità spaziale}},  % Titolo centrato 
+            enhanced,  % Miglioramenti grafici
+            attach boxed title to top center={yshift=-2mm},  % Posiziona il titolo centrato in alto
+            boxed title style={colback=white, colframe=green!60!black, rounded corners}
+        ]
+        \begin{itemize}[leftmargin=1em]
+            \item Oltre alla memoria per il grafo, l'albero BFS richiede uno spazio aggiuntivo di $O(V)$ per memorizzare il vettore parent;
+            
+            \item La funzione printPath richiede uno spazio di stack ricorsivo proporzionale alla profondità dell'albero (nel caso peggiore $O(V)$).
+        \end{itemize}
+    \end{tcolorbox} 
+
+    \vspace{8pt}
+    \noindent
+    Se ci riferiamo al grafo dell'esempio precedente, una volta terminata la visita avremo una figura come la seguente, nella quale gli archi rossi rappresentano il vettore dei padri:
+
+    \noindent
+    \begin{figure}[H]
+        \centering
+        \vspace{-5pt}  % Riduce lo spazio sopra
+        \subfloat[]{%
+            \adjustbox{valign=c}{\includegraphics[width=0.43\linewidth]{Grafi/img_35.png}}
+        } 
+    \end{figure}
+    \vspace{-40pt} %toglie lo spazio dopo
+    \FloatBarrier
+
     \subsubsection{Complessità BFS}
+    \textcolor{commentcolor!60}{$_{\text{(Ammetto di aver copiato e incollato da Gemini ciò che segue)}}$}
+
+    \vspace{6pt}
+    \noindent
+    L'algoritmo BFS è estremamente efficiente, con una complessità temporale pari a $O(n + m)$. Questo risultato lo rende un algoritmo lineare rispetto alla dimensione della rappresentazione del grafo (nodi + archi).\\
+    Il motivo di questa efficienza risiede nella gestione oculata delle risorse durante la visita:
+
+    \noindent
+    \begin{itemize}[leftmargin=1em]
+
+        \vspace{4pt}
+        \item \textbf{Sui nodi ($n$)}: Grazie all'uso della coda e al controllo della distanza (o del colore), ogni nodo viene inserito e rimosso dalla coda una sola volta. Non ci sono quindi ricalcoli inutili sullo stesso vertice.
+        
+        \vspace{4pt}
+        \item \textbf{Sugli archi ($m$)}: Ogni volta che un nodo viene estratto dalla coda, l'algoritmo esamina i suoi vicini. Questo significa che ogni arco viene analizzato una sola volta (nel caso di grafi orientati) o al massimo due (in quelli non orientati).\\
+        Tecnicamente, il numero di archi analizzati corrisponde alla somma dei gradi uscenti ($d_{out}$) di tutti i nodi.
+        $$m = \sum_{u \in V} d_{out}(u)$$
+    \end{itemize}
+
+    \vspace{4pt}
+    \noindent
+    In sintesi, la BFS impiega un tempo proporzionale alla "grandezza" del grafo, rendendola una scelta ottimale per trovare cammini minimi in strutture dati di grandi dimensioni, a patto di utilizzare una lista di adiacenza per l'esplorazione dei vicini.
 
     \newpage
     \subsection{DFS - Depth-First Search}

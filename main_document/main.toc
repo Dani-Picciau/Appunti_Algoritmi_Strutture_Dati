@@ -119,85 +119,85 @@
 \contentsline {subsubsection}{\numberline {8.5.1}Algoritmo BFS}{121}{subsubsection.8.5.1}%
 \contentsline {subsubsection}{\numberline {8.5.2}Numero di Erd\H {o}s}{121}{subsubsection.8.5.2}%
 \contentsline {subsubsection}{\numberline {8.5.3}Albero BFS}{124}{subsubsection.8.5.3}%
-\contentsline {subsubsection}{\numberline {8.5.4}Complessità BFS}{124}{subsubsection.8.5.4}%
-\contentsline {subsection}{\numberline {8.6}DFS - Depth-First Search}{125}{subsection.8.6}%
-\contentsline {subsubsection}{\numberline {8.6.1}BFS vs DFS}{125}{subsubsection.8.6.1}%
-\contentsline {subsubsection}{\numberline {8.6.2}Iterativa, stack esplicito, pre-order}{125}{subsubsection.8.6.2}%
-\contentsline {subsubsection}{\numberline {8.6.3}DFS e componenti connesse}{125}{subsubsection.8.6.3}%
-\contentsline {subsubsection}{\numberline {8.6.4}DFS e grafi non orientati aciclici}{125}{subsubsection.8.6.4}%
-\contentsline {subsubsection}{\numberline {8.6.5}DFS e grafi orientati aciclici (DAG)}{125}{subsubsection.8.6.5}%
-\contentsline {subsubsection}{\numberline {8.6.6}Schema}{125}{subsubsection.8.6.6}%
-\contentsline {subsubsection}{\numberline {8.6.7}Classificazione degli archi}{125}{subsubsection.8.6.7}%
-\contentsline {subsection}{\numberline {8.7}Ordinamento topologico}{125}{subsection.8.7}%
-\contentsline {section}{\numberline {9} Analisi ammortizzata }{126}{section.9}%
-\contentsline {subsection}{\numberline {9.1}Metodi per eseguire l'analisi}{126}{subsection.9.1}%
-\contentsline {subsection}{\numberline {9.2}Esempio: Contatore binario}{126}{subsection.9.2}%
-\contentsline {subsection}{\numberline {9.3}Metodo dell'aggregazione}{127}{subsection.9.3}%
-\contentsline {subsection}{\numberline {9.4}Metodo degli accantonamenti}{128}{subsection.9.4}%
-\contentsline {subsection}{\numberline {9.5}Metodo del potenziale}{131}{subsection.9.5}%
-\contentsline {subsection}{\numberline {9.6}Analisi ammortizzata e strutture dati: Array VS Liste}{132}{subsection.9.6}%
-\contentsline {subsubsection}{\numberline {9.6.1}Array dinamici}{132}{subsubsection.9.6.1}%
-\contentsline {subsubsection}{\numberline {9.6.2}Array dinamici - Espansione}{133}{subsubsection.9.6.2}%
-\contentsline {subsubsection}{\numberline {9.6.3}Analisi ammortizzata - Raddoppiamento del vettore}{133}{subsubsection.9.6.3}%
-\contentsline {subsubsection}{\numberline {9.6.4}Analisi ammortizzata - Incremento del vettore}{134}{subsubsection.9.6.4}%
-\contentsline {section}{\numberline {10}Programmazione Dinamica}{136}{section.10}%
-\contentsline {subsection}{\numberline {10.1}Idea generale}{136}{subsection.10.1}%
-\contentsline {subsubsection}{\numberline {10.1.1}Fasi della risoluzione del problema}{136}{subsubsection.10.1.1}%
-\contentsline {subsection}{\numberline {10.2}Esempio - Coefficiente binomiale}{136}{subsection.10.2}%
-\contentsline {subsection}{\numberline {10.3}Quando usare la programmazione dinamica}{137}{subsection.10.3}%
-\contentsline {subsection}{\numberline {10.4}String Match Approssimato}{138}{subsection.10.4}%
-\contentsline {subsubsection}{\numberline {10.4.1}Esempio}{138}{subsubsection.10.4.1}%
-\contentsline {subsubsection}{\numberline {10.4.2}4 possibilità:}{138}{subsubsection.10.4.2}%
-\contentsline {subsubsection}{\numberline {10.4.3}Esempio 1}{140}{subsubsection.10.4.3}%
-\contentsline {subsubsection}{\numberline {10.4.4}Esempio 2}{141}{subsubsection.10.4.4}%
-\contentsline {subsubsection}{\numberline {10.4.5}Esempio 3}{142}{subsubsection.10.4.5}%
-\contentsline {subsubsection}{\numberline {10.4.6}Esempio 4}{142}{subsubsection.10.4.6}%
-\contentsline {subsubsection}{\numberline {10.4.7}Algoritmo}{143}{subsubsection.10.4.7}%
-\contentsline {subsubsection}{\numberline {10.4.8}Reality check}{143}{subsubsection.10.4.8}%
-\contentsline {subsection}{\numberline {10.5}Insieme indipendente di intervalli pestai}{143}{subsection.10.5}%
-\contentsline {subsubsection}{\numberline {10.5.1}Esempio: insieme indipendente di peso massimo}{144}{subsubsection.10.5.1}%
-\contentsline {subsubsection}{\numberline {10.5.2}Pre-elaborazione}{144}{subsubsection.10.5.2}%
-\contentsline {subsubsection}{\numberline {10.5.3}Individuazione sottostruttura ottima (forma ricorsiva)}{146}{subsubsection.10.5.3}%
-\contentsline {subsubsection}{\numberline {10.5.4}Algoritmo iterativo}{147}{subsubsection.10.5.4}%
-\contentsline {subsubsection}{\numberline {10.5.5}Costo computazionale}{147}{subsubsection.10.5.5}%
-\contentsline {subsection}{\numberline {10.6}Zaino (Knapsack)}{148}{subsection.10.6}%
-\contentsline {subsubsection}{\numberline {10.6.1}Definizione matematica della soluzione}{148}{subsubsection.10.6.1}%
-\contentsline {subsubsection}{\numberline {10.6.2}Parte ricorsiva}{148}{subsubsection.10.6.2}%
-\contentsline {subsubsection}{\numberline {10.6.3}Casi base}{149}{subsubsection.10.6.3}%
-\contentsline {subsubsection}{\numberline {10.6.4}Zaino algoritmo}{150}{subsubsection.10.6.4}%
-\contentsline {subsubsection}{\numberline {10.6.5}Esempio}{151}{subsubsection.10.6.5}%
-\contentsline {subsubsection}{\numberline {10.6.6}Complessità computazionale}{151}{subsubsection.10.6.6}%
-\contentsline {subsection}{\numberline {10.7}Memoization - Introduzione}{151}{subsection.10.7}%
-\contentsline {subsubsection}{\numberline {10.7.1}Zaino con Memoization}{151}{subsubsection.10.7.1}%
-\contentsline {subsubsection}{\numberline {10.7.2}Algoritmo zaino con Memoization}{152}{subsubsection.10.7.2}%
-\contentsline {subsubsection}{\numberline {10.7.3}Complessità}{152}{subsubsection.10.7.3}%
-\contentsline {subsubsection}{\numberline {10.7.4}Zaino Memoization: utilizzo tabella come cache}{152}{subsubsection.10.7.4}%
-\contentsline {subsubsection}{\numberline {10.7.5}Dizionario vs Tabella}{153}{subsubsection.10.7.5}%
-\contentsline {subsubsection}{\numberline {10.7.6}Approccio generale}{154}{subsubsection.10.7.6}%
-\contentsline {subsubsection}{\numberline {10.7.7}Riassunto: programmazione dinamica/memoization}{154}{subsubsection.10.7.7}%
-\contentsline {section}{\numberline {11}Hashing}{155}{section.11}%
-\contentsline {subsection}{\numberline {11.1}Tabelle ad accesso diretto}{156}{subsection.11.1}%
-\contentsline {subsubsection}{\numberline {11.1.1}Funzioni hash perfette}{156}{subsubsection.11.1.1}%
-\contentsline {subsection}{\numberline {11.2}Minimizzare le collisoni}{157}{subsection.11.2}%
-\contentsline {subsection}{\numberline {11.3}Come realizzare una funzione hash}{158}{subsection.11.3}%
-\contentsline {subsubsection}{\numberline {11.3.1}Metodo dell'estrazione}{159}{subsubsection.11.3.1}%
-\contentsline {subsubsection}{\numberline {11.3.2}Metodo dello XOR}{159}{subsubsection.11.3.2}%
-\contentsline {subsubsection}{\numberline {11.3.3}Metodo della divisione}{160}{subsubsection.11.3.3}%
-\contentsline {subsubsection}{\numberline {11.3.4}Metodo della moltiplicazione (Knuth)}{162}{subsubsection.11.3.4}%
-\contentsline {subsection}{\numberline {11.4}Gestione delle collisioni}{163}{subsection.11.4}%
-\contentsline {subsubsection}{\numberline {11.4.1}Liste di trabocco (concatenamento o chaining)}{164}{subsubsection.11.4.1}%
-\contentsline {subsubsection}{\numberline {11.4.2}Liste di trabocco: analisi della complessità}{165}{subsubsection.11.4.2}%
-\contentsline {subsubsection}{\numberline {11.4.3}Indirizzamento aperto (memorizzazione interna)}{166}{subsubsection.11.4.3}%
-\contentsline {subsubsection}{\numberline {11.4.4}Indirizzamento aperto: analisi della complessità}{167}{subsubsection.11.4.4}%
-\contentsline {subsubsection}{\numberline {11.4.5}Indirizzamento aperto: ispezione lineare}{169}{subsubsection.11.4.5}%
-\contentsline {subsubsection}{\numberline {11.4.6}Indirizzamento aperto: ispezione quadratica}{169}{subsubsection.11.4.6}%
-\contentsline {subsubsection}{\numberline {11.4.7}Indirizzamento aperto: doppio hashing}{170}{subsubsection.11.4.7}%
-\contentsline {subsubsection}{\numberline {11.4.8}Indirizzamento aperto: cancellazione}{170}{subsubsection.11.4.8}%
-\contentsline {subsection}{\numberline {11.5}Implementazione dell'hashing doppio}{171}{subsection.11.5}%
-\contentsline {subsubsection}{\numberline {11.5.1}Definizione delle variabili}{171}{subsubsection.11.5.1}%
-\contentsline {subsubsection}{\numberline {11.5.2}La funzione \texttt {hash}}{172}{subsubsection.11.5.2}%
-\contentsline {subsubsection}{\numberline {11.5.3}La funzione \texttt {scan}}{172}{subsubsection.11.5.3}%
-\contentsline {subsubsection}{\numberline {11.5.4}Le funzioni \texttt {lookup} e \texttt {insert}}{173}{subsubsection.11.5.4}%
-\contentsline {subsubsection}{\numberline {11.5.5}La funzione \texttt {remove}}{174}{subsubsection.11.5.5}%
-\contentsline {subsection}{\numberline {11.6}Complessità}{174}{subsection.11.6}%
-\contentsline {subsubsection}{\numberline {11.6.1}Ristrutturazione}{175}{subsubsection.11.6.1}%
+\contentsline {subsubsection}{\numberline {8.5.4}Complessità BFS}{126}{subsubsection.8.5.4}%
+\contentsline {subsection}{\numberline {8.6}DFS - Depth-First Search}{127}{subsection.8.6}%
+\contentsline {subsubsection}{\numberline {8.6.1}BFS vs DFS}{127}{subsubsection.8.6.1}%
+\contentsline {subsubsection}{\numberline {8.6.2}Iterativa, stack esplicito, pre-order}{127}{subsubsection.8.6.2}%
+\contentsline {subsubsection}{\numberline {8.6.3}DFS e componenti connesse}{127}{subsubsection.8.6.3}%
+\contentsline {subsubsection}{\numberline {8.6.4}DFS e grafi non orientati aciclici}{127}{subsubsection.8.6.4}%
+\contentsline {subsubsection}{\numberline {8.6.5}DFS e grafi orientati aciclici (DAG)}{127}{subsubsection.8.6.5}%
+\contentsline {subsubsection}{\numberline {8.6.6}Schema}{127}{subsubsection.8.6.6}%
+\contentsline {subsubsection}{\numberline {8.6.7}Classificazione degli archi}{127}{subsubsection.8.6.7}%
+\contentsline {subsection}{\numberline {8.7}Ordinamento topologico}{127}{subsection.8.7}%
+\contentsline {section}{\numberline {9} Analisi ammortizzata }{128}{section.9}%
+\contentsline {subsection}{\numberline {9.1}Metodi per eseguire l'analisi}{128}{subsection.9.1}%
+\contentsline {subsection}{\numberline {9.2}Esempio: Contatore binario}{128}{subsection.9.2}%
+\contentsline {subsection}{\numberline {9.3}Metodo dell'aggregazione}{129}{subsection.9.3}%
+\contentsline {subsection}{\numberline {9.4}Metodo degli accantonamenti}{130}{subsection.9.4}%
+\contentsline {subsection}{\numberline {9.5}Metodo del potenziale}{133}{subsection.9.5}%
+\contentsline {subsection}{\numberline {9.6}Analisi ammortizzata e strutture dati: Array VS Liste}{134}{subsection.9.6}%
+\contentsline {subsubsection}{\numberline {9.6.1}Array dinamici}{134}{subsubsection.9.6.1}%
+\contentsline {subsubsection}{\numberline {9.6.2}Array dinamici - Espansione}{135}{subsubsection.9.6.2}%
+\contentsline {subsubsection}{\numberline {9.6.3}Analisi ammortizzata - Raddoppiamento del vettore}{135}{subsubsection.9.6.3}%
+\contentsline {subsubsection}{\numberline {9.6.4}Analisi ammortizzata - Incremento del vettore}{136}{subsubsection.9.6.4}%
+\contentsline {section}{\numberline {10}Programmazione Dinamica}{138}{section.10}%
+\contentsline {subsection}{\numberline {10.1}Idea generale}{138}{subsection.10.1}%
+\contentsline {subsubsection}{\numberline {10.1.1}Fasi della risoluzione del problema}{138}{subsubsection.10.1.1}%
+\contentsline {subsection}{\numberline {10.2}Esempio - Coefficiente binomiale}{138}{subsection.10.2}%
+\contentsline {subsection}{\numberline {10.3}Quando usare la programmazione dinamica}{139}{subsection.10.3}%
+\contentsline {subsection}{\numberline {10.4}String Match Approssimato}{140}{subsection.10.4}%
+\contentsline {subsubsection}{\numberline {10.4.1}Esempio}{140}{subsubsection.10.4.1}%
+\contentsline {subsubsection}{\numberline {10.4.2}4 possibilità:}{140}{subsubsection.10.4.2}%
+\contentsline {subsubsection}{\numberline {10.4.3}Esempio 1}{142}{subsubsection.10.4.3}%
+\contentsline {subsubsection}{\numberline {10.4.4}Esempio 2}{143}{subsubsection.10.4.4}%
+\contentsline {subsubsection}{\numberline {10.4.5}Esempio 3}{144}{subsubsection.10.4.5}%
+\contentsline {subsubsection}{\numberline {10.4.6}Esempio 4}{144}{subsubsection.10.4.6}%
+\contentsline {subsubsection}{\numberline {10.4.7}Algoritmo}{145}{subsubsection.10.4.7}%
+\contentsline {subsubsection}{\numberline {10.4.8}Reality check}{145}{subsubsection.10.4.8}%
+\contentsline {subsection}{\numberline {10.5}Insieme indipendente di intervalli pestai}{145}{subsection.10.5}%
+\contentsline {subsubsection}{\numberline {10.5.1}Esempio: insieme indipendente di peso massimo}{146}{subsubsection.10.5.1}%
+\contentsline {subsubsection}{\numberline {10.5.2}Pre-elaborazione}{146}{subsubsection.10.5.2}%
+\contentsline {subsubsection}{\numberline {10.5.3}Individuazione sottostruttura ottima (forma ricorsiva)}{148}{subsubsection.10.5.3}%
+\contentsline {subsubsection}{\numberline {10.5.4}Algoritmo iterativo}{149}{subsubsection.10.5.4}%
+\contentsline {subsubsection}{\numberline {10.5.5}Costo computazionale}{149}{subsubsection.10.5.5}%
+\contentsline {subsection}{\numberline {10.6}Zaino (Knapsack)}{150}{subsection.10.6}%
+\contentsline {subsubsection}{\numberline {10.6.1}Definizione matematica della soluzione}{150}{subsubsection.10.6.1}%
+\contentsline {subsubsection}{\numberline {10.6.2}Parte ricorsiva}{150}{subsubsection.10.6.2}%
+\contentsline {subsubsection}{\numberline {10.6.3}Casi base}{151}{subsubsection.10.6.3}%
+\contentsline {subsubsection}{\numberline {10.6.4}Zaino algoritmo}{152}{subsubsection.10.6.4}%
+\contentsline {subsubsection}{\numberline {10.6.5}Esempio}{153}{subsubsection.10.6.5}%
+\contentsline {subsubsection}{\numberline {10.6.6}Complessità computazionale}{153}{subsubsection.10.6.6}%
+\contentsline {subsection}{\numberline {10.7}Memoization - Introduzione}{153}{subsection.10.7}%
+\contentsline {subsubsection}{\numberline {10.7.1}Zaino con Memoization}{153}{subsubsection.10.7.1}%
+\contentsline {subsubsection}{\numberline {10.7.2}Algoritmo zaino con Memoization}{154}{subsubsection.10.7.2}%
+\contentsline {subsubsection}{\numberline {10.7.3}Complessità}{154}{subsubsection.10.7.3}%
+\contentsline {subsubsection}{\numberline {10.7.4}Zaino Memoization: utilizzo tabella come cache}{154}{subsubsection.10.7.4}%
+\contentsline {subsubsection}{\numberline {10.7.5}Dizionario vs Tabella}{155}{subsubsection.10.7.5}%
+\contentsline {subsubsection}{\numberline {10.7.6}Approccio generale}{156}{subsubsection.10.7.6}%
+\contentsline {subsubsection}{\numberline {10.7.7}Riassunto: programmazione dinamica/memoization}{156}{subsubsection.10.7.7}%
+\contentsline {section}{\numberline {11}Hashing}{157}{section.11}%
+\contentsline {subsection}{\numberline {11.1}Tabelle ad accesso diretto}{158}{subsection.11.1}%
+\contentsline {subsubsection}{\numberline {11.1.1}Funzioni hash perfette}{158}{subsubsection.11.1.1}%
+\contentsline {subsection}{\numberline {11.2}Minimizzare le collisoni}{159}{subsection.11.2}%
+\contentsline {subsection}{\numberline {11.3}Come realizzare una funzione hash}{160}{subsection.11.3}%
+\contentsline {subsubsection}{\numberline {11.3.1}Metodo dell'estrazione}{161}{subsubsection.11.3.1}%
+\contentsline {subsubsection}{\numberline {11.3.2}Metodo dello XOR}{161}{subsubsection.11.3.2}%
+\contentsline {subsubsection}{\numberline {11.3.3}Metodo della divisione}{162}{subsubsection.11.3.3}%
+\contentsline {subsubsection}{\numberline {11.3.4}Metodo della moltiplicazione (Knuth)}{164}{subsubsection.11.3.4}%
+\contentsline {subsection}{\numberline {11.4}Gestione delle collisioni}{165}{subsection.11.4}%
+\contentsline {subsubsection}{\numberline {11.4.1}Liste di trabocco (concatenamento o chaining)}{166}{subsubsection.11.4.1}%
+\contentsline {subsubsection}{\numberline {11.4.2}Liste di trabocco: analisi della complessità}{167}{subsubsection.11.4.2}%
+\contentsline {subsubsection}{\numberline {11.4.3}Indirizzamento aperto (memorizzazione interna)}{168}{subsubsection.11.4.3}%
+\contentsline {subsubsection}{\numberline {11.4.4}Indirizzamento aperto: analisi della complessità}{169}{subsubsection.11.4.4}%
+\contentsline {subsubsection}{\numberline {11.4.5}Indirizzamento aperto: ispezione lineare}{171}{subsubsection.11.4.5}%
+\contentsline {subsubsection}{\numberline {11.4.6}Indirizzamento aperto: ispezione quadratica}{171}{subsubsection.11.4.6}%
+\contentsline {subsubsection}{\numberline {11.4.7}Indirizzamento aperto: doppio hashing}{172}{subsubsection.11.4.7}%
+\contentsline {subsubsection}{\numberline {11.4.8}Indirizzamento aperto: cancellazione}{172}{subsubsection.11.4.8}%
+\contentsline {subsection}{\numberline {11.5}Implementazione dell'hashing doppio}{173}{subsection.11.5}%
+\contentsline {subsubsection}{\numberline {11.5.1}Definizione delle variabili}{173}{subsubsection.11.5.1}%
+\contentsline {subsubsection}{\numberline {11.5.2}La funzione \texttt {hash}}{174}{subsubsection.11.5.2}%
+\contentsline {subsubsection}{\numberline {11.5.3}La funzione \texttt {scan}}{174}{subsubsection.11.5.3}%
+\contentsline {subsubsection}{\numberline {11.5.4}Le funzioni \texttt {lookup} e \texttt {insert}}{175}{subsubsection.11.5.4}%
+\contentsline {subsubsection}{\numberline {11.5.5}La funzione \texttt {remove}}{176}{subsubsection.11.5.5}%
+\contentsline {subsection}{\numberline {11.6}Complessità}{176}{subsection.11.6}%
+\contentsline {subsubsection}{\numberline {11.6.1}Ristrutturazione}{177}{subsubsection.11.6.1}%
