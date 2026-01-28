@@ -1,35 +1,35 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.8.18)  27 JAN 2026 18:50
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.3.9)  28 JAN 2026 15:56
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"c:/Users/Casa/Desktop/UNISS/Secondo anno/Algoritmi e strutture dati/Appunti completi/Appunti_Algoritmi_Strutture_Dati/main_document/main.tex"
-(c:/Users/Casa/Desktop/UNISS/Secondo anno/Algoritmi e strutture dati/Appunti completi/Appunti_Algoritmi_Strutture_Dati/main_document/main.tex
-LaTeX2e <2025-06-01> patch level 1
-L3 programming layer <2025-07-20>
-(C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
-Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
-(C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/base\size12.clo
-File: size12.clo 2025/01/22 v1.4n Standard LaTeX file (size option)
+**c:/Users/dany2/OneDrive/Desktop/UniSassari/Appunti_latex/Appunti_Algoritmi_Strutture_Dati/main_document/main.tex
+(c:/Users/dany2/OneDrive/Desktop/UniSassari/Appunti_latex/Appunti_Algoritmi_Strutture_Dati/main_document/main.tex
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2024-01-04>
+(C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
+Document Class: article 2023/05/17 v1.4n Standard LaTeX document class
+(C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/base\size12.clo
+File: size12.clo 2023/05/17 v1.4n Standard LaTeX file (size option)
 )
-\c@part=\count275
-\c@section=\count276
-\c@subsection=\count277
-\c@subsubsection=\count278
-\c@paragraph=\count279
-\c@subparagraph=\count280
-\c@figure=\count281
-\c@table=\count282
-\abovecaptionskip=\skip49
-\belowcaptionskip=\skip50
-\bibindent=\dimen148
-) (../packages/packages.tex (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty
-Package: inputenc 2024/02/08 v1.3d Input encoding file
+\c@part=\count187
+\c@section=\count188
+\c@subsection=\count189
+\c@subsubsection=\count190
+\c@paragraph=\count191
+\c@subparagraph=\count192
+\c@figure=\count193
+\c@table=\count194
+\abovecaptionskip=\skip48
+\belowcaptionskip=\skip49
+\bibindent=\dimen140
+) (../packages/packages.tex (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty
+Package: inputenc 2021/02/14 v1.3d Input encoding file
 \inpenc@prehook=\toks17
 \inpenc@posthook=\toks18
-) (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
-Package: fontenc 2024/12/21 v2.1c Standard LaTeX package
-) (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/lm\lmodern.sty
+) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/lm\lmodern.sty
 Package: lmodern 2015/05/01 v1.6.1 Latin Modern Fonts
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  OT1/cmr/m/n --> OT1/lmr/m/n on input line 22.
@@ -63,489 +63,498 @@ LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 (Font)                  OT1/cmr/bx/it --> OT1/lmr/bx/it on input line 37.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 (Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 38.
-) (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
-Package: graphicx 2024/12/31 v1.2e Enhanced LaTeX Graphics (DPC,SPQR)
- (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
+) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+ (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
 Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
 \KV@toks@=\toks19
-) (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
-Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
- (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
-Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
-) (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.cfg
+) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
+Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
+ (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
-Package graphics Info: Driver file: pdftex.def on input line 106.
- (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
-File: pdftex.def 2024/04/13 v1.2c Graphics/color driver for pdftex
+Package graphics Info: Driver file: pdftex.def on input line 107.
+ (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
+File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
 ))
-\Gin@req@height=\dimen149
-\Gin@req@width=\dimen150
-) (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\charter.sty
+\Gin@req@height=\dimen141
+\Gin@req@width=\dimen142
+) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\charter.sty
 Package: charter 2020/03/25 PSNFSS-v9.3 (P.Dyballa) 
-) (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/microtype\microtype.sty
-Package: microtype 2025/07/09 v3.2b Micro-typographical refinements (RS)
- (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty
-Package: etoolbox 2025/02/11 v2.5l e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count283
+) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/microtype\microtype.sty
+Package: microtype 2025/02/11 v3.2a Micro-typographical refinements (RS)
+ (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count195
 )
 \MT@toks=\toks20
-\MT@tempbox=\box53
-\MT@count=\count284
+\MT@tempbox=\box51
+\MT@count=\count196
 LaTeX Info: Redefining \noprotrusionifhmode on input line 1087.
 LaTeX Info: Redefining \leftprotrusion on input line 1088.
 \MT@prot@toks=\toks21
 LaTeX Info: Redefining \rightprotrusion on input line 1107.
 LaTeX Info: Redefining \textls on input line 1449.
-\MT@outer@kern=\dimen151
+\MT@outer@kern=\dimen143
 LaTeX Info: Redefining \microtypecontext on input line 2053.
 LaTeX Info: Redefining \textmicrotypecontext on input line 2070.
-\MT@listname@count=\count285
- (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/microtype\microtype-pdftex.def
-File: microtype-pdftex.def 2025/07/09 v3.2b Definitions specific to pdftex (RS)
+\MT@listname@count=\count197
+ (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/microtype\microtype-pdftex.def
+File: microtype-pdftex.def 2025/02/11 v3.2a Definitions specific to pdftex (RS)
 LaTeX Info: Redefining \lsstyle on input line 944.
 LaTeX Info: Redefining \lslig on input line 944.
-\MT@outer@space=\skip51
+\MT@outer@space=\skip50
 )
 Package microtype Info: Loading configuration file microtype.cfg.
- (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/microtype\microtype.cfg
-File: microtype.cfg 2025/07/09 v3.2b microtype main configuration file (RS)
+ (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/microtype\microtype.cfg
+File: microtype.cfg 2025/02/11 v3.2a microtype main configuration file (RS)
 )
 LaTeX Info: Redefining \microtypesetup on input line 3065.
-) (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/titling\titling.sty
+) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/titling\titling.sty
 Package: titling 2009/09/04 v2.1d maketitle typesetting
-\thanksmarkwidth=\skip52
-\thanksmargin=\skip53
-\droptitle=\skip54
-) (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
+\thanksmarkwidth=\skip51
+\thanksmargin=\skip52
+\droptitle=\skip53
+) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
- (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty
+ (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
- (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
-Package: iftex 2024/12/12 v1.0g TeX engine tests
+ (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
+Package: iftex 2022/02/03 v1.0f TeX engine tests
 ))
-\Gm@cnth=\count286
-\Gm@cntv=\count287
-\c@Gm@tempcnt=\count288
-\Gm@bindingoffset=\dimen152
-\Gm@wd@mp=\dimen153
-\Gm@odd@mp=\dimen154
-\Gm@even@mp=\dimen155
-\Gm@layoutwidth=\dimen156
-\Gm@layoutheight=\dimen157
-\Gm@layouthoffset=\dimen158
-\Gm@layoutvoffset=\dimen159
+\Gm@cnth=\count198
+\Gm@cntv=\count199
+\c@Gm@tempcnt=\count266
+\Gm@bindingoffset=\dimen144
+\Gm@wd@mp=\dimen145
+\Gm@odd@mp=\dimen146
+\Gm@even@mp=\dimen147
+\Gm@layoutwidth=\dimen148
+\Gm@layoutheight=\dimen149
+\Gm@layouthoffset=\dimen150
+\Gm@layoutvoffset=\dimen151
 \Gm@dimlist=\toks22
- (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg)) (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/setspace\setspace.sty
+ (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg)) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/setspace\setspace.sty
 Package: setspace 2022/12/04 v6.7b set line spacing
-) (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/enumitem\enumitem.sty
+) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/enumitem\enumitem.sty
 Package: enumitem 2025/02/06 v3.11 Customized lists
-\labelindent=\skip55
-\enit@outerparindent=\dimen160
+\labelindent=\skip54
+\enit@outerparindent=\dimen152
 \enit@toks=\toks23
-\enit@inbox=\box54
-\enit@count@id=\count289
-\enitdp@description=\count290
-) (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
+\enit@inbox=\box52
+\enit@count@id=\count267
+\enitdp@description=\count268
+) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count291
+\c@float@type=\count269
 \float@exts=\toks24
-\float@box=\box55
+\float@box=\box53
 \@float@everytoks=\toks25
-\@floatcapt=\box56
-) (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/wrapfig\wrapfig.sty
-\wrapoverhang=\dimen161
-\WF@size=\dimen162
-\c@WF@wrappedlines=\count292
-\WF@box=\box57
+\@floatcapt=\box54
+) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/wrapfig\wrapfig.sty
+\wrapoverhang=\dimen153
+\WF@size=\dimen154
+\c@WF@wrappedlines=\count270
+\WF@box=\box55
 \WF@everypar=\toks26
 Package: wrapfig 2003/01/31  v 3.6
-) (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/subfig\subfig.sty
+) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/subfig\subfig.sty
 Package: subfig 2005/06/28 ver: 1.3 subfig package
- (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption.sty
+ (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption.sty
 Package: caption 2023/08/05 v3.6o Customizing captions (AR)
- (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption3.sty
+ (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption3.sty
 Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
-\caption@tempdima=\dimen163
-\captionmargin=\dimen164
-\caption@leftmargin=\dimen165
-\caption@rightmargin=\dimen166
-\caption@width=\dimen167
-\caption@indent=\dimen168
-\caption@parindent=\dimen169
-\caption@hangindent=\dimen170
+\caption@tempdima=\dimen155
+\captionmargin=\dimen156
+\caption@leftmargin=\dimen157
+\caption@rightmargin=\dimen158
+\caption@width=\dimen159
+\caption@indent=\dimen160
+\caption@parindent=\dimen161
+\caption@hangindent=\dimen162
 Package caption Info: Standard document class detected.
 )
-\c@caption@flags=\count293
-\c@continuedfloat=\count294
+\c@caption@flags=\count271
+\c@continuedfloat=\count272
 Package caption Info: float package is loaded.
 Package caption Info: wrapfig package is loaded.
 )
-\c@KVtest=\count295
-\sf@farskip=\skip56
-\sf@captopadj=\dimen171
-\sf@capskip=\skip57
-\sf@nearskip=\skip58
-\c@subfigure=\count296
-\c@subfigure@save=\count297
-\c@lofdepth=\count298
-\c@subtable=\count299
-\c@subtable@save=\count300
-\c@lotdepth=\count301
-\sf@top=\skip59
-\sf@bottom=\skip60
-) (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/tools\xr.sty
-Package: xr 2024-12-22 v6.00 eXternal References (DPC)
-) (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
-Package: hyperref 2025-07-12 v7.01o Hypertext links for LaTeX
- (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/kvsetkeys\kvsetkeys.sty
-Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
-) (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\kvdefinekeys.sty
-Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
-) (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/generic/pdfescape\pdfescape.sty
-Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
- (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty
-Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
-) (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdftexcmds.sty
-Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)
- (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwarerr.sty
+\c@KVtest=\count273
+\sf@farskip=\skip55
+\sf@captopadj=\dimen163
+\sf@capskip=\skip56
+\sf@nearskip=\skip57
+\c@subfigure=\count274
+\c@subfigure@save=\count275
+\c@lofdepth=\count276
+\c@subtable=\count277
+\c@subtable@save=\count278
+\c@lotdepth=\count279
+\sf@top=\skip58
+\sf@bottom=\skip59
+) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/tools\xr.sty
+Package: xr 2023-07-04 v5.06 eXternal References (DPC)
+) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
+Package: hyperref 2023-11-26 v7.01g Hypertext links for LaTeX
+ (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwarerr.sty
 Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
-)
+) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/kvsetkeys\kvsetkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/generic/pdfescape\pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+ (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty
+Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
+) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
-)) (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/hycolor\hycolor.sty
+)) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/hycolor\hycolor.sty
 Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
-) (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
-Package: nameref 2025-06-21 v2.57 Cross-referencing by name of section
- (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/refcount\refcount.sty
+) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/letltxmacro\letltxmacro.sty
+Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
+) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/auxhook\auxhook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
+Package: nameref 2023-11-26 v2.56 Cross-referencing by name of section
+ (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/refcount\refcount.sty
 Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
-) (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/generic/gettitlestring\gettitlestring.sty
+) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/generic/gettitlestring\gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
- (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.sty
+ (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.sty
 Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
 ))
-\c@section@level=\count302
-) (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/generic/stringenc\stringenc.sty
-Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO)
+\c@section@level=\count280
 )
-\@linkdim=\dimen172
-\Hy@linkcounter=\count303
-\Hy@pagecounter=\count304
- (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
-File: pd1enc.def 2025-07-12 v7.01o Hyperref: PDFDocEncoding definition (HO)
+\@linkdim=\dimen164
+\Hy@linkcounter=\count281
+\Hy@pagecounter=\count282
+ (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
+File: pd1enc.def 2023-11-26 v7.01g Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
-) (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc.sty
+) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
-\Hy@SavedSpaceFactor=\count305
- (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def
-File: puenc.def 2025-07-12 v7.01o Hyperref: PDF Unicode definition (HO)
+\Hy@SavedSpaceFactor=\count283
+ (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def
+File: puenc.def 2023-11-26 v7.01g Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
 ... no UTF-8 mapping file for font encoding PU
 )
-Package hyperref Info: Hyper figures OFF on input line 4195.
-Package hyperref Info: Link nesting OFF on input line 4200.
-Package hyperref Info: Hyper index ON on input line 4203.
-Package hyperref Info: Plain pages OFF on input line 4210.
-Package hyperref Info: Backreferencing OFF on input line 4215.
+Package hyperref Info: Hyper figures OFF on input line 4181.
+Package hyperref Info: Link nesting OFF on input line 4186.
+Package hyperref Info: Hyper index ON on input line 4189.
+Package hyperref Info: Plain pages OFF on input line 4196.
+Package hyperref Info: Backreferencing OFF on input line 4201.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
-Package hyperref Info: Bookmarks ON on input line 4462.
-\c@Hy@tempcnt=\count306
- (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
-\Urlmuskip=\muskip17
+Package hyperref Info: Bookmarks ON on input line 4448.
+\c@Hy@tempcnt=\count284
+ (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
+\Urlmuskip=\muskip16
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-LaTeX Info: Redefining \url on input line 4801.
-\XeTeXLinkMargin=\dimen173
- (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
+LaTeX Info: Redefining \url on input line 4786.
+\XeTeXLinkMargin=\dimen165
+ (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
- (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/generic/bigintcalc\bigintcalc.sty
+ (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/generic/bigintcalc\bigintcalc.sty
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
 ))
-\Fld@menulength=\count307
-\Field@Width=\dimen174
-\Fld@charsize=\dimen175
-Package hyperref Info: Hyper figures OFF on input line 6078.
-Package hyperref Info: Link nesting OFF on input line 6083.
-Package hyperref Info: Hyper index ON on input line 6086.
-Package hyperref Info: backreferencing OFF on input line 6093.
-Package hyperref Info: Link coloring OFF on input line 6098.
-Package hyperref Info: Link coloring with OCG OFF on input line 6103.
-Package hyperref Info: PDF/A mode OFF on input line 6108.
-\Hy@abspage=\count308
-\c@Item=\count309
-\c@Hfootnote=\count310
+\Fld@menulength=\count285
+\Field@Width=\dimen166
+\Fld@charsize=\dimen167
+Package hyperref Info: Hyper figures OFF on input line 6065.
+Package hyperref Info: Link nesting OFF on input line 6070.
+Package hyperref Info: Hyper index ON on input line 6073.
+Package hyperref Info: backreferencing OFF on input line 6080.
+Package hyperref Info: Link coloring OFF on input line 6085.
+Package hyperref Info: Link coloring with OCG OFF on input line 6090.
+Package hyperref Info: PDF/A mode OFF on input line 6095.
+ (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/base\atbegshi-ltx.sty
+Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
+package with kernel methods
+)
+\Hy@abspage=\count286
+\c@Item=\count287
+\c@Hfootnote=\count288
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
- (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hpdftex.def
-File: hpdftex.def 2025-07-12 v7.01o Hyperref driver for pdfTeX
-\Fld@listcount=\count311
-\c@bookmark@seq@number=\count312
- (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerunfilecheck.sty
-Package: rerunfilecheck 2025-06-21 v1.11 Rerun checks for auxiliary files (HO)
- (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/generic/uniquecounter\uniquecounter.sty
+ (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hpdftex.def
+File: hpdftex.def 2023-11-26 v7.01g Hyperref driver for pdfTeX
+ (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/base\atveryend-ltx.sty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend package
+with kernel methods
+)
+\Fld@listcount=\count289
+\c@bookmark@seq@number=\count290
+ (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerunfilecheck.sty
+Package: rerunfilecheck 2022-07-10 v1.10 Rerun checks for auxiliary files (HO)
+ (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/generic/uniquecounter\uniquecounter.sty
 Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 )
-Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 284.
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 285.
 )
-\Hy@SectionHShift=\skip61
-) (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/booktabs\booktabs.sty
+\Hy@SectionHShift=\skip60
+) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/booktabs\booktabs.sty
 Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
-\heavyrulewidth=\dimen176
-\lightrulewidth=\dimen177
-\cmidrulewidth=\dimen178
-\belowrulesep=\dimen179
-\belowbottomsep=\dimen180
-\aboverulesep=\dimen181
-\abovetopsep=\dimen182
-\cmidrulesep=\dimen183
-\cmidrulekern=\dimen184
-\defaultaddspace=\dimen185
-\@cmidla=\count313
-\@cmidlb=\count314
-\@aboverulesep=\dimen186
-\@belowrulesep=\dimen187
-\@thisruleclass=\count315
-\@lastruleclass=\count316
-\@thisrulewidth=\dimen188
-) (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty
-Package: array 2025/06/08 v2.6j Tabular extension package (FMi)
-\col@sep=\dimen189
-\ar@mcellbox=\box58
-\extrarowheight=\dimen190
+\heavyrulewidth=\dimen168
+\lightrulewidth=\dimen169
+\cmidrulewidth=\dimen170
+\belowrulesep=\dimen171
+\belowbottomsep=\dimen172
+\aboverulesep=\dimen173
+\abovetopsep=\dimen174
+\cmidrulesep=\dimen175
+\cmidrulekern=\dimen176
+\defaultaddspace=\dimen177
+\@cmidla=\count291
+\@cmidlb=\count292
+\@aboverulesep=\dimen178
+\@belowrulesep=\dimen179
+\@thisruleclass=\count293
+\@lastruleclass=\count294
+\@thisrulewidth=\dimen180
+) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty
+Package: array 2023/10/16 v2.5g Tabular extension package (FMi)
+\col@sep=\dimen181
+\ar@mcellbox=\box56
+\extrarowheight=\dimen182
 \NC@list=\toks27
-\extratabsurround=\skip62
-\backup@length=\skip63
-\ar@cellbox=\box59
-) (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/tools\tabularx.sty
-Package: tabularx 2023/12/11 v2.12a `tabularx' package (DPC)
-\TX@col@width=\dimen191
-\TX@old@table=\dimen192
-\TX@old@col=\dimen193
-\TX@target=\dimen194
-\TX@delta=\dimen195
-\TX@cols=\count317
+\extratabsurround=\skip61
+\backup@length=\skip62
+\ar@cellbox=\box57
+) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/tools\tabularx.sty
+Package: tabularx 2023/07/08 v2.11c `tabularx' package (DPC)
+\TX@col@width=\dimen183
+\TX@old@table=\dimen184
+\TX@old@col=\dimen185
+\TX@target=\dimen186
+\TX@delta=\dimen187
+\TX@cols=\count295
 \TX@ftn=\toks28
-) (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/placeins\placeins.sty
+) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/placeins\placeins.sty
 Package: placeins 2005/04/18  v 2.2
-) (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/colortbl\colortbl.sty
-Package: colortbl 2024/10/29 v1.0k Color table columns (DPC)
- (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/graphics\color.sty
-Package: color 2025/01/14 v1.3e Standard LaTeX Color (DPC)
- (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg
+) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/colortbl\colortbl.sty
+Package: colortbl 2024/07/06 v1.0i Color table columns (DPC)
+ (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/graphics\color.sty
+Package: color 2022/01/06 v1.3d Standard LaTeX Color (DPC)
+ (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package color Info: Driver file: pdftex.def on input line 149.
- (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor.ltx))
+ (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor.ltx))
 \everycr=\toks29
-\minrowclearance=\skip64
-\rownum=\count318
-) (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/pgf/frontendlayer\tikz.sty (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgf.sty (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfrcs.sty (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil-common.tex
+\minrowclearance=\skip63
+\rownum=\count296
+) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/pgf/frontendlayer\tikz.sty (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgf.sty (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfrcs.sty (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil-common.tex
 \pgfutil@everybye=\toks30
-\pgfutil@tempdima=\dimen196
-\pgfutil@tempdimb=\dimen197
-) (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil-latex.def
-\pgfutil@abb=\box60
-) (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfrcs.code.tex (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/generic/pgf\pgf.revision.tex)
+\pgfutil@tempdima=\dimen188
+\pgfutil@tempdimb=\dimen189
+) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil-latex.def
+\pgfutil@abb=\box58
+) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfrcs.code.tex (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/generic/pgf\pgf.revision.tex)
 Package: pgfrcs 2023-01-15 v3.1.10 (3.1.10)
 ))
 Package: pgf 2023-01-15 v3.1.10 (3.1.10)
- (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgfcore.sty (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/pgf/systemlayer\pgfsys.sty (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsys.code.tex
+ (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgfcore.sty (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/pgf/systemlayer\pgfsys.sty (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsys.code.tex
 Package: pgfsys 2023-01-15 v3.1.10 (3.1.10)
- (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys.code.tex
+ (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys.code.tex
 \pgfkeys@pathtoks=\toks31
 \pgfkeys@temptoks=\toks32
- (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeyslibraryfiltered.code.tex
+ (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeyslibraryfiltered.code.tex
 \pgfkeys@tmptoks=\toks33
 ))
-\pgf@x=\dimen198
-\pgf@y=\dimen199
-\pgf@xa=\dimen256
-\pgf@ya=\dimen257
-\pgf@xb=\dimen258
-\pgf@yb=\dimen259
-\pgf@xc=\dimen260
-\pgf@yc=\dimen261
-\pgf@xd=\dimen262
-\pgf@yd=\dimen263
+\pgf@x=\dimen190
+\pgf@y=\dimen191
+\pgf@xa=\dimen192
+\pgf@ya=\dimen193
+\pgf@xb=\dimen194
+\pgf@yb=\dimen195
+\pgf@xc=\dimen196
+\pgf@yc=\dimen197
+\pgf@xd=\dimen198
+\pgf@yd=\dimen199
 \w@pgf@writea=\write3
 \r@pgf@reada=\read2
-\c@pgf@counta=\count319
-\c@pgf@countb=\count320
-\c@pgf@countc=\count321
-\c@pgf@countd=\count322
+\c@pgf@counta=\count297
+\c@pgf@countb=\count298
+\c@pgf@countc=\count299
+\c@pgf@countd=\count300
 \t@pgf@toka=\toks34
 \t@pgf@tokb=\toks35
 \t@pgf@tokc=\toks36
-\pgf@sys@id@count=\count323
- (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgf.cfg
+\pgf@sys@id@count=\count301
+ (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgf.cfg
 File: pgf.cfg 2023-01-15 v3.1.10 (3.1.10)
 )
 Driver file for pgf: pgfsys-pdftex.def
- (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsys-pdftex.def
+ (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsys-pdftex.def
 File: pgfsys-pdftex.def 2023-01-15 v3.1.10 (3.1.10)
- (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsys-common-pdf.def
+ (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsys-common-pdf.def
 File: pgfsys-common-pdf.def 2023-01-15 v3.1.10 (3.1.10)
-))) (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsyssoftpath.code.tex
+))) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsyssoftpath.code.tex
 File: pgfsyssoftpath.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfsyssoftpath@smallbuffer@items=\count324
-\pgfsyssoftpath@bigbuffer@items=\count325
-) (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsysprotocol.code.tex
+\pgfsyssoftpath@smallbuffer@items=\count302
+\pgfsyssoftpath@bigbuffer@items=\count303
+) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsysprotocol.code.tex
 File: pgfsysprotocol.code.tex 2023-01-15 v3.1.10 (3.1.10)
-)) (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
-Package: xcolor 2024/09/29 v3.02 LaTeX color extensions (UK)
- (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg
+)) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
+Package: xcolor 2023/11/15 v3.01 LaTeX color extensions (UK)
+ (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package xcolor Info: Driver file: pdftex.def on input line 274.
-LaTeX Info: Redefining \color on input line 762.
- (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor.ltx)
-Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1349.
-Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1353.
-Package xcolor Info: Model `RGB' extended on input line 1365.
-Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1367.
-Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1368.
-Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1369.
-Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1370.
-Package xcolor Info: Model `Gray' substituted by `gray' on input line 1371.
-Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
-) (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcore.code.tex
+LaTeX Info: Redefining \color on input line 758.
+ (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1350.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1354.
+Package xcolor Info: Model `RGB' extended on input line 1366.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1368.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1370.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1371.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1372.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1373.
+) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcore.code.tex
 Package: pgfcore 2023-01-15 v3.1.10 (3.1.10)
- (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.code.tex (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathutil.code.tex) (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathparser.code.tex
-\pgfmath@dimen=\dimen264
-\pgfmath@count=\count326
-\pgfmath@box=\box61
+ (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.code.tex (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathutil.code.tex) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathparser.code.tex
+\pgfmath@dimen=\dimen256
+\pgfmath@count=\count304
+\pgfmath@box=\box59
 \pgfmath@toks=\toks37
 \pgfmath@stack@operand=\toks38
 \pgfmath@stack@operation=\toks39
-) (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.code.tex) (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.basic.code.tex) (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.trigonometric.code.tex) (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.random.code.tex) (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.comparison.code.tex) (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.base.code.tex) (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.round.code.tex) (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.misc.code.tex) (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.integerarithmetics.code.tex) (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathcalc.code.tex) (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count327
-)) (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfint.code.tex) (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepoints.code.tex
+) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.code.tex) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.basic.code.tex) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.trigonometric.code.tex) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.random.code.tex) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.comparison.code.tex) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.base.code.tex) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.round.code.tex) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.misc.code.tex) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.integerarithmetics.code.tex) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathcalc.code.tex) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count305
+)) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfint.code.tex) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepoints.code.tex
 File: pgfcorepoints.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@picminx=\dimen265
-\pgf@picmaxx=\dimen266
-\pgf@picminy=\dimen267
-\pgf@picmaxy=\dimen268
-\pgf@pathminx=\dimen269
-\pgf@pathmaxx=\dimen270
-\pgf@pathminy=\dimen271
-\pgf@pathmaxy=\dimen272
-\pgf@xx=\dimen273
-\pgf@xy=\dimen274
-\pgf@yx=\dimen275
-\pgf@yy=\dimen276
-\pgf@zx=\dimen277
-\pgf@zy=\dimen278
-) (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepathconstruct.code.tex
+\pgf@picminx=\dimen257
+\pgf@picmaxx=\dimen258
+\pgf@picminy=\dimen259
+\pgf@picmaxy=\dimen260
+\pgf@pathminx=\dimen261
+\pgf@pathmaxx=\dimen262
+\pgf@pathminy=\dimen263
+\pgf@pathmaxy=\dimen264
+\pgf@xx=\dimen265
+\pgf@xy=\dimen266
+\pgf@yx=\dimen267
+\pgf@yy=\dimen268
+\pgf@zx=\dimen269
+\pgf@zy=\dimen270
+) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepathconstruct.code.tex
 File: pgfcorepathconstruct.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@path@lastx=\dimen279
-\pgf@path@lasty=\dimen280
-) (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepathusage.code.tex
+\pgf@path@lastx=\dimen271
+\pgf@path@lasty=\dimen272
+) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepathusage.code.tex
 File: pgfcorepathusage.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@shorten@end@additional=\dimen281
-\pgf@shorten@start@additional=\dimen282
-) (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorescopes.code.tex
+\pgf@shorten@end@additional=\dimen273
+\pgf@shorten@start@additional=\dimen274
+) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorescopes.code.tex
 File: pgfcorescopes.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfpic=\box62
-\pgf@hbox=\box63
-\pgf@layerbox@main=\box64
-\pgf@picture@serial@count=\count328
-) (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoregraphicstate.code.tex
+\pgfpic=\box60
+\pgf@hbox=\box61
+\pgf@layerbox@main=\box62
+\pgf@picture@serial@count=\count306
+) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoregraphicstate.code.tex
 File: pgfcoregraphicstate.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgflinewidth=\dimen283
-) (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoretransformations.code.tex
+\pgflinewidth=\dimen275
+) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoretransformations.code.tex
 File: pgfcoretransformations.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@pt@x=\dimen284
-\pgf@pt@y=\dimen285
-\pgf@pt@temp=\dimen286
-) (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorequick.code.tex
+\pgf@pt@x=\dimen276
+\pgf@pt@y=\dimen277
+\pgf@pt@temp=\dimen278
+) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorequick.code.tex
 File: pgfcorequick.code.tex 2023-01-15 v3.1.10 (3.1.10)
-) (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreobjects.code.tex
+) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreobjects.code.tex
 File: pgfcoreobjects.code.tex 2023-01-15 v3.1.10 (3.1.10)
-) (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepathprocessing.code.tex
+) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepathprocessing.code.tex
 File: pgfcorepathprocessing.code.tex 2023-01-15 v3.1.10 (3.1.10)
-) (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorearrows.code.tex
+) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorearrows.code.tex
 File: pgfcorearrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfarrowsep=\dimen287
-) (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreshade.code.tex
+\pgfarrowsep=\dimen279
+) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreshade.code.tex
 File: pgfcoreshade.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@max=\dimen288
-\pgf@sys@shading@range@num=\count329
-\pgf@shadingcount=\count330
-) (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreimage.code.tex
+\pgf@max=\dimen280
+\pgf@sys@shading@range@num=\count307
+\pgf@shadingcount=\count308
+) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreimage.code.tex
 File: pgfcoreimage.code.tex 2023-01-15 v3.1.10 (3.1.10)
-) (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreexternal.code.tex
+) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreexternal.code.tex
 File: pgfcoreexternal.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfexternal@startupbox=\box65
-) (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorelayers.code.tex
+\pgfexternal@startupbox=\box63
+) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorelayers.code.tex
 File: pgfcorelayers.code.tex 2023-01-15 v3.1.10 (3.1.10)
-) (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoretransparency.code.tex
+) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoretransparency.code.tex
 File: pgfcoretransparency.code.tex 2023-01-15 v3.1.10 (3.1.10)
-) (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepatterns.code.tex
+) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepatterns.code.tex
 File: pgfcorepatterns.code.tex 2023-01-15 v3.1.10 (3.1.10)
-) (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorerdf.code.tex
+) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorerdf.code.tex
 File: pgfcorerdf.code.tex 2023-01-15 v3.1.10 (3.1.10)
-))) (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmoduleshapes.code.tex
+))) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmoduleshapes.code.tex
 File: pgfmoduleshapes.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfnodeparttextbox=\box66
-) (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmoduleplot.code.tex
+\pgfnodeparttextbox=\box64
+)
+(C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmoduleplot.code.tex
 File: pgfmoduleplot.code.tex 2023-01-15 v3.1.10 (3.1.10)
-) (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfcomp-version-0-65.sty
+) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfcomp-version-0-65.sty
 Package: pgfcomp-version-0-65 2023-01-15 v3.1.10 (3.1.10)
-\pgf@nodesepstart=\dimen289
-\pgf@nodesepend=\dimen290
-) (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfcomp-version-1-18.sty
+\pgf@nodesepstart=\dimen281
+\pgf@nodesepend=\dimen282
+) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfcomp-version-1-18.sty
 Package: pgfcomp-version-1-18 2023-01-15 v3.1.10 (3.1.10)
-)) (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgffor.sty
-(C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfkeys.sty (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys.code.tex)) (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/pgf/math\pgfmath.sty (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.code.tex)) (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgffor.code.tex
+)) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgffor.sty (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfkeys.sty (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys.code.tex)) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/pgf/math\pgfmath.sty (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.code.tex)) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgffor.code.tex
 Package: pgffor 2023-01-15 v3.1.10 (3.1.10)
-\pgffor@iter=\dimen291
-\pgffor@skip=\dimen292
+\pgffor@iter=\dimen283
+\pgffor@skip=\dimen284
 \pgffor@stack=\toks40
 \pgffor@toks=\toks41
-)) (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz\tikz.code.tex
+)) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz\tikz.code.tex
 Package: tikz 2023-01-15 v3.1.10 (3.1.10)
- (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibraryplothandlers.code.tex
+ (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibraryplothandlers.code.tex
 File: pgflibraryplothandlers.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@plot@mark@count=\count331
-\pgfplotmarksize=\dimen293
+\pgf@plot@mark@count=\count309
+\pgfplotmarksize=\dimen285
 )
-\tikz@lastx=\dimen294
-\tikz@lasty=\dimen295
-\tikz@lastxsaved=\dimen296
-\tikz@lastysaved=\dimen297
-\tikz@lastmovetox=\dimen298
-\tikz@lastmovetoy=\dimen299
-\tikzleveldistance=\dimen300
-\tikzsiblingdistance=\dimen301
-\tikz@figbox=\box67
-\tikz@figbox@bg=\box68
-\tikz@tempbox=\box69
-\tikz@tempbox@bg=\box70
-\tikztreelevel=\count332
-\tikznumberofchildren=\count333
-\tikznumberofcurrentchild=\count334
-\tikz@fig@count=\count335
- (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodulematrix.code.tex
+\tikz@lastx=\dimen286
+\tikz@lasty=\dimen287
+\tikz@lastxsaved=\dimen288
+\tikz@lastysaved=\dimen289
+\tikz@lastmovetox=\dimen290
+\tikz@lastmovetoy=\dimen291
+\tikzleveldistance=\dimen292
+\tikzsiblingdistance=\dimen293
+\tikz@figbox=\box65
+\tikz@figbox@bg=\box66
+\tikz@tempbox=\box67
+\tikz@tempbox@bg=\box68
+\tikztreelevel=\count310
+\tikznumberofchildren=\count311
+\tikznumberofcurrentchild=\count312
+\tikz@fig@count=\count313
+ (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodulematrix.code.tex
 File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfmatrixcurrentrow=\count336
-\pgfmatrixcurrentcolumn=\count337
-\pgf@matrix@numberofcolumns=\count338
+\pgfmatrixcurrentrow=\count314
+\pgfmatrixcurrentcolumn=\count315
+\pgf@matrix@numberofcolumns=\count316
 )
-\tikz@expandcount=\count339
- (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarytopaths.code.tex
+\tikz@expandcount=\count317
+ (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
-))) (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarypositioning.code.tex
+))) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarypositioning.code.tex
 File: tikzlibrarypositioning.code.tex 2023-01-15 v3.1.10 (3.1.10)
-) (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibraryshapes.geometric.code.tex
+) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibraryshapes.geometric.code.tex
 File: tikzlibraryshapes.geometric.code.tex 2023-01-15 v3.1.10 (3.1.10)
- (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries/shapes\pgflibraryshapes.geometric.code.tex
+ (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries/shapes\pgflibraryshapes.geometric.code.tex
 File: pgflibraryshapes.geometric.code.tex 2023-01-15 v3.1.10 (3.1.10)
-)) (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amssymb.sty
+)) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
- (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amsfonts.sty
+ (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \@emptytoks=\toks42
 \symAMSa=\mathgroup4
@@ -553,176 +562,174 @@ Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
-)) (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/changepage\changepage.sty
+)) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/changepage\changepage.sty
 Package: changepage 2009/10/20 v1.0c check page and change page layout
-\c@cp@cntr=\count340
-\cp@tempcnt=\count341
-) (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/algorithms\algorithm.sty
+\c@cp@cntr=\count318
+\cp@tempcnt=\count319
+) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/algorithms\algorithm.sty
 Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating environment
- (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty
-Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
+ (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty
+Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
 )
 \@float@every@algorithm=\toks43
-\c@algorithm=\count342
-) (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/algorithmicx\algpseudocode.sty
+\c@algorithm=\count320
+) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/algorithmicx\algpseudocode.sty
 Package: algpseudocode 
- (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/algorithmicx\algorithmicx.sty
+ (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/algorithmicx\algorithmicx.sty
 Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
 
 Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
-\c@ALG@line=\count343
-\c@ALG@rem=\count344
-\c@ALG@nested=\count345
-\ALG@tlm=\skip65
-\ALG@thistlm=\skip66
-\c@ALG@Lnr=\count346
-\c@ALG@blocknr=\count347
-\c@ALG@storecount=\count348
-\c@ALG@tmpcounter=\count349
-\ALG@tmplength=\skip67
+\c@ALG@line=\count321
+\c@ALG@rem=\count322
+\c@ALG@nested=\count323
+\ALG@tlm=\skip64
+\ALG@thistlm=\skip65
+\c@ALG@Lnr=\count324
+\c@ALG@blocknr=\count325
+\c@ALG@storecount=\count326
+\c@ALG@tmpcounter=\count327
+\ALG@tmplength=\skip66
 )
 Document Style - pseudocode environments for use with the `algorithmicx' style
-) (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
-Package: amsmath 2025/06/16 v2.17y AMS math features
-\@mathmargin=\skip68
+) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
+Package: amsmath 2023/05/13 v2.17o AMS math features
+\@mathmargin=\skip67
 
 For additional information on amsmath, use the `?' option.
-(C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.sty
-Package: amstext 2024/11/17 v2.01 AMS text
- (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty
+(C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.sty
+Package: amstext 2021/08/26 v2.01 AMS text
+ (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks44
-\ex@=\dimen302
-)) (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty
+\ex@=\dimen294
+)) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen303
-) (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty
+\pmbraise@=\dimen295
+) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty
 Package: amsopn 2022/04/08 v2.04 operator names
 )
-\inf@bad=\count350
-LaTeX Info: Redefining \frac on input line 233.
-\uproot@=\count351
-\leftroot@=\count352
-LaTeX Info: Redefining \overline on input line 398.
-LaTeX Info: Redefining \colon on input line 409.
-\classnum@=\count353
-\DOTSCASE@=\count354
-LaTeX Info: Redefining \ldots on input line 495.
-LaTeX Info: Redefining \dots on input line 498.
-LaTeX Info: Redefining \cdots on input line 619.
-\Mathstrutbox@=\box71
-\strutbox@=\box72
-LaTeX Info: Redefining \big on input line 721.
-LaTeX Info: Redefining \Big on input line 722.
-LaTeX Info: Redefining \bigg on input line 723.
-LaTeX Info: Redefining \Bigg on input line 724.
-\big@size=\dimen304
-LaTeX Font Info:    Redeclaring font encoding OML on input line 742.
-LaTeX Font Info:    Redeclaring font encoding OMS on input line 743.
-\macc@depth=\count355
-LaTeX Info: Redefining \bmod on input line 904.
-LaTeX Info: Redefining \pmod on input line 909.
-LaTeX Info: Redefining \smash on input line 939.
-LaTeX Info: Redefining \relbar on input line 969.
-LaTeX Info: Redefining \Relbar on input line 970.
-\c@MaxMatrixCols=\count356
-\dotsspace@=\muskip18
-\c@parentequation=\count357
-\dspbrk@lvl=\count358
+\inf@bad=\count328
+LaTeX Info: Redefining \frac on input line 234.
+\uproot@=\count329
+\leftroot@=\count330
+LaTeX Info: Redefining \overline on input line 399.
+LaTeX Info: Redefining \colon on input line 410.
+\classnum@=\count331
+\DOTSCASE@=\count332
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box69
+\strutbox@=\box70
+LaTeX Info: Redefining \big on input line 722.
+LaTeX Info: Redefining \Big on input line 723.
+LaTeX Info: Redefining \bigg on input line 724.
+LaTeX Info: Redefining \Bigg on input line 725.
+\big@size=\dimen296
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count333
+LaTeX Info: Redefining \bmod on input line 905.
+LaTeX Info: Redefining \pmod on input line 910.
+LaTeX Info: Redefining \smash on input line 940.
+LaTeX Info: Redefining \relbar on input line 970.
+LaTeX Info: Redefining \Relbar on input line 971.
+\c@MaxMatrixCols=\count334
+\dotsspace@=\muskip17
+\c@parentequation=\count335
+\dspbrk@lvl=\count336
 \tag@help=\toks45
-\row@=\count359
-\column@=\count360
-\maxfields@=\count361
+\row@=\count337
+\column@=\count338
+\maxfields@=\count339
 \andhelp@=\toks46
-\eqnshift@=\dimen305
-\alignsep@=\dimen306
-\tagshift@=\dimen307
-\tagwidth@=\dimen308
-\totwidth@=\dimen309
-\lineht@=\dimen310
+\eqnshift@=\dimen297
+\alignsep@=\dimen298
+\tagshift@=\dimen299
+\tagwidth@=\dimen300
+\totwidth@=\dimen301
+\lineht@=\dimen302
 \@envbody=\toks47
-\multlinegap=\skip69
-\multlinetaggap=\skip70
+\multlinegap=\skip68
+\multlinetaggap=\skip69
 \mathdisplay@stack=\toks48
-LaTeX Info: Redefining \[ on input line 2949.
-LaTeX Info: Redefining \] on input line 2950.
-) (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/mathtools\mathtools.sty
+LaTeX Info: Redefining \[ on input line 2953.
+LaTeX Info: Redefining \] on input line 2954.
+) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/mathtools\mathtools.sty
 Package: mathtools 2024/10/04 v1.31 mathematical typesetting tools
- (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/tools\calc.sty
-Package: calc 2025/03/01 v4.3b Infix arithmetic (KKT,FJ)
-\calc@Acount=\count362
-\calc@Bcount=\count363
-\calc@Adimen=\dimen311
-\calc@Bdimen=\dimen312
-\calc@Askip=\skip71
-\calc@Bskip=\skip72
-LaTeX Info: Redefining \setlength on input line 86.
-LaTeX Info: Redefining \addtolength on input line 87.
-\calc@Ccount=\count364
-\calc@Cskip=\skip73
-) (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/mathtools\mhsetup.sty
+ (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/tools\calc.sty
+Package: calc 2023/07/08 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count340
+\calc@Bcount=\count341
+\calc@Adimen=\dimen303
+\calc@Bdimen=\dimen304
+\calc@Askip=\skip70
+\calc@Bskip=\skip71
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count342
+\calc@Cskip=\skip72
+) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/mathtools\mhsetup.sty
 Package: mhsetup 2021/03/18 v1.4 programming setup (MH)
 )
-\g_MT_multlinerow_int=\count365
-\l_MT_multwidth_dim=\dimen313
-\origjot=\skip74
-\l_MT_shortvdotswithinadjustabove_dim=\dimen314
-\l_MT_shortvdotswithinadjustbelow_dim=\dimen315
-\l_MT_above_intertext_sep=\dimen316
-\l_MT_below_intertext_sep=\dimen317
-\l_MT_above_shortintertext_sep=\dimen318
-\l_MT_below_shortintertext_sep=\dimen319
-\xmathstrut@box=\box73
-\xmathstrut@dim=\dimen320
-) (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/adjustbox\adjustbox.sty
+\g_MT_multlinerow_int=\count343
+\l_MT_multwidth_dim=\dimen305
+\origjot=\skip73
+\l_MT_shortvdotswithinadjustabove_dim=\dimen306
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen307
+\l_MT_above_intertext_sep=\dimen308
+\l_MT_below_intertext_sep=\dimen309
+\l_MT_above_shortintertext_sep=\dimen310
+\l_MT_below_shortintertext_sep=\dimen311
+\xmathstrut@box=\box71
+\xmathstrut@dim=\dimen312
+) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/adjustbox\adjustbox.sty
 Package: adjustbox 2025/02/26 v1.3c Adjusting TeX boxes (trim, clip, ...)
- (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/xkeyval\xkeyval.sty
+ (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/xkeyval\xkeyval.sty
 Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
- (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/generic/xkeyval\xkeyval.tex (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/generic/xkeyval\xkvutils.tex
+ (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/generic/xkeyval\xkeyval.tex (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/generic/xkeyval\xkvutils.tex
 \XKV@toks=\toks49
 \XKV@tempa@toks=\toks50
 )
-\XKV@depth=\count366
+\XKV@depth=\count344
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
-)) (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/adjustbox\adjcalc.sty
+)) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/adjustbox\adjcalc.sty
 Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back-ends (calc, etex, pgfmath)
-) (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/adjustbox\trimclip.sty
+) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/adjustbox\trimclip.sty
 Package: trimclip 2025/02/21 v1.2a Trim and clip general TeX material
- (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/collectbox\collectbox.sty
+ (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/collectbox\collectbox.sty
 Package: collectbox 2022/10/17 v0.4c Collect macro arguments as boxes
-\collectedbox=\box74
+\collectedbox=\box72
 )
-\tc@llx=\dimen321
-\tc@lly=\dimen322
-\tc@urx=\dimen323
-\tc@ury=\dimen324
+\tc@llx=\dimen313
+\tc@lly=\dimen314
+\tc@urx=\dimen315
+\tc@ury=\dimen316
 Package trimclip Info: Using driver 'tc-pdftex.def'.
- (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/adjustbox\tc-pdftex.def
+ (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/adjustbox\tc-pdftex.def
 File: tc-pdftex.def 2025/02/26 v2.3 Clipping driver for pdftex
 ))
-\adjbox@Width=\dimen325
-\adjbox@Height=\dimen326
-\adjbox@Depth=\dimen327
-\adjbox@Totalheight=\dimen328
-\adjbox@pwidth=\dimen329
-\adjbox@pheight=\dimen330
-\adjbox@pdepth=\dimen331
-\adjbox@ptotalheight=\dimen332
- (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/ifoddpage\ifoddpage.sty
+\adjbox@Width=\dimen317
+\adjbox@Height=\dimen318
+\adjbox@Depth=\dimen319
+\adjbox@Totalheight=\dimen320
+\adjbox@pwidth=\dimen321
+\adjbox@pheight=\dimen322
+\adjbox@pdepth=\dimen323
+\adjbox@ptotalheight=\dimen324
+ (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/ifoddpage\ifoddpage.sty
 Package: ifoddpage 2022/10/18 v1.2 Conditionals for odd/even page detection
-\c@checkoddpage=\count367
+\c@checkoddpage=\count345
 LaTeX Info: Redefining \checkoddpage on input line 45.
-) (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/varwidth\varwidth.sty
+) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/varwidth\varwidth.sty
 Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
-\@vwid@box=\box75
-\sift@deathcycles=\count368
-\@vwid@loff=\dimen333
-\@vwid@roff=\dimen334
-)
-==> First Aid for varwidth.sty applied!
-) (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/generic/soul\soul.sty
+\@vwid@box=\box73
+\sift@deathcycles=\count346
+\@vwid@loff=\dimen325
+\@vwid@roff=\dimen326
+)) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/generic/soul\soul.sty
 Package: soul 2023-06-14 v3.1 Permit use of UTF-8 characters in soul (HO)
- (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/generic/soul\soul-ori.sty
+ (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/generic/soul\soul-ori.sty
 Package: soul-ori 2023-06-14 v3.1 letterspacing/underlining (mf)
 \SOUL@word=\toks51
 \SOUL@lasttoken=\toks52
@@ -730,142 +737,143 @@ Package: soul-ori 2023-06-14 v3.1 letterspacing/underlining (mf)
 \SOUL@cmds=\toks54
 \SOUL@buffer=\toks55
 \SOUL@token=\toks56
-\SOUL@syllgoal=\dimen335
-\SOUL@syllwidth=\dimen336
-\SOUL@charkern=\dimen337
-\SOUL@hyphkern=\dimen338
-\SOUL@dimen=\dimen339
-\SOUL@dimeni=\dimen340
-\SOUL@minus=\count369
-\SOUL@comma=\count370
-\SOUL@apo=\count371
-\SOUL@grave=\count372
-\SOUL@spaceskip=\skip75
-\SOUL@ttwidth=\dimen341
-\SOUL@uldp=\dimen342
-\SOUL@ulht=\dimen343
-) (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/generic/etexcmds\etexcmds.sty
+\SOUL@syllgoal=\dimen327
+\SOUL@syllwidth=\dimen328
+\SOUL@charkern=\dimen329
+\SOUL@hyphkern=\dimen330
+\SOUL@dimen=\dimen331
+\SOUL@dimeni=\dimen332
+\SOUL@minus=\count347
+\SOUL@comma=\count348
+\SOUL@apo=\count349
+\SOUL@grave=\count350
+\SOUL@spaceskip=\skip74
+\SOUL@ttwidth=\dimen333
+\SOUL@uldp=\dimen334
+\SOUL@ulht=\dimen335
+) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/generic/etexcmds\etexcmds.sty
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
-)) (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcolorbox.sty
-Package: tcolorbox 2025/07/08 version 6.7.1 text color boxes
- (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/tools\verbatim.sty
-Package: verbatim 2024-01-22 v1.5x LaTeX2e package for verbatim enhancements
+)) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcolorbox.sty
+Package: tcolorbox 2024/01/10 version 6.2.0 text color boxes
+ (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/tools\verbatim.sty
+Package: verbatim 2023-11-06 v1.5v LaTeX2e package for verbatim enhancements
 \every@verbatim=\toks57
 \verbatim@line=\toks58
 \verbatim@in@stream=\read3
-) (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/environ\environ.sty
+) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/environ\environ.sty
 Package: environ 2014/05/04 v0.3 A new way to define environments
- (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/trimspaces\trimspaces.sty
+ (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/trimspaces\trimspaces.sty
 Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 ))
-\tcb@titlebox=\box76
-\tcb@upperbox=\box77
-\tcb@lowerbox=\box78
-\tcb@phantombox=\box79
-\c@tcbbreakpart=\count373
-\c@tcblayer=\count374
-\c@tcolorbox@number=\count375
-\l__tcobox_tmpa_box=\box80
-\l__tcobox_tmpa_dim=\dimen344
+\tcb@titlebox=\box74
+\tcb@upperbox=\box75
+\tcb@lowerbox=\box76
+\tcb@phantombox=\box77
+\c@tcbbreakpart=\count351
+\c@tcblayer=\count352
+\c@tcolorbox@number=\count353
+\l__tcobox_tmpa_box=\box78
+\l__tcobox_tmpa_dim=\dimen336
+\tcb@temp=\box79
+\tcb@temp=\box80
 \tcb@temp=\box81
 \tcb@temp=\box82
-\tcb@temp=\box83
-\tcb@temp=\box84
- (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcbraster.code.tex
-Library (tcolorbox): 'tcbraster.code.tex' version '6.7.1'
-\c@tcbrastercolumn=\count376
-\c@tcbrasterrow=\count377
-\c@tcbrasternum=\count378
-\c@tcbraster=\count379
-) (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcbskins.code.tex
-Library (tcolorbox): 'tcbskins.code.tex' version '6.7.1'
-(C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/tikzfill\tikzfill.image.sty
+ (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcbraster.code.tex
+Library (tcolorbox): 'tcbraster.code.tex' version '6.2.0'
+\c@tcbrastercolumn=\count354
+\c@tcbrasterrow=\count355
+\c@tcbrasternum=\count356
+\c@tcbraster=\count357
+) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcbskins.code.tex
+Library (tcolorbox): 'tcbskins.code.tex' version '6.2.0'
+(C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/tikzfill\tikzfill.image.sty
 Package: tikzfill.image 2023/08/08 v1.0.1 Image filling library for TikZ
- (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/tikzfill\tikzfill-common.sty
+ (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/tikzfill\tikzfill-common.sty
 Package: tikzfill-common 2023/08/08 v1.0.1 Auxiliary code for tikzfill
-) (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/tikzfill\tikzlibraryfill.image.code.tex
+) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/tikzfill\tikzlibraryfill.image.code.tex
 File: tikzlibraryfill.image.code.tex 2023/08/08 v1.0.1 Image filling library
-\l__tikzfill_img_box=\box85
-)) (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcbskinsjigsaw.code.tex
-Library (tcolorbox): 'tcbskinsjigsaw.code.tex' version '6.7.1'
-)) (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcbbreakable.code.tex
-Library (tcolorbox): 'tcbbreakable.code.tex' version '6.7.1'
-(C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/pdfcol\pdfcol.sty
+\l__tikzfill_img_box=\box83
+)) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcbskinsjigsaw.code.tex
+Library (tcolorbox): 'tcbskinsjigsaw.code.tex' version '6.2.0'
+)) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcbbreakable.code.tex
+Library (tcolorbox): 'tcbbreakable.code.tex' version '6.2.0'
+(C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/pdfcol\pdfcol.sty
 Package: pdfcol 2022-09-21 v1.7 Handle new color stacks for pdfTeX (HO)
 )
 Package pdfcol Info: New color stack `tcb@breakable' = 1 on input line 23.
-\tcb@testbox=\box86
-\tcb@totalupperbox=\box87
-\tcb@totallowerbox=\box88
-) (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcbhooks.code.tex
-Library (tcolorbox): 'tcbhooks.code.tex' version '6.7.1'
-) (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcbtheorems.code.tex
-Library (tcolorbox): 'tcbtheorems.code.tex' version '6.7.1'
-) (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcbfitting.code.tex
-Library (tcolorbox): 'tcbfitting.code.tex' version '6.7.1'
-\tcbfitdim=\dimen345
-\tcb@lowerfitdim=\dimen346
-\tcb@upperfitdim=\dimen347
-\tcb@cur@hbadness=\count380
-) (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcblistingsutf8.code.tex
-Library (tcolorbox): 'tcblistingsutf8.code.tex' version '6.7.1'
-(C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcblistings.code.tex
-Library (tcolorbox): 'tcblistings.code.tex' version '6.7.1'
-(C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.sty
-\lst@mode=\count381
-\lst@gtempboxa=\box89
+\tcb@testbox=\box84
+\tcb@totalupperbox=\box85
+\tcb@totallowerbox=\box86
+) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcbhooks.code.tex
+Library (tcolorbox): 'tcbhooks.code.tex' version '6.2.0'
+) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcbtheorems.code.tex
+Library (tcolorbox): 'tcbtheorems.code.tex' version '6.2.0'
+) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcbfitting.code.tex
+Library (tcolorbox): 'tcbfitting.code.tex' version '6.2.0'
+\tcbfitdim=\dimen337
+\tcb@lowerfitdim=\dimen338
+\tcb@upperfitdim=\dimen339
+\tcb@cur@hbadness=\count358
+) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcblistingsutf8.code.tex
+Library (tcolorbox): 'tcblistingsutf8.code.tex' version '6.2.0'
+(C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcblistings.code.tex
+Library (tcolorbox): 'tcblistings.code.tex' version '6.2.0'
+(C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.sty
+\lst@mode=\count359
+\lst@gtempboxa=\box87
 \lst@token=\toks59
-\lst@length=\count382
-\lst@currlwidth=\dimen348
-\lst@column=\count383
-\lst@pos=\count384
-\lst@lostspace=\dimen349
-\lst@width=\dimen350
-\lst@newlines=\count385
-\lst@lineno=\count386
-\lst@maxwidth=\dimen351
- (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstpatch.sty
-File: lstpatch.sty 2024/09/23 1.10c (Carsten Heinz)
-) (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
-File: lstmisc.sty 2024/09/23 1.10c (Carsten Heinz)
-\c@lstnumber=\count387
-\lst@skipnumbers=\count388
-\lst@framebox=\box90
-) (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.cfg
-File: listings.cfg 2024/09/23 1.10c listings configuration
+\lst@length=\count360
+\lst@currlwidth=\dimen340
+\lst@column=\count361
+\lst@pos=\count362
+\lst@lostspace=\dimen341
+\lst@width=\dimen342
+\lst@newlines=\count363
+\lst@lineno=\count364
+\lst@maxwidth=\dimen343
+ (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
+File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
+\c@lstnumber=\count365
+\lst@skipnumbers=\count366
+\lst@framebox=\box88
+) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.cfg
+File: listings.cfg 2023/02/27 1.9 listings configuration
 ))
-Package: listings 2024/09/23 1.10c (Carsten Heinz)
- (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcblistingscore.code.tex
-Library (tcolorbox): 'tcblistingscore.code.tex' version '6.7.1'
-(C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcbprocessing.code.tex
-Library (tcolorbox): 'tcbprocessing.code.tex' version '6.7.1'
+Package: listings 2023/02/27 1.9 (Carsten Heinz)
+ (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcblistingscore.code.tex
+Library (tcolorbox): 'tcblistingscore.code.tex' version '6.2.0'
+(C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcbprocessing.code.tex
+Library (tcolorbox): 'tcbprocessing.code.tex' version '6.2.0'
 )
-\c@tcblisting=\count389
-)) (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/listingsutf8\listingsutf8.sty
+\c@tcblisting=\count367
+)) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/listingsutf8\listingsutf8.sty
 Package: listingsutf8 2019-12-10 v1.5 Allow UTF-8 in listings input (HO)
-)) (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcbexternal.code.tex
-Library (tcolorbox): 'tcbexternal.code.tex' version '6.7.1'
-) (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcbmagazine.code.tex
-Library (tcolorbox): 'tcbmagazine.code.tex' version '6.7.1'
-) (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcbvignette.code.tex
-Library (tcolorbox): 'tcbvignette.code.tex' version '6.7.1'
-(C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibraryfadings.code.tex
+ (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/generic/stringenc\stringenc.sty
+Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO)
+))) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcbexternal.code.tex
+Library (tcolorbox): 'tcbexternal.code.tex' version '6.2.0'
+) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcbmagazine.code.tex
+Library (tcolorbox): 'tcbmagazine.code.tex' version '6.2.0'
+) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcbvignette.code.tex
+Library (tcolorbox): 'tcbvignette.code.tex' version '6.2.0'
+(C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibraryfadings.code.tex
 File: tikzlibraryfadings.code.tex 2023-01-15 v3.1.10 (3.1.10)
- (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibraryfadings.code.tex
+ (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibraryfadings.code.tex
 File: pgflibraryfadings.code.tex 2023-01-15 v3.1.10 (3.1.10)
-))) (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcbposter.code.tex
-Library (tcolorbox): 'tcbposter.code.tex' version '6.7.1'
-)) (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/subfiles\subfiles.sty
+))) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcbposter.code.tex
+Library (tcolorbox): 'tcbposter.code.tex' version '6.2.0'
+)) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/subfiles\subfiles.sty
 Package: subfiles 2020/11/14 v2.2 Multi-file projects (package)
- (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/import\import.sty
+ (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/import\import.sty
 Package: import 2020/04/01  v 6.2
 )))
 LaTeX Font Info:    Trying to load font information for T1+bch on input line 4.
- (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1bch.fd
+ (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1bch.fd
 File: t1bch.fd 2004/10/18 font definitions for T1/bch.
-) (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
-File: l3backend-pdftex.def 2025-06-09 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count390
+) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
+File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count368
+\l__pdf_internal_box=\box89
 ) (main.aux)
 \openout1 = `main.aux'.
 
@@ -887,28 +895,28 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 4.
 LaTeX Font Info:    ... okay on input line 4.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 4.
 LaTeX Font Info:    ... okay on input line 4.
- (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
+ (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count391
-\scratchdimen=\dimen352
-\scratchbox=\box91
-\nofMPsegments=\count392
-\nofMParguments=\count393
+\scratchcounter=\count369
+\scratchdimen=\dimen344
+\scratchbox=\box90
+\nofMPsegments=\count370
+\nofMParguments=\count371
 \everyMPshowfont=\toks60
-\MPscratchCnt=\count394
-\MPscratchDim=\dimen353
-\MPnumerator=\count395
-\makeMPintoPDFobject=\count396
+\MPscratchCnt=\count372
+\MPscratchDim=\dimen345
+\MPnumerator=\count373
+\makeMPintoPDFobject=\count374
 \everyMPtoPDFconversion=\toks61
-) (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
+) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
- (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
+ (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
 Package microtype Info: Patching varwidth to enable character protrusion.
-\MT@vwid@leftmargin=\dimen354
-\MT@vwid@rightmargin=\dimen355
+\MT@vwid@leftmargin=\dimen346
+\MT@vwid@rightmargin=\dimen347
 LaTeX Info: Redefining \microtypecontext on input line 4.
 Package microtype Info: Applying patch `item' on input line 4.
 Package microtype Info: Applying patch `toc' on input line 4.
@@ -922,11 +930,11 @@ Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-Package microtype Info: Patching command `\showhyphens'.
+LaTeX Info: Redefining \showhyphens on input line 4.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
- (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-bch.cfg
+ (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-bch.cfg
 File: mt-bch.cfg 2007/03/03 v1.5 microtype config. file: Bitstream Charter (RS)
 )
 *geometry* driver: auto-detecting
@@ -966,8 +974,8 @@ File: mt-bch.cfg 2007/03/03 v1.5 microtype config. file: Bitstream Charter (RS)
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: changepage package is loaded.
-\caption@adjustwidth@hsize=\dimen356
-\caption@adjustwidth@linewidth=\dimen357
+\caption@adjustwidth@hsize=\dimen348
+\caption@adjustwidth@linewidth=\dimen349
 Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
@@ -976,24 +984,24 @@ Package hyperref Info: Link coloring OFF on input line 4.
 \@outlinefile=\write4
 \openout4 = `main.out'.
 
-\c@lstlisting=\count397
+\c@lstlisting=\count375
  (../chapters/index/index.tex (main.toc
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 2.
- (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmr.fd
+ (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-) (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-cmr.cfg
+) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-cmr.cfg
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman (RS)
 )
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 2.
- (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd
+ (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 2.
- (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/lm\omslmsy.fd
+ (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/lm\omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 2.
- (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/lm\omxlmex.fd
+ (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/lm\omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
@@ -1003,32 +1011,28 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <6> on input line 2.
 LaTeX Font Info:    Trying to load font information for U+msa on input line 2.
- (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
+ (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-) (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msa.cfg
+) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
 LaTeX Font Info:    Trying to load font information for U+msb on input line 2.
- (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
+ (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msb.cfg
+) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 19.
- (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd
+ (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
+ [1
 
-
-[1
-
-{C:/Users/Casa/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/Casa/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}{C:/Users/Casa/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}]
-
-[2]
+{C:/Users/dany2/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}{C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}] [2]
 Overfull \hbox (1.41595pt too wide) detected at line 90
  []\T1/bch/m/n/12 100
  []
@@ -1172,8 +1176,6 @@ Overfull \hbox (1.41595pt too wide) detected at line 118
 Overfull \hbox (1.41595pt too wide) detected at line 119
  []\T1/bch/m/n/12 121
  []
-
-
 
 [3]
 Overfull \hbox (1.41595pt too wide) detected at line 120
@@ -1385,8 +1387,6 @@ Overfull \hbox (1.41595pt too wide) detected at line 163
  []\T1/bch/m/n/12 150
  []
 
-
-
 [4]
 Overfull \hbox (1.41595pt too wide) detected at line 164
  []\T1/bch/m/n/12 150
@@ -1586,19 +1586,11 @@ Overfull \hbox (1.41595pt too wide) detected at line 203
 \tf@toc=\write5
 \openout5 = `main.toc'.
 
-)
-
-[5] (../chapters/ch1_introduzione/introduzione.tex
-
-[6{C:/Users/Casa/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Users/Casa/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Users/Casa/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}]
+) [5] (../chapters/ch1_introduzione/introduzione.tex [6{C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}]
 LaTeX Font Info:    Trying to load font information for TS1+bch on input line 82.
- (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1bch.fd
+ (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1bch.fd
 File: ts1bch.fd 2004/10/18 font definitions for TS1/bch.
-)
-
-[7{C:/Users/Casa/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc}]
-
-[8]
+) [7{C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc}] [8]
 <../figures/../figures/introduzione/img1.png, id=1101, 458.9145pt x 254.75175pt>
 File: ../figures/../figures/introduzione/img1.png Graphic file (type png)
 <use ../figures/../figures/introduzione/img1.png>
@@ -1609,17 +1601,15 @@ File: ../figures/../figures/introduzione/img2.png Graphic file (type png)
 <use ../figures/../figures/introduzione/img2.png>
 Package pdftex.def Info: ../figures/../figures/introduzione/img2.png  used on input line 204.
 (pdftex.def)             Requested size: 386.95897pt x 202.11455pt.
-
-
-[9 <../figures/../figures/introduzione/img1.png>] (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
-File: lstlang1.sty 2024/09/23 1.10c listings language file
-) (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
-File: lstlang1.sty 2024/09/23 1.10c listings language file
-) (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
-File: lstmisc.sty 2024/09/23 1.10c (Carsten Heinz)
+ [9 <../figures/../figures/introduzione/img1.png>] (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
+File: lstlang1.sty 2023/02/27 1.9 listings language file
+) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
+File: lstlang1.sty 2023/02/27 1.9 listings language file
+) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
+File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
 )
 LaTeX Font Info:    Trying to load font information for T1+pcr on input line 210.
- (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1pcr.fd
+ (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
 Package microtype Info: Loading generic protrusion settings for font family
@@ -1631,19 +1621,15 @@ File: ../figures/../figures/introduzione/img3.png Graphic file (type png)
 <use ../figures/../figures/introduzione/img3.png>
 Package pdftex.def Info: ../figures/../figures/introduzione/img3.png  used on input line 252.
 (pdftex.def)             Requested size: 386.95897pt x 233.29366pt.
-
-
-[10 <../figures/../figures/introduzione/img2.png>]
+ [10 <../figures/../figures/introduzione/img2.png>]
 <../figures/../figures/introduzione/img4.png, id=1126, 458.31226pt x 170.43675pt>
 File: ../figures/../figures/introduzione/img4.png Graphic file (type png)
 <use ../figures/../figures/introduzione/img4.png>
 Package pdftex.def Info: ../figures/../figures/introduzione/img4.png  used on input line 290.
 (pdftex.def)             Requested size: 377.28296pt x 140.31035pt.
-
-
-[11 <../figures/../figures/introduzione/img3.png> <../figures/../figures/introduzione/img4.png>]
+ [11 <../figures/../figures/introduzione/img3.png> <../figures/../figures/introduzione/img4.png>]
 LaTeX Font Info:    Trying to load font information for TS1+pcr on input line 310.
- (C:\Users\Casa\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1pcr.fd
+ (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1pcr.fd
 File: ts1pcr.fd 2001/06/04 font definitions for TS1/pcr.
 )
 Package microtype Info: Loading generic protrusion settings for font family
@@ -1661,8 +1647,6 @@ Package pdftex.def Info: ../figures/../figures/introduzione/img7.png  used on in
 Overfull \hbox (10.33653pt too wide) in paragraph at lines 330--359
 []  [] 
  []
-
-
 
 [12 <../figures/../figures/introduzione/img7.png>]
 <../figures/../figures/introduzione/img8.png, id=1171, 269.20575pt x 115.02975pt>
@@ -1685,37 +1669,27 @@ Underfull \hbox (badness 10000) in paragraph at lines 409--9
 
  []
 
-
-
 [13 <../figures/../figures/introduzione/img8.png> <../figures/../figures/introduzione/img9.png>] (../chapters/ch2_iterazione_induzione_ricorsione/iterazione_induzione_ricorsione.tex
 <../figures/../figures/iterazione_induzione_ricorsione/img1.png, id=1209, 601.4972pt x 104.64093pt>
 File: ../figures/../figures/iterazione_induzione_ricorsione/img1.png Graphic file (type png)
 <use ../figures/../figures/iterazione_induzione_ricorsione/img1.png>
 Package pdftex.def Info: ../figures/../figures/iterazione_induzione_ricorsione/img1.png  used on input line 59.
 (pdftex.def)             Requested size: 411.14528pt x 71.5285pt.
-
-
-[14]
+ [14]
 <../figures/../figures/iterazione_induzione_ricorsione/img2.png, id=1214, 417.35925pt x 160.80075pt>
 File: ../figures/../figures/iterazione_induzione_ricorsione/img2.png Graphic file (type png)
 <use ../figures/../figures/iterazione_induzione_ricorsione/img2.png>
 Package pdftex.def Info: ../figures/../figures/iterazione_induzione_ricorsione/img2.png  used on input line 106.
 (pdftex.def)             Requested size: 386.95897pt x 149.09166pt.
-
-
-[15 <../figures/../figures/iterazione_induzione_ricorsione/img1.png> <../figures/../figures/iterazione_induzione_ricorsione/img2.png>]
+ [15 <../figures/../figures/iterazione_induzione_ricorsione/img1.png> <../figures/../figures/iterazione_induzione_ricorsione/img2.png>]
 Underfull \hbox (badness 2318) in paragraph at lines 160--163
 \T1/bch/m/n/12 (+20) In queste di-mostrazioni si pro-cede spesso per \T1/bch/b/n/12 (+20) in-duzione sulla di-men-sione
  []
-
-
 
 [16]
 Overfull \hbox (0.66052pt too wide) in paragraph at lines 208--224
 []  [] 
  []
-
-
 
 [17]
 <../figures/../figures/iterazione_induzione_ricorsione/img6.png, id=1259, 215.00325pt x 167.4255pt>
@@ -1738,8 +1712,6 @@ Overfull \hbox (1.14026pt too wide) in paragraph at lines 303--336
 []  [] 
  []
 
-
-
 [18 <../figures/../figures/iterazione_induzione_ricorsione/img6.png> <../figures/../figures/iterazione_induzione_ricorsione/img7.png>]
 <../figures/../figures/iterazione_induzione_ricorsione/img5.png, id=1268, 459.51675pt x 233.07076pt>
 File: ../figures/../figures/iterazione_induzione_ricorsione/img5.png Graphic file (type png)
@@ -1756,13 +1728,7 @@ File: ../figures/../figures/iterazione_induzione_ricorsione/img4.png Graphic fil
 <use ../figures/../figures/iterazione_induzione_ricorsione/img4.png>
 Package pdftex.def Info: ../figures/../figures/iterazione_induzione_ricorsione/img4.png  used on input line 391.
 (pdftex.def)             Requested size: 145.11053pt x 261.44124pt.
-
-
-[19 <../figures/../figures/iterazione_induzione_ricorsione/img5.png>]
-
-[20 <../figures/../figures/iterazione_induzione_ricorsione/img3.png> <../figures/../figures/iterazione_induzione_ricorsione/img4.png>])
-
-[21] (../chapters/ch3_liste/liste.tex
+ [19 <../figures/../figures/iterazione_induzione_ricorsione/img5.png>] [20 <../figures/../figures/iterazione_induzione_ricorsione/img3.png> <../figures/../figures/iterazione_induzione_ricorsione/img4.png>]) [21] (../chapters/ch3_liste/liste.tex
 <../figures/../figures/introduzione/img10.png, id=1302, 450.483pt x 308.95425pt>
 File: ../figures/../figures/introduzione/img10.png Graphic file (type png)
 <use ../figures/../figures/introduzione/img10.png>
@@ -1788,8 +1754,6 @@ Overfull \hbox (2.11452pt too wide) in paragraph at lines 48--63
 []  [] 
  []
 
-
-
 [22 <../figures/../figures/introduzione/img10.png>]
 LaTeX Font Info:    Font shape `TS1/pcr/m/it' in size <10.95> not available
 (Font)              Font shape `TS1/pcr/m/sl' tried instead on input line 93.
@@ -1803,35 +1767,19 @@ File: ../figures/../figures/introduzione/img12.png Graphic file (type png)
 <use ../figures/../figures/introduzione/img12.png>
 Package pdftex.def Info: ../figures/../figures/introduzione/img12.png  used on input line 142.
 (pdftex.def)             Requested size: 386.95897pt x 77.50446pt.
-
-
-[23 <../figures/../figures/introduzione/img11.png> <../figures/../figures/introduzione/img12.png>]
-
-[24]
+ [23 <../figures/../figures/introduzione/img11.png> <../figures/../figures/introduzione/img12.png>] [24]
 <../figures/../figures/introduzione/img13.png, id=1371, 904.37875pt x 323.2075pt>
 File: ../figures/../figures/introduzione/img13.png Graphic file (type png)
 <use ../figures/../figures/introduzione/img13.png>
 Package pdftex.def Info: ../figures/../figures/introduzione/img13.png  used on input line 202.
 (pdftex.def)             Requested size: 435.32422pt x 155.57182pt.
-
-
-[25 <../figures/../figures/introduzione/img13.png>]
+ [25 <../figures/../figures/introduzione/img13.png>]
 <../figures/../figures/introduzione/img14.png, id=1385, 344.487pt x 81.906pt>
 File: ../figures/../figures/introduzione/img14.png Graphic file (type png)
 <use ../figures/../figures/introduzione/img14.png>
 Package pdftex.def Info: ../figures/../figures/introduzione/img14.png  used on input line 281.
 (pdftex.def)             Requested size: 362.77264pt x 86.25752pt.
-
-
-[26 <../figures/../figures/introduzione/img14.png>]
-
-[27]
-
-[28]
-
-[29])
-
-[30] (../chapters/ch4_alberi/alberi.tex
+ [26 <../figures/../figures/introduzione/img14.png>] [27] [28] [29]) [30] (../chapters/ch4_alberi/alberi.tex
 <../figures/../figures/alberi/img1.png, id=1530, 495.0495pt x 333.04425pt>
 File: ../figures/../figures/alberi/img1.png Graphic file (type png)
 <use ../figures/../figures/alberi/img1.png>
@@ -1856,8 +1804,6 @@ Package pdftex.def Info: ../figures/../figures/alberi/img2.png  used on input li
 Overfull \hbox (2.59424pt too wide) in paragraph at lines 28--51
 []  []
  []
-
-
 
 [31 <../figures/../figures/alberi/img1.png> <../figures/../figures/alberi/img2.png>]
 <../figures/../figures/alberi/img3.png, id=1541, 292.09125pt x 134.904pt>
@@ -1890,11 +1836,7 @@ Overfull \hbox (2.60164pt too wide) in paragraph at lines 94--107
 []  [] 
  []
 
-
-
-[32 <../figures/../figures/alberi/img3.png> <../figures/../figures/alberi/img4.png>]
-
-[33]
+[32 <../figures/../figures/alberi/img3.png> <../figures/../figures/alberi/img4.png>] [33]
 <../figures/../figures/alberi/img5.png, id=1582, 128.27925pt x 142.73325pt>
 File: ../figures/../figures/alberi/img5.png Graphic file (type png)
 <use ../figures/../figures/alberi/img5.png>
@@ -1904,8 +1846,6 @@ Package pdftex.def Info: ../figures/../figures/alberi/img5.png  used on input li
 Overfull \hbox (3.07399pt too wide) in paragraph at lines 191--213
 []  [] 
  []
-
-
 
 [34 <../figures/../figures/alberi/img5.png>]
 <../figures/../figures/alberi/img6.png, id=1592, 202.356pt x 149.358pt>
@@ -1918,9 +1858,7 @@ File: ../figures/../figures/alberi/img7.png Graphic file (type png)
 <use ../figures/../figures/alberi/img7.png>
 Package pdftex.def Info: ../figures/../figures/alberi/img7.png  used on input line 274.
 (pdftex.def)             Requested size: 169.29684pt x 148.02217pt.
-
-
-[35 <../figures/../figures/alberi/img6.png> <../figures/../figures/alberi/img7.png>]
+ [35 <../figures/../figures/alberi/img6.png> <../figures/../figures/alberi/img7.png>]
 pdfTeX warning (ext4): destination with the same identifier (name{subfigure.24.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
@@ -1942,9 +1880,7 @@ File: ../figures/../figures/alberi/img9.png Graphic file (type png)
 <use ../figures/../figures/alberi/img9.png>
 Package pdftex.def Info: ../figures/../figures/alberi/img9.png  used on input line 357.
 (pdftex.def)             Requested size: 169.29684pt x 149.26762pt.
-
-
-[36 <../figures/../figures/alberi/img8.png> <../figures/../figures/alberi/img9.png>]
+ [36 <../figures/../figures/alberi/img8.png> <../figures/../figures/alberi/img9.png>]
 pdfTeX warning (ext4): destination with the same identifier (name{subfigure.24.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
@@ -1966,17 +1902,7 @@ File: ../figures/../figures/alberi/img11.png Graphic file (type png)
 <use ../figures/../figures/alberi/img11.png>
 Package pdftex.def Info: ../figures/../figures/alberi/img11.png  used on input line 439.
 (pdftex.def)             Requested size: 169.29684pt x 149.21507pt.
-
-
-[37]
-
-[38 <../figures/../figures/alberi/img10.png> <../figures/../figures/alberi/img11.png>]
-
-[39]
-
-[40]
-
-[41]
+ [37] [38 <../figures/../figures/alberi/img10.png> <../figures/../figures/alberi/img11.png>] [39] [40] [41]
 <../figures/../figures/alberi/img12.png, id=1726, 352.31625pt x 79.497pt>
 File: ../figures/../figures/alberi/img12.png Graphic file (type png)
 <use ../figures/../figures/alberi/img12.png>
@@ -1992,8 +1918,6 @@ Overfull \hbox (2.59424pt too wide) in paragraph at lines 633--645
 []  [] 
  []
 
-
-
 [42 <../figures/../figures/alberi/img12.png>]
 <../figures/../figures/alberi/img13.png, id=1732, 157.18726pt x 139.11975pt>
 File: ../figures/../figures/alberi/img13.png Graphic file (type png)
@@ -2004,8 +1928,6 @@ Package pdftex.def Info: ../figures/../figures/alberi/img13.png  used on input l
 Overfull \hbox (3.08138pt too wide) in paragraph at lines 702--719
 []  [] 
  []
-
-
 
 [43 <../figures/../figures/alberi/img13.png>]
 <../figures/../figures/alberi/img14.png, id=1753, 174.6525pt x 258.36525pt>
@@ -2018,11 +1940,7 @@ Overfull \hbox (2.98453pt too wide) in paragraph at lines 761--784
 [][]  [] 
  []
 
-
-
-[44 <../figures/../figures/alberi/img14.png>]
-
-[45]
+[44 <../figures/../figures/alberi/img14.png>] [45]
 <../figures/../figures/alberi/img15.png, id=1808, 169.23225pt x 258.9675pt>
 File: ../figures/../figures/alberi/img15.png Graphic file (type png)
 <use ../figures/../figures/alberi/img15.png>
@@ -2033,11 +1951,7 @@ Overfull \hbox (2.98453pt too wide) in paragraph at lines 900--924
 []  [] 
  []
 
-
-
-[46]
-
-[47 <../figures/../figures/alberi/img15.png>]
+[46] [47 <../figures/../figures/alberi/img15.png>]
 <../figures/../figures/alberi/img16.png, id=1849, 167.4255pt x 258.36525pt>
 File: ../figures/../figures/alberi/img16.png Graphic file (type png)
 <use ../figures/../figures/alberi/img16.png>
@@ -2053,13 +1967,7 @@ Overfull \hbox (3.08138pt too wide) in paragraph at lines 1002--1021
 []  []
  []
 
-
-
-[48]
-
-[49 <../figures/../figures/alberi/img16.png>]
-
-[50]
+[48] [49 <../figures/../figures/alberi/img16.png>] [50]
 <../figures/../figures/alberi/img17.png, id=1920, 190.311pt x 259.56975pt>
 File: ../figures/../figures/alberi/img17.png Graphic file (type png)
 <use ../figures/../figures/alberi/img17.png>
@@ -2070,13 +1978,7 @@ Overfull \hbox (3.08138pt too wide) in paragraph at lines 1117--1144
 []  [] 
  []
 
-
-
-[51 <../figures/../figures/alberi/img17.png>]
-
-[52]
-
-[53]
+[51 <../figures/../figures/alberi/img17.png>] [52] [53]
 <../figures/../figures/alberi/img18.png, id=1988, 414.79968pt x 259.7203pt>
 File: ../figures/../figures/alberi/img18.png Graphic file (type png)
 <use ../figures/../figures/alberi/img18.png>
@@ -2097,13 +1999,7 @@ Overfull \hbox (3.46426pt too wide) in paragraph at lines 1280--1300
 []  [] 
  []
 
-
-
-[54 <../figures/../figures/alberi/img18.png> <../figures/../figures/alberi/img19.png> <../figures/../figures/alberi/img20.png>]
-
-[55]
-
-[56]
+[54 <../figures/../figures/alberi/img18.png> <../figures/../figures/alberi/img19.png> <../figures/../figures/alberi/img20.png>] [55] [56]
 <../figures/../figures/alberi/img21.png, id=2045, 142.28156pt x 201.00093pt>
 File: ../figures/../figures/alberi/img21.png Graphic file (type png)
 <use ../figures/../figures/alberi/img21.png>
@@ -2123,8 +2019,6 @@ Package pdftex.def Info: ../figures/../figures/alberi/img22.png  used on input l
 Overfull \hbox (3.08138pt too wide) in paragraph at lines 1440--1451
 []  [] 
  []
-
-
 
 [57 <../figures/../figures/alberi/img21.png>]
 <../figures/../figures/alberi/img23.png, id=2064, 321.45094pt x 103.88812pt>
@@ -2147,8 +2041,6 @@ Overfull \hbox (3.47165pt too wide) in paragraph at lines 1509--1519
 [][]  [] 
  []
 
-
-
 [58 <../figures/../figures/alberi/img22.png> <../figures/../figures/alberi/img23.png>]
 <../figures/../figures/alberi/img25.png, id=2072, 477.28313pt x 103.88812pt>
 File: ../figures/../figures/alberi/img25.png Graphic file (type png)
@@ -2165,37 +2057,25 @@ Underfull \hbox (badness 10000) in paragraph at lines 1557--1581
 
  []
 
-
-
 [59 <../figures/../figures/alberi/img24.png> <../figures/../figures/alberi/img25.png> <../figures/../figures/alberi/img26.png>]
 <../figures/../figures/alberi/img27.png, id=2103, 662.475pt x 904.37875pt>
 File: ../figures/../figures/alberi/img27.png Graphic file (type png)
 <use ../figures/../figures/alberi/img27.png>
 Package pdftex.def Info: ../figures/../figures/alberi/img27.png  used on input line 1596.
 (pdftex.def)             Requested size: 386.95897pt x 528.25217pt.
-)
-
-[60 <../figures/../figures/alberi/img27.png>] (../chapters/ch5_complessita_algoritmi/complessita_algoritmi.tex
-
-[61]
-
-[62]
+) [60 <../figures/../figures/alberi/img27.png>] (../chapters/ch5_complessita_algoritmi/complessita_algoritmi.tex [61] [62]
 <../figures/../figures/complessita_algoritmi/img1.png, id=2120, 498.06075pt x 136.1085pt>
 File: ../figures/../figures/complessita_algoritmi/img1.png Graphic file (type png)
 <use ../figures/../figures/complessita_algoritmi/img1.png>
 Package pdftex.def Info: ../figures/../figures/complessita_algoritmi/img1.png  used on input line 140.
 (pdftex.def)             Requested size: 483.69687pt x 132.18913pt.
-
-
-[63 <../figures/../figures/complessita_algoritmi/img1.png>]
+ [63 <../figures/../figures/complessita_algoritmi/img1.png>]
 <../figures/../figures/complessita_algoritmi/img2.png, id=2128, 766.062pt x 321.6015pt>
 File: ../figures/../figures/complessita_algoritmi/img2.png Graphic file (type png)
 <use ../figures/../figures/complessita_algoritmi/img2.png>
 Package pdftex.def Info: ../figures/../figures/complessita_algoritmi/img2.png  used on input line 174.
 (pdftex.def)             Requested size: 483.69687pt x 203.06638pt.
-
-
-[64 <../figures/../figures/complessita_algoritmi/img2.png>]
+ [64 <../figures/../figures/complessita_algoritmi/img2.png>]
 <../figures/../figures/complessita_algoritmi/img3.png, id=2136, 317.988pt x 62.634pt>
 File: ../figures/../figures/complessita_algoritmi/img3.png Graphic file (type png)
 <use ../figures/../figures/complessita_algoritmi/img3.png>
@@ -2226,8 +2106,6 @@ Overfull \hbox (3.47165pt too wide) in paragraph at lines 213--232
 []  [] 
  []
 
-
-
 [65 <../figures/../figures/complessita_algoritmi/img3.png> <../figures/../figures/complessita_algoritmi/img4.png>]
 <../figures/../figures/complessita_algoritmi/img5.png, id=2147, 454.0965pt x 195.73125pt>
 File: ../figures/../figures/complessita_algoritmi/img5.png Graphic file (type png)
@@ -2239,9 +2117,7 @@ File: ../figures/../figures/complessita_algoritmi/img9.png Graphic file (type pn
 <use ../figures/../figures/complessita_algoritmi/img9.png>
 Package pdftex.def Info: ../figures/../figures/complessita_algoritmi/img9.png  used on input line 284.
 (pdftex.def)             Requested size: 183.80716pt x 124.75189pt.
-
-
-[66 <../figures/../figures/complessita_algoritmi/img5.png> <../figures/../figures/complessita_algoritmi/img9.png>]
+ [66 <../figures/../figures/complessita_algoritmi/img5.png> <../figures/../figures/complessita_algoritmi/img9.png>]
 pdfTeX warning (ext4): destination with the same identifier (name{subfigure.40.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
@@ -2274,14 +2150,10 @@ File: ../figures/../figures/complessita_algoritmi/img8.png Graphic file (type pn
 <use ../figures/../figures/complessita_algoritmi/img8.png>
 Package pdftex.def Info: ../figures/../figures/complessita_algoritmi/img8.png  used on input line 360.
 (pdftex.def)             Requested size: 149.94484pt x 146.22266pt.
-
-
-[67 <../figures/../figures/complessita_algoritmi/img6.png> <../figures/../figures/complessita_algoritmi/img7.png> <../figures/../figures/complessita_algoritmi/img8.png>]
+ [67 <../figures/../figures/complessita_algoritmi/img6.png> <../figures/../figures/complessita_algoritmi/img7.png> <../figures/../figures/complessita_algoritmi/img8.png>]
 Overfull \hbox (11.80435pt too wide) detected at line 456
 \OML/lmm/m/it/12 T\OT1/lmr/m/n/12 (\OML/lmm/m/it/12 n\OT1/lmr/m/n/12 ) = [] \OML/lmm/m/it/12 con  \OT1/lmr/m/n/12 = [] = \OML/lmm/m/it/12 log[]a \OT1/lmr/m/n/12 :   \OML/lmm/m/it/12 T\OT1/lmr/m/n/12 (\OML/lmm/m/it/12 n\OT1/lmr/m/n/12 ) = []
  []
-
-
 
 [68]
 <../figures/../figures/complessita_algoritmi/img10.png, id=2180, 367.97475pt x 292.09125pt>
@@ -2299,15 +2171,11 @@ Overfull \hbox (3.08138pt too wide) in paragraph at lines 507--529
 []  [] 
  []
 
-
-
 [69 <../figures/../figures/complessita_algoritmi/img10.png>]
 LaTeX Info: Symbol \textrightarrow not provided by
             font family bch in TS1 encoding.
             Default family used instead on input line 543.
-
-
-[70]
+ [70]
 pdfTeX warning (ext4): destination with the same identifier (name{subfigure.40.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
@@ -2329,9 +2197,7 @@ File: ../figures/../figures/complessita_algoritmi/img12.png Graphic file (type p
 <use ../figures/../figures/complessita_algoritmi/img12.png>
 Package pdftex.def Info: ../figures/../figures/complessita_algoritmi/img12.png  used on input line 626.
 (pdftex.def)             Requested size: 193.47578pt x 251.0692pt.
-
-
-[71 <../figures/../figures/complessita_algoritmi/img11.png> <../figures/../figures/complessita_algoritmi/img12.png>]
+ [71 <../figures/../figures/complessita_algoritmi/img11.png> <../figures/../figures/complessita_algoritmi/img12.png>]
 <../figures/../figures/complessita_algoritmi/img16.png, id=2200, 301.72725pt x 214.401pt>
 File: ../figures/../figures/complessita_algoritmi/img16.png Graphic file (type png)
 <use ../figures/../figures/complessita_algoritmi/img16.png>
@@ -2341,8 +2207,6 @@ Package pdftex.def Info: ../figures/../figures/complessita_algoritmi/img16.png  
 Overfull \hbox (3.07399pt too wide) in paragraph at lines 668--680
 []  [] 
  []
-
-
 
 [72 <../figures/../figures/complessita_algoritmi/img16.png>]
 pdfTeX warning (ext4): destination with the same identifier (name{subfigure.40.1}) has been already used, duplicate ignored
@@ -2377,9 +2241,7 @@ File: ../figures/../figures/complessita_algoritmi/img15.png Graphic file (type p
 <use ../figures/../figures/complessita_algoritmi/img15.png>
 Package pdftex.def Info: ../figures/../figures/complessita_algoritmi/img15.png  used on input line 700.
 (pdftex.def)             Requested size: 198.31747pt x 158.39835pt.
-
-
-[73 <../figures/../figures/complessita_algoritmi/img13.png> <../figures/../figures/complessita_algoritmi/img14.png> <../figures/../figures/complessita_algoritmi/img15.png>]
+ [73 <../figures/../figures/complessita_algoritmi/img13.png> <../figures/../figures/complessita_algoritmi/img14.png> <../figures/../figures/complessita_algoritmi/img15.png>]
 <../figures/../figures/complessita_algoritmi/img17.png, id=2220, 378.213pt x 279.444pt>
 File: ../figures/../figures/complessita_algoritmi/img17.png Graphic file (type png)
 <use ../figures/../figures/complessita_algoritmi/img17.png>
@@ -2399,8 +2261,6 @@ Package pdftex.def Info: ../figures/../figures/complessita_algoritmi/img20.png  
 Overfull \hbox (2.11452pt too wide) in paragraph at lines 756--769
 []  []
  []
-
-
 
 [74 <../figures/../figures/complessita_algoritmi/img17.png> <../figures/../figures/complessita_algoritmi/img18.png> <../figures/../figures/complessita_algoritmi/img20.png>]
 <../figures/../figures/complessita_algoritmi/img23.png, id=2233, 451.6875pt x 52.195pt>
@@ -2433,8 +2293,6 @@ Overfull \hbox (3.08138pt too wide) in paragraph at lines 799--819
 []  [] 
  []
 
-
-
 [75 <../figures/../figures/complessita_algoritmi/img23.png> <../figures/../figures/complessita_algoritmi/img21.png> <../figures/../figures/complessita_algoritmi/img22.png>]
 <../figures/../figures/complessita_algoritmi/img19.png, id=2244, 489.62926pt x 319.1925pt>
 File: ../figures/../figures/complessita_algoritmi/img19.png Graphic file (type png)
@@ -2451,72 +2309,26 @@ Overfull \hbox (3.08138pt too wide) in paragraph at lines 850--860
 []  [] 
  []
 
-
-
 [76 <../figures/../figures/complessita_algoritmi/img19.png> <../figures/../figures/complessita_algoritmi/img24.png>]
 <../figures/../figures/complessita_algoritmi/img25.png, id=2256, 505.28775pt x 225.2415pt>
 File: ../figures/../figures/complessita_algoritmi/img25.png Graphic file (type png)
 <use ../figures/../figures/complessita_algoritmi/img25.png>
 Package pdftex.def Info: ../figures/../figures/complessita_algoritmi/img25.png  used on input line 905.
 (pdftex.def)             Requested size: 435.32422pt x 194.05446pt.
-)
-
-[77 <../figures/../figures/complessita_algoritmi/img25.png>] (../chapters/ch6_standard_template_library/standard_template_library.tex
-
-[78]
+) [77 <../figures/../figures/complessita_algoritmi/img25.png>] (../chapters/ch6_standard_template_library/standard_template_library.tex [78]
 <../figures/../figures/strutture_dati_astratti/img1.png, id=2268, 439.6425pt x 178.6675pt>
 File: ../figures/../figures/strutture_dati_astratti/img1.png Graphic file (type png)
 <use ../figures/../figures/strutture_dati_astratti/img1.png>
 Package pdftex.def Info: ../figures/../figures/strutture_dati_astratti/img1.png  used on input line 52.
 (pdftex.def)             Requested size: 314.40001pt x 127.77354pt.
-
-
-[79 <../figures/../figures/strutture_dati_astratti/img1.png>]
-
-[80]
+ [79 <../figures/../figures/strutture_dati_astratti/img1.png>] [80]
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 126.
-
-
-[81]
-
-[82]
-
-[83]
-
-[84]
-
-[85]
-
-[86]
-
-[87]
-
-[88]
-
-[89]
-
-[90]
-
-[91]
-
-[92])
-
-[93] (../chapters/ch7_divide_et_impera/divide_et_impera.tex
-
-[94]
-
-[95]
+ [81] [82] [83] [84] [85] [86] [87] [88] [89] [90] [91] [92]) [93] (../chapters/ch7_divide_et_impera/divide_et_impera.tex [94] [95]
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on input line 133.
-
-
-[96]
-
-[97]
+ [96] [97]
 Underfull \hbox (badness 10000) in paragraph at lines 248--249
 
  []
-
-
 
 [98]
 
@@ -2547,8 +2359,6 @@ Overfull \hbox (3.43167pt too wide) in paragraph at lines 259--296
  []  [] 
  []
 
-
-
 [99 <../figures/../figures/divide-et-impera/VettoreEsempio.pdf> <../figures/../figures/divide-et-impera/QS1.pdf>]
 
 pdfTeX warning: pdflatex (file ../figures/../figures/divide-et-impera/pivot1.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
@@ -2570,8 +2380,6 @@ Overfull \hbox (11.404pt too wide) in paragraph at lines 322--335
  []  [] 
  []
 
-
-
 [100 <../figures/../figures/divide-et-impera/Pivot.pdf>]
 
 pdfTeX warning: pdflatex (file ../figures/../figures/divide-et-impera/SvolgimentoRicorsione.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
@@ -2580,15 +2388,7 @@ File: ../figures/../figures/divide-et-impera/SvolgimentoRicorsione.pdf Graphic f
 <use ../figures/../figures/divide-et-impera/SvolgimentoRicorsione.pdf>
 Package pdftex.def Info: ../figures/../figures/divide-et-impera/SvolgimentoRicorsione.pdf  used on input line 355.
 (pdftex.def)             Requested size: 241.84843pt x 236.644pt.
-
-
-[101 <../figures/../figures/divide-et-impera/pivot1.pdf> <../figures/../figures/divide-et-impera/pivot2.pdf> <../figures/../figures/divide-et-impera/SvolgimentoRicorsione.pdf>]
-
-[102])
-
-[103] (../chapters/ch8_grafi/grafi.tex
-
-[104]
+[101 <../figures/../figures/divide-et-impera/pivot1.pdf> <../figures/../figures/divide-et-impera/pivot2.pdf> <../figures/../figures/divide-et-impera/SvolgimentoRicorsione.pdf>] [102]) [103] (../chapters/ch8_grafi/grafi.tex [104]
 <../figures/../figures/Grafi/img_1.png, id=2733, 436.63126pt x 291.33844pt>
 File: ../figures/../figures/Grafi/img_1.png Graphic file (type png)
 <use ../figures/../figures/Grafi/img_1.png>
@@ -2604,11 +2404,7 @@ File: ../figures/../figures/Grafi/img_3.png Graphic file (type png)
 <use ../figures/../figures/Grafi/img_3.png>
 Package pdftex.def Info: ../figures/../figures/Grafi/img_3.png  used on input line 101.
 (pdftex.def)             Requested size: 178.96547pt x 119.41396pt.
-
-
-[105 <../figures/../figures/Grafi/img_1.png> <../figures/../figures/Grafi/img_2.png> <../figures/../figures/Grafi/img_3.png>]
-
-[106]
+ [105 <../figures/../figures/Grafi/img_1.png> <../figures/../figures/Grafi/img_2.png> <../figures/../figures/Grafi/img_3.png>] [106]
 <../figures/../figures/Grafi/img_4.png, id=2747, 373.395pt x 249.18094pt>
 File: ../figures/../figures/Grafi/img_4.png Graphic file (type png)
 <use ../figures/../figures/Grafi/img_4.png>
@@ -2618,11 +2414,7 @@ File: ../figures/../figures/Grafi/img_1.png Graphic file (type png)
 <use ../figures/../figures/Grafi/img_1.png>
 Package pdftex.def Info: ../figures/../figures/Grafi/img_1.png  used on input line 251.
 (pdftex.def)             Requested size: 178.96547pt x 119.41396pt.
-
-
-[107 <../figures/../figures/Grafi/img_4.png>]
-
-[108]
+ [107 <../figures/../figures/Grafi/img_4.png>] [108]
 <../figures/../figures/Grafi/img_5.png, id=2757, 428.60126pt x 191.21437pt>
 File: ../figures/../figures/Grafi/img_5.png Graphic file (type png)
 <use ../figures/../figures/Grafi/img_5.png>
@@ -2633,13 +2425,7 @@ File: ../figures/../figures/Grafi/img_6.png Graphic file (type png)
 <use ../figures/../figures/Grafi/img_6.png>
 Package pdftex.def Info: ../figures/../figures/Grafi/img_6.png  used on input line 389.
 (pdftex.def)             Requested size: 362.77264pt x 153.15991pt.
-
-
-[109 <../figures/../figures/Grafi/img_5.png> <../figures/../figures/Grafi/img_6.png>]
-
-[110]
-
-[111]
+ [109 <../figures/../figures/Grafi/img_5.png> <../figures/../figures/Grafi/img_6.png>] [110] [111]
 <../figures/../figures/Grafi/img_8.png, id=2792, 321.2pt x 185.69376pt>
 File: ../figures/../figures/Grafi/img_8.png Graphic file (type png)
 <use ../figures/../figures/Grafi/img_8.png>
@@ -2650,9 +2436,7 @@ File: ../figures/../figures/Grafi/img_9.png Graphic file (type png)
 <use ../figures/../figures/Grafi/img_9.png>
 Package pdftex.def Info: ../figures/../figures/Grafi/img_9.png  used on input line 559.
 (pdftex.def)             Requested size: 169.29684pt x 138.34653pt.
-
-
-[112 <../figures/../figures/Grafi/img_8.png> <../figures/../figures/Grafi/img_9.png>]
+ [112 <../figures/../figures/Grafi/img_8.png> <../figures/../figures/Grafi/img_9.png>]
 <../figures/../figures/Grafi/img_10.png, id=2805, 139.52126pt x 94.85437pt>
 File: ../figures/../figures/Grafi/img_10.png Graphic file (type png)
 <use ../figures/../figures/Grafi/img_10.png>
@@ -2673,9 +2457,7 @@ File: ../figures/../figures/Grafi/img_13.png Graphic file (type png)
 <use ../figures/../figures/Grafi/img_13.png>
 Package pdftex.def Info: ../figures/../figures/Grafi/img_13.png  used on input line 612.
 (pdftex.def)             Requested size: 169.29684pt x 136.7055pt.
-
-
-[113 <../figures/../figures/Grafi/img_10.png> <../figures/../figures/Grafi/img_11.png> <../figures/../figures/Grafi/img_12.png> <../figures/../figures/Grafi/img_13.png>]
+ [113 <../figures/../figures/Grafi/img_10.png> <../figures/../figures/Grafi/img_11.png> <../figures/../figures/Grafi/img_12.png> <../figures/../figures/Grafi/img_13.png>]
 File: ../figures/../figures/Grafi/img_8.png Graphic file (type png)
 <use ../figures/../figures/Grafi/img_8.png>
 Package pdftex.def Info: ../figures/../figures/Grafi/img_8.png  used on input line 659.
@@ -2685,9 +2467,7 @@ File: ../figures/../figures/Grafi/img_14.png Graphic file (type png)
 <use ../figures/../figures/Grafi/img_14.png>
 Package pdftex.def Info: ../figures/../figures/Grafi/img_14.png  used on input line 663.
 (pdftex.def)             Requested size: 183.80716pt x 188.04948pt.
-
-
-[114 <../figures/../figures/Grafi/img_14.png>]
+ [114 <../figures/../figures/Grafi/img_14.png>]
 File: ../figures/../figures/Grafi/img_10.png Graphic file (type png)
 <use ../figures/../figures/Grafi/img_10.png>
 Package pdftex.def Info: ../figures/../figures/Grafi/img_10.png  used on input line 693.
@@ -2706,9 +2486,7 @@ File: ../figures/../figures/Grafi/img_16.png Graphic file (type png)
 <use ../figures/../figures/Grafi/img_16.png>
 Package pdftex.def Info: ../figures/../figures/Grafi/img_16.png  used on input line 717.
 (pdftex.def)             Requested size: 232.17242pt x 169.75822pt.
-
-
-[115 <../figures/../figures/Grafi/img_15.png> <../figures/../figures/Grafi/img_16.png>]
+ [115 <../figures/../figures/Grafi/img_15.png> <../figures/../figures/Grafi/img_16.png>]
 <../figures/../figures/Grafi/img_19.png, id=2852, 337.76187pt x 113.42375pt>
 File: ../figures/../figures/Grafi/img_19.png Graphic file (type png)
 <use ../figures/../figures/Grafi/img_19.png>
@@ -2724,13 +2502,7 @@ File: ../figures/../figures/Grafi/img_18.png Graphic file (type png)
 <use ../figures/../figures/Grafi/img_18.png>
 Package pdftex.def Info: ../figures/../figures/Grafi/img_18.png  used on input line 755.
 (pdftex.def)             Requested size: 193.47578pt x 130.41937pt.
-
-
-[116 <../figures/../figures/Grafi/img_19.png> <../figures/../figures/Grafi/img_17.png> <../figures/../figures/Grafi/img_18.png>]
-
-[117]
-
-[118]
+ [116 <../figures/../figures/Grafi/img_19.png> <../figures/../figures/Grafi/img_17.png> <../figures/../figures/Grafi/img_18.png>] [117] [118]
 pdfTeX warning (ext4): destination with the same identifier (name{subfigure.68.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
@@ -2774,13 +2546,7 @@ File: ../figures/../figures/Grafi/img_23.png Graphic file (type png)
 <use ../figures/../figures/Grafi/img_23.png>
 Package pdftex.def Info: ../figures/../figures/Grafi/img_23.png  used on input line 958.
 (pdftex.def)             Requested size: 183.80716pt x 105.94394pt.
-
-
-[119 <../figures/../figures/Grafi/img_20.png> <../figures/../figures/Grafi/img_21.png> <../figures/../figures/Grafi/img_22.png> <../figures/../figures/Grafi/img_23.png>]
-
-[120]
-
-[121]
+ [119 <../figures/../figures/Grafi/img_20.png> <../figures/../figures/Grafi/img_21.png> <../figures/../figures/Grafi/img_22.png> <../figures/../figures/Grafi/img_23.png>] [120] [121]
 pdfTeX warning (ext4): destination with the same identifier (name{subfigure.68.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
@@ -2802,9 +2568,7 @@ File: ../figures/../figures/Grafi/img_25.png Graphic file (type png)
 <use ../figures/../figures/Grafi/img_25.png>
 Package pdftex.def Info: ../figures/../figures/Grafi/img_25.png  used on input line 1185.
 (pdftex.def)             Requested size: 183.80716pt x 122.42548pt.
-
-
-[122]
+ [122]
 pdfTeX warning (ext4): destination with the same identifier (name{subfigure.68.3}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
@@ -2903,11 +2667,7 @@ File: ../figures/../figures/Grafi/img_34.png Graphic file (type png)
 <use ../figures/../figures/Grafi/img_34.png>
 Package pdftex.def Info: ../figures/../figures/Grafi/img_34.png  used on input line 1271.
 (pdftex.def)             Requested size: 193.47578pt x 128.98918pt.
-
-
-[123 <../figures/../figures/Grafi/img_24.png> <../figures/../figures/Grafi/img_25.png> <../figures/../figures/Grafi/img_26.png> <../figures/../figures/Grafi/img_27.png> <../figures/../figures/Grafi/img_28.png> <../figures/../figures/Grafi/img_29.png> <../figures/../figures/Grafi/img_30.png> <../figures/../figures/Grafi/img_31.png> <../figures/../figures/Grafi/img_32.png> <../figures/../figures/Grafi/img_33.png>]
-
-[124 <../figures/../figures/Grafi/img_34.png>]
+ [123 <../figures/../figures/Grafi/img_24.png> <../figures/../figures/Grafi/img_25.png> <../figures/../figures/Grafi/img_26.png> <../figures/../figures/Grafi/img_27.png> <../figures/../figures/Grafi/img_28.png> <../figures/../figures/Grafi/img_29.png> <../figures/../figures/Grafi/img_30.png> <../figures/../figures/Grafi/img_31.png> <../figures/../figures/Grafi/img_32.png> <../figures/../figures/Grafi/img_33.png>] [124 <../figures/../figures/Grafi/img_34.png>]
 pdfTeX warning (ext4): destination with the same identifier (name{subfigure.68.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
@@ -2918,13 +2678,7 @@ File: ../figures/../figures/Grafi/img_35.png Graphic file (type png)
 <use ../figures/../figures/Grafi/img_35.png>
 Package pdftex.def Info: ../figures/../figures/Grafi/img_35.png  used on input line 1380.
 (pdftex.def)             Requested size: 207.9861pt x 138.78004pt.
-
-
-[125 <../figures/../figures/Grafi/img_35.png>]
-
-[126])
-
-[127] (../chapters/ch9_analisi_ammmortizzata/analisi_ammortizzata.tex
+ [125 <../figures/../figures/Grafi/img_35.png>] [126]) [127] (../chapters/ch9_analisi_ammmortizzata/analisi_ammortizzata.tex
 
 pdfTeX warning: pdflatex (file ../figures/../figures/Analisi_ammortizzata/ContatoreBinario.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
 <../figures/../figures/Analisi_ammortizzata/ContatoreBinario.pdf, id=2968, 709.6874pt x 589.2314pt>
@@ -2932,8 +2686,6 @@ File: ../figures/../figures/Analisi_ammortizzata/ContatoreBinario.pdf Graphic fi
 <use ../figures/../figures/Analisi_ammortizzata/ContatoreBinario.pdf>
 Package pdftex.def Info: ../figures/../figures/Analisi_ammortizzata/ContatoreBinario.pdf  used on input line 54.
 (pdftex.def)             Requested size: 241.84843pt x 200.79456pt.
-
-
 [128]
 
 pdfTeX warning: pdflatex (file ../figures/../figures/Analisi_ammortizzata/ModificaBit.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
@@ -2942,11 +2694,7 @@ File: ../figures/../figures/Analisi_ammortizzata/ModificaBit.pdf Graphic file (t
 <use ../figures/../figures/Analisi_ammortizzata/ModificaBit.pdf>
 Package pdftex.def Info: ../figures/../figures/Analisi_ammortizzata/ModificaBit.pdf  used on input line 70.
 (pdftex.def)             Requested size: 290.22107pt x 194.2553pt.
-
-
-[129 <../figures/../figures/Analisi_ammortizzata/ContatoreBinario.pdf>]
-
-[130 <../figures/../figures/Analisi_ammortizzata/ModificaBit.pdf>]
+[129 <../figures/../figures/Analisi_ammortizzata/ContatoreBinario.pdf>] [130 <../figures/../figures/Analisi_ammortizzata/ModificaBit.pdf>]
 Underfull \hbox (badness 10000) in paragraph at lines 105--110
 
  []
@@ -2964,8 +2712,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 120--129
 
  []
 
-
-
 [131]
 
 pdfTeX warning: pdflatex (file ../figures/../figures/Analisi_ammortizzata/ContatoreAccComp.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
@@ -2978,8 +2724,6 @@ Package pdftex.def Info: ../figures/../figures/Analisi_ammortizzata/ContatoreAcc
 Underfull \hbox (badness 10000) in paragraph at lines 130--137
 
  []
-
-
 
 [132 <../figures/../figures/Analisi_ammortizzata/ContatoreAccantonamenti.pdf> <../figures/../figures/Analisi_ammortizzata/ContatoreAccComp.pdf>]
 Underfull \hbox (badness 10000) in paragraph at lines 141--155
@@ -3004,11 +2748,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 165--166
 
  []
 
-
-
-[133 <../figures/../figures/Analisi_ammortizzata/CostoEffettivoPotenziale.pdf>]
-
-[134]
+[133 <../figures/../figures/Analisi_ammortizzata/CostoEffettivoPotenziale.pdf>] [134]
 
 pdfTeX warning: pdflatex (file ../figures/../figures/Analisi_ammortizzata/RaddVett1.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
 <../figures/../figures/Analisi_ammortizzata/RaddVett1.pdf, id=3017, 640.42564pt x 324.22832pt>
@@ -3034,8 +2774,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 242--242
 []\T1/bch/m/n/12 (+20) Dimensione in-iziale
  []
 
-
-
 [135 <../figures/../figures/Analisi_ammortizzata/RaddVett1.pdf>]
 
 pdfTeX warning: pdflatex (file ../figures/../figures/Analisi_ammortizzata/IncVett.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
@@ -3049,11 +2787,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 288--288
 []\T1/bch/m/n/12 (+20) Dimensione in-iziale
  []
 
-
-
-[136 <../figures/../figures/Analisi_ammortizzata/RaddVett2.pdf>])
-
-[137 <../figures/../figures/Analisi_ammortizzata/IncVett.pdf>] (../chapters/ch10_programmazione_dinamica/programmazione_dinamica.tex
+[136 <../figures/../figures/Analisi_ammortizzata/RaddVett2.pdf>]) [137 <../figures/../figures/Analisi_ammortizzata/IncVett.pdf>] (../chapters/ch10_programmazione_dinamica/programmazione_dinamica.tex
 
 pdfTeX warning: pdflatex (file ../figures/../figures/Programmazione_Dinamica/TriangoloTartaglia.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
 <../figures/../figures/Programmazione_Dinamica/TriangoloTartaglia.pdf, id=3038, 450.70685pt x 245.9318pt>
@@ -3061,8 +2795,6 @@ File: ../figures/../figures/Programmazione_Dinamica/TriangoloTartaglia.pdf Graph
 <use ../figures/../figures/Programmazione_Dinamica/TriangoloTartaglia.pdf>
 Package pdftex.def Info: ../figures/../figures/Programmazione_Dinamica/TriangoloTartaglia.pdf  used on input line 61.
 (pdftex.def)             Requested size: 290.22107pt x 158.36772pt.
-
-
 [138]
 Underfull \hbox (badness 10000) in paragraph at lines 87--88
 
@@ -3073,11 +2805,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 89--90
 
  []
 
-
-
-[139 <../figures/../figures/Programmazione_Dinamica/TriangoloTartaglia.pdf>]
-
-[140]
+[139 <../figures/../figures/Programmazione_Dinamica/TriangoloTartaglia.pdf>] [140]
 
 pdfTeX warning: pdflatex (file ../figures/../figures/Programmazione_Dinamica/Casi.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
 <../figures/../figures/Programmazione_Dinamica/Casi.pdf, id=3065, 451.6875pt x 136.51pt>
@@ -3101,8 +2829,6 @@ File: ../figures/../figures/Programmazione_Dinamica/Tab1.pdf Graphic file (type 
 <use ../figures/../figures/Programmazione_Dinamica/Tab1.pdf>
 Package pdftex.def Info: ../figures/../figures/Programmazione_Dinamica/Tab1.pdf  used on input line 164.
 (pdftex.def)             Requested size: 338.58632pt x 247.63861pt.
-
-
 [141 <../figures/../figures/Programmazione_Dinamica/Casi.pdf> <../figures/../figures/Programmazione_Dinamica/PassaggioPunti.pdf>]
 
 pdfTeX warning: pdflatex (file ../figures/../figures/Programmazione_Dinamica/Tab2.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
@@ -3119,8 +2845,6 @@ File: ../figures/../figures/Programmazione_Dinamica/Tab3.pdf Graphic file (type 
 <use ../figures/../figures/Programmazione_Dinamica/Tab3.pdf>
 Package pdftex.def Info: ../figures/../figures/Programmazione_Dinamica/Tab3.pdf  used on input line 184.
 (pdftex.def)             Requested size: 338.58632pt x 193.51585pt.
-
-
 [142 <../figures/../figures/Programmazione_Dinamica/Tab1.pdf> <../figures/../figures/Programmazione_Dinamica/Tab2.pdf>]
 
 pdfTeX warning: pdflatex (file ../figures/../figures/Programmazione_Dinamica/Tab4.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
@@ -3145,8 +2869,6 @@ File: ../figures/../figures/Programmazione_Dinamica/Tab6.pdf Graphic file (type 
 <use ../figures/../figures/Programmazione_Dinamica/Tab6.pdf>
 Package pdftex.def Info: ../figures/../figures/Programmazione_Dinamica/Tab6.pdf  used on input line 213.
 (pdftex.def)             Requested size: 386.95897pt x 193.68306pt.
-
-
 [143 <../figures/../figures/Programmazione_Dinamica/Tab3.pdf> <../figures/../figures/Programmazione_Dinamica/Tab4.pdf> <../figures/../figures/Programmazione_Dinamica/Tab5.pdf>]
 
 pdfTeX warning: pdflatex (file ../figures/../figures/Programmazione_Dinamica/Tab7.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
@@ -3155,14 +2877,10 @@ File: ../figures/../figures/Programmazione_Dinamica/Tab7.pdf Graphic file (type 
 <use ../figures/../figures/Programmazione_Dinamica/Tab7.pdf>
 Package pdftex.def Info: ../figures/../figures/Programmazione_Dinamica/Tab7.pdf  used on input line 223.
 (pdftex.def)             Requested size: 290.22107pt x 215.80013pt.
-
-
 [144 <../figures/../figures/Programmazione_Dinamica/Tab6.pdf> <../figures/../figures/Programmazione_Dinamica/Tab7.pdf>]
 Underfull \hbox (badness 10000) in paragraph at lines 298--301
 
  []
-
-
 
 [145]
 <../figures/../figures/Programmazione_Dinamica/IntPes1.png, id=3114, 773.89125pt x 520.94624pt>
@@ -3180,8 +2898,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 311--318
 
  []
 
-
-
 [146 <../figures/../figures/Programmazione_Dinamica/IntPes1.png>]
 <../figures/../figures/Programmazione_Dinamica/IntPes3.png, id=3122, 581.17125pt x 171.64125pt>
 File: ../figures/../figures/Programmazione_Dinamica/IntPes3.png Graphic file (type png)
@@ -3193,41 +2909,27 @@ File: ../figures/../figures/Programmazione_Dinamica/IntPes4.jpeg Graphic file (t
 <use ../figures/../figures/Programmazione_Dinamica/IntPes4.jpeg>
 Package pdftex.def Info: ../figures/../figures/Programmazione_Dinamica/IntPes4.jpeg  used on input line 337.
 (pdftex.def)             Requested size: 483.69687pt x 264.96422pt.
-
-
-[147 <../figures/../figures/Programmazione_Dinamica/IntPes2.png> <../figures/../figures/Programmazione_Dinamica/IntPes3.png>]
+ [147 <../figures/../figures/Programmazione_Dinamica/IntPes2.png> <../figures/../figures/Programmazione_Dinamica/IntPes3.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 354--355
 []\T1/bch/m/n/12 (+20) La re-lazione di pro-gram-mazione di-nam-ica che si ot-tiene è: $\OML/lmm/m/it/12 D\OT1/lmr/m/n/12 [\OML/lmm/m/it/12 i\OT1/lmr/m/n/12 ] =
  []
 
-
-
-[148 <../figures/../figures/Programmazione_Dinamica/IntPes4.jpeg>]
-
-[149]
+[148 <../figures/../figures/Programmazione_Dinamica/IntPes4.jpeg>] [149]
 <../figures/../figures/Programmazione_Dinamica/ZainoEs.png, id=3142, 880.79062pt x 360.84813pt>
 File: ../figures/../figures/Programmazione_Dinamica/ZainoEs.png Graphic file (type png)
 <use ../figures/../figures/Programmazione_Dinamica/ZainoEs.png>
 Package pdftex.def Info: ../figures/../figures/Programmazione_Dinamica/ZainoEs.png  used on input line 418.
 (pdftex.def)             Requested size: 483.69687pt x 198.16425pt.
-
-
-[150 <../figures/../figures/Programmazione_Dinamica/ZainoEs.png>]
-
-[151]
+ [150 <../figures/../figures/Programmazione_Dinamica/ZainoEs.png>] [151]
 <../figures/../figures/Programmazione_Dinamica/ZainoEs2.png, id=3154, 875.27pt x 451.18562pt>
 File: ../figures/../figures/Programmazione_Dinamica/ZainoEs2.png Graphic file (type png)
 <use ../figures/../figures/Programmazione_Dinamica/ZainoEs2.png>
 Package pdftex.def Info: ../figures/../figures/Programmazione_Dinamica/ZainoEs2.png  used on input line 500.
 (pdftex.def)             Requested size: 483.69687pt x 249.33699pt.
-
-
-[152]
+ [152]
 Underfull \hbox (badness 10000) in paragraph at lines 513--527
 
  []
-
-
 
 [153 <../figures/../figures/Programmazione_Dinamica/ZainoEs2.png>]
 <../figures/../figures/Programmazione_Dinamica/ZainoMem1.png, id=3166, 799.48688pt x 390.45876pt>
@@ -3240,19 +2942,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 563--569
 
  []
 
-
-
 [154]
 <../figures/../figures/Programmazione_Dinamica/Memoization1.png, id=3172, 885.80937pt x 494.84875pt>
 File: ../figures/../figures/Programmazione_Dinamica/Memoization1.png Graphic file (type png)
 <use ../figures/../figures/Programmazione_Dinamica/Memoization1.png>
 Package pdftex.def Info: ../figures/../figures/Programmazione_Dinamica/Memoization1.png  used on input line 601.
 (pdftex.def)             Requested size: 483.69687pt x 270.21956pt.
-
-
-[155 <../figures/../figures/Programmazione_Dinamica/ZainoMem1.png>])
-
-[156 <../figures/../figures/Programmazione_Dinamica/Memoization1.png>] (../chapters/ch11_tabelle_hash/tabelle_hash.tex
+ [155 <../figures/../figures/Programmazione_Dinamica/ZainoMem1.png>]) [156 <../figures/../figures/Programmazione_Dinamica/Memoization1.png>] (../chapters/ch11_tabelle_hash/tabelle_hash.tex
 <../figures/../figures/hashing/img1.png, id=3186, 626.34pt x 139.52126pt>
 File: ../figures/../figures/hashing/img1.png Graphic file (type png)
 <use ../figures/../figures/hashing/img1.png>
@@ -3268,11 +2964,7 @@ Overfull \hbox (3.08138pt too wide) in paragraph at lines 37--61
 []  []
  []
 
-
-
-[157 <../figures/../figures/hashing/img1.png> <../figures/../figures/hashing/img2.png>]
-
-[158]
+[157 <../figures/../figures/hashing/img1.png> <../figures/../figures/hashing/img2.png>] [158]
 <../figures/../figures/hashing/img3.png, id=3202, 405.01312pt x 243.91125pt>
 File: ../figures/../figures/hashing/img3.png Graphic file (type png)
 <use ../figures/../figures/hashing/img3.png>
@@ -3288,22 +2980,10 @@ Overfull \hbox (3.08138pt too wide) in paragraph at lines 108--119
 []  [] 
  []
 
-
-
 [159 <../figures/../figures/hashing/img3.png>]
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <10.95> on input line 198.
-
-
-[160]
-
-[161]
-
-[162]
-
-[163]
-
-[164]
+ [160] [161] [162] [163] [164]
 <../figures/../figures/hashing/img4.png, id=3288, 359.09157pt x 143.78719pt>
 File: ../figures/../figures/hashing/img4.png Graphic file (type png)
 <use ../figures/../figures/hashing/img4.png>
@@ -3313,8 +2993,6 @@ Package pdftex.def Info: ../figures/../figures/hashing/img4.png  used on input l
 Overfull \hbox (3.08138pt too wide) in paragraph at lines 439--453
 []  [] 
  []
-
-
 
 [165 <../figures/../figures/hashing/img4.png>]
 <../figures/../figures/hashing/img5.png, id=3296, 230.36063pt x 212.29312pt>
@@ -3332,8 +3010,6 @@ Overfull \hbox (3.08138pt too wide) in paragraph at lines 519--549
 []$  [] 
  []
 
-
-
 [166]
 <../figures/../figures/hashing/img6.png, id=3302, 303.534pt x 133.6995pt>
 File: ../figures/../figures/hashing/img6.png Graphic file (type png)
@@ -3345,24 +3021,16 @@ Overfull \hbox (3.07399pt too wide) in paragraph at lines 591--602
 $[]$  [] 
  []
 
-
-
 [167 <../figures/../figures/hashing/img5.png>]
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <14.4> on input line 637.
-
-
-[168 <../figures/../figures/hashing/img6.png>]
+ [168 <../figures/../figures/hashing/img6.png>]
 <../figures/../figures/hashing/img7.png, id=3314, 895.345pt x 211.79124pt>
 File: ../figures/../figures/hashing/img7.png Graphic file (type png)
 <use ../figures/../figures/hashing/img7.png>
 Package pdftex.def Info: ../figures/../figures/hashing/img7.png  used on input line 652.
 (pdftex.def)             Requested size: 362.77264pt x 85.81375pt.
-
-
-[169 <../figures/../figures/hashing/img7.png>]
-
-[170]
+ [169 <../figures/../figures/hashing/img7.png>] [170]
 <../figures/../figures/hashing/img8.png, id=3328, 595.22375pt x 582.175pt>
 File: ../figures/../figures/hashing/img8.png Graphic file (type png)
 <use ../figures/../figures/hashing/img8.png>
@@ -3373,25 +3041,19 @@ Overfull \hbox (3.56111pt too wide) in paragraph at lines 759--775
 []$  [] 
  []
 
-
-
 [171 <../figures/../figures/hashing/img8.png>]
 <../figures/../figures/hashing/img9.png, id=3335, 895.345pt x 445.665pt>
 File: ../figures/../figures/hashing/img9.png Graphic file (type png)
 <use ../figures/../figures/hashing/img9.png>
 Package pdftex.def Info: ../figures/../figures/hashing/img9.png  used on input line 848.
 (pdftex.def)             Requested size: 338.58632pt x 168.53842pt.
-
-
-[172]
+ [172]
 <../figures/../figures/hashing/img10.png, id=3343, 1045.9075pt x 142.5325pt>
 File: ../figures/../figures/hashing/img10.png Graphic file (type png)
 <use ../figures/../figures/hashing/img10.png>
 Package pdftex.def Info: ../figures/../figures/hashing/img10.png  used on input line 879.
 (pdftex.def)             Requested size: 483.69687pt x 65.91806pt.
-
-
-[173 <../figures/../figures/hashing/img9.png> <../figures/../figures/hashing/img10.png>]
+ [173 <../figures/../figures/hashing/img9.png> <../figures/../figures/hashing/img10.png>]
 <../figures/../figures/hashing/img11.png, id=3352, 611.28375pt x 128.48pt>
 File: ../figures/../figures/hashing/img11.png Graphic file (type png)
 <use ../figures/../figures/hashing/img11.png>
@@ -3402,9 +3064,7 @@ File: ../figures/../figures/hashing/img12.png Graphic file (type png)
 <use ../figures/../figures/hashing/img12.png>
 Package pdftex.def Info: ../figures/../figures/hashing/img12.png  used on input line 899.
 (pdftex.def)             Requested size: 459.51054pt x 209.5519pt.
-
-
-[174 <../figures/../figures/hashing/img11.png> <../figures/../figures/hashing/img12.png>]
+ [174 <../figures/../figures/hashing/img11.png> <../figures/../figures/hashing/img12.png>]
 <../figures/../figures/hashing/img13.png, id=3363, 181.67876pt x 128.48pt>
 File: ../figures/../figures/hashing/img13.png Graphic file (type png)
 <use ../figures/../figures/hashing/img13.png>
@@ -3420,8 +3080,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 936--955
 
  []
 
-
-
 [175 <../figures/../figures/hashing/img13.png> <../figures/../figures/hashing/img14.png>]
 <../figures/../figures/hashing/img15.png, id=3375, 616.3025pt x 91.34125pt>
 File: ../figures/../figures/hashing/img15.png Graphic file (type png)
@@ -3433,36 +3091,30 @@ File: ../figures/../figures/hashing/img16.png Graphic file (type png)
 <use ../figures/../figures/hashing/img16.png>
 Package pdftex.def Info: ../figures/../figures/hashing/img16.png  used on input line 988.
 (pdftex.def)             Requested size: 411.14528pt x 155.92961pt.
-
-
-[176 <../figures/../figures/hashing/img15.png> <../figures/../figures/hashing/img16.png>]
+ [176 <../figures/../figures/hashing/img15.png> <../figures/../figures/hashing/img16.png>]
 <../figures/../figures/hashing/img17.png, id=3387, 448.67625pt x 273.02pt>
 File: ../figures/../figures/hashing/img17.png Graphic file (type png)
 <use ../figures/../figures/hashing/img17.png>
 Package pdftex.def Info: ../figures/../figures/hashing/img17.png  used on input line 1007.
 (pdftex.def)             Requested size: 411.14528pt x 250.18996pt.
-
-
-[177 <../figures/../figures/hashing/img17.png>])
-
-[178] (main.aux)
+ [177 <../figures/../figures/hashing/img17.png>]) [178] (main.aux)
  ***********
-LaTeX2e <2025-06-01> patch level 1
-L3 programming layer <2025-07-20>
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2024-01-04>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 8AA15C4A689D17B1CC221AE98B5ABD85;38584.
  ) 
 Here is how much of TeX's memory you used:
- 40457 strings out of 468134
- 821602 string characters out of 5431224
- 1676914 words of memory out of 5000000
- 66080 multiletter control sequences out of 15000+600000
- 782003 words of font info for 480 fonts, out of 8000000 for 9000
+ 40528 strings out of 474486
+ 822979 string characters out of 5743756
+ 2281542 words of memory out of 5000000
+ 59810 multiletter control sequences out of 15000+600000
+ 713247 words of font info for 476 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 89i,17n,122p,1135b,2323s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\Casa\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/Casa/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchb8a.pfb><C:/Users/Casa/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchbi8a.pfb><C:/Users/Casa/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchr8a.pfb><C:/Users/Casa/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchri8a.pfb><C:/Users/Casa/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Users/Casa/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Users/Casa/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Users/Casa/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi6.pfb><C:/Users/Casa/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/Casa/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/Casa/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/Casa/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Users/Casa/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/Casa/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/Casa/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/Casa/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtk10.pfb><C:/Users/Casa/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt12.pfb><C:/Users/Casa/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt8.pfb><C:/Users/Casa/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtti10.pfb><C:/Users/Casa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/Casa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/Casa/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrb8a.pfb><C:/Users/Casa/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/Casa/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrro8a.pfb>
-Output written on main.pdf (178 pages, 7886328 bytes).
+ 89i,17n,122p,1105b,2237s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\dany2\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchb8a.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchbi8a.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchr8a.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchri8a.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi6.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtk10.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt12.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt8.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtti10.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrb8a.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrro8a.pfb>
+Output written on main.pdf (178 pages, 7912617 bytes).
 PDF statistics:
  3832 PDF objects out of 4296 (max. 8388607)
  1562 named destinations out of 1728 (max. 500000)
