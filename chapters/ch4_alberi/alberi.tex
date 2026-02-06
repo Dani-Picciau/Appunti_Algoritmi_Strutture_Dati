@@ -1,3 +1,6 @@
+\documentclass[../../main_document/main.tex]{subfiles}
+
+\begin{document}
 \section{Alberi}
 L'albero ordinato (spesso chiamato più semplicemente “albero”) è una struttura informativa fondamentale, che si presta a rappresentare svariate situazioni, quali:
 \begin{itemize}[leftmargin=1em]
@@ -10,9 +13,9 @@ L'albero ordinato (spesso chiamato più semplicemente “albero”) è una strut
 \noindent
 L'\textbf{implementazione} avviene, come per le liste, attraverso l'uso di \textbf{strutture autoreferenziali} e \textbf{puntatori}.
 \begin{tcolorbox}[
-    colback=yellow!20, 
-    colframe=darkgray, 
-    title=Struttura di un albero ordinato (o radicato)
+        colback=yellow!20,
+        colframe=darkgray,
+        title=Struttura di un albero ordinato (o radicato)
     ]
     Un \textbf{albero ordinato} è dato da un insieme finito di elementi (dunque una \textbf{struttura dati statica}) detti \textbf{nodi} e un insieme di \textbf{archi orientati} che connettono coppie di nodi.
 
@@ -25,20 +28,20 @@ L'\textbf{implementazione} avviene, come per le liste, attraverso l'uso di \text
         \item L'albero \textbf{è connesso}: non esistono elementi che non fanno parte dell'albero, ovvero che non sono connessi tramite il cammino di archi all'albero stesso.
     \end{itemize}
 \end{tcolorbox}
-\noindent    
-\begin{minipage}[t]{0.603\textwidth}  
+\noindent
+\begin{minipage}[t]{0.603\textwidth}
     \includegraphics[width=\linewidth]{alberi/img1.png}
 \end{minipage}%
 \hspace{5pt} % Spazio tra immagine e testo
-\raisebox{185pt}{  
+\raisebox{185pt}{
     \begin{minipage}[t]{0.373\textwidth}
         Dunque, l'albero rappresenta una struttura gerarchica nella quale a partire da un elemento
         molto grande (come in questo cao il "regno animale") si divide in sottoclassi, fino ad arrivare ai singoli elementi.
 
         \vspace{8pt}
         Un esempio che si avvicina maggiormente all'ambito dei sistemi operativi, come si può vedere in Figure~\ref{fig:figura23}, è un albero del file system (come quello di linux), dove si ha
-    \end{minipage} 
-} 
+    \end{minipage}
+}
 un'organizzazione in cartelle, partendo dalla radice, per ogni elemento dell'albero, fino ad arrivare ai singoli file.
 \begin{figure}[H]
     \centering
@@ -57,7 +60,7 @@ Possiamo definire $T_1, ..., T_k$ gli insiemi disgiunti e non vuoti in cui sono 
     \item Ciascun $T_i$ è detto \textbf{sottoalbero} di $T$, mentre ciascun $r_i$ è detto \textbf{figlio} di $r$;
     \item I nodi $r_1, ..., r_k$ sono tra loro \textbf{fratelli}, ed $r$ è il loro \textbf{padre}.
     \item Inoltre, un nodo senza figli è detto \textbf{foglia}, mentre la radice dell'abero (\textbf{root}) è l'unico \textbf{nodo senza padre}.
-\end{itemize} 
+\end{itemize}
 
 \vspace{8pt}
 \noindent
@@ -65,45 +68,45 @@ Oltre alla terminologia che assumono i nodi dell'albero in base alla loro posizi
 
 \vspace{-2pt}
 \noindent
-\begin{minipage}[t]{0.603\textwidth}  
+\begin{minipage}[t]{0.603\textwidth}
     \includegraphics[width=\linewidth]{alberi/img3.png}
 \end{minipage}%
 \hspace{5pt} % Spazio tra immagine e testo
-\raisebox{127pt}{  
+\raisebox{127pt}{
     \begin{minipage}[t]{0.373\textwidth}
         \begin{itemize}[leftmargin=1em]
             \item \textbf{\textit{Profondita dei nodi (depth)}}: profondità del cammino semplice dalla radice al nodo (misurata in numero di archi percorsi). Ad esempio, la radice avrà profondità $0$, i figli avranno profondità $1$, i figli dei figli avranno profondità $2$ e cosi via...
-            \item \textbf{\textit{Altezza albero (height)}}: indica 
-        \end{itemize} 
-    \end{minipage} 
-} 
-la profondità massima delle sue foglie. Ad esempio, $T_1$ ha altezza $3$, mentre $T_2$ e $T_3$ altezza $2$; 
+            \item \textbf{\textit{Altezza albero (height)}}: indica
+        \end{itemize}
+    \end{minipage}
+}
+la profondità massima delle sue foglie. Ad esempio, $T_1$ ha altezza $3$, mentre $T_2$ e $T_3$ altezza $2$;
 \begin{itemize}[leftmargin=1em]
     \item \textbf{\textit{Livello (level)}}: si riferisce all'insieme di nodi alla stessa profondità;
-\end{itemize} 
+\end{itemize}
 
 \subsection{Alberi binari}
 \begin{tcolorbox}[
-    colback=yellow!20, 
-    colframe=darkgray, 
-    title=Cos'è un'albero binario?
+        colback=yellow!20,
+        colframe=darkgray,
+        title=Cos'è un'albero binario?
     ]
     Un albero binario è un particolare albero ordinato in cui ogni nodo ha \textbf{al più due figli}, e si fa distinzione tra figlio \textbf{sinistro} e figlio \textbf{destro}.\\
     \textbf{\textit{N.B}}: in alcune implementazioni può esserci un puntatore al padre.
 \end{tcolorbox}
 \noindent
-\begin{minipage}[t]{0.600\textwidth}  
+\begin{minipage}[t]{0.600\textwidth}
     \includegraphics[width=\linewidth]{alberi/img4.png}
 \end{minipage}%
 \hspace{5pt} % Spazio tra immagine e testo
-\raisebox{134pt}{  
+\raisebox{134pt}{
     \begin{minipage}[t]{0.376\textwidth}
         La proprietà degli alberi binari è \textbf{molto delicata}: infatti, anche se due alberi $T_1$ e $T_2$ hanno gli stessi nodi e la stessa radice, essi risultano diversi se in $T_1$ un nodo $u$ è figlio sinistro di un nodo $v$, mentre in $T_2$ lo stesso nodo $u$ è figlio destro di $v$.
 
         \vspace{8pt}
         Nell'esempio mostrato, l'abero $T_1$ presenta al massimo due figli per
-    \end{minipage} 
-} 
+    \end{minipage}
+}
 
 \vspace{2pt}
 \noindent
@@ -112,22 +115,22 @@ ogni nodo, ma la rappresentazione grafica non aiuta a comprendere se si tratta d
 \subsubsection{Creazione di un albero binario}
 \label{par:Creazione di un albero binario}
 Come per qualsiasi struttura dati (liste concatenate, doppiamente concatenate, ecc...) anche per poter utilizzare un albero è necessario definire una struttura e inizializzarla nel main:
-\begin{minipage}[t]{0.5\textwidth}  
+\begin{minipage}[t]{0.5\textwidth}
     \textit{Struttura dell'albero}
     \begin{lstlisting}[style=mystyle, language=C++]
 struct inttree {
 int data;
 struct inttree *left, *right;
 };
-    \end{lstlisting} 
+    \end{lstlisting}
     \textit{Inizializzazione dell'albero}
     \begin{lstlisting}[style=mystyle, language=C++]
 inttree *root = NULL;
 //Puntatore alla struttura
-    \end{lstlisting}    
+    \end{lstlisting}
 \end{minipage}%
 \hspace{5pt} % Spazio tra immagine e testo
-\raisebox{-15pt}{  
+\raisebox{-15pt}{
     \begin{minipage}[t]{0.468\textwidth}
         Per quanto riguarda la struttura dell'albero:
         \begin{itemize}[leftmargin=1em]
@@ -138,7 +141,7 @@ inttree *root = NULL;
 
         \vspace{8pt}
         Invece, l'inizializzazione dell'albero è effettuata tramite, \texttt{root} rappresenta la radice che all'inizio è impostata a \texttt{null} per indicare l'albero vuoto.
-    \end{minipage}   
+    \end{minipage}
 }
 \begin{tcolorbox}
     [
@@ -189,27 +192,27 @@ root->left->right->right = NULL;
 }
 \end{lstlisting}
 \noindent
-\begin{minipage}[t]{0.327\textwidth}  
+\begin{minipage}[t]{0.327\textwidth}
     \includegraphics[width=\linewidth]{alberi/img5.png}
 \end{minipage}%
 \hspace{5pt} % Spazio tra immagine e testo
-\raisebox{165pt}{  
+\raisebox{165pt}{
     \begin{minipage}[t]{0.650\textwidth}
         \begin{itemize}[leftmargin=1em]
             \item \textbf{Blocco 1}: vengono allocati i nodi al livello $0$ dell'albero.
-                \begin{itemize}[leftmargin=1em, label=\raisebox{0.4ex}{\phantom{7}\rule{0.6ex}{0.6ex}}]
-                    \item \textit{riga 2}: il puntatore \texttt{root} (\texttt{*root}), definito in precedenza, viene associato al nodo radice dell'albero, puntando a un'area di memoria allocata dinamicamente della dimensione della struttura \texttt{inttree};
-                    \item \textit{riga 3}: inizializza il campo \texttt{data} del nodo radice a $1$
-                \end{itemize}
+                  \begin{itemize}[leftmargin=1em, label=\raisebox{0.4ex}{\phantom{7}\rule{0.6ex}{0.6ex}}]
+                      \item \textit{riga 2}: il puntatore \texttt{root} (\texttt{*root}), definito in precedenza, viene associato al nodo radice dell'albero, puntando a un'area di memoria allocata dinamicamente della dimensione della struttura \texttt{inttree};
+                      \item \textit{riga 3}: inizializza il campo \texttt{data} del nodo radice a $1$
+                  \end{itemize}
 
-            \vspace{8pt}
+                  \vspace{8pt}
             \item \textbf{Blocco 2}: vengono allocati i nodi al livello $1$ dell'albero.
-                \begin{itemize}[leftmargin=1em, label=\raisebox{0.4ex}{\phantom{8}\rule{0.6ex}{0.6ex}}]
-                    \item \textit{riga 6-7}: il nodo radice presenta al suo interno due puntatori, \texttt{left} e \texttt{right}, i quali punteranno a due nodi \texttt{inttree} differenti, corrispondenti rispettivamente ai figli sinistro e destro;
-                \end{itemize}
+                  \begin{itemize}[leftmargin=1em, label=\raisebox{0.4ex}{\phantom{8}\rule{0.6ex}{0.6ex}}]
+                      \item \textit{riga 6-7}: il nodo radice presenta al suo interno due puntatori, \texttt{left} e \texttt{right}, i quali punteranno a due nodi \texttt{inttree} differenti, corrispondenti rispettivamente ai figli sinistro e destro;
+                  \end{itemize}
         \end{itemize}
-    \end{minipage} 
-}  
+    \end{minipage}
+}
 
 \vspace{3pt}
 \begin{itemize}[leftmargin=1.85em, label=\raisebox{0.4ex}{\phantom{8.1}\rule{0.6ex}{0.6ex}}]
@@ -220,18 +223,18 @@ root->left->right->right = NULL;
 \vspace{8pt}
 \begin{itemize}[leftmargin=1em]
     \item \textbf{Blocco 3}: vengono allocati i nodi al livello $2$ dell'albero.
-    \begin{itemize}[leftmargin=1em, label=\raisebox{0.4ex}{\phantom{9}\rule{0.6ex}{0.6ex}}]
-        \item \textit{riga 13-14}: i puntatori \texttt{left} e \texttt{right} del figlio sinistro della radice vengono associati a due nuovi nodi \texttt{inttree};
-        \item \textit{riga 15-16}: viene inizializzato il campo \texttt{data} di questi due nodi, assegnando $4$ al figlio sinistro e $5$ al figlio destro;
-        \item \textit{riga 17-20}: i puntatori \texttt{left} e \texttt{right} di entrambi questi nodi vengono impostati a \texttt{NULL}, indicando che non hanno ulteriori figli.
-    \end{itemize}
+          \begin{itemize}[leftmargin=1em, label=\raisebox{0.4ex}{\phantom{9}\rule{0.6ex}{0.6ex}}]
+              \item \textit{riga 13-14}: i puntatori \texttt{left} e \texttt{right} del figlio sinistro della radice vengono associati a due nuovi nodi \texttt{inttree};
+              \item \textit{riga 15-16}: viene inizializzato il campo \texttt{data} di questi due nodi, assegnando $4$ al figlio sinistro e $5$ al figlio destro;
+              \item \textit{riga 17-20}: i puntatori \texttt{left} e \texttt{right} di entrambi questi nodi vengono impostati a \texttt{NULL}, indicando che non hanno ulteriori figli.
+          \end{itemize}
 \end{itemize}
 
 \subsection{Le visite}
 \begin{tcolorbox}[
-    colback=yellow!20, 
-    colframe=darkgray, 
-    title=Cos'è una visita?
+        colback=yellow!20,
+        colframe=darkgray,
+        title=Cos'è una visita?
     ]
     Una \textbf{visita} (o attraversamento) di un albero ordinato è una strategia consiste nel seguire una "rotta" di viaggio che consenta di \textbf{analizzare ogni nodo} dell'albero almeno una volta.
 \end{tcolorbox}
@@ -239,15 +242,15 @@ root->left->right->right = NULL;
 Una visita può essere eseguita in \textbf{due modi}:
 \begin{itemize}[leftmargin=1em]
     \item \textbf{Visita in profondità} (Deep-First Search - \textbf{DFS}): in questo caso si segue un percorso radice-foglia, ovvero per visitare un albero \textbf{si visita ricorsivamente} ognuno dei suoi \textbf{sottoalberi}, andando da sinistra verso destra. Questo tipo di visita presenta \textbf{tre varianti} (ordini):
-    \begin{itemize}[leftmargin=1em, label=\raisebox{0.4ex}{\phantom{10}\rule{0.6ex}{0.6ex}}]
-        \item Ordine anticipato (\textbf{preorder});
-        \item Ordine posticipato (\textbf{postorder});
-        \item Ordine simmetrico (\textbf{inorder}).
-    \end{itemize}
-    Un'analisi di questo tipo \textbf{richiede uno stack}: si visita l'albero utilizzando uno stack che però viene già reso disponibile tramite il \textbf{meccanismo di ricorsione}.
-    
+          \begin{itemize}[leftmargin=1em, label=\raisebox{0.4ex}{\phantom{10}\rule{0.6ex}{0.6ex}}]
+              \item Ordine anticipato (\textbf{preorder});
+              \item Ordine posticipato (\textbf{postorder});
+              \item Ordine simmetrico (\textbf{inorder}).
+          \end{itemize}
+          Un'analisi di questo tipo \textbf{richiede uno stack}: si visita l'albero utilizzando uno stack che però viene già reso disponibile tramite il \textbf{meccanismo di ricorsione}.
+
     \item \textbf{Visita in ampiezza} (Breadth First Search - BFS): partendo dalla radice, vengono visitati i nodi livello per livello, “orizzontalmente”, fino a raggiungere il livello massimo dell'albero.\\
-    Proprio per questo, un analisi di questo tipo viene anche detta \textbf{\textit{ordine per livelli}}.
+          Proprio per questo, un analisi di questo tipo viene anche detta \textbf{\textit{ordine per livelli}}.
 \end{itemize}
 
 \vspace{8pt}
@@ -256,9 +259,9 @@ Sia $T$ un albero non vuoto di radice $r$. Se $r$ non è una foglia ma ha $k>0$ 
 
 \subsubsection{Visita in preorder (DFS)}
 \begin{tcolorbox}[
-    colback=yellow!20, 
-    colframe=darkgray, 
-    title=Funzionamento della visita in preorder
+        colback=yellow!20,
+        colframe=darkgray,
+        title=Funzionamento della visita in preorder
     ]
     La \textbf{visita in preorder} di $T$ consiste nell'esaminare $r$ e poi nell'effettuare, nell'ordine, la previsita dei sottoalberi $T_1, ..., T_k$.
 \end{tcolorbox}
@@ -281,67 +284,67 @@ Per capire il funzionamento della visita in preorder, dividiamo il procedimento 
 \begin{enumerate}[leftmargin=1.3em]
     \item In questo tipo di visita si parte sempre chiamando la funzione rispetto al nodo $A \rightarrow$ \texttt{dfs(Tree A)}. Pertanto la sequenza di stampa inizia con $A$, e la chiamata viene memorizzata nello stack delle chiamate.
 
-    \begin{itemize}[leftmargin=1em]
-        \item \textit{Sequenza di stampa}: $A$
-        \item \textit{Stack chiamate}: $A$
-    \end{itemize}
+          \begin{itemize}[leftmargin=1em]
+              \item \textit{Sequenza di stampa}: $A$
+              \item \textit{Stack chiamate}: $A$
+          \end{itemize}
 
     \item Dopo aver stampato il nodo $A$, la funzione richiama ricorsivamente \texttt{dfs} sul figlio sinistro del nodo specificato nei parametri della funzione \texttt{dfs(Tree A)}: succede quindi che la funzione viene rieseguita dall'inizio, usando come riferimento il nodo $B$, che verrà stampato.
-    \begin{itemize}[leftmargin=1em]
-        \item \textit{Sequenza di stampa}: $A - B$
-        \item \textit{Stack chiamate}: $A - B$
-    \end{itemize}
+          \begin{itemize}[leftmargin=1em]
+              \item \textit{Sequenza di stampa}: $A - B$
+              \item \textit{Stack chiamate}: $A - B$
+          \end{itemize}
 
     \item Analogamente, dopo aver stampato il nodo $B$, la funzione richiama ricorsivamente la \texttt{dfs} sul figlio sinistro del nodo specificato nei parametri della funzione \texttt{dfs(Tree B)}, rieseguendo la funzione con $C$ come riferimento.
-    \begin{itemize}[leftmargin=1em]
-        \item \textit{Sequenza di stampa}: $A - B - C$
-        \item \textit{Stack chiamate}: $A - B - C$
-    \end{itemize}
+          \begin{itemize}[leftmargin=1em]
+              \item \textit{Sequenza di stampa}: $A - B - C$
+              \item \textit{Stack chiamate}: $A - B - C$
+          \end{itemize}
 
     \item A questo punto, viene chiamata \texttt{dfs(t.left())} sul nodo $C$, ma quest'ultimo è \texttt{NULL} poiché non presenta figli; la stessa cosa succede provando a chiamare \texttt{dfs(t.right())}.\\
-    Quando entrambe le chiamate ai figli sinistro e destro terminano, significa che il nodo in questione ha completato la propria porzione di codice ricorsivo e può andare avanti: andare avanti significa che la chiamata \texttt{dfs(t.left())} eseguita per \texttt{dfs(Tree B)} è stata completata.
-    \begin{itemize}[leftmargin=1em]
-        \item \textit{Sequenza di stampa}: $A - B - C$
-        \item \textit{Stack chiamate}: $A - B$
-    \end{itemize}
+          Quando entrambe le chiamate ai figli sinistro e destro terminano, significa che il nodo in questione ha completato la propria porzione di codice ricorsivo e può andare avanti: andare avanti significa che la chiamata \texttt{dfs(t.left())} eseguita per \texttt{dfs(Tree B)} è stata completata.
+          \begin{itemize}[leftmargin=1em]
+              \item \textit{Sequenza di stampa}: $A - B - C$
+              \item \textit{Stack chiamate}: $A - B$
+          \end{itemize}
 
     \item Il controllo torna al nodo $B$ che, dopo aver completato la chiamata per il figlio sinistro, eseguirà la chiamata per il figlio destro ($D$) tramite \texttt{dfs(t.right())}.
-    \begin{itemize}[leftmargin=1em]
-        \item \textit{Sequenza di stampa}: $A - B - C$
-        \item \textit{Stack chiamate}: $A - B - D$
-    \end{itemize}
+          \begin{itemize}[leftmargin=1em]
+              \item \textit{Sequenza di stampa}: $A - B - C$
+              \item \textit{Stack chiamate}: $A - B - D$
+          \end{itemize}
 
     \item Con la chiamata ricorsva sul figlio destro di $B$, la funzione viene rieseguita con $D$ come riferimento \texttt{dfs(Tree D)}, e come prima operazione $D$ viene stampato.
-    \begin{itemize}[leftmargin=1em]
-        \item \textit{Sequenza di stampa}: $A - B - C - D$
-        \item \textit{Stack chiamate}: $A - B - D$
-    \end{itemize}
+          \begin{itemize}[leftmargin=1em]
+              \item \textit{Sequenza di stampa}: $A - B - C - D$
+              \item \textit{Stack chiamate}: $A - B - D$
+          \end{itemize}
 
     \item Come nel caso del nodo $C$, anche $D$ non presenta ulteriori figli, dunque le sue chiamate falliranno (\texttt{NULL}) e di conseguenza $D$ completa la propria porzione di codice: il controllo torna nuovamente a $B$.
-    \begin{itemize}[leftmargin=1em]
-        \item \textit{Sequenza di stampa}: $A - B - C - D$
-        \item \textit{Stack chiamate}: $A - B$
-    \end{itemize}
+          \begin{itemize}[leftmargin=1em]
+              \item \textit{Sequenza di stampa}: $A - B - C - D$
+              \item \textit{Stack chiamate}: $A - B$
+          \end{itemize}
 
-    \item Nonostante il controllo sia tornato a $B$, esso ha completato le sue chiamate per i figli sinistro e destro, quindi ancora una volta il controllo passa al nodo superiore (in questo caso la radice $r$ ($A$)). 
-    \begin{itemize}[leftmargin=1em]
-        \item \textit{Sequenza di stampa}: $A - B - C - D$
-        \item \textit{Stack chiamate}: $A$
-    \end{itemize}
+    \item Nonostante il controllo sia tornato a $B$, esso ha completato le sue chiamate per i figli sinistro e destro, quindi ancora una volta il controllo passa al nodo superiore (in questo caso la radice $r$ ($A$)).
+          \begin{itemize}[leftmargin=1em]
+              \item \textit{Sequenza di stampa}: $A - B - C - D$
+              \item \textit{Stack chiamate}: $A$
+          \end{itemize}
 
     \item Ciò che succede è che in $A$ la chiamata \texttt{dfs(t.left())} è stata completata (tutto il sottoalbero sinistro), quindi procedo con la chiama ricorsiva per il nodo destro della radice $E$: in questo modo \textbf{il procedimento si ripete in modo analogo} per tutto il sottoalbero destro.
-    \begin{itemize}[leftmargin=1em]
-        \item \textit{Sequenza di stampa}: $A - B - C - D - E - \dots$
-        \item \textit{Stack chiamate}: $A - E - \dots$
-    \end{itemize}
+          \begin{itemize}[leftmargin=1em]
+              \item \textit{Sequenza di stampa}: $A - B - C - D - E - \dots$
+              \item \textit{Stack chiamate}: $A - E - \dots$
+          \end{itemize}
 \end{enumerate}
 
 \subsubsection{Visita in postorder (DFS)}
 \label{par:Visita in postorder (DFS)}
 \begin{tcolorbox}[
-    colback=yellow!20, 
-    colframe=darkgray, 
-    title=Funzionamento della visita in postorder
+        colback=yellow!20,
+        colframe=darkgray,
+        title=Funzionamento della visita in postorder
     ]
     La \textbf{visita in postorder} di $T$ consiste nell'effettuare, nell'ordine, la postvisita di $T_1, ..., T_k$ e poi nell'esaminare $r$.
 \end{tcolorbox}
@@ -354,7 +357,7 @@ Per capire il funzionamento della visita in preorder, dividiamo il procedimento 
     \hspace{2cm}
     \subfloat[Pseudocodice visita in postorder]{%
         \includegraphics[width=0.35\textwidth]{alberi/img9.png}%
-    } 
+    }
     \vspace{-10pt}  % Riduce lo spazio sotto
 \end{figure}
 \noindent
@@ -362,68 +365,68 @@ Per quanto riguarda la visita in postorder, anche in questo caso, dividiamo il p
 
 \vspace{8pt}
 \begin{enumerate}[leftmargin=1em]
-    \item Si parte come sempre dal nodo radice $A \rightarrow$ \texttt{dfs(Tree A)}.  
-    Tuttavia, in postorder la \textbf{radice non viene stampata subito}: la funzione procede prima a richiamare \texttt{dfs(t.left())}, dunque \texttt{dfs()} viene eseguita in modo ricorsivo rispetto al figlio sinistro ($B$).
-    \begin{itemize}[leftmargin=1em]
-        \item \textbf{Sequenza di stampa}: $-$
-        \item \textbf{Stack chiamate}: $A$
-    \end{itemize}
+    \item Si parte come sempre dal nodo radice $A \rightarrow$ \texttt{dfs(Tree A)}.
+          Tuttavia, in postorder la \textbf{radice non viene stampata subito}: la funzione procede prima a richiamare \texttt{dfs(t.left())}, dunque \texttt{dfs()} viene eseguita in modo ricorsivo rispetto al figlio sinistro ($B$).
+          \begin{itemize}[leftmargin=1em]
+              \item \textbf{Sequenza di stampa}: $-$
+              \item \textbf{Stack chiamate}: $A$
+          \end{itemize}
 
     \item Essendo nuovamente all'inizio della funzione, $B$ non viene stampato, ma ancora una volta viene richiamata \texttt{dfs(t.left())} in modo ricorsivo per il figlio sinistro di $B$ (Ovvero $C$)
-    \begin{itemize}[leftmargin=1em]
-        \item \textbf{Sequenza di stampa}: $-$
-        \item \textbf{Stack chiamate}: $A - B$
-    \end{itemize}
+          \begin{itemize}[leftmargin=1em]
+              \item \textbf{Sequenza di stampa}: $-$
+              \item \textbf{Stack chiamate}: $A - B$
+          \end{itemize}
 
     \item Il figlio sinistro di $B$ è il nodo $C$, dunque verrà eseguita la funzione \texttt{dfs(Tree C)}.
-    A questo punto la funzione riparte dall'inizio, ma $C$ non ha ulteriori figli, quindi \texttt{dfs(t.left())} e \texttt{dfs(t.right())} restituiscono \texttt{NULL} e si passa alla stampa del nodo ($C$).
-    \begin{itemize}[leftmargin=1em]
-        \item \textbf{Sequenza di stampa}: $C$
-        \item \textbf{Stack chiamate}: $A - B - C$
-    \end{itemize}
+          A questo punto la funzione riparte dall'inizio, ma $C$ non ha ulteriori figli, quindi \texttt{dfs(t.left())} e \texttt{dfs(t.right())} restituiscono \texttt{NULL} e si passa alla stampa del nodo ($C$).
+          \begin{itemize}[leftmargin=1em]
+              \item \textbf{Sequenza di stampa}: $C$
+              \item \textbf{Stack chiamate}: $A - B - C$
+          \end{itemize}
 
     \item Il nodo $C$, dopo la stampa, ha completato la propria porzione di codice, dunque il controllo ritorna al nodo $B$.
-    \begin{itemize}[leftmargin=1em]
-        \item \textbf{Sequenza di stampa}: $C$
-        \item \textbf{Stack chiamate}: $A - B$
-    \end{itemize}
+          \begin{itemize}[leftmargin=1em]
+              \item \textbf{Sequenza di stampa}: $C$
+              \item \textbf{Stack chiamate}: $A - B$
+          \end{itemize}
 
     \item  Il nodo $B$, dopo aver completato la chiamata per il figlio sinistro, può procedere a richiamare la funzione ricorsiva per il figlio destro \texttt{dfs(t.right())}, ovvero il nodo $D$: ciò implica \texttt{dfs(Tree D)}.
-    \begin{itemize}[leftmargin=1em]
-        \item \textbf{Sequenza di stampa}: $C$
-        \item \textbf{Stack chiamate}: $A - B - D$
-    \end{itemize}
+          \begin{itemize}[leftmargin=1em]
+              \item \textbf{Sequenza di stampa}: $C$
+              \item \textbf{Stack chiamate}: $A - B - D$
+          \end{itemize}
 
     \item Anche il nodo $D$ non presenta figli, dunque \texttt{dfs(t.left())} e \texttt{dfs(t.right())} restituiscono \texttt{NULL} e si passa alla stampa del nodo stesso, con conseguente terminazione della sua porzione di codice. Infine, il controllo ritorna al nodo $B$.
-    \begin{itemize}[leftmargin=1em]
-        \item \textbf{Sequenza di stampa}: $C - D$
-        \item \textbf{Stack chiamate}: $A - B$
-    \end{itemize}
+          \begin{itemize}[leftmargin=1em]
+              \item \textbf{Sequenza di stampa}: $C - D$
+              \item \textbf{Stack chiamate}: $A - B$
+          \end{itemize}
 
     \item A questo punto, il nodo $B$ ha completato la visita dei propri figli sinistro ($C$) e destro ($D$). Di conseguenza si va oltre le chiamate \texttt{dfs(t.left())} e \texttt{dfs(t.right())} e si stampa $B$. Dopo la stampa di $B$, si ha la terminazione della sua porzione di codice ricorsivo, e il controllo ritorna al nodo $A$.
-    \begin{itemize}[leftmargin=1em]
-        \item \textbf{Sequenza di stampa}: $C - D - B$
-        \item \textbf{Stack chiamate}: $A$
-    \end{itemize}
+          \begin{itemize}[leftmargin=1em]
+              \item \textbf{Sequenza di stampa}: $C - D - B$
+              \item \textbf{Stack chiamate}: $A$
+          \end{itemize}
 
     \item Terminata la visita del sottoalbero sinistro di $A$, la funzione procede ora con il figlio destro, eseguendo \texttt{dfs(t.right())} e quindi in modo ricorsivo la funzione \texttt{dfs(Tree E)}.
-    \begin{itemize}[leftmargin=1em]
-        \item \textbf{Sequenza di stampa}: $C - D - B$
-        \item \textbf{Stack chiamate}: $A - E$
-    \end{itemize}
+          \begin{itemize}[leftmargin=1em]
+              \item \textbf{Sequenza di stampa}: $C - D - B$
+              \item \textbf{Stack chiamate}: $A - E$
+          \end{itemize}
 
     \item Dunque, una volta che \texttt{dfs(Tree E)} incomincia le sue chiamate ricorsive, viene \textbf{visitato tutto il sottoalbero destro}, con un \textbf{procedimento analogo} a quello utilizzato precedentemente per visitare il sottoalbero sinistro.
-    \begin{itemize}[leftmargin=1em]
-        \item \textbf{Sequenza di stampa}: $C - D - B - \dots$
-        \item \textbf{Stack chiamate}: $A - E - \dots$
-    \end{itemize}
+          \begin{itemize}[leftmargin=1em]
+              \item \textbf{Sequenza di stampa}: $C - D - B - \dots$
+              \item \textbf{Stack chiamate}: $A - E - \dots$
+          \end{itemize}
 \end{enumerate}
 
 \subsubsection{Visita inorder (DFS)}
 \begin{tcolorbox}[
-    colback=yellow!20, 
-    colframe=darkgray, 
-    title=Funzionamento della visita inorder
+        colback=yellow!20,
+        colframe=darkgray,
+        title=Funzionamento della visita inorder
     ]
     Fissato $i \geqslant 1$, la \textbf{visita inorder} di $T$ consiste nell'effettuare la invista di $T_1, ..., T_i$, nell'esaminare $r$, e poi nell'effettuare la invisita di $T_(i+1), ..., T_k$.
 \end{tcolorbox}
@@ -436,7 +439,7 @@ Per quanto riguarda la visita in postorder, anche in questo caso, dividiamo il p
     \hspace{2cm}
     \subfloat[Pseudocodice visita inorder]{%
         \includegraphics[width=0.35\textwidth]{alberi/img11.png}%
-    } 
+    }
     \vspace{-10pt}  % Riduce lo spazio sotto
 \end{figure}
 \noindent
@@ -445,54 +448,54 @@ Anche in questo caso analizziamo passo per passo il funzionamento della funzione
 \vspace{8pt}
 \begin{enumerate}[leftmargin=1em]
     \item La visita incomincia chiamando \texttt{dfs(Tree A)} sul nodo radice ($A$). Come per la visita in postorder, la radice non viene subito stampata, ma si procede a richiamare a richiamare ricorsivamente il suo figlio sinistro ($B$) tramite \texttt{dfs(t.left())}.
-    \begin{itemize}[leftmargin=1em]
-        \item \textbf{Sequenza di stampa}: $-$
-        \item \textbf{Stack chiamate}: $A$
-    \end{itemize}
+          \begin{itemize}[leftmargin=1em]
+              \item \textbf{Sequenza di stampa}: $-$
+              \item \textbf{Stack chiamate}: $A$
+          \end{itemize}
 
     \item Quando la funzione \texttt{dfs(Tree B)} viene richiamata ricorsivamente sul nodo $B$, si riparte dall'inizio e nuovamente si chiama in modo ricorsivo il figlio sinistro di $B$ ($C$).
-    \begin{itemize}[leftmargin=1em]
-        \item \textbf{Sequenza di stampa}: $-$
-        \item \textbf{Stack chiamate}: $A - B$
-    \end{itemize}
+          \begin{itemize}[leftmargin=1em]
+              \item \textbf{Sequenza di stampa}: $-$
+              \item \textbf{Stack chiamate}: $A - B$
+          \end{itemize}
 
     \item Una volta che \texttt{dfs(Tree C)} è stata chiamata, la chiamata ricorsiva al figlio sinistro di $C$, all'interno della funzione, restituisce \texttt{NULL} proprio perché il nodo $C$ non ha figli.\\
-    Dunque si procede con l'operazione subito successiva, la stampa del nodo, per poi trovare un'altra chiamata ricorsiva al figlio destro di $C$ che restituià anch'essa \texttt{NULL} per lo stesso motivo di prima.
-    \begin{itemize}[leftmargin=1em]
-        \item \textbf{Sequenza di stampa}: $C$
-        \item \textbf{Stack chiamate}: $A - B - C$
-    \end{itemize}
+          Dunque si procede con l'operazione subito successiva, la stampa del nodo, per poi trovare un'altra chiamata ricorsiva al figlio destro di $C$ che restituià anch'essa \texttt{NULL} per lo stesso motivo di prima.
+          \begin{itemize}[leftmargin=1em]
+              \item \textbf{Sequenza di stampa}: $C$
+              \item \textbf{Stack chiamate}: $A - B - C$
+          \end{itemize}
 
     \item Arrivati a questo punto la porzione di codice eseguita da $C$ termina e il controllo torna al nodo $B$.
-    \begin{itemize}[leftmargin=1em]
-        \item \textbf{Sequenza di stampa}: $C$
-        \item \textbf{Stack chiamate}: $A - B$
-    \end{itemize}
+          \begin{itemize}[leftmargin=1em]
+              \item \textbf{Sequenza di stampa}: $C$
+              \item \textbf{Stack chiamate}: $A - B$
+          \end{itemize}
 
     \item Quando il nodo $B$ termina la chiamata al figlio sinistro ($C$), l'operazione successiva è la stampa del nodo stesso. Subito dopo la stampa viene eseguita una chiamata ricorsiva al figlio destro (nodo $D$).
-    \begin{itemize}[leftmargin=1em]
-        \item \textbf{Sequenza di stampa}: $C - B$
-        \item \textbf{Stack chiamate}: $A - B$
-    \end{itemize}
+          \begin{itemize}[leftmargin=1em]
+              \item \textbf{Sequenza di stampa}: $C - B$
+              \item \textbf{Stack chiamate}: $A - B$
+          \end{itemize}
 
-    \newpage
+          \newpage
     \item Non appena \texttt{dfs(Tree D)} è in esecuzione vengono eseguite le istruzioni secondo l'ordine prestabilito: \texttt{dfs(t.left())} restituisce \texttt{NULL} (nessun figlio sinistro), $D$ viene stampato e \texttt{dfs(t.right())}, non avendo figli, restituisce anch'esso \texttt{NULL}.
-    \begin{itemize}[leftmargin=1em]
-        \item \textbf{Sequenza di stampa}: $C - B - D$
-        \item \textbf{Stack chiamate}: $A - B - D$
-    \end{itemize}
+          \begin{itemize}[leftmargin=1em]
+              \item \textbf{Sequenza di stampa}: $C - B - D$
+              \item \textbf{Stack chiamate}: $A - B - D$
+          \end{itemize}
 
-    \item Dopo l'esecuzione di tutta la porzione di codice del nodo $D$, il controllo torna a $B$, ma anche quest'ultimo, avendo visitato figlio sinistro e destro, ha terminato le istruzioni nella sua porzione di codice. Quindi, in cascata, il controllo torna al nodo $A$, che, dopo aver visitato tutto il suo sottoalbero sinistro tramite la chiamata ricorsiva \texttt{dfs(t.left())} può essere stampato come prevede l'istruzione successiva della sua porzione di codice. 
-    \begin{itemize}[leftmargin=1em]
-        \item \textbf{Sequenza di stampa}: $C - B - D - A$
-        \item \textbf{Stack chiamate}: $A$
-    \end{itemize}
+    \item Dopo l'esecuzione di tutta la porzione di codice del nodo $D$, il controllo torna a $B$, ma anche quest'ultimo, avendo visitato figlio sinistro e destro, ha terminato le istruzioni nella sua porzione di codice. Quindi, in cascata, il controllo torna al nodo $A$, che, dopo aver visitato tutto il suo sottoalbero sinistro tramite la chiamata ricorsiva \texttt{dfs(t.left())} può essere stampato come prevede l'istruzione successiva della sua porzione di codice.
+          \begin{itemize}[leftmargin=1em]
+              \item \textbf{Sequenza di stampa}: $C - B - D - A$
+              \item \textbf{Stack chiamate}: $A$
+          \end{itemize}
 
     \item Infine, dopo la stampa del nodo $A$, viene effettuata una chiamata al sottoalbero destro tramite \texttt{dfs(t.right())}. Anche in questo caso, \textbf{il procedimento di visita è analogo} a quello utilizzato precedentemente per il \textbf{sottoalbero sinistro}.
-    \begin{itemize}[leftmargin=1em]
-        \item \textbf{Sequenza di stampa}: $C - B - D - A - \dots$
-        \item \textbf{Stack chiamate}: $A - \dots$
-    \end{itemize}
+          \begin{itemize}[leftmargin=1em]
+              \item \textbf{Sequenza di stampa}: $C - B - D - A - \dots$
+              \item \textbf{Stack chiamate}: $A - \dots$
+          \end{itemize}
 \end{enumerate}
 
 \subsubsection{Attraversamento di un albero binario in C}
@@ -509,30 +512,30 @@ if(p){
 
 \begin{itemize}[leftmargin=1em]
     \item \textbf{Tipo di ritorno}: la funzione non restituisce alcun valore, infatti il suo scopo è unicamente quello di visitare i nodi dell'albero;
-    
+
     \item \textbf{Parametri}: la funzione \texttt{preorder} accetta due parametri;
-    \begin{itemize}[leftmargin=1em, label=\raisebox{0.4ex}{\phantom{11}\rule{0.6ex}{0.6ex}}]
-        \item \texttt{inttree *p}: è un puntatore alla struttura del nodo di un albero, definita al capitolo \ref{par:Creazione di un albero binario}. Solitamente viene passato il puntatore alla radice del nodo dell'albero, \texttt{*root}, definito nel main, per poter iniziare la visita di tutto l'albero. Successivamente, tramite le chiamate ricorsive, il puntatore non farà più riferimento alla radice ma ai vari nodi figli;
-        \item \texttt{void (*op) (inttree*)}: è un puntatore a funzione (\texttt{(*op)}), \textbf{cioè una funzione passata come argomento}, che accetta come parametro un puntatore alla struttura di un nodo dell'albero \texttt(\texttt{inttree*}) e non restituisce nulla (\texttt{void}).\\
-        In questo modo, passando come argomento  a \texttt{preorder} il nome di una qualsiasi funzione che come argomento ha un puntatore alla struttura di un nodo dell'albero, è possibile eseguire un'operazione specifica all'interno della visita.
-        
-        \vspace{8pt}
-        Ad esempio, può essere utilizzato per richiamare una funzione che si occupa della stampa dei nodi, 
-        così da \textbf{tenere traccia della sequenza di attraversamento}.
-        \begin{lstlisting}[style=mystyle, language=C++]
+          \begin{itemize}[leftmargin=1em, label=\raisebox{0.4ex}{\phantom{11}\rule{0.6ex}{0.6ex}}]
+              \item \texttt{inttree *p}: è un puntatore alla struttura del nodo di un albero, definita al capitolo \ref{par:Creazione di un albero binario}. Solitamente viene passato il puntatore alla radice del nodo dell'albero, \texttt{*root}, definito nel main, per poter iniziare la visita di tutto l'albero. Successivamente, tramite le chiamate ricorsive, il puntatore non farà più riferimento alla radice ma ai vari nodi figli;
+              \item \texttt{void (*op) (inttree*)}: è un puntatore a funzione (\texttt{(*op)}), \textbf{cioè una funzione passata come argomento}, che accetta come parametro un puntatore alla struttura di un nodo dell'albero \texttt(\texttt{inttree*}) e non restituisce nulla (\texttt{void}).\\
+                    In questo modo, passando come argomento  a \texttt{preorder} il nome di una qualsiasi funzione che come argomento ha un puntatore alla struttura di un nodo dell'albero, è possibile eseguire un'operazione specifica all'interno della visita.
+
+                    \vspace{8pt}
+                    Ad esempio, può essere utilizzato per richiamare una funzione che si occupa della stampa dei nodi,
+                    così da \textbf{tenere traccia della sequenza di attraversamento}.
+                    \begin{lstlisting}[style=mystyle, language=C++]
 void stampaNodo(inttree *n) {
 printf("%d ", n->data);
 }
         \end{lstlisting}
-    \end{itemize}
+          \end{itemize}
     \item \textbf{Funzionamento del codice}: il corpo della funzione presenta un controllo condizionale e due chiamate ricorsive per l'esecuzione della visita dell'albero.
-    \begin{itemize}[leftmargin=1em, label=\raisebox{0.4ex}{\phantom{12}\rule{0.6ex}{0.6ex}}]
-        \item \textit{riga 2}: viene effettuato un controllo di validità sul nodo che si sta visitando, assicurandosi che esista (cioè che non sia \texttt{NULL}). Questo controllo risulta utile nel momento in cui si raggiunge una foglia, i cui figli sinistro e destro non esistono, per fare in modo di cedere il controllo al nodo successivo;
-        \item \textit{riga 3}: viene eseguita la funzione passata come parametro; \texttt{(*op)} rappresenta la funzione puntata da \texttt{op}, mentre \texttt{p} è l'argomento (il nodo attualmente visitato) che le viene passato;
-        \item \textit{riga 4}: viene effettuata una chiamata ricorsiva a \texttt{preorder}, specificando come parametri il figlio sinistro (\texttt{p->left}) del nodo corrente e il puntatore alla funzione \texttt{op}.\\
-        In questo modo, la visita procede ricorsivamente su tutti i figli sinistri dell'albero;
-        \item \textit{riga 5}: allo stesso modo, quando il figlio sinistro di un determinato nodo è stato visitato, con \texttt{p->right} si passa alla visita ricorsiva del figlio destro dello stesso nodo.
-    \end{itemize}
+          \begin{itemize}[leftmargin=1em, label=\raisebox{0.4ex}{\phantom{12}\rule{0.6ex}{0.6ex}}]
+              \item \textit{riga 2}: viene effettuato un controllo di validità sul nodo che si sta visitando, assicurandosi che esista (cioè che non sia \texttt{NULL}). Questo controllo risulta utile nel momento in cui si raggiunge una foglia, i cui figli sinistro e destro non esistono, per fare in modo di cedere il controllo al nodo successivo;
+              \item \textit{riga 3}: viene eseguita la funzione passata come parametro; \texttt{(*op)} rappresenta la funzione puntata da \texttt{op}, mentre \texttt{p} è l'argomento (il nodo attualmente visitato) che le viene passato;
+              \item \textit{riga 4}: viene effettuata una chiamata ricorsiva a \texttt{preorder}, specificando come parametri il figlio sinistro (\texttt{p->left}) del nodo corrente e il puntatore alla funzione \texttt{op}.\\
+                    In questo modo, la visita procede ricorsivamente su tutti i figli sinistri dell'albero;
+              \item \textit{riga 5}: allo stesso modo, quando il figlio sinistro di un determinato nodo è stato visitato, con \texttt{p->right} si passa alla visita ricorsiva del figlio destro dello stesso nodo.
+          \end{itemize}
 \end{itemize}
 
 \vspace{8pt}
@@ -578,21 +581,21 @@ free (p); / Per finire libera la memoria della radice
 \end{lstlisting}
 \begin{itemize}[leftmargin=1em]
     \item \textbf{Tipo di ritorno}: la funzione non restituisce alcun valore, infatti in suo scopo è unicamente quello di \textbf{rilasciare la memoria} precedentemente allocata per ciascun nodo dell'albero.
-    
+
     \item \textbf{Parametri}: la funzione \texttt{destroytree} accetta un singolo parametro, ovvero \texttt{inttree *p}.\\
-    Quest'ultimo è un puntatore alla struttura del nodo dell'albero, definita al capitolo \ref{par:Creazione di un albero binario}.\\
-    A partire dal nodo specificato (in genere la radice \texttt{root}), la funzione visita ricorsivamente tutti i sottoalberi (sinistro e destro), liberando la memoria associata a ciscun ogni nodo.
+          Quest'ultimo è un puntatore alla struttura del nodo dell'albero, definita al capitolo \ref{par:Creazione di un albero binario}.\\
+          A partire dal nodo specificato (in genere la radice \texttt{root}), la funzione visita ricorsivamente tutti i sottoalberi (sinistro e destro), liberando la memoria associata a ciscun ogni nodo.
 
     \item \textbf{Funzionamento del codice}: l'idea di base della funzione \texttt{destroy} è che \textit{"non posso liberare un nodo finché non ho liberato i figli, perché se liberassi il nodo prima, perderei il puntatore ai figli e non potrei più raggiungerli per deallocarli"}.
-    
-    \vspace{8pt}
-    Dunque, la sequenza di cancellazione segue l'ordine di \textbf{visita postorder} discussa al capitolo \ref{par:Visita in postorder (DFS)}, quindi, considerando lo stesso albero,  $C-D-B-F-G-E-A$. In accordo con il funzionamento postorder, il codice presenta la \textbf{seguente logica}:
-    \begin{itemize}[leftmargin=1em, label=\raisebox{0.4ex}{\phantom{13}\rule{0.6ex}{0.6ex}}]
-        \item \textit{righe 2-4}: viene effettuato un controllo sul figlio sinistro del nodo passato come parametro. Se esiste, la funzione \texttt{destroytree} viene richiamata ricorsivamente fino a raggiungere una foglia (nodo privo di figli), che restituirà un controllo falso.
-        \item \textit{riga 6-8}: quando il controllo su \texttt{p->left} risulta falso, si passa al controllo su \texttt{p->right}. Anche in questo caso viene richiamata la funzione \texttt{destroytree} in modo ricorsivo fino a che non si arriva ad una foglia, che per definizione non presenta figli.
-        \item \textit{riga 10}: quando entrambi i controlli risultano falsi, significa che il nodo corrente non ha più figli, quindi può essere deallocato in sicurezza tramite \texttt{free(p)}.\\
-        Al termine della liberazione, la funzione termina e il controllo ritorna al nodo superiore che era in attesa della conclusione della chiamata ricorsiva nello \textbf{stack delle chiamate}.
-    \end{itemize}
+
+          \vspace{8pt}
+          Dunque, la sequenza di cancellazione segue l'ordine di \textbf{visita postorder} discussa al capitolo \ref{par:Visita in postorder (DFS)}, quindi, considerando lo stesso albero,  $C-D-B-F-G-E-A$. In accordo con il funzionamento postorder, il codice presenta la \textbf{seguente logica}:
+          \begin{itemize}[leftmargin=1em, label=\raisebox{0.4ex}{\phantom{13}\rule{0.6ex}{0.6ex}}]
+              \item \textit{righe 2-4}: viene effettuato un controllo sul figlio sinistro del nodo passato come parametro. Se esiste, la funzione \texttt{destroytree} viene richiamata ricorsivamente fino a raggiungere una foglia (nodo privo di figli), che restituirà un controllo falso.
+              \item \textit{riga 6-8}: quando il controllo su \texttt{p->left} risulta falso, si passa al controllo su \texttt{p->right}. Anche in questo caso viene richiamata la funzione \texttt{destroytree} in modo ricorsivo fino a che non si arriva ad una foglia, che per definizione non presenta figli.
+              \item \textit{riga 10}: quando entrambi i controlli risultano falsi, significa che il nodo corrente non ha più figli, quindi può essere deallocato in sicurezza tramite \texttt{free(p)}.\\
+                    Al termine della liberazione, la funzione termina e il controllo ritorna al nodo superiore che era in attesa della conclusione della chiamata ricorsiva nello \textbf{stack delle chiamate}.
+          \end{itemize}
 \end{itemize}
 
 \vspace{8pt}
@@ -617,7 +620,7 @@ return 0;
 
 \subsection{Alberi binari di ricerca (BST)}
 \label{par:Alberi binari di ricerca (BST)}
-Come detto precedentemente al capitolo \ref{par:I dizionari} un \textbf{dizionario} in informatica è una \textbf{struttura dati astratta} che memorizza coppie (\textit{chiave, valore}), quindi servono a memorizzare dati associativi come, ad esempio, una rubrica telefonica o una tabellla di simboli.\\
+Come detto precedentemente al capitolo \ref{par:dizionari} un \textbf{dizionario} in informatica è una \textbf{struttura dati astratta} che memorizza coppie (\textit{chiave, valore}), quindi servono a memorizzare dati associativi come, ad esempio, una rubrica telefonica o una tabellla di simboli.\\
 I dizionari consentono \textbf{tre operazioni fondamentali:}
 \begin{itemize}[leftmargin=1em]
     \item \texttt{lookup(Item k)} $\rightarrow$ cercare un elemento con chiave \texttt{k};
@@ -631,17 +634,17 @@ Un dizionario può essere implementato in vari modi:
 
 \vspace{2pt}
 \noindent
-\begin{minipage}[t]{0.700\textwidth}  
+\begin{minipage}[t]{0.700\textwidth}
     \includegraphics[width=\linewidth]{alberi/img12.png}
     *=Si assume che l'elemento sia già stato trovato, altrimenti $O(n)$
 \end{minipage}%
 \hspace{5pt} % Spazio tra immagine e testo
-\raisebox{68pt}{  
+\raisebox{68pt}{
     \begin{minipage}[t]{0.276\textwidth}
         Queste tipologie di implementazioni presentano diversi \textbf{limiti di efficienza}.
         Ad esempio, i \textbf{vettori ordinati} permettono una ricerca veloce ma inserimenti e rimozioni lente,
-    \end{minipage} 
-} 
+    \end{minipage}
+}
 
 \vspace{5pt}
 \noindent
@@ -659,12 +662,12 @@ Si conclude quindi che \textbf{utilizzare i vettori non è una buona idea}.
         boxed title style={colback=white, colframe=green!60!black, rounded corners},
         breakable
     ]
-    Per risolvere il problema legato all'inefficienza dei vettori, vengono introdotti gli \textbf{alberi binari di ricerca} (BST - Binary Search Trees) proprio come una \textbf{struttura dati efficiente} per implementare i dizionari dinamici ordinati. 
+    Per risolvere il problema legato all'inefficienza dei vettori, vengono introdotti gli \textbf{alberi binari di ricerca} (BST - Binary Search Trees) proprio come una \textbf{struttura dati efficiente} per implementare i dizionari dinamici ordinati.
 \end{tcolorbox}
 \begin{tcolorbox}[
-    colback=yellow!20, 
-    colframe=darkgray, 
-    title=Cos'è un albero binario di ricerca?
+        colback=yellow!20,
+        colframe=darkgray,
+        title=Cos'è un albero binario di ricerca?
     ]
     Un \textbf{albero binario di ricerca} è un modo per realizzare una \textbf{struttura dati} che mantiene \textbf{i dati in ordine}, proprio come farebbe un vettore ordinato, grazie alla sua costruzione secondo \textbf{una logica \textit{dicotomica}}. Inoltre, all'interno dell'albero \textbf{ogni nodo rappresenta una coppia} (\textit{chiave, valore}).
 \end{tcolorbox}
@@ -700,11 +703,11 @@ In questo modo tutte le operazioni di ricerca, inserimento e cancellazione sfrut
     Però, nulla vieta che ad una chiave sia associato un insieme (dinamico o non), ad esempio, \texttt{(10, ["Alberto", "Roberto"])}
 \end{tcolorbox}
 \noindent
-\begin{minipage}[t]{0.315\textwidth}  
+\begin{minipage}[t]{0.315\textwidth}
     \includegraphics[width=\linewidth]{alberi/img13.png}
 \end{minipage}%
 \hspace{5pt} % Spazio tra immagine e testo
-\raisebox{125pt}{  
+\raisebox{125pt}{
     \begin{minipage}[t]{0.662\textwidth}
         Le operazioni previste dagli alberi binari di ricerca sono:
         \begin{itemize}[leftmargin=1em]
@@ -714,8 +717,8 @@ In questo modo tutte le operazioni di ricerca, inserimento e cancellazione sfrut
             \item \textbf{Successore} e \textbf{predecessore} di un elemento nell'insieme;
             \item \textbf{Cancellazione} di un elemento dall'insieme.
         \end{itemize}
-    \end{minipage} 
-}  
+    \end{minipage}
+}
 
 \subsubsection{Implementazione della ricerca}
 \label{par:Implementazione della ricerca}
@@ -740,57 +743,57 @@ else return search(p->left, x);
 
 \begin{itemize}[leftmargin=1em]
     \item \textbf{Tipo di ritorno}: la funzione restituisce un puntatore a un nodo della struttura \texttt{bstree}, la cui composizione è identica a quella di un albero binario vista al capitolo \ref{par:Creazione di un albero binario}.\\
-    Il nodo restituito è: 
-    \begin{itemize}[leftmargin=1em, label=\raisebox{0.4ex}{\phantom{14}\rule{0.6ex}{0.6ex}}]
-        \item Il \textbf{nodo trovato} se la chiave \texttt{x} è presente nell'albero;
-        \item Oppure \texttt{NULL}, se la chiave non esiste, cioè \textbf{se la ricerca termina su un puntatore nullo}.
-    \end{itemize}
-    Dunque, il tipo di ritorno consente di sapere \textbf{dove si trova l'elemento}, oppure \textbf{che non esiste}. 
+          Il nodo restituito è:
+          \begin{itemize}[leftmargin=1em, label=\raisebox{0.4ex}{\phantom{14}\rule{0.6ex}{0.6ex}}]
+              \item Il \textbf{nodo trovato} se la chiave \texttt{x} è presente nell'albero;
+              \item Oppure \texttt{NULL}, se la chiave non esiste, cioè \textbf{se la ricerca termina su un puntatore nullo}.
+          \end{itemize}
+          Dunque, il tipo di ritorno consente di sapere \textbf{dove si trova l'elemento}, oppure \textbf{che non esiste}.
 
     \item \textbf{Parametri}: la funzione \texttt{bstree} accetta due parametri;
-    \begin{itemize}[leftmargin=1em, label=\raisebox{0.4ex}{\phantom{15}\rule{0.6ex}{0.6ex}}]
-        \item \texttt{bstree *p}: è il puntatore al nodo corrente dell'albero binario di ricerca.\\
-        In genere la prima chiamata della funzione riceve la radice dell'albero (\texttt{root}), ma nelle chiamate ricorsive il parametro \texttt{p} sarà aggiornato ai figli sinistro o destro.
-        \item \texttt{int x}: rappresenta la chiave da cercare (in questo caso un intero). Si confronta con il campo data contenuto nel nodo corrente.
-    \end{itemize}
+          \begin{itemize}[leftmargin=1em, label=\raisebox{0.4ex}{\phantom{15}\rule{0.6ex}{0.6ex}}]
+              \item \texttt{bstree *p}: è il puntatore al nodo corrente dell'albero binario di ricerca.\\
+                    In genere la prima chiamata della funzione riceve la radice dell'albero (\texttt{root}), ma nelle chiamate ricorsive il parametro \texttt{p} sarà aggiornato ai figli sinistro o destro.
+              \item \texttt{int x}: rappresenta la chiave da cercare (in questo caso un intero). Si confronta con il campo data contenuto nel nodo corrente.
+          \end{itemize}
 
     \item \textbf{Funzionamento del codice}: la funzione implementa una \textbf{ricerca dicotomica ricorsiva}.
-    Nell'esempio riportato in Figure \ref{fig:figura35}, viene effettuata la \textbf{ricerca del valore $16$}.
+          Nell'esempio riportato in Figure \ref{fig:figura35}, viene effettuata la \textbf{ricerca del valore $16$}.
 
-    \vspace{-15pt}
-    \begin{minipage}[t]{0.263\textwidth}  
+          \vspace{-15pt}
+          \begin{minipage}[t]{0.263\textwidth}
 
-        \vspace{-5pt}
-        \begin{figure}[H]
-            \addtocounter{figure}{11}
-            \centering                
-            \caption{Albero BST}
-            \label{fig:figura35}
-        \end{figure}
+              \vspace{-5pt}
+              \begin{figure}[H]
+                  \addtocounter{figure}{11}
+                  \centering
+                  \caption{Albero BST}
+                  \label{fig:figura35}
+              \end{figure}
 
-        \vspace{-19pt}
-        \includegraphics[width=\linewidth]{alberi/img14.png}
-    \end{minipage}%
-    \hspace{5pt} % Spazio tra immagine e testo
-    \raisebox{-15pt}{  
-        \begin{minipage}[t]{0.689\textwidth}
-            \begin{itemize}[leftmargin=1em, label=\raisebox{0.4ex}{\phantom{16}\rule{0.6ex}{0.6ex}}]
-                \item \textit{riga 4}: la prima istruzione della funzione è un \textbf{controllo di terminazione} per fare in modo che, al ripetere della funzione ricorsiva, si capisca se la chiave del nodo è quella cercata o meno; Se \texttt{p==NULL}, significa che abbiamo raggiunto un ramo vuoto, la chiave non esiste e la funzione restitiuisce \texttt{NULL}, mentre se \texttt{p->data==x} abbiamo trovato il nodo desiderato e si ritorna il puntatore al nodo stesso.
-                \item \textit{riga 7}: questa seconda istruzione implementa la ricerca ricorsiva nel sotto albero destro. Se la chiave cercata \texttt{x} \textbf{è maggiore della chiave del nodo corrente} (\texttt{p->data}), allora, secondo la proprietà del BST (capitolo \ref{par:Alberi binari di ricerca (BST)}), il \textbf{valore} può trovarsi solo nel \textbf{sottoalbero destro}.\\
-                Dunque, la funzione richiama se stessa (in modo ricorsivo), passando come parametri il figlio destro del nodo sul quale si 
-            \end{itemize}
-        \end{minipage} 
-    }  
+              \vspace{-19pt}
+              \includegraphics[width=\linewidth]{alberi/img14.png}
+          \end{minipage}%
+          \hspace{5pt} % Spazio tra immagine e testo
+          \raisebox{-15pt}{
+              \begin{minipage}[t]{0.689\textwidth}
+                  \begin{itemize}[leftmargin=1em, label=\raisebox{0.4ex}{\phantom{16}\rule{0.6ex}{0.6ex}}]
+                      \item \textit{riga 4}: la prima istruzione della funzione è un \textbf{controllo di terminazione} per fare in modo che, al ripetere della funzione ricorsiva, si capisca se la chiave del nodo è quella cercata o meno; Se \texttt{p==NULL}, significa che abbiamo raggiunto un ramo vuoto, la chiave non esiste e la funzione restitiuisce \texttt{NULL}, mentre se \texttt{p->data==x} abbiamo trovato il nodo desiderato e si ritorna il puntatore al nodo stesso.
+                      \item \textit{riga 7}: questa seconda istruzione implementa la ricerca ricorsiva nel sotto albero destro. Se la chiave cercata \texttt{x} \textbf{è maggiore della chiave del nodo corrente} (\texttt{p->data}), allora, secondo la proprietà del BST (capitolo \ref{par:Alberi binari di ricerca (BST)}), il \textbf{valore} può trovarsi solo nel \textbf{sottoalbero destro}.\\
+                            Dunque, la funzione richiama se stessa (in modo ricorsivo), passando come parametri il figlio destro del nodo sul quale si
+                  \end{itemize}
+              \end{minipage}
+          }
 
-    \vspace{3pt}
-    \begin{adjustwidth}{1em}{0pt}
-        stava lavorando (\texttt{p->right}), e ancora una volta la chiave cercata (\texttt{x}). A questo punto la funzione ricomincia, e se il controllo di terminazione non si attiva, viene ricontrollato se \texttt{x} è maggiore o minore di \texttt{p->data}.
-    \end{adjustwidth}
-    \begin{itemize}[leftmargin=1em, label=\raisebox{0.4ex}{\phantom{17}\rule{0.6ex}{0.6ex}}]
-        \item \textit{riga 10}: anche in questo caso viene implementata la ricerca ricorsiva ma nel sottoalbero sinistro. È \textbf{importante notare} che non viene specificato \texttt{x<p->left} proprio perché come descritto al capitolo capitolo \ref{par:Alberi binari di ricerca (BST)} (\textit{"Alcune precisazioni"}), \textbf{non possono essere presenti nodi con lo stesso valore di chiave}, dunque è scontato che  sia l'unica altra opzione possibile.\\
-        Quindi, se la chiave cercata \texttt{x} \textbf{è minore della chiave del nodo corrente} (\texttt{p->data}), allora, secondo la proprietà del BST, il \textbf{valore} può trovarsi solo nel \textbf{sottoalbero sinistro}.\\
-        Anche in questo caso, viene richiamata ricorsivamente la funzione, con \texttt{p->left} come nuovo nodo di partenza, fino a che non si attiva il controllo di terminazione, o \texttt{x} è maggiore di \texttt{p->data}.
-    \end{itemize}
+          \vspace{3pt}
+          \begin{adjustwidth}{1em}{0pt}
+              stava lavorando (\texttt{p->right}), e ancora una volta la chiave cercata (\texttt{x}). A questo punto la funzione ricomincia, e se il controllo di terminazione non si attiva, viene ricontrollato se \texttt{x} è maggiore o minore di \texttt{p->data}.
+          \end{adjustwidth}
+          \begin{itemize}[leftmargin=1em, label=\raisebox{0.4ex}{\phantom{17}\rule{0.6ex}{0.6ex}}]
+              \item \textit{riga 10}: anche in questo caso viene implementata la ricerca ricorsiva ma nel sottoalbero sinistro. È \textbf{importante notare} che non viene specificato \texttt{x<p->left} proprio perché come descritto al capitolo capitolo \ref{par:Alberi binari di ricerca (BST)} (\textit{"Alcune precisazioni"}), \textbf{non possono essere presenti nodi con lo stesso valore di chiave}, dunque è scontato che  sia l'unica altra opzione possibile.\\
+                    Quindi, se la chiave cercata \texttt{x} \textbf{è minore della chiave del nodo corrente} (\texttt{p->data}), allora, secondo la proprietà del BST, il \textbf{valore} può trovarsi solo nel \textbf{sottoalbero sinistro}.\\
+                    Anche in questo caso, viene richiamata ricorsivamente la funzione, con \texttt{p->left} come nuovo nodo di partenza, fino a che non si attiva il controllo di terminazione, o \texttt{x} è maggiore di \texttt{p->data}.
+          \end{itemize}
 \end{itemize}
 
 \vspace{8pt}
@@ -810,12 +813,12 @@ return q;
 Il \textbf{tipo di ritorno} e i \textbf{parametri}, sono uguali a quelli della ricerca in modalità ricorsiva, ciò che cambia è la \textbf{struttura interna della funzione}, che però produce lo stesso risultato.
 \begin{itemize}[leftmargin=1em]
     \item \textbf{Funzionamento del codice}: in questo caso si effettua una \textbf{ricerca dicotomica}, ovvero ad ogni passo si elimina metà dell'albero possibile, usando però una modalità iterativa.
-    \begin{itemize}[leftmargin=1em, label=\raisebox{0.4ex}{\phantom{18}\rule{0.6ex}{0.6ex}}]
-        \item \textit{riga 3}: viene creato un puntatore locale (\texttt{*q}) alla struttura \texttt{bstree}, il quale viene fatto puntare al parametro \texttt{p} che di solito rappresenta la radice (\texttt{root}). In questo modo partendo da \texttt{p}, \texttt{*q} verra usato per scorrere l'albero.
-        \item \textit{riga 4}: il while continua finché il nodo esiste e la chiave non è stata trovata. L'\textbf{uscita dal while} rappresenta il \textbf{controllo di terminazione}: se \texttt{q} è \texttt{NULL} la chiave non esiste, altrimenti è stata trovata.
-        \item \textit{riga 5-6}: viene definito il controllo condizionale per fare in modo di "scorrere" l'albero a destra se \texttt{x > q->data} o a sinistra se \texttt{x < q->data}.
-        \item \textit{riga 8}: quando la condizione del \texttt{while} non viene più rispettata, la chiave del nodo viene restituita.
-    \end{itemize}
+          \begin{itemize}[leftmargin=1em, label=\raisebox{0.4ex}{\phantom{18}\rule{0.6ex}{0.6ex}}]
+              \item \textit{riga 3}: viene creato un puntatore locale (\texttt{*q}) alla struttura \texttt{bstree}, il quale viene fatto puntare al parametro \texttt{p} che di solito rappresenta la radice (\texttt{root}). In questo modo partendo da \texttt{p}, \texttt{*q} verra usato per scorrere l'albero.
+              \item \textit{riga 4}: il while continua finché il nodo esiste e la chiave non è stata trovata. L'\textbf{uscita dal while} rappresenta il \textbf{controllo di terminazione}: se \texttt{q} è \texttt{NULL} la chiave non esiste, altrimenti è stata trovata.
+              \item \textit{riga 5-6}: viene definito il controllo condizionale per fare in modo di "scorrere" l'albero a destra se \texttt{x > q->data} o a sinistra se \texttt{x < q->data}.
+              \item \textit{riga 8}: quando la condizione del \texttt{while} non viene più rispettata, la chiave del nodo viene restituita.
+          \end{itemize}
 \end{itemize}
 
 \vspace{8pt}
@@ -859,12 +862,12 @@ return p;
     \item \textbf{Tipo di ritorno}: la funzione restituisce un puntatore alla struttura del nodo appena creato.
     \item \textbf{Parametri}: la funzione \texttt{new\_node()} accetta come unico parametro un intero (\texttt{int x}), ovvero la chiave da salvare nel nodo.
     \item \textbf{Funzionamento del codice}: vengono definite le istruzioni per assegnare al nuovo nodo il valore della chiave e dei suoi figli sinistro e destro.
-    \begin{itemize}[leftmargin=1em, label=\raisebox{0.4ex}{\phantom{19}\rule{0.6ex}{0.6ex}}]
-        \item \textit{riga 3-4}: viene dichiarato il puntatore \texttt{p} alla struttura \texttt{bstree}. Successivamente, tramite \texttt{malloc(sizeof(bstree))} viene allocata dinamicamente la memoria necessaria a contenere un nodo, e il puntatore \texttt{p} viene fatto puntare a questa nuova area di memoria.
-        \item \textit{riga 5}: viene assegnato al campo \texttt{data} del nodo il valore \texttt{x}, fornito come parametro.
-        \item \textit{riga 6-7}: i puntatori \texttt{left} e \texttt{right} vengono inizializzati a \texttt{NULL}. Ciò significa che, al momento della creazione, \textbf{il nodo non ha figli} ed è \textbf{una foglia}.
-        \item \textit{riga 8}: la funzione restituisce il puntatore al nodo creato.
-    \end{itemize}
+          \begin{itemize}[leftmargin=1em, label=\raisebox{0.4ex}{\phantom{19}\rule{0.6ex}{0.6ex}}]
+              \item \textit{riga 3-4}: viene dichiarato il puntatore \texttt{p} alla struttura \texttt{bstree}. Successivamente, tramite \texttt{malloc(sizeof(bstree))} viene allocata dinamicamente la memoria necessaria a contenere un nodo, e il puntatore \texttt{p} viene fatto puntare a questa nuova area di memoria.
+              \item \textit{riga 5}: viene assegnato al campo \texttt{data} del nodo il valore \texttt{x}, fornito come parametro.
+              \item \textit{riga 6-7}: i puntatori \texttt{left} e \texttt{right} vengono inizializzati a \texttt{NULL}. Ciò significa che, al momento della creazione, \textbf{il nodo non ha figli} ed è \textbf{una foglia}.
+              \item \textit{riga 8}: la funzione restituisce il puntatore al nodo creato.
+          \end{itemize}
 \end{itemize}
 
 \subsubsection{Inserimento di un nodo}
@@ -892,43 +895,43 @@ return p;
 \begin{itemize}[leftmargin=1em]
     \item \textbf{Tipo di ritorno}: la funzione restituisce un puntatore a \texttt{bstree}.\\ Il valore restituito rappresenta la radice del sottoalbero risultante dopo l'inserimento;
     \item \textbf{Parametri}: la funzione accetta due parametri;
-    \begin{itemize}[leftmargin=1em, label=\raisebox{0.4ex}{\phantom{20}\rule{0.6ex}{0.6ex}}]
-        \item \texttt{bstree *p}: è il puntatore al nodo corrente dell'albero binario di ricerca.\\
-        In genere la prima chiamata della funzione riceve la radice dell'albero (\texttt{root}), ma nelle chiamate ricorsive il parametro \texttt{p} sarà aggiornato ai figli sinistro o destro.
-        \item \texttt{int x}: è la chiave da inserire nel campo \texttt{data} del nuovo nodo.
-    \end{itemize}
+          \begin{itemize}[leftmargin=1em, label=\raisebox{0.4ex}{\phantom{20}\rule{0.6ex}{0.6ex}}]
+              \item \texttt{bstree *p}: è il puntatore al nodo corrente dell'albero binario di ricerca.\\
+                    In genere la prima chiamata della funzione riceve la radice dell'albero (\texttt{root}), ma nelle chiamate ricorsive il parametro \texttt{p} sarà aggiornato ai figli sinistro o destro.
+              \item \texttt{int x}: è la chiave da inserire nel campo \texttt{data} del nuovo nodo.
+          \end{itemize}
     \item \textbf{Funzionamento del codice}: la struttura del codice è simile a quella che viene utilizzata per effettuare la ricerca di un nodo (capitolo \ref{par:Implementazione della ricerca}). Come avviene per la ricerca di un nodo, anche l'\textbf{inserimento sfrutta la logica dicotomica} utilizzata per la creazione dell'albero binario in modo tale che \textbf{in base al valore della chiave del nodo che si vuole inserire}, venga \textit{"esclusa"} una metà dell'albero ad ogni ricorsione o iterazione (in questo caso ad ogni ricorsione).\\
-    Nell'esempio riportato in Figure \ref{fig:figura36} viene effettuato l'inserimento del valore $11$.\\
-    \begin{minipage}[t]{0.263\textwidth}  
+          Nell'esempio riportato in Figure \ref{fig:figura36} viene effettuato l'inserimento del valore $11$.\\
+          \begin{minipage}[t]{0.263\textwidth}
 
-        \vspace{-23pt}
-        \begin{figure}[H]
-            \centering                
-            \caption{Albero BST}
-            \label{fig:figura36}
-        \end{figure}
+              \vspace{-23pt}
+              \begin{figure}[H]
+                  \centering
+                  \caption{Albero BST}
+                  \label{fig:figura36}
+              \end{figure}
 
-        \vspace{-19pt}
-        \includegraphics[width=\linewidth]{alberi/img15.png}
-    \end{minipage}%
-    \hspace{5pt} % Spazio tra immagine e testo
-    \raisebox{0pt}{  
-        \begin{minipage}[t]{0.689\textwidth}
-            \begin{itemize}[leftmargin=1em, label=\raisebox{0.4ex}{\phantom{21}\rule{0.6ex}{0.6ex}}]
-                \item \textit{riga 3}: se il primo controllo condizionale è verificato (\texttt{p=NULL}), significa che siamo arrivati alla posizione corretta dove deve essere inserito il nuovo nodo. Una volta trovata la posizione corretta, viene creato e restituito un nuovo nodo tramite la funzione \texttt{new\_node(x)} vista al capitolo \ref{par:Creazione di un nuovo nodo}.
-                \item \textit{riga 7}: in questo secondo controllo condizionale viene controllato se la chiave \texttt{x} da inserire sia maggiore della chiave del nodo corrente (\texttt{x > p->data}). In caso affermativo viene richiamata la funzione in modo ricorsivo sul figlio destro del nodo corrente (\texttt{p->right}), come specificato dalle proprietà dei BST.
-                \item \textit{riga 9}: il terzo controllo condizionale viene eseguito nel caso in cui il nodo corrente \textbf{non sia nullo} (\texttt{p!=NULL}) e \texttt{x} \textbf{non sia maggiore} di \texttt{p->data}. Ciò vuol dire che \texttt{x < p->data} e dunque, 
-            \end{itemize}
-        \end{minipage} 
-    }  
-    
-    \vspace{4pt}
-    \begin{adjustwidth}{1em}{0pt}
-        secondo le proprietà dei BST, la funzione viene richiamata in modo ricorsivo sul figlio sinistro del nodo corrente (\texttt{p->left}).
-    \end{adjustwidth}
-    \begin{itemize}[leftmargin=1em, label=\raisebox{0.4ex}{\phantom{22}\rule{0.6ex}{0.6ex}}]
-        \item \textit{riga 11}: la funzione ritorna sempre \texttt{p}, cioè la radice del sottoalbero risultante, o per meglio dire, il padre del figlio appena creato.
-    \end{itemize}
+              \vspace{-19pt}
+              \includegraphics[width=\linewidth]{alberi/img15.png}
+          \end{minipage}%
+          \hspace{5pt} % Spazio tra immagine e testo
+          \raisebox{0pt}{
+              \begin{minipage}[t]{0.689\textwidth}
+                  \begin{itemize}[leftmargin=1em, label=\raisebox{0.4ex}{\phantom{21}\rule{0.6ex}{0.6ex}}]
+                      \item \textit{riga 3}: se il primo controllo condizionale è verificato (\texttt{p=NULL}), significa che siamo arrivati alla posizione corretta dove deve essere inserito il nuovo nodo. Una volta trovata la posizione corretta, viene creato e restituito un nuovo nodo tramite la funzione \texttt{new\_node(x)} vista al capitolo \ref{par:Creazione di un nuovo nodo}.
+                      \item \textit{riga 7}: in questo secondo controllo condizionale viene controllato se la chiave \texttt{x} da inserire sia maggiore della chiave del nodo corrente (\texttt{x > p->data}). In caso affermativo viene richiamata la funzione in modo ricorsivo sul figlio destro del nodo corrente (\texttt{p->right}), come specificato dalle proprietà dei BST.
+                      \item \textit{riga 9}: il terzo controllo condizionale viene eseguito nel caso in cui il nodo corrente \textbf{non sia nullo} (\texttt{p!=NULL}) e \texttt{x} \textbf{non sia maggiore} di \texttt{p->data}. Ciò vuol dire che \texttt{x < p->data} e dunque,
+                  \end{itemize}
+              \end{minipage}
+          }
+
+          \vspace{4pt}
+          \begin{adjustwidth}{1em}{0pt}
+              secondo le proprietà dei BST, la funzione viene richiamata in modo ricorsivo sul figlio sinistro del nodo corrente (\texttt{p->left}).
+          \end{adjustwidth}
+          \begin{itemize}[leftmargin=1em, label=\raisebox{0.4ex}{\phantom{22}\rule{0.6ex}{0.6ex}}]
+              \item \textit{riga 11}: la funzione ritorna sempre \texttt{p}, cioè la radice del sottoalbero risultante, o per meglio dire, il padre del figlio appena creato.
+          \end{itemize}
 \end{itemize}
 
 \vspace{8pt}
@@ -952,25 +955,25 @@ return p;
 Il \textbf{tipo di ritorno} e i \textbf{parametri}, sono uguali a quelli dell'inserimento in modalità ricorsiva, ciò che cambia è la \textbf{struttura interna della funzione}, che però produce lo stesso risultato.
 \begin{itemize}[leftmargin=1em]
     \item \textbf{Funzionamento del codice}: il procedimento sfrutta la stessa logica dicotomica vista nella versione ricorsiva, ma la navigazione avviene mediante un ciclo \texttt{while}. La visita scende nell'albero \textit{"scorrendo"} ogni volta il puntatore verso il figlio sinistro o destro, finché non si arriva alla posizione corretta per inserire il nuovo nodo.
-    \begin{itemize}[leftmargin=1em, label=\raisebox{0.4ex}{\phantom{23}\rule{0.6ex}{0.6ex}}]
-        \item \textit{riga 2}: vengono dichiarati due puntatori alla struttura \texttt{bstree}.
-        \begin{itemize}[leftmargin=1.4em]
-            \item [$\rightarrow$] \texttt{*q}: viene fatto puntare a \texttt{p}, che nella fase iniziale rappresenta il nodo radice (\texttt{root});
-            \item [$\rightarrow$] \texttt{*y}: viene fatto puntare a \texttt{NULL}. Il motivo è che in seguito, \texttt{y} e \texttt{q} verranno fatti scorrere assieme, in questo modo \texttt{y} partendo \textit{"in ritardo"} memorizzerà sempre il nodo precedente a \texttt{q}. Da questo punto di vista si può dire che \texttt{y} sia sempre il padre di \texttt{q}. 
-        \end{itemize}
-        \item \textit{riga 3}: subito dopo viene utilizzato un ciclo \texttt{while} per controllare che il nodo corrente \texttt{q} non sia \texttt{NULL}. In questo modo si ha la sicurezza che il nodo corrente non sia una foglia ed è possibile definire le successive istruzioni per poter scorrere l'albero in base alla chiave che si vuole ricercare.
-        \item \textit{riga 4-6}: alla prima iterazione, il nodo \texttt{y} che puntava a \texttt{NULL} prende il nodo \texttt{q}; In questo modo, in base al valore di \texttt{x} (controllo condizionale), \texttt{q} viene fatto scorrere verso il figlio destro o sinistro e \texttt{y} memorizzerà il nodo che è considerato il padre di questi ultimi.
-    \end{itemize}
-    
-    \vspace{8pt}
-    Quando si esce dal ciclo \texttt{while} significa che \texttt{q}, andando a destra o a sinistra è arrivato ad un nodo \texttt{NULL}, quindi oltre una foglia.
-    A questo punto viene eseguito uno dei controlli condizionali:
-    \begin{itemize}[leftmargin=1em, label=\raisebox{0.4ex}{\phantom{24}\rule{0.6ex}{0.6ex}}]
-        \item \textit{riga 8}: in questo controllo condizionale si gestisce il caso in cui \texttt{y} sia rimasto a \texttt{NULL}. Quando succede ciò, significa che anche \texttt{q} era a \texttt{NULL} e dunque l'albero era vuoto: viene quindi richiamata la funzione \texttt{new\_node(x)} per creare ed inserire il primo nodo dell'albero.
-        \item \textit{riga 9-10}: in questi ultimi due controlli condizionali viene deciso se creare un figlio sinistro o un figlio destro. Si è detto che il puntatore \texttt{y} rappresenta il padre di \texttt{q}, in altre parole sarà l'ultimo nodo valido (foglia) alla terminazione del  ciclo \texttt{while}.\\
-        Dunque, per capire se il nuovo nodo debba essere un figlio destro si controlla che  \texttt{x > y->data}, mentre per capire se debba essere un figlio sinistro si controlla che \texttt{x < y->data}. 
-        \item \textit{riga 12}: viene restituita la radice originale dell'albero.
-    \end{itemize}
+          \begin{itemize}[leftmargin=1em, label=\raisebox{0.4ex}{\phantom{23}\rule{0.6ex}{0.6ex}}]
+              \item \textit{riga 2}: vengono dichiarati due puntatori alla struttura \texttt{bstree}.
+                    \begin{itemize}[leftmargin=1.4em]
+                        \item [$\rightarrow$] \texttt{*q}: viene fatto puntare a \texttt{p}, che nella fase iniziale rappresenta il nodo radice (\texttt{root});
+                        \item [$\rightarrow$] \texttt{*y}: viene fatto puntare a \texttt{NULL}. Il motivo è che in seguito, \texttt{y} e \texttt{q} verranno fatti scorrere assieme, in questo modo \texttt{y} partendo \textit{"in ritardo"} memorizzerà sempre il nodo precedente a \texttt{q}. Da questo punto di vista si può dire che \texttt{y} sia sempre il padre di \texttt{q}.
+                    \end{itemize}
+              \item \textit{riga 3}: subito dopo viene utilizzato un ciclo \texttt{while} per controllare che il nodo corrente \texttt{q} non sia \texttt{NULL}. In questo modo si ha la sicurezza che il nodo corrente non sia una foglia ed è possibile definire le successive istruzioni per poter scorrere l'albero in base alla chiave che si vuole ricercare.
+              \item \textit{riga 4-6}: alla prima iterazione, il nodo \texttt{y} che puntava a \texttt{NULL} prende il nodo \texttt{q}; In questo modo, in base al valore di \texttt{x} (controllo condizionale), \texttt{q} viene fatto scorrere verso il figlio destro o sinistro e \texttt{y} memorizzerà il nodo che è considerato il padre di questi ultimi.
+          \end{itemize}
+
+          \vspace{8pt}
+          Quando si esce dal ciclo \texttt{while} significa che \texttt{q}, andando a destra o a sinistra è arrivato ad un nodo \texttt{NULL}, quindi oltre una foglia.
+          A questo punto viene eseguito uno dei controlli condizionali:
+          \begin{itemize}[leftmargin=1em, label=\raisebox{0.4ex}{\phantom{24}\rule{0.6ex}{0.6ex}}]
+              \item \textit{riga 8}: in questo controllo condizionale si gestisce il caso in cui \texttt{y} sia rimasto a \texttt{NULL}. Quando succede ciò, significa che anche \texttt{q} era a \texttt{NULL} e dunque l'albero era vuoto: viene quindi richiamata la funzione \texttt{new\_node(x)} per creare ed inserire il primo nodo dell'albero.
+              \item \textit{riga 9-10}: in questi ultimi due controlli condizionali viene deciso se creare un figlio sinistro o un figlio destro. Si è detto che il puntatore \texttt{y} rappresenta il padre di \texttt{q}, in altre parole sarà l'ultimo nodo valido (foglia) alla terminazione del  ciclo \texttt{while}.\\
+                    Dunque, per capire se il nuovo nodo debba essere un figlio destro si controlla che  \texttt{x > y->data}, mentre per capire se debba essere un figlio sinistro si controlla che \texttt{x < y->data}.
+              \item \textit{riga 12}: viene restituita la radice originale dell'albero.
+          \end{itemize}
 \end{itemize}
 
 \vspace{8pt}
@@ -1001,11 +1004,11 @@ return 0;
 \label{par:Ricerca del massimo e del minimo}
 Ancora una volta la logica dicotomica con la quale vengono creati gli alberi binari torna utile per la ricerca del nodo dell'albero con valore di chiave massimo o minimo.\\
 Partendo dalla radice, per trovare il \textbf{nodo minimo} va ispezionato sempre il \textbf{lato sinistro dell'albero binario}, mentre per trovare il \textbf{nodo massimo} va ispezionato \textbf{lato destro} dell'albero.\\
-\begin{minipage}[t]{0.300\textwidth}  
+\begin{minipage}[t]{0.300\textwidth}
     \includegraphics[width=\linewidth]{alberi/img16.png}
 \end{minipage}%
 \hspace{5pt} % Spazio tra immagine e testo
-\raisebox{215pt}{  
+\raisebox{215pt}{
     \begin{minipage}[t]{0.677\textwidth}
         \textbf{\textit{Esempio pratico}}
         \begin{itemize}[leftmargin=1em]
@@ -1015,8 +1018,8 @@ Partendo dalla radice, per trovare il \textbf{nodo minimo} va ispezionato sempre
 
         \vspace{8pt}
         Lo stesso discorso vale per trovare il \textbf{massimo o il minimo di un sottoalbero} radicato a partire da un nodo specifico dell'albero: ad esempio, il massimo del sottoalbero radicato nel nodo con valore di chiave $17$ è  la radice stessa poiché il suo figlio destro è \texttt{NULL}.
-    \end{minipage} 
-} 
+    \end{minipage}
+}
 Anche la ricerca del massimo e del minimo possono essere effettuate in modalità \textbf{ricorsiva} o in modalità \textbf{iterativa}. Il \textbf{costo} di entrambe le operazioni di ricerca \textbf{è proporzionale all'altezza dell'albero}.
 
 \vspace{8pt}
@@ -1040,22 +1043,22 @@ return p;
 \begin{itemize}[leftmargin=1em]
     \item \textbf{Tipo di ritorno}: la funzioni restituiscono un puntatore a \texttt{bstree}. Se l'albero non è vuoto, il valore restituito sarà il nodo che contiene la chiave massima o minima del BST;
     \item \textbf{Parametri}: entrambe le funzioni accettano un solo parametro, ovvero un puntatore alla struttura di un nodo \texttt{bstree *p}. In base alla logica della funzione, \texttt{p} è il puntatore al nodo dal quale si vuole iniziare la ricerca del massimo o del minimo.\\
-    Solitamente si utilizza \texttt{root} se si vuole esaminare l'intero albero, ma è possibile passare anche il puntatore alla radice di un sottoalbero.
+          Solitamente si utilizza \texttt{root} se si vuole esaminare l'intero albero, ma è possibile passare anche il puntatore alla radice di un sottoalbero.
     \item \textbf{Funzionamento del codice}: come detto precedentemente, la logica dietro la ricerca del valore massimo e del valore minimo è abbastanza semplice.
-    \begin{itemize}[leftmargin=1em, label=\raisebox{0.4ex}{\phantom{25}\rule{0.6ex}{0.6ex}}]
-        \item \textit{riga 3/10}: se il puntatore passato come parametro è nullo (\texttt{p==NULL}), significa che l'albero è vuoto e non è possibile determinare alcun valore massimo o minimo;
-        \item \textit{riga 4/11}: per implementare ciò che è stato detto precedentemente viene effettuato un controllo condizionale che differisce in base al tipo di funzione:
-        
-        \newpage
-        \begin{itemize}[leftmargin=1.4em]
-            \item [$\rightarrow$] nel caso della ricerca del massimo si verifica se il \textbf{figlio destro} del nodo corrente non è nullo;
-            \item [$\rightarrow$] nel caso della ricerca del minimo si verifica se il \textbf{figlio sinistro} del nodo corrente non è nullo.
-        \end{itemize}
-        Nel caso in cui il \textbf{controllo condizionale sia vero}, la funzione viene richiamata in modo ricorsivo specificando il figlio verso il quale ci si vuole spostare (\texttt{p->right} per il massimo e \texttt{p->left} per il minimo), in modo tale che la funzione ricominci con la posizione successiva da analizzare.
-        
-        \item \textit{riga 5/12}: se invece i controlli condizionali risultassero falsi, significherebbe che il massimo/minimo è stato trovato perché il figlio destro/sinistro non esiste (\texttt{p->right==NULL o p->left==NULL}), uscendo così dalla ricorsione.\\
-        A questo punto viene restituito \texttt{p}, ovvero l'ultimo nodo valido visitato, il quale rappresenterà il valore massimo/minimo dell'albero.
-    \end{itemize}
+          \begin{itemize}[leftmargin=1em, label=\raisebox{0.4ex}{\phantom{25}\rule{0.6ex}{0.6ex}}]
+              \item \textit{riga 3/10}: se il puntatore passato come parametro è nullo (\texttt{p==NULL}), significa che l'albero è vuoto e non è possibile determinare alcun valore massimo o minimo;
+              \item \textit{riga 4/11}: per implementare ciò che è stato detto precedentemente viene effettuato un controllo condizionale che differisce in base al tipo di funzione:
+
+                    \newpage
+                    \begin{itemize}[leftmargin=1.4em]
+                        \item [$\rightarrow$] nel caso della ricerca del massimo si verifica se il \textbf{figlio destro} del nodo corrente non è nullo;
+                        \item [$\rightarrow$] nel caso della ricerca del minimo si verifica se il \textbf{figlio sinistro} del nodo corrente non è nullo.
+                    \end{itemize}
+                    Nel caso in cui il \textbf{controllo condizionale sia vero}, la funzione viene richiamata in modo ricorsivo specificando il figlio verso il quale ci si vuole spostare (\texttt{p->right} per il massimo e \texttt{p->left} per il minimo), in modo tale che la funzione ricominci con la posizione successiva da analizzare.
+
+              \item \textit{riga 5/12}: se invece i controlli condizionali risultassero falsi, significherebbe che il massimo/minimo è stato trovato perché il figlio destro/sinistro non esiste (\texttt{p->right==NULL o p->left==NULL}), uscendo così dalla ricorsione.\\
+                    A questo punto viene restituito \texttt{p}, ovvero l'ultimo nodo valido visitato, il quale rappresenterà il valore massimo/minimo dell'albero.
+          \end{itemize}
 \end{itemize}
 
 \vspace{8pt}
@@ -1107,20 +1110,20 @@ return 0;
 \subsubsection{Ricerca del successore-predecessore}
 \label{par:Ricerca del successore-predecessore}
 \begin{tcolorbox}[
-    colback=yellow!20, 
-    colframe=darkgray, 
-    title=Definizione di successore
+        colback=yellow!20,
+        colframe=darkgray,
+        title=Definizione di successore
     ]
     Il \textbf{successore} di un nodo \textit{u} è il più piccolo nodo maggiore di \textit{u}.\\
     Allo stesso modo, possiamo dire che il \textbf{predecessore} di un nodo \textit{u} è il più grande nodo minore di \textit{u}.
 \end{tcolorbox}
 \noindent
-\begin{minipage}[t]{0.300\textwidth}  
+\begin{minipage}[t]{0.300\textwidth}
 
     \vspace{-24pt}
     \begin{figure}[H]
-        \centering               
-        \addtocounter{figure}{1} 
+        \centering
+        \addtocounter{figure}{1}
         \caption{Albero BST}
         \label{fig:figura38}
     \end{figure}
@@ -1129,18 +1132,18 @@ return 0;
     \includegraphics[width=\linewidth]{alberi/img17.png}
 \end{minipage}%
 \hspace{5pt} % Spazio tra immagine e testo
-\raisebox{0pt}{  
+\raisebox{0pt}{
     \begin{minipage}[t]{0.677\textwidth}
         Per trovare il successore di \textit{u}, sono dati {due casi}:
         \begin{itemize}[leftmargin=1em]
             \item \textit{Caso 1}: Se il nodo \textit{u} \textbf{ha un figlio destro}, il successore \textit{v} è il minimo nodo del sottoalbero destro;
-            Dunque in questo caso la situazione è molto semplice perché basta utilizzare la funzione vista al capitolo \ref{par:Ricerca del massimo e del minimo} per la ricerca del minimo.\\
-            Trovando il nodo più piccolo, una \textbf{caratteristica determinante} di questo caso è che il successore non ha figlio sinistro.
+                  Dunque in questo caso la situazione è molto semplice perché basta utilizzare la funzione vista al capitolo \ref{par:Ricerca del massimo e del minimo} per la ricerca del minimo.\\
+                  Trovando il nodo più piccolo, una \textbf{caratteristica determinante} di questo caso è che il successore non ha figlio sinistro.
             \item \textit{Caso 2}: Se il nodo \textit{u} \textbf{non ha un figlio destro}, il successore è il \textbf{primo antenato} (\textit{v}) di \textit{u}, per cui \textit{u} sta nel sottoalbero sinistro dell'antenato \textit{v}.\\
-            Ad esempio, ipotizziamo di voler cercare il successore del nodo $6$ come illustrato in Figure \ref{fig:figura38}. Per prima cosa si controlla il sottoalbero radicato in $5$, e ci si chiede \textit{"u (}$6$\textit{) sta nel sottoalbero sinistro di v (}$5$\textit{)?"} In questo caso no, infatti $5$ non è
+                  Ad esempio, ipotizziamo di voler cercare il successore del nodo $6$ come illustrato in Figure \ref{fig:figura38}. Per prima cosa si controlla il sottoalbero radicato in $5$, e ci si chiede \textit{"u (}$6$\textit{) sta nel sottoalbero sinistro di v (}$5$\textit{)?"} In questo caso no, infatti $5$ non è
         \end{itemize}
-    \end{minipage} 
-} 
+    \end{minipage}
+}
 
 \vspace{5pt}
 \noindent
@@ -1184,39 +1187,39 @@ Per seguire un filo logico durante il discorso, analizziamo per prima la funzion
 \begin{itemize}[leftmargin=1em]
     \item \textbf{Tipo di ritorno}: la funzione restituisce un puntatore (\texttt{y}) al nodo del successore cercato;
     \item \textbf{Parametri}: la funzione accetta in ingresso due parametri;
-    \begin{itemize}[leftmargin=1em, label=\raisebox{0.4ex}{\phantom{26}\rule{0.6ex}{0.6ex}}]
-        \item \texttt{bstree *p}: un puntatore alla struttura di un nodo generico che viene utilizzato per passare il puntatore alla radice dell'intero albero;
-        \item \texttt{bstree *px}: anche \texttt{px} è un puntatore alla struttura di un nodo generico, ma viene utilizzato per passare il puntatore al nodo dell'albero del quale si vuole cercare il successore;
-    \end{itemize}
+          \begin{itemize}[leftmargin=1em, label=\raisebox{0.4ex}{\phantom{26}\rule{0.6ex}{0.6ex}}]
+              \item \texttt{bstree *p}: un puntatore alla struttura di un nodo generico che viene utilizzato per passare il puntatore alla radice dell'intero albero;
+              \item \texttt{bstree *px}: anche \texttt{px} è un puntatore alla struttura di un nodo generico, ma viene utilizzato per passare il puntatore al nodo dell'albero del quale si vuole cercare il successore;
+          \end{itemize}
     \item \textbf{Funzionamento del codice}: come detto precedentemente, quando ci si occupa della ricerca del successore, bisogna gestire due casi;
-    \begin{itemize}[leftmargin=1em, label=\raisebox{0.4ex}{\phantom{27}\rule{0.6ex}{0.6ex}}]
-        \item \textit{riga 3}: in questa riga viene gestito il caso più semplice (caso 1).\\
-        Viene effettuato un controllo condizionale sull'esistenza del figlio destro sul nodo del quale ci interessa trovare il successore (\texttt{px->right}). Se il controllo risulta vero, significa che il nodo \texttt{px} avrà un sottoalbero che, per le caratteristiche dei BST, conterrà solo nodi con un valore di chiave maggiore al suo.\\
-        A questo punto, per trovare il successore di \texttt{px} basta utilizzare \texttt{find\_minimum} o \texttt{itfind\_mi\-nimum} sul figlio destro di \texttt{px} per trovare il nodo minimo dell'intero sottoalbero;
+          \begin{itemize}[leftmargin=1em, label=\raisebox{0.4ex}{\phantom{27}\rule{0.6ex}{0.6ex}}]
+              \item \textit{riga 3}: in questa riga viene gestito il caso più semplice (caso 1).\\
+                    Viene effettuato un controllo condizionale sull'esistenza del figlio destro sul nodo del quale ci interessa trovare il successore (\texttt{px->right}). Se il controllo risulta vero, significa che il nodo \texttt{px} avrà un sottoalbero che, per le caratteristiche dei BST, conterrà solo nodi con un valore di chiave maggiore al suo.\\
+                    A questo punto, per trovare il successore di \texttt{px} basta utilizzare \texttt{find\_minimum} o \texttt{itfind\_mi\-nimum} sul figlio destro di \texttt{px} per trovare il nodo minimo dell'intero sottoalbero;
 
-        \item \textit{riga 4}: da questo punto in poi viene gestito il caso in cui il nodo di cui si vuole conoscere il successore \textbf{non abbia un figlio destro} (caso 2). 
-        
-        \vspace{8pt}
-        \textbf{Funzionamento di \texttt{ancestor}}: come detto precedentemente, bisogna risalire lungo l'albero, partendo dal nodo di cui vogliamo conoscere il successore. Poiché i nodi non hanno un puntatore al padre, per trovare il primo nodo “sopra” \texttt{px} dobbiamo necessariamente scendere partendo dalla radice. La funzione \texttt{ancestor} si occupa proprio di trovare il nodo che sta immediatamente sopra \texttt{px} lungo il cammino dalla radice. Il \textbf{tipo di ritorno} e i \textbf{parametri} sono quindi gli stessi della funzione \texttt{successor}.
-        \begin{itemize}[leftmargin=1.4em]
-            \item [$\rightarrow$] \textit{riga 4}: il valore della chiave del nodo \texttt{px} viene salvato nella variabile \texttt{x};
-            \item [$\rightarrow$] \textit{riga 5}: viene dichiarato un puntatore \texttt{y} e inizializzato a \texttt{NULL}: questo punterà di volta in volta al nodo più recente incontrato nel cammino;
-            \item [$\rightarrow$] \textit{riga 6}: viene creato un puntatore \texttt{q} e gli viene assegnata la radice \texttt{p}, per poter scorrere tutto l'albero partendo dall'alto;
-            \item [$\rightarrow$] \textit{riga 7}: Per poter effettuare lo scorrimento si utilizza un ciclo \texttt{while} la cui condizione è quella di continuare la sua iterazione fino a che il nodo \texttt{q} è valido e fino a che le chiavi del nodo \texttt{px} e del nodo \texttt{q} non coincidono. 
-            \item [$\rightarrow$] \textit{riga 8}: ad ogni iterazione il nodo puntato da \texttt{q} viene salvato in \texttt{y}. In questo modo, \textbf{quando finalmente arriva a \texttt{px}}, il nodo \texttt{y} sarà già impostato al nodo che lo precede lungo il cammino;
-            \item [$\rightarrow$] \textit{riga 9-10}: infine, in queste righe vengono gestiti i controlli condizionali per quanto riguarda lo spostamento all'interno dell'albero e, come sempre fatto per la logica costruttiva degli alberi BST, ci si sposta sul figlio destro se la chiave cercata (x) del nodo \texttt{px} è più grande della chiave del nodo attuale \texttt{q}, altrimenti ci si sposta sul nodo sinistro. 
-            \item [$\rightarrow$] \textit{riga 12}: quando la condizione nel ciclo \texttt{while} non è più rispettata si restituice \texttt{y}.  
-        \end{itemize}
-        Alla fine della funzione \texttt{ancestor()}, \textbf{\texttt{y} contiene il nodo padre (inteso come nodo immediatamente sopra) del nodo \texttt{px} lungo il cammino dalla radice.}
+              \item \textit{riga 4}: da questo punto in poi viene gestito il caso in cui il nodo di cui si vuole conoscere il successore \textbf{non abbia un figlio destro} (caso 2).
 
-        \item \textit{riga 5}: da qui in poi, nel codice del successore, viene eseguito un ulteriore \texttt{while} per verificare se il nodo antenato trovato con \texttt{ancestor} sia realmente il \textbf{successore} di \texttt{px}, oppure se sia necessario risalire ulteriormente.\\
-        \textbf{\textit{Perché risalire?}} Perché se \texttt{px} è figlio destro di \texttt{y}, \texttt{y} non può essere il suo successore (per le proprietà dei BST).
+                    \vspace{8pt}
+                    \textbf{Funzionamento di \texttt{ancestor}}: come detto precedentemente, bisogna risalire lungo l'albero, partendo dal nodo di cui vogliamo conoscere il successore. Poiché i nodi non hanno un puntatore al padre, per trovare il primo nodo “sopra” \texttt{px} dobbiamo necessariamente scendere partendo dalla radice. La funzione \texttt{ancestor} si occupa proprio di trovare il nodo che sta immediatamente sopra \texttt{px} lungo il cammino dalla radice. Il \textbf{tipo di ritorno} e i \textbf{parametri} sono quindi gli stessi della funzione \texttt{successor}.
+                    \begin{itemize}[leftmargin=1.4em]
+                        \item [$\rightarrow$] \textit{riga 4}: il valore della chiave del nodo \texttt{px} viene salvato nella variabile \texttt{x};
+                        \item [$\rightarrow$] \textit{riga 5}: viene dichiarato un puntatore \texttt{y} e inizializzato a \texttt{NULL}: questo punterà di volta in volta al nodo più recente incontrato nel cammino;
+                        \item [$\rightarrow$] \textit{riga 6}: viene creato un puntatore \texttt{q} e gli viene assegnata la radice \texttt{p}, per poter scorrere tutto l'albero partendo dall'alto;
+                        \item [$\rightarrow$] \textit{riga 7}: Per poter effettuare lo scorrimento si utilizza un ciclo \texttt{while} la cui condizione è quella di continuare la sua iterazione fino a che il nodo \texttt{q} è valido e fino a che le chiavi del nodo \texttt{px} e del nodo \texttt{q} non coincidono.
+                        \item [$\rightarrow$] \textit{riga 8}: ad ogni iterazione il nodo puntato da \texttt{q} viene salvato in \texttt{y}. In questo modo, \textbf{quando finalmente arriva a \texttt{px}}, il nodo \texttt{y} sarà già impostato al nodo che lo precede lungo il cammino;
+                        \item [$\rightarrow$] \textit{riga 9-10}: infine, in queste righe vengono gestiti i controlli condizionali per quanto riguarda lo spostamento all'interno dell'albero e, come sempre fatto per la logica costruttiva degli alberi BST, ci si sposta sul figlio destro se la chiave cercata (x) del nodo \texttt{px} è più grande della chiave del nodo attuale \texttt{q}, altrimenti ci si sposta sul nodo sinistro.
+                        \item [$\rightarrow$] \textit{riga 12}: quando la condizione nel ciclo \texttt{while} non è più rispettata si restituice \texttt{y}.
+                    \end{itemize}
+                    Alla fine della funzione \texttt{ancestor()}, \textbf{\texttt{y} contiene il nodo padre (inteso come nodo immediatamente sopra) del nodo \texttt{px} lungo il cammino dalla radice.}
 
-        \item \textit{riga 6-7}: a questo punto del codice, una volta entrati nel \texttt{while} di risalita, abbiamo appurato che il nodo "appena sopra" il nodo \texttt{px} (ovvero (\texttt{y})) non è il suo successore. Ciò vuol dire che non serve più memorizzare il nodo \texttt{px} originale, ma bisogna \textbf{risalire per trovare il primo nodo che è abbia un figlio sinistro}: il nodo trovato sarà di sicuro il successore del nodo \texttt{px} originale poiché avendo un figlio sinistro avrà un valore di chiave maggiore.
-        Per fare ciò all'interno del \texttt{while}, \texttt{y} diventa il nuovo nodo originale "fittizzio" e vine richiamata su di esso la funzione \texttt{ancestor()};
+              \item \textit{riga 5}: da qui in poi, nel codice del successore, viene eseguito un ulteriore \texttt{while} per verificare se il nodo antenato trovato con \texttt{ancestor} sia realmente il \textbf{successore} di \texttt{px}, oppure se sia necessario risalire ulteriormente.\\
+                    \textbf{\textit{Perché risalire?}} Perché se \texttt{px} è figlio destro di \texttt{y}, \texttt{y} non può essere il suo successore (per le proprietà dei BST).
 
-        \item \textit{riga 9}: quando la guardia del \texttt{while} non è più rispettata siamo sicuri di aver trovato il successore del nodo originale restituendo \texttt{y} che contiene il risultato di \texttt{ancestors()}.
-    \end{itemize}
+              \item \textit{riga 6-7}: a questo punto del codice, una volta entrati nel \texttt{while} di risalita, abbiamo appurato che il nodo "appena sopra" il nodo \texttt{px} (ovvero (\texttt{y})) non è il suo successore. Ciò vuol dire che non serve più memorizzare il nodo \texttt{px} originale, ma bisogna \textbf{risalire per trovare il primo nodo che è abbia un figlio sinistro}: il nodo trovato sarà di sicuro il successore del nodo \texttt{px} originale poiché avendo un figlio sinistro avrà un valore di chiave maggiore.
+                    Per fare ciò all'interno del \texttt{while}, \texttt{y} diventa il nuovo nodo originale "fittizzio" e vine richiamata su di esso la funzione \texttt{ancestor()};
+
+              \item \textit{riga 9}: quando la guardia del \texttt{while} non è più rispettata siamo sicuri di aver trovato il successore del nodo originale restituendo \texttt{y} che contiene il risultato di \texttt{ancestors()}.
+          \end{itemize}
 \end{itemize}
 
 \vspace{8pt}
@@ -1249,7 +1252,7 @@ printf("Il successore del nodo %d e' %d\n", px->data, succ->data);
         boxed title style={colback=white, colframe=green!60!black, rounded corners},
         breakable
     ]
-    Il discorso intrapreso per quando riguarda la ricerca del successore ovviamente vale anche per la ricerca del \textbf{predecessore} di un determinato nod all'interno dell albero. 
+    Il discorso intrapreso per quando riguarda la ricerca del successore ovviamente vale anche per la ricerca del \textbf{predecessore} di un determinato nod all'interno dell albero.
     \begin{itemize}[leftmargin=1em]
         \item Il ragionamento con il \textit{caso 1} e il \textit{caso 2} vengono effettuati tenendo in considerazione il \textbf{figlio sinistro} e \textbf{non} il figlio destro;
         \item Nello specifico, per il \textit{caso 1} al posto della funzione \texttt{find\_minimum()} si utilizzerà \textbf{\texttt{find\_maximum()}}.
@@ -1272,48 +1275,48 @@ Durante la cancellazione di un determinato nodo possono sorgere \textbf{tre diff
     \hspace{1cm}
     \subfloat[\textit{Caso 2 - un solo figlio}]{%
         \includegraphics[width=0.465\textwidth]{alberi/img19.png}%
-    } 
+    }
     \vspace{-10pt}  % Riduce lo spazio sotto
 \end{figure}
 
 \begin{itemize}[leftmargin=1em]
     \item \textit{Caso 3} - \textbf{\textit{Il nodo $u$ da eliminare ha due figli}}: in questo caso la logica dietro l'eliminazione del nodo diventa leggermente più complessa. Come illustrato in Figure \ref{fig:figura39}, supponiamo di\\
-    \begin{minipage}[t]{0.527\textwidth}  
-        
-        \vspace{-20pt}
-        \begin{figure}[H]
-            \centering               
-            \caption{Cancellazione di un nodo}
-            \label{fig:figura39}
-        \end{figure}
+          \begin{minipage}[t]{0.527\textwidth}
 
-        \vspace{-20pt}
-        \includegraphics[width=\linewidth]{alberi/img20.png}
-    \end{minipage}%
-    \hspace{5pt} % Spazio tra immagine e testo
-    \raisebox{0pt}{  
-        \begin{minipage}[t]{0.426\textwidth}
-            voler eliminare il nodo $u$ con valore di chiave $8$.
-            Per prima cosa bisogna individuare il successore di $u$, ovvero, come detto al capitolo \ref{par:Ricerca del successore-predecessore}, \textit{"il più piccolo valore  più grande di $u$"}: quando si va a rimuovere un nodo con due figli, il suo \textbf{successore} ha la caratteristica di essere il sostituto adatto a ricoprire quella posizione in modo tale che le proprietà degli alberi BST vengano rispettate. 
-        \end{minipage} 
-    } 
+              \vspace{-20pt}
+              \begin{figure}[H]
+                  \centering
+                  \caption{Cancellazione di un nodo}
+                  \label{fig:figura39}
+              \end{figure}
 
-    A questo punto possiamo dire che il successore ($v$) \textbf{rispetti le seguenti proprietà}:
-    \vspace{3pt}
-    \noindent
-    \begin{itemize}[leftmargin=1em, label=\raisebox{0.4ex}{\phantom{28}\rule{0.6ex}{0.6ex}}]
-        \item È sicuramente \textbf{maggiore} dei nodi nel sottoalbero sinistro di $u$;
-        \item È sicuramente \textbf{minore} dei nodi nel sottoalbero destro di $u$.
-    \end{itemize}
-    Una volta che il successore è stato individuato, bisogna sovrascriverlo al nodo che si vuole cancellare, eliminando anch'esso dalla sua posizione attuale.
+              \vspace{-20pt}
+              \includegraphics[width=\linewidth]{alberi/img20.png}
+          \end{minipage}%
+          \hspace{5pt} % Spazio tra immagine e testo
+          \raisebox{0pt}{
+              \begin{minipage}[t]{0.426\textwidth}
+                  voler eliminare il nodo $u$ con valore di chiave $8$.
+                  Per prima cosa bisogna individuare il successore di $u$, ovvero, come detto al capitolo \ref{par:Ricerca del successore-predecessore}, \textit{"il più piccolo valore  più grande di $u$"}: quando si va a rimuovere un nodo con due figli, il suo \textbf{successore} ha la caratteristica di essere il sostituto adatto a ricoprire quella posizione in modo tale che le proprietà degli alberi BST vengano rispettate.
+              \end{minipage}
+          }
 
-    \vspace{8pt}
-    A questo punto il \textit{caso 3} si può \textbf{ridurre ad uno dei due casi} visti in precedenza:
-    \begin{itemize}[leftmargin=1em, label=\raisebox{0.4ex}{\phantom{29}\rule{0.6ex}{0.6ex}}]
-        \item \textit{Caso 1}: \textbf{il successore è una foglia}, quindi può essere sovrascritto e rimosso senza ulteriori accorgimenti;
-        \item \textit{Caso 2}: \textbf{il successore ha solo un figlio destro}.\\
-        A differenza di un normale \textit{caso 2}, quando si arriva ad esso passando dal \textit{caso 3}, \textbf{non può mai capitare} che il \textbf{successore} abbia \textbf{solo figlio sinistro}, perché se avesse il figlio sinistro \textbf{non sarebbe il minimo} del sottoalbero destro (capitolo \ref{par:Ricerca del massimo e del minimo} - caso $1$).
-    \end{itemize}
+          A questo punto possiamo dire che il successore ($v$) \textbf{rispetti le seguenti proprietà}:
+          \vspace{3pt}
+          \noindent
+          \begin{itemize}[leftmargin=1em, label=\raisebox{0.4ex}{\phantom{28}\rule{0.6ex}{0.6ex}}]
+              \item È sicuramente \textbf{maggiore} dei nodi nel sottoalbero sinistro di $u$;
+              \item È sicuramente \textbf{minore} dei nodi nel sottoalbero destro di $u$.
+          \end{itemize}
+          Una volta che il successore è stato individuato, bisogna sovrascriverlo al nodo che si vuole cancellare, eliminando anch'esso dalla sua posizione attuale.
+
+          \vspace{8pt}
+          A questo punto il \textit{caso 3} si può \textbf{ridurre ad uno dei due casi} visti in precedenza:
+          \begin{itemize}[leftmargin=1em, label=\raisebox{0.4ex}{\phantom{29}\rule{0.6ex}{0.6ex}}]
+              \item \textit{Caso 1}: \textbf{il successore è una foglia}, quindi può essere sovrascritto e rimosso senza ulteriori accorgimenti;
+              \item \textit{Caso 2}: \textbf{il successore ha solo un figlio destro}.\\
+                    A differenza di un normale \textit{caso 2}, quando si arriva ad esso passando dal \textit{caso 3}, \textbf{non può mai capitare} che il \textbf{successore} abbia \textbf{solo figlio sinistro}, perché se avesse il figlio sinistro \textbf{non sarebbe il minimo} del sottoalbero destro (capitolo \ref{par:Ricerca del massimo e del minimo} - caso $1$).
+          \end{itemize}
 \end{itemize}
 
 
@@ -1349,39 +1352,39 @@ return p;
 \begin{itemize}[leftmargin=1em]
     \item \textbf{Tipo di ritorno}: la procedura di cancellazione di un nodo restituisce un puntatore alla radice dell'albero, che \textbf{può cambiare} se il nodo cancellato \textbf{è proprio la radice};
     \item \textbf{Parametri}: la funzione accetta in ingresso due parametri;
-    \begin{itemize}[leftmargin=1em, label=\raisebox{0.4ex}{\phantom{30}\rule{0.6ex}{0.6ex}}]
-        \item \texttt{bstree *p}: un puntatore alla struttura di un nodo generico che viene utilizzato per passare il puntatore alla radice dell'intero albero;
-        \item \texttt{int x}: un valore intero \texttt{x}, che rappresenta la chiave del nodo da cancellare.
-    \end{itemize}
+          \begin{itemize}[leftmargin=1em, label=\raisebox{0.4ex}{\phantom{30}\rule{0.6ex}{0.6ex}}]
+              \item \texttt{bstree *p}: un puntatore alla struttura di un nodo generico che viene utilizzato per passare il puntatore alla radice dell'intero albero;
+              \item \texttt{int x}: un valore intero \texttt{x}, che rappresenta la chiave del nodo da cancellare.
+          \end{itemize}
     \item \textbf{Funzionamento del codice}: All'interno della funzione \texttt{deleteNode()} vengono gestiti tutti i casi di cancellazione del nodo.
-    \begin{itemize}[leftmargin=1em, label=\raisebox{0.4ex}{\phantom{31}\rule{0.6ex}{0.6ex}}]
-        \item \textit{riga 2}: si gestisce il caso base il caso base: se il puntatore \texttt{p} è \texttt{NULL}, vuol dire che non esiste alcun albero o che non è stato trovato alcun nodo con valore \texttt{x}. In questo caso viene semplicemente restituito \texttt{NULL};
-        
-        \item \textit{riga 3-4}: in queste due righe vengono gestiti i controlli codizionali per la ricera del nodo da rimuovere all'interno dell'albero. Se la chiave \texttt{x} è maggiore della chiave del nodo corrente (\texttt{x > p->data}), allora la ricerca avverrà richiamando ricorsivamente \texttt{deleteNode()} sulla radice del sottoalbero destro, altrimenti (\texttt{x < p->data}) la ricerca avviene, sempre in modo ricorsivo, ma sul sottoalbero sinistro;
+          \begin{itemize}[leftmargin=1em, label=\raisebox{0.4ex}{\phantom{31}\rule{0.6ex}{0.6ex}}]
+              \item \textit{riga 2}: si gestisce il caso base il caso base: se il puntatore \texttt{p} è \texttt{NULL}, vuol dire che non esiste alcun albero o che non è stato trovato alcun nodo con valore \texttt{x}. In questo caso viene semplicemente restituito \texttt{NULL};
 
-        \item \textit{riga 5}: se si entra in quest'ultimo caso significa che il nodo da eliminare è stato trovato (\texttt{x == p->data}). All'interno di esso vengono implementati i 3 casi differenti per gestire l'eliminazione del nodo in base alla sua posizione all'interno dell'albero;
+              \item \textit{riga 3-4}: in queste due righe vengono gestiti i controlli codizionali per la ricera del nodo da rimuovere all'interno dell'albero. Se la chiave \texttt{x} è maggiore della chiave del nodo corrente (\texttt{x > p->data}), allora la ricerca avverrà richiamando ricorsivamente \texttt{deleteNode()} sulla radice del sottoalbero destro, altrimenti (\texttt{x < p->data}) la ricerca avviene, sempre in modo ricorsivo, ma sul sottoalbero sinistro;
 
-        \item \textit{riga 6-8}: il primo controllo condizionale gestisce il caso in cui il nodo da rimuovere sia una foglia (\textit{caso 1}). Quest'ultimo è valido solo se entrambi i puntatori ai figli destro e sinistro sono \texttt{NULL}. Verificato ciò, si procede ad eliminare il nodo \texttt{p} tramite il comando \texttt{free()} e viene ritornato \texttt{NULL} come nuovo puntatore da assegnare al padre (o alla radice se \texttt{p} era la radice).;
-    
-        \item \textit{riga 10-16}: il secondo controllo condizionale gestisce il caso in cui il nodo da rimuovere abbia un solo figlio (che sia destro o sinistro, ovvero \textit{caso 2}). Quest'ultimo è valido solo se almeno uno dei due puntatori ai figli è nullo. Una volta all'interno del controllo condizionale è bene \textbf{prestare attenzione anche al meccanismo di ricorsione} che viene utilizzato per permettere di \textbf{salvare il figlio del nodo} che si vuole eliminare.
-        
-        \vspace{8pt}
-        Facendo riferimento alla Figure \ref{fig:figura39}, ipotizziamo di voler rimuovere il nodo con valore di chiave $9$ ed essere posizionati in $15$. La funzione inizia e ci si ferma nella \textit{riga 4} (poiché $9 < 15$) dove avvengono due cose:
-        \begin{itemize}[leftmargin=1.4em]
-            \item [$\rightarrow$] Si scende a sinistra perché viene richiamata \texttt{deleteNode()} su \texttt{p->left}, ovvero $9$;
-            \item [$\rightarrow$] Allo stesso tempo, il puntatore al figlio sinistro ($9$) prenderà il risultato della chiamata appena avvenuta su \texttt{deleteNode()}.
-        \end{itemize}
-        Una volta su $9$, si entra nell'ultimo \texttt{else} e, in seguito, nel controllo condizionale per i nodi con un solo figlio, poiché l'unico figlio di $9$ è $12$.
-        Viene dichiarato un puntatore generico alla struttura di un nodo \texttt{temp}: quest'ultimo verrà utilizzato per salvare temporaneamente il figlio ($12$), così da poter fare la \texttt{free()} del nodo $9$ senza perderlo.\\
-        A questo punto \texttt{temp} viene restituito a \texttt{p->left} (il puntatore al figlio sinistro di $15$) come risultato della funzione ricorsiva chiamata prima: in questo modo, $12$ diventa figlio sinistro diretto di $15$.
-        \item \textit{riga 18-21}: il terzo controllo condizionale gestisce il caso in cui il nodo da rimuovere abbia figlio destro e sinistro, ed ovviamente è valido se non si entra negli altri due casi prima. Precedentemente si è detto che, in teoria, per eliminare un nodo con due figli si dovrebbe trovare il suo successore (capitolo \ref{par:Ricerca del successore-predecessore}).
-        Dal punto di vista implementativo, però, nel BST il successore coincide sempre con il nodo avente il valore minimo nel sottoalbero destro.
-        Per questo motivo, nel codice non viene richiamata esplicitamente una funzione \texttt{successor()}, ma si utilizza direttamente la funzione \texttt{find\_minimum(p->right)} (capitolo \ref{par:Ricerca del massimo e del minimo}), che rappresenta esattamente tale concetto.
+              \item \textit{riga 5}: se si entra in quest'ultimo caso significa che il nodo da eliminare è stato trovato (\texttt{x == p->data}). All'interno di esso vengono implementati i 3 casi differenti per gestire l'eliminazione del nodo in base alla sua posizione all'interno dell'albero;
 
-        \vspace{8pt}
-        Trovato il suo successore, il valore della chiave di quest'ultimo viene semplicemente sovrascritto (\texttt{p->data = temp->data}) sul nodo da eliminare.\\
-        A questo punto il problema è che il successore \textbf{esiste ancora fisicamente al suo posto originario}. La sua rimozione è semplice: per definizione il successore di un nodo non ha un figlio sinistro, quindi si richiama ricorsivamente la funzione \texttt{deleteNode()} che ne gestirà l'eliminazione seguendo il \textit{caso 1} se è una foglia o il \textit{caso 2} se ha un figlio destro. 
-    \end{itemize}
+              \item \textit{riga 6-8}: il primo controllo condizionale gestisce il caso in cui il nodo da rimuovere sia una foglia (\textit{caso 1}). Quest'ultimo è valido solo se entrambi i puntatori ai figli destro e sinistro sono \texttt{NULL}. Verificato ciò, si procede ad eliminare il nodo \texttt{p} tramite il comando \texttt{free()} e viene ritornato \texttt{NULL} come nuovo puntatore da assegnare al padre (o alla radice se \texttt{p} era la radice).;
+
+              \item \textit{riga 10-16}: il secondo controllo condizionale gestisce il caso in cui il nodo da rimuovere abbia un solo figlio (che sia destro o sinistro, ovvero \textit{caso 2}). Quest'ultimo è valido solo se almeno uno dei due puntatori ai figli è nullo. Una volta all'interno del controllo condizionale è bene \textbf{prestare attenzione anche al meccanismo di ricorsione} che viene utilizzato per permettere di \textbf{salvare il figlio del nodo} che si vuole eliminare.
+
+                    \vspace{8pt}
+                    Facendo riferimento alla Figure \ref{fig:figura39}, ipotizziamo di voler rimuovere il nodo con valore di chiave $9$ ed essere posizionati in $15$. La funzione inizia e ci si ferma nella \textit{riga 4} (poiché $9 < 15$) dove avvengono due cose:
+                    \begin{itemize}[leftmargin=1.4em]
+                        \item [$\rightarrow$] Si scende a sinistra perché viene richiamata \texttt{deleteNode()} su \texttt{p->left}, ovvero $9$;
+                        \item [$\rightarrow$] Allo stesso tempo, il puntatore al figlio sinistro ($9$) prenderà il risultato della chiamata appena avvenuta su \texttt{deleteNode()}.
+                    \end{itemize}
+                    Una volta su $9$, si entra nell'ultimo \texttt{else} e, in seguito, nel controllo condizionale per i nodi con un solo figlio, poiché l'unico figlio di $9$ è $12$.
+                    Viene dichiarato un puntatore generico alla struttura di un nodo \texttt{temp}: quest'ultimo verrà utilizzato per salvare temporaneamente il figlio ($12$), così da poter fare la \texttt{free()} del nodo $9$ senza perderlo.\\
+                    A questo punto \texttt{temp} viene restituito a \texttt{p->left} (il puntatore al figlio sinistro di $15$) come risultato della funzione ricorsiva chiamata prima: in questo modo, $12$ diventa figlio sinistro diretto di $15$.
+              \item \textit{riga 18-21}: il terzo controllo condizionale gestisce il caso in cui il nodo da rimuovere abbia figlio destro e sinistro, ed ovviamente è valido se non si entra negli altri due casi prima. Precedentemente si è detto che, in teoria, per eliminare un nodo con due figli si dovrebbe trovare il suo successore (capitolo \ref{par:Ricerca del successore-predecessore}).
+                    Dal punto di vista implementativo, però, nel BST il successore coincide sempre con il nodo avente il valore minimo nel sottoalbero destro.
+                    Per questo motivo, nel codice non viene richiamata esplicitamente una funzione \texttt{successor()}, ma si utilizza direttamente la funzione \texttt{find\_minimum(p->right)} (capitolo \ref{par:Ricerca del massimo e del minimo}), che rappresenta esattamente tale concetto.
+
+                    \vspace{8pt}
+                    Trovato il suo successore, il valore della chiave di quest'ultimo viene semplicemente sovrascritto (\texttt{p->data = temp->data}) sul nodo da eliminare.\\
+                    A questo punto il problema è che il successore \textbf{esiste ancora fisicamente al suo posto originario}. La sua rimozione è semplice: per definizione il successore di un nodo non ha un figlio sinistro, quindi si richiama ricorsivamente la funzione \texttt{deleteNode()} che ne gestirà l'eliminazione seguendo il \textit{caso 1} se è una foglia o il \textit{caso 2} se ha un figlio destro.
+          \end{itemize}
 \end{itemize}
 
 \vspace{8pt}
@@ -1407,22 +1410,22 @@ printf("La nuova radice e' %d\n", root->data);
 Tutte le operazioni effettuate fino ad ora (ricerca, inserimento, ecc\dots) sono confinate ai nodi posizionati lungo ad un cammino semplice dalla radice alla foglia.\\
 Durante tutte queste operazioni un fattore impattante è il \textbf{tempo di ricerca}.
 \begin{tcolorbox}[
-    colback=yellow!20, 
-    colframe=darkgray, 
-    title=Tempo di ricerca
+        colback=yellow!20,
+        colframe=darkgray,
+        title=Tempo di ricerca
     ]
     Il \textbf{tempo di ricerca} è limitato superiormente da $h$, dove $h$ è l'altezza dell'albero.
 \end{tcolorbox}
 \noindent
-\begin{minipage}[t]{0.195\textwidth}  
+\begin{minipage}[t]{0.195\textwidth}
     \includegraphics[width=\linewidth]{alberi/img21.png}
 \end{minipage}%
 \hspace{5pt} % Spazio tra immagine e testo
-\raisebox{127pt}{  
+\raisebox{127pt}{
     \begin{minipage}[t]{0.782\textwidth}
         Come si può vedere dall'immagine, avendo un BST di altezza $h$, il caso pessimo è $O(h)$ dove è previsto di arrivare nella \textbf{parte più profonda dell'albero}.
         Il problema sorge quando si hanno $n$ nodi: il \textbf{caso pessimo} della struttura dell'albero è quello che viene generato quando gli \textbf{elementi} vengono \textbf{inseriti in ordine} perché l'albero può "allungarsi". Ad esempio, si pensi ad un albero dove vengono inseriti i seguenti nodi: \texttt{1->2->3->4->5->} e così via \dots, ovviamente tutti nel ramo destro. Quindi un albero contenente $n$ nodi, avrà altezza $h=O(n)$ e \textbf{tempo di ricerca} $O(h)$. In questo caso si parla di \textbf{albero non bilanciato}.
-    \end{minipage} 
+    \end{minipage}
 }
 Gli alberi binari di ricerca, sono sì una buona idea per portare la ricerca binaria nel campo degli alberi, però \textbf{se i dati sono inseriti in certi modi sbagliati} (caso pessimo), si ottiene un'altezza dell'albero di $O(n)$ e quindi \textbf{non si ha nessun vantaggio} rispetto ad una banale \textbf{ricerca lineare} (liste).
 
@@ -1431,23 +1434,23 @@ Gli alberi binari di ricerca, sono sì una buona idea per portare la ricerca bin
 \noindent
 Quando sono stati sviluppati gli alberi binari di ricerca, si è cercato di capire cosa succede in media, oltre che nel caso pessimo, e si è visto che facendo degli \textbf{inserimenti in ordine casuale}, l'altezza media dell'albero è $O(log \; n)$. Nella realtà però, non ci si affida al caso ma si utilizzano delle \textbf{tecniche per mantenere l'albero bilanciato}, o per meglio dire, \textbf{ribilanciarlo}.
 \begin{tcolorbox}[
-    colback=yellow!20, 
-    colframe=darkgray, 
-    title=Cos'è un BST bilaciato?
+        colback=yellow!20,
+        colframe=darkgray,
+        title=Cos'è un BST bilaciato?
     ]
     Un BST \textit{“bilanciato”} è un albero binario in cui l'altezza è proporzionale al logaritmo del numero di nodi ($h = log_2(n+1) -1$).
 \end{tcolorbox}
 \noindent
-\begin{minipage}[t]{0.257\textwidth}  
+\begin{minipage}[t]{0.257\textwidth}
     \includegraphics[width=\linewidth]{alberi/img22.png}
 \end{minipage}%
 \hspace{5pt} % Spazio tra immagine e testo
-\raisebox{79pt}{  
+\raisebox{79pt}{
     \begin{minipage}[t]{0.720\textwidth}
         Quindi, se l'albero è \textbf{ben bilanciato} l'altezza è limitata superiormente esattamente da $h = O(log \; n)$.
         Quello che si vuole ottenere è \textbf{un meccanismo per ribilanciare gli alberi non bilanciati} e fare quindi in modo che la loro altezza sia più simile a $log \; n$ piuttosto che $n$ evitando casi particolari come il precedente. Un approccio possibile è quello degli \textbf{alberi AVL}.
-    \end{minipage} 
-} 
+    \end{minipage}
+}
 
 \subsubsection{Alberi BST: Alberi Adelson-Velsky and Landis (AVL)}
 Gli alberi AVL introducono alcune proprietà addizionali sugli alberi BST \textbf{per fare in modo che rimangano bilanciati}. Una di queste è il \textbf{fattore di bilanciamento}.
@@ -1466,9 +1469,9 @@ Gli alberi AVL introducono alcune proprietà addizionali sugli alberi BST \textb
     Il \textbf{fattore di bilanciamento} $\beta(v)$ di un nodo $v$ è la differenza di altezza fra i sottoalberi destro e sinistro di $v$.
 \end{tcolorbox}
 \begin{tcolorbox}[
-    colback=yellow!20, 
-    colframe=darkgray, 
-    title=Cos'è un albero AVL?
+        colback=yellow!20,
+        colframe=darkgray,
+        title=Cos'è un albero AVL?
     ]
     Un albero binario di ricerca è un \textbf{albero AVL} se per ogni nodo $v$ l'altezza del sottoalbero sinistro di $v$ e quella del sottoalbero destro di $v$ differiscono al massimo di $1$ ($\beta(v)=h(left(v))-h(right(v))$). In altre parole il \textbf{fattore di bilanciamento} deve essere un valore compreso tra $ -1 \leqslant \beta(v) \leqslant 1$.
 \end{tcolorbox}
@@ -1476,9 +1479,9 @@ Gli alberi AVL introducono alcune proprietà addizionali sugli alberi BST \textb
 In un albero BST l'inserimento di una nuova foglia in un determinato punto dell'albero può causare uno \textbf{sbilanciamento}. Nello specifico il \textbf{nodo sbilanciato} è il primo antenato che, dopo l'inserimento del nuovo nodo, presenta un fattore di bilanciamento $ > 1$.\\
 Per evitare gli sbilanciamenti viene utilizzato il concetto di \textbf{rotazione}.
 \begin{tcolorbox}[
-    colback=yellow!20, 
-    colframe=darkgray, 
-    title=Cos'è una rotazione?
+        colback=yellow!20,
+        colframe=darkgray,
+        title=Cos'è una rotazione?
     ]
     Una rotazione è un operazione locale che viene \textbf{eseguita} sul \textbf{nodo sbilanciato} causando lo spostamento di tre nodi: il nodo sbilanciato stesso, suo figlio e il suo nipote.\\
     Lo sbilanciamento viene riequilibrato \textbf{senza violare} le \textbf{proprietà strutturali} dei BST.
@@ -1489,62 +1492,62 @@ Esistono solo due rotazioni elementari: \textbf{rotazione a sinistra} e \textbf{
 Invece, le \textbf{forme di sbilanciamento} di un albero BST sono quattro, e come detto prima, variano in base al punto di inserimento del nuovo nodo:
 \begin{itemize}[leftmargin=1em]
     \item \textit{Caso left-left (LL)}: il caso \textbf{\textit{left-left}} si verifica quando il nuovo nodo viene inserito nel sottoalbero sinistro del figlio sinistro del primo nodo, il quale diventa sbilanciato.
-    
-    \vspace{-8pt}
-    \begin{minipage}[t]{0.550\textwidth} 
-        \vspace{2pt}
-        \includegraphics[width=\linewidth]{alberi/img23.png}
-    \end{minipage}%
-    \hspace{5pt} % Spazio tra immagine e testo
-    \raisebox{-8pt}{  
-        \begin{minipage}[t]{0.403\textwidth}
-            In questo caso il ramo sinistro "pesa" troppo e presenta un \textbf{fattore di bilanciamento} $ > 1$. Il caso \textit{left-left} possiede una \textbf{forma lineare}, dunque, per ribilanciare l'albero basta effettuare una sola rotazione verso destra.
-        \end{minipage} 
-    } 
 
-    \vspace{12pt}
+          \vspace{-8pt}
+          \begin{minipage}[t]{0.550\textwidth}
+              \vspace{2pt}
+              \includegraphics[width=\linewidth]{alberi/img23.png}
+          \end{minipage}%
+          \hspace{5pt} % Spazio tra immagine e testo
+          \raisebox{-8pt}{
+              \begin{minipage}[t]{0.403\textwidth}
+                  In questo caso il ramo sinistro "pesa" troppo e presenta un \textbf{fattore di bilanciamento} $ > 1$. Il caso \textit{left-left} possiede una \textbf{forma lineare}, dunque, per ribilanciare l'albero basta effettuare una sola rotazione verso destra.
+              \end{minipage}
+          }
+
+          \vspace{12pt}
     \item \textit{Caso right-right (RR)}: il caso \textbf{\textit{right-right}} si verifica quando il nuovo nodo viene inserito nel sottoalbero destro del figlio destro del primo, il quale diventa sbilanciato
-    
-    \vspace{-10pt}
-    \begin{minipage}[t]{0.550\textwidth} 
-        \vspace{2pt}
-        \includegraphics[width=\linewidth]{alberi/img24.png}
-    \end{minipage}%
-    \hspace{5pt} % Spazio tra immagine e testo
-    \raisebox{-10pt}{  
-        \begin{minipage}[t]{0.403\textwidth}
-            Anche in questo caso il ramo destro "pesa" troppo e presenta un \textbf{fattore di bilanciamento} $<-1$. Il caso \textit{right-right} possiede una \textbf {forma lineare}, e per ribilanciare l'albero, basta effettuare una sola rotazione verso sinistra.
-        \end{minipage} 
-    } 
 
-    \vspace{12pt}
+          \vspace{-10pt}
+          \begin{minipage}[t]{0.550\textwidth}
+              \vspace{2pt}
+              \includegraphics[width=\linewidth]{alberi/img24.png}
+          \end{minipage}%
+          \hspace{5pt} % Spazio tra immagine e testo
+          \raisebox{-10pt}{
+              \begin{minipage}[t]{0.403\textwidth}
+                  Anche in questo caso il ramo destro "pesa" troppo e presenta un \textbf{fattore di bilanciamento} $<-1$. Il caso \textit{right-right} possiede una \textbf {forma lineare}, e per ribilanciare l'albero, basta effettuare una sola rotazione verso sinistra.
+              \end{minipage}
+          }
+
+          \vspace{12pt}
     \item \textit{Caso left-right (LR)}: il caso \textbf{\textit{left-right}} si verifica quando il nuovo nodo viene inserito nel sottoalbero destro del figlio sinistro del primo nodo, il quale diventa sbilanciato.
-    \begin{figure}[H]
-        \centering
-        \vspace{-10pt}  % Riduce lo spazio sopra
-        \includegraphics[width=0.9\textwidth]{alberi/img25.png}
-        \vspace{-16pt}  % Riduce lo spazio sopra
-    \end{figure}
-    Il fattore di bilanciamento in questo caso è $ > 1$. In questo caso il sottoalbero presenta una \textbf{forma a "zig-zag"} che, per essere bilanciata, necessita di una \textbf{doppia rotazione}: 
-    \begin{enumerate}[leftmargin=1.3em]
-        \item \textbf{Rotazione a sinistra}: viene effettuata sul figlio destro del figlio sinistro del nodo sbilanciato, per fare in modo di riportarsi alla \textbf{forma \textit{left-left}};
-        \item \textbf{Rotazione a destra}: viene effettuata sul nodo sbilanciato per completare il bilancianento.
-    \end{enumerate}
+          \begin{figure}[H]
+              \centering
+              \vspace{-10pt}  % Riduce lo spazio sopra
+              \includegraphics[width=0.9\textwidth]{alberi/img25.png}
+              \vspace{-16pt}  % Riduce lo spazio sopra
+          \end{figure}
+          Il fattore di bilanciamento in questo caso è $ > 1$. In questo caso il sottoalbero presenta una \textbf{forma a "zig-zag"} che, per essere bilanciata, necessita di una \textbf{doppia rotazione}:
+          \begin{enumerate}[leftmargin=1.3em]
+              \item \textbf{Rotazione a sinistra}: viene effettuata sul figlio destro del figlio sinistro del nodo sbilanciato, per fare in modo di riportarsi alla \textbf{forma \textit{left-left}};
+              \item \textbf{Rotazione a destra}: viene effettuata sul nodo sbilanciato per completare il bilancianento.
+          \end{enumerate}
 
-    \vspace{8pt}
-    \noindent
+          \vspace{8pt}
+          \noindent
     \item \textit{Caso right-left (RL)}: il caso \textit{right-left} si verifica quando il nuovo nodo viene inserito nel sottoalbero sinistro del figlio destro del primo nodo, il quale diventa sbilanciato.
-    \begin{figure}[H]
-        \centering
-        \vspace{-10pt}  % Riduce lo spazio sopra
-        \includegraphics[width=0.9\textwidth]{alberi/img26.png}
-        \vspace{-16pt}  % Riduce lo spazio sopra
-    \end{figure}
-    Presenta fattore di bilanciamento $ < -1$, e una forma a "zig-zag" che necessita di una doppia rotazione, in questo caso in senso inverso rispetto alla precedente: 
-    \begin{enumerate}[leftmargin=1.3em]
-        \item \textbf{Rotazione a destra}: viene effettuata sul figlio sinistro del figlio destro del nodo sbilanciato, per fare in modo di riportarsi alla \textbf{forma \textit{right-right}};
-        \item \textbf{Rotazione a sinistra}: viene effettuata sul nodo sbilanciato per completare il bilancianento.
-    \end{enumerate}
+          \begin{figure}[H]
+              \centering
+              \vspace{-10pt}  % Riduce lo spazio sopra
+              \includegraphics[width=0.9\textwidth]{alberi/img26.png}
+              \vspace{-16pt}  % Riduce lo spazio sopra
+          \end{figure}
+          Presenta fattore di bilanciamento $ < -1$, e una forma a "zig-zag" che necessita di una doppia rotazione, in questo caso in senso inverso rispetto alla precedente:
+          \begin{enumerate}[leftmargin=1.3em]
+              \item \textbf{Rotazione a destra}: viene effettuata sul figlio sinistro del figlio destro del nodo sbilanciato, per fare in modo di riportarsi alla \textbf{forma \textit{right-right}};
+              \item \textbf{Rotazione a sinistra}: viene effettuata sul nodo sbilanciato per completare il bilancianento.
+          \end{enumerate}
 \end{itemize}
 
 
@@ -1555,7 +1558,7 @@ Invece, le \textbf{forme di sbilanciamento} di un albero BST sono quattro, e com
 
 \vspace{-3pt}
 \noindent
-\begin{minipage}[t]{0.487\textwidth}  
+\begin{minipage}[t]{0.487\textwidth}
     \begin{lstlisting}[style=mystyle, language=C, numbers=left]
 bstree *rotateleft(bstree *x) {
 bstree *y;
@@ -1584,10 +1587,10 @@ return (y);
     \item \textbf{Parametri}: entrambe le funzioni accettano un unico parametro, ovvero il puntatore alla struttura del nodo che si vuole ruotare (\texttt{bstree *x});
     \item \textbf{Funzionamento del codice}: la logica utilizzata per la creazione delle due funzioni di rotazione è la stessa, ciò che le differenzia è il verso della rotazione (sinistra o destra).
 
-    \vspace{8pt}
-    \textbf{Funzionamento di \texttt{rotateleft} (e \texttt{rotateright})}\\
-    Per illustrare il funzionamento di \texttt{rotateleft} utilizziamo la seguente immagine.\\
-    Nel caso iniziale ciò che crea lo sbilanciamento è l'aggiunta del nodo $C$. Dunque deve essere effettuata una rotazione a sinistra specificando il puntatore al nodo $A$ nei parametri della funzione. Ovviamente il funzionamento di \texttt{rotateright} è il medesimo, solo invertito.
+          \vspace{8pt}
+          \textbf{Funzionamento di \texttt{rotateleft} (e \texttt{rotateright})}\\
+          Per illustrare il funzionamento di \texttt{rotateleft} utilizziamo la seguente immagine.\\
+          Nel caso iniziale ciò che crea lo sbilanciamento è l'aggiunta del nodo $C$. Dunque deve essere effettuata una rotazione a sinistra specificando il puntatore al nodo $A$ nei parametri della funzione. Ovviamente il funzionamento di \texttt{rotateright} è il medesimo, solo invertito.
 
 \end{itemize}
 \begin{figure}[H]
@@ -1596,3 +1599,4 @@ return (y);
     \includegraphics[width=0.8\textwidth]{alberi/img27.png}
     \vspace{-16pt}  % Riduce lo spazio sopra
 \end{figure}
+\end{document}

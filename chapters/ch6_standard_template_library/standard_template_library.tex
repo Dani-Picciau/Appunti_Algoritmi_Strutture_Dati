@@ -1,3 +1,6 @@
+\documentclass[../../main_document/main.tex]{subfiles}
+
+\begin{document}
 \section{Standard Template Library (STL)}
 La Standard Template Library (STL) è il cuore della libreria standard del C++, permette ai programmatori l'utilizzo di algoritmi e strutture dati allo stato dell'arte, senza preoccuparsi della loro implementazione. Tutti i componenti della STL sono generici, possono quindi essere utilizzati come elementi di tipo arbitrario.
 \\La STL porta alcuni vantaggi, tra cui:
@@ -20,7 +23,7 @@ La Standard Template Library (STL) è il cuore della libreria standard del C++, 
         boxed title style={colback=white, colframe=green!60!black, rounded corners}
     ]
     Con l'espressione "Stato dell'arte" si intende l'insieme degli algoritmi, delle tecnologie e delle metodologie che, ad oggi, offrono le prestazioni migliori in termini di efficienza, sicurezza e affidabilità.
-\end{tcolorbox} 
+\end{tcolorbox}
 
 \vspace{8pt}
 \noindent Inoltre mette a disposizione:
@@ -70,7 +73,7 @@ I Sequence container, contengono una collezione ordinata di elementi di un unico
 \begin{itemize}[leftmargin=1em]
     \item \textbf{vector}: archivia gli elementi in una disposizione lineare e consente l’accesso casuale a qualsiasi elemento.
     \item \textbf{list}: viene archiviata come elenco collegato bidirezionale di elementi in
-    disposizione lineare. Consente inserimenti ed eliminazioni efficienti in qualsiasi posizione all’interno della sequenza.
+          disposizione lineare. Consente inserimenti ed eliminazioni efficienti in qualsiasi posizione all’interno della sequenza.
     \item \textbf{deque}: si comporta come un vector ma è preferibile nelle implementazioni delle code.
 \end{itemize}
 \vspace{16pt}
@@ -79,12 +82,12 @@ Il vector è considerato il container di "default" del C++. Gli elementi al suo 
 Le sue caratteristiche principali sono:
 
 \begin{itemize}[leftmargin=1em]
-\item[\textcolor{green!60!black}{\scalebox{1.2}{$\mathbf{+}$}}] \textbf{Accesso casuale (Random Access)}: È possibile accedere direttamente a qualsiasi elemento tramite il suo indice, senza dover scorrere gli elementi precedenti.
-\item[\textcolor{green!60!black}{\scalebox{1.2}{$\mathbf{+}$}}] \textbf{Inserimento/Rimozione in coda}: L'aggiunta o la rimozione di elementi alla fine del vettore è un'operazione molto veloce.
-\item[\textcolor{green!60!black}{\scalebox{1.2}{$\mathbf{+}$}}] \textbf{Inserimento nel mezzo}: L'inserimento o la rimozione in posizioni diverse dalla coda è meno efficiente, in quanto richiede lo spostamento (shift) di tutti gli elementi successivi per fare spazio a quello nuovo o per riempire il vuoto.
-\item[\textcolor{red!80!black}{\scalebox{1.2}{$\mathbf{-}$}}] \textbf{Lentezza posizionale}: Potenzialmente lento se le operazioni di inserimento/cancellazione avvengono spesso in testa (inizio) o in posizioni casuali.
-\item[\textcolor{red!80!black}{\scalebox{1.2}{$\mathbf{-}$}}] \textbf{Costo di copia}: Se il tipo di dato contenuto è complesso, riordinare gli elementi (spostarli) può essere costoso.
-\item[\textcolor{red!80!black}{\scalebox{1.2}{$\mathbf{-}$}}] \textbf{Invalidazione di puntatori e iteratori}: Ogni operazione che modifica la capacità del vettore (es. un inserimento che fa scattare un ridimensionamento automatico) può far sì che il vettore venga spostato in un nuovo blocco di memoria. Di conseguenza, tutti i puntatori o iteratori che puntavano ai vecchi elementi diventano non validi (dangling pointers) e usarli causa errori nel programma.
+    \item[\textcolor{green!60!black}{\scalebox{1.2}{$\mathbf{+}$}}] \textbf{Accesso casuale (Random Access)}: È possibile accedere direttamente a qualsiasi elemento tramite il suo indice, senza dover scorrere gli elementi precedenti.
+    \item[\textcolor{green!60!black}{\scalebox{1.2}{$\mathbf{+}$}}] \textbf{Inserimento/Rimozione in coda}: L'aggiunta o la rimozione di elementi alla fine del vettore è un'operazione molto veloce.
+    \item[\textcolor{green!60!black}{\scalebox{1.2}{$\mathbf{+}$}}] \textbf{Inserimento nel mezzo}: L'inserimento o la rimozione in posizioni diverse dalla coda è meno efficiente, in quanto richiede lo spostamento (shift) di tutti gli elementi successivi per fare spazio a quello nuovo o per riempire il vuoto.
+    \item[\textcolor{red!80!black}{\scalebox{1.2}{$\mathbf{-}$}}] \textbf{Lentezza posizionale}: Potenzialmente lento se le operazioni di inserimento/cancellazione avvengono spesso in testa (inizio) o in posizioni casuali.
+    \item[\textcolor{red!80!black}{\scalebox{1.2}{$\mathbf{-}$}}] \textbf{Costo di copia}: Se il tipo di dato contenuto è complesso, riordinare gli elementi (spostarli) può essere costoso.
+    \item[\textcolor{red!80!black}{\scalebox{1.2}{$\mathbf{-}$}}] \textbf{Invalidazione di puntatori e iteratori}: Ogni operazione che modifica la capacità del vettore (es. un inserimento che fa scattare un ridimensionamento automatico) può far sì che il vettore venga spostato in un nuovo blocco di memoria. Di conseguenza, tutti i puntatori o iteratori che puntavano ai vecchi elementi diventano non validi (dangling pointers) e usarli causa errori nel programma.
 \end{itemize}
 \vspace{24pt}
 
@@ -93,32 +96,32 @@ Le sue caratteristiche principali sono:
 \\
 \noindent \textbf{ Modificatori (Modifiers):}
 \begin{itemize}[leftmargin=1em]
-\item \texttt{assign()}: Assegna nuovi valori al vettore, sostituendo completamente quelli vecchi.
-\item \texttt{push\_back()}: Aggiunge un nuovo elemento alla fine del vettore.
-\item \texttt{pop\_back()}: Rimuove l'ultimo elemento del vettore (riducendo la dimensione di 1).
-\item \texttt{insert()}: Inserisce nuovi elementi prima di una posizione specifica (indicata tramite un iteratore).
-\item \texttt{erase()}: Rimuove elementi da una specifica posizione o da un intervallo.
-\item \texttt{swap()}: Scambia il contenuto di due vettori dello stesso tipo. È un'operazione molto efficiente anche se le dimensioni sono diverse.
-\item \texttt{clear()}: Rimuove \textbf{tutti} gli elementi dal vettore.
+    \item \texttt{assign()}: Assegna nuovi valori al vettore, sostituendo completamente quelli vecchi.
+    \item \texttt{push\_back()}: Aggiunge un nuovo elemento alla fine del vettore.
+    \item \texttt{pop\_back()}: Rimuove l'ultimo elemento del vettore (riducendo la dimensione di 1).
+    \item \texttt{insert()}: Inserisce nuovi elementi prima di una posizione specifica (indicata tramite un iteratore).
+    \item \texttt{erase()}: Rimuove elementi da una specifica posizione o da un intervallo.
+    \item \texttt{swap()}: Scambia il contenuto di due vettori dello stesso tipo. È un'operazione molto efficiente anche se le dimensioni sono diverse.
+    \item \texttt{clear()}: Rimuove \textbf{tutti} gli elementi dal vettore.
 \end{itemize}
 
 
 \vspace{10pt}
 \noindent \textbf{Iteratori (Iterators):}
 \begin{itemize}[leftmargin=1em]
-\item \texttt{begin()}: Restituisce un iteratore che punta al \textbf{primo} elemento del vettore.
-\item \texttt{end()}: Restituisce un iteratore che punta all'elemento teorico \textbf{successivo all'ultimo} (past-the-end). Non punta all'ultimo dato valido, ma segna la fine del container.
+    \item \texttt{begin()}: Restituisce un iteratore che punta al \textbf{primo} elemento del vettore.
+    \item \texttt{end()}: Restituisce un iteratore che punta all'elemento teorico \textbf{successivo all'ultimo} (past-the-end). Non punta all'ultimo dato valido, ma segna la fine del container.
 \end{itemize}
 
 \vspace{10pt}
 \noindent \textbf{Gestione della Capacità (Capacity):}
 \begin{itemize}[leftmargin=1em]
-\item \texttt{size()}: Restituisce il numero effettivo di elementi attualmente presenti nel vettore.
-\item \texttt{max\_size()}: Restituisce il numero massimo teorico di elementi che il vettore può contenere.
-\item \texttt{capacity()}: Restituisce la dimensione dello spazio di memoria attualmente \textbf{allocato}. Indica il numero  elementi il vettore può contenere prima di dover chiedere altra memoria al sistema.
-\item \texttt{resize(n)}: Ridimensiona il contenitore affinché contenga esattamente 'n' elementi. Se 'n' è minore dell'attuale size, gli elementi in eccesso vengono distrutti.
-\item \texttt{empty()}: Restituisce \texttt{true} se il container è vuoto (ovvero se la size è 0).
-\item \texttt{shrink\_to\_fit()}: Riduce la capacità (memoria allocata) per farla coincidere con la size (elementi effettivi), liberando la memoria inutilizzata.
+    \item \texttt{size()}: Restituisce il numero effettivo di elementi attualmente presenti nel vettore.
+    \item \texttt{max\_size()}: Restituisce il numero massimo teorico di elementi che il vettore può contenere.
+    \item \texttt{capacity()}: Restituisce la dimensione dello spazio di memoria attualmente \textbf{allocato}. Indica il numero  elementi il vettore può contenere prima di dover chiedere altra memoria al sistema.
+    \item \texttt{resize(n)}: Ridimensiona il contenitore affinché contenga esattamente 'n' elementi. Se 'n' è minore dell'attuale size, gli elementi in eccesso vengono distrutti.
+    \item \texttt{empty()}: Restituisce \texttt{true} se il container è vuoto (ovvero se la size è 0).
+    \item \texttt{shrink\_to\_fit()}: Riduce la capacità (memoria allocata) per farla coincidere con la size (elementi effettivi), liberando la memoria inutilizzata.
 \end{itemize}
 
 \newpage
@@ -179,11 +182,11 @@ elemento, bisogna scorrere i primi nove elementi della catena.
 
 \subsection*{Confronto con Vector}
 \begin{itemize}[leftmargin=1em]
-\item[\textcolor{green!60!black}{\scalebox{1.2}{$\mathbf{+}$}}] \textbf{Inserimento e cancellazione in $O(1)$:} Una volta trovata la posizione, l'operazione è rapidissima, in quanto si modificano solo i puntatori (link), senza spostare i dati.
-\item[\textcolor{green!60!black}{\scalebox{1.2}{$\mathbf{+}$}}] \textbf{Ideale per oggetti pesanti:} Non essendoci costi di copia o spostamento degli elementi in memoria, è la scelta migliore per memorizzare oggetti di grandi dimensioni.
-\item[\textcolor{red!80!black}{\scalebox{1.2}{$\mathbf{-}$}}] \textbf{Accesso casuale in $O(N)$:} Per accedere all'elemento $N$, è necessario scorrere $N$ nodi a partire dalla testa o dalla coda. Non supporta l'operatore \texttt{[]}.
-\item[\textcolor{red!80!black}{\scalebox{1.2}{$\mathbf{-}$}}] \textbf{Traversamento lento (Bad Memory Locality):} I nodi sono sparsi in memoria. La CPU non riesce a sfruttare la cache, rendendo lo scorrimento sequenziale meno efficiente rispetto al \texttt{vector}.
-\item[\textcolor{red!80!black}{\scalebox{1.2}{$\mathbf{-}$}}] \textbf{Maggiore consumo di memoria (Overhead):} Ogni nodo richiede memoria aggiuntiva per memorizzare i due puntatori (prev e next).
+    \item[\textcolor{green!60!black}{\scalebox{1.2}{$\mathbf{+}$}}] \textbf{Inserimento e cancellazione in $O(1)$:} Una volta trovata la posizione, l'operazione è rapidissima, in quanto si modificano solo i puntatori (link), senza spostare i dati.
+    \item[\textcolor{green!60!black}{\scalebox{1.2}{$\mathbf{+}$}}] \textbf{Ideale per oggetti pesanti:} Non essendoci costi di copia o spostamento degli elementi in memoria, è la scelta migliore per memorizzare oggetti di grandi dimensioni.
+    \item[\textcolor{red!80!black}{\scalebox{1.2}{$\mathbf{-}$}}] \textbf{Accesso casuale in $O(N)$:} Per accedere all'elemento $N$, è necessario scorrere $N$ nodi a partire dalla testa o dalla coda. Non supporta l'operatore \texttt{[]}.
+    \item[\textcolor{red!80!black}{\scalebox{1.2}{$\mathbf{-}$}}] \textbf{Traversamento lento (Bad Memory Locality):} I nodi sono sparsi in memoria. La CPU non riesce a sfruttare la cache, rendendo lo scorrimento sequenziale meno efficiente rispetto al \texttt{vector}.
+    \item[\textcolor{red!80!black}{\scalebox{1.2}{$\mathbf{-}$}}] \textbf{Maggiore consumo di memoria (Overhead):} Ogni nodo richiede memoria aggiuntiva per memorizzare i due puntatori (prev e next).
 \end{itemize}
 
 \vspace{24pt}
@@ -191,16 +194,16 @@ elemento, bisogna scorrere i primi nove elementi della catena.
 \noindent \textbf{Metodi principali:}
 \vspace{10pt}
 \begin{itemize}[leftmargin=1em]
-\item \texttt{front()}: Ritorna il valore del primo elemento della lista.
-\item \texttt{back()}: Ritorna il valore dell' ultimo elemento della lista.
-\item \texttt{push\_front()}: Aggiunge un nuovo elemento all' inizio della lista.
-\item \texttt{push\_back()}: Aggiunge un nuovo elemento alla fine della lista.
-\item \texttt{pop\_front()}: Rimuove il primo elemento della lista e riduce la grandezza di 1.
-\item \texttt{pop\_back()}: Rimuove l'ultimo elemento della lista e riduce la grandezza di 1.
-\item \texttt{insert()}: Aggiunge un nuovo elemento prima di quello nella posizione specificata.
-\item \texttt{size()}: Ritorna il numero di elementi nella lista.
-\item \texttt{begin()}: Ritorna un iteratore che punta al primo elemento della lista.
-\item \texttt{begin()}: Ritorna un iteratore che punta al teorico ultimo elemento della lista.
+    \item \texttt{front()}: Ritorna il valore del primo elemento della lista.
+    \item \texttt{back()}: Ritorna il valore dell' ultimo elemento della lista.
+    \item \texttt{push\_front()}: Aggiunge un nuovo elemento all' inizio della lista.
+    \item \texttt{push\_back()}: Aggiunge un nuovo elemento alla fine della lista.
+    \item \texttt{pop\_front()}: Rimuove il primo elemento della lista e riduce la grandezza di 1.
+    \item \texttt{pop\_back()}: Rimuove l'ultimo elemento della lista e riduce la grandezza di 1.
+    \item \texttt{insert()}: Aggiunge un nuovo elemento prima di quello nella posizione specificata.
+    \item \texttt{size()}: Ritorna il numero di elementi nella lista.
+    \item \texttt{begin()}: Ritorna un iteratore che punta al primo elemento della lista.
+    \item \texttt{begin()}: Ritorna un iteratore che punta al teorico ultimo elemento della lista.
 \end{itemize}
 
 \vspace{10pt}
@@ -233,12 +236,12 @@ Il termine deque è un’abbreviazione per “double-ended queue”. E un array 
 
 \subsection*{Confronto con Vector e List}
 \begin{itemize}[leftmargin=1.5em]
-\item[\textcolor{green!60!black}{\scalebox{1.2}{$\mathbf{+}$}}] \textbf{Accesso casuale in $O(1)$:} Accesso diretto ad ogni elemento tramite indice (come il \texttt{vector}), sebbene con un minimo overhead.
-\item[\textcolor{green!60!black}{\scalebox{1.2}{$\mathbf{+}$}}] \textbf{Inserimento e cancellazione su entrambe le estremità ($O(1)$):} A differenza del \texttt{vector}, supporta \texttt{push\_front()} e \texttt{pop\_front()} in tempo costante.
-\item[\textcolor{green!60!black}{\scalebox{1.2}{$\mathbf{+}$}}] \textbf{Non invalida puntatori in coda/testa:} Le operazioni di inserimento sui bordi non invalidano i riferimenti agli elementi esistenti.
-\item[\textcolor{red!80!black}{\scalebox{1.2}{$\mathbf{-}$}}] \textbf{Lentezza negli inserimenti/rimozioni centrali ($O(N)$):} Come il \texttt{vector}, le operazioni che richiedono lo spostamento dei dati sono costose.
-\item[\textcolor{red!80!black}{\scalebox{1.2}{$\mathbf{-}$}}] \textbf{Costo di copia:} Potenziale lentezza se il tipo di dato ha un elevato costo di copia durante il riordino degli elementi.
-\item[\textcolor{red!80!black}{\scalebox{1.2}{$\mathbf{-}$}}] \textbf{Non completamente cache-friendly:} Non essendo totalmente contiguo in memoria, è meno efficiente del \texttt{vector} nel sfruttare la cache della CPU.
+    \item[\textcolor{green!60!black}{\scalebox{1.2}{$\mathbf{+}$}}] \textbf{Accesso casuale in $O(1)$:} Accesso diretto ad ogni elemento tramite indice (come il \texttt{vector}), sebbene con un minimo overhead.
+    \item[\textcolor{green!60!black}{\scalebox{1.2}{$\mathbf{+}$}}] \textbf{Inserimento e cancellazione su entrambe le estremità ($O(1)$):} A differenza del \texttt{vector}, supporta \texttt{push\_front()} e \texttt{pop\_front()} in tempo costante.
+    \item[\textcolor{green!60!black}{\scalebox{1.2}{$\mathbf{+}$}}] \textbf{Non invalida puntatori in coda/testa:} Le operazioni di inserimento sui bordi non invalidano i riferimenti agli elementi esistenti.
+    \item[\textcolor{red!80!black}{\scalebox{1.2}{$\mathbf{-}$}}] \textbf{Lentezza negli inserimenti/rimozioni centrali ($O(N)$):} Come il \texttt{vector}, le operazioni che richiedono lo spostamento dei dati sono costose.
+    \item[\textcolor{red!80!black}{\scalebox{1.2}{$\mathbf{-}$}}] \textbf{Costo di copia:} Potenziale lentezza se il tipo di dato ha un elevato costo di copia durante il riordino degli elementi.
+    \item[\textcolor{red!80!black}{\scalebox{1.2}{$\mathbf{-}$}}] \textbf{Non completamente cache-friendly:} Non essendo totalmente contiguo in memoria, è meno efficiente del \texttt{vector} nel sfruttare la cache della CPU.
 \end{itemize}
 
 \vspace{10pt}
@@ -292,11 +295,11 @@ seguenti strutture:
 \noindent \textbf{Metodi principali:}
 \vspace{10pt}
 \begin{itemize}[leftmargin=1.5em]
-\item \texttt{Stack}: container in cui gli elementi sono gestiti con politica LIFO.
-\item \texttt{Queue}: container in cui gli elementi sono gestiti con politica FIFO.
-\item \texttt{Priority Queue}: la coda con priorità.
-\item \texttt{Associative container (Contenitori Associativi)}: supportano efficientemente interrogazioni circa la presenza e richiese di estrazione di un elemento. I principali sono:
-set, multiset, map e multimap.
+    \item \texttt{Stack}: container in cui gli elementi sono gestiti con politica LIFO.
+    \item \texttt{Queue}: container in cui gli elementi sono gestiti con politica FIFO.
+    \item \texttt{Priority Queue}: la coda con priorità.
+    \item \texttt{Associative container (Contenitori Associativi)}: supportano efficientemente interrogazioni circa la presenza e richiese di estrazione di un elemento. I principali sono:
+          set, multiset, map e multimap.
 \end{itemize}
 
 
@@ -306,10 +309,10 @@ Il criterio di ordinamento ha la forma di una funzione che compara un valore od 
 \\
 Nella STL, sono predefiniti i seguenti associative container:
 \begin{itemize}[leftmargin=1.5em]
-\item \texttt{Set}: collezione nella quale gli elementi sono ordinati per valore. Ogni elemento può occorrere una sola volta, non sono ammessi duplicati.
-\item \texttt{Multiset}: come il Set, ma con la differenza che i duplicati sono ammessi.
-\item \texttt{Map}: contiene elementi che sono coppie chiave/valore. Ogni elemento ha quindi una chiave (sulla base della quale è effettuato l’ordinamento) ed un valore. Non sono ammessi duplicati nelle chiavi.
-\item \texttt{Multimap}: come le map, ma sono ammesse chiavi duplicate. 
+    \item \texttt{Set}: collezione nella quale gli elementi sono ordinati per valore. Ogni elemento può occorrere una sola volta, non sono ammessi duplicati.
+    \item \texttt{Multiset}: come il Set, ma con la differenza che i duplicati sono ammessi.
+    \item \texttt{Map}: contiene elementi che sono coppie chiave/valore. Ogni elemento ha quindi una chiave (sulla base della quale è effettuato l’ordinamento) ed un valore. Non sono ammessi duplicati nelle chiavi.
+    \item \texttt{Multimap}: come le map, ma sono ammesse chiavi duplicate.
 \end{itemize}
 \vspace{24pt}
 \subsection{Iteratori}
@@ -321,39 +324,39 @@ elemento del container, mentre con *iter restituisce il valore dell’elemento p
 \vspace{6pt}
 \noindent \textbf{Operazioni Fondamentali:}
 \begin{itemize}[leftmargin=1.5em]
-\item \textbf{\texttt{*}}: \textbf{Dereferenziazione}. Restituisce l'elemento (\textit{il valore}) puntato dalla posizione corrente dell'iteratore.
-\item \textbf{\texttt{->}}: \textbf{Accesso a Membri}. Permette di accedere ai membri di una struttura o classe puntata dall'iteratore, senza dover dereferenziare esplicitamente.
-\item \textbf{\texttt{++} / \texttt{--}}: \textbf{Avanzamento/Arretramento}. Muove l'iteratore all'elemento successivo (\texttt{++}) o precedente (\texttt{--}). \textit{(Attenzione: non tutti gli iteratori supportano \texttt{--})}.
-\item \textbf{\texttt{==} / \texttt{!=}}: \textbf{Confronto}. Controlla se due iteratori puntano alla \textbf{stessa posizione} all'interno del container.
-\item \textbf{\texttt{=}}: \textbf{Assegnazione}. Assegna la posizione di un iteratore a un altro.
+    \item \textbf{\texttt{*}}: \textbf{Dereferenziazione}. Restituisce l'elemento (\textit{il valore}) puntato dalla posizione corrente dell'iteratore.
+    \item \textbf{\texttt{->}}: \textbf{Accesso a Membri}. Permette di accedere ai membri di una struttura o classe puntata dall'iteratore, senza dover dereferenziare esplicitamente.
+    \item \textbf{\texttt{++} / \texttt{--}}: \textbf{Avanzamento/Arretramento}. Muove l'iteratore all'elemento successivo (\texttt{++}) o precedente (\texttt{--}). \textit{(Attenzione: non tutti gli iteratori supportano \texttt{--})}.
+    \item \textbf{\texttt{==} / \texttt{!=}}: \textbf{Confronto}. Controlla se due iteratori puntano alla \textbf{stessa posizione} all'interno del container.
+    \item \textbf{\texttt{=}}: \textbf{Assegnazione}. Assegna la posizione di un iteratore a un altro.
 \end{itemize}
 \vspace{8pt}
 \noindent
 Ogni classe container nella Standard Template Library (STL) del C++ fornisce le stesse funzioni membro di base per l'utilizzo degli iteratori, definendo così un'interfaccia uniforme per l'accesso ai dati. Queste funzioni sono essenziali per permettere a tutti gli algoritmi STL di lavorare con qualsiasi tipo di container, indipendentemente dalla sua implementazione interna
 
 \begin{tcolorbox}[
-    colback=yellow!20, 
-    colframe=darkgray, 
-    title= cosa sono e funzioni membro di base?
+        colback=yellow!20,
+        colframe=darkgray,
+        title= cosa sono e funzioni membro di base?
     ]
     Le funzioni membro di base sono i metodi standard che ogni classe container deve implementare per garantire la compatibilità con gli algoritmi della Standard Template Library (STL).
-    
-Queste funzioni definiscono l'interfaccia minima per l'utilizzo degli iteratori, permettendo così agli algoritmi di lavorare con qualsiasi container senza conoscerne i dettagli implementativi interni.
-\end{tcolorbox} 
+
+    Queste funzioni definiscono l'interfaccia minima per l'utilizzo degli iteratori, permettendo così agli algoritmi di lavorare con qualsiasi container senza conoscerne i dettagli implementativi interni.
+\end{tcolorbox}
 \noindent
 Le due funzioni membro fondamentali sono begin() ed end(), che definiscono il range di elementi su cui un algoritmo può operare:
 
-\begin{itemize}[leftmargin=1.5em] 
-\item \textbf{begin()}: Restituisce un iteratore che punta all'inizio degli elementi validi del container, ovvero alla posizione del primo elemento (se esiste).
-\item  \textbf{end()}: Restituisce l'iteratore alla fine logica degli elementi, noto come past-the-end iterator. Questo iteratore punta alla posizione teorica immediatamente successiva all'ultimo elemento; non rappresenta un elemento valido e non deve mai essere dereferenziato.
+\begin{itemize}[leftmargin=1.5em]
+    \item \textbf{begin()}: Restituisce un iteratore che punta all'inizio degli elementi validi del container, ovvero alla posizione del primo elemento (se esiste).
+    \item  \textbf{end()}: Restituisce l'iteratore alla fine logica degli elementi, noto come past-the-end iterator. Questo iteratore punta alla posizione teorica immediatamente successiva all'ultimo elemento; non rappresenta un elemento valido e non deve mai essere dereferenziato.
 \end{itemize}
 \vspace{8pt}
 \noindent
 Questo modello standardizzato offre due vantaggi cruciali per la programmazione generica in C++:
 
-\begin{itemize}[leftmargin=1.5em] 
-\item \textbf{Semplice Criterio di Terminazione}: Il modello [begin(), end()) offre un criterio di terminazione universale e semplice per tutti i cicli di visita. Si può continuare a scorrere gli elementi finché l'iteratore corrente non raggiunge (non è uguale a) end().
-\item  \textbf{Gestione dei Contenitori Vuoti}: I contenitori vuoti non richiedono trattamenti particolari o controlli espliciti. Quando un container è vuoto, begin() è direttamente uguale a end(). Di conseguenza, il ciclo di visita non viene eseguito nemmeno una volta, garantendo che il codice non tenti mai di accedere a dati inesistenti.
+\begin{itemize}[leftmargin=1.5em]
+    \item \textbf{Semplice Criterio di Terminazione}: Il modello [begin(), end()) offre un criterio di terminazione universale e semplice per tutti i cicli di visita. Si può continuare a scorrere gli elementi finché l'iteratore corrente non raggiunge (non è uguale a) end().
+    \item  \textbf{Gestione dei Contenitori Vuoti}: I contenitori vuoti non richiedono trattamenti particolari o controlli espliciti. Quando un container è vuoto, begin() è direttamente uguale a end(). Di conseguenza, il ciclo di visita non viene eseguito nemmeno una volta, garantendo che il codice non tenti mai di accedere a dati inesistenti.
 \end{itemize}
 
 \begin{lstlisting}[style=mystyle, language=C++, caption={Inserzione di elementi in un set e stampa usando gli iteratori}, label={lst:set_example}]
@@ -392,7 +395,7 @@ return 0;
 \vspace{8pt}
 \noindent
 Il set è composto da interi: gli elementi saranno in ordine ascendente
-(usa <). È possibile anche ordinarli in maniera diversa, ad esempio in ordine 
+(usa <). È possibile anche ordinarli in maniera diversa, ad esempio in ordine
 discendente, con una struttura del tipo: \textbf{$set<int,greater<int> >$ coll}
 \\
 NB: lo spazio è volutamente lasciato altrimenti >> viene interpretato
@@ -473,10 +476,10 @@ return 0;
 Gli iteratori possono avere altre funzionalità, oltre quelle di base.
 Le funzionalità addizionali dipendono dal tipo di container.
 Gli iteratori si dividono in due categorie:
-\begin{itemize}[leftmargin=1.5em] 
-\item \textbf{Iteratori bidirezionali}: Possono agire in due direzioni, in avanti, con l’operatore di incremento o, indietro con l’operatore di decremento. In questa tipologia ricadono gli iteratori per le classi dei container list, set, multiset, map, multimap.
+\begin{itemize}[leftmargin=1.5em]
+    \item \textbf{Iteratori bidirezionali}: Possono agire in due direzioni, in avanti, con l’operatore di incremento o, indietro con l’operatore di decremento. In questa tipologia ricadono gli iteratori per le classi dei container list, set, multiset, map, multimap.
 
-\item  \textbf{Iteratori ad accesso casuale}: Hanno gli operatori necessari a poter definire una “aritmetica degli iteratori” (analoga a quella dei puntatori). In questa tipologia ricadono gli iteratori per le classi dei container vector e deque.
+    \item  \textbf{Iteratori ad accesso casuale}: Hanno gli operatori necessari a poter definire una “aritmetica degli iteratori” (analoga a quella dei puntatori). In questa tipologia ricadono gli iteratori per le classi dei container vector e deque.
 \end{itemize}
 \noindent
 \\
@@ -576,8 +579,8 @@ ordinamento e di ricerca e possono essere di due tipi: \textbf{unari} o \textbf{
 
 
 \begin{itemize}[leftmargin=1em]
-\item \textbf{Predicati unari}: Controllano specifiche proprietà di un singolo argomento. Esempio: funzione isPrime.
-\item \textbf{Predicati binari}: Usati per confrontare specifiche proprietà di due argomenti. 
+    \item \textbf{Predicati unari}: Controllano specifiche proprietà di un singolo argomento. Esempio: funzione isPrime.
+    \item \textbf{Predicati binari}: Usati per confrontare specifiche proprietà di due argomenti.
 \end{itemize}
 
 \noindent
@@ -624,3 +627,4 @@ if (pos != coll.end()) {
 return 0;
 }
 \end{lstlisting}
+\end{document}

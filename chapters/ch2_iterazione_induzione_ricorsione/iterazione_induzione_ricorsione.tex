@@ -1,11 +1,14 @@
+\documentclass[../../main_document/main.tex]{subfiles}
+
+\begin{document}
 \section{Iterazione, induzione e ricorsione}
 Iterazione, induzione e ricorsione sono concetti fondamentali che
 compaiono in varie forme nel modelli dei dati, nelle strutture dati e negli algoritmi.
 \subsection{Iterazione}
 \begin{tcolorbox}[
-    colback=yellow!20, 
-    colframe=darkgray, 
-    title=Cosa si intende con iterazione?
+        colback=yellow!20,
+        colframe=darkgray,
+        title=Cosa si intende con iterazione?
     ]
     \textbf{Iterare} significa eseguire in modo ripetitivo lo stesso compito, o versioni diverse dello stesso compito, fino al verificarsi di certe condizioni logiche.
 \end{tcolorbox}
@@ -13,7 +16,7 @@ compaiono in varie forme nel modelli dei dati, nelle strutture dati e negli algo
 Nell'informatica l'iterazione è un concetto che si trova in molte forme:
 \begin{itemize}[leftmargin=1em]
     \item \textbf{Nei modelli di dati}: concetti come le \textbf{liste} sono definiti in modo ripetitivo.\\
-    \textbf{\textit{Esempio}}: Una lista è vuota, oppure è un elemento seguito da un altro, seguito da un altro ancora...;
+          \textbf{\textit{Esempio}}: Una lista è vuota, oppure è un elemento seguito da un altro, seguito da un altro ancora...;
     \item \textbf{I programmi e gli algoritmi}: utilizzano l'iterazione per eseguire compiti ripetitivi senza speci care uno per uno un gran numero di singoli passi;
     \item \textbf{I linguaggi di programmazione}:  utilizzano, nella realizzazione di algoritmi iterativi, costrutti ciclici, come ad esempio i comandi \texttt{while} e \texttt{for} del \texttt{c++};
 \end{itemize}
@@ -22,24 +25,24 @@ Nell'informatica l'iterazione è un concetto che si trova in molte forme:
 L'\textbf{induzione} è un concetto strettamente collegato alla ricorsione, ma appartiene più al \textbf{mondo matematico} che a quello della programmazione.\\
 Nell'induzione, si dimostra una proposizione per il \textbf{caso base}, e poi si mostra che, se vale per un caso generico, allora vale anche per il successivo.
 \begin{tcolorbox}[
-    colback=yellow!20, 
-    colframe=darkgray, 
-    title=Cosa si intende con induzione?
+        colback=yellow!20,
+        colframe=darkgray,
+        title=Cosa si intende con induzione?
     ]
-    La dimostrazione per induzione è una tecnica utile per dimostrare la verità di un \textbf{asserto}. 
+    La dimostrazione per induzione è una tecnica utile per dimostrare la verità di un \textbf{asserto}.
 \end{tcolorbox}
 \begin{tcolorbox}
-[
-    colback=green!10,  % Sfondo verde chiaro
-    colframe=green!60!black,  % Bordo verde più acceso
-    coltitle=black,  % Colore del testo del titolo
-    fonttitle=\bfseries,  % Testo del titolo in grassetto
-    title={\centering \textbf{Cos'è un \textit{asserto}?}},  % Titolo centrato 
-    enhanced,  % Miglioramenti grafici
-    attach boxed title to top center={yshift=-2mm},  % Posiziona il titolo centrato in alto
-    boxed title style={colback=white, colframe=green!60!black, rounded corners},
-    breakable
-]
+    [
+        colback=green!10,  % Sfondo verde chiaro
+        colframe=green!60!black,  % Bordo verde più acceso
+        coltitle=black,  % Colore del testo del titolo
+        fonttitle=\bfseries,  % Testo del titolo in grassetto
+        title={\centering \textbf{Cos'è un \textit{asserto}?}},  % Titolo centrato 
+        enhanced,  % Miglioramenti grafici
+        attach boxed title to top center={yshift=-2mm},  % Posiziona il titolo centrato in alto
+        boxed title style={colback=white, colframe=green!60!black, rounded corners},
+        breakable
+    ]
     Si definisce \textbf{asserto} (o proposizione) un'affermazione dotata di valore di verità (ossia può essere vera o falsa).\\
     \textbf{\textit{Esempio}}: in una dimostrazione induttiva si tenta di dimostrare che $S(n)$ vale per tutti gli interi di $n$ non negativi o, più in generale,  per tutti gli interi maggiori di un certo limite inferiore.
 \end{tcolorbox}
@@ -49,14 +52,14 @@ In particolare, la dimostrazione per induzione si basa sulla \textbf{definizione
 \textbf{\textit{Esempio}}: sia $S(n)$ un asserto arbitrario su un intero $n$. Nella sua forma più semplice (\textbf{induzione semplice}), una dimostrazione induttiva dell'asserto $S(n)$ prevede \textbf{due passi}:
 \begin{itemize}[leftmargin=1em]
     \item \textbf{Caso base}: si occupa di costruire uno o più oggetti semplici.\\
-    Nel caso dell'esempio, si dimostra che l'asserto $S(n)$ è vero per un valore particolare di $n$;
+          Nel caso dell'esempio, si dimostra che l'asserto $S(n)$ è vero per un valore particolare di $n$;
     \item \textbf{Passo induttivo}: costruisce oggetti più grandi che dipendono da quelli appena precedenti.\\
-    Nel caso dell'esempio, si dimostra che per ogni $n\geqslant0,\;$ se $S(n)$ è vero, lo è anche $S(n+1)$.
+          Nel caso dell'esempio, si dimostra che per ogni $n\geqslant0,\;$ se $S(n)$ è vero, lo è anche $S(n+1)$.
 \end{itemize}
 \begin{figure}[H]
     \centering
     \vspace{-15pt}  % Riduce lo spazio sopra
-    \includegraphics[width=0.85\textwidth]{iterazione_induzione_ricorsione/img1.png}        
+    \includegraphics[width=0.85\textwidth]{iterazione_induzione_ricorsione/img1.png}
     \vspace{-15pt}  % Riduce lo spazio sopra
 \end{figure}
 In una dimostrazione induttiva, \textbf{ogni istanza dell'asserto $S(n)$ dipende solo dall'asserto sul valore che precede $n$}. Se l'induzione parte da $0$, per ogni intero $n$ si deve dimostrare un asserto $S(n)$:
@@ -70,11 +73,11 @@ Ogni asserto dipende dal precedente in modo uniforme, e grazie alla dimostrazion
 \subsubsection{Induzione completa}
 Un induzione nella quale si dimostra la verità di $S(n+1)$ utilizzando come ipotesi induttiva soltanto $S(n)$ viene detta \textbf{induzione semplice}.
 \begin{tcolorbox}[
-    colback=yellow!20, 
-    colframe=darkgray, 
-    title=Cosa si intende con induzione completa?
+        colback=yellow!20,
+        colframe=darkgray,
+        title=Cosa si intende con induzione completa?
     ]
-    Si parla di induzione completa (perfetta o forte)  quando per dimostrare l'asserto $S$ siamo autorizzati a utilizzare $S(i)$ per tutti i valori di $i$ dalla base fino a $n$. 
+    Si parla di induzione completa (perfetta o forte)  quando per dimostrare l'asserto $S$ siamo autorizzati a utilizzare $S(i)$ per tutti i valori di $i$ dalla base fino a $n$.
 \end{tcolorbox}
 \noindent
 Quindi a differenza dell'induzione semplice, dove, per dimostrare $S(n+1)$ si usa solo $S(n)$ (ovvero \textbf{solo ciò} che si è \textbf{ottenuto nel passo precedente}), nell'induzione completa per dimostrare che $S(n+1)$ è vera, \textbf{si possono usare tutti i casi precedenti, non solo quello immediatamente precedente}.\\
@@ -86,45 +89,45 @@ Anche in questo caso, per ottenere una dimostrazione induttiva dell'asserto $S(n
 
 \vspace{-5pt}
 \begin{tcolorbox}
-[
-    colback=green!10,  % Sfondo verde chiaro
-    colframe=green!60!black,  % Bordo verde più acceso
-    coltitle=black,  % Colore del testo del titolo
-    fonttitle=\bfseries,  % Testo del titolo in grassetto
-    title={\centering \textbf{Utilità dell'induzione completa}},  % Titolo centrato 
-    enhanced,  % Miglioramenti grafici
-    attach boxed title to top center={yshift=-2mm},  % Posiziona il titolo centrato in alto
-    boxed title style={colback=white, colframe=green!60!black, rounded corners},
-    breakable
-]
+    [
+        colback=green!10,  % Sfondo verde chiaro
+        colframe=green!60!black,  % Bordo verde più acceso
+        coltitle=black,  % Colore del testo del titolo
+        fonttitle=\bfseries,  % Testo del titolo in grassetto
+        title={\centering \textbf{Utilità dell'induzione completa}},  % Titolo centrato 
+        enhanced,  % Miglioramenti grafici
+        attach boxed title to top center={yshift=-2mm},  % Posiziona il titolo centrato in alto
+        boxed title style={colback=white, colframe=green!60!black, rounded corners},
+        breakable
+    ]
     L'induzione completa, torna utile perché alcuni problemi non possono essere dimostrati basandosi solo sul passo precedente.\\
-    Ad esempio, se per calcolare $S(n)$ si ha bisogno sia di $S(n-1)$ che di $S(n-2)$ (come nella sequenza di fibonacci), allora serve induzione completa. 
+    Ad esempio, se per calcolare $S(n)$ si ha bisogno sia di $S(n-1)$ che di $S(n-2)$ (come nella sequenza di fibonacci), allora serve induzione completa.
 \end{tcolorbox}
 \begin{figure}[H]
     \centering
     \vspace{-18pt}  % Riduce lo spazio sopra
-    \includegraphics[width=0.8\textwidth]{iterazione_induzione_ricorsione/img2.png}        
+    \includegraphics[width=0.8\textwidth]{iterazione_induzione_ricorsione/img2.png}
     \vspace{-15pt}  % Riduce lo spazio sopra
 \end{figure}
 
 \subsection{Ricorsione}
 \begin{tcolorbox}[
-    colback=yellow!20, 
-    colframe=darkgray, 
-    title=Cosa si intende con ricorsione?
+        colback=yellow!20,
+        colframe=darkgray,
+        title=Cosa si intende con ricorsione?
     ]
-    La \textbf{ricorsione} è una tecnica in un concetto viene definitio, direttamente o indirettamente, in termini di se stesso. 
+    La \textbf{ricorsione} è una tecnica in un concetto viene definitio, direttamente o indirettamente, in termini di se stesso.
 \end{tcolorbox}
 \noindent
 È molto simile all'iterazione, ma invece di ripetere istruzioni tramite un ciclo (\texttt{for, while}), \textbf{si ripete richiamando la stessa funzione}. Anche se all'\textbf{apparenza} possono sembrare \textbf{piu complessi} dei programmi iterativi, i programmi ricorsivi possono \textbf{risultare piu semplici} da \textbf{scrivere} e \textbf{analizzare}.\\
 Una funzione o procedura ricorsiva \texttt{P} può richiamare se stessa in due modi:
 \begin{itemize}[leftmargin=1em]
     \item \textbf{Direttamente}: quando dentro il corpo della funzione \texttt{P} c'è una chiamata a \texttt{P};
-    \begin{lstlisting}[style=mystyle, language=C++]
+          \begin{lstlisting}[style=mystyle, language=C++]
 void P() { P(); } // chiamata diretta 
     \end{lstlisting}
     \item \textbf{Indirettamente}: quando \texttt{P} chiama un'altra funzione \texttt{Q}, e poi \texttt{Q} chiama \texttt{P}, e così via \dots
-    \begin{lstlisting}[style=mystyle, language=C++]
+          \begin{lstlisting}[style=mystyle, language=C++]
 void P() { Q(); } // P chiama Q, che chiama P
 void Q() { P(); }
     \end{lstlisting}
@@ -133,17 +136,17 @@ void Q() { P(); }
 \vspace{8pt}
 \noindent
 \begin{tcolorbox}
-[
-    colback=green!10,  % Sfondo verde chiaro
-    colframe=green!60!black,  % Bordo verde più acceso
-    coltitle=black,  % Colore del testo del titolo
-    fonttitle=\bfseries,  % Testo del titolo in grassetto
-    title={\centering \textbf{Induttività della ricorsione}},  % Titolo centrato 
-    enhanced,  % Miglioramenti grafici
-    attach boxed title to top center={yshift=-2mm},  % Posiziona il titolo centrato in alto
-    boxed title style={colback=white, colframe=green!60!black, rounded corners},
-    breakable
-]
+    [
+        colback=green!10,  % Sfondo verde chiaro
+        colframe=green!60!black,  % Bordo verde più acceso
+        coltitle=black,  % Colore del testo del titolo
+        fonttitle=\bfseries,  % Testo del titolo in grassetto
+        title={\centering \textbf{Induttività della ricorsione}},  % Titolo centrato 
+        enhanced,  % Miglioramenti grafici
+        attach boxed title to top center={yshift=-2mm},  % Posiziona il titolo centrato in alto
+        boxed title style={colback=white, colframe=green!60!black, rounded corners},
+        breakable
+    ]
     Utilizzando la ricorsione si costruisce, \textbf{implicitamente}, una \textbf{definizione induttiva} di come funziona l'algoritmo e di \textbf{quanto tempo impiega} per completarsi.\\
     Infatti quando un algoritmo impiega la ricorsione, si fa uso di una formula detta \textbf{equazione di ricorrenza}: il tempo che serve per risolvere un problema più grande dipende dal tempo che serve per risolvere i problemi più piccoli.\\
     \textbf{\textit{Esempio}}: si immagini di voler calcolare il fattoriale di $4$
@@ -155,7 +158,7 @@ fatt(4)
 -> fatt(0)
     \end{lstlisting}
     Quindi il tempo totale per \texttt{fatt(4)} è la somma del tempo per \texttt{fatt(3)}, più un piccolo tempo extra per l'operazione \texttt{n * ...}
-    
+
     \vspace{8pt}
     \noindent
     In generale, la ricorsione è \textbf{induttiva} perché per dimostrare una proprietà di una procedura ricorsiva, abbiamo bisogno di dimostrare un asserto sull'effetto della chiamata di questa procedura, costruendo un \textbf{caso base} e i casi successivi a partire da esso.\\
@@ -166,26 +169,26 @@ fatt(4)
 \subsection{Invarianti dei cicli}
 \label{par:Invarianti dei cicli}
 \begin{tcolorbox}[
-    colback=yellow!20, 
-    colframe=darkgray, 
-    title=Cos'è un invariante?
+        colback=yellow!20,
+        colframe=darkgray,
+        title=Cos'è un invariante?
     ]
     Un \textbf{invariante} è una condizione sempre vera in un certo punto del programma.%in un contesto generale
 \end{tcolorbox}
 \begin{tcolorbox}[
-    colback=yellow!20, 
-    colframe=darkgray, 
-    title=Cos'è un invariante di ciclo (o asserzione induttiva)?
+        colback=yellow!20,
+        colframe=darkgray,
+        title=Cos'è un invariante di ciclo (o asserzione induttiva)?
     ]
     Invece, possiamo definire \textbf{invariante di ciclo} una condizione sempre vera all'inizio dell'iterazione di un ciclo. Gli invarianti di ciclo sono importanti per dimostrare la correttezza di \textbf{algoritmi iterativi}.\\
     Piu formalmente possiamo dire che: \textit{Un \textbf{invariante di ciclo} è un asserto $S$ che è vero ogni volta che ci si trova in un particolare punto del ciclo.}
 \end{tcolorbox}
 \noindent
-    L'asserto $S$ viene poi dimostrato per induzione su un \textbf{parametro} che costituisce una \textbf{misura del numero di volte che il ciclo viene intrapreso}. Questo parametro può essere:
-    \begin{itemize}[leftmargin=1em]
-        \item Il numero di volte che abbiamo raggiunto la guardia di un ciclo;
-        \item Oppure, il valore della variabile indice utilizzata dal ciclo stesso. 
-    \end{itemize}
+L'asserto $S$ viene poi dimostrato per induzione su un \textbf{parametro} che costituisce una \textbf{misura del numero di volte che il ciclo viene intrapreso}. Questo parametro può essere:
+\begin{itemize}[leftmargin=1em]
+    \item Il numero di volte che abbiamo raggiunto la guardia di un ciclo;
+    \item Oppure, il valore della variabile indice utilizzata dal ciclo stesso.
+\end{itemize}
 
 \vspace{8pt}
 \noindent
@@ -212,14 +215,14 @@ for (i = 0; i < n; i++) {
 ...
 ...
 }
-    \end{lstlisting}        
+    \end{lstlisting}
 \end{minipage}%
 \hspace{5pt} % Spazio tra immagine e testo
-\raisebox{-3pt}{  
+\raisebox{-3pt}{
     \begin{minipage}[t]{0.485\textwidth}
         Utilizzando un ciclo \textit{for} il contatore è integrato nella struttura stessa del ciclo.\\
         Il valore iniziale, la condizione di uscita e l'aggiornamento (\texttt{i++}) sono tutti dichiarati in modo esplicito e standard. Si sa con certezza
-    \end{minipage}  
+    \end{minipage}
 }
 
 \vspace{3pt}
@@ -233,7 +236,7 @@ Nel primo caso si usa un contatore $i$ come nel \textit{for}, quindi il comporta
 
 \vspace{3pt}
 \noindent
-\begin{minipage}[t]{0.487\textwidth}  
+\begin{minipage}[t]{0.487\textwidth}
     \textit{Primo caso}
     \begin{lstlisting}[style=mystyle, language=C]
 i = 0;
@@ -270,11 +273,11 @@ Dunque, basandosi sulle caratteristiche appena descritte, è possibile determina
 
 \vspace{-3pt}
 \noindent
-\begin{minipage}[t]{0.357\textwidth}  
+\begin{minipage}[t]{0.357\textwidth}
     \includegraphics[width=\linewidth]{iterazione_induzione_ricorsione/img6.png}
 \end{minipage}%
 \hspace{5pt} % Spazio tra immagine e testo
-\raisebox{127pt}{  
+\raisebox{127pt}{
     \begin{minipage}[t]{0.620\textwidth}
         La seguente funzione "\texttt{Fattoriale}" calcola $n!$ passato da parametro, assumendo che $n\geqslant1$.
         Lo scopo è quello di dimostrare che il ciclo \texttt{while} (\textit{righe 4-6}) deve terminare.\\
@@ -285,8 +288,8 @@ Dunque, basandosi sulle caratteristiche appena descritte, è possibile determina
             \item diminuisca ad ogni iterazione;
             \item diventi negativa quando il ciclo finisce.
         \end{itemize}
-    \end{minipage} 
-}    
+    \end{minipage}
+}
 \textbf{\textit{N.B}}: Per dimostrare la terminazione \textbf{si preferisce} trovare \textbf{una funzione \textit{E} che decresce} verso un limite inferiore (è più facile da gestire nei teoremi di terminazione).\\
 Una scelta che risulta naturale è $E=n-1$, poiché:
 \begin{itemize}[leftmargin=1em]
@@ -301,25 +304,25 @@ A questo punto, dopo aver dimostrato la terminazione del ciclo \texttt{while}, �
 
 \vspace{5pt}
 \noindent
-\begin{minipage}[t]{0.275\textwidth}  
+\begin{minipage}[t]{0.275\textwidth}
     \includegraphics[width=\linewidth]{iterazione_induzione_ricorsione/img7.png}
 \end{minipage}%
 \hspace{5pt} % Spazio tra immagine e testo
-\raisebox{230pt}{  
+\raisebox{230pt}{
     \begin{minipage}[t]{0.698\textwidth}
         Come definito in precedenza, l'invariante del ciclo è dato da un asserto, in questo caso $S(j)$.
         \begin{tcolorbox}
-        [
-            colback=green!10,  % Sfondo verde chiaro
-            colframe=green!60!black,  % Bordo verde più acceso
-            coltitle=black,  % Colore del testo del titolo
-            fonttitle=\bfseries,  % Testo del titolo in grassetto
-            title={\centering \textbf{Cosa afferma l'asserto?}},  % Titolo centrato 
-            enhanced,  % Miglioramenti grafici
-            attach boxed title to top center={yshift=-2mm},  % Posiziona il titolo centrato in alto
-            boxed title style={colback=white, colframe=green!60!black, rounded corners},
-            breakable
-        ]
+            [
+                colback=green!10,  % Sfondo verde chiaro
+                colframe=green!60!black,  % Bordo verde più acceso
+                coltitle=black,  % Colore del testo del titolo
+                fonttitle=\bfseries,  % Testo del titolo in grassetto
+                title={\centering \textbf{Cosa afferma l'asserto?}},  % Titolo centrato 
+                enhanced,  % Miglioramenti grafici
+                attach boxed title to top center={yshift=-2mm},  % Posiziona il titolo centrato in alto
+                boxed title style={colback=white, colframe=green!60!black, rounded corners},
+                breakable
+            ]
             Se si raggiunge il controllo del ciclo $i \leqslant n$ quando la variabile $i$ ha un certo valore $j$, allora il valore della variabile \texttt{fatt} è \texttt{(j-1)!}
 
             \vspace{8pt}
@@ -331,25 +334,25 @@ A questo punto, dopo aver dimostrato la terminazione del ciclo \texttt{while}, �
             \end{itemize}
         \end{tcolorbox}
         Dimostriamo che l'asserto vale sia per il caso base che per il passo induttivo:
-    \end{minipage} 
-}    
+    \end{minipage}
+}
 \begin{enumerate}[leftmargin=1em]
     \item \textbf{Caso base}: nel caso base, prima del ciclo, $fatt=1$ e $i$ ha un valore $j=2$. Dunque $fatt=1=(j-1)=2-1=1$ e la \textbf{base è dimostrata}.
     \item \textbf{Passo induttivo}: nel passo induttivo, assumendo che $S(j)$ sia vera per un generico valore $j \leqslant n$, è stato dimostrato che la variabile \texttt{fatt}, prima della nuova iterazione, sia $fatt=(j-1)!$; Se si vuole dimostrare che anche $S(j+1)$, bisogna dimostrare che la variabile \texttt{fatt}, prima della nuova iterazione, sia $fatt=(j+1-1)! =j!$; Si distinguono due casi:
-    \begin{itemize}[leftmargin=1em]
-        \item Quando $i$ ha valore $j>n$: il ciclo è già finito (la guardia non si attiva più), e dunque il valore di \texttt{fatt}, sarà il valore finale, ovvero j!;
-        \item Quando $i$ ha valore $j \leqslant n$: Dopo aver verificato che per $S(j)$ vale $fatt(j-1)!$ (con $i=j$) si esegue un'altra iterazione del ciclo.\\
-        Dunque, in \textit{riga 5} troviamo che $fatt=fatt \times i=(j-1)! \times j$ che equivale alla definizione di $j!$, mentre in \textit{riga 6} si ha $i=i+1=j+1$.
-        Ora al prossimo controllo della prossima iterazione si avrà $fatt=(j-1)! \times j=j!$ e $i=j+1$ che confermano l'asserzione $S(j+1)$.
-    \end{itemize}
-\end{enumerate} 
+          \begin{itemize}[leftmargin=1em]
+              \item Quando $i$ ha valore $j>n$: il ciclo è già finito (la guardia non si attiva più), e dunque il valore di \texttt{fatt}, sarà il valore finale, ovvero j!;
+              \item Quando $i$ ha valore $j \leqslant n$: Dopo aver verificato che per $S(j)$ vale $fatt(j-1)!$ (con $i=j$) si esegue un'altra iterazione del ciclo.\\
+                    Dunque, in \textit{riga 5} troviamo che $fatt=fatt \times i=(j-1)! \times j$ che equivale alla definizione di $j!$, mentre in \textit{riga 6} si ha $i=i+1=j+1$.
+                    Ora al prossimo controllo della prossima iterazione si avrà $fatt=(j-1)! \times j=j!$ e $i=j+1$ che confermano l'asserzione $S(j+1)$.
+          \end{itemize}
+\end{enumerate}
 
 
 \subsubsection{Invarianti dei cicli - Esempio pratico con il \texttt{selectionSort()}}
 \begin{tcolorbox}[
-    colback=yellow!20, 
-    colframe=darkgray, 
-    title=Obbiettivo del \texttt{selectionSort()}
+        colback=yellow!20,
+        colframe=darkgray,
+        title=Obbiettivo del \texttt{selectionSort()}
     ]
     Il \texttt{selectionSort()} prevede l'\textbf{ordinamento di un vettore} di $n$ elementi i quali \textbf{vengono permutati} in modo che essi compaiano in un ordine non decrescente.
 \end{tcolorbox}
@@ -360,7 +363,7 @@ Possiamo descrivere il funzionamento del selection sort tramite il seguente pseu
 \begin{figure}[H]
     \centering
     \vspace{-10pt}  % Riduce lo spazio sopra
-    \includegraphics[width=0.7\textwidth]{iterazione_induzione_ricorsione/img5.png}        
+    \includegraphics[width=0.7\textwidth]{iterazione_induzione_ricorsione/img5.png}
     \vspace{-15pt}  % Riduce lo spazio sopra
 \end{figure}
 
@@ -378,13 +381,13 @@ In particolare, come si può vedere in figura \textit{(a)}, l'ordinamento avvien
 Come si può vedere dall'immagine \textit{(b)}, l'asserzione induttiva (o invariante di ciclo) è chiamata $T(m)$. Quest'ultima, come detto al capitolo \ref{par:Invarianti dei cicli}, è una condizione che deve essere vera immediatamente prima del controllo di terminazione del ciclo, cioè prima di controllare $i>n-1$.\\
 Quando $i$ ha un certo valore $m$, sono già stati selezionati gli $m-1$ elementi più piccoli e ordinati nella posizione iniziale dell'array. In altre parole:
 
-\vspace{-15pt} 
+\vspace{-15pt}
 \begin{figure}[ht]
     \centering
     \vspace{-5pt}  % Riduce lo spazio sopra
     \subfloat[]{%
         \includegraphics[width=0.4\linewidth]{iterazione_induzione_ricorsione/img3.png}
-    } 
+    }
     \hspace{1cm}
     \subfloat[]{%
         \includegraphics[width=0.3\linewidth]{iterazione_induzione_ricorsione/img4.png}
@@ -406,60 +409,61 @@ Questa è la proprietà $T(m)$, che \textbf{rimane vera ad ogni iterazione del c
 Come detto al capitolo \ref{par:Invarianti dei cicli}, per poter dimostrare un asserto tramite induzione, possiamo utilizzare valore della variabile indice del ciclo stesso, in questo caso $m$.\\
 Dunque, si dice che: \textbf{\textit{si può dimostrare per induzione su $m$ l'asserto $T(m)$}}.
 \begin{tcolorbox}
-[
-    colback=green!10,  % Sfondo verde chiaro
-    colframe=green!60!black,  % Bordo verde più acceso
-    coltitle=black,  % Colore del testo del titolo
-    fonttitle=\bfseries,  % Testo del titolo in grassetto
-    title={\centering \textbf{Cosa afferma l'asserto?}},  % Titolo centrato 
-    enhanced,  % Miglioramenti grafici
-    attach boxed title to top center={yshift=-2mm},  % Posiziona il titolo centrato in alto
-    boxed title style={colback=white, colframe=green!60!black, rounded corners},
-    breakable
-]
+    [
+        colback=green!10,  % Sfondo verde chiaro
+        colframe=green!60!black,  % Bordo verde più acceso
+        coltitle=black,  % Colore del testo del titolo
+        fonttitle=\bfseries,  % Testo del titolo in grassetto
+        title={\centering \textbf{Cosa afferma l'asserto?}},  % Titolo centrato 
+        enhanced,  % Miglioramenti grafici
+        attach boxed title to top center={yshift=-2mm},  % Posiziona il titolo centrato in alto
+        boxed title style={colback=white, colframe=green!60!black, rounded corners},
+        breakable
+    ]
     Se si raggiunge il controllo del ciclo $i>n-1$ alla (linea 2) con $i=m$, allora:
     \begin{itemize}[leftmargin=1em]
         \item Gli elementi $A[1...(m-1)]$ sono ordinati in senso non decrescente: \\
-        $A[1] \leqslant A[2] \leqslant \ldots \leqslant A[m-1]$;
+              $A[1] \leqslant A[2] \leqslant \ldots \leqslant A[m-1]$;
         \item Tutti gli elementi di $A[m...n]$ sono maggiori o uguali a ogni elemento di $A[1...(m-1)]$.
     \end{itemize}
 \end{tcolorbox}
 \begin{enumerate}[leftmargin=1.3em]
     \item \textbf{Caso base}: quando $i=m=1$ siamo all'inizio dell'algoritmo, e non abbiamo ancora ordinato nulla. Per vedere se $T(1)$ è vera si controlla che l'asserto sia corretto:
-    \begin{itemize}[leftmargin=1em]
-        \item La parte $(1)$ di $T(1)$ dice che $A[1...m-1]=A[1...0]$ è ordinato, ma $A[1...0]$ è vuoto, quindi è banalmente vero (una sequenza vuota è sempre ordinata).
-        \item La parte $(2)$ di $T(2)$  dice che tutti gli elementi in $A[m...n]=A[1...n]$ sono maggiori o uguali a quelli in $A[1...m-1]=A[1...0]$, ma anche in questo caso gli elementi in $A[1...0]$ non esistono, quindi la condizione è automaticamente vera.
-    \end{itemize}
-    Quindi T(1) è vera $\Rightarrow$ \textbf{caso base dimostrato}.
+          \begin{itemize}[leftmargin=1em]
+              \item La parte $(1)$ di $T(1)$ dice che $A[1...m-1]=A[1...0]$ è ordinato, ma $A[1...0]$ è vuoto, quindi è banalmente vero (una sequenza vuota è sempre ordinata).
+              \item La parte $(2)$ di $T(2)$  dice che tutti gli elementi in $A[m...n]=A[1...n]$ sono maggiori o uguali a quelli in $A[1...m-1]=A[1...0]$, ma anche in questo caso gli elementi in $A[1...0]$ non esistono, quindi la condizione è automaticamente vera.
+          \end{itemize}
+          Quindi T(1) è vera $\Rightarrow$ \textbf{caso base dimostrato}.
 
-    \vspace{8pt}
-    \noindent
+          \vspace{8pt}
+          \noindent
     \item \textbf{Passo induttivo}: in questo passaggio si assume che $T(m)$ sia vera per un generico $m \leqslant n-1$, che verifica le condizioni dell'asserto, quindi:
-    \begin{itemize}[leftmargin=1em]
-        \item La prima parte dell'array $A[1...(m-1)]$ è già ordinata;
-        \item Tutti gli elementi compresi in $A[1...(m-1)]$ sono $\leqslant$ di ogni elemento compreso in $A[m...n]$.
-    \end{itemize}
+          \begin{itemize}[leftmargin=1em]
+              \item La prima parte dell'array $A[1...(m-1)]$ è già ordinata;
+              \item Tutti gli elementi compresi in $A[1...(m-1)]$ sono $\leqslant$ di ogni elemento compreso in $A[m...n]$.
+          \end{itemize}
 
-    \vspace{8pt}
-    \noindent
-    Ora si vuole dimostrare che anche $T(m+1)$ sia vera. Durante l'iterazione con $i=m$:
-    \begin{itemize}[leftmargin=1em]
-        \item il ciclo interno (righe 3-9) \textbf{cerca il minimo} tra gli elementi non ordinati $A[m...n]$;
-        \item poi \textbf{scambia} quel minimo con l'elemento $A[m]$ (quindi prima di tutti gli altri elementi non ordinati).
-    \end{itemize}
-    Anche dopo lo scambio rimane vero che:
-    \begin{itemize}[leftmargin=1em]
-        \item la porzione $A[1...m]$ è ora ordinata (perché il nuovo elemento in $A[m]$ è il più piccolo tra quelli rimanenti);
-        \item tutti gli elementi in $A[(m+1)...n]$ rimangono $\geqslant$ di quelli precedenti.
-    \end{itemize}
-    Quindi $T(m+1)$ è vera perché subito dopo lo scambio il ciclo esterno icrementa la variabile $i$ da $m$ a $m+1$: \textit{“Dato che ora il valore di $i$ è $m+1$, l'asserzione $T(m+1)$ risulta vera.”}
+          \vspace{8pt}
+          \noindent
+          Ora si vuole dimostrare che anche $T(m+1)$ sia vera. Durante l'iterazione con $i=m$:
+          \begin{itemize}[leftmargin=1em]
+              \item il ciclo interno (righe 3-9) \textbf{cerca il minimo} tra gli elementi non ordinati $A[m...n]$;
+              \item poi \textbf{scambia} quel minimo con l'elemento $A[m]$ (quindi prima di tutti gli altri elementi non ordinati).
+          \end{itemize}
+          Anche dopo lo scambio rimane vero che:
+          \begin{itemize}[leftmargin=1em]
+              \item la porzione $A[1...m]$ è ora ordinata (perché il nuovo elemento in $A[m]$ è il più piccolo tra quelli rimanenti);
+              \item tutti gli elementi in $A[(m+1)...n]$ rimangono $\geqslant$ di quelli precedenti.
+          \end{itemize}
+          Quindi $T(m+1)$ è vera perché subito dopo lo scambio il ciclo esterno icrementa la variabile $i$ da $m$ a $m+1$: \textit{“Dato che ora il valore di $i$ è $m+1$, l'asserzione $T(m+1)$ risulta vera.”}
 
-    \vspace{8pt}
-    \noindent
+          \vspace{8pt}
+          \noindent
     \item \textbf{Conclusione}: nell'ultima iterazione, quando $i = m = n$
-    \begin{itemize}[leftmargin=1em]
-        \item i primi $n-1$ elementi $A[1...(n-1)]$ sono già ordinati e al posto giusto;
-        \item l'ultimo elemento $A[n]$ è automaticamente $\geqslant$ di tutti gli altri.
-    \end{itemize}
-    Quando il programma termina, dunque, gli elementi di A sono in ordine non decrescente, cioè ordinati.
+          \begin{itemize}[leftmargin=1em]
+              \item i primi $n-1$ elementi $A[1...(n-1)]$ sono già ordinati e al posto giusto;
+              \item l'ultimo elemento $A[n]$ è automaticamente $\geqslant$ di tutti gli altri.
+          \end{itemize}
+          Quando il programma termina, dunque, gli elementi di A sono in ordine non decrescente, cioè ordinati.
 \end{enumerate}
+\end{document}

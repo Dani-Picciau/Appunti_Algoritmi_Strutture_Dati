@@ -1,8 +1,12 @@
+\documentclass[../../main_document/main.tex]{subfiles}
+
+\begin{document}
+
 \section{Le liste}
 \begin{tcolorbox}[
-    colback=yellow!20, 
-    colframe=darkgray, 
-    title=Cos'è una lista (linked list)?
+        colback=yellow!20,
+        colframe=darkgray,
+        title=Cos'è una lista (linked list)?
     ]
     È una possibile implementazione per la struttura dati astratta, \textbf{sequenza}. È costituita da una \textbf{sequenza di nodi}, contenenti dati arbitrari e $1/2$ puntatori all'elemento successivo e/o precedente.
 \end{tcolorbox}
@@ -46,11 +50,11 @@ Al contrario, l’accesso a un elemento tramite il suo indice richiede di scorre
 
 \vspace{10pt}
 \noindent
-\begin{minipage}[t]{0.660\textwidth}  
+\begin{minipage}[t]{0.660\textwidth}
     \includegraphics[width=\linewidth]{introduzione/img10.png}
 \end{minipage}%
 \hspace{5pt} % Spazio tra immagine e testo
-\raisebox{210pt}{  
+\raisebox{210pt}{
     \begin{minipage}[t]{0.315\textwidth}
         Le linked list presentano \textbf{diverse possibili implementazioni}:
         \begin{itemize}[leftmargin=1em]
@@ -58,8 +62,8 @@ Al contrario, l’accesso a un elemento tramite il suo indice richiede di scorre
             \item Liste con \textbf{sentinella} e \textbf{senza sentinella};
             \item Liste \textbf{circolari} e \textbf{non circolari}.
         \end{itemize}
-    \end{minipage} 
-} 
+    \end{minipage}
+}
 
 \subsection{Liste concatenate}
 \label{par:Liste concatenate}
@@ -82,28 +86,28 @@ Le liste concatenate vengono definite nel seguente modo:
 
 \vspace{-12pt}
 \noindent
-\begin{minipage}[t]{0.36\textwidth}  
+\begin{minipage}[t]{0.36\textwidth}
     \begin{lstlisting}[style=mystyle, language=C++]
 struct slist {
 int dato;
 struct slist *next;
 };
-    \end{lstlisting}   
+    \end{lstlisting}
     \begin{lstlisting}[style=mystyle, language=C++]
 /* lista vuota */
 struct slist *root = NULL; 
-    \end{lstlisting}   
+    \end{lstlisting}
 \end{minipage}%
 \hspace{5pt} % Spazio tra immagine e testo
-\raisebox{19pt}{  
+\raisebox{19pt}{
     \begin{minipage}[t]{0.608\textwidth}
         \begin{figure}[H]
-            \includegraphics[width=\linewidth]{introduzione/img11.png}          
+            \includegraphics[width=\linewidth]{introduzione/img11.png}
         \end{figure}
 
         \vspace{-12pt}
         Come si può vedere, quando viene inizializzato il puntatore root (la testa della lista) a \textbf{\textit{null}}, la lista è vuota.
-    \end{minipage}   
+    \end{minipage}
 }
 
 \vspace{8pt}
@@ -139,24 +143,24 @@ return q;
 \begin{figure}[H]
     \centering
     \vspace{-5pt}  % Riduce lo spazio sopra
-    \includegraphics[width=0.8\textwidth]{introduzione/img12.png}        
+    \includegraphics[width=0.8\textwidth]{introduzione/img12.png}
     \vspace{-15pt}  % Riduce lo spazio sopra
 \end{figure}
 \begin{itemize}[leftmargin=1em]
     \item \textbf{Tipo di ritorno}: La funzione restituisce un puntatore a \texttt{slist}. Il puntatore restituito sarà la nuova testa della lista;
     \item \textbf{Parametri}: i parametri definiti nella funzione sono (\texttt{slist *p, int elem}), rispettivamente il \textbf{puntatore corrente} alla testa della lista (che può essere \texttt{null} se la lista è vuota) e il \textbf{valore da inserire} nel nuovo nodo;
     \item \textbf{Funzionamento del codice}: per poter inserire un nuovo nodo in testa alla lista, supponiamo di possedere una struttura dati come quella definita al capitolo \ref{par:Liste concatenate}.
-    \begin{itemize}[leftmargin=1em, label=\raisebox{0.4ex}{\phantom{2}\rule{0.6ex}{0.6ex}}]
-        \item \textit{riga 2}: creo un puntatore \texttt{*q} al nuovo nodo di grandezza \texttt{slist};
-        \item \textit{riga 4-7}: eseguo un crontollo su \texttt{q} per assicurarmi che la \texttt{malloc} sia andata a buon fine;
-        \item \textit{riga 8}: il campo \texttt{dato} del nuovo nodo prende il valore di \texttt{elem} passato tramite la funzione;
-        \item \textit{riga 9}: Collega il nuovo nodo al resto della lista: il campo \texttt{next} del nuovo nodo punta all'elemento che era in testa (\texttt{p}).
-        \begin{itemize}[leftmargin=1.4em]
-            \item [$\rightarrow$] \textbf{Se la lista è vuota} (\texttt{p == null}), la nuova lista contiene solo in nuovo nodo \texttt{q}, qundi: \texttt{q -> next = null};
-            \item [$\rightarrow$] \textbf{Se la lista non è vuota}, \texttt{q} è inserito prima della vecchia testa: \texttt{q -> old\_head -> ...}
-        \end{itemize} 
-        \item \textit{riga 10}: restituisce il puntatore al nuovo nodo: ora \texttt{q} è la testa della lista aggiornata
-    \end{itemize} 
+          \begin{itemize}[leftmargin=1em, label=\raisebox{0.4ex}{\phantom{2}\rule{0.6ex}{0.6ex}}]
+              \item \textit{riga 2}: creo un puntatore \texttt{*q} al nuovo nodo di grandezza \texttt{slist};
+              \item \textit{riga 4-7}: eseguo un crontollo su \texttt{q} per assicurarmi che la \texttt{malloc} sia andata a buon fine;
+              \item \textit{riga 8}: il campo \texttt{dato} del nuovo nodo prende il valore di \texttt{elem} passato tramite la funzione;
+              \item \textit{riga 9}: Collega il nuovo nodo al resto della lista: il campo \texttt{next} del nuovo nodo punta all'elemento che era in testa (\texttt{p}).
+                    \begin{itemize}[leftmargin=1.4em]
+                        \item [$\rightarrow$] \textbf{Se la lista è vuota} (\texttt{p == null}), la nuova lista contiene solo in nuovo nodo \texttt{q}, qundi: \texttt{q -> next = null};
+                        \item [$\rightarrow$] \textbf{Se la lista non è vuota}, \texttt{q} è inserito prima della vecchia testa: \texttt{q -> old\_head -> ...}
+                    \end{itemize}
+              \item \textit{riga 10}: restituisce il puntatore al nuovo nodo: ora \texttt{q} è la testa della lista aggiornata
+          \end{itemize}
 \end{itemize}
 
 \vspace{8pt}
@@ -199,41 +203,41 @@ else{ // in mezzo o in coda (se q==NULL)
 \begin{figure}[H]
     \centering
     \vspace{-5pt}  % Riduce lo spazio sopra
-    \includegraphics[width=0.9\textwidth]{introduzione/img13.png}        
+    \includegraphics[width=0.9\textwidth]{introduzione/img13.png}
     \vspace{-15pt}  % Riduce lo spazio sopra
 \end{figure}
 \begin{itemize}[leftmargin=1em]
     \item \textbf{Tipo di ritorno}: La funzione restituisce un puntatore a \texttt{slist}, ovvero il puntatore alla testa aggiornata della lista.
     \item \textbf{Parametri}: i parametri definiti nella funzione sono (\texttt{slist *p, slist *q, int elem}), rispettivamente:
-    \begin{itemize}[leftmargin=1em, label=\raisebox{0.4ex}{\phantom{3}\rule{0.6ex}{0.6ex}}]
-        \item il \textbf{puntatore corrente} alla testa della lista (che può essere \texttt{null} se la lista è vuota);
-        \item il \textbf{puntatore al nodo di riferimento} (davanti al quale inserire) oppure \texttt{null} se si vuole inserire in coda;
-        \item l \textbf{valore da inserire} nel nuovo nodo.
-    \end{itemize}
+          \begin{itemize}[leftmargin=1em, label=\raisebox{0.4ex}{\phantom{3}\rule{0.6ex}{0.6ex}}]
+              \item il \textbf{puntatore corrente} alla testa della lista (che può essere \texttt{null} se la lista è vuota);
+              \item il \textbf{puntatore al nodo di riferimento} (davanti al quale inserire) oppure \texttt{null} se si vuole inserire in coda;
+              \item l \textbf{valore da inserire} nel nuovo nodo.
+          \end{itemize}
     \item \textbf{Funzionamento del codice}: per poter inserire un nuovo nodo in testa alla lista, supponiamo di possedere una struttura dati come quella definita al capitolo \ref{par:Liste concatenate}.
-    \begin{itemize}[leftmargin=1em, label=\raisebox{0.4ex}{\phantom{4}\rule{0.6ex}{0.6ex}}]
-        \item \textit{riga 2}: \texttt{x} è un puntatore alla lista che serve come supporto per eseguire lo scorrimento della stessa;
-        \item \textit{riga 3}: creo un puntatore \texttt{*r} al nuovo nodo di grandezza \texttt{slist};
-        \item  \textit{riga 4-7}: eseguo un crontollo su \texttt{r} per assicurarmi che la \texttt{malloc} sia andata a buon fine;
-        \item \textit{riga 8}: inizializzo il campo \texttt{dato} del nuovo nodo con il valore del campo \texttt{elem} passato tra i parametri;
-        \item \textit{riga 9-12}: viene \textbf{gestito l'inseriemento in testa}. Infatti, se il nodo \texttt{q} coincide con \texttt{p}, mi basta semplicemente collegare il nuovo nodo alla vecchia testa (\texttt{r -> next = p}), e poi restituire il nuovo nodo (\texttt{return r});
-        \item \textit{riga 13-21}: viene \textbf{gestito l'inserimento in mezzo o in coda}.\\
-        Tramite il ciclo \texttt{for} si fa scorrere il puntatore di appoggio (\texttt{x}) partendo dalla testa (\texttt{p}) della lista. Lo scorrimento continua fintanto che è verificata la condizione \texttt{x->next!=q}, e \textbf{presenta due possibilità di terminazione}:
-        \begin{enumerate}[leftmargin=1.3em]
-            \item La condizione diventa \texttt{x->next==q} poiché \texttt{q} è un nodo interno alla lista. In altre parole quando \texttt{x} precede il nodo \texttt{q} specificato nei parametri, si esce dal ciclo;
-            \item La condizione non si avvera perché il \texttt{q} passato nei parametri è \texttt{null}, e il ciclo termina le sue iterazioni.
-        \end{enumerate}
-        
-        \vspace{8pt}
-        \noindent
-        Dato che lo scorrimento ha due possibili terminazioni, bisognerà effettuare un ulteriore controllo per determinare se si tratta di un inserimento \textbf{in mezzo o in coda}.\\
-        La condizione dell'\texttt{if} indica che \texttt{x != null} e che \texttt{x->next==q}, dunque:
-        \begin{enumerate}[leftmargin=1.3em]
-            \item Si ha un \textbf{inserimento in mezzo} quando si verifica il caso $1$.\\
-            In questo caso (\texttt{r->next=q}) collega il nuovo nodo al nodo di riferimento, mentre (\texttt{x->next=r}) collega il nodo precedente al nuovo nodo.
-            \item Si ha un \textbf{inserimento in coda} quando si verifica il caso $2$. In questo caso \texttt{q==null}, per cui \texttt{r->next=null} diventando così l'ultimo nodo della lista, mentre il precedente ultimo nodo viene aggiornato con \texttt{x->next = r}..
-        \end{enumerate}
-    \end{itemize} 
+          \begin{itemize}[leftmargin=1em, label=\raisebox{0.4ex}{\phantom{4}\rule{0.6ex}{0.6ex}}]
+              \item \textit{riga 2}: \texttt{x} è un puntatore alla lista che serve come supporto per eseguire lo scorrimento della stessa;
+              \item \textit{riga 3}: creo un puntatore \texttt{*r} al nuovo nodo di grandezza \texttt{slist};
+              \item  \textit{riga 4-7}: eseguo un crontollo su \texttt{r} per assicurarmi che la \texttt{malloc} sia andata a buon fine;
+              \item \textit{riga 8}: inizializzo il campo \texttt{dato} del nuovo nodo con il valore del campo \texttt{elem} passato tra i parametri;
+              \item \textit{riga 9-12}: viene \textbf{gestito l'inseriemento in testa}. Infatti, se il nodo \texttt{q} coincide con \texttt{p}, mi basta semplicemente collegare il nuovo nodo alla vecchia testa (\texttt{r -> next = p}), e poi restituire il nuovo nodo (\texttt{return r});
+              \item \textit{riga 13-21}: viene \textbf{gestito l'inserimento in mezzo o in coda}.\\
+                    Tramite il ciclo \texttt{for} si fa scorrere il puntatore di appoggio (\texttt{x}) partendo dalla testa (\texttt{p}) della lista. Lo scorrimento continua fintanto che è verificata la condizione \texttt{x->next!=q}, e \textbf{presenta due possibilità di terminazione}:
+                    \begin{enumerate}[leftmargin=1.3em]
+                        \item La condizione diventa \texttt{x->next==q} poiché \texttt{q} è un nodo interno alla lista. In altre parole quando \texttt{x} precede il nodo \texttt{q} specificato nei parametri, si esce dal ciclo;
+                        \item La condizione non si avvera perché il \texttt{q} passato nei parametri è \texttt{null}, e il ciclo termina le sue iterazioni.
+                    \end{enumerate}
+
+                    \vspace{8pt}
+                    \noindent
+                    Dato che lo scorrimento ha due possibili terminazioni, bisognerà effettuare un ulteriore controllo per determinare se si tratta di un inserimento \textbf{in mezzo o in coda}.\\
+                    La condizione dell'\texttt{if} indica che \texttt{x != null} e che \texttt{x->next==q}, dunque:
+                    \begin{enumerate}[leftmargin=1.3em]
+                        \item Si ha un \textbf{inserimento in mezzo} quando si verifica il caso $1$.\\
+                              In questo caso (\texttt{r->next=q}) collega il nuovo nodo al nodo di riferimento, mentre (\texttt{x->next=r}) collega il nodo precedente al nuovo nodo.
+                        \item Si ha un \textbf{inserimento in coda} quando si verifica il caso $2$. In questo caso \texttt{q==null}, per cui \texttt{r->next=null} diventando così l'ultimo nodo della lista, mentre il precedente ultimo nodo viene aggiornato con \texttt{x->next = r}..
+                    \end{enumerate}
+          \end{itemize}
 \end{itemize}
 
 \vspace{8pt}
@@ -278,23 +282,23 @@ return p;
 \begin{figure}[H]
     \centering
     \vspace{-10pt}  % Riduce lo spazio sopra
-    \includegraphics[width=0.75\textwidth]{introduzione/img14.png}        
+    \includegraphics[width=0.75\textwidth]{introduzione/img14.png}
     \vspace{-15pt}  % Riduce lo spazio sopra
 \end{figure}
 \begin{itemize}[leftmargin=1em]
     \item \textbf{Tipo di ritorno}: la funzione restituisce un puntatore a \texttt{slist}, ovvero il puntatore alla testa aggiornata della lista dopo l'eliminazione;
     \item \textbf{Parametri}: i parametri definiti nella funzione sono (\texttt{slist *p, slist *q}), rispettivamente il \textbf{puntatore corrente} alla testa della lista  e il \textbf{puntatore al nodo di riferimento} (davanti al quale rimuovere);
     \item \textbf{Funzionamento del codice}:  per poter eliminare un nodo all'interno della lista, supponiamo di possedere una struttura dati come quella definita al capitolo \ref{par:Liste concatenate}.
-    \begin{itemize}[leftmargin=1em, label=\raisebox{0.4ex}{\phantom{5}\rule{0.6ex}{0.6ex}}]
-        \item \textit{riga 2}: dichiarazione di un puntatore ausiliario \texttt{r}, che servirà per scorrere la lista.
-        \item \textit{riga 3}: se \texttt{p == q}, significa che il nodo da eliminare è la testa della lista.       
-        In questo caso basta avanzare la testa al nodo successivo: \texttt{p = p->next};
-        \item \textit{riga 4-8}: se il nodo da eliminare non è quello in testa alla lista (\texttt{p!=q}), utilizzando il puntatore ausiliario, utilizzo un ciclo per scorrere tutti i nodi, \textbf{ricordando che il nodo \texttt{q}} specificato nei parametri \textbf{non è \texttt{null}}.\\
-        Proprio \textbf{per questo motivo}, a differenza di quanto detto nel capitolo \ref{par:Inserimento generico}, ho \textbf{un solo caso di terminazione}, e cioé quando \texttt{r->next=q}, ovvero il nodo precedente a quello da eliminare.\\
-        Trovato il predecessore di \texttt{q}, quest'ultimo si salta collegando \texttt{r->next} direttamente al nodo successivo a  \texttt{q}, ovvero \texttt{r->next=r->next->next};
-        \item \textit{riga 9}: si libera la memoria allocata dal nodo eliminato \texttt{q};
-        \item \textit{riga 10}: restituzione del puntatore alla testa aggiornato.
-    \end{itemize}
+          \begin{itemize}[leftmargin=1em, label=\raisebox{0.4ex}{\phantom{5}\rule{0.6ex}{0.6ex}}]
+              \item \textit{riga 2}: dichiarazione di un puntatore ausiliario \texttt{r}, che servirà per scorrere la lista.
+              \item \textit{riga 3}: se \texttt{p == q}, significa che il nodo da eliminare è la testa della lista.
+                    In questo caso basta avanzare la testa al nodo successivo: \texttt{p = p->next};
+              \item \textit{riga 4-8}: se il nodo da eliminare non è quello in testa alla lista (\texttt{p!=q}), utilizzando il puntatore ausiliario, utilizzo un ciclo per scorrere tutti i nodi, \textbf{ricordando che il nodo \texttt{q}} specificato nei parametri \textbf{non è \texttt{null}}.\\
+                    Proprio \textbf{per questo motivo}, a differenza di quanto detto nel capitolo \ref{par:Inserimento generico}, ho \textbf{un solo caso di terminazione}, e cioé quando \texttt{r->next=q}, ovvero il nodo precedente a quello da eliminare.\\
+                    Trovato il predecessore di \texttt{q}, quest'ultimo si salta collegando \texttt{r->next} direttamente al nodo successivo a  \texttt{q}, ovvero \texttt{r->next=r->next->next};
+              \item \textit{riga 9}: si libera la memoria allocata dal nodo eliminato \texttt{q};
+              \item \textit{riga 10}: restituzione del puntatore alla testa aggiornato.
+          \end{itemize}
 \end{itemize}
 
 \vspace{8pt}
@@ -369,7 +373,7 @@ while(p = delete(p,p)); // N.B: cancello in testa
     \item \textbf{Tipo di ritorno}: la funzione non restituisce alcun valore, poiché il suo scopo è esclusivamente quello di deallocare la memoria della lista passata come argomento;
     \item \textbf{Parametri}: Il parametro \texttt{p} rappresenta il puntatore alla testa della lista che si vuole distruggere;
     \item \textbf{Funzionamento del codice}: all'interno del ciclo \texttt{while}, viene eseguita ripetutamente l'istruzione \texttt{p = delete(p, p)}.\\ Ad \textbf{ogni iterazione viene eliminato il primo nodo della lista}, poiché la funzione \texttt{delete()} viene chiamata passando due volte lo stesso puntatore \texttt{(p, p)}, cioè indicando che il nodo da cancellare è proprio la testa.\\
-    La funzione \texttt{delete()} restituisce il nuovo puntatore alla testa della lista (che è ora il nodo successivo): il ciclo \texttt{while} continua fino a quando \texttt{delete()} restituisce \texttt{null}, cioè finché non rimangono più nodi da cancellare.
+          La funzione \texttt{delete()} restituisce il nuovo puntatore alla testa della lista (che è ora il nodo successivo): il ciclo \texttt{while} continua fino a quando \texttt{delete()} restituisce \texttt{null}, cioè finché non rimangono più nodi da cancellare.
 \end{itemize}
 
 \noindent
@@ -402,10 +406,10 @@ for(q = p; q; q = q->next) (*op)(q);
     \item \textbf{Tipo di ritorno}: la funzione non restituisce alcun valore. Il suo scopo è \textbf{puramente esecutivo}, applicando una funzione a ogni elemento della lista;
     \item \textbf{Parametri}: i parametri definiti nella funzione sono \texttt{(slist *p, void (*op)(slist *))}, rispettivamente il \textbf{puntatore alla testa} della lista che si vuole attraversare e un \textbf{puntatore a funzione}, ovvero un parametro che rappresenta una funzione da richiamare per ogni nodo visitato. Tale funzione deve avere \texttt{la stessa firma}, cioè ricevere come parametro un puntatore a \texttt{slist} e non restituire nulla (tipo \texttt{void});
     \item \textbf{Funzionamento del codice}:  per poter scorrere una lista, supponiamo di possedere una struttura dati come quella definita al capitolo \ref{par:Liste concatenate}.
-    \begin{itemize}[leftmargin=1em, label=\raisebox{0.4ex}{\phantom{6}\rule{0.6ex}{0.6ex}}]
-        \item \textit{riga 2}: viene dichiarato un puntatore \texttt{*q}, che servirà come puntatore di scorrimento.
-        \item \textit{riga 3}: inizia il ciclo che scorre l'intera lista partendo dalla testa. Ad ogni iterazione viene chiamata la \textbf{funzione passata come parametro} \texttt{(op)}, applicandola al nodo corrente: \texttt{(*op)(q)}. Il ciclo termina quando \texttt{q} diventa \texttt{null}, cioè quando è stato raggiunto l'ultimo nodo della lista.
-        \begin{lstlisting}[style=mystyle, language=C++]
+          \begin{itemize}[leftmargin=1em, label=\raisebox{0.4ex}{\phantom{6}\rule{0.6ex}{0.6ex}}]
+              \item \textit{riga 2}: viene dichiarato un puntatore \texttt{*q}, che servirà come puntatore di scorrimento.
+              \item \textit{riga 3}: inizia il ciclo che scorre l'intera lista partendo dalla testa. Ad ogni iterazione viene chiamata la \textbf{funzione passata come parametro} \texttt{(op)}, applicandola al nodo corrente: \texttt{(*op)(q)}. Il ciclo termina quando \texttt{q} diventa \texttt{null}, cioè quando è stato raggiunto l'ultimo nodo della lista.
+                    \begin{lstlisting}[style=mystyle, language=C++]
 /* Esempio: funzione op che stampa il contenuto del nodo */
 void printelem(slist *q) {
 printf("\t-------\n\t|%5d|\n\t-------\n\t| %c |\n\t---%c---\n\t",
@@ -415,7 +419,7 @@ printf("\t-------\n\t|%5d|\n\t-------\n\t| %c |\n\t---%c---\n\t",
 if(q->next) printf(" | \n\t V\n");
 }
         \end{lstlisting}
-    \end{itemize}
+          \end{itemize}
 \end{itemize}
 
 \noindent
@@ -435,3 +439,4 @@ return 0;
 \end{lstlisting}
 
 \subsubsection{Ricerca elemento con funzione}
+\end{document}

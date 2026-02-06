@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.3.9)  28 JAN 2026 15:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.3.9)  7 FEB 2026 00:37
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -870,84 +870,34 @@ Library (tcolorbox): 'tcbposter.code.tex' version '6.2.0'
 )) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/subfiles\subfiles.sty
 Package: subfiles 2020/11/14 v2.2 Multi-file projects (package)
 ))))
-Package xr Info: IMPORTING LABELS FROM ../../main_document/main.aux on input line 2.
-LaTeX Font Info:    Trying to load font information for T1+bch on input line 4.
+LaTeX Font Info:    Trying to load font information for T1+bch on input line 3.
  (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1bch.fd
 File: t1bch.fd 2004/10/18 font definitions for T1/bch.
 ) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count368
 \l__pdf_internal_box=\box89
-) (c:/Users\dany2\OneDrive\Desktop\UniSassari\Appunti_latex\Appunti_Algoritmi_Strutture_Dati\chapters\ch11_tabelle_hash\tabelle_hash.aux
-
-LaTeX Warning: Label `fig:hash_example' multiply defined.
-
-
-LaTeX Warning: Label `par:Funzioni hash perfette' multiply defined.
-
-
-LaTeX Warning: Label `par:ch_1.2' multiply defined.
-
-
-LaTeX Warning: Label `par:Metodo dell'estrazione' multiply defined.
-
-
-LaTeX Warning: Label `par:Metodo dello XOR' multiply defined.
-
-
-LaTeX Warning: Label `par:Metodo della divisione' multiply defined.
-
-
-LaTeX Warning: Label `par:liste_trabocco' multiply defined.
-
-
-LaTeX Warning: Label `fig:chaining' multiply defined.
-
-
-LaTeX Warning: Label `par:trabocco_analisi_comp' multiply defined.
-
-
-LaTeX Warning: Label `par:ch_1.4.3' multiply defined.
-
-
-LaTeX Warning: Label `fig:sequenza_ispezione' multiply defined.
-
-
-LaTeX Warning: Label `par:ch_1.4.5' multiply defined.
-
-
-LaTeX Warning: Label `par:ch_1.4.7' multiply defined.
-
-
-LaTeX Warning: Label `par:ch_1.4.8' multiply defined.
-
-
-LaTeX Warning: Label `fig:rottura_sequenza_ispezione' multiply defined.
-
-
-LaTeX Warning: Label `fig: resume_table' multiply defined.
-
-)
+) (c:/Users\dany2\OneDrive\Desktop\UniSassari\Appunti_latex\Appunti_Algoritmi_Strutture_Dati\chapters\ch11_tabelle_hash\tabelle_hash.aux)
 \openout1 = `tabelle_hash.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
  (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count369
@@ -970,20 +920,20 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 Package microtype Info: Patching varwidth to enable character protrusion.
 \MT@vwid@leftmargin=\dimen346
 \MT@vwid@rightmargin=\dimen347
-LaTeX Info: Redefining \microtypecontext on input line 4.
-Package microtype Info: Applying patch `item' on input line 4.
-Package microtype Info: Applying patch `toc' on input line 4.
-Package microtype Info: Applying patch `eqnum' on input line 4.
-Package microtype Info: Applying patch `footnote' on input line 4.
-Package microtype Info: Applying patch `verbatim' on input line 4.
-LaTeX Info: Redefining \microtypesetup on input line 4.
+LaTeX Info: Redefining \microtypecontext on input line 3.
+Package microtype Info: Applying patch `item' on input line 3.
+Package microtype Info: Applying patch `toc' on input line 3.
+Package microtype Info: Applying patch `eqnum' on input line 3.
+Package microtype Info: Applying patch `footnote' on input line 3.
+Package microtype Info: Applying patch `verbatim' on input line 3.
+LaTeX Info: Redefining \microtypesetup on input line 3.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 4.
+LaTeX Info: Redefining \showhyphens on input line 3.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -1032,90 +982,94 @@ Package caption Info: changepage package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package hyperref Info: Link coloring OFF on input line 4.
+Package hyperref Info: Link coloring OFF on input line 3.
 (c:/Users\dany2\OneDrive\Desktop\UniSassari\Appunti_latex\Appunti_Algoritmi_Strutture_Dati\chapters\ch11_tabelle_hash\tabelle_hash.out) (c:/Users\dany2\OneDrive\Desktop\UniSassari\Appunti_latex\Appunti_Algoritmi_Strutture_Dati\chapters\ch11_tabelle_hash\tabelle_hash.out)
 \@outlinefile=\write4
 \openout4 = `tabelle_hash.out'.
 
 \c@lstlisting=\count375
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 10.
- (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd
+
+
+LaTeX Warning: Reference `par:Alberi binari di ricerca (BST)' on page 1 undefined on input line 5.
+
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 9.
+(C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-<../figures/hashing/img1.png, id=147, 626.34pt x 139.52126pt>
+<../figures/hashing/img1.png, id=146, 626.34pt x 139.52126pt>
 File: ../figures/hashing/img1.png Graphic file (type png)
 <use ../figures/hashing/img1.png>
-Package pdftex.def Info: ../figures/hashing/img1.png  used on input line 15.
+Package pdftex.def Info: ../figures/hashing/img1.png  used on input line 14.
 (pdftex.def)             Requested size: 459.51054pt x 102.36273pt.
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 25.
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 24.
  (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-cmr.cfg
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman (RS)
 )
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 25.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 24.
  (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 25.
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 24.
  (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/lm\omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 25.
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 24.
  (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/lm\omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 25.
+(Font)              <12> on input line 24.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 25.
+(Font)              <8> on input line 24.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 25.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 25.
+(Font)              <6> on input line 24.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 24.
  (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 ) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 25.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 24.
  (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
-<../figures/hashing/img2.png, id=149, 502.87875pt x 306.14375pt>
+<../figures/hashing/img2.png, id=148, 502.87875pt x 306.14375pt>
 File: ../figures/hashing/img2.png Graphic file (type png)
 <use ../figures/hashing/img2.png>
-Package pdftex.def Info: ../figures/hashing/img2.png  used on input line 48.
+Package pdftex.def Info: ../figures/hashing/img2.png  used on input line 47.
 (pdftex.def)             Requested size: 270.86906pt x 164.8994pt.
 
-Overfull \hbox (3.08138pt too wide) in paragraph at lines 37--61
+Overfull \hbox (3.08138pt too wide) in paragraph at lines 36--60
 []  []
  []
 
 [1
 
 {C:/Users/dany2/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}{C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc} <../figures/hashing/img1.png> <../figures/hashing/img2.png>]
-LaTeX Font Info:    Trying to load font information for TS1+bch on input line 103.
+LaTeX Font Info:    Trying to load font information for TS1+bch on input line 102.
  (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1bch.fd
 File: ts1bch.fd 2004/10/18 font definitions for TS1/bch.
 ) [2]
-<../figures/hashing/img3.png, id=173, 405.01312pt x 243.91125pt>
+<../figures/hashing/img3.png, id=171, 405.01312pt x 243.91125pt>
 File: ../figures/hashing/img3.png Graphic file (type png)
 <use ../figures/hashing/img3.png>
-Package pdftex.def Info: ../figures/hashing/img3.png  used on input line 110.
+Package pdftex.def Info: ../figures/hashing/img3.png  used on input line 109.
 (pdftex.def)             Requested size: 295.05537pt x 177.69643pt.
 
-Underfull \hbox (badness 2961) in paragraph at lines 118--118
+Underfull \hbox (badness 2961) in paragraph at lines 117--117
 \T1/bch/m/n/12 (+20) Questi mec-ca-n-ismi per-me-t-tono
  []
 
 
-Overfull \hbox (3.08138pt too wide) in paragraph at lines 108--119
+Overfull \hbox (3.08138pt too wide) in paragraph at lines 107--118
 []  [] 
  []
 
@@ -1124,7 +1078,7 @@ File: lstlang1.sty 2023/02/27 1.9 listings language file
 ) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
 File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
 )
-LaTeX Font Info:    Trying to load font information for T1+pcr on input line 193.
+LaTeX Font Info:    Trying to load font information for T1+pcr on input line 192.
  (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
@@ -1133,124 +1087,124 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 198.
+(Font)              <10.95> on input line 197.
  [4] [5] [6] [7] [8]
-<../figures/hashing/img4.png, id=268, 359.09157pt x 143.78719pt>
+<../figures/hashing/img4.png, id=266, 359.09157pt x 143.78719pt>
 File: ../figures/hashing/img4.png Graphic file (type png)
 <use ../figures/hashing/img4.png>
-Package pdftex.def Info: ../figures/hashing/img4.png  used on input line 442.
+Package pdftex.def Info: ../figures/hashing/img4.png  used on input line 441.
 (pdftex.def)             Requested size: 296.50937pt x 118.73558pt.
 
-Overfull \hbox (3.08138pt too wide) in paragraph at lines 439--453
+Overfull \hbox (3.08138pt too wide) in paragraph at lines 438--452
 []  [] 
  []
 
 [9 <../figures/hashing/img4.png>]
-<../figures/hashing/img5.png, id=276, 230.36063pt x 212.29312pt>
+<../figures/hashing/img5.png, id=274, 230.36063pt x 212.29312pt>
 File: ../figures/hashing/img5.png Graphic file (type png)
 <use ../figures/hashing/img5.png>
-Package pdftex.def Info: ../figures/hashing/img5.png  used on input line 533.
+Package pdftex.def Info: ../figures/hashing/img5.png  used on input line 532.
 (pdftex.def)             Requested size: 223.95041pt x 206.38406pt.
 
-Underfull \hbox (badness 1163) in paragraph at lines 548--548
+Underfull \hbox (badness 1163) in paragraph at lines 547--547
 []\T1/lmtt/b/n/12 lookup()\T1/bch/b/n/12 (+20) , \T1/lmtt/b/n/12 remove()\T1/bch/m/n/12 (+20) : in en-trambi i casi
  []
 
 
-Overfull \hbox (3.08138pt too wide) in paragraph at lines 519--549
+Overfull \hbox (3.08138pt too wide) in paragraph at lines 518--548
 []$  [] 
  []
 
 [10]
-<../figures/hashing/img6.png, id=282, 303.534pt x 133.6995pt>
+<../figures/hashing/img6.png, id=280, 303.534pt x 133.6995pt>
 File: ../figures/hashing/img6.png Graphic file (type png)
 <use ../figures/hashing/img6.png>
-Package pdftex.def Info: ../figures/hashing/img6.png  used on input line 593.
+Package pdftex.def Info: ../figures/hashing/img6.png  used on input line 592.
 (pdftex.def)             Requested size: 224.91727pt x 99.07071pt.
 
-Overfull \hbox (3.07399pt too wide) in paragraph at lines 591--602
+Overfull \hbox (3.07399pt too wide) in paragraph at lines 590--601
 $[]$  [] 
  []
 
 [11 <../figures/hashing/img5.png>]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 637.
+(Font)              <14.4> on input line 636.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 637.
+(Font)              <10> on input line 636.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 637.
+(Font)              <7> on input line 636.
  [12 <../figures/hashing/img6.png>]
-<../figures/hashing/img7.png, id=295, 895.345pt x 211.79124pt>
+<../figures/hashing/img7.png, id=293, 895.345pt x 211.79124pt>
 File: ../figures/hashing/img7.png Graphic file (type png)
 <use ../figures/hashing/img7.png>
-Package pdftex.def Info: ../figures/hashing/img7.png  used on input line 652.
+Package pdftex.def Info: ../figures/hashing/img7.png  used on input line 651.
 (pdftex.def)             Requested size: 362.77264pt x 85.81375pt.
  [13 <../figures/hashing/img7.png>] [14]
-<../figures/hashing/img8.png, id=310, 595.22375pt x 582.175pt>
+<../figures/hashing/img8.png, id=308, 595.22375pt x 582.175pt>
 File: ../figures/hashing/img8.png Graphic file (type png)
 <use ../figures/hashing/img8.png>
-Package pdftex.def Info: ../figures/hashing/img8.png  used on input line 762.
+Package pdftex.def Info: ../figures/hashing/img8.png  used on input line 761.
 (pdftex.def)             Requested size: 220.08295pt x 215.25925pt.
 
-Overfull \hbox (3.56111pt too wide) in paragraph at lines 759--775
+Overfull \hbox (3.56111pt too wide) in paragraph at lines 758--774
 []$  [] 
  []
 
 [15 <../figures/hashing/img8.png>]
-<../figures/hashing/img9.png, id=317, 895.345pt x 445.665pt>
+<../figures/hashing/img9.png, id=315, 895.345pt x 445.665pt>
 File: ../figures/hashing/img9.png Graphic file (type png)
 <use ../figures/hashing/img9.png>
-Package pdftex.def Info: ../figures/hashing/img9.png  used on input line 848.
+Package pdftex.def Info: ../figures/hashing/img9.png  used on input line 847.
 (pdftex.def)             Requested size: 338.58632pt x 168.53842pt.
  [16]
-<../figures/hashing/img10.png, id=325, 1045.9075pt x 142.5325pt>
+<../figures/hashing/img10.png, id=323, 1045.9075pt x 142.5325pt>
 File: ../figures/hashing/img10.png Graphic file (type png)
 <use ../figures/hashing/img10.png>
-Package pdftex.def Info: ../figures/hashing/img10.png  used on input line 879.
+Package pdftex.def Info: ../figures/hashing/img10.png  used on input line 878.
 (pdftex.def)             Requested size: 483.69687pt x 65.91806pt.
  [17 <../figures/hashing/img9.png> <../figures/hashing/img10.png>]
-<../figures/hashing/img11.png, id=334, 611.28375pt x 128.48pt>
+<../figures/hashing/img11.png, id=332, 611.28375pt x 128.48pt>
 File: ../figures/hashing/img11.png Graphic file (type png)
 <use ../figures/hashing/img11.png>
-Package pdftex.def Info: ../figures/hashing/img11.png  used on input line 890.
+Package pdftex.def Info: ../figures/hashing/img11.png  used on input line 889.
 (pdftex.def)             Requested size: 459.51054pt x 96.57932pt.
-<../figures/hashing/img12.png, id=335, 616.3025pt x 281.05pt>
+<../figures/hashing/img12.png, id=333, 616.3025pt x 281.05pt>
 File: ../figures/hashing/img12.png Graphic file (type png)
 <use ../figures/hashing/img12.png>
-Package pdftex.def Info: ../figures/hashing/img12.png  used on input line 899.
+Package pdftex.def Info: ../figures/hashing/img12.png  used on input line 898.
 (pdftex.def)             Requested size: 459.51054pt x 209.5519pt.
  [18 <../figures/hashing/img11.png> <../figures/hashing/img12.png>]
-<../figures/hashing/img13.png, id=345, 181.67876pt x 128.48pt>
+<../figures/hashing/img13.png, id=343, 181.67876pt x 128.48pt>
 File: ../figures/hashing/img13.png Graphic file (type png)
 <use ../figures/hashing/img13.png>
-Package pdftex.def Info: ../figures/hashing/img13.png  used on input line 944.
+Package pdftex.def Info: ../figures/hashing/img13.png  used on input line 943.
 (pdftex.def)             Requested size: 149.94484pt x 106.04042pt.
-<../figures/hashing/img14.png, id=346, 392.46625pt x 160.6pt>
+<../figures/hashing/img14.png, id=344, 392.46625pt x 160.6pt>
 File: ../figures/hashing/img14.png Graphic file (type png)
 <use ../figures/hashing/img14.png>
-Package pdftex.def Info: ../figures/hashing/img14.png  used on input line 949.
+Package pdftex.def Info: ../figures/hashing/img14.png  used on input line 948.
 (pdftex.def)             Requested size: 256.35875pt x 104.91072pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 936--955
+Underfull \hbox (badness 10000) in paragraph at lines 935--954
 
  []
 
 [19 <../figures/hashing/img13.png> <../figures/hashing/img14.png>]
-<../figures/hashing/img15.png, id=357, 616.3025pt x 91.34125pt>
+<../figures/hashing/img15.png, id=355, 616.3025pt x 91.34125pt>
 File: ../figures/hashing/img15.png Graphic file (type png)
 <use ../figures/hashing/img15.png>
-Package pdftex.def Info: ../figures/hashing/img15.png  used on input line 981.
+Package pdftex.def Info: ../figures/hashing/img15.png  used on input line 980.
 (pdftex.def)             Requested size: 459.51054pt x 68.10435pt.
-<../figures/hashing/img16.png, id=358, 531.9875pt x 201.75375pt>
+<../figures/hashing/img16.png, id=356, 531.9875pt x 201.75375pt>
 File: ../figures/hashing/img16.png Graphic file (type png)
 <use ../figures/hashing/img16.png>
-Package pdftex.def Info: ../figures/hashing/img16.png  used on input line 988.
+Package pdftex.def Info: ../figures/hashing/img16.png  used on input line 987.
 (pdftex.def)             Requested size: 411.14528pt x 155.92961pt.
  [20 <../figures/hashing/img15.png> <../figures/hashing/img16.png>]
-<../figures/hashing/img17.png, id=369, 448.67625pt x 273.02pt>
+<../figures/hashing/img17.png, id=367, 448.67625pt x 273.02pt>
 File: ../figures/hashing/img17.png Graphic file (type png)
 <use ../figures/hashing/img17.png>
-Package pdftex.def Info: ../figures/hashing/img17.png  used on input line 1007.
+Package pdftex.def Info: ../figures/hashing/img17.png  used on input line 1006.
 (pdftex.def)             Requested size: 411.14528pt x 250.18996pt.
  [21 <../figures/hashing/img17.png>] [22] (c:/Users\dany2\OneDrive\Desktop\UniSassari\Appunti_latex\Appunti_Algoritmi_Strutture_Dati\chapters\ch11_tabelle_hash\tabelle_hash.aux)
  ***********
@@ -1259,26 +1213,23 @@ L3 programming layer <2024-01-04>
  ***********
 
 
-LaTeX Warning: There were multiply-defined labels.
+LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `tabelle_hash.out' has not changed.
 (rerunfilecheck)             Checksum: F14AE0133898F1727E799F812CAFC49A;5581.
  ) 
 Here is how much of TeX's memory you used:
- 36523 strings out of 474486
- 723244 string characters out of 5743756
+ 36482 strings out of 474486
+ 722128 string characters out of 5743756
  2038542 words of memory out of 5000000
- 57683 multiletter control sequences out of 15000+600000
+ 57644 multiletter control sequences out of 15000+600000
  644968 words of font info for 308 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  109i,11n,120p,1126b,1397s stack positions out of 10000i,1000n,20000p,200000b,200000s
-
-pdfTeX warning (dest): name{subsection.4.4} has been referenced but does not exist, replaced by a fixed one
-
 <C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchb8a.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchbi8a.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchr8a.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchri8a.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtk10.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt12.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrb8a.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb>
-Output written on c:/Users\dany2\OneDrive\Desktop\UniSassari\Appunti_latex\Appunti_Algoritmi_Strutture_Dati\chapters\ch11_tabelle_hash\tabelle_hash.pdf (22 pages, 1130641 bytes).
+Output written on c:/Users\dany2\OneDrive\Desktop\UniSassari\Appunti_latex\Appunti_Algoritmi_Strutture_Dati\chapters\ch11_tabelle_hash\tabelle_hash.pdf (22 pages, 1130539 bytes).
 PDF statistics:
- 495 PDF objects out of 1000 (max. 8388607)
- 123 named destinations out of 1000 (max. 500000)
+ 493 PDF objects out of 1000 (max. 8388607)
+ 122 named destinations out of 1000 (max. 500000)
  43458 words of extra memory for PDF output out of 51595 (max. 10000000)
 

@@ -1,3 +1,6 @@
+\documentclass[../../main_document/main.tex]{subfiles}
+
+\begin{document}
 \section{Introduzione}
 La parola \textit{\textbf{algoritmo}}, un tempo utilizzata quasi esclusivamente da matematici e informatici, è oggi sempre più diffusa anche nel linguaggio comune.
 
@@ -9,19 +12,19 @@ Dunque, diamo delle definizioni che colleghino i concetti di algoritmo e problem
 
 \subsection{Problemi computazionali e algoritmi}
 \begin{tcolorbox}[
-    colback=yellow!20, 
-    colframe=darkgray, 
-    title=Cos'è un problema computazionale?
+        colback=yellow!20,
+        colframe=darkgray,
+        title=Cos'è un problema computazionale?
     ]
     Dati un dominio di input e un dominio di output, un \textbf{problema computazionale} è rappresentato dalla \textbf{relazione matematica} che associa ogni elemento del dominio in input ad uno o piu elementi del dominio di output.
-\end{tcolorbox} 
+\end{tcolorbox}
 \noindent
 \textbf{\textit{Esempio:}} Immaginiamo di dover seguire una ricetta. L'input è dato dagli ingredienti, l'output è dato dal piatto cucinato, mentre il sistema formale di calcolo è dato dal cuoco.
 
 \begin{tcolorbox}[
-    colback=yellow!20, 
-    colframe=darkgray, 
-    title=Cos'è un algoritmo?
+        colback=yellow!20,
+        colframe=darkgray,
+        title=Cos'è un algoritmo?
     ]
     Dato un problema computazionale, un algoritmo è un procedimento \textbf{effettivo} (di calcolo), espresso tramite un insieme di \textbf{passi elementari ben specificati} in un sistema formale di calcolo, che risolve il problema in un \textbf{tempo finito}.
 \end{tcolorbox}
@@ -66,7 +69,7 @@ Per comprendere al meglio la differenza tra problema computazionale e algoritmo 
     \[
         lookup(S,v)=
         \begin{cases}
-            i \quad \exists i \in {0,..., n-1}: S_i=v\\
+            i \quad \exists i \in {0,..., n-1}: S_i=v \\
             -1 \quad altrimenti
         \end{cases}
     \]
@@ -96,9 +99,9 @@ Gli algoritmi che vengono scelti per la risoluzione di un problema computazional
 
 \subsubsection{Come valutare l'algoritmo scelto}
 \begin{tcolorbox}[
-    colback=yellow!20, 
-    colframe=darkgray, 
-    title=Valutazione di un algoritmo
+        colback=yellow!20,
+        colframe=darkgray,
+        title=Valutazione di un algoritmo
     ]
     La valutazione di un algoritmo consiste nello stabilire se quest'ultimo risolve il problema in modo \textbf{efficiente} e \textbf{corretto}.
 \end{tcolorbox}
@@ -120,9 +123,9 @@ Invece, la \textbf{correttezza di un algoritmo} viene dimostrata tramite:
 \label{par:Complessità di un algoritmo}
 La ricerca di un algoritmo efficiente e corretto, porta alla definizione di un ulteriore concetto, quello della \textit{"complessità di un algoritmo"}.
 \begin{tcolorbox}[
-    colback=yellow!20, 
-    colframe=darkgray, 
-    title=Complessità di un algoritmo
+        colback=yellow!20,
+        colframe=darkgray,
+        title=Complessità di un algoritmo
     ]
     La \textbf{complessità di un algoritmo} è data dall'analisi delle risorse da esso impiegate per risolvere un problema, in funzione della dimensione e della tipologia dell'input.
 \end{tcolorbox}
@@ -130,17 +133,17 @@ La ricerca di un algoritmo efficiente e corretto, porta alla definizione di un u
 Quando si parla di \textit{risorse impiegate da un algoritmo}, ci si riferisce a:
 \begin{itemize}[leftmargin=1em]
     \item \textbf{\textit{Tempo}}: ovvero il tempo impiegato per completare l'algoritmo.\\
-    Misurare il tempo di esecuzione di un algoritmo considerando il tempo di calcolo in senso assoluto (secondi, minuti, ecc.) rappresenta un \textbf{approccio errato} perché dipende da troppi parametri a seconda della piattaforma utilizzata per la misura:
-    \begin{itemize}[leftmargin=1em, label=\raisebox{0.4ex}{\phantom{1}\rule{0.6ex}{0.6ex}}]
-        \item Frequenza del processore;
-        \item Linguaggio di programmazione utilizzato;
-        \item Ottimizzazione del compilatore utilizzato;
-        \item Interazione tra memoria primaria (anche memorie cache) e secondaria;
-        \item Velocità di trasmissione dati del bus;
-        \item Processi attualmente in esecuzione;
-        \item ecc \dots
-    \end{itemize} 
-    Proprio per questo motivo quando si parla di \textit{tempo impiegato dall'algoritmo} ci si riferisce al \textbf{numero di operazioni rilevanti}, ovvero il numero di operazioni che caratterizzano lo scopo dell'algoritmo, come ad esempio, contare operazioni elementari come i confronti, che rappresentano una misura più stabile e indipendente dalla piattaforma (capitolo \ref{par:Definizione di tempo e modello di calcolo}).
+          Misurare il tempo di esecuzione di un algoritmo considerando il tempo di calcolo in senso assoluto (secondi, minuti, ecc.) rappresenta un \textbf{approccio errato} perché dipende da troppi parametri a seconda della piattaforma utilizzata per la misura:
+          \begin{itemize}[leftmargin=1em, label=\raisebox{0.4ex}{\phantom{1}\rule{0.6ex}{0.6ex}}]
+              \item Frequenza del processore;
+              \item Linguaggio di programmazione utilizzato;
+              \item Ottimizzazione del compilatore utilizzato;
+              \item Interazione tra memoria primaria (anche memorie cache) e secondaria;
+              \item Velocità di trasmissione dati del bus;
+              \item Processi attualmente in esecuzione;
+              \item ecc \dots
+          \end{itemize}
+          Proprio per questo motivo quando si parla di \textit{tempo impiegato dall'algoritmo} ci si riferisce al \textbf{numero di operazioni rilevanti}, ovvero il numero di operazioni che caratterizzano lo scopo dell'algoritmo, come ad esempio, contare operazioni elementari come i confronti, che rappresentano una misura più stabile e indipendente dalla piattaforma (capitolo \ref{par:Definizione di tempo e modello di calcolo}).
     \item \textbf{\textit{Spazio}}: Quantità di memoria utilizzata;
     \item \textbf{\textit{Banda}}: quantità di bit spediti.
 \end{itemize}
@@ -151,13 +154,13 @@ Quando si parla di \textit{risorse impiegate da un algoritmo}, ci si riferisce a
 \subsection{Strutture dati}
 In un linguaggio di programmazione, un \textbf{dato} è un \textbf{valore che una variabile può assumere}.
 \begin{tcolorbox}[
-    colback=yellow!20, 
-    colframe=darkgray, 
-    title=Cos'è una struttura dati?
+        colback=yellow!20,
+        colframe=darkgray,
+        title=Cos'è una struttura dati?
     ]
-    
+
     Una \textbf{struttura dati} è un modo per organizzare e memorizzare i dati sui supporti fisici.
-\end{tcolorbox} 
+\end{tcolorbox}
 \noindent
 Le strutture dati offrono il \textbf{vantaggio} di permettere una \textbf{buona organizzazione} dei dati permettendo così di \textbf{semplificare} l'\textbf{accesso} e la \textbf{modifica} degli stessi, influendo in modo diretto sull'efficienza dell'algoritmo.\\
 Dunque, la caratteristica principale non è tanto il \textit{tipo dei dati}, contenuti all'interno della struttura, ma \textbf{il modo in cui viene organizzata la collezione}.\\
@@ -178,13 +181,13 @@ Le strutture dati possono essere classificate in base a diversi criteri:
 
 \subsubsection{Le sequenze}
 \begin{tcolorbox}[
-    colback=yellow!20, 
-    colframe=darkgray, 
-    title=Cos'è una sequenza?
+        colback=yellow!20,
+        colframe=darkgray,
+        title=Cos'è una sequenza?
     ]
-    
-    Una \textbf{sequenza}, è una struttura dati \textbf{dinamica} e \textbf{lineare} che rappresenta una sequenza ordinata di valori, all'interno della quale uno stesso valore può \textbf{comparire} anche \textbf{più di una volta}. 
-\end{tcolorbox} 
+
+    Una \textbf{sequenza}, è una struttura dati \textbf{dinamica} e \textbf{lineare} che rappresenta una sequenza ordinata di valori, all'interno della quale uno stesso valore può \textbf{comparire} anche \textbf{più di una volta}.
+\end{tcolorbox}
 \noindent
 L'\textbf{ordine} della collezione di dati all'interno della sequenza è \textbf{importante}, di tipo \textbf{posizionale}.\\
 Data una generica sequenza $S = S_1, S_2, ..., S_n$ è possibile aggiungere o togliere elementi, mantenendo la struttura ordinata della sequenza: per indicare un generico elemento $S_i$ della sequenza si utilizza il parametro $pos_i$, che rappresenta una \textbf{posizione logica} nella sequenza; dunque, è possibile accedere direttamente alla testa con $pos_0$ e alla coda con $pos_n$.
@@ -195,14 +198,14 @@ Data una generica sequenza $S = S_1, S_2, ..., S_n$ è possibile aggiungere o to
 \begin{figure}[H]
     \centering
     \vspace{-8pt}  % Riduce lo spazio sopra
-    \includegraphics[width=0.8\textwidth]{introduzione/img1.png}    
-    \vspace{-5pt}     
+    \includegraphics[width=0.8\textwidth]{introduzione/img1.png}
+    \vspace{-5pt}
 \end{figure}
 \begin{figure}[H]
     \centering
     \vspace{-8pt}  % Riduce lo spazio sopra
-    \includegraphics[width=0.8\textwidth]{introduzione/img2.png}    
-    \vspace{-5pt}     
+    \includegraphics[width=0.8\textwidth]{introduzione/img2.png}
+    \vspace{-5pt}
 \end{figure}
 
 \noindent
@@ -218,22 +221,22 @@ Result: [1, 2, 3]
 
 \subsubsection{Gli Insiemi}
 \begin{tcolorbox}[
-    colback=yellow!20, 
-    colframe=darkgray, 
-    title=Cos'è un insieme?
+        colback=yellow!20,
+        colframe=darkgray,
+        title=Cos'è un insieme?
     ]
     Un \textbf{insieme} è una struttura dati \textbf{dinamica} e \textbf{non lineare} che memorizza una collezione \textbf{non ordinata} di elementi senza valori ripetuti.
 \end{tcolorbox}
 \noindent
 A differenza delle sequenze, per ordinare un insieme, bisogna introdurre il concetto di \textbf{relazione d'ordine}.
-Infatti, nelle sequenze (come array o liste), l'ordine degli elementi non dipende \textbf{dal loro valore}, ma dalla \textbf{posizione che occupano}.   
+Infatti, nelle sequenze (come array o liste), l'ordine degli elementi non dipende \textbf{dal loro valore}, ma dalla \textbf{posizione che occupano}.
 Quindi non serve definire una “relazione d'ordine” tra gli elementi: la struttura stessa impone un ordine.
 
 \vspace{8pt}
 \noindent
 Gli insiemi, invece, sono per definizione una collezione di elementi unici ma senza un ordine posizionale.
 Quindi, in un \textbf{insieme}, l'ordinamento fra elementi è dato dall'\textbf{\textit{eventuale relazione d'ordine definita sul tipo degli elementi stessi}}. Per questo motivo, se vogliamo ordinare gli elementi, è necessario specificare in che modo come avviene il confronto.\\
-\textbf{\textit{Esempio:}} nel caso degli \textbf{interi}, il confronto è immediato, poiché esiste un ordine naturale tra i valori numerici ($1 < 2 < 3 < \dots$).  
+\textbf{\textit{Esempio:}} nel caso degli \textbf{interi}, il confronto è immediato, poiché esiste un ordine naturale tra i valori numerici ($1 < 2 < 3 < \dots$).
 Per le \textbf{stringhe}, invece, l'ordinamento si basa sull'\textbf{ordine lessicografico}, ossia sul confronto dei caratteri secondo la sequenza alfabetica (ad esempio, \textit{"cane"} precede \textit{"gatto"} perché la lettera \textit{"c"} viene prima della \textit{"g"} nell'alfabeto).
 
 \vspace{8pt}
@@ -249,8 +252,8 @@ Lavorando con gli insiemi, le operazioni ammesse sulle collezioni di dati sono l
     \addtocounter{figure}{1}
     \centering
     \vspace{-8pt}  % Riduce lo spazio sopra
-    \includegraphics[width=0.8\textwidth]{introduzione/img3.png}    
-    \vspace{-5pt}     
+    \includegraphics[width=0.8\textwidth]{introduzione/img3.png}
+    \vspace{-5pt}
 \end{figure}
 \noindent
 Esempio di creazione di un insieme il linguaggio \textit{C++}
@@ -265,11 +268,11 @@ Result: ["banane", "pere"]
 \end{lstlisting}
 
 \subsubsection{I dizionari}
-\label{par:I dizionari}
+\label{par:dizionari}
 \begin{tcolorbox}[
-    colback=yellow!20, 
-    colframe=darkgray, 
-    title=Cos'è un dizionario?
+        colback=yellow!20,
+        colframe=darkgray,
+        title=Cos'è un dizionario?
     ]
     Un \textbf{dizionario} è una struttura dati che rappresenta il concetto matematico di relazione univoca $R: D \rightarrow C$, o associazione chiave valore, dove:
     \begin{itemize}[leftmargin=1em]
@@ -287,15 +290,15 @@ Con questa tipologia di struttura dati, sono ammesse le seguenti operazioni:
 \begin{figure}[H]
     \centering
     \vspace{-8pt}  % Riduce lo spazio sopra
-    \includegraphics[width=0.78\textwidth]{introduzione/img4.png}    
-    \vspace{-5pt}     
+    \includegraphics[width=0.78\textwidth]{introduzione/img4.png}
+    \vspace{-5pt}
 \end{figure}
 
 \subsection{I puntatori}
 \begin{tcolorbox}[
-    colback=yellow!20, 
-    colframe=darkgray, 
-    title=Cos'è un puntatore?
+        colback=yellow!20,
+        colframe=darkgray,
+        title=Cos'è un puntatore?
     ]
     Un \textbf{puntatore} è una variabile che contiene un \textbf{indirizzo di memoria}. Spesso, l'indirizzo è la locazione di memoria di un'altra variabile.
 \end{tcolorbox}
@@ -313,11 +316,11 @@ float *p; //Puntatore a float
 Gli operatori speciali che vengono utilizzati con i puntatori sono $\ast$ e \&:
 \begin{itemize}[leftmargin=1em]
     \item \& $\rightarrow$ è un operatore \textbf{unario} che restituisce l'\textbf{indirizzo di memoria} del suo operando;
-    \begin{lstlisting}[style=mystyle, language=C++]
+          \begin{lstlisting}[style=mystyle, language=C++]
 balptr = &balance //mette in balptr l'indirizzo di memoria di balace.
     \end{lstlisting}
     \item $\ast \rightarrow$ è un operatore \textbf{unario} che restituisce \textbf{il valore} della variabile allocata all'indirizzo specificato dal suo operando.
-    \begin{lstlisting}[style=mystyle, language=C++]
+          \begin{lstlisting}[style=mystyle, language=C++]
 value = *balptr //se balptr contiene l'indirzzo di balance, il  valore della variabile balance viene messo in value.
     \end{lstlisting}
 \end{itemize}
@@ -328,7 +331,7 @@ value = *balptr //se balptr contiene l'indirzzo di balance, il  valore della var
 
 \vspace{-15pt}
 \noindent
-\begin{minipage}[t]{0.565\textwidth}  
+\begin{minipage}[t]{0.565\textwidth}
     \begin{lstlisting}[style=mystyle, language=C++]
 #include <iostream>
 int main() {
@@ -342,26 +345,26 @@ int main() {
     cout << ptr << endl;
     return 0;
 }
-    \end{lstlisting}   
+    \end{lstlisting}
 \end{minipage}%
 \hspace{5pt} % Spazio tra immagine e testo
-\raisebox{21pt}{  
+\raisebox{21pt}{
     \begin{minipage}[t]{0.427\textwidth}
         \begin{figure}[H]
-            \includegraphics[width=0.65\linewidth]{introduzione/img7.png}          
+            \includegraphics[width=0.65\linewidth]{introduzione/img7.png}
         \end{figure}
         L'output del programma è il seguente:\\
         $12$\\
         $24$\\
         $0x7b03a928$ (indirizzo di memoria)
-    \end{minipage}   
+    \end{minipage}
 }
 
 \subsubsection{Puntatori nulli}
 \begin{tcolorbox}[
-    colback=yellow!20, 
-    colframe=darkgray, 
-    title=Cos'è un puntatore?
+        colback=yellow!20,
+        colframe=darkgray,
+        title=Cos'è un puntatore?
     ]
     Un puntatore può contenere il valore $0$ a indicare che non punta ad alcun oggetto.\\
     In questo caso viene detto \textbf{puntatore nullo}.
@@ -373,7 +376,7 @@ In questo caso, provando a stampare un puntatore nullo, si ottiene un errore.
 
 \vspace{-12pt}
 \noindent
-\begin{minipage}[t]{0.5\textwidth}  
+\begin{minipage}[t]{0.5\textwidth}
     \begin{lstlisting}[style=mystyle, language=C++]
 #include <iostream>
 int main() {
@@ -382,15 +385,15 @@ int *ptr = 0;
 cout << *ptr << endl; // crash !
 return 0;
 }
-    \end{lstlisting}   
+    \end{lstlisting}
 \end{minipage}%
 \hspace{5pt} % Spazio tra immagine e testo
-\raisebox{20pt}{  
+\raisebox{20pt}{
     \begin{minipage}[t]{0.468\textwidth}
         \begin{figure}[H]
-            \includegraphics[width=\linewidth]{introduzione/img8.png}          
+            \includegraphics[width=\linewidth]{introduzione/img8.png}
         \end{figure}
-    \end{minipage}   
+    \end{minipage}
 }
 
 \vspace{8pt}
@@ -407,7 +410,7 @@ int m[2][3] = { {11, 12, 13}, {21, 22, 23} };
 
 \vspace{-15pt}
 \noindent
-\begin{minipage}[t]{0.5\textwidth}  
+\begin{minipage}[t]{0.5\textwidth}
     \begin{lstlisting}[style=mystyle, language=C++]
 int main() {
     float x[5];
@@ -421,16 +424,17 @@ int main() {
     *(ptr+1) = 2.5; // x[1] = 2.5
     *(ptr+3) = 3.5; // x[3] = 3.5
 }
-    \end{lstlisting}   
+    \end{lstlisting}
 \end{minipage}%
 \hspace{5pt} % Spazio tra immagine e testo
-\raisebox{19pt}{  
+\raisebox{19pt}{
     \begin{minipage}[t]{0.468\textwidth}
         \begin{figure}[H]
-            \includegraphics[width=\linewidth]{introduzione/img9.png}          
+            \includegraphics[width=\linewidth]{introduzione/img9.png}
         \end{figure}
 
         \vspace{-12pt}
-        Utilizzando gli array, non è necessario specificare che \texttt{ptr} punti ad un indirizzo, come fatto precedentemente (\texttt{*ptr = \&j}), proprio perché \texttt{x} rappresenta di per sé l'indirizzo della prima posizione dell'array. 
-    \end{minipage}   
+        Utilizzando gli array, non è necessario specificare che \texttt{ptr} punti ad un indirizzo, come fatto precedentemente (\texttt{*ptr = \&j}), proprio perché \texttt{x} rappresenta di per sé l'indirizzo della prima posizione dell'array.
+    \end{minipage}
 }
+\end{document}

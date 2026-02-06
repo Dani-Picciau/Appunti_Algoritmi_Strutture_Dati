@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.3.9)  22 JAN 2026 00:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.3.9)  7 FEB 2026 00:37
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -688,37 +688,107 @@ Package: mhsetup 2021/03/18 v1.4 programming setup (MH)
 \l_MT_below_shortintertext_sep=\dimen311
 \xmathstrut@box=\box71
 \xmathstrut@dim=\dimen312
-) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcolorbox.sty
+) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/adjustbox\adjustbox.sty
+Package: adjustbox 2025/02/26 v1.3c Adjusting TeX boxes (trim, clip, ...)
+ (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/xkeyval\xkeyval.sty
+Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
+ (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/generic/xkeyval\xkeyval.tex (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/generic/xkeyval\xkvutils.tex
+\XKV@toks=\toks49
+\XKV@tempa@toks=\toks50
+)
+\XKV@depth=\count344
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+)) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/adjustbox\adjcalc.sty
+Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back-ends (calc, etex, pgfmath)
+) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/adjustbox\trimclip.sty
+Package: trimclip 2025/02/21 v1.2a Trim and clip general TeX material
+ (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/collectbox\collectbox.sty
+Package: collectbox 2022/10/17 v0.4c Collect macro arguments as boxes
+\collectedbox=\box72
+)
+\tc@llx=\dimen313
+\tc@lly=\dimen314
+\tc@urx=\dimen315
+\tc@ury=\dimen316
+Package trimclip Info: Using driver 'tc-pdftex.def'.
+ (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/adjustbox\tc-pdftex.def
+File: tc-pdftex.def 2025/02/26 v2.3 Clipping driver for pdftex
+))
+\adjbox@Width=\dimen317
+\adjbox@Height=\dimen318
+\adjbox@Depth=\dimen319
+\adjbox@Totalheight=\dimen320
+\adjbox@pwidth=\dimen321
+\adjbox@pheight=\dimen322
+\adjbox@pdepth=\dimen323
+\adjbox@ptotalheight=\dimen324
+ (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/ifoddpage\ifoddpage.sty
+Package: ifoddpage 2022/10/18 v1.2 Conditionals for odd/even page detection
+\c@checkoddpage=\count345
+LaTeX Info: Redefining \checkoddpage on input line 45.
+) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/varwidth\varwidth.sty
+Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
+\@vwid@box=\box73
+\sift@deathcycles=\count346
+\@vwid@loff=\dimen325
+\@vwid@roff=\dimen326
+)) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/generic/soul\soul.sty
+Package: soul 2023-06-14 v3.1 Permit use of UTF-8 characters in soul (HO)
+ (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/generic/soul\soul-ori.sty
+Package: soul-ori 2023-06-14 v3.1 letterspacing/underlining (mf)
+\SOUL@word=\toks51
+\SOUL@lasttoken=\toks52
+\SOUL@syllable=\toks53
+\SOUL@cmds=\toks54
+\SOUL@buffer=\toks55
+\SOUL@token=\toks56
+\SOUL@syllgoal=\dimen327
+\SOUL@syllwidth=\dimen328
+\SOUL@charkern=\dimen329
+\SOUL@hyphkern=\dimen330
+\SOUL@dimen=\dimen331
+\SOUL@dimeni=\dimen332
+\SOUL@minus=\count347
+\SOUL@comma=\count348
+\SOUL@apo=\count349
+\SOUL@grave=\count350
+\SOUL@spaceskip=\skip74
+\SOUL@ttwidth=\dimen333
+\SOUL@uldp=\dimen334
+\SOUL@ulht=\dimen335
+) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/generic/etexcmds\etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcolorbox.sty
 Package: tcolorbox 2024/01/10 version 6.2.0 text color boxes
  (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/tools\verbatim.sty
 Package: verbatim 2023-11-06 v1.5v LaTeX2e package for verbatim enhancements
-\every@verbatim=\toks49
-\verbatim@line=\toks50
+\every@verbatim=\toks57
+\verbatim@line=\toks58
 \verbatim@in@stream=\read3
 ) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/environ\environ.sty
 Package: environ 2014/05/04 v0.3 A new way to define environments
  (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/trimspaces\trimspaces.sty
 Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 ))
-\tcb@titlebox=\box72
-\tcb@upperbox=\box73
-\tcb@lowerbox=\box74
-\tcb@phantombox=\box75
-\c@tcbbreakpart=\count344
-\c@tcblayer=\count345
-\c@tcolorbox@number=\count346
-\l__tcobox_tmpa_box=\box76
-\l__tcobox_tmpa_dim=\dimen313
-\tcb@temp=\box77
-\tcb@temp=\box78
+\tcb@titlebox=\box74
+\tcb@upperbox=\box75
+\tcb@lowerbox=\box76
+\tcb@phantombox=\box77
+\c@tcbbreakpart=\count351
+\c@tcblayer=\count352
+\c@tcolorbox@number=\count353
+\l__tcobox_tmpa_box=\box78
+\l__tcobox_tmpa_dim=\dimen336
 \tcb@temp=\box79
 \tcb@temp=\box80
+\tcb@temp=\box81
+\tcb@temp=\box82
  (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcbraster.code.tex
 Library (tcolorbox): 'tcbraster.code.tex' version '6.2.0'
-\c@tcbrastercolumn=\count347
-\c@tcbrasterrow=\count348
-\c@tcbrasternum=\count349
-\c@tcbraster=\count350
+\c@tcbrastercolumn=\count354
+\c@tcbrasterrow=\count355
+\c@tcbrasternum=\count356
+\c@tcbraster=\count357
 ) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcbskins.code.tex
 Library (tcolorbox): 'tcbskins.code.tex' version '6.2.0'
 (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/tikzfill\tikzfill.image.sty
@@ -727,7 +797,7 @@ Package: tikzfill.image 2023/08/08 v1.0.1 Image filling library for TikZ
 Package: tikzfill-common 2023/08/08 v1.0.1 Auxiliary code for tikzfill
 ) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/tikzfill\tikzlibraryfill.image.code.tex
 File: tikzlibraryfill.image.code.tex 2023/08/08 v1.0.1 Image filling library
-\l__tikzfill_img_box=\box81
+\l__tikzfill_img_box=\box83
 )) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcbskinsjigsaw.code.tex
 Library (tcolorbox): 'tcbskinsjigsaw.code.tex' version '6.2.0'
 )) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcbbreakable.code.tex
@@ -736,41 +806,41 @@ Library (tcolorbox): 'tcbbreakable.code.tex' version '6.2.0'
 Package: pdfcol 2022-09-21 v1.7 Handle new color stacks for pdfTeX (HO)
 )
 Package pdfcol Info: New color stack `tcb@breakable' = 1 on input line 23.
-\tcb@testbox=\box82
-\tcb@totalupperbox=\box83
-\tcb@totallowerbox=\box84
+\tcb@testbox=\box84
+\tcb@totalupperbox=\box85
+\tcb@totallowerbox=\box86
 ) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcbhooks.code.tex
 Library (tcolorbox): 'tcbhooks.code.tex' version '6.2.0'
 ) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcbtheorems.code.tex
 Library (tcolorbox): 'tcbtheorems.code.tex' version '6.2.0'
 ) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcbfitting.code.tex
 Library (tcolorbox): 'tcbfitting.code.tex' version '6.2.0'
-\tcbfitdim=\dimen314
-\tcb@lowerfitdim=\dimen315
-\tcb@upperfitdim=\dimen316
-\tcb@cur@hbadness=\count351
+\tcbfitdim=\dimen337
+\tcb@lowerfitdim=\dimen338
+\tcb@upperfitdim=\dimen339
+\tcb@cur@hbadness=\count358
 ) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcblistingsutf8.code.tex
 Library (tcolorbox): 'tcblistingsutf8.code.tex' version '6.2.0'
 (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcblistings.code.tex
 Library (tcolorbox): 'tcblistings.code.tex' version '6.2.0'
 (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.sty
-\lst@mode=\count352
-\lst@gtempboxa=\box85
-\lst@token=\toks51
-\lst@length=\count353
-\lst@currlwidth=\dimen317
-\lst@column=\count354
-\lst@pos=\count355
-\lst@lostspace=\dimen318
-\lst@width=\dimen319
-\lst@newlines=\count356
-\lst@lineno=\count357
-\lst@maxwidth=\dimen320
+\lst@mode=\count359
+\lst@gtempboxa=\box87
+\lst@token=\toks59
+\lst@length=\count360
+\lst@currlwidth=\dimen340
+\lst@column=\count361
+\lst@pos=\count362
+\lst@lostspace=\dimen341
+\lst@width=\dimen342
+\lst@newlines=\count363
+\lst@lineno=\count364
+\lst@maxwidth=\dimen343
  (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
 File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
-\c@lstnumber=\count358
-\lst@skipnumbers=\count359
-\lst@framebox=\box86
+\c@lstnumber=\count365
+\lst@skipnumbers=\count366
+\lst@framebox=\box88
 ) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.cfg
 File: listings.cfg 2023/02/27 1.9 listings configuration
 ))
@@ -780,7 +850,7 @@ Library (tcolorbox): 'tcblistingscore.code.tex' version '6.2.0'
 (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcbprocessing.code.tex
 Library (tcolorbox): 'tcbprocessing.code.tex' version '6.2.0'
 )
-\c@tcblisting=\count360
+\c@tcblisting=\count367
 )) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/listingsutf8\listingsutf8.sty
 Package: listingsutf8 2019-12-10 v1.5 Allow UTF-8 in listings input (HO)
  (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/generic/stringenc\stringenc.sty
@@ -800,68 +870,70 @@ Library (tcolorbox): 'tcbposter.code.tex' version '6.2.0'
 )) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/subfiles\subfiles.sty
 Package: subfiles 2020/11/14 v2.2 Multi-file projects (package)
 ))))
-Package xr Info: IMPORTING LABELS FROM ../../main_document/main.aux on input line 2.
-LaTeX Font Info:    Trying to load font information for T1+bch on input line 4.
+LaTeX Font Info:    Trying to load font information for T1+bch on input line 3.
  (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1bch.fd
 File: t1bch.fd 2004/10/18 font definitions for T1/bch.
 ) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count361
-\l__pdf_internal_box=\box87
+\l__color_backend_stack_int=\count368
+\l__pdf_internal_box=\box89
 ) (c:/Users\dany2\OneDrive\Desktop\UniSassari\Appunti_latex\Appunti_Algoritmi_Strutture_Dati\chapters\ch10_programmazione_dinamica\programmazione_dinamica.aux)
 \openout1 = `programmazione_dinamica.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
  (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count362
-\scratchdimen=\dimen321
-\scratchbox=\box88
-\nofMPsegments=\count363
-\nofMParguments=\count364
-\everyMPshowfont=\toks52
-\MPscratchCnt=\count365
-\MPscratchDim=\dimen322
-\MPnumerator=\count366
-\makeMPintoPDFobject=\count367
-\everyMPtoPDFconversion=\toks53
+\scratchcounter=\count369
+\scratchdimen=\dimen344
+\scratchbox=\box90
+\nofMPsegments=\count370
+\nofMParguments=\count371
+\everyMPshowfont=\toks60
+\MPscratchCnt=\count372
+\MPscratchDim=\dimen345
+\MPnumerator=\count373
+\makeMPintoPDFobject=\count374
+\everyMPtoPDFconversion=\toks61
 ) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
  (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-LaTeX Info: Redefining \microtypecontext on input line 4.
-Package microtype Info: Applying patch `item' on input line 4.
-Package microtype Info: Applying patch `toc' on input line 4.
-Package microtype Info: Applying patch `eqnum' on input line 4.
-Package microtype Info: Applying patch `footnote' on input line 4.
-Package microtype Info: Applying patch `verbatim' on input line 4.
-LaTeX Info: Redefining \microtypesetup on input line 4.
+Package microtype Info: Patching varwidth to enable character protrusion.
+\MT@vwid@leftmargin=\dimen346
+\MT@vwid@rightmargin=\dimen347
+LaTeX Info: Redefining \microtypecontext on input line 3.
+Package microtype Info: Applying patch `item' on input line 3.
+Package microtype Info: Applying patch `toc' on input line 3.
+Package microtype Info: Applying patch `eqnum' on input line 3.
+Package microtype Info: Applying patch `footnote' on input line 3.
+Package microtype Info: Applying patch `verbatim' on input line 3.
+LaTeX Info: Redefining \microtypesetup on input line 3.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 4.
+LaTeX Info: Redefining \showhyphens on input line 3.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -905,75 +977,75 @@ File: mt-bch.cfg 2007/03/03 v1.5 microtype config. file: Bitstream Charter (RS)
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: changepage package is loaded.
-\caption@adjustwidth@hsize=\dimen323
-\caption@adjustwidth@linewidth=\dimen324
+\caption@adjustwidth@hsize=\dimen348
+\caption@adjustwidth@linewidth=\dimen349
 Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package hyperref Info: Link coloring OFF on input line 4.
+Package hyperref Info: Link coloring OFF on input line 3.
 (c:/Users\dany2\OneDrive\Desktop\UniSassari\Appunti_latex\Appunti_Algoritmi_Strutture_Dati\chapters\ch10_programmazione_dinamica\programmazione_dinamica.out) (c:/Users\dany2\OneDrive\Desktop\UniSassari\Appunti_latex\Appunti_Algoritmi_Strutture_Dati\chapters\ch10_programmazione_dinamica\programmazione_dinamica.out)
 \@outlinefile=\write4
 \openout4 = `programmazione_dinamica.out'.
 
-\c@lstlisting=\count368
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 7.
+\c@lstlisting=\count375
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 6.
  (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-cmr.cfg
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman (RS)
 )
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 7.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 6.
  (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 7.
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 6.
  (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/lm\omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 7.
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 6.
  (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/lm\omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 7.
+(Font)              <12> on input line 6.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 7.
+(Font)              <8> on input line 6.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 7.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 7.
+(Font)              <6> on input line 6.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 6.
  (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 ) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 7.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 6.
  (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
-LaTeX Font Info:    Trying to load font information for TS1+bch on input line 13.
+LaTeX Font Info:    Trying to load font information for TS1+bch on input line 12.
  (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1bch.fd
 File: ts1bch.fd 2004/10/18 font definitions for TS1/bch.
 )
-Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on input line 46.
+Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on input line 45.
 
 
 pdfTeX warning: pdflatex (file ../figures/Programmazione_Dinamica/TriangoloTartaglia.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
 <../figures/Programmazione_Dinamica/TriangoloTartaglia.pdf, id=182, 450.70685pt x 245.9318pt>
 File: ../figures/Programmazione_Dinamica/TriangoloTartaglia.pdf Graphic file (type pdf)
 <use ../figures/Programmazione_Dinamica/TriangoloTartaglia.pdf>
-Package pdftex.def Info: ../figures/Programmazione_Dinamica/TriangoloTartaglia.pdf  used on input line 61.
+Package pdftex.def Info: ../figures/Programmazione_Dinamica/TriangoloTartaglia.pdf  used on input line 60.
 (pdftex.def)             Requested size: 290.22107pt x 158.36772pt.
 [1
 
 {C:/Users/dany2/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}{C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc}]
-Underfull \hbox (badness 10000) in paragraph at lines 87--88
+Underfull \hbox (badness 10000) in paragraph at lines 86--87
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 89--90
+Underfull \hbox (badness 10000) in paragraph at lines 88--89
 
  []
 
@@ -983,7 +1055,7 @@ pdfTeX warning: pdflatex (file ../figures/Programmazione_Dinamica/Casi.pdf): PDF
 <../figures/Programmazione_Dinamica/Casi.pdf, id=219, 451.6875pt x 136.51pt>
 File: ../figures/Programmazione_Dinamica/Casi.pdf Graphic file (type pdf)
 <use ../figures/Programmazione_Dinamica/Casi.pdf>
-Package pdftex.def Info: ../figures/Programmazione_Dinamica/Casi.pdf  used on input line 144.
+Package pdftex.def Info: ../figures/Programmazione_Dinamica/Casi.pdf  used on input line 143.
 (pdftex.def)             Requested size: 435.32422pt x 131.57301pt.
 
 
@@ -991,7 +1063,7 @@ pdfTeX warning: pdflatex (file ../figures/Programmazione_Dinamica/PassaggioPunti
 <../figures/Programmazione_Dinamica/PassaggioPunti.pdf, id=220, 507.42172pt x 270.52469pt>
 File: ../figures/Programmazione_Dinamica/PassaggioPunti.pdf Graphic file (type pdf)
 <use ../figures/Programmazione_Dinamica/PassaggioPunti.pdf>
-Package pdftex.def Info: ../figures/Programmazione_Dinamica/PassaggioPunti.pdf  used on input line 154.
+Package pdftex.def Info: ../figures/Programmazione_Dinamica/PassaggioPunti.pdf  used on input line 153.
 (pdftex.def)             Requested size: 338.58632pt x 180.51582pt.
 
 
@@ -999,7 +1071,7 @@ pdfTeX warning: pdflatex (file ../figures/Programmazione_Dinamica/Tab1.pdf): PDF
 <../figures/Programmazione_Dinamica/Tab1.pdf, id=221, 633.36626pt x 463.23062pt>
 File: ../figures/Programmazione_Dinamica/Tab1.pdf Graphic file (type pdf)
 <use ../figures/Programmazione_Dinamica/Tab1.pdf>
-Package pdftex.def Info: ../figures/Programmazione_Dinamica/Tab1.pdf  used on input line 164.
+Package pdftex.def Info: ../figures/Programmazione_Dinamica/Tab1.pdf  used on input line 163.
 (pdftex.def)             Requested size: 338.58632pt x 247.63861pt.
 [4 <../figures/Programmazione_Dinamica/Casi.pdf> <../figures/Programmazione_Dinamica/PassaggioPunti.pdf>]
 
@@ -1007,7 +1079,7 @@ pdfTeX warning: pdflatex (file ../figures/Programmazione_Dinamica/Tab2.pdf): PDF
 <../figures/Programmazione_Dinamica/Tab2.pdf, id=230, 915.96906pt x 626.3721pt>
 File: ../figures/Programmazione_Dinamica/Tab2.pdf Graphic file (type pdf)
 <use ../figures/Programmazione_Dinamica/Tab2.pdf>
-Package pdftex.def Info: ../figures/Programmazione_Dinamica/Tab2.pdf  used on input line 176.
+Package pdftex.def Info: ../figures/Programmazione_Dinamica/Tab2.pdf  used on input line 175.
 (pdftex.def)             Requested size: 338.58632pt x 231.54378pt.
 
 
@@ -1015,7 +1087,7 @@ pdfTeX warning: pdflatex (file ../figures/Programmazione_Dinamica/Tab3.pdf): PDF
 <../figures/Programmazione_Dinamica/Tab3.pdf, id=231, 726.21312pt x 415.05063pt>
 File: ../figures/Programmazione_Dinamica/Tab3.pdf Graphic file (type pdf)
 <use ../figures/Programmazione_Dinamica/Tab3.pdf>
-Package pdftex.def Info: ../figures/Programmazione_Dinamica/Tab3.pdf  used on input line 184.
+Package pdftex.def Info: ../figures/Programmazione_Dinamica/Tab3.pdf  used on input line 183.
 (pdftex.def)             Requested size: 338.58632pt x 193.51585pt.
 [5 <../figures/Programmazione_Dinamica/Tab1.pdf> <../figures/Programmazione_Dinamica/Tab2.pdf>]
 
@@ -1023,7 +1095,7 @@ pdfTeX warning: pdflatex (file ../figures/Programmazione_Dinamica/Tab4.pdf): PDF
 <../figures/Programmazione_Dinamica/Tab4.pdf, id=240, 836.16695pt x 459.2397pt>
 File: ../figures/Programmazione_Dinamica/Tab4.pdf Graphic file (type pdf)
 <use ../figures/Programmazione_Dinamica/Tab4.pdf>
-Package pdftex.def Info: ../figures/Programmazione_Dinamica/Tab4.pdf  used on input line 193.
+Package pdftex.def Info: ../figures/Programmazione_Dinamica/Tab4.pdf  used on input line 192.
 (pdftex.def)             Requested size: 386.95897pt x 212.52116pt.
 
 
@@ -1031,7 +1103,7 @@ pdfTeX warning: pdflatex (file ../figures/Programmazione_Dinamica/Tab5.pdf): PDF
 <../figures/Programmazione_Dinamica/Tab5.pdf, id=241, 951.10233pt x 505.41423pt>
 File: ../figures/Programmazione_Dinamica/Tab5.pdf Graphic file (type pdf)
 <use ../figures/Programmazione_Dinamica/Tab5.pdf>
-Package pdftex.def Info: ../figures/Programmazione_Dinamica/Tab5.pdf  used on input line 201.
+Package pdftex.def Info: ../figures/Programmazione_Dinamica/Tab5.pdf  used on input line 200.
 (pdftex.def)             Requested size: 386.95897pt x 205.62479pt.
 
 
@@ -1039,7 +1111,7 @@ pdfTeX warning: pdflatex (file ../figures/Programmazione_Dinamica/Tab6.pdf): PDF
 <../figures/Programmazione_Dinamica/Tab6.pdf, id=242, 948.59294pt x 474.79782pt>
 File: ../figures/Programmazione_Dinamica/Tab6.pdf Graphic file (type pdf)
 <use ../figures/Programmazione_Dinamica/Tab6.pdf>
-Package pdftex.def Info: ../figures/Programmazione_Dinamica/Tab6.pdf  used on input line 213.
+Package pdftex.def Info: ../figures/Programmazione_Dinamica/Tab6.pdf  used on input line 212.
 (pdftex.def)             Requested size: 386.95897pt x 193.68306pt.
 [6 <../figures/Programmazione_Dinamica/Tab3.pdf> <../figures/Programmazione_Dinamica/Tab4.pdf> <../figures/Programmazione_Dinamica/Tab5.pdf>]
 
@@ -1047,10 +1119,10 @@ pdfTeX warning: pdflatex (file ../figures/Programmazione_Dinamica/Tab7.pdf): PDF
 <../figures/Programmazione_Dinamica/Tab7.pdf, id=253, 604.7905pt x 449.7031pt>
 File: ../figures/Programmazione_Dinamica/Tab7.pdf Graphic file (type pdf)
 <use ../figures/Programmazione_Dinamica/Tab7.pdf>
-Package pdftex.def Info: ../figures/Programmazione_Dinamica/Tab7.pdf  used on input line 223.
+Package pdftex.def Info: ../figures/Programmazione_Dinamica/Tab7.pdf  used on input line 222.
 (pdftex.def)             Requested size: 290.22107pt x 215.80013pt.
 [7 <../figures/Programmazione_Dinamica/Tab6.pdf> <../figures/Programmazione_Dinamica/Tab7.pdf>]
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 271.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 270.
  (C:\Users\dany2\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
@@ -1059,7 +1131,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
-Underfull \hbox (badness 10000) in paragraph at lines 298--301
+Underfull \hbox (badness 10000) in paragraph at lines 297--300
 
  []
 
@@ -1067,15 +1139,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 298--301
 <../figures/Programmazione_Dinamica/IntPes1.png, id=269, 773.89125pt x 520.94624pt>
 File: ../figures/Programmazione_Dinamica/IntPes1.png Graphic file (type png)
 <use ../figures/Programmazione_Dinamica/IntPes1.png>
-Package pdftex.def Info: ../figures/Programmazione_Dinamica/IntPes1.png  used on input line 306.
+Package pdftex.def Info: ../figures/Programmazione_Dinamica/IntPes1.png  used on input line 305.
 (pdftex.def)             Requested size: 483.69687pt x 325.6065pt.
 <../figures/Programmazione_Dinamica/IntPes2.png, id=271, 758.835pt x 520.44438pt>
 File: ../figures/Programmazione_Dinamica/IntPes2.png Graphic file (type png)
 <use ../figures/Programmazione_Dinamica/IntPes2.png>
-Package pdftex.def Info: ../figures/Programmazione_Dinamica/IntPes2.png  used on input line 316.
+Package pdftex.def Info: ../figures/Programmazione_Dinamica/IntPes2.png  used on input line 315.
 (pdftex.def)             Requested size: 483.69687pt x 331.74913pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 311--318
+Underfull \hbox (badness 10000) in paragraph at lines 310--317
 
  []
 
@@ -1083,15 +1155,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 311--318
 <../figures/Programmazione_Dinamica/IntPes3.png, id=278, 581.17125pt x 171.64125pt>
 File: ../figures/Programmazione_Dinamica/IntPes3.png Graphic file (type png)
 <use ../figures/Programmazione_Dinamica/IntPes3.png>
-Package pdftex.def Info: ../figures/Programmazione_Dinamica/IntPes3.png  used on input line 330.
+Package pdftex.def Info: ../figures/Programmazione_Dinamica/IntPes3.png  used on input line 329.
 (pdftex.def)             Requested size: 483.69687pt x 142.85503pt.
 <../figures/Programmazione_Dinamica/IntPes4.jpeg, id=279, 903.375pt x 494.84875pt>
 File: ../figures/Programmazione_Dinamica/IntPes4.jpeg Graphic file (type jpg)
 <use ../figures/Programmazione_Dinamica/IntPes4.jpeg>
-Package pdftex.def Info: ../figures/Programmazione_Dinamica/IntPes4.jpeg  used on input line 337.
+Package pdftex.def Info: ../figures/Programmazione_Dinamica/IntPes4.jpeg  used on input line 336.
 (pdftex.def)             Requested size: 483.69687pt x 264.96422pt.
  [10 <../figures/Programmazione_Dinamica/IntPes2.png> <../figures/Programmazione_Dinamica/IntPes3.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 354--355
+Underfull \hbox (badness 10000) in paragraph at lines 353--354
 []\T1/bch/m/n/12 (+20) La re-lazione di pro-gram-mazione di-nam-ica che si ot-tiene è: $\OML/lmm/m/it/12 D\OT1/lmr/m/n/12 [\OML/lmm/m/it/12 i\OT1/lmr/m/n/12 ] =
  []
 
@@ -1099,16 +1171,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 354--355
 <../figures/Programmazione_Dinamica/ZainoEs.png, id=298, 880.79062pt x 360.84813pt>
 File: ../figures/Programmazione_Dinamica/ZainoEs.png Graphic file (type png)
 <use ../figures/Programmazione_Dinamica/ZainoEs.png>
-Package pdftex.def Info: ../figures/Programmazione_Dinamica/ZainoEs.png  used on input line 418.
+Package pdftex.def Info: ../figures/Programmazione_Dinamica/ZainoEs.png  used on input line 417.
 (pdftex.def)             Requested size: 483.69687pt x 198.16425pt.
  [13 <../figures/Programmazione_Dinamica/ZainoEs.png>] [14]
 <../figures/Programmazione_Dinamica/ZainoEs2.png, id=310, 875.27pt x 451.18562pt>
 File: ../figures/Programmazione_Dinamica/ZainoEs2.png Graphic file (type png)
 <use ../figures/Programmazione_Dinamica/ZainoEs2.png>
-Package pdftex.def Info: ../figures/Programmazione_Dinamica/ZainoEs2.png  used on input line 500.
+Package pdftex.def Info: ../figures/Programmazione_Dinamica/ZainoEs2.png  used on input line 499.
 (pdftex.def)             Requested size: 483.69687pt x 249.33699pt.
  [15]
-Underfull \hbox (badness 10000) in paragraph at lines 513--527
+Underfull \hbox (badness 10000) in paragraph at lines 512--526
 
  []
 
@@ -1116,10 +1188,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 513--527
 <../figures/Programmazione_Dinamica/ZainoMem1.png, id=322, 799.48688pt x 390.45876pt>
 File: ../figures/Programmazione_Dinamica/ZainoMem1.png Graphic file (type png)
 <use ../figures/Programmazione_Dinamica/ZainoMem1.png>
-Package pdftex.def Info: ../figures/Programmazione_Dinamica/ZainoMem1.png  used on input line 567.
+Package pdftex.def Info: ../figures/Programmazione_Dinamica/ZainoMem1.png  used on input line 566.
 (pdftex.def)             Requested size: 483.69687pt x 236.23125pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 563--569
+Underfull \hbox (badness 10000) in paragraph at lines 562--568
 
  []
 
@@ -1127,7 +1199,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 563--569
 <../figures/Programmazione_Dinamica/Memoization1.png, id=328, 885.80937pt x 494.84875pt>
 File: ../figures/Programmazione_Dinamica/Memoization1.png Graphic file (type png)
 <use ../figures/Programmazione_Dinamica/Memoization1.png>
-Package pdftex.def Info: ../figures/Programmazione_Dinamica/Memoization1.png  used on input line 601.
+Package pdftex.def Info: ../figures/Programmazione_Dinamica/Memoization1.png  used on input line 600.
 (pdftex.def)             Requested size: 483.69687pt x 270.21956pt.
  [18 <../figures/Programmazione_Dinamica/ZainoMem1.png>] [19 <../figures/Programmazione_Dinamica/Memoization1.png>] (c:/Users\dany2\OneDrive\Desktop\UniSassari\Appunti_latex\Appunti_Algoritmi_Strutture_Dati\chapters\ch10_programmazione_dinamica\programmazione_dinamica.aux)
  ***********
@@ -1138,15 +1210,15 @@ Package rerunfilecheck Info: File `programmazione_dinamica.out' has not changed.
 (rerunfilecheck)             Checksum: DDEF4151AB7E8CF43A7AD832E1454192;6416.
  ) 
 Here is how much of TeX's memory you used:
- 34524 strings out of 474486
- 695541 string characters out of 5743756
+ 35814 strings out of 474486
+ 718214 string characters out of 5743756
  1941542 words of memory out of 5000000
- 55888 multiletter control sequences out of 15000+600000
- 620636 words of font info for 219 fonts, out of 8000000 for 9000
+ 57133 multiletter control sequences out of 15000+600000
+ 620949 words of font info for 220 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  109i,15n,120p,1148b,622s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchb8a.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchr8a.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchri8a.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/dany2/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt12.pfb>
-Output written on c:/Users\dany2\OneDrive\Desktop\UniSassari\Appunti_latex\Appunti_Algoritmi_Strutture_Dati\chapters\ch10_programmazione_dinamica\programmazione_dinamica.pdf (19 pages, 2059243 bytes).
+Output written on c:/Users\dany2\OneDrive\Desktop\UniSassari\Appunti_latex\Appunti_Algoritmi_Strutture_Dati\chapters\ch10_programmazione_dinamica\programmazione_dinamica.pdf (19 pages, 2059238 bytes).
 PDF statistics:
  413 PDF objects out of 1000 (max. 8388607)
  78 named destinations out of 1000 (max. 500000)
